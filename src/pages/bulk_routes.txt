@@ -1,0 +1,196 @@
+import AccueilTableauDeBordArtisan from './pages/AccueilTableauDeBordArtisan';
+// <Route path="/accueil-tableau-de-bord-artisan" element={<AccueilTableauDeBordArtisan />} />
+import AccueilTableauDeBordAvecGraphiqueDeRevenus from './pages/AccueilTableauDeBordAvecGraphiqueDeRevenus';
+// <Route path="/accueil_tableau-de-bord-avec-graphique-de-revenus" element={<AccueilTableauDeBordAvecGraphiqueDeRevenus />} />
+import AdminConfigurationPlateforme from './pages/AdminConfigurationPlateforme';
+// <Route path="/admin-configuration-plateforme" element={<AdminConfigurationPlateforme />} />
+import AmenagementPaysager from './pages/AmenagementPaysager';
+// <Route path="/am-nagement-paysager" element={<AmenagementPaysager />} />
+import ArtisanaiNewChat from './pages/ArtisanaiNewChat';
+// <Route path="/artisanai-new-chat" element={<ArtisanaiNewChat />} />
+import AvertissementsAdministratifsSecrets from './pages/AvertissementsAdministratifsSecrets';
+// <Route path="/avertissements-administratifs-secrets" element={<AvertissementsAdministratifsSecrets />} />
+import ConfigurationPlateforme from './pages/ConfigurationPlateforme';
+// <Route path="/configuration-plateforme" element={<ConfigurationPlateforme />} />
+import ConfirmationDeCreationDeCompte from './pages/ConfirmationDeCreationDeCompte';
+// <Route path="/confirmation-de-cr-ation-de-compte" element={<ConfirmationDeCreationDeCompte />} />
+import ConfirmationDeProfil from './pages/ConfirmationDeProfil';
+// <Route path="/confirmation-de-profil" element={<ConfirmationDeProfil />} />
+import ConfirmationDeSoumissionAdministration from './pages/ConfirmationDeSoumissionAdministration';
+// <Route path="/confirmation-de-soumission-administration" element={<ConfirmationDeSoumissionAdministration />} />
+import ConnexionArtisanOrangeEdition from './pages/ConnexionArtisanOrangeEdition';
+// <Route path="/connexion_artisan_orange_edition" element={<ConnexionArtisanOrangeEdition />} />
+import ContacterLArtisanInterfaceDeMessage from './pages/ContacterLArtisanInterfaceDeMessage';
+// <Route path="/contacter-l-artisan-interface-de-message" element={<ContacterLArtisanInterfaceDeMessage />} />
+import CrAtionDeCompteClient from './pages/CrAtionDeCompteClient';
+// <Route path="/cr_ation_de_compte_client" element={<CrAtionDeCompteClient />} />
+import CreationDeCompteClientArtisan from './pages/CreationDeCompteClientArtisan';
+// <Route path="/cr-ation-de-compte-client-artisan" element={<CreationDeCompteClientArtisan />} />
+import CreationDeCompteClient3 from './pages/CreationDeCompteClient3';
+// <Route path="/cr-ation-de-compte-client3" element={<CreationDeCompteClient3 />} />
+import CretionDeCompteClient2 from './pages/CretionDeCompteClient2';
+// <Route path="/cr-tion-de-compte-client2" element={<CretionDeCompteClient2 />} />
+import DossierEnvoye from './pages/DossierEnvoye';
+// <Route path="/dossier-envoy-" element={<DossierEnvoye />} />
+import DBouchageCanalisation from './pages/DBouchageCanalisation';
+// <Route path="/d_bouchage_canalisation_" element={<DBouchageCanalisation />} />
+import DTailsDuServiceElectricite from './pages/DTailsDuServiceElectricite';
+// <Route path="/d_tails_du_service--lectricit-" element={<DTailsDuServiceElectricite />} />
+import DTailsDuServiceMontageDeMeubles from './pages/DTailsDuServiceMontageDeMeubles';
+// <Route path="/d_tails_du_service_montage_de_meubles" element={<DTailsDuServiceMontageDeMeubles />} />
+import DTailsDuServiceMenage from './pages/DTailsDuServiceMenage';
+// <Route path="/d_tails_du_service_m-nage" element={<DTailsDuServiceMenage />} />
+import DTailsDuServiceMenage from './pages/DTailsDuServiceMenage';
+// <Route path="/d_tails_du_service_m-nage_" element={<DTailsDuServiceMenage />} />
+import DTailsDuServicePeinture from './pages/DTailsDuServicePeinture';
+// <Route path="/d_tails_du_service_peinture" element={<DTailsDuServicePeinture />} />
+import DTailsDuServicePeinture from './pages/DTailsDuServicePeinture';
+// <Route path="/d_tails_du_service_peinture_" element={<DTailsDuServicePeinture />} />
+import DTailsDuServicePeinturePlafond from './pages/DTailsDuServicePeinturePlafond';
+// <Route path="/d_tails_du_service_peinture_plafond" element={<DTailsDuServicePeinturePlafond />} />
+import Demenagement from './pages/Demenagement';
+// <Route path="/d-m-nagement" element={<Demenagement />} />
+import DetailsDuServiceDemenagement from './pages/DetailsDuServiceDemenagement';
+// <Route path="/d-tails-du-service-d-m-nagement" element={<DetailsDuServiceDemenagement />} />
+import DetailsDuServiceInstallationLuminaire from './pages/DetailsDuServiceInstallationLuminaire';
+// <Route path="/d-tails-du-service-installation-luminaire" element={<DetailsDuServiceInstallationLuminaire />} />
+import DetailsDuServiceJardinage from './pages/DetailsDuServiceJardinage';
+// <Route path="/d-tails-du-service-jardinage" element={<DetailsDuServiceJardinage />} />
+import DetailsDuServiceJardinageVert from './pages/DetailsDuServiceJardinageVert';
+// <Route path="/d-tails-du-service-jardinage-vert" element={<DetailsDuServiceJardinageVert />} />
+import DetailsDuServiceLectricit from './pages/DetailsDuServiceLectricit';
+// <Route path="/d-tails-du-service-lectricit" element={<DetailsDuServiceLectricit />} />
+import DetailsDuServiceMontage from './pages/DetailsDuServiceMontage';
+// <Route path="/d-tails-du-service-montage" element={<DetailsDuServiceMontage />} />
+import DetailsDuServiceNettoyageDeVitres from './pages/DetailsDuServiceNettoyageDeVitres';
+// <Route path="/d-tails-du-service-nettoyage-de-vitres" element={<DetailsDuServiceNettoyageDeVitres />} />
+import DetailsDuServiceNettoyageProfond from './pages/DetailsDuServiceNettoyageProfond';
+// <Route path="/d-tails-du-service-nettoyage-profond" element={<DetailsDuServiceNettoyageProfond />} />
+import DetailsDuServicePlomberie from './pages/DetailsDuServicePlomberie';
+// <Route path="/d-tails-du-service-plomberie" element={<DetailsDuServicePlomberie />} />
+import DetailsDuServiceElectricite from './pages/DetailsDuServiceElectricite';
+// <Route path="/d-tails-du-service--lectricit-" element={<DetailsDuServiceElectricite />} />
+import DetailsDuServiceDemenagement from './pages/DetailsDuServiceDemenagement';
+// <Route path="/d-tails_du_service_d-m-nagement" element={<DetailsDuServiceDemenagement />} />
+import DetailsDuServiceMiseAuxNormes from './pages/DetailsDuServiceMiseAuxNormes';
+// <Route path="/d-tails_du_service_mise_aux_normes" element={<DetailsDuServiceMiseAuxNormes />} />
+import FactureDeRServationDMNagement from './pages/FactureDeRServationDMNagement';
+// <Route path="/facture_de_r_servation_d_m_nagement" element={<FactureDeRServationDMNagement />} />
+import FixationTv from './pages/FixationTv';
+// <Route path="/fixation_tv" element={<FixationTv />} />
+import FormulaireDeContestationDeConstat from './pages/FormulaireDeContestationDeConstat';
+// <Route path="/formulaire_de_contestation_de_constat" element={<FormulaireDeContestationDeConstat />} />
+import FournirUneExplication from './pages/FournirUneExplication';
+// <Route path="/fournir-une-explication" element={<FournirUneExplication />} />
+import GestionDesArtisans from './pages/GestionDesArtisans';
+// <Route path="/gestion_des-artisans" element={<GestionDesArtisans />} />
+import GestionDesArtisansVueDashboard from './pages/GestionDesArtisansVueDashboard';
+// <Route path="/gestion_des_artisans_vue_dashboard" element={<GestionDesArtisansVueDashboard />} />
+import InstallationRobinetterie from './pages/InstallationRobinetterie';
+// <Route path="/installation-robinetterie" element={<InstallationRobinetterie />} />
+import JardinageNouveau from './pages/JardinageNouveau';
+// <Route path="/jardinage-nouveau" element={<JardinageNouveau />} />
+import ListeDesRecoursAdminstr from './pages/ListeDesRecoursAdminstr';
+// <Route path="/liste-des-recours-adminstr" element={<ListeDesRecoursAdminstr />} />
+import LitigesEtAvertissementsDashboardArtisan from './pages/LitigesEtAvertissementsDashboardArtisan';
+// <Route path="/litiges-et-avertissements-dashboard_artisan" element={<LitigesEtAvertissementsDashboardArtisan />} />
+import MessagesEtLitiges from './pages/MessagesEtLitiges';
+// <Route path="/messages-et-litiges" element={<MessagesEtLitiges />} />
+import Montage from './pages/Montage';
+// <Route path="/montage" element={<Montage />} />
+import MontageDetageres from './pages/MontageDetageres';
+// <Route path="/montage-d-tag-res" element={<MontageDetageres />} />
+import NettoyageDeVitres from './pages/NettoyageDeVitres';
+// <Route path="/nettoyage-de-vitres" element={<NettoyageDeVitres />} />
+import NettoyageProfond from './pages/NettoyageProfond';
+// <Route path="/nettoyage-profond" element={<NettoyageProfond />} />
+import Notifications from './pages/Notifications';
+// <Route path="/notifications" element={<Notifications />} />
+import OuvertureDUnRecoursAdministratif from './pages/OuvertureDUnRecoursAdministratif';
+// <Route path="/ouverture-d-un-recours-administratif" element={<OuvertureDUnRecoursAdministratif />} />
+import PaiementsAdmin from './pages/PaiementsAdmin';
+// <Route path="/paiements-admin" element={<PaiementsAdmin />} />
+import PaintingCategory from './pages/PaintingCategory';
+// <Route path="/painting-category" element={<PaintingCategory />} />
+import Parametres from './pages/Parametres';
+// <Route path="/param-tres" element={<Parametres />} />
+import ParametresAdmin from './pages/ParametresAdmin';
+// <Route path="/param-tres-admin" element={<ParametresAdmin />} />
+import ParametresIntegrationsAdmin from './pages/ParametresIntegrationsAdmin';
+// <Route path="/param-tres-int-grations-admin" element={<ParametresIntegrationsAdmin />} />
+import ParametresSecuriteAdmin from './pages/ParametresSecuriteAdmin';
+// <Route path="/param-tres-s-curit--admin" element={<ParametresSecuriteAdmin />} />
+import ParametresNotificationsAdmin from './pages/ParametresNotificationsAdmin';
+// <Route path="/param-tres_notifications_admin" element={<ParametresNotificationsAdmin />} />
+import PeintureInterieure from './pages/PeintureInterieure';
+// <Route path="/peinture-int-rieure" element={<PeintureInterieure />} />
+import PeinturePlafond from './pages/PeinturePlafond';
+// <Route path="/peinture-plafond" element={<PeinturePlafond />} />
+import PerformanceExportPdf from './pages/PerformanceExportPdf';
+// <Route path="/performance-export-pdf" element={<PerformanceExportPdf />} />
+import PlumbingCategory from './pages/PlumbingCategory';
+// <Route path="/plumbing-category" element={<PlumbingCategory />} />
+import PoseDePapierPeint from './pages/PoseDePapierPeint';
+// <Route path="/pose-de-papier-peint" element={<PoseDePapierPeint />} />
+import PriseDeRendezVousAvecUnConseiller from './pages/PriseDeRendezVousAvecUnConseiller';
+// <Route path="/prise-de-rendez-vous-avec-un-conseiller" element={<PriseDeRendezVousAvecUnConseiller />} />
+import ProArtisan from './pages/ProArtisan';
+// <Route path="/pro-artisan" element={<ProArtisan />} />
+import ProfilArtisan from './pages/ProfilArtisan';
+// <Route path="/profil-artisan" element={<ProfilArtisan />} />
+import ReparationDeFuites from './pages/ReparationDeFuites';
+// <Route path="/r-paration-de-fuites" element={<ReparationDeFuites />} />
+import ReparationWc from './pages/ReparationWc';
+// <Route path="/r-paration-wc" element={<ReparationWc />} />
+import ResultatsDeRechercheArtisansLesMieuxNotes from './pages/ResultatsDeRechercheArtisansLesMieuxNotes';
+// <Route path="/r-sultats-de-recherche-artisans-les-mieux-not-s" element={<ResultatsDeRechercheArtisansLesMieuxNotes />} />
+import ResultatsDeRechercheDisponibleCeMois from './pages/ResultatsDeRechercheDisponibleCeMois';
+// <Route path="/r-sultats-de-recherche-disponible-ce-mois" element={<ResultatsDeRechercheDisponibleCeMois />} />
+import ResultatsDeRechercheDisponibleCetteSemaine from './pages/ResultatsDeRechercheDisponibleCetteSemaine';
+// <Route path="/r-sultats-de-recherche-disponible-cette-semaine" element={<ResultatsDeRechercheDisponibleCetteSemaine />} />
+import ResultatsDeRechercheExperts from './pages/ResultatsDeRechercheExperts';
+// <Route path="/r-sultats-de-recherche-experts" element={<ResultatsDeRechercheExperts />} />
+import ResultatsDeRechercheArtisansVerifies from './pages/ResultatsDeRechercheArtisansVerifies';
+// <Route path="/r-sultats_de_recherche_artisans_v-rifi-s" element={<ResultatsDeRechercheArtisansVerifies />} />
+import ServiceDetailsDebouchageCanalisation from './pages/ServiceDetailsDebouchageCanalisation';
+// <Route path="/service-d-tails-d-bouchage-canalisation" element={<ServiceDetailsDebouchageCanalisation />} />
+import ServiceDetailsDemenagement from './pages/ServiceDetailsDemenagement';
+// <Route path="/service-d-tails-d-m-nagement" element={<ServiceDetailsDemenagement />} />
+import ServiceDetailsFixationTv from './pages/ServiceDetailsFixationTv';
+// <Route path="/service-d-tails-fixation-tv" element={<ServiceDetailsFixationTv />} />
+import ServiceDetailsInstallationRobinetterie from './pages/ServiceDetailsInstallationRobinetterie';
+// <Route path="/service-d-tails-installation-robinetterie" element={<ServiceDetailsInstallationRobinetterie />} />
+import ServiceDetailsPeinture from './pages/ServiceDetailsPeinture';
+// <Route path="/service-d-tails-peinture" element={<ServiceDetailsPeinture />} />
+import ServiceDetailsPlomberie from './pages/ServiceDetailsPlomberie';
+// <Route path="/service-d-tails-plomberie" element={<ServiceDetailsPlomberie />} />
+import ServiceDetailsReparationDeFuites from './pages/ServiceDetailsReparationDeFuites';
+// <Route path="/service-d-tails-r-paration-de_fuites" element={<ServiceDetailsReparationDeFuites />} />
+import ServiceMenage from './pages/ServiceMenage';
+// <Route path="/service-menage" element={<ServiceMenage />} />
+import ServicedetailsMontage from './pages/ServicedetailsMontage';
+// <Route path="/serviced-tails-montage" element={<ServicedetailsMontage />} />
+import SettingsPageParametres from './pages/SettingsPageParametres';
+// <Route path="/settings-page-param-tres" element={<SettingsPageParametres />} />
+import SignUpRegister from './pages/SignUpRegister';
+// <Route path="/sign-up-register" element={<SignUpRegister />} />
+import TableauDeBordAdministrateur from './pages/TableauDeBordAdministrateur';
+// <Route path="/tableau_de_bord_administrateur" element={<TableauDeBordAdministrateur />} />
+import TarifsDesServicesArtisan from './pages/TarifsDesServicesArtisan';
+// <Route path="/tarifs-des-services-artisan" element={<TarifsDesServicesArtisan />} />
+import TransportDObjetsLourds from './pages/TransportDObjetsLourds';
+// <Route path="/transport-d-objets-lourds" element={<TransportDObjetsLourds />} />
+import VerifiedCraftsmanProfile from './pages/VerifiedCraftsmanProfile';
+// <Route path="/verified-craftsman-profile" element={<VerifiedCraftsmanProfile />} />
+import VoirLesPreuvesAdmin from './pages/VoirLesPreuvesAdmin';
+// <Route path="/voir-les-preuves-admin" element={<VoirLesPreuvesAdmin />} />
+import VerificationEtDocuments from './pages/VerificationEtDocuments';
+// <Route path="/v-rification-et-documents" element={<VerificationEtDocuments />} />
+import Verifications from './pages/Verifications';
+// <Route path="/v-rifications" element={<Verifications />} />
+import VerificationsEnAttenteVue from './pages/VerificationsEnAttenteVue';
+// <Route path="/v-rifications-en-attente-vue" element={<VerificationsEnAttenteVue />} />
+import VerificationsAdmin from './pages/VerificationsAdmin';
+// <Route path="/v-rifications_admin" element={<VerificationsAdmin />} />
+import ElectriciteCategory from './pages/ElectriciteCategory';
+// <Route path="/-l-ctricit--category" element={<ElectriciteCategory />} />
