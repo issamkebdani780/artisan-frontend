@@ -1,4 +1,6 @@
-const BASE_URL = 'http://bericolo.linguaflo.me/api';
+const BASE_URL = window.location.hostname === 'localhost' 
+  ? 'http://localhost:5000/api'
+  : '/api';
 
 const getAuthHeaders = () => {
   const token = localStorage.getItem('token');
