@@ -1,262 +1,163 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import apiService from '../services/api';
 
 const ClientInbox = () => {
-  const conversations = [
-    {
-      id: 1,
-      name: 'Jean Dupont',
-      role: 'Plomberie & Chauffage',
-      lastMessage: "Bonjour, j'ai bien reçu vos photos. Je peux passer...",
-      time: '14:20',
-      unread: 3,
-      online: true,
-      active: true,
-      avatar: 'https://images.unsplash.com/photo-1542037104857-ffbb0b915546?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=60'
-    },
-    {
-      id: 2,
-      name: 'Marie Curie',
-      role: 'Électricienne certifiée',
-      lastMessage: "Merci pour les précisions, le devis est prêt.",
-      time: 'Hier',
-      unread: 0,
-      online: false,
-      active: false,
-      avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=60'
-    },
-    {
-      id: 3,
-      name: 'Lucas Bernard',
-      role: 'Peintre Expert',
-      lastMessage: "Quelles sont les dimensions de la pièce ?",
-      time: 'Lun.',
-      unread: 0,
-      online: true,
-      active: false,
-      avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=60'
+  const [bookings, setBookings] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const user = JSON.parse(localStorage.getItem('user'));
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!user) {
+      navigate('/login/client');
+      return;
     }
-  ];
+    const fetchDevis = async () => {
+      try {
+        const data = await apiService.getUserDevis(user.id);
+        setBookings(data);
+      } catch (err) {
+        console.error('Failed to fetch devis:', err);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchDevis();
+  }, [user?.id]);
+
+  const getStatusStyle = (status) => {
+    switch(status) {
+      case 'en attente': return 'bg-amber-100 text-amber-700 border-amber-200';
+      case 'accepté': return 'bg-emerald-100 text-emerald-700 border-emerald-200';
+      case 'refusé': return 'bg-rose-100 text-rose-700 border-rose-200';
+      default: return 'bg-slate-100 text-slate-700 border-slate-200';
+    }
+  };
 
   return (
-    <div className="flex min-h-screen w-full flex-col bg-[#f6f7f8] dark:bg-[#101922] text-slate-900 dark:text-slate-100 antialiased">
+    <div className="min-h-screen bg-slate-50 font-['Outfit',sans-serif]">
       {/* Header */}
-      <header className="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-6 py-3 sticky top-0 z-50">
-        <div className="flex items-center gap-8">
-          <div className="flex items-center gap-3">
-            <div className="size-8 bg-blue-600 rounded-lg flex items-center justify-center text-white">
-              <span className="material-symbols-outlined">construction</span>
-            </div>
-            <h2 className="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-tight">ArtisanDirect</h2>
+      <header className="bg-white border-b border-slate-200 px-8 py-4 sticky top-0 z-50 flex justify-between items-center shadow-sm">
+        <div className="flex items-center gap-3 cursor-pointer" onClick={() => navigate('/')}>
+          <div className="size-10 bg-blue-600 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-blue-600/30">
+            <span className="material-symbols-outlined">construction</span>
           </div>
-          <nav className="hidden md:flex items-center gap-6">
-            <a href="#" className="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-blue-600 transition-colors">Tableau de bord</a>
-            <a href="#" className="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-blue-600 transition-colors">Mes Projets</a>
-            <a href="#" className="text-blue-600 text-sm font-semibold leading-normal border-b-2 border-blue-600 pb-1">Messages</a>
-            <a href="#" className="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-blue-600 transition-colors">Factures</a>
-          </nav>
+          <h1 className="text-2xl font-black tracking-tight text-slate-900">BricoloPro</h1>
         </div>
-        
-        <div className="flex flex-1 justify-end gap-4 items-center">
-          <div className="hidden lg:flex relative max-w-xs w-full">
-            <span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
-            <input type="text" placeholder="Rechercher un artisan..." className="w-full bg-slate-100 dark:bg-slate-800 border-none rounded-lg py-2 pl-10 pr-4 text-sm focus:ring-2 focus:ring-blue-600/50 outline-none" />
+        <div className="flex items-center gap-4">
+          <div className="text-right hidden sm:block">
+            <p className="text-sm font-black text-slate-900">{user?.name}</p>
+            <p className="text-xs text-slate-500">Tableau de bord Client</p>
           </div>
-          <div className="flex gap-2">
-            <button className="flex items-center justify-center rounded-lg size-10 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 transition-colors">
-              <span className="material-symbols-outlined">notifications</span>
-            </button>
-            <button className="flex items-center justify-center rounded-lg size-10 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 transition-colors">
-              <span className="material-symbols-outlined">settings</span>
-            </button>
+          <div className="size-10 rounded-full bg-blue-100 border-2 border-blue-600/10 flex items-center justify-center font-black text-blue-600">
+            {user?.name?.charAt(0)}
           </div>
-          <div className="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border border-slate-200 dark:border-slate-700" style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=60")' }}></div>
         </div>
       </header>
 
-      {/* Main Content Layout */}
-      <main className="flex flex-1 overflow-hidden h-[calc(100vh-65px)]">
-        
-        {/* Sidebar Conversations */}
-        <aside className="w-full max-w-[360px] border-r border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 flex flex-col shrink-0">
-          <div className="p-4 border-b border-slate-100 dark:border-slate-800">
-            <div className="flex items-center justify-between mb-4">
-              <h1 className="text-xl font-bold">Messages</h1>
-              <span className="bg-blue-600/10 text-blue-600 text-xs font-bold px-2 py-1 rounded-full">3 non-lus</span>
-            </div>
-            <div className="relative">
-              <span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm">filter_list</span>
-              <input type="text" placeholder="Filtrer par nom..." className="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg py-2 pl-10 pr-4 text-sm focus:ring-1 focus:ring-blue-600 outline-none" />
-            </div>
+      <main className="max-w-6xl mx-auto px-6 py-12">
+        <div className="flex flex-col md:flex-row justify-between items-end gap-6 mb-12">
+          <div>
+            <h2 className="text-4xl font-black text-slate-900 mb-2">Mes Demandes</h2>
+            <p className="text-slate-500 text-lg">Suivez l'état de vos projets et contactez vos artisans.</p>
           </div>
-          
-          <div className="flex-1 overflow-y-auto">
-            {conversations.map(chat => (
-              <div key={chat.id} className={`flex gap-3 p-4 cursor-pointer transition-colors border-b border-slate-50 dark:border-slate-800 ${chat.active ? 'bg-blue-600/5 border-l-4 border-l-blue-600 tracking-tight' : 'hover:bg-slate-50 dark:hover:bg-slate-800/50'}`}>
-                <div className="relative shrink-0">
-                  <div className="size-12 rounded-full bg-cover bg-center border border-slate-100" style={{ backgroundImage: `url('${chat.avatar}')` }}></div>
-                  {chat.online && <div className="absolute bottom-0 right-0 size-3.5 bg-green-500 border-2 border-white dark:border-slate-900 rounded-full"></div>}
-                  {!chat.online && <div className="absolute bottom-0 right-0 size-3.5 bg-slate-300 dark:bg-slate-600 border-2 border-white dark:border-slate-900 rounded-full"></div>}
-                </div>
-                <div className="flex-1 min-w-0">
-                  <div className="flex justify-between items-start mb-0.5">
-                    <h3 className="font-bold text-sm truncate">{chat.name}</h3>
-                    <span className="text-[10px] text-slate-500 font-medium shrink-0">{chat.time}</span>
+          <button 
+             onClick={() => navigate('/search')}
+             className="bg-blue-600 text-white px-8 py-3 rounded-2xl font-black hover:shadow-xl hover:shadow-blue-600/30 transition-all flex items-center gap-2"
+          >
+            <span className="material-symbols-outlined">add</span>
+            Nouveau Projet
+          </button>
+        </div>
+
+        {loading ? (
+          <div className="flex justify-center items-center py-20 text-slate-400">
+            <span className="animate-spin h-8 w-8 border-4 border-blue-600 border-t-transparent rounded-full mr-3"></span>
+            Chargement de vos projets...
+          </div>
+        ) : bookings.length === 0 ? (
+          <div className="bg-white p-20 rounded-3xl border-2 border-dashed border-slate-200 text-center space-y-4 shadow-sm">
+            <div className="size-20 bg-slate-100 rounded-full flex items-center justify-center mx-auto text-slate-400 mb-6">
+              <span className="material-symbols-outlined text-4xl">inventory_2</span>
+            </div>
+            <h3 className="text-2xl font-black text-slate-900">Aucun projet en cours</h3>
+            <p className="text-slate-500 max-w-sm mx-auto">Commencez par rechercher un artisan pour votre prochain projet de rénovation.</p>
+            <button 
+              onClick={() => navigate('/search')}
+              className="text-blue-600 font-black hover:underline mt-4 block mx-auto outline-none"
+            >
+              Parcourir les experts
+            </button>
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 lg:grid-cols-1 gap-6">
+            {bookings.map(devis => (
+              <div key={devis.id} className="bg-white rounded-3xl border border-slate-100 p-8 shadow-xl shadow-slate-200/40 hover:shadow-2xl hover:shadow-slate-200/60 transition-all group border-l-8 border-l-blue-600">
+                <div className="flex flex-col md:flex-row gap-8">
+                  <div className="flex-1 space-y-6">
+                    <div className="flex flex-wrap items-center gap-3">
+                      <span className={`px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-wider border-2 ${getStatusStyle(devis.status)}`}>
+                        {devis.status}
+                      </span>
+                      <span className="text-slate-400 font-bold text-xs">•</span>
+                      <span className="text-slate-500 text-xs font-bold uppercase tracking-widest flex items-center gap-1">
+                        <span className="material-symbols-outlined text-sm">calendar_today</span>
+                        Prévu le: {new Date(devis.date).toLocaleDateString()}
+                      </span>
+                    </div>
+
+                    <h4 className="text-2xl font-black text-slate-900 group-hover:text-blue-600 transition-colors uppercase tracking-tight">
+                      {devis.category_name}
+                    </h4>
+
+                    <p className="text-slate-500 line-clamp-2 text-sm leading-relaxed">
+                      {devis.description}
+                    </p>
+
+                    <div className="flex flex-wrap gap-8">
+                      <div className="flex items-center gap-3">
+                        <div className={`size-12 rounded-2xl flex items-center justify-center font-black ${devis.artisan_name ? 'bg-slate-100 text-slate-500' : 'bg-amber-50 text-amber-500 animate-pulse'}`}>
+                          {devis.artisan_name ? devis.artisan_name.charAt(0) : '?'}
+                        </div>
+                        <div>
+                          <p className="text-xs text-slate-400 font-black uppercase tracking-widest">Artisan</p>
+                          <p className={`text-sm font-bold ${devis.artisan_name ? 'text-slate-900' : 'text-amber-600 italic'}`}>
+                            {devis.artisan_name || "En attente d'acceptation"}
+                          </p>
+                        </div>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <div className="size-12 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-600">
+                          <span className="material-symbols-outlined text-2xl font-bold">payments</span>
+                        </div>
+                        <div>
+                          <p className="text-xs text-slate-400 font-black uppercase tracking-widest">Budget Estimé</p>
+                          <p className="text-sm font-bold text-slate-900">{devis.budget} DA</p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <p className={`text-xs font-semibold truncate ${chat.active ? 'text-blue-600' : 'text-slate-500'}`}>{chat.role}</p>
-                  <p className={`text-xs truncate mt-1 ${chat.unread > 0 ? 'text-slate-800 dark:text-slate-200 font-bold' : 'text-slate-600 dark:text-slate-400'}`}>
-                    {chat.lastMessage}
-                  </p>
+
+                  <div className="flex flex-row md:flex-col justify-end gap-3 min-w-[200px]">
+                    <button className="flex-1 bg-blue-600 text-white py-3 px-6 rounded-xl font-black text-xs hover:bg-blue-700 transition-all flex items-center justify-center gap-2">
+                       <span className="material-symbols-outlined text-sm font-bold">message</span>
+                       Message
+                    </button>
+                    <button className="flex-1 bg-white border-2 border-slate-100 text-slate-600 py-3 px-6 rounded-xl font-black text-xs hover:bg-slate-50 transition-all active:scale-95">
+                       Détails du devis
+                    </button>
+                  </div>
                 </div>
               </div>
             ))}
           </div>
-          
-          <div className="p-4 bg-slate-50 dark:bg-slate-800/50">
-            <button className="w-full flex items-center justify-center gap-2 bg-blue-600 text-white font-bold py-2.5 rounded-lg text-sm hover:bg-blue-700 transition-all shadow-sm">
-              <span className="material-symbols-outlined text-base">edit_square</span>
-              Nouvelle discussion
-            </button>
-          </div>
-        </aside>
-
-        {/* Main Chat Area */}
-        <section className="flex-1 flex flex-col bg-white dark:bg-slate-900 relative">
-          
-          {/* Chat Header */}
-          <header className="flex items-center justify-between px-6 py-4 border-b border-slate-200 dark:border-slate-800 shadow-sm z-10 shrink-0">
-            <div className="flex items-center gap-4">
-              <div className="relative">
-                <div className="size-11 rounded-full bg-cover bg-center border-2 border-blue-600/20" style={{ backgroundImage: `url('${conversations[0].avatar}')` }}></div>
-                <div className="absolute -bottom-1 -right-1 size-4 bg-green-500 border-2 border-white dark:border-slate-900 rounded-full"></div>
-              </div>
-              <div>
-                <h2 className="text-base font-bold flex items-center gap-2">
-                  {conversations[0].name}
-                  <span className="text-[10px] bg-blue-600/10 text-blue-600 px-1.5 py-0.5 rounded uppercase tracking-wider">PRO</span>
-                </h2>
-                <div className="flex items-center gap-1.5">
-                  <span className="size-2 bg-green-500 rounded-full"></span>
-                  <p className="text-xs text-slate-500 font-medium">En ligne</p>
-                </div>
-              </div>
-            </div>
-            <div className="flex items-center gap-3">
-              <button className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors border border-slate-200 dark:border-slate-700">
-                <span className="material-symbols-outlined text-xl">description</span>
-                <span className="hidden sm:inline">Voir le projet</span>
-              </button>
-              <button className="flex items-center justify-center size-10 text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg">
-                <span className="material-symbols-outlined">more_vert</span>
-              </button>
-            </div>
-          </header>
-
-          {/* Messages Area */}
-          <div className="flex-1 overflow-y-auto p-6 space-y-6 bg-slate-50/50 dark:bg-slate-900/50">
-            <div className="flex flex-col items-center">
-              <span className="px-4 py-1 rounded-full bg-slate-200 dark:bg-slate-800 text-[10px] font-bold text-slate-500 uppercase tracking-widest">Aujourd'hui</span>
-            </div>
-
-            {/* Message Received */}
-            <div className="flex gap-3 max-w-[85%]">
-              <div className="size-8 rounded-full bg-cover bg-center shrink-0 mt-1" style={{ backgroundImage: `url('${conversations[0].avatar}')` }}></div>
-              <div className="space-y-1">
-                <div className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-4 rounded-r-xl rounded-bl-xl shadow-sm">
-                  <p className="text-sm text-slate-800 dark:text-slate-200 leading-relaxed">
-                    Bonjour ! J'ai bien analysé les photos de votre installation. Le problème de fuite semble provenir du joint principal de la vanne d'arrêt.
-                  </p>
-                </div>
-                <span className="text-[10px] text-slate-400 ml-1 block">14:15</span>
-              </div>
-            </div>
-
-            {/* Message Received (Continuation) */}
-            <div className="flex gap-3 max-w-[85%]">
-              <div className="size-8 rounded-full bg-cover bg-center shrink-0 mt-1 opacity-0"></div>
-              <div className="space-y-1">
-                <div className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-4 rounded-r-xl rounded-bl-xl shadow-sm">
-                  <p className="text-sm text-slate-800 dark:text-slate-200 leading-relaxed">
-                    Est-ce que vous seriez disponible demain vers 14h pour que je puisse établir un devis précis sur place ?
-                  </p>
-                </div>
-                <span className="text-[10px] text-slate-400 ml-1 block">14:15</span>
-              </div>
-            </div>
-
-            {/* Message Sent */}
-            <div className="flex flex-row-reverse gap-3 max-w-[85%] ml-auto">
-              <div className="size-8 rounded-full bg-cover bg-center shrink-0 mt-1" style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=60")' }}></div>
-              <div className="space-y-1 flex flex-col items-end">
-                <div className="bg-blue-600 text-white p-4 rounded-l-xl rounded-br-xl shadow-md">
-                  <p className="text-sm leading-relaxed">
-                    C'est parfait pour demain 14h. J'ai également une petite question sur le robinet de la cuisine qui goutte, est-ce qu'on pourra regarder ça aussi ?
-                  </p>
-                </div>
-                <div className="flex items-center gap-1">
-                  <span className="text-[10px] text-slate-400 mr-1">14:22</span>
-                  <span className="material-symbols-outlined text-blue-600 text-sm font-bold">done_all</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Typing Indicator */}
-            <div className="flex gap-3 max-w-[85%]">
-              <div className="size-8 rounded-full bg-cover bg-center shrink-0 mt-1" style={{ backgroundImage: `url('${conversations[0].avatar}')` }}></div>
-              <div className="space-y-1">
-                <div className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-4 rounded-r-xl rounded-bl-xl shadow-sm inline-block">
-                  <div className="flex gap-2 items-center text-blue-600 mb-2 italic">
-                    <span className="material-symbols-outlined text-base">edit</span>
-                    <span className="text-xs">Jean est en train d'écrire...</span>
-                  </div>
-                  <div className="flex gap-2">
-                    <span className="size-1.5 bg-slate-300 dark:bg-slate-600 rounded-full animate-bounce"></span>
-                    <span className="size-1.5 bg-slate-300 dark:bg-slate-600 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></span>
-                    <span className="size-1.5 bg-slate-300 dark:bg-slate-600 rounded-full animate-bounce" style={{ animationDelay: '0.4s' }}></span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-          </div>
-
-          {/* Input Field Area */}
-          <div className="p-4 border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shrink-0">
-            <div className="max-w-4xl mx-auto">
-              <div className="bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-2 flex items-end gap-2 focus-within:ring-2 focus-within:ring-blue-600/20 transition-all">
-                <div className="flex gap-1 pb-1">
-                  <button className="size-9 flex items-center justify-center rounded-lg text-slate-500 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
-                    <span className="material-symbols-outlined">add_circle</span>
-                  </button>
-                  <button className="size-9 flex items-center justify-center rounded-lg text-slate-500 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
-                    <span className="material-symbols-outlined">image</span>
-                  </button>
-                  <button className="size-9 flex items-center justify-center rounded-lg text-slate-500 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
-                    <span className="material-symbols-outlined">attach_file</span>
-                  </button>
-                </div>
-                <textarea 
-                  className="flex-1 bg-transparent border-none focus:ring-0 text-sm resize-none py-2.5 max-h-32 min-h-[44px] outline-none placeholder-slate-400" 
-                  placeholder="Écrivez votre message ici..." 
-                  rows="1"
-                ></textarea>
-                <div className="pb-1 pr-1">
-                  <button className="size-10 flex items-center justify-center bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all shadow-lg shadow-blue-600/20">
-                    <span className="material-symbols-outlined">send</span>
-                  </button>
-                </div>
-              </div>
-              <div className="flex justify-between mt-2 px-1">
-                <p className="text-[10px] text-slate-400 font-medium hidden sm:block">Entrée pour envoyer, Shift + Entrée pour nouvelle ligne</p>
-                <div className="flex items-center gap-1.5 text-green-600">
-                  <span className="material-symbols-outlined text-xs">verified</span>
-                  <span className="text-[10px] font-bold uppercase tracking-tight">Paiement sécurisé actif</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-        </section>
+        ) }
       </main>
+
+      <footer className="mt-20 border-t border-slate-100 py-12 text-center text-slate-400 text-sm">
+        <p>© 2026 BricoloPro Algérie - Tableau de bord Client v2.0</p>
+      </footer>
     </div>
   );
 };

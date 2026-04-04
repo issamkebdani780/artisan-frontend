@@ -1,6 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const ExpertCard = ({ name, role, rating, reviews, location, availability, price, image, isVerified }) => {
+const ExpertCard = ({ id, name, role, rating, reviews, location, availability, price, image, isVerified }) => {
   return (
     <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden hover:shadow-xl transition-all group shrink-0">
       <div className="p-6">
@@ -23,11 +24,11 @@ const ExpertCard = ({ name, role, rating, reviews, location, availability, price
           </div>
         </div>
         <div>
-          <h3 className="font-bold text-lg text-slate-900 dark:text-white group-hover:text-blue-600 transition-colors">{name}</h3>
+          <h3 className="font-bold text-lg text-slate-900 dark:text-white group-hover:text-blue-600 transition-colors uppercase">{name}</h3>
           <p className="text-sm text-blue-600 font-medium mb-3">{role}</p>
           <div className="flex items-center gap-4 text-xs text-slate-500 mb-6">
             <span className="flex items-center gap-1"><span className="material-symbols-outlined text-xs">location_on</span> {location}</span>
-            <span className="flex items-center gap-1">
+            <span className="flex items-center gap-1 font-bold">
               {availability === 'Disponible' ? (
                 <><span className="material-symbols-outlined text-xs text-green-500">circle</span> {availability}</>
               ) : (
@@ -39,11 +40,14 @@ const ExpertCard = ({ name, role, rating, reviews, location, availability, price
         <div className="flex items-center justify-between pt-4 border-t border-slate-100 dark:border-slate-800">
           <div>
             <span className="text-xs text-slate-500">À partir de</span>
-            <p className="font-bold text-slate-900 dark:text-white">{price}€<span className="text-xs font-normal">/h</span></p>
+            <p className="font-bold text-slate-900 dark:text-white">{price} DA<span className="text-xs font-normal">/h</span></p>
           </div>
-          <button className="bg-slate-100 dark:bg-slate-800 text-blue-600 px-4 py-2 rounded-lg font-bold text-sm hover:bg-blue-600 hover:text-white transition-all">
+          <Link 
+            to={`/artisan/${id}`} 
+            className="bg-slate-100 dark:bg-slate-800 text-blue-600 px-4 py-2 rounded-lg font-bold text-sm hover:bg-blue-600 hover:text-white transition-all"
+          >
             Voir profil
-          </button>
+          </Link>
         </div>
       </div>
     </div>

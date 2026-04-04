@@ -1,11 +1,65 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import apiService from '../services/api';
 
 const ClientRegister = () => {
   const [activeTab, setActiveTab] = useState('client');
+  const navigate = useNavigate();
+
+  // Client form state
+  const [clientForm, setClientForm] = useState({ name: '', email: '', phone: '', password: '', confirm: '' });
+  const [artisanForm, setArtisanForm] = useState({ name: '', email: '', phone: '', specialty: '', password: '', confirm: '' });
+  const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
+
+  const handleClientChange = (e) => setClientForm({ ...clientForm, [e.target.name]: e.target.value });
+  const handleArtisanChange = (e) => setArtisanForm({ ...artisanForm, [e.target.name]: e.target.value });
+
+  const handleClientSubmit = async (e) => {
+    e.preventDefault();
+    setError('');
+    if (clientForm.password !== clientForm.confirm) { setError('Les mots de passe ne correspondent pas'); return; }
+    if (clientForm.password.length < 8) { setError('Mot de passe trop court (8 caractères minimum)'); return; }
+    setLoading(true);
+    try {
+      const res = await apiService.register({ name: clientForm.name, email: clientForm.email, phone: clientForm.phone, password: clientForm.password, role: 'client' });
+      if (res.userId) {
+        // Auto-login after register
+        await apiService.login({ email: clientForm.email, password: clientForm.password, role: 'client' });
+        navigate('/');
+      } else {
+        setError(res.error || 'Erreur lors de l\'inscription');
+      }
+    } catch (err) {
+      setError('Une erreur est survenue. Vérifiez votre connexion.');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleArtisanSubmit = async (e) => {
+    e.preventDefault();
+    setError('');
+    if (artisanForm.password !== artisanForm.confirm) { setError('Les mots de passe ne correspondent pas'); return; }
+    if (artisanForm.password.length < 8) { setError('Mot de passe trop court (8 caractères minimum)'); return; }
+    setLoading(true);
+    try {
+      const res = await apiService.register({ name: artisanForm.name, email: artisanForm.email, phone: artisanForm.phone, specialty: artisanForm.specialty, password: artisanForm.password, role: 'artisan' });
+      if (res.userId) {
+        await apiService.login({ email: artisanForm.email, password: artisanForm.password, role: 'artisan' });
+        navigate('/dashboard/artisan');
+      } else {
+        setError(res.error || 'Erreur lors de l\'inscription');
+      }
+    } catch (err) {
+      setError('Une erreur est survenue. Vérifiez votre connexion.');
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
-    <div className="bg-[#fcfdfe] font-body text-slate-900 antialiased">
+    <div className="bg-[#fcfdfe] font-['Outfit',sans-serif] text-slate-900 antialiased">
       <main className="pt-32 pb-24 px-6 md:px-12 max-w-7xl mx-auto grid lg:grid-cols-12 gap-16 lg:gap-24 items-start">
         {/* Left Editorial Section */}
         <div className="lg:col-span-5 space-y-12 lg:sticky lg:top-32">
@@ -24,7 +78,7 @@ const ClientRegister = () => {
               { icon: 'security', title: 'Confiance Totale', desc: 'Transactions sécurisées par des protocoles bancaires de nouvelle génération.' },
               { icon: 'history_edu', title: 'Savoir-faire Unique', desc: 'Découvrez des histoires et des pièces qui ne se trouvent nulle part ailleurs.' }
             ].map((item, i) => (
-              <div key={i} className="group p-6 rounded-2xl bg-white border border-slate-100 flex items-start gap-5 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_4px_6px_-2px_rgba(0,0,0,0.05)] transition-all duration-300 hover:border-blue-600/20">
+              <div key={i} className="group p-6 rounded-2xl bg-white border border-slate-100 flex items-start gap-5 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07)] transition-all duration-300 hover:border-blue-600/20">
                 <div className="w-14 h-14 rounded-xl bg-blue-50 flex items-center justify-center shrink-0 text-blue-600 transition-all duration-300 group-hover:bg-blue-600 group-hover:text-white group-hover:scale-110">
                   <span className="material-symbols-outlined text-2xl" style={{ fontVariationSettings: "'FILL' 1" }}>{item.icon}</span>
                 </div>
@@ -35,52 +89,47 @@ const ClientRegister = () => {
               </div>
             ))}
           </div>
-          
-          <div className="flex items-center gap-4 py-6 border-t border-slate-100">
-            <div className="flex -space-x-3">
-              {[1, 2, 3].map((n) => (
-                <div key={n} className="w-10 h-10 rounded-full border-2 border-white bg-slate-200 overflow-hidden shadow-sm">
-                  <img alt={`User ${n}`} className="w-full h-full object-cover" src={`https://i.pravatar.cc/100?img=${n + 10}`} />
-                </div>
-              ))}
-            </div>
-            <p className="text-sm font-medium text-slate-500">
-              Rejoignez plus de <span className="text-slate-900 font-bold">12,000+</span> passionnés d'artisanat.
-            </p>
-          </div>
         </div>
 
         {/* Right Registration Form Section */}
         <div className="lg:col-span-7">
           <div className="flex justify-center p-1.5 bg-slate-100 rounded-2xl mb-8 gap-1.5">
-            <button 
-              onClick={() => setActiveTab('client')}
-              className={`flex-1 text-center py-3.5 rounded-xl font-bold text-sm cursor-pointer transition-all duration-300 ${activeTab === 'client' ? 'bg-blue-600 text-white shadow-[0_4px_12px_rgba(37,99,235,0.25)]' : 'text-slate-500 hover:bg-white/50'}`}
+            <button
+              onClick={() => { setActiveTab('client'); setError(''); }}
+              className={`flex-1 text-center py-3.5 rounded-xl font-bold text-sm cursor-pointer transition-all duration-300 ${activeTab === 'client' ? 'bg-blue-600 text-white shadow-lg shadow-blue-200' : 'text-slate-500 hover:bg-white/50'}`}
             >
               Compte Client
             </button>
-            <button 
-              onClick={() => setActiveTab('artisan')}
-              className={`flex-1 text-center py-3.5 rounded-xl font-bold text-sm cursor-pointer transition-all duration-300 ${activeTab === 'artisan' ? 'bg-blue-600 text-white shadow-[0_4px_12px_rgba(37,99,235,0.25)]' : 'text-slate-500 hover:bg-white/50'}`}
+            <button
+              onClick={() => { setActiveTab('artisan'); setError(''); }}
+              className={`flex-1 text-center py-3.5 rounded-xl font-bold text-sm cursor-pointer transition-all duration-300 ${activeTab === 'artisan' ? 'bg-blue-600 text-white shadow-lg shadow-blue-200' : 'text-slate-500 hover:bg-white/50'}`}
             >
               Compte Artisan
             </button>
           </div>
 
           <div className="bg-white p-8 lg:p-14 rounded-3xl shadow-[0_20px_50px_-12px_rgba(37,99,235,0.08)] border border-slate-50">
+            
+            {error && (
+              <div className="mb-6 p-4 bg-red-50 border-l-4 border-red-500 text-red-700 rounded-xl flex items-center gap-3">
+                <span className="material-symbols-outlined">error</span>
+                <p className="font-semibold text-sm">{error}</p>
+              </div>
+            )}
+
             {activeTab === 'client' ? (
               <div className="space-y-10">
                 <div className="space-y-3">
                   <h2 className="text-4xl font-black text-slate-900 tracking-tight">Créer mon profil</h2>
                   <p className="text-slate-500 text-lg">Découvrez le monde de l'artisanat d'exception.</p>
                 </div>
-                <form className="space-y-8">
+                <form className="space-y-8" onSubmit={handleClientSubmit}>
                   <div className="space-y-6">
                     <div className="space-y-2">
                       <label className="text-[11px] font-black uppercase tracking-widest text-slate-400 ml-1">Nom Complet</label>
                       <div className="relative group">
                         <span className="material-symbols-outlined absolute left-5 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-blue-600 transition-colors text-xl">person</span>
-                        <input type="text" placeholder="Yassine Benali" className="w-full pl-14 pr-6 py-5 bg-slate-50/50 rounded-2xl border border-transparent focus:border-blue-600/20 focus:ring-8 focus:ring-blue-600/5 focus:bg-white transition-all outline-none text-slate-900 font-medium placeholder:text-slate-400" />
+                        <input name="name" type="text" value={clientForm.name} onChange={handleClientChange} required placeholder="Yassine Benali" className="w-full pl-14 pr-6 py-5 bg-slate-50/50 rounded-2xl border border-transparent focus:border-blue-600/20 focus:ring-8 focus:ring-blue-600/5 focus:bg-white transition-all outline-none font-medium placeholder:text-slate-400" />
                       </div>
                     </div>
                     
@@ -89,14 +138,14 @@ const ClientRegister = () => {
                         <label className="text-[11px] font-black uppercase tracking-widest text-slate-400 ml-1">Email</label>
                         <div className="relative group">
                           <span className="material-symbols-outlined absolute left-5 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-blue-600 transition-colors text-xl">mail</span>
-                          <input type="email" placeholder="jean@exemple.com" className="w-full pl-14 pr-6 py-5 bg-slate-50/50 rounded-2xl border border-transparent focus:border-blue-600/20 focus:ring-8 focus:ring-blue-600/5 focus:bg-white transition-all outline-none text-slate-900 font-medium placeholder:text-slate-400" />
+                          <input name="email" type="email" value={clientForm.email} onChange={handleClientChange} required placeholder="jean@exemple.com" className="w-full pl-14 pr-6 py-5 bg-slate-50/50 rounded-2xl border border-transparent focus:border-blue-600/20 focus:ring-8 focus:ring-blue-600/5 focus:bg-white transition-all outline-none font-medium placeholder:text-slate-400" />
                         </div>
                       </div>
                       <div className="space-y-2">
                         <label className="text-[11px] font-black uppercase tracking-widest text-slate-400 ml-1">Téléphone</label>
                         <div className="relative group">
                           <span className="material-symbols-outlined absolute left-5 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-blue-600 transition-colors text-xl">call</span>
-                          <input type="tel" placeholder="05 50 12 34 56" className="w-full pl-14 pr-6 py-5 bg-slate-50/50 rounded-2xl border border-transparent focus:border-blue-600/20 focus:ring-8 focus:ring-blue-600/5 focus:bg-white transition-all outline-none text-slate-900 font-medium placeholder:text-slate-400" />
+                          <input name="phone" type="tel" value={clientForm.phone} onChange={handleClientChange} placeholder="05 50 12 34 56" className="w-full pl-14 pr-6 py-5 bg-slate-50/50 rounded-2xl border border-transparent focus:border-blue-600/20 focus:ring-8 focus:ring-blue-600/5 focus:bg-white transition-all outline-none font-medium placeholder:text-slate-400" />
                         </div>
                       </div>
                     </div>
@@ -106,34 +155,30 @@ const ClientRegister = () => {
                         <label className="text-[11px] font-black uppercase tracking-widest text-slate-400 ml-1">Mot de passe</label>
                         <div className="relative group">
                           <span className="material-symbols-outlined absolute left-5 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-blue-600 transition-colors text-xl">lock</span>
-                          <input type="password" placeholder="••••••••" className="w-full pl-14 pr-6 py-5 bg-slate-50/50 rounded-2xl border border-transparent focus:border-blue-600/20 focus:ring-8 focus:ring-blue-600/5 focus:bg-white transition-all outline-none text-slate-900 font-medium placeholder:text-slate-400" />
+                          <input name="password" type="password" value={clientForm.password} onChange={handleClientChange} required placeholder="••••••••" className="w-full pl-14 pr-6 py-5 bg-slate-50/50 rounded-2xl border border-transparent focus:border-blue-600/20 focus:ring-8 focus:ring-blue-600/5 focus:bg-white transition-all outline-none font-medium placeholder:text-slate-400" />
                         </div>
                       </div>
                       <div className="space-y-2">
                         <label className="text-[11px] font-black uppercase tracking-widest text-slate-400 ml-1">Confirmation</label>
                         <div className="relative group">
                           <span className="material-symbols-outlined absolute left-5 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-blue-600 transition-colors text-xl">verified_user</span>
-                          <input type="password" placeholder="••••••••" className="w-full pl-14 pr-6 py-5 bg-slate-50/50 rounded-2xl border border-transparent focus:border-blue-600/20 focus:ring-8 focus:ring-blue-600/5 focus:bg-white transition-all outline-none text-slate-900 font-medium placeholder:text-slate-400" />
+                          <input name="confirm" type="password" value={clientForm.confirm} onChange={handleClientChange} required placeholder="••••••••" className="w-full pl-14 pr-6 py-5 bg-slate-50/50 rounded-2xl border border-transparent focus:border-blue-600/20 focus:ring-8 focus:ring-blue-600/5 focus:bg-white transition-all outline-none font-medium placeholder:text-slate-400" />
                         </div>
                       </div>
                     </div>
                   </div>
 
-                  <div className="p-5 bg-blue-50/50 rounded-2xl space-y-3 border border-blue-100/50">
+                  <div className="p-5 bg-blue-50/50 rounded-2xl space-y-2 border border-blue-100/50">
                     <p className="text-[10px] font-black text-blue-600 uppercase tracking-widest">Sécurité requise</p>
-                    <ul className="text-xs text-slate-600 space-y-2">
-                      <li className="flex items-center gap-2.5">
-                        <span className="material-symbols-outlined text-sm text-blue-600" style={{ fontVariationSettings: "'FILL' 1" }}>check_circle</span>
-                        <span className="font-medium">8 caractères minimum</span>
-                      </li>
-                    </ul>
+                    <li className={`flex items-center gap-2.5 text-xs ${clientForm.password.length >= 8 ? 'text-emerald-600' : 'text-slate-500'}`}>
+                      <span className="material-symbols-outlined text-sm" style={{ fontVariationSettings: "'FILL' 1" }}>{clientForm.password.length >= 8 ? 'check_circle' : 'radio_button_unchecked'}</span>
+                      <span className="font-medium">8 caractères minimum</span>
+                    </li>
                   </div>
 
-                  <div className="space-y-6">
-                    <button type="submit" className="w-full py-5 bg-blue-600 text-white font-black text-sm uppercase tracking-widest rounded-2xl shadow-xl shadow-blue-200 hover:bg-blue-700 hover:-translate-y-0.5 active:scale-[0.98] transition-all duration-300">
-                      S'inscrire Maintenant
-                    </button>
-                  </div>
+                  <button type="submit" disabled={loading} className="w-full py-5 bg-blue-600 text-white font-black text-sm uppercase tracking-widest rounded-2xl shadow-xl shadow-blue-200 hover:bg-blue-700 hover:-translate-y-0.5 active:scale-[0.98] transition-all duration-300 disabled:opacity-60 flex items-center justify-center gap-3">
+                    {loading ? <><span className="animate-spin h-5 w-5 border-4 border-white/30 border-t-white rounded-full"></span>Création...</> : "S'inscrire Maintenant"}
+                  </button>
                 </form>
               </div>
             ) : (
@@ -142,13 +187,13 @@ const ClientRegister = () => {
                   <h2 className="text-4xl font-black text-slate-900 tracking-tight">Ouvrir mon Atelier</h2>
                   <p className="text-slate-500 text-lg">Rejoignez l'élite des créateurs et artisans.</p>
                 </div>
-                <form className="space-y-8">
+                <form className="space-y-8" onSubmit={handleArtisanSubmit}>
                   <div className="space-y-6">
                     <div className="space-y-2">
-                      <label className="text-[11px] font-black uppercase tracking-widest text-slate-400 ml-1">Nom de l'Atelier</label>
+                      <label className="text-[11px] font-black uppercase tracking-widest text-slate-400 ml-1">Nom Complet</label>
                       <div className="relative group">
                         <span className="material-symbols-outlined absolute left-5 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-blue-600 transition-colors text-xl">storefront</span>
-                        <input type="text" placeholder="Ex: Atelier d'Alger" className="w-full pl-14 pr-6 py-5 bg-slate-50/50 rounded-2xl border border-transparent focus:border-blue-600/20 focus:ring-8 focus:ring-blue-600/5 focus:bg-white transition-all outline-none text-slate-900 font-medium placeholder:text-slate-400" />
+                        <input name="name" type="text" value={artisanForm.name} onChange={handleArtisanChange} required placeholder="Ex: Atelier d'Alger" className="w-full pl-14 pr-6 py-5 bg-slate-50/50 rounded-2xl border border-transparent focus:border-blue-600/20 focus:ring-8 focus:ring-blue-600/5 focus:bg-white transition-all outline-none font-medium placeholder:text-slate-400" />
                       </div>
                     </div>
                     
@@ -157,15 +202,23 @@ const ClientRegister = () => {
                         <label className="text-[11px] font-black uppercase tracking-widest text-slate-400 ml-1">Email Pro</label>
                         <div className="relative group">
                           <span className="material-symbols-outlined absolute left-5 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-blue-600 transition-colors text-xl">business_center</span>
-                          <input type="email" placeholder="contact@votre-atelier.com" className="w-full pl-14 pr-6 py-5 bg-slate-50/50 rounded-2xl border border-transparent focus:border-blue-600/20 focus:ring-8 focus:ring-blue-600/5 focus:bg-white transition-all outline-none text-slate-900 font-medium placeholder:text-slate-400" />
+                          <input name="email" type="email" value={artisanForm.email} onChange={handleArtisanChange} required placeholder="contact@atelier.com" className="w-full pl-14 pr-6 py-5 bg-slate-50/50 rounded-2xl border border-transparent focus:border-blue-600/20 focus:ring-8 focus:ring-blue-600/5 focus:bg-white transition-all outline-none font-medium placeholder:text-slate-400" />
                         </div>
                       </div>
                       <div className="space-y-2">
-                        <label className="text-[11px] font-black uppercase tracking-widest text-slate-400 ml-1">Téléphone Pro</label>
+                        <label className="text-[11px] font-black uppercase tracking-widest text-slate-400 ml-1">Téléphone</label>
                         <div className="relative group">
                           <span className="material-symbols-outlined absolute left-5 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-blue-600 transition-colors text-xl">call</span>
-                          <input type="tel" placeholder="05 50 12 34 56" className="w-full pl-14 pr-6 py-5 bg-slate-50/50 rounded-2xl border border-transparent focus:border-blue-600/20 focus:ring-8 focus:ring-blue-600/5 focus:bg-white transition-all outline-none text-slate-900 font-medium placeholder:text-slate-400" />
+                          <input name="phone" type="tel" value={artisanForm.phone} onChange={handleArtisanChange} placeholder="05 50 12 34 56" className="w-full pl-14 pr-6 py-5 bg-slate-50/50 rounded-2xl border border-transparent focus:border-blue-600/20 focus:ring-8 focus:ring-blue-600/5 focus:bg-white transition-all outline-none font-medium placeholder:text-slate-400" />
                         </div>
+                      </div>
+                    </div>
+
+                    <div className="space-y-2">
+                      <label className="text-[11px] font-black uppercase tracking-widest text-slate-400 ml-1">Spécialité</label>
+                      <div className="relative group">
+                        <span className="material-symbols-outlined absolute left-5 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-blue-600 transition-colors text-xl">engineering</span>
+                        <input name="specialty" type="text" value={artisanForm.specialty} onChange={handleArtisanChange} placeholder="Ex: Plombier, Électricien..." className="w-full pl-14 pr-6 py-5 bg-slate-50/50 rounded-2xl border border-transparent focus:border-blue-600/20 focus:ring-8 focus:ring-blue-600/5 focus:bg-white transition-all outline-none font-medium placeholder:text-slate-400" />
                       </div>
                     </div>
 
@@ -174,24 +227,22 @@ const ClientRegister = () => {
                         <label className="text-[11px] font-black uppercase tracking-widest text-slate-400 ml-1">Mot de passe</label>
                         <div className="relative group">
                           <span className="material-symbols-outlined absolute left-5 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-blue-600 transition-colors text-xl">lock</span>
-                          <input type="password" placeholder="••••••••" className="w-full pl-14 pr-6 py-5 bg-slate-50/50 rounded-2xl border border-transparent focus:border-blue-600/20 focus:ring-8 focus:ring-blue-600/5 focus:bg-white transition-all outline-none text-slate-900 font-medium placeholder:text-slate-400" />
+                          <input name="password" type="password" value={artisanForm.password} onChange={handleArtisanChange} required placeholder="••••••••" className="w-full pl-14 pr-6 py-5 bg-slate-50/50 rounded-2xl border border-transparent focus:border-blue-600/20 focus:ring-8 focus:ring-blue-600/5 focus:bg-white transition-all outline-none font-medium placeholder:text-slate-400" />
                         </div>
                       </div>
                       <div className="space-y-2">
                         <label className="text-[11px] font-black uppercase tracking-widest text-slate-400 ml-1">Confirmation</label>
                         <div className="relative group">
                           <span className="material-symbols-outlined absolute left-5 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-blue-600 transition-colors text-xl">verified_user</span>
-                          <input type="password" placeholder="••••••••" className="w-full pl-14 pr-6 py-5 bg-slate-50/50 rounded-2xl border border-transparent focus:border-blue-600/20 focus:ring-8 focus:ring-blue-600/5 focus:bg-white transition-all outline-none text-slate-900 font-medium placeholder:text-slate-400" />
+                          <input name="confirm" type="password" value={artisanForm.confirm} onChange={handleArtisanChange} required placeholder="••••••••" className="w-full pl-14 pr-6 py-5 bg-slate-50/50 rounded-2xl border border-transparent focus:border-blue-600/20 focus:ring-8 focus:ring-blue-600/5 focus:bg-white transition-all outline-none font-medium placeholder:text-slate-400" />
                         </div>
                       </div>
                     </div>
                   </div>
 
-                  <div className="space-y-6">
-                    <button type="submit" className="w-full py-5 bg-blue-600 text-white font-black text-sm uppercase tracking-widest rounded-2xl shadow-xl shadow-blue-200 hover:bg-blue-700 hover:-translate-y-0.5 active:scale-[0.98] transition-all duration-300">
-                      Ouvrir Mon Atelier
-                    </button>
-                  </div>
+                  <button type="submit" disabled={loading} className="w-full py-5 bg-blue-600 text-white font-black text-sm uppercase tracking-widest rounded-2xl shadow-xl shadow-blue-200 hover:bg-blue-700 hover:-translate-y-0.5 active:scale-[0.98] transition-all duration-300 disabled:opacity-60 flex items-center justify-center gap-3">
+                    {loading ? <><span className="animate-spin h-5 w-5 border-4 border-white/30 border-t-white rounded-full"></span>Création...</> : 'Ouvrir Mon Atelier'}
+                  </button>
                 </form>
               </div>
             )}

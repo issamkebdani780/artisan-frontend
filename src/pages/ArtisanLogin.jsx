@@ -1,9 +1,35 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import apiService from '../services/api';
 
 const ArtisanLogin = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setError('');
+    
+    try {
+      const response = await apiService.login({ email, password, role: 'artisan' });
+      if (response.token) {
+        navigate('/dashboard/artisan');
+      } else {
+        setError(response.error || 'Identifiants invalides');
+      }
+    } catch (err) {
+      setError('Une erreur est survenue lors de la connexion');
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
-    <div className="bg-[#f8f9fc] w-full min-h-screen flex items-center justify-center relative overflow-x-hidden py-20 px-4">
+    <div className="bg-[#f8f9fc] w-full min-h-screen flex items-center justify-center relative overflow-x-hidden py-20 px-4 font-['Outfit',sans-serif]">
       {/* Background Decor */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-[-15%] left-[-10%] w-[800px] h-[800px] bg-orange-500/5 rounded-full blur-[140px]"></div>
@@ -18,8 +44,15 @@ const ArtisanLogin = () => {
           
           {/* Header */}
           <div className="text-center space-y-4">
-            <div className="text-4xl font-black text-orange-500 tracking-tighter mb-8 flex items-center justify-center gap-2">
-              <span className="material-symbols-outlined text-4xl" style={{ fontVariationSettings: "'FILL' 1" }}>storefront</span>
+             <div className="flex justify-center mb-8 relative">
+              <div className="bg-slate-100 p-1.5 rounded-2xl flex gap-2 w-fit border border-slate-200/50 shadow-inner">
+                <Link to="/login/client" className="px-8 py-2.5 text-slate-500 hover:text-slate-900 rounded-xl font-black text-sm uppercase tracking-widest transition-all">
+                  CLIENT
+                </Link>
+                <Link to="/login/artisan" className="px-8 py-2.5 bg-white text-orange-600 rounded-xl shadow-lg font-black text-sm uppercase tracking-widest transition-all">
+                  ARTISAN
+                </Link>
+              </div>
             </div>
             <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900">Connexion Artisan</h1>
             <p className="text-slate-500 text-lg max-w-[400px] mx-auto leading-relaxed">
@@ -27,8 +60,15 @@ const ArtisanLogin = () => {
             </p>
           </div>
 
+          {error && (
+            <div className="mb-4 p-4 bg-red-50 border-l-4 border-red-500 text-red-700 flex items-center gap-3">
+              <span className="material-symbols-outlined">error</span>
+              <p className="font-semibold">{error}</p>
+            </div>
+          )}
+
           {/* Form */}
-          <form className="space-y-8">
+          <form className="space-y-8" onSubmit={handleSubmit}>
             <div className="space-y-6">
               {/* Email Field */}
               <div className="space-y-3">
@@ -39,7 +79,10 @@ const ArtisanLogin = () => {
                 <input 
                   type="email" 
                   id="email" 
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   placeholder="votre@artisan.dz" 
+                  required
                   className="w-full h-[72px] px-6 text-lg bg-slate-50 border-2 border-transparent rounded-2xl focus:ring-4 focus:ring-orange-500/10 focus:border-orange-500/40 focus:bg-white transition-all duration-300 placeholder:text-slate-400" 
                 />
               </div>
@@ -54,12 +97,12 @@ const ArtisanLogin = () => {
                   <input 
                     type="password" 
                     id="password" 
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
                     placeholder="••••••••••••" 
+                    required
                     className="w-full h-[72px] px-6 text-lg bg-slate-50 border-2 border-transparent rounded-2xl focus:ring-4 focus:ring-orange-500/10 focus:border-orange-500/40 focus:bg-white transition-all duration-300" 
                   />
-                  <button type="button" className="absolute right-6 top-1/2 -translate-y-1/2 text-slate-400 hover:text-orange-500 transition-colors p-2">
-                    <span className="material-symbols-outlined text-2xl">visibility</span>
-                  </button>
                 </div>
               </div>
             </div>
@@ -76,9 +119,17 @@ const ArtisanLogin = () => {
             {/* Submit Button */}
             <button 
               type="submit" 
-              className="w-full h-[72px] bg-linear-to-br from-orange-500 to-orange-400 text-white rounded-2xl font-bold text-xl shadow-xl shadow-orange-500/20 hover:shadow-2xl hover:shadow-orange-500/30 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] transition-all duration-300"
+              disabled={loading}
+              className="w-full h-[72px] bg-linear-to-br from-orange-500 to-orange-400 text-white rounded-2xl font-bold text-xl shadow-xl shadow-orange-500/20 hover:shadow-2xl hover:shadow-orange-500/30 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] transition-all duration-300 flex items-center justify-center gap-3"
             >
-              Se connecter au tableau de bord
+              {loading ? (
+                <>
+                  <span className="animate-spin h-6 w-6 border-4 border-white/30 border-t-white rounded-full"></span>
+                  Connexion...
+                </>
+              ) : (
+                'Se connecter au tableau de bord'
+              )}
             </button>
           </form>
 
@@ -100,7 +151,7 @@ const ArtisanLogin = () => {
 
         {/* Trust Badge */}
         <div className="mt-10 p-6 bg-white/80 backdrop-blur-md border border-white/50 rounded-2xl flex gap-5 items-center shadow-[0_25px_50px_-12px_rgba(16,24,40,0.08)]">
-          <div className="w-14 h-14 rounded-full bg-orange-500/10 flex items-center justify-center flex-shrink-0">
+          <div className="w-14 h-14 rounded-full bg-orange-500/10 flex items-center justify-center shrink-0">
             <span className="material-symbols-outlined text-orange-500 text-3xl" style={{ fontVariationSettings: "'FILL' 1" }}>verified_user</span>
           </div>
           <div>

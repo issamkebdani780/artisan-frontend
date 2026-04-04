@@ -20,6 +20,7 @@ import AdminArtisans from './pages/AdminArtisans';
 import AdminClients from './pages/AdminClients';
 import AdminDisputes from './pages/AdminDisputes';
 import ClientProfileSettings from './pages/ClientProfileSettings';
+import ProfilArtisan from './pages/ProfilArtisan';
 
 // Bulk Migrated Components
 import VerificationsAdmin from './pages/VerificationsAdmin';
@@ -45,10 +46,11 @@ function App() {
         <Route path="/register/client" element={<MainLayout><ClientRegister /></MainLayout>} />
         <Route path="/register/artisan" element={<MainLayout><ArtisanRegister /></MainLayout>} />
         <Route path="/search" element={<MainLayout><FindExpert /></MainLayout>} />
+        <Route path="/artisan/:id" element={<MainLayout><ProfilArtisan /></MainLayout>} />
         <Route path="/service/:id" element={<MainLayout><ServiceDetails /></MainLayout>} />
         <Route path="/moving-booking" element={<MainLayout><MovingBooking /></MainLayout>} />
         <Route path="/message-success" element={<MainLayout><MessageSuccess /></MainLayout>} />
-        <Route path="/request-quote" element={<MainLayout><RequestQuote /></MainLayout>} />
+        <Route path="/request-quote" element={<RequestQuote />} />
 
         {/* Private / Dashboard Routes - Rendered without MainLayout nav/footer */}
         <Route path="/dashboard/artisan" element={<ArtisanDashboard />} />
@@ -73,9 +75,6 @@ function App() {
         <Route path="/dashboard/admin/configuration" element={<AdminConfigurationPlateforme />} />
         <Route path="/dashboard/admin/settings" element={<ParametresAdmin />} />
         <Route path="/dashboard/admin/evidence" element={<VoirLesPreuvesAdmin />} />
-        
-        {/* Actions */}
-        <Route path="/request-quote" element={<RequestQuote />} />
       </Routes>
     </Router>
   );

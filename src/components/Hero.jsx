@@ -7,7 +7,7 @@ const Hero = () => {
   const navigate = useNavigate();
 
   const handleSearch = () => {
-    navigate(`/experts?specialty=${searchTerm}&location=${location}`);
+    navigate(`/search?specialty=${searchTerm}&location=${location}`);
   };
 
   return (

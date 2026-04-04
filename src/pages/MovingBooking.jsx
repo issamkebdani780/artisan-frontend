@@ -1,20 +1,92 @@
-import React, { useState } from 'react';
-import Navbar from '../layouts/Navbar';
-import Footer from '../layouts/Footer';
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import apiService from '../services/api';
 
 const MovingBooking = () => {
-  const [distance, setDistance] = useState(450);
+  const navigate = useNavigate();
+  const [weight, setWeight] = useState(450);
+  const [loading, setLoading] = useState(false);
+  const [selectedItems, setSelectedItems] = useState(['Bois', 'Plastique']);
+  const [bookingDate, setBookingDate] = useState('2024-05-03');
+  const [serviceId, setServiceId] = useState(null);
+  const [locations, setLocations] = useState({
+    departure: '',
+    destination: ''
+  });
+
+  useEffect(() => {
+    const fetchService = async () => {
+      try {
+        const services = await apiService.getServices();
+        const demoService = services.find(s => s.title.toLowerCase().includes('déménagement')) || services[0];
+        if (demoService) setServiceId(demoService.id);
+      } catch (err) {
+        console.error('Error fetching services:', err);
+      }
+    };
+    fetchService();
+  }, []);
+
+  const totalPrice = weight * 1.5 + 500;
+
+  const toggleItem = (label) => {
+    setSelectedItems(prev => 
+      prev.includes(label) ? prev.filter(i => i !== label) : [...prev, label]
+    );
+  };
+
+  const handleBooking = async () => {
+    const user = JSON.parse(localStorage.getItem('user'));
+    
+    if (!user) {
+      setError('Veuillez vous connecter pour réserver un déménagement. Redirection vers la page de connexion...');
+      setTimeout(() => navigate('/login/client'), 2500);
+      return;
+    }
+
+    if (!locations.departure || !locations.destination) {
+      setError('Veuillez remplir les adresses de départ et de destination.');
+      return;
+    }
+
+    setLoading(true);
+    setError('');
+    try {
+      const devisData = {
+        client_id: user.id,
+        category_id: 6, // Dedicated Déménagement category ID
+        description: `DÉMÉNAGEMENT - Poids: ${weight}kg, Objets: ${selectedItems.join(', ')}. Trajet: ${locations.departure} -> ${locations.destination}`,
+        budget: totalPrice,
+        date: bookingDate
+      };
+
+      console.log('Sending booking data:', devisData);
+      const response = await apiService.createDevis(devisData);
+      console.log('Server response:', response);
+
+      if (response.devisId) {
+        navigate('/message-success');
+      } else {
+        throw new Error(response.error || 'Erreur lors de la création du devis');
+      }
+    } catch (err) {
+      console.error('Booking failed:', err);
+      setError(err.message || 'Une erreur est survenue lors de la réservation.');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const [error, setError] = useState('');
 
   return (
-    <div className="min-h-screen flex flex-col bg-slate-50 text-slate-800 font-sans">
-      <Navbar />
-      
-      <main className="flex-grow py-12 px-4 sm:px-6 lg:px-8">
+    <div className="bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-100 font-sans pb-20">
+      <main className="grow py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           {/* Hero Section */}
           <div className="mb-10 text-center lg:text-left">
-            <h1 className="text-3xl font-extrabold text-slate-900 sm:text-4xl mb-3">Réservez votre déménagement professionnel</h1>
-            <p className="text-lg text-slate-600 max-w-2xl leading-relaxed mx-auto lg:mx-0">
+            <h1 className="text-3xl font-extrabold text-slate-900 dark:text-white sm:text-4xl mb-3">Réservez votre déménagement professionnel</h1>
+            <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl leading-relaxed mx-auto lg:mx-0">
               Calculez instantanément votre tarif basé sur la distance, le volume et la main-d'œuvre nécessaire. Simple, rapide et transparent.
             </p>
           </div>
@@ -22,55 +94,59 @@ const MovingBooking = () => {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Main Booking Form */}
             <div className="lg:col-span-2 space-y-6">
-              <div className="bg-white rounded-xl shadow-sm border border-slate-100 p-6 sm:p-8">
+              {error && (
+                <div className="p-4 bg-red-50 border-l-4 border-red-500 text-red-700 flex items-center gap-3 rounded-r-xl shadow-sm animate-shake">
+                   <span className="material-symbols-outlined font-bold">warning</span>
+                   <p className="font-bold text-sm tracking-tight">{error}</p>
+                </div>
+              )}
+              <div className="bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 p-6 sm:p-8">
                 {/* Step 1: Route & Schedule */}
                 <section className="mb-10">
                   <div className="flex items-center gap-3 mb-6 text-indigo-600">
                     <span className="material-symbols-outlined text-2xl">location_on</span>
-                    <h2 className="text-xl font-bold text-slate-900">Itinéraire et Date</h2>
+                    <h2 className="text-xl font-bold text-slate-900 dark:text-white">Itinéraire et Date</h2>
                   </div>
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                     <div>
-                      <label className="block text-sm font-semibold text-slate-700 mb-2">Lieu de départ</label>
+                      <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">Lieu de départ</label>
                       <div className="flex gap-2">
-                        <div className="relative flex-grow">
+                        <div className="relative grow">
                           <span className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400">
                             <span className="material-symbols-outlined text-lg">home</span>
                           </span>
                           <input 
-                            className="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all" 
+                            className="w-full pl-10 pr-4 py-3 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all" 
                             placeholder="Adresse ou Code Postal" 
                             type="text"
+                            value={locations.departure}
+                            onChange={(e) => setLocations({...locations, departure: e.target.value})}
                           />
                         </div>
-                        <button className="px-3 flex items-center justify-center border border-slate-200 rounded-lg hover:bg-slate-50 transition-colors text-indigo-600" title="Localiser">
-                          <span className="material-symbols-outlined text-lg">my_location</span>
-                        </button>
                       </div>
                     </div>
                     <div>
-                      <label className="block text-sm font-semibold text-slate-700 mb-2">Destination</label>
+                      <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">Destination</label>
                       <div className="flex gap-2">
-                        <div className="relative flex-grow">
+                        <div className="relative grow">
                           <span className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400">
                             <span className="material-symbols-outlined text-lg">flag</span>
                           </span>
                           <input 
-                            className="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all" 
+                            className="w-full pl-10 pr-4 py-3 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all" 
                             placeholder="Adresse d'arrivée" 
                             type="text"
+                            value={locations.destination}
+                            onChange={(e) => setLocations({...locations, destination: e.target.value})}
                           />
                         </div>
-                        <button className="px-3 flex items-center justify-center border border-slate-200 rounded-lg hover:bg-slate-50 transition-colors text-indigo-600" title="Localiser">
-                          <span className="material-symbols-outlined text-lg">my_location</span>
-                        </button>
                       </div>
                     </div>
                   </div>
 
                   {/* SVG Map Mockup */}
-                  <div className="w-full h-64 bg-slate-100 rounded-xl mb-8 relative overflow-hidden border border-slate-200 shadow-inner">
+                  <div className="w-full h-64 bg-slate-100 dark:bg-slate-900 rounded-xl mb-8 relative overflow-hidden border border-slate-200 dark:border-slate-700 shadow-inner">
                     <div className="absolute inset-0 bg-indigo-50/30"></div>
                     <svg className="absolute inset-0 w-full h-full z-10 p-12" preserveAspectRatio="none" viewBox="0 0 400 200">
                       <path 
@@ -86,22 +162,16 @@ const MovingBooking = () => {
                       <circle cx="350" cy="50" fill="white" r="8" stroke="#4f46e5" strokeWidth="3" />
                       <circle cx="350" cy="50" fill="#4f46e5" r="3" />
                     </svg>
-                    <div className="absolute top-4 left-4 z-20">
-                      <div className="bg-white px-3 py-1.5 rounded-lg shadow-sm border border-slate-200 flex items-center gap-2">
-                        <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                        <span className="text-[10px] font-bold text-slate-700 uppercase tracking-wider">Itinéraire optimisé</span>
-                      </div>
-                    </div>
                   </div>
 
                   {/* Calendar Widget Preview */}
-                  <div className="bg-slate-50 rounded-xl p-4">
+                  <div className="bg-slate-50 dark:bg-slate-900 rounded-xl p-4 border border-slate-100 dark:border-slate-700">
                     <div className="flex items-center justify-between mb-4 px-2">
-                       <button className="p-1 hover:bg-slate-200 rounded-lg transition-colors">
+                       <button className="p-1 hover:bg-slate-200 dark:hover:bg-slate-800 rounded-lg transition-colors">
                         <span className="material-symbols-outlined text-lg">chevron_left</span>
                       </button>
-                      <span className="font-bold text-slate-800">Mai 2024</span>
-                      <button className="p-1 hover:bg-slate-200 rounded-lg transition-colors">
+                      <span className="font-bold text-slate-800 dark:text-white mb-2">Mai 2024</span>
+                      <button className="p-1 hover:bg-slate-200 dark:hover:bg-slate-800 rounded-lg transition-colors">
                         <span className="material-symbols-outlined text-lg">chevron_right</span>
                       </button>
                     </div>
@@ -112,9 +182,20 @@ const MovingBooking = () => {
                       {[29, 30, 1, 2].map(day => (
                         <div key={day} className="py-2 text-slate-300">{day}</div>
                       ))}
-                      <div className="py-2 bg-indigo-600 text-white rounded-lg font-bold shadow-md shadow-indigo-200">3</div>
+                      <button 
+                        onClick={() => setBookingDate('2024-05-03')}
+                        className={`py-2 rounded-lg font-bold transition-all ${bookingDate === '2024-05-03' ? 'bg-indigo-600 text-white shadow-md shadow-indigo-200' : 'hover:bg-white dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300'}`}
+                      >
+                        3
+                      </button>
                       {[4, 5, 6, 7, 8, 9, 10].map(day => (
-                        <div key={day} className="py-2 hover:bg-white rounded-lg cursor-pointer transition-colors text-slate-600">{day}</div>
+                        <button 
+                          key={day} 
+                          onClick={() => setBookingDate(`2024-05-${day.toString().padStart(2, '0')}`)}
+                          className={`py-2 rounded-lg cursor-pointer transition-colors font-bold ${bookingDate === `2024-05-${day.toString().padStart(2, '0')}` ? 'bg-indigo-600 text-white shadow-md' : 'hover:bg-white dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300'}`}
+                        >
+                          {day}
+                        </button>
                       ))}
                     </div>
                   </div>
@@ -124,47 +205,51 @@ const MovingBooking = () => {
                 <section className="mb-10">
                   <div className="flex items-center gap-3 mb-6 text-indigo-600">
                     <span className="material-symbols-outlined text-2xl">inventory_2</span>
-                    <h2 className="text-xl font-bold text-slate-900">Détails des objets & Poids</h2>
+                    <h2 className="text-xl font-bold text-slate-900 dark:text-white">Détails des objets & Poids</h2>
                   </div>
                   
                   <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
                     {[
-                      { icon: 'chair', label: 'Bois', selected: true },
-                      { icon: 'grid_view', label: 'Verre', selected: false },
-                      { icon: 'shopping_bag', label: 'Plastique', selected: true },
-                      { icon: 'delete_outline', label: 'Rebuts', selected: false }
-                    ].map((item, idx) => (
-                      <button 
-                        key={idx}
-                        className={`flex flex-col items-center justify-center p-4 border-2 rounded-xl transition-all ${
-                          item.selected 
-                          ? 'border-indigo-600 bg-indigo-50 shadow-md' 
-                          : 'border-slate-100 bg-white hover:border-slate-300'
-                        }`}
-                      >
-                        <span className={`material-symbols-outlined text-3xl mb-2 ${item.selected ? 'text-indigo-600' : 'text-slate-400'}`}>
-                          {item.icon}
-                        </span>
-                        <span className={`text-xs font-bold ${item.selected ? 'text-slate-900' : 'text-slate-500'}`}>{item.label}</span>
-                        <div className={`mt-2 w-4 h-4 rounded-full flex items-center justify-center border ${
-                          item.selected ? 'bg-indigo-600 border-indigo-600' : 'border-slate-200'
-                        }`}>
-                          {item.selected && <span className="material-symbols-outlined text-[10px] text-white font-bold">check</span>}
-                        </div>
-                      </button>
-                    ))}
+                      { icon: 'chair', label: 'Bois' },
+                      { icon: 'grid_view', label: 'Verre' },
+                      { icon: 'shopping_bag', label: 'Plastique' },
+                      { icon: 'delete_outline', label: 'Rebuts' }
+                    ].map((item, idx) => {
+                      const isSelected = selectedItems.includes(item.label);
+                      return (
+                        <button 
+                          key={idx}
+                          onClick={() => toggleItem(item.label)}
+                          className={`flex flex-col items-center justify-center p-4 border-2 rounded-xl transition-all ${
+                            isSelected 
+                            ? 'border-indigo-600 bg-indigo-50 dark:bg-indigo-900/20 shadow-md' 
+                            : 'border-slate-100 dark:border-slate-700 bg-white dark:bg-slate-800 hover:border-slate-300'
+                          }`}
+                        >
+                          <span className={`material-symbols-outlined text-3xl mb-2 ${isSelected ? 'text-indigo-600' : 'text-slate-400'}`}>
+                            {item.icon}
+                          </span>
+                          <span className={`text-xs font-bold ${isSelected ? 'text-slate-900 dark:text-white' : 'text-slate-500'}`}>{item.label}</span>
+                          <div className={`mt-2 w-4 h-4 rounded-full flex items-center justify-center border ${
+                            isSelected ? 'bg-indigo-600 border-indigo-600' : 'border-slate-200 dark:border-slate-600'
+                          }`}>
+                            {isSelected && <span className="material-symbols-outlined text-[10px] text-white font-bold">check</span>}
+                          </div>
+                        </button>
+                      );
+                    })}
                   </div>
 
                   <div className="space-y-6">
                     <div>
-                      <label className="block text-sm font-semibold text-slate-700 mb-4 flex justify-between">
-                        Estimation du poids <span>~ {distance} kg</span>
+                      <label className="flex text-sm font-semibold text-slate-700 dark:text-slate-300 mb-4 justify-between">
+                        Estimation du poids <span>~ {weight} kg</span>
                       </label>
                       <input 
-                        className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-indigo-600" 
+                        className="w-full h-2 bg-slate-200 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer accent-indigo-600" 
                         max="2000" min="0" step="100" type="range"
-                        value={distance}
-                        onChange={(e) => setDistance(e.target.value)}
+                        value={weight}
+                        onChange={(e) => setWeight(parseInt(e.target.value))}
                       />
                       <div className="flex justify-between text-[10px] mt-2 text-slate-400 font-bold uppercase tracking-wider">
                         <span>&lt; 100kg</span>
@@ -174,46 +259,46 @@ const MovingBooking = () => {
                         <span>2000kg+</span>
                       </div>
                     </div>
-
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                      {[
-                        { icon: 'priority_high', label: 'Piano / Objet très lourd' },
-                        { icon: 'warning', label: 'Fragile / Haute valeur' }
-                      ].map((option, idx) => (
-                        <label key={idx} className="flex items-center gap-3 p-3 border border-slate-200 rounded-lg hover:bg-slate-50 cursor-pointer transition-colors group">
-                          <input className="w-5 h-5 rounded text-indigo-600 border-slate-300 focus:ring-indigo-500" type="checkbox"/>
-                          <span className="material-symbols-outlined text-slate-400 group-hover:text-indigo-600 transition-colors">{option.icon}</span>
-                          <span className="text-sm font-medium text-slate-700">{option.label}</span>
-                        </label>
-                      ))}
-                    </div>
                   </div>
                 </section>
 
                 {/* Step 3: Labor & Estimation */}
-                <section className="border-t border-slate-100 pt-8">
+                <section className="border-t border-slate-100 dark:border-slate-700 pt-8">
                   <div className="flex items-center gap-3 mb-6 text-indigo-600">
                     <span className="material-symbols-outlined text-2xl">payments</span>
-                    <h2 className="text-xl font-bold text-slate-900">Estimation du Budget</h2>
+                    <h2 className="text-xl font-bold text-slate-900 dark:text-white">Estimation du Budget</h2>
                   </div>
                   
-                  <div className="bg-indigo-50 border border-indigo-100 rounded-xl p-6 mb-8 flex flex-col md:flex-row items-center justify-between gap-4">
+                  <div className="bg-indigo-50 dark:bg-indigo-900/20 border border-indigo-100 dark:border-indigo-800 rounded-xl p-6 mb-8 flex flex-col md:flex-row items-center justify-between gap-4">
                     <div>
-                      <p className="text-sm font-semibold text-indigo-800 uppercase tracking-wide">Tarif estimé tout inclus</p>
-                      <p className="text-xs text-indigo-600 mt-1">Distance, volume et assurance inclus.</p>
+                      <p className="text-sm font-semibold text-indigo-800 dark:text-indigo-300 uppercase tracking-wide">Tarif estimé tout inclus</p>
+                      <p className="text-xs text-indigo-600 dark:text-indigo-400 mt-1">Distance, volume et assurance inclus.</p>
                     </div>
                     <div className="text-center md:text-right">
-                      <span className="text-4xl font-black text-indigo-600">1,250 €</span>
+                      <span className="text-4xl font-black text-indigo-600 dark:text-indigo-400">{totalPrice.toLocaleString()} DA</span>
                       <span className="block text-[10px] text-indigo-500 font-bold uppercase tracking-widest mt-1">Paiement sécurisé</span>
                     </div>
                   </div>
 
                   <div className="flex flex-col sm:flex-row gap-4">
-                    <button className="flex-grow bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-8 rounded-lg shadow-lg shadow-indigo-200 transition-all flex items-center justify-center gap-2">
-                      <span>Réserver mon déménagement</span>
-                      <span className="material-symbols-outlined">arrow_forward</span>
+                    <button 
+                      onClick={handleBooking}
+                      disabled={loading}
+                      className="grow bg-indigo-600 hover:bg-indigo-700 text-white font-black py-4 px-8 rounded-lg shadow-lg shadow-indigo-200 transition-all flex items-center justify-center gap-2 disabled:opacity-70"
+                    >
+                      {loading ? (
+                        <>
+                          <span className="animate-spin h-5 w-5 border-2 border-white/30 border-t-white rounded-full"></span>
+                          Traitement...
+                        </>
+                      ) : (
+                        <>
+                          <span>Réserver mon déménagement</span>
+                          <span className="material-symbols-outlined">arrow_forward</span>
+                        </>
+                      )}
                     </button>
-                    <button className="px-8 py-4 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-lg transition-all">
+                    <button className="px-8 py-4 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 font-bold rounded-lg transition-all">
                       Enregistrer
                     </button>
                   </div>
@@ -223,8 +308,8 @@ const MovingBooking = () => {
 
             {/* Sidebar Info */}
             <div className="space-y-6">
-              <div className="bg-white rounded-xl shadow-sm border border-slate-100 p-6">
-                <h3 className="text-lg font-bold text-slate-900 mb-6 leading-tight">Pourquoi nous ?</h3>
+              <div className="bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 p-6">
+                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-6 leading-tight">Pourquoi nous ?</h3>
                 <ul className="space-y-6">
                   {[
                     { icon: 'verified', title: 'Déménageurs Certifiés', desc: 'Tous nos partenaires sont rigoureusement vérifiés et assurés.' },
@@ -232,44 +317,21 @@ const MovingBooking = () => {
                     { icon: 'support_agent', title: 'Support Dédié 7j/7', desc: 'Une équipe disponible pour vous accompagner à chaque étape.' }
                   ].map((feature, idx) => (
                     <li key={idx} className="flex gap-4">
-                      <div className="shrink-0 w-10 h-10 rounded-full bg-indigo-50 text-indigo-600 flex items-center justify-center">
+                      <div className="shrink-0 w-10 h-10 rounded-full bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 flex items-center justify-center">
                         <span className="material-symbols-outlined">{feature.icon}</span>
                       </div>
                       <div>
-                        <h4 className="font-bold text-sm text-slate-800">{feature.title}</h4>
-                        <p className="text-xs text-slate-500 mt-1 leading-relaxed">{feature.desc}</p>
+                        <h4 className="font-bold text-sm text-slate-800 dark:text-slate-200">{feature.title}</h4>
+                        <p className="text-xs text-slate-500 dark:text-slate-400 mt-1 leading-relaxed">{feature.desc}</p>
                       </div>
                     </li>
                   ))}
                 </ul>
-                <div className="mt-8 pt-6 border-t border-slate-100 flex items-center gap-3">
-                  <div className="flex -space-x-2">
-                    {[1, 2, 3].map(i => (
-                      <div key={i} className="w-8 h-8 rounded-full border-2 border-white bg-slate-200 overflow-hidden">
-                        <img alt="User" src={`https://i.pravatar.cc/100?u=${i}`} className="w-full h-full object-cover" />
-                      </div>
-                    ))}
-                  </div>
-                  <span className="text-[11px] font-bold text-slate-500 uppercase tracking-wider">+2,500 clients satisfaits</span>
-                </div>
-              </div>
-
-              <div className="bg-slate-900 rounded-xl p-6 text-white relative overflow-hidden">
-                <div className="relative z-10">
-                  <h3 className="text-lg font-bold mb-2">Besoin d'aide ?</h3>
-                  <p className="text-indigo-300 text-xs mb-6 leading-relaxed">Nos conseillers sont à votre écoute pour vous aider.</p>
-                  <a className="block w-full text-center py-3 border border-white/20 rounded-lg font-bold hover:bg-white hover:text-slate-900 transition-all" href="tel:0123456789">
-                    01 23 45 67 89
-                  </a>
-                </div>
-                <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-indigo-600/20 rounded-full blur-3xl"></div>
               </div>
             </div>
           </div>
         </div>
       </main>
-
-      <Footer />
     </div>
   );
 };

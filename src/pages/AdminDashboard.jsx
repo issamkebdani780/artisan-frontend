@@ -9,21 +9,38 @@ const AdminDashboard = () => {
     bookings: 0,
     totalRevenue: 0
   });
+  const [unverified, setUnverified] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const fetchStats = async () => {
+    const fetchData = async () => {
       try {
-        const data = await apiService.getPlatformStats();
-        setStats(data);
+        const [statsData, unverifiedData] = await Promise.all([
+          apiService.getPlatformStats(),
+          apiService.getUnverifiedArtisans()
+        ]);
+        setStats(statsData);
+        setUnverified(unverifiedData);
       } catch (err) {
-        console.error('Failed to fetch stats:', err);
+        console.error('Failed to fetch admin data:', err);
       } finally {
         setLoading(false);
       }
     };
-    fetchStats();
+    fetchData();
   }, []);
+
+  const handleVerify = async (id) => {
+    try {
+      await apiService.verifyArtisan(id);
+      setUnverified(unverified.filter(a => a.id !== id));
+      // Optionally refresh stats
+      const newStats = await apiService.getPlatformStats();
+      setStats(newStats);
+    } catch (err) {
+      alert('Verification failed');
+    }
+  };
 
   return (
     <AdminLayout>
@@ -163,44 +180,38 @@ const AdminDashboard = () => {
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-100 dark:divide-slate-800">
-                <tr className="hover:bg-slate-50/50 dark:hover:bg-slate-800/20 transition-colors">
-                  <td className="px-6 py-4">
-                    <div className="flex items-center gap-3">
-                      <div className="size-8 rounded-full bg-indigo-100 dark:bg-indigo-900/30 flex items-center justify-center font-bold text-indigo-700 text-xs shadow-inner">JB</div>
-                      <span className="text-sm font-semibold text-slate-900 dark:text-white">Jean Bernard</span>
-                    </div>
-                  </td>
-                  <td className="px-6 py-4 text-sm text-slate-600 dark:text-slate-400">Électricien</td>
-                  <td className="px-6 py-4 text-sm text-slate-500">Il y a 2h</td>
-                  <td className="px-6 py-4">
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-bold bg-indigo-100 text-indigo-700 dark:bg-indigo-900/40 dark:text-indigo-300">
-                      <span className="size-1.5 rounded-full bg-indigo-500 animate-pulse"></span>
-                      En attente
-                    </span>
-                  </td>
-                  <td className="px-6 py-4 text-right">
-                    <button className="text-sm font-bold text-indigo-600 hover:underline">Vérifier</button>
-                  </td>
-                </tr>
-                <tr className="hover:bg-slate-50/50 dark:hover:bg-slate-800/20 transition-colors">
-                  <td className="px-6 py-4">
-                    <div className="flex items-center gap-3">
-                      <div className="size-8 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center font-bold text-blue-700 text-xs shadow-inner">MD</div>
-                      <span className="text-sm font-semibold text-slate-900 dark:text-white">Marie Dupont</span>
-                    </div>
-                  </td>
-                  <td className="px-6 py-4 text-sm text-slate-600 dark:text-slate-400">Plomberie</td>
-                  <td className="px-6 py-4 text-sm text-slate-500">Hier, 14:30</td>
-                  <td className="px-6 py-4">
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-bold bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-300">
-                      <span className="size-1.5 rounded-full bg-green-500"></span>
-                      Vérifié
-                    </span>
-                  </td>
-                  <td className="px-6 py-4 text-right">
-                    <button className="text-sm font-bold text-indigo-600 hover:underline">Détails</button>
-                  </td>
-                </tr>
+                {loading ? (
+                   <tr><td colSpan="5" className="px-6 py-4 text-center text-slate-400">Chargement...</td></tr>
+                ) : unverified.length === 0 ? (
+                   <tr><td colSpan="5" className="px-6 py-4 text-center text-slate-400 italic">Aucune demande en attente</td></tr>
+                ) : unverified.map(artisan => (
+                  <tr key={artisan.id} className="hover:bg-slate-50/50 dark:hover:bg-slate-800/20 transition-colors">
+                    <td className="px-6 py-4">
+                      <div className="flex items-center gap-3">
+                        <div className="size-8 rounded-full bg-indigo-100 dark:bg-indigo-900/30 flex items-center justify-center font-bold text-indigo-700 text-xs shadow-inner">
+                          {artisan.name.charAt(0)}
+                        </div>
+                        <span className="text-sm font-semibold text-slate-900 dark:text-white">{artisan.name}</span>
+                      </div>
+                    </td>
+                    <td className="px-6 py-4 text-sm text-slate-600 dark:text-slate-400">{artisan.specialty || 'Général'}</td>
+                    <td className="px-6 py-4 text-sm text-slate-500">{new Date(artisan.created_at).toLocaleDateString()}</td>
+                    <td className="px-6 py-4">
+                      <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-bold bg-indigo-100 text-indigo-700 dark:bg-indigo-900/40 dark:text-indigo-300">
+                        <span className="size-1.5 rounded-full bg-indigo-500 animate-pulse"></span>
+                        En attente
+                      </span>
+                    </td>
+                    <td className="px-6 py-4 text-right">
+                      <button 
+                        onClick={() => handleVerify(artisan.id)}
+                        className="text-sm font-bold text-indigo-600 hover:underline"
+                      >
+                        Vérifier
+                      </button>
+                    </td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>

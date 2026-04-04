@@ -1,56 +1,65 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import Navbar from '../layouts/Navbar';
-import Footer from '../layouts/Footer';
+import { Link, useSearchParams } from 'react-router-dom';
 
 const MessageSuccess = () => {
+  const [searchParams] = useSearchParams();
+  const artisanName = searchParams.get('artisanName');
+
   return (
-    <div className="min-h-screen flex flex-col bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-slate-100 font-sans">
-      <Navbar />
-      
+    <div className="bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-slate-100 font-sans pb-20 min-h-screen">
       <main className="flex-1 flex flex-col items-center justify-center px-4 py-20 max-w-4xl mx-auto w-full">
         {/* Success Icon Animation Container */}
         <div className="mb-8 relative">
           <div className="absolute inset-0 bg-indigo-500/10 rounded-full animate-ping opacity-25"></div>
           <div className="bg-indigo-500/20 p-6 rounded-full relative">
-            <span className="material-symbols-outlined text-indigo-600 !text-7xl font-bold">check_circle</span>
+            <span className="material-symbols-outlined text-indigo-600 text-7xl font-bold">check_circle</span>
           </div>
         </div>
 
         {/* Confirmation Message */}
         <div className="text-center mb-10">
-          <h1 className="text-slate-900 dark:text-white text-3xl md:text-4xl font-black leading-tight mb-4">Message envoyé !</h1>
+          <h1 className="text-slate-900 dark:text-white text-3xl md:text-4xl font-black leading-tight mb-4">Demande Envoyée !</h1>
           <p className="text-slate-600 dark:text-slate-400 text-lg max-w-xl mx-auto leading-relaxed">
-            Ahmed Mansouri a bien reçu votre message. Il vous répondra généralement en moins de 2 heures.
+            {artisanName 
+              ? `${decodeURIComponent(artisanName)} a bien reçu votre demande. Il vous répondra généralement sous peu.` 
+              : "Votre demande de devis a été transmise aux artisans disponibles dans votre secteur. Vous recevrez une réponse prochainement."
+            }
           </p>
         </div>
 
-        {/* Information Recap Card */}
-        <div className="w-full max-w-md mb-12">
-          <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-xl shadow-indigo-100/50 dark:shadow-none border border-slate-100 dark:border-slate-700 overflow-hidden">
-            <div className="p-6 flex items-center gap-5">
-              <div className="h-16 w-16 rounded-xl bg-slate-200 overflow-hidden shrink-0">
-                <img 
-                  src="https://i.pravatar.cc/150?u=ahmed" 
-                  alt="Portrait de l'artisan Ahmed Mansouri" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="flex-1">
-                <p className="text-slate-500 dark:text-slate-400 text-[10px] font-bold uppercase tracking-widest mb-1">Destinataire</p>
-                <h3 className="text-slate-900 dark:text-white text-lg font-black">Ahmed Mansouri</h3>
-                <div className="flex items-center gap-2 mt-1">
-                  <span className="size-2 rounded-full bg-green-500 animate-pulse"></span>
-                  <p className="text-slate-500 dark:text-slate-400 text-sm font-medium">Statut : Message transmis</p>
+        {/* Information Recap Card (Only if artisanName exists) */}
+        {artisanName && (
+          <div className="w-full max-w-md mb-12">
+            <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-xl border border-slate-100 dark:border-slate-700 overflow-hidden">
+              <div className="p-6 flex items-center gap-5">
+                <div className="h-16 w-16 rounded-xl bg-slate-200 overflow-hidden shrink-0 flex items-center justify-center text-slate-400">
+                  <span className="material-symbols-outlined text-3xl">person</span>
+                </div>
+                <div className="flex-1">
+                  <p className="text-slate-500 dark:text-slate-400 text-[10px] font-bold uppercase tracking-widest mb-1">Destinataire</p>
+                  <h3 className="text-slate-900 dark:text-white text-lg font-black">{decodeURIComponent(artisanName)}</h3>
+                  <div className="flex items-center gap-2 mt-1">
+                    <span className="size-2 rounded-full bg-green-500 animate-pulse"></span>
+                    <p className="text-slate-500 dark:text-slate-400 text-sm font-medium">Statut : Transmis</p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="bg-indigo-50 dark:bg-indigo-900/20 px-6 py-4 border-t border-slate-100 dark:border-slate-700 flex items-center gap-3">
-              <span className="material-symbols-outlined text-indigo-600 text-[20px]">schedule</span>
-              <span className="text-xs font-bold text-indigo-600 uppercase tracking-wider">Dernière mise à jour : À l'instant</span>
+              <div className="bg-slate-50 dark:bg-slate-900/40 px-6 py-4 border-t border-slate-100 dark:border-slate-700 flex items-center gap-3">
+                <span className="material-symbols-outlined text-indigo-600 text-[20px]">verified</span>
+                <span className="text-xs font-bold text-indigo-600 uppercase tracking-wider">Demande Sécurisée par BricoloPro</span>
+              </div>
             </div>
           </div>
-        </div>
+        )}
+
+        {!artisanName && (
+           <div className="w-full max-w-md mb-12 bg-white dark:bg-slate-800 p-8 rounded-3xl border-2 border-dashed border-slate-200 dark:border-slate-700 text-center">
+              <span className="material-symbols-outlined text-4xl text-slate-300 mb-4">broadcast_on_home</span>
+              <p className="text-slate-500 font-medium leading-relaxed">
+                Plusieurs artisans de votre région peuvent désormais consulter votre besoin et vous envoyer une proposition.
+              </p>
+           </div>
+        )}
 
         {/* Action Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 w-full max-w-md">
@@ -77,8 +86,6 @@ const MessageSuccess = () => {
           </p>
         </div>
       </main>
-
-      <Footer />
     </div>
   );
 };
