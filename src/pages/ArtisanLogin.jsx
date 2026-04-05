@@ -83,7 +83,7 @@ const ArtisanLogin = () => {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="votre@artisan.dz" 
                   required
-                  className="w-full h-[72px] px-6 text-lg bg-slate-50 border-2 border-transparent rounded-2xl focus:ring-4 focus:ring-orange-500/10 focus:border-orange-500/40 focus:bg-white transition-all duration-300 placeholder:text-slate-400" 
+                  className="w-full h-[72px] px-6 text-lg text-slate-900 bg-slate-50 border-2 border-transparent rounded-2xl focus:ring-4 focus:ring-orange-500/10 focus:border-orange-500/40 focus:bg-white transition-all duration-300 placeholder:text-slate-400" 
                 />
               </div>
 
@@ -101,7 +101,7 @@ const ArtisanLogin = () => {
                     onChange={(e) => setPassword(e.target.value)}
                     placeholder="••••••••••••" 
                     required
-                    className="w-full h-[72px] px-6 text-lg bg-slate-50 border-2 border-transparent rounded-2xl focus:ring-4 focus:ring-orange-500/10 focus:border-orange-500/40 focus:bg-white transition-all duration-300" 
+                    className="w-full h-[72px] px-6 text-lg text-slate-900 bg-slate-50 border-2 border-transparent rounded-2xl focus:ring-4 focus:ring-orange-500/10 focus:border-orange-500/40 focus:bg-white transition-all duration-300" 
                   />
                 </div>
               </div>

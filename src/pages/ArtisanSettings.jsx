@@ -75,8 +75,8 @@ const ArtisanSettings = () => {
       <div className="flex-1 overflow-y-auto font-['Outfit',sans-serif]">
 
         <header className="px-8 py-8">
-          <h2 className="text-3xl font-black tracking-tight mb-2 text-slate-900">Paramètres</h2>
-          <p className="text-slate-500">Gérez vos informations personnelles et les préférences de votre compte.</p>
+          <h2 className="text-3xl font-black tracking-tight mb-2 text-slate-900 dark:text-white">Paramètres</h2>
+          <p className="text-slate-500 dark:text-slate-400">Gérez vos informations personnelles et les préférences de votre compte.</p>
         </header>
 
         <div className="px-8 pb-12 flex flex-col gap-8 max-w-4xl">
@@ -88,8 +88,8 @@ const ArtisanSettings = () => {
           )}
 
           <form onSubmit={handleSubmit} className="space-y-8">
-            <section className="bg-white rounded-xl p-6 border border-slate-200">
-              <h3 className="text-lg font-bold mb-6 text-slate-900">Informations sur le profil</h3>
+            <section className="bg-white dark:bg-slate-800 rounded-xl p-6 border border-slate-200 dark:border-slate-700">
+              <h3 className="text-lg font-bold mb-6 text-slate-900 dark:text-white">Informations sur le profil</h3>
               <div className="flex flex-col md:flex-row gap-8 items-start mb-8">
                 <div className="relative group shrink-0">
                   <div className="h-32 w-32 rounded-full overflow-hidden border-4 border-slate-50 shadow-sm bg-slate-100">
@@ -133,9 +133,9 @@ const ArtisanSettings = () => {
           </form>
 
           {/* Section: Sécurité du compte */}
-          <section className="bg-white rounded-3xl p-10 border border-slate-200/60 shadow-sm">
-            <div className="flex items-center gap-3 mb-8 text-slate-900">
-              <div className="w-10 h-10 rounded-xl bg-indigo-500/10 flex items-center justify-center text-indigo-600">
+          <section className="bg-white dark:bg-slate-800 rounded-3xl p-10 border border-slate-200/60 dark:border-slate-700 shadow-sm">
+            <div className="flex items-center gap-3 mb-8 text-slate-900 dark:text-white">
+              <div className="w-10 h-10 rounded-xl bg-indigo-500/10 flex items-center justify-center text-indigo-600 dark:text-indigo-400">
                 <span className="material-symbols-outlined font-black">shield</span>
               </div>
               <h3 className="text-xl font-black tracking-tight">Sécurité du compte</h3>
