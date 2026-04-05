@@ -53,9 +53,19 @@ const MovingBooking = () => {
     setLoading(true);
     setError('');
     try {
+      // Find dynamic category ID for Déménagement
+      let categoryId = 6; // fallback
+      try {
+        const categories = await apiService.getCategories();
+        const movingCat = categories.find(c => c.name.toLowerCase().includes('déménagement'));
+        if (movingCat) categoryId = movingCat.id;
+      } catch (e) {
+        console.error('Could not fetch categories, using fallback ID');
+      }
+
       const devisData = {
         client_id: user.id,
-        category_id: 6, // Dedicated Déménagement category ID
+        category_id: categoryId,
         description: `DÉMÉNAGEMENT - Poids: ${weight}kg, Objets: ${selectedItems.join(', ')}. Trajet: ${locations.departure} -> ${locations.destination}`,
         budget: totalPrice,
         date: bookingDate
