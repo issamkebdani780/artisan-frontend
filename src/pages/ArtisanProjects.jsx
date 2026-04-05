@@ -51,7 +51,8 @@ const ArtisanProjects = () => {
         // Map common "ui" statuses to devis specific database statuses
         let statusToUpdate = newStatus;
         if (newStatus === 'confirmed') statusToUpdate = 'accepté';
-        if (newStatus === 'cancelled') statusToUpdate = 'refusé';
+        if (newStatus === 'completed') statusToUpdate = 'terminé';
+        if (newStatus === 'cancelled') statusToUpdate = 'annulé';
         
         await apiService.updateDevisStatus(devisId, statusToUpdate);
         setProjects(projects.map(p => p.id === item.id ? { ...p, status: statusToUpdate } : p));
