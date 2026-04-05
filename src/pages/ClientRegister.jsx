@@ -182,68 +182,20 @@ const ClientRegister = () => {
                 </form>
               </div>
             ) : (
-              <div className="space-y-10">
-                <div className="space-y-3">
-                  <h2 className="text-4xl font-black text-slate-900 tracking-tight">Ouvrir mon Atelier</h2>
-                  <p className="text-slate-500 text-lg">Rejoignez l'élite des créateurs et artisans.</p>
+              <div className="space-y-10 text-center py-10">
+                <div className="w-20 h-20 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="material-symbols-outlined text-blue-600 text-4xl">engineering</span>
                 </div>
-                <form className="space-y-8" onSubmit={handleArtisanSubmit}>
-                  <div className="space-y-6">
-                    <div className="space-y-2">
-                      <label className="text-[11px] font-black uppercase tracking-widest text-slate-400 ml-1">Nom Complet</label>
-                      <div className="relative group">
-                        <span className="material-symbols-outlined absolute left-5 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-blue-600 transition-colors text-xl">storefront</span>
-                        <input name="name" type="text" value={artisanForm.name} onChange={handleArtisanChange} required placeholder="Ex: Atelier d'Alger" className="w-full pl-14 pr-6 py-5 bg-slate-50/50 rounded-2xl border border-transparent focus:border-blue-600/20 focus:ring-8 focus:ring-blue-600/5 focus:bg-white transition-all outline-none font-medium placeholder:text-slate-400" />
-                      </div>
-                    </div>
-                    
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div className="space-y-2">
-                        <label className="text-[11px] font-black uppercase tracking-widest text-slate-400 ml-1">Email Pro</label>
-                        <div className="relative group">
-                          <span className="material-symbols-outlined absolute left-5 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-blue-600 transition-colors text-xl">business_center</span>
-                          <input name="email" type="email" value={artisanForm.email} onChange={handleArtisanChange} required placeholder="contact@atelier.com" className="w-full pl-14 pr-6 py-5 bg-slate-50/50 rounded-2xl border border-transparent focus:border-blue-600/20 focus:ring-8 focus:ring-blue-600/5 focus:bg-white transition-all outline-none font-medium placeholder:text-slate-400" />
-                        </div>
-                      </div>
-                      <div className="space-y-2">
-                        <label className="text-[11px] font-black uppercase tracking-widest text-slate-400 ml-1">Téléphone</label>
-                        <div className="relative group">
-                          <span className="material-symbols-outlined absolute left-5 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-blue-600 transition-colors text-xl">call</span>
-                          <input name="phone" type="tel" value={artisanForm.phone} onChange={handleArtisanChange} placeholder="05 50 12 34 56" className="w-full pl-14 pr-6 py-5 bg-slate-50/50 rounded-2xl border border-transparent focus:border-blue-600/20 focus:ring-8 focus:ring-blue-600/5 focus:bg-white transition-all outline-none font-medium placeholder:text-slate-400" />
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="space-y-2">
-                      <label className="text-[11px] font-black uppercase tracking-widest text-slate-400 ml-1">Spécialité</label>
-                      <div className="relative group">
-                        <span className="material-symbols-outlined absolute left-5 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-blue-600 transition-colors text-xl">engineering</span>
-                        <input name="specialty" type="text" value={artisanForm.specialty} onChange={handleArtisanChange} placeholder="Ex: Plombier, Électricien..." className="w-full pl-14 pr-6 py-5 bg-slate-50/50 rounded-2xl border border-transparent focus:border-blue-600/20 focus:ring-8 focus:ring-blue-600/5 focus:bg-white transition-all outline-none font-medium placeholder:text-slate-400" />
-                      </div>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div className="space-y-2">
-                        <label className="text-[11px] font-black uppercase tracking-widest text-slate-400 ml-1">Mot de passe</label>
-                        <div className="relative group">
-                          <span className="material-symbols-outlined absolute left-5 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-blue-600 transition-colors text-xl">lock</span>
-                          <input name="password" type="password" value={artisanForm.password} onChange={handleArtisanChange} required placeholder="••••••••" className="w-full pl-14 pr-6 py-5 bg-slate-50/50 rounded-2xl border border-transparent focus:border-blue-600/20 focus:ring-8 focus:ring-blue-600/5 focus:bg-white transition-all outline-none font-medium placeholder:text-slate-400" />
-                        </div>
-                      </div>
-                      <div className="space-y-2">
-                        <label className="text-[11px] font-black uppercase tracking-widest text-slate-400 ml-1">Confirmation</label>
-                        <div className="relative group">
-                          <span className="material-symbols-outlined absolute left-5 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-blue-600 transition-colors text-xl">verified_user</span>
-                          <input name="confirm" type="password" value={artisanForm.confirm} onChange={handleArtisanChange} required placeholder="••••••••" className="w-full pl-14 pr-6 py-5 bg-slate-50/50 rounded-2xl border border-transparent focus:border-blue-600/20 focus:ring-8 focus:ring-blue-600/5 focus:bg-white transition-all outline-none font-medium placeholder:text-slate-400" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <button type="submit" disabled={loading} className="w-full py-5 bg-blue-600 text-white font-black text-sm uppercase tracking-widest rounded-2xl shadow-xl shadow-blue-200 hover:bg-blue-700 hover:-translate-y-0.5 active:scale-[0.98] transition-all duration-300 disabled:opacity-60 flex items-center justify-center gap-3">
-                    {loading ? <><span className="animate-spin h-5 w-5 border-4 border-white/30 border-t-white rounded-full"></span>Création...</> : 'Ouvrir Mon Atelier'}
-                  </button>
-                </form>
+                <div className="space-y-3">
+                  <h2 className="text-3xl font-black text-slate-900 tracking-tight">Devenir Partenaire Artisan</h2>
+                  <p className="text-slate-500 text-lg max-w-sm mx-auto">Prêt à propulser votre activité ? Créez votre profil professionnel complet.</p>
+                </div>
+                <Link 
+                  to="/register/artisan" 
+                  className="inline-block px-10 py-5 bg-blue-600 text-white font-black text-sm uppercase tracking-widest rounded-2xl shadow-xl shadow-blue-200 hover:bg-blue-700 hover:-translate-y-0.5 transition-all duration-300"
+                >
+                  Ouvrir mon Atelier
+                </Link>
               </div>
             )}
 

@@ -1,11 +1,17 @@
 import React from 'react';
 
 const CATEGORIES = [
-  { label: 'Plomberie',   icon: 'plumbing' },
-  { label: 'Électricité', icon: 'bolt' },
-  { label: 'Menuiserie',  icon: 'carpenter' },
-  { label: 'Peinture',    icon: 'format_paint' },
-  { label: 'Jardinage',   icon: 'yard' },
+  { label: 'Menuiserie et Bois', icon: 'carpenter' },
+  { label: 'Ferronnerie et Soudure', icon: 'precision_manufacturing' },
+  { label: 'Plomberie et Réseaux', icon: 'plumbing' },
+  { label: 'Électricité et Énergie', icon: 'electrical_services' },
+  { label: 'Peinture et Plâtre', icon: 'format_paint' },
+  { label: 'Maçonnerie et Finitions', icon: 'handyman' },
+  { label: 'Mécanique et Machines', icon: 'engineering' },
+  { label: 'Couture et Cuir', icon: 'checkroom' },
+  { label: 'Verre et Miroiterie', icon: 'grid_view' },
+  { label: 'Métiers alimentaires artisanaux', icon: 'restaurant' },
+  { label: 'Jardinage et Espaces Verts', icon: 'yard' },
 ];
 
 const SearchFilters = ({ filters, onChange }) => {

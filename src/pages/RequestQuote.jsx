@@ -33,6 +33,29 @@ const RequestQuote = () => {
     fetchCategories();
   }, []);
 
+  const [service, setService] = useState(null);
+  
+  useEffect(() => {
+    if (serviceId) {
+      const fetchService = async () => {
+        try {
+          const s = await apiService.getServiceById(serviceId);
+          setService(s);
+          setFormData(prev => ({
+            ...prev,
+            title: s.title,
+            category_id: s.category_id,
+            budget: s.base_price,
+            description: s.description
+          }));
+        } catch (err) {
+          console.error("Failed to fetch service details:", err);
+        }
+      };
+      fetchService();
+    }
+  }, [serviceId]);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     const user = JSON.parse(localStorage.getItem('user'));
@@ -44,23 +67,36 @@ const RequestQuote = () => {
 
     setLoading(true);
     try {
-      const devisData = {
-        client_id: user.id,
-        category_id: formData.category_id || 1, 
-        description: formData.description,
-        budget: formData.budget,
-        date: formData.date,
-        artisan_id: artisanId || null // Pass the artisanId if coming from profile
-      };
-      
-      const response = await apiService.createDevis(devisData);
-      if (response.devisId) {
-        setSuccess(true);
-        const artisanName = searchParams.get('artisanName');
-        const successUrl = artisanName ? `/message-success?artisanName=${encodeURIComponent(artisanName)}` : '/message-success';
-        setTimeout(() => navigate(successUrl), 3000);
+      let response;
+      if (serviceId) {
+        // Direct Booking
+        const bookingData = {
+          service_id: parseInt(serviceId),
+          booking_date: formData.date,
+          total_price: formData.budget || (service ? service.base_price : 0)
+        };
+        response = await apiService.createBooking(bookingData);
+        if (response.bookingId) {
+          setSuccess(true);
+          setTimeout(() => navigate('/dashboard/client/bookings'), 3000);
+        }
+      } else {
+        // Request Quote (Devis)
+        const devisData = {
+          category_id: formData.category_id || 1, 
+          description: formData.description,
+          budget: formData.budget,
+          date: formData.date,
+          artisan_id: artisanId || null
+        };
+        response = await apiService.createDevis(devisData);
+        if (response.devisId) {
+          setSuccess(true);
+          setTimeout(() => navigate('/dashboard/client/quotes'), 3000);
+        }
       }
     } catch (err) {
+      console.error(err);
       alert('Erreur lors de l\'envoi de la demande');
     } finally {
       setLoading(false);

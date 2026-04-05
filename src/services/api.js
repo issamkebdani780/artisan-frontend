@@ -58,6 +58,13 @@ const apiService = {
     return res.json();
   },
 
+  getArtisanDashboardStats: async (id) => {
+    const res = await fetch(`${BASE_URL}/artisans/${id}/dashboard-stats`, {
+      headers: getAuthHeaders(),
+    });
+    return res.json();
+  },
+
   // ─── SERVICES ──────────────────────────────────────────────────────────────
   getServices: async () => {
     const res = await fetch(`${BASE_URL}/services`);
@@ -76,6 +83,32 @@ const apiService = {
 
   getCategories: async () => {
     const res = await fetch(`${BASE_URL}/categories`);
+    return res.json();
+  },
+
+  createService: async (serviceData) => {
+    const res = await fetch(`${BASE_URL}/services`, {
+      method: 'POST',
+      headers: getAuthHeaders(),
+      body: JSON.stringify(serviceData),
+    });
+    return res.json();
+  },
+
+  updateService: async (serviceId, serviceData) => {
+    const res = await fetch(`${BASE_URL}/services/${serviceId}`, {
+      method: 'PUT',
+      headers: getAuthHeaders(),
+      body: JSON.stringify(serviceData),
+    });
+    return res.json();
+  },
+
+  deleteService: async (serviceId) => {
+    const res = await fetch(`${BASE_URL}/services/${serviceId}`, {
+      method: 'DELETE',
+      headers: getAuthHeaders(),
+    });
     return res.json();
   },
 
@@ -116,7 +149,7 @@ const apiService = {
   createDevis: async (devisData) => {
     const res = await fetch(`${BASE_URL}/devis`, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: getAuthHeaders(),
       body: JSON.stringify(devisData),
     });
     return res.json();
@@ -124,6 +157,13 @@ const apiService = {
 
   getUserDevis: async (userId) => {
     const res = await fetch(`${BASE_URL}/devis/user/${userId}`, {
+      headers: getAuthHeaders(),
+    });
+    return res.json();
+  },
+
+  getArtisanDevis: async (artisanId) => {
+    const res = await fetch(`${BASE_URL}/devis/artisan/${artisanId}`, {
       headers: getAuthHeaders(),
     });
     return res.json();
@@ -174,6 +214,15 @@ const apiService = {
       method: 'PUT',
       headers: getAuthHeaders(),
       body: JSON.stringify(profileData),
+    });
+    return res.json();
+  },
+
+  changePassword: async (userId, currentPassword, newPassword) => {
+    const res = await fetch(`${BASE_URL}/users/${userId}/change-password`, {
+      method: 'PUT',
+      headers: getAuthHeaders(),
+      body: JSON.stringify({ currentPassword, newPassword }),
     });
     return res.json();
   },

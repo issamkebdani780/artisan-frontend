@@ -13,6 +13,7 @@ const MovingBooking = () => {
     departure: '',
     destination: ''
   });
+  const [viewDate, setViewDate] = useState(new Date(2024, 4, 1));
 
   useEffect(() => {
     const fetchService = async () => {
@@ -164,40 +165,81 @@ const MovingBooking = () => {
                     </svg>
                   </div>
 
-                  {/* Calendar Widget Preview */}
-                  <div className="bg-slate-50 dark:bg-slate-900 rounded-xl p-4 border border-slate-100 dark:border-slate-700">
-                    <div className="flex items-center justify-between mb-4 px-2">
-                       <button className="p-1 hover:bg-slate-200 dark:hover:bg-slate-800 rounded-lg transition-colors">
-                        <span className="material-symbols-outlined text-lg">chevron_left</span>
-                      </button>
-                      <span className="font-bold text-slate-800 dark:text-white mb-2">Mai 2024</span>
-                      <button className="p-1 hover:bg-slate-200 dark:hover:bg-slate-800 rounded-lg transition-colors">
-                        <span className="material-symbols-outlined text-lg">chevron_right</span>
-                      </button>
-                    </div>
-                    <div className="grid grid-cols-7 gap-1 text-center text-[10px] font-bold text-slate-400 mb-2 uppercase">
-                      <div>LU</div><div>MA</div><div>ME</div><div>JE</div><div>VE</div><div>SA</div><div>DI</div>
-                    </div>
-                    <div className="grid grid-cols-7 gap-1 text-center font-medium text-sm">
-                      {[29, 30, 1, 2].map(day => (
-                        <div key={day} className="py-2 text-slate-300">{day}</div>
-                      ))}
-                      <button 
-                        onClick={() => setBookingDate('2024-05-03')}
-                        className={`py-2 rounded-lg font-bold transition-all ${bookingDate === '2024-05-03' ? 'bg-indigo-600 text-white shadow-md shadow-indigo-200' : 'hover:bg-white dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300'}`}
-                      >
-                        3
-                      </button>
-                      {[4, 5, 6, 7, 8, 9, 10].map(day => (
-                        <button 
-                          key={day} 
-                          onClick={() => setBookingDate(`2024-05-${day.toString().padStart(2, '0')}`)}
-                          className={`py-2 rounded-lg cursor-pointer transition-colors font-bold ${bookingDate === `2024-05-${day.toString().padStart(2, '0')}` ? 'bg-indigo-600 text-white shadow-md' : 'hover:bg-white dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300'}`}
-                        >
-                          {day}
-                        </button>
-                      ))}
-                    </div>
+                  {/* Dynamic Calendar Widget */}
+                  <div className="bg-slate-50 dark:bg-slate-900 rounded-xl p-6 border border-slate-100 dark:border-slate-700">
+                    {(() => {
+                      const daysInMonth = (year, month) => new Date(year, month + 1, 0).getDate();
+                      const startDay = (year, month) => {
+                        const day = new Date(year, month, 1).getDay();
+                        return day === 0 ? 6 : day - 1; // Adjust for LU-DI (Mon-Sun)
+                      };
+
+                      const year = viewDate.getFullYear();
+                      const month = viewDate.getMonth();
+                      const monthName = viewDate.toLocaleDateString('fr-FR', { month: 'long', year: 'numeric' });
+
+                      const prevMonth = () => setViewDate(new Date(year, month - 1, 1));
+                      const nextMonth = () => setViewDate(new Date(year, month + 1, 1));
+
+                      const prevDays = daysInMonth(year, month - 1);
+                      const currentDays = daysInMonth(year, month);
+                      const offset = startDay(year, month);
+
+                      const days = [];
+                      // Padding from prev month
+                      for (let i = offset - 1; i >= 0; i--) {
+                        days.push({ day: prevDays - i, current: false });
+                      }
+                      // Current month days
+                      for (let i = 1; i <= currentDays; i++) {
+                        days.push({ day: i, current: true });
+                      }
+
+                      return (
+                        <>
+                          <div className="flex items-center justify-between mb-6 px-2">
+                            <button onClick={prevMonth} type="button" className="p-2 hover:bg-slate-200 dark:hover:bg-slate-800 rounded-xl transition-all">
+                              <span className="material-symbols-outlined text-lg">chevron_left</span>
+                            </button>
+                            <span className="font-black text-slate-800 dark:text-white capitalize text-lg">{monthName}</span>
+                            <button onClick={nextMonth} type="button" className="p-2 hover:bg-slate-200 dark:hover:bg-slate-800 rounded-xl transition-all">
+                              <span className="material-symbols-outlined text-lg">chevron_right</span>
+                            </button>
+                          </div>
+                          
+                          <div className="grid grid-cols-7 gap-2 text-center text-[10px] font-black text-slate-400 mb-4 uppercase tracking-widest">
+                            {['lu', 'ma', 'me', 'je', 've', 'sa', 'di'].map(d => <div key={d}>{d}</div>)}
+                          </div>
+                          
+                          <div className="grid grid-cols-7 gap-2 text-center">
+                            {days.map((item, idx) => {
+                              const dateStr = `${year}-${(month + 1).toString().padStart(2, '0')}-${item.day.toString().padStart(2, '0')}`;
+                              const isSelected = item.current && bookingDate === dateStr;
+                              
+                              if (!item.current) {
+                                return <div key={idx} className="py-3 text-slate-300 dark:text-slate-700 text-sm font-medium">{item.day}</div>;
+                              }
+                              
+                              return (
+                                <button 
+                                  key={idx}
+                                  type="button"
+                                  onClick={() => setBookingDate(dateStr)}
+                                  className={`py-3 rounded-xl font-bold transition-all text-sm relative group ${
+                                    isSelected 
+                                    ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-200 dark:shadow-none scale-105' 
+                                    : 'hover:bg-white dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300'
+                                  }`}
+                                >
+                                  {item.day}
+                                  {isSelected && <span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-white rounded-full"></span>}
+                                </button>
+                              );
+                            })}
+                          </div>
+                        </>
+                      );
+                    })()}
                   </div>
                 </section>
 

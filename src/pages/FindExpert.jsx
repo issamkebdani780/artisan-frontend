@@ -79,7 +79,7 @@ const FindExpert = () => {
                 Trouvez l'artisan idéal pour vos projets
               </h2>
               <p className="text-slate-600 dark:text-slate-400 mb-8 text-lg">
-                Plus de 5000 experts vérifiés prêts à intervenir chez vous.
+                Des experts qualifiés et vérifiés prêts à intervenir chez vous.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 bg-white dark:bg-slate-900 p-2 rounded-xl shadow-lg border border-slate-200 dark:border-slate-800">
                 <div className="flex-1 flex items-center px-4 gap-3">

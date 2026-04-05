@@ -126,14 +126,100 @@ const ArtisanRegister = () => {
                   <label className="text-[10px] font-black uppercase tracking-[0.15em] text-orange-500 ml-1">Catégorie Professionnelle</label>
                   <select name="specialty" value={form.specialty} onChange={handleChange} required className="w-full h-14 px-5 rounded-xl bg-white border-2 border-orange-500/10 focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 font-semibold transition-all appearance-none outline-none">
                     <option value="" disabled>Sélectionnez votre spécialité</option>
-                    <option>Maître Charpentier</option>
-                    <option>Architecte d'Intérieur</option>
-                    <option>Artisan Métallier</option>
-                    <option>Paysagiste</option>
-                    <option>Électricien Qualifié</option>
-                    <option>Plombier Expert</option>
-                    <option>Peintre Décorateur</option>
-                    <option>Menuisier</option>
+                    
+                    <optgroup label="Menuiserie et Bois">
+                      <option>Menuisier ébéniste</option>
+                      <option>Menuisier de chantier (coffreur)</option>
+                      <option>Presseur de bois</option>
+                      <option>Décorateur bois intérieur</option>
+                      <option>Fabricant de portes et fenêtres en bois</option>
+                    </optgroup>
+
+                    <optgroup label="Ferronnerie et Soudure">
+                      <option>Ferronnier d’art</option>
+                      <option>Soudeur (arc et argon)</option>
+                      <option>Ferronnier métallier (portails et grilles)</option>
+                      <option>Chaudronnier industriel</option>
+                      <option>Soudeur carrosserie auto</option>
+                    </optgroup>
+
+                    <optgroup label="Plomberie et Réseaux">
+                      <option>Plombier sanitaire</option>
+                      <option>Plombier chauffage central</option>
+                      <option>Monteur de réseaux de gaz</option>
+                      <option>Installateur tuyauterie cuivre et PER</option>
+                      <option>Plombier maintenance eau</option>
+                    </optgroup>
+
+                    <optgroup label="Électricité et Énergie">
+                      <option>Électricien bâtiment</option>
+                      <option>Électricien industriel</option>
+                      <option>Technicien solaire photovoltaïque</option>
+                      <option>Tireur de câbles et filerie</option>
+                      <option>Réparateur tableaux électriques</option>
+                    </optgroup>
+
+                    <optgroup label="Peinture et Plâtre">
+                      <option>Peintre décorateur</option>
+                      <option>Peintre automobile</option>
+                      <option>Plâtrier staffeur</option>
+                      <option>Marbrier (ponçage et lustrage)</option>
+                      <option>Vernisseur sur bois</option>
+                    </optgroup>
+
+                    <optgroup label="Maçonnerie et Finitions">
+                      <option>Maçon (brique et ciment)</option>
+                      <option>Carreleur (faïence et marbre)</option>
+                      <option>Crépisseur (enduits traditionnels)</option>
+                      <option>Technicien isolation thermique et étanchéité</option>
+                      <option>Maçon rénovation</option>
+                    </optgroup>
+
+                    <optgroup label="Mécanique et Machines">
+                      <option>Mécanicien automobile</option>
+                      <option>Mécanicien moto</option>
+                      <option>Technicien moteurs électriques</option>
+                      <option>Réparateur groupes électrogènes et pompes</option>
+                      <option>Mécanicien agricole</option>
+                    </optgroup>
+
+                    <optgroup label="Couture et Cuir">
+                      <option>Tailleur homme</option>
+                      <option>Couturière sur mesure (femme)</option>
+                      <option>Rapiéceur retouche</option>
+                      <option>Cordonnier (chaussures cuir)</option>
+                      <option>Maroquinier (sellerie et petite maroquinerie)</option>
+                    </optgroup>
+
+                    <optgroup label="Verre et Miroiterie">
+                      <option>Menuisier aluminium et verre</option>
+                      <option>Verrier (coupe verre trempé)</option>
+                      <option>Miroitier (pose miroirs et décor verre)</option>
+                      <option>Vitrier automobile</option>
+                      <option>Souffleur de verre artisanal</option>
+                    </optgroup>
+
+                    <optgroup label="Métiers alimentaires artisanaux">
+                      <option>Boulanger traditionnel</option>
+                      <option>Pâtissier (oriental et viennoiserie)</option>
+                      <option>Fromager artisanal</option>
+                      <option>Apiculteur (miel et dérivés)</option>
+                      <option>Artisan conserveur (pickles et bocaux)</option>
+                    </optgroup>
+
+                    <optgroup label="Déménagement et Transport">
+                      <option>Déménageur professionnel</option>
+                      <option>Transporteur d'objets lourds</option>
+                      <option>Aide au déménagement (manutention)</option>
+                    </optgroup>
+
+                    <optgroup label="Jardinage et Espaces Verts">
+                      <option>Jardinier paysagiste</option>
+                      <option>Ouvrier en aménagement des espaces verts</option>
+                      <option>Technicien en entretien des jardins</option>
+                      <option>Technicien en irrigation goutte-à-goutte et arrosage</option>
+                      <option>Élagueur et tailleur d’arbres et palmiers</option>
+                    </optgroup>
                   </select>
                 </div>
                 <div className="flex flex-col gap-2">

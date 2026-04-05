@@ -80,11 +80,11 @@ const ProfilArtisan = () => {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm">
                 <p className="text-slate-500 text-xs font-black uppercase tracking-widest mb-1">Projets</p>
-                <p className="text-2xl font-black text-slate-900">{artisan.review_count || 12}+</p>
+                <p className="text-2xl font-black text-slate-900">{artisan.review_count || 0}</p>
               </div>
               <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm">
                 <p className="text-slate-500 text-xs font-black uppercase tracking-widest mb-1">Expérience</p>
-                <p className="text-2xl font-black text-slate-900">{artisan.experience_years || 5} ans</p>
+                <p className="text-2xl font-black text-slate-900">{artisan.experience_years || 0} ans</p>
               </div>
               <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm">
                 <p className="text-slate-500 text-xs font-black uppercase tracking-widest mb-1">Note</p>

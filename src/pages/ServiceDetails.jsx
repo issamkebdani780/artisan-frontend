@@ -81,17 +81,17 @@ const ServiceDetails = () => {
           <div className="flex flex-col gap-3 rounded-3xl p-8 border border-slate-100 bg-slate-50/30 text-center md:text-left">
             <span className="material-symbols-outlined text-blue-600 text-4xl">verified_user</span>
             <p className="text-slate-400 text-sm font-bold uppercase tracking-widest">Interventions</p>
-            <p className="text-slate-900 text-3xl font-black">5000+</p>
+            <p className="text-slate-900 text-3xl font-black">{service.review_count > 0 ? service.review_count : 'Nouveau'}</p>
           </div>
           <div className="flex flex-col gap-3 rounded-3xl p-8 border border-slate-100 bg-slate-50/30 text-center md:text-left">
             <span className="material-symbols-outlined text-blue-600 text-4xl">sentiment_satisfied</span>
             <p className="text-slate-400 text-sm font-bold uppercase tracking-widest">Satisfaction</p>
-            <p className="text-slate-900 text-3xl font-black">98%</p>
+            <p className="text-slate-900 text-3xl font-black">{service.rating > 0 ? `${service.rating}/5` : 'N/A'}</p>
           </div>
           <div className="flex flex-col gap-3 rounded-3xl p-8 border border-slate-100 bg-slate-50/30 text-center md:text-left">
             <span className="material-symbols-outlined text-blue-600 text-4xl">workspace_premium</span>
             <p className="text-slate-400 text-sm font-bold uppercase tracking-widest">Garantie</p>
-            <p className="text-slate-900 text-3xl font-black">10 ans</p>
+            <p className="text-slate-900 text-3xl font-black">Certifiée</p>
           </div>
         </div>
 

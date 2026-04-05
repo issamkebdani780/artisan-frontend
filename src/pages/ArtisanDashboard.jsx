@@ -8,14 +8,23 @@ const ArtisanDashboard = () => {
   const [loading, setLoading] = useState(true);
   const user = JSON.parse(localStorage.getItem('user'));
 
+  const [stats, setStats] = useState({
+    revenue: 0,
+    totalProjects: 0,
+    activeProjects: 0,
+    rating: 0,
+    reviews: 0
+  });
+
   useEffect(() => {
     const fetchDashboardData = async () => {
       try {
         if (user && user.id) {
-          const [bookingData, devisData, assignedDevis] = await Promise.all([
+          const [bookingData, devisData, assignedDevis, dashboardStats] = await Promise.all([
             apiService.getArtisanBookings(user.id),
             apiService.getPendingDevis(user.specialty || 'Plomberie'),
-            apiService.getUserDevis(user.id)
+            apiService.getArtisanDevis(user.id),
+            apiService.getArtisanDashboardStats(user.id)
           ]);
           
           // Combine bookings and assigned devis for the table
@@ -34,6 +43,7 @@ const ArtisanDashboard = () => {
 
           setBookings(combined);
           setPendingDevis(devisData);
+          setStats(dashboardStats);
         }
       } catch (err) {
         console.error('Error fetching dashboard data:', err);
@@ -48,11 +58,16 @@ const ArtisanDashboard = () => {
     try {
       if (item.type === 'devis') {
         const devisId = item.id.toString().replace('d-', '');
-        await apiService.updateDevisStatus(devisId, newStatus);
+        // Map common "ui" statuses to devis specific database statuses
+        let statusToUpdate = newStatus;
+        if (newStatus === 'confirmed') statusToUpdate = 'accepté';
+        if (newStatus === 'cancelled') statusToUpdate = 'refusé';
+        
+        await apiService.updateDevisStatus(devisId, statusToUpdate);
       } else {
         await apiService.updateBookingStatus(item.id, newStatus);
       }
-      setBookings(bookings.map(b => b.id === item.id ? { ...b, status: newStatus } : b));
+      window.location.reload(); // Refresh to update all stats and lists correctly
     } catch (err) {
       alert('Erreur lors de la mise à jour du statut');
     }
@@ -82,35 +97,38 @@ const ArtisanDashboard = () => {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
           <div>
             <h2 className="text-3xl font-black tracking-tight text-slate-900">Bonjour, {user?.name || 'Artisan'} 👋</h2>
-            <p className="text-slate-500 mt-1">Vous avez <span className="text-orange-600 font-bold">{activeProjects}</span> projets en cours aujourd'hui.</p>
+            <p className="text-slate-500 mt-1">Vous avez <span className="text-secondary font-bold">{activeProjects}</span> projets en cours aujourd'hui.</p>
           </div>
           <div className="flex gap-3">
-            <button className="flex items-center gap-2 px-6 py-3 bg-orange-500 text-white rounded-xl font-bold text-sm shadow-lg shadow-orange-500/20 hover:scale-[1.02] transition-transform">
+            <a 
+              href="/dashboard/artisan/pricing"
+              className="flex items-center gap-2 px-6 py-3 bg-secondary text-white rounded-xl font-bold text-sm shadow-lg shadow-secondary/20 hover:scale-[1.02] transition-transform"
+            >
               <span className="material-symbols-outlined text-sm">add</span>
               Ajouter un Service
-            </button>
+            </a>
           </div>
         </div>
 
         {/* New Opportunities (Devis Broadcast) */}
         {pendingDevis.length > 0 && (
-          <section className="bg-linear-to-r from-orange-50 to-orange-100 rounded-3xl p-8 border border-orange-200">
+          <section className="bg-linear-to-r from-orange-50 to-orange-100 rounded-3xl p-8 border border-secondary/20">
             <div className="flex items-center gap-3 mb-6">
               <span className="relative flex h-3 w-3">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-3 w-3 bg-orange-500"></span>
+                <span className="relative inline-flex rounded-full h-3 w-3 bg-secondary"></span>
               </span>
               <h3 className="text-xl font-black text-orange-900">Opportunités à saisir ({pendingDevis.length})</h3>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {pendingDevis.map(devis => (
-                <div key={devis.id} className="bg-white p-6 rounded-2xl shadow-sm border border-orange-200/50 space-y-4">
+                <div key={devis.id} className="bg-white p-6 rounded-2xl shadow-sm border border-secondary/20/50 space-y-4">
                   <div className="flex justify-between items-start">
                     <div>
-                      <span className="px-3 py-1 bg-orange-100 text-orange-600 rounded-full text-[10px] font-black uppercase">{devis.category_name}</span>
+                      <span className="px-3 py-1 bg-secondary/10 text-secondary rounded-full text-[10px] font-black uppercase">{devis.category_name}</span>
                       <h4 className="mt-2 font-black text-slate-900 line-clamp-1">{devis.client_name} propose un projet</h4>
                     </div>
-                    <span className="text-sm font-black text-orange-600">{devis.budget} DA</span>
+                    <span className="text-sm font-black text-secondary">{devis.budget} DA</span>
                   </div>
                   <p className="text-sm text-slate-600 line-clamp-2 italic">"{devis.description}"</p>
                   <div className="flex items-center justify-between pt-2">
@@ -135,9 +153,9 @@ const ArtisanDashboard = () => {
         {/* Stats Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <div className="bg-white p-6 rounded-2xl border border-orange-500/10 shadow-sm relative overflow-hidden group">
-            <div className="absolute -right-4 -top-4 w-24 h-24 bg-orange-500/5 rounded-full group-hover:scale-150 transition-transform duration-500"></div>
+            <div className="absolute -right-4 -top-4 w-24 h-24 bg-secondary/5 rounded-full group-hover:scale-150 transition-transform duration-500"></div>
             <p className="text-slate-500 text-sm font-semibold relative z-10">Revenus Totaux</p>
-            <h3 className="text-3xl font-black mt-2 relative z-10 text-slate-900">{totalRevenue.toLocaleString()} DA</h3>
+            <h3 className="text-3xl font-black mt-2 relative z-10 text-slate-900">{(stats.revenue || 0).toLocaleString()} DA</h3>
             <div className="flex items-center gap-1 mt-4 text-emerald-500 font-bold text-sm relative z-10">
               <span className="material-symbols-outlined text-sm">payments</span>
               <span>Paiements cumulés</span>
@@ -145,9 +163,9 @@ const ArtisanDashboard = () => {
           </div>
           
           <div className="bg-white p-6 rounded-2xl border border-orange-500/10 shadow-sm relative overflow-hidden group">
-            <div className="absolute -right-4 -top-4 w-24 h-24 bg-orange-500/5 rounded-full group-hover:scale-150 transition-transform duration-500"></div>
+            <div className="absolute -right-4 -top-4 w-24 h-24 bg-secondary/5 rounded-full group-hover:scale-150 transition-transform duration-500"></div>
             <p className="text-slate-500 text-sm font-semibold relative z-10">Projets Actifs</p>
-            <h3 className="text-3xl font-black mt-2 relative z-10 text-slate-900">{activeProjects}</h3>
+            <h3 className="text-3xl font-black mt-2 relative z-10 text-slate-900">{stats.activeProjects || 0}</h3>
             <div className="flex items-center gap-1 mt-4 text-orange-500 font-bold text-sm relative z-10">
               <span className="material-symbols-outlined text-sm">pending_actions</span>
               <span>À traiter</span>
@@ -155,22 +173,22 @@ const ArtisanDashboard = () => {
           </div>
           
           <div className="bg-white p-6 rounded-2xl border border-orange-500/10 shadow-sm relative overflow-hidden group">
-            <div className="absolute -right-4 -top-4 w-24 h-24 bg-orange-500/5 rounded-full group-hover:scale-150 transition-transform duration-500"></div>
+            <div className="absolute -right-4 -top-4 w-24 h-24 bg-secondary/5 rounded-full group-hover:scale-150 transition-transform duration-500"></div>
             <p className="text-slate-500 text-sm font-semibold relative z-10">Avis Clients</p>
-            <h3 className="text-3xl font-black mt-2 relative z-10 text-slate-900">4.9/5</h3>
+            <h3 className="text-3xl font-black mt-2 relative z-10 text-slate-900">{stats.rating || '0.0'}/5</h3>
             <div className="flex items-center gap-1 mt-4 text-yellow-500 font-bold text-sm relative z-10">
               <span className="material-symbols-outlined text-sm" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
-              <span>128 avis</span>
+              <span>{stats.reviews || 0} avis</span>
             </div>
           </div>
           
-          <div className="bg-orange-500 p-6 rounded-2xl shadow-xl shadow-orange-500/20 text-white relative overflow-hidden group">
+          <div className="bg-secondary p-6 rounded-2xl shadow-xl shadow-secondary/20 text-white relative overflow-hidden group">
             <div className="absolute -right-4 -top-4 w-24 h-24 bg-white/10 rounded-full group-hover:scale-150 transition-transform duration-500"></div>
-            <p className="text-white/80 text-sm font-semibold relative z-10">Messages</p>
-            <h3 className="text-3xl font-black mt-2 relative z-10">8</h3>
+            <p className="text-white/80 text-sm font-semibold relative z-10">Total Projets</p>
+            <h3 className="text-3xl font-black mt-2 relative z-10">{stats.totalProjects || 0}</h3>
             <div className="flex items-center gap-1 mt-4 font-bold text-sm relative z-10">
-              <span className="material-symbols-outlined text-sm">chat_bubble</span>
-              Nouveaux messages
+              <span className="material-symbols-outlined text-sm">assignment</span>
+              Expérience globale
             </div>
           </div>
         </div>
@@ -232,7 +250,7 @@ const ArtisanDashboard = () => {
                           booking.status === 'confirmed' || booking.status === 'accepté' ? 'bg-blue-100 text-blue-600' :
                           booking.status === 'completed' ? 'bg-emerald-100 text-emerald-600' :
                           booking.status === 'cancelled' || booking.status === 'refusé' ? 'bg-red-100 text-red-600' :
-                          'bg-orange-100 text-orange-600'
+                          'bg-secondary/10 text-secondary'
                         }`}>
                           {booking.status}
                         </span>

@@ -3,7 +3,7 @@ import React from 'react';
 const ClientProfileSettings = () => {
   return (
     <div className="flex h-full min-h-screen flex-col font-sans bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100">
-      
+
       {/* Header / Navigation */}
       <header className="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-6 md:px-10 py-3 sticky top-0 z-50">
         <div className="flex items-center gap-4 text-primary">
@@ -25,7 +25,7 @@ const ClientProfileSettings = () => {
       {/* Main Content */}
       <main className="flex-1 flex justify-center py-8 px-4 md:px-0">
         <div className="flex flex-col max-w-[960px] w-full gap-8">
-          
+
           {/* Page Title & Progress */}
           <div className="bg-white dark:bg-slate-900 p-6 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800">
             <div className="flex flex-wrap justify-between items-end gap-4 mb-6">
@@ -46,7 +46,7 @@ const ClientProfileSettings = () => {
           </div>
 
           <form className="flex flex-col gap-6" onSubmit={(e) => e.preventDefault()}>
-            
+
             {/* Section 1: Informations Personnelles */}
             <section className="bg-white dark:bg-slate-900 p-6 md:p-8 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800">
               <div className="flex items-center gap-3 mb-6">
@@ -54,7 +54,7 @@ const ClientProfileSettings = () => {
                 <h2 className="text-slate-900 dark:text-slate-50 text-xl font-bold">Informations personnelles</h2>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                
+
                 {/* Photo Upload */}
                 <div className="flex flex-col items-center gap-4">
                   <div className="relative group cursor-pointer">
@@ -68,7 +68,7 @@ const ClientProfileSettings = () => {
                   </div>
                   <p className="text-xs text-slate-500 text-center">JPG, PNG ou GIF. <br /> Max 5 Mo.</p>
                 </div>
-                
+
                 {/* Name and Phone */}
                 <div className="md:col-span-2 flex flex-col gap-5">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
