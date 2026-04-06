@@ -1,5 +1,5 @@
-const BASE_URL = window.location.hostname === 'localhost'
-  ? 'http://localhost:5000/api'
+const BASE_URL = window.location.hostname === 'bericolipro.linguaflo.me'
+  ? 'https://bericolipro.linguaflo.me/api'
   : '/api';
 
 // Secure token management
@@ -92,6 +92,18 @@ const apiService = {
     return handleResponse(res);
   },
 
+  // Register with file uploads (for artisans)
+  registerWithFiles: async (formData) => {
+    const res = await fetch(`${BASE_URL}/auth/register`, {
+      method: 'POST',
+      headers: {
+        // Don't set Content-Type, let the browser set it with the boundary
+      },
+      body: formData,
+    });
+    return handleResponse(res);
+  },
+
   login: async (credentials) => {
     const res = await fetch(`${BASE_URL}/auth/login`, {
       method: 'POST',
@@ -107,6 +119,16 @@ const apiService = {
 
   logout: () => {
     TokenManager.clearToken();
+  },
+
+  getWilayas: async () => {
+    const res = await fetch(`${BASE_URL}/wilayas`);
+    return handleResponse(res);
+  },
+
+  getCommunes: async (wilayaId) => {
+    const res = await fetch(`${BASE_URL}/communes?wilaya_id=${wilayaId}`);
+    return handleResponse(res);
   },
 
   isAuthenticated: () => {
@@ -137,6 +159,38 @@ const apiService = {
   getArtisanDashboardStats: async (id) => {
     const res = await fetch(`${BASE_URL}/artisans/${id}/dashboard-stats`, {
       headers: getAuthHeaders(),
+    });
+    return handleResponse(res);
+  },
+
+  // Get artisan documents
+  getArtisanDocuments: async (id) => {
+    const res = await fetch(`${BASE_URL}/artisans/${id}/documents`, {
+      headers: getAuthHeaders(),
+    });
+    return handleResponse(res);
+  },
+
+  // Upload additional documents
+  uploadArtisanDocuments: async (id, formData) => {
+    const res = await fetch(`${BASE_URL}/artisans/${id}/documents`, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${TokenManager.getToken()}`,
+      },
+      body: formData,
+    });
+    return handleResponse(res);
+  },
+
+  // Update artisan profile picture
+  updateArtisanProfilePicture: async (id, formData) => {
+    const res = await fetch(`${BASE_URL}/artisans/${id}/profile-picture`, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${TokenManager.getToken()}`,
+      },
+      body: formData,
     });
     return handleResponse(res);
   },

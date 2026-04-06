@@ -11,12 +11,18 @@ const RequestQuote = () => {
   const [success, setSuccess] = useState(false);
   const navigate = useNavigate();
 
+  // Location data
+  const [wilayas, setWilayas] = useState([]);
+  const [communes, setCommunes] = useState([]);
+
   const [formData, setFormData] = useState({
     title: '',
     category_id: '',
     phone: '',
     description: '',
     address: '',
+    wilaya_id: '',
+    commune_id: '',
     budget: '',
     date: ''
   });
@@ -40,6 +46,34 @@ const RequestQuote = () => {
     };
     fetchCategories();
   }, []);
+
+  // Fetch wilayas on mount
+  useEffect(() => {
+    const fetchWilayas = async () => {
+      try {
+        const data = await apiService.getWilayas();
+        setWilayas(data);
+      } catch (err) {
+        console.error('Error fetching wilayas:', err);
+      }
+    };
+    fetchWilayas();
+  }, []);
+
+  // Handle wilaya change
+  const handleWilayaChange = async (e) => {
+    const wilayaId = e.target.value;
+    setFormData({ ...formData, wilaya_id: wilayaId, commune_id: '' });
+    setCommunes([]);
+    if (wilayaId) {
+      try {
+        const data = await apiService.getCommunes(wilayaId);
+        setCommunes(data);
+      } catch (err) {
+        console.error('Error fetching communes:', err);
+      }
+    }
+  };
 
   const [service, setService] = useState(null);
   
@@ -94,6 +128,8 @@ const RequestQuote = () => {
           category_id: formData.category_id || 1, 
           description: formData.description,
           budget: formData.budget,
+          wilaya_id: formData.wilaya_id,
+          commune_id: formData.commune_id,
           date: formData.date,
           artisan_id: artisanId || null
         };
@@ -254,8 +290,37 @@ const RequestQuote = () => {
               <div className="space-y-6">
                 <h3 className="text-lg font-bold border-b border-slate-100 dark:border-slate-800 pb-2">3. Localisation</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <label className="flex flex-col gap-2">
+                    <span className="text-sm font-semibold">Wilaya</span>
+                    <select 
+                      required
+                      className="w-full px-4 rounded-xl border-2 border-slate-100 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:border-blue-600 focus:bg-white dark:focus:bg-slate-800 outline-none h-14 transition-all"
+                      value={formData.wilaya_id}
+                      onChange={handleWilayaChange}
+                    >
+                      <option value="">Sélectionnez une wilaya</option>
+                      {wilayas.map(wilaya => (
+                        <option key={wilaya.id} value={wilaya.id}>{wilaya.name}</option>
+                      ))}
+                    </select>
+                  </label>
+                  <label className="flex flex-col gap-2">
+                    <span className="text-sm font-semibold">Commune</span>
+                    <select 
+                      required
+                      disabled={!formData.wilaya_id}
+                      className="w-full px-4 rounded-xl border-2 border-slate-100 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:border-blue-600 focus:bg-white dark:focus:bg-slate-800 outline-none h-14 transition-all disabled:opacity-50"
+                      value={formData.commune_id}
+                      onChange={(e) => setFormData({...formData, commune_id: e.target.value})}
+                    >
+                      <option value="">Sélectionnez une commune</option>
+                      {communes.map(commune => (
+                        <option key={commune.id} value={commune.id}>{commune.name}</option>
+                      ))}
+                    </select>
+                  </label>
                   <label className="flex flex-col gap-2 md:col-span-2">
-                    <span className="text-sm font-semibold">Adresse ou Ville</span>
+                    <span className="text-sm font-semibold">Adresse détaillée</span>
                     <div className="relative">
                       <span className="absolute inset-y-0 left-4 flex items-center text-slate-400">
                         <span className="material-symbols-outlined">location_on</span>
@@ -263,7 +328,7 @@ const RequestQuote = () => {
                       <input 
                         type="text" 
                         required
-                        placeholder="Alger, Oran, etc." 
+                        placeholder="Numéro, rue, quartier..." 
                         className="w-full pl-12 pr-4 rounded-xl border-2 border-slate-100 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:border-blue-600 focus:bg-white dark:focus:bg-slate-800 outline-none h-14 transition-all" 
                         value={formData.address}
                         onChange={(e) => setFormData({...formData, address: e.target.value})}

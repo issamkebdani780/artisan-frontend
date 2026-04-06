@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import apiService from '../services/api';
 
@@ -6,13 +6,81 @@ const ArtisanRegister = () => {
   const navigate = useNavigate();
   const [form, setForm] = useState({
     name: '', birthday: '', specialty: [], experience_years: '',
-    email: '', phone: '', address: '', password: '', confirm: ''
+    email: '', phone: '', address: '', password: '', confirm: '',
+    wilaya_id: '', commune_id: ''
+  });
+  const [files, setFiles] = useState({
+    profilePic: null,
+    documents: []
   });
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
   const [terms, setTerms] = useState(false);
 
+  // Location data
+  const [wilayas, setWilayas] = useState([]);
+  const [communes, setCommunes] = useState([]);
+
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
+
+  // Fetch wilayas on mount
+  useEffect(() => {
+    const fetchWilayas = async () => {
+      try {
+        const data = await apiService.getWilayas();
+        setWilayas(data);
+      } catch (err) {
+        console.error('Error fetching wilayas:', err);
+      }
+    };
+    fetchWilayas();
+  }, []);
+
+  // Handle wilaya change
+  const handleWilayaChange = async (e) => {
+    const wilayaId = e.target.value;
+    setForm({ ...form, wilaya_id: wilayaId, commune_id: '' });
+    setCommunes([]);
+    if (wilayaId) {
+      try {
+        const data = await apiService.getCommunes(wilayaId);
+        setCommunes(data);
+      } catch (err) {
+        console.error('Error fetching communes:', err);
+      }
+    }
+  };
+
+  const handleProfilePicChange = (e) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      if (file.size > 5 * 1024 * 1024) {
+        setError('L\'image doit faire moins de 5MB');
+        return;
+      }
+      setFiles({ ...files, profilePic: file });
+      setError('');
+    }
+  };
+
+  const handleDocumentsChange = (e) => {
+    const selectedFiles = Array.from(e.target.files || []);
+    if (selectedFiles.length > 5) {
+      setError('Maximum 5 documents autorisés');
+      return;
+    }
+    const validFiles = selectedFiles.filter(file => {
+      if (file.size > 10 * 1024 * 1024) {
+        setError(`${file.name} dépasse 10MB`);
+        return false;
+      }
+      return true;
+    });
+    if (validFiles.length > 0) {
+      setFiles({ ...files, documents: validFiles });
+      setError('');
+    }
+  };
 
   const passwordChecks = {
     length: form.password.length >= 8,
@@ -27,17 +95,36 @@ const ArtisanRegister = () => {
     if (form.password !== form.confirm) { setError('Les mots de passe ne correspondent pas'); return; }
     if (!passwordChecks.length) { setError('Mot de passe trop court (8 caractères minimum)'); return; }
     if (!terms) { setError('Vous devez accepter les conditions d\'utilisation'); return; }
+    if (!files.profilePic) { setError('La photo de profil est requise'); return; }
+    if (files.documents.length === 0) { setError('Au moins un document est requis'); return; }
+
     setLoading(true);
     try {
-      const res = await apiService.register({
-        name: form.name, email: form.email, phone: form.phone,
-        address: form.address, birthday: form.birthday,
-        specialty: form.specialty.join(', '), experience_years: form.experience_years,
-        password: form.password, role: 'artisan'
+      // Create FormData to handle file uploads
+      const formData = new FormData();
+      formData.append('name', form.name);
+      formData.append('email', form.email);
+      formData.append('phone', form.phone);
+      formData.append('address', form.address);
+      formData.append('birthday', form.birthday);
+      formData.append('specialty', form.specialty.join(', '));
+      formData.append('experience_years', form.experience_years);
+      formData.append('wilaya_id', form.wilaya_id);
+      formData.append('commune_id', form.commune_id);
+      formData.append('password', form.password);
+      formData.append('role', 'artisan');
+      
+      // Add files
+      formData.append('profilePic', files.profilePic);
+      files.documents.forEach((doc, index) => {
+        formData.append('documents', doc);
       });
+
+      // Register with files
+      const res = await apiService.registerWithFiles(formData);
       if (res.userId) {
         await apiService.login({ email: form.email, password: form.password, role: 'artisan' });
-        window.location.href = '/dashboard/artisan';
+        navigate('/dashboard/artisan');
       } else {
         setError(res.error || 'Erreur lors de l\'inscription');
       }
@@ -234,6 +321,28 @@ const ArtisanRegister = () => {
                 </div>
               </div>
 
+              {/* Location Fields */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div className="flex flex-col gap-2">
+                  <label className="text-[10px] font-black uppercase tracking-[0.15em] text-slate-400 ml-1">Wilaya</label>
+                  <select name="wilaya_id" value={form.wilaya_id} onChange={handleWilayaChange} required className="w-full h-14 px-5 rounded-xl bg-[#e2e8f0] border-none focus:ring-2 focus:ring-orange-500 transition-all font-medium outline-none">
+                    <option value="">Sélectionnez une wilaya</option>
+                    {wilayas.map(wilaya => (
+                      <option key={wilaya.id} value={wilaya.id}>{wilaya.name}</option>
+                    ))}
+                  </select>
+                </div>
+                <div className="flex flex-col gap-2">
+                  <label className="text-[10px] font-black uppercase tracking-[0.15em] text-slate-400 ml-1">Commune</label>
+                  <select name="commune_id" value={form.commune_id} onChange={handleChange} required disabled={!form.wilaya_id} className="w-full h-14 px-5 rounded-xl bg-[#e2e8f0] border-none focus:ring-2 focus:ring-orange-500 transition-all font-medium outline-none disabled:opacity-50">
+                    <option value="">Sélectionnez une commune</option>
+                    {communes.map(commune => (
+                      <option key={commune.id} value={commune.id}>{commune.name}</option>
+                    ))}
+                  </select>
+                </div>
+              </div>
+
               <div className="flex flex-col gap-2">
                 <label className="text-[10px] font-black uppercase tracking-[0.15em] text-slate-400 ml-1">Email</label>
                 <input name="email" type="email" value={form.email} onChange={handleChange} required placeholder="contact@exemple.com" className="w-full h-14 px-5 rounded-xl bg-[#e2e8f0] border-none focus:ring-2 focus:ring-orange-500 transition-all font-medium placeholder:text-slate-400 outline-none" />
@@ -255,6 +364,81 @@ const ArtisanRegister = () => {
                 </div>
               </div>
 
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div className="flex flex-col gap-2">
+                  <label className="text-[10px] font-black uppercase tracking-[0.15em] text-slate-400 ml-1">Mot de passe</label>
+                  <input name="password" type="password" value={form.password} onChange={handleChange} required placeholder="••••••••" className="w-full h-14 px-5 rounded-xl bg-[#e2e8f0] border-none focus:ring-2 focus:ring-orange-500 transition-all font-medium outline-none" />
+                </div>
+                <div className="flex flex-col gap-2">
+                  <label className="text-[10px] font-black uppercase tracking-[0.15em] text-slate-400 ml-1">Confirmer</label>
+                  <input name="confirm" type="password" value={form.confirm} onChange={handleChange} required placeholder="••••••••" className="w-full h-14 px-5 rounded-xl bg-[#e2e8f0] border-none focus:ring-2 focus:ring-orange-500 transition-all font-medium outline-none" />
+                </div>
+              </div>
+
+              {/* File Upload Section */}
+              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-2xl border-2 border-blue-200 space-y-5">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="material-symbols-outlined text-blue-600" style={{ fontVariationSettings: "'FILL' 1" }}>cloud_upload</span>
+                  <h4 className="text-[10px] font-black text-blue-700 uppercase tracking-[0.15em]">Documents Requis</h4>
+                </div>
+
+                {/* Profile Picture Upload */}
+                <div className="flex flex-col gap-3">
+                  <label className="text-[10px] font-bold uppercase tracking-widest text-slate-600 ml-1">
+                    Photo de Profil * <span className="text-blue-600">(JPG, PNG - Max 5MB)</span>
+                  </label>
+                  <div className="relative border-2 border-dashed border-blue-300 rounded-xl p-4 hover:border-blue-500 hover:bg-blue-100/30 transition-all cursor-pointer group">
+                    <input
+                      type="file"
+                      accept="image/jpeg,image/png,image/gif,image/webp"
+                      onChange={handleProfilePicChange}
+                      required
+                      className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
+                    />
+                    <div className="text-center py-6">
+                      <span className="material-symbols-outlined text-3xl text-blue-400 block mb-2 group-hover:text-blue-600 transition-colors">image</span>
+                      <p className="text-sm font-bold text-slate-600" >
+                        {files.profilePic ? files.profilePic.name : 'Cliquez pour télécharger votre photo'}
+                      </p>
+                      <p className="text-xs text-slate-400 mt-1">ou glissez-déposez une image</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Documents Upload */}
+                <div className="flex flex-col gap-3">
+                  <label className="text-[10px] font-bold uppercase tracking-widest text-slate-600 ml-1">
+                    Justificatifs / Certificats * <span className="text-blue-600">(Max 5 fichiers, 10MB chacun)</span>
+                  </label>
+                  <div className="relative border-2 border-dashed border-indigo-300 rounded-xl p-4 hover:border-indigo-500 hover:bg-indigo-100/30 transition-all cursor-pointer group">
+                    <input
+                      type="file"
+                      multiple
+                      accept=".pdf,.doc,.docx,.jpg,.jpeg,.png"
+                      onChange={handleDocumentsChange}
+                      required
+                      className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
+                    />
+                    <div className="text-center py-6">
+                      <span className="material-symbols-outlined text-3xl text-indigo-400 block mb-2 group-hover:text-indigo-600 transition-colors">folder_open</span>
+                      <p className="text-sm font-bold text-slate-600">
+                        {files.documents.length > 0 ? `${files.documents.length} fichier(s) sélectionné(s)` : 'Sélectionnez vos documents'}
+                      </p>
+                      <p className="text-xs text-slate-400 mt-1">PDF, DOC, DOCX, JPG, PNG acceptés</p>
+                    </div>
+                  </div>
+                  {files.documents.length > 0 && (
+                    <div className="bg-white rounded-lg p-3 space-y-2">
+                      {files.documents.map((doc, idx) => (
+                        <div key={idx} className="flex items-center justify-between text-sm text-slate-600 bg-slate-50 p-2 rounded">
+                          <span className="truncate">{doc.name}</span>
+                          <span className="text-xs text-slate-400">({(doc.size / 1024 / 1024).toFixed(2)}MB)</span>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="flex flex-col gap-2">
                   <label className="text-[10px] font-black uppercase tracking-[0.15em] text-slate-400 ml-1">Mot de passe</label>

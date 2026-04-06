@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import apiService from '../services/api';
 
@@ -7,13 +7,60 @@ const ClientRegister = () => {
   const navigate = useNavigate();
 
   // Client form state
-  const [clientForm, setClientForm] = useState({ name: '', email: '', phone: '', password: '', confirm: '' });
-  const [artisanForm, setArtisanForm] = useState({ name: '', email: '', phone: '', specialty: '', password: '', confirm: '' });
+  const [clientForm, setClientForm] = useState({ name: '', email: '', phone: '', password: '', confirm: '', wilaya_id: '', commune_id: '' });
+  const [artisanForm, setArtisanForm] = useState({ name: '', email: '', phone: '', specialty: '', password: '', confirm: '', wilaya_id: '', commune_id: '' });
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
 
+  // Location data
+  const [wilayas, setWilayas] = useState([]);
+  const [communes, setCommunes] = useState([]);
+
   const handleClientChange = (e) => setClientForm({ ...clientForm, [e.target.name]: e.target.value });
   const handleArtisanChange = (e) => setArtisanForm({ ...artisanForm, [e.target.name]: e.target.value });
+
+  // Fetch wilayas on mount
+  useEffect(() => {
+    const fetchWilayas = async () => {
+      try {
+        const data = await apiService.getWilayas();
+        setWilayas(data);
+      } catch (err) {
+        console.error('Error fetching wilayas:', err);
+      }
+    };
+    fetchWilayas();
+  }, []);
+
+  // Handle wilaya change for client
+  const handleClientWilayaChange = async (e) => {
+    const wilayaId = e.target.value;
+    setClientForm({ ...clientForm, wilaya_id: wilayaId, commune_id: '' });
+    setCommunes([]);
+    if (wilayaId) {
+      try {
+        const data = await apiService.getCommunes(wilayaId);
+        setCommunes(data);
+      } catch (err) {
+        console.error('Error fetching communes:', err);
+      }
+    }
+  };
+
+  // Handle wilaya change for artisan
+  const handleArtisanWilayaChange = async (e) => {
+    const wilayaId = e.target.value;
+    setArtisanForm({ ...artisanForm, wilaya_id: wilayaId, commune_id: '' });
+    setCommunes([]);
+    if (wilayaId) {
+      try {
+        const data = await apiService.getCommunes(wilayaId);
+        setCommunes(data);
+      } catch (err) {
+        console.error('Error fetching communes:', err);
+      }
+    }
+  };
 
   const handleClientSubmit = async (e) => {
     e.preventDefault();
@@ -22,7 +69,7 @@ const ClientRegister = () => {
     if (clientForm.password.length < 8) { setError('Mot de passe trop court (8 caractères minimum)'); return; }
     setLoading(true);
     try {
-      const res = await apiService.register({ name: clientForm.name, email: clientForm.email, phone: clientForm.phone, password: clientForm.password, role: 'client' });
+      const res = await apiService.register({ name: clientForm.name, email: clientForm.email, phone: clientForm.phone, password: clientForm.password, wilaya_id: clientForm.wilaya_id, commune_id: clientForm.commune_id, role: 'client' });
       if (res.userId) {
         // Auto-login after register
         await apiService.login({ email: clientForm.email, password: clientForm.password, role: 'client' });
@@ -44,7 +91,7 @@ const ClientRegister = () => {
     if (artisanForm.password.length < 8) { setError('Mot de passe trop court (8 caractères minimum)'); return; }
     setLoading(true);
     try {
-      const res = await apiService.register({ name: artisanForm.name, email: artisanForm.email, phone: artisanForm.phone, specialty: artisanForm.specialty, password: artisanForm.password, role: 'artisan' });
+      const res = await apiService.register({ name: artisanForm.name, email: artisanForm.email, phone: artisanForm.phone, specialty: artisanForm.specialty, password: artisanForm.password, wilaya_id: artisanForm.wilaya_id, commune_id: artisanForm.commune_id, role: 'artisan' });
       if (res.userId) {
         await apiService.login({ email: artisanForm.email, password: artisanForm.password, role: 'artisan' });
         navigate('/dashboard/artisan');
@@ -146,6 +193,33 @@ const ClientRegister = () => {
                         <div className="relative group">
                           <span className="material-symbols-outlined absolute left-5 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-blue-600 transition-colors text-xl">call</span>
                           <input name="phone" type="tel" value={clientForm.phone} onChange={handleClientChange} placeholder="05 50 12 34 56" className="w-full pl-14 pr-6 py-5 bg-slate-50/50 rounded-2xl border border-transparent focus:border-blue-600/20 focus:ring-8 focus:ring-blue-600/5 focus:bg-white transition-all outline-none font-medium placeholder:text-slate-400" />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div className="space-y-2">
+                        <label className="text-[11px] font-black uppercase tracking-widest text-slate-400 ml-1">Wilaya</label>
+                        <div className="relative group">
+                          <span className="material-symbols-outlined absolute left-5 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-blue-600 transition-colors text-xl">location_on</span>
+                          <select name="wilaya_id" value={clientForm.wilaya_id} onChange={handleClientWilayaChange} required className="w-full pl-14 pr-6 py-5 bg-slate-50/50 rounded-2xl border border-transparent focus:border-blue-600/20 focus:ring-8 focus:ring-blue-600/5 focus:bg-white transition-all outline-none font-medium">
+                            <option value="">Sélectionnez une wilaya</option>
+                            {wilayas.map(wilaya => (
+                              <option key={wilaya.id} value={wilaya.id}>{wilaya.name}</option>
+                            ))}
+                          </select>
+                        </div>
+                      </div>
+                      <div className="space-y-2">
+                        <label className="text-[11px] font-black uppercase tracking-widest text-slate-400 ml-1">Commune</label>
+                        <div className="relative group">
+                          <span className="material-symbols-outlined absolute left-5 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-blue-600 transition-colors text-xl">location_city</span>
+                          <select name="commune_id" value={clientForm.commune_id} onChange={handleClientChange} required disabled={!clientForm.wilaya_id} className="w-full pl-14 pr-6 py-5 bg-slate-50/50 rounded-2xl border border-transparent focus:border-blue-600/20 focus:ring-8 focus:ring-blue-600/5 focus:bg-white transition-all outline-none font-medium disabled:opacity-50">
+                            <option value="">Sélectionnez une commune</option>
+                            {communes.map(commune => (
+                              <option key={commune.id} value={commune.id}>{commune.name}</option>
+                            ))}
+                          </select>
                         </div>
                       </div>
                     </div>
