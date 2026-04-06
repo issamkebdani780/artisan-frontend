@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import MainLayout from './layouts/MainLayout';
+import ErrorBoundary from './components/ErrorBoundary';
 
 import Home from './pages/Home';
 import ClientLogin from './pages/ClientLogin';
@@ -38,8 +39,9 @@ import MessageSuccess from './pages/MessageSuccess';
 
 function App() {
   return (
-    <Router>
-      <Routes>
+    <ErrorBoundary>
+      <Router>
+        <Routes>
         {/* Public Routes - Wrapped in MainLayout */}
         <Route path="/" element={<MainLayout><Home /></MainLayout>} />
         <Route path="/login/client" element={<MainLayout><ClientLogin /></MainLayout>} />
@@ -82,7 +84,8 @@ function App() {
         <Route path="/dashboard/admin/settings" element={<ParametresAdmin />} />
         <Route path="/dashboard/admin/evidence" element={<VoirLesPreuvesAdmin />} />
       </Routes>
-    </Router>
+      </Router>
+    </ErrorBoundary>
   );
 }
 

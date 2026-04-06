@@ -6,7 +6,7 @@ const ArtisanSettings = () => {
   const user = JSON.parse(localStorage.getItem('user'));
   const [form, setForm] = useState({
     name: user?.name || '',
-    specialty: user?.specialty || '',
+    specialty: user?.specialty ? user.specialty.split(',').map(s => s.trim()) : [],
     phone: user?.phone || '',
     address: user?.address || '',
     experience_years: user?.experience_years || 0,
@@ -23,8 +23,12 @@ const ArtisanSettings = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      await apiService.updateProfile(user.id, form);
-      const updatedUser = { ...user, ...form };
+      const submissionData = {
+        ...form,
+        specialty: Array.isArray(form.specialty) ? form.specialty.join(', ') : form.specialty
+      };
+      await apiService.updateProfile(user.id, submissionData);
+      const updatedUser = { ...user, ...submissionData };
       localStorage.setItem('user', JSON.stringify(updatedUser));
       setMessage({ text: 'Profil mis à jour avec succès !', type: 'success' });
     } catch (err) {
@@ -105,9 +109,93 @@ const ArtisanSettings = () => {
                     <label className="text-xs font-bold uppercase tracking-wider text-slate-400">Nom complet</label>
                     <input name="name" value={form.name} onChange={handleChange} type="text" className="w-full rounded-lg border border-slate-200 bg-slate-50 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none px-4 py-2 transition-all font-medium text-slate-900" />
                   </div>
-                  <div className="flex flex-col gap-1.5">
-                    <label className="text-xs font-bold uppercase tracking-wider text-slate-400">Spécialité</label>
-                    <input name="specialty" value={form.specialty} onChange={handleChange} type="text" className="w-full rounded-lg border border-slate-200 bg-slate-50 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none px-4 py-2 transition-all font-medium text-slate-900" />
+                  <div className="flex flex-col gap-1.5 md:col-span-2">
+                    <div className="flex items-center justify-between mb-1">
+                      <label className="text-xs font-bold uppercase tracking-wider text-slate-400">Spécialités (Catégories multiples)</label>
+                      <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">(Ctrl/Cmd click pour plusieurs)</span>
+                    </div>
+                    <select multiple name="specialty" value={form.specialty} onChange={(e) => {
+                      const options = Array.from(e.target.selectedOptions, option => option.value);
+                      setForm({ ...form, specialty: options });
+                    }} className="w-full h-32 rounded-lg border border-slate-200 bg-slate-50 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none px-4 py-2 transition-all font-medium text-slate-900 overflow-y-auto custom-scrollbar">
+                      <optgroup label="Menuiserie et Bois">
+                        <option>Menuisier ébéniste</option>
+                        <option>Menuisier de chantier (coffreur)</option>
+                        <option>Presseur de bois</option>
+                        <option>Décorateur bois intérieur</option>
+                        <option>Fabricant de portes et fenêtres en bois</option>
+                      </optgroup>
+                      <optgroup label="Ferronnerie et Soudure">
+                        <option>Ferronnier d’art</option>
+                        <option>Soudeur (arc et argon)</option>
+                        <option>Ferronnier métallier (portails et grilles)</option>
+                        <option>Chaudronnier industriel</option>
+                        <option>Soudeur carrosserie auto</option>
+                      </optgroup>
+                      <optgroup label="Plomberie et Réseaux">
+                        <option>Plombier sanitaire</option>
+                        <option>Plombier chauffage central</option>
+                        <option>Monteur de réseaux de gaz</option>
+                        <option>Installateur tuyauterie cuivre et PER</option>
+                        <option>Plombier maintenance eau</option>
+                      </optgroup>
+                      <optgroup label="Électricité et Énergie">
+                        <option>Électricien bâtiment</option>
+                        <option>Électricien industriel</option>
+                        <option>Technicien solaire photovoltaïque</option>
+                        <option>Tireur de câbles et filerie</option>
+                        <option>Réparateur tableaux électriques</option>
+                      </optgroup>
+                      <optgroup label="Peinture et Plâtre">
+                        <option>Peintre décorateur</option>
+                        <option>Peintre automobile</option>
+                        <option>Plâtrier staffeur</option>
+                        <option>Marbrier (ponçage et lustrage)</option>
+                        <option>Vernisseur sur bois</option>
+                      </optgroup>
+                      <optgroup label="Maçonnerie et Finitions">
+                        <option>Maçon (brique et ciment)</option>
+                        <option>Carreleur (faïence et marbre)</option>
+                        <option>Crépisseur (enduits traditionnels)</option>
+                        <option>Technicien isolation thermique et étanchéité</option>
+                        <option>Maçon rénovation</option>
+                      </optgroup>
+                      <optgroup label="Mécanique et Machines">
+                        <option>Mécanicien automobile</option>
+                        <option>Mécanicien moto</option>
+                        <option>Technicien moteurs électriques</option>
+                        <option>Réparateur groupes électrogènes et pompes</option>
+                        <option>Mécanicien agricole</option>
+                      </optgroup>
+                      <optgroup label="Couture et Cuir">
+                        <option>Tailleur homme</option>
+                        <option>Couturière sur mesure (femme)</option>
+                        <option>Rapiéceur retouche</option>
+                        <option>Cordonnier (chaussures cuir)</option>
+                        <option>Maroquinier (sellerie et petite maroquinerie)</option>
+                      </optgroup>
+                      <optgroup label="Verre et Miroiterie">
+                        <option>Menuisier aluminium et verre</option>
+                        <option>Verrier (coupe verre trempé)</option>
+                        <option>Miroitier (pose miroirs et décor verre)</option>
+                        <option>Vitrier automobile</option>
+                        <option>Souffleur de verre artisanal</option>
+                      </optgroup>
+                      <optgroup label="Métiers alimentaires artisanaux">
+                        <option>Boulanger traditionnel</option>
+                        <option>Pâtissier (oriental et viennoiserie)</option>
+                        <option>Fromager artisanal</option>
+                        <option>Apiculteur (miel et dérivés)</option>
+                        <option>Artisan conserveur (pickles et bocaux)</option>
+                      </optgroup>
+                      <optgroup label="Jardinage et Espaces Verts">
+                        <option>Jardinier paysagiste</option>
+                        <option>Ouvrier en aménagement des espaces verts</option>
+                        <option>Technicien en entretien des jardins</option>
+                        <option>Technicien en irrigation goutte-à-goutte et arrosage</option>
+                        <option>Élagueur et tailleur d’arbres et palmiers</option>
+                      </optgroup>
+                    </select>
                   </div>
                   <div className="flex flex-col gap-1.5">
                     <label className="text-xs font-bold uppercase tracking-wider text-slate-400">Téléphone</label>

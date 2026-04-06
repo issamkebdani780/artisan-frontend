@@ -22,7 +22,7 @@ const AdminLogin = () => {
         setError(response.error || 'Accès refusé. Réservé aux administrateurs.');
       }
     } catch (err) {
-      setError('Une erreur est survenue lors de la connexion');
+      setError(err.message || 'Une erreur est survenue lors de la connexion');
     } finally {
       setLoading(false);
     }

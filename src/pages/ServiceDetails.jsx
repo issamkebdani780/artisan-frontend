@@ -11,9 +11,8 @@ const ServiceDetails = () => {
   useEffect(() => {
     const fetchService = async () => {
       try {
-        const services = await apiService.getServices();
-        const found = services.find(s => s.id === parseInt(id));
-        setService(found);
+        const serviceData = await apiService.getServiceById(id);
+        setService(serviceData);
       } catch (err) {
         console.error('Failed to fetch service:', err);
       } finally {

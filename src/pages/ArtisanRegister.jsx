@@ -5,7 +5,7 @@ import apiService from '../services/api';
 const ArtisanRegister = () => {
   const navigate = useNavigate();
   const [form, setForm] = useState({
-    name: '', birthday: '', specialty: '', experience_years: '',
+    name: '', birthday: '', specialty: [], experience_years: '',
     email: '', phone: '', address: '', password: '', confirm: ''
   });
   const [error, setError] = useState('');
@@ -32,12 +32,12 @@ const ArtisanRegister = () => {
       const res = await apiService.register({
         name: form.name, email: form.email, phone: form.phone,
         address: form.address, birthday: form.birthday,
-        specialty: form.specialty, experience_years: form.experience_years,
+        specialty: form.specialty.join(', '), experience_years: form.experience_years,
         password: form.password, role: 'artisan'
       });
       if (res.userId) {
         await apiService.login({ email: form.email, password: form.password, role: 'artisan' });
-        navigate('/dashboard/artisan');
+        window.location.href = '/dashboard/artisan';
       } else {
         setError(res.error || 'Erreur lors de l\'inscription');
       }
@@ -123,9 +123,15 @@ const ArtisanRegister = () => {
               {/* Professional Fields */}
               <div className="p-6 bg-orange-500/5 rounded-2xl border border-orange-500/20 space-y-5">
                 <div className="flex flex-col gap-2">
-                  <label className="text-[10px] font-black uppercase tracking-[0.15em] text-orange-500 ml-1">Catégorie Professionnelle</label>
-                  <select name="specialty" value={form.specialty} onChange={handleChange} required className="w-full h-14 px-5 rounded-xl bg-white border-2 border-orange-500/10 focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 font-semibold transition-all appearance-none outline-none">
-                    <option value="" disabled>Sélectionnez votre spécialité</option>
+                  <div className="flex items-center justify-between mb-1">
+                    <label className="text-[10px] font-black uppercase tracking-[0.15em] text-orange-500 ml-1">Catégorie Professionnelle</label>
+                    <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">(Ctrl/Cmd click pour plusieurs)</span>
+                  </div>
+                  <select multiple name="specialty" value={form.specialty} onChange={(e) => {
+                      const options = Array.from(e.target.selectedOptions, option => option.value);
+                      setForm({ ...form, specialty: options });
+                    }} required className="w-full h-32 p-3 rounded-xl bg-white border-2 border-orange-500/10 focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 font-semibold transition-all outline-none overflow-y-auto custom-scrollbar">
+                    <option value="" disabled>Sélectionnez votre(vos) spécialité(s)</option>
                     
                     <optgroup label="Menuiserie et Bois">
                       <option>Menuisier ébéniste</option>

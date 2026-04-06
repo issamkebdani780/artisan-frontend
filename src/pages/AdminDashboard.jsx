@@ -15,14 +15,29 @@ const AdminDashboard = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const [statsData, unverifiedData] = await Promise.all([
-          apiService.getPlatformStats(),
-          apiService.getUnverifiedArtisans()
-        ]);
+        let statsData = { artisans: 0, clients: 0, bookings: 0, totalRevenue: 0 };
+        let unverifiedData = [];
+
+        // Fetch stats with error handling
+        try {
+          statsData = await apiService.getPlatformStats();
+        } catch (err) {
+          console.error('Failed to fetch stats:', err);
+          // Set default values
+        }
+
+        // Fetch unverified artisans with error handling
+        try {
+          unverifiedData = await apiService.getUnverifiedArtisans();
+        } catch (err) {
+          console.error('Failed to fetch unverified artisans:', err);
+          unverifiedData = [];
+        }
+
         setStats(statsData);
         setUnverified(unverifiedData);
       } catch (err) {
-        console.error('Failed to fetch admin data:', err);
+        console.error('Unexpected error in dashboard:', err);
       } finally {
         setLoading(false);
       }

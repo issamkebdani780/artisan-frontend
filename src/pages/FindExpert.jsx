@@ -39,10 +39,26 @@ const FindExpert = () => {
 
       // Client-side filter for multi-category selection (if more than 1)
       if (activeFilters.selectedCategories.length > 1) {
+        const categoryMap = {
+            'Menuiserie et Bois': ['Menuisier', 'Presseur', 'Décorateur bois', 'fenêtres en bois'],
+            'Ferronnerie et Soudure': ['Ferronnier', 'Soudeur', 'Chaudronnier'],
+            'Plomberie et Réseaux': ['Plombier', 'Monteur de réseaux', 'tuyauterie'],
+            'Électricité et Énergie': ['Électricien', 'solaire', 'câbles', 'tableaux électriques'],
+            'Peinture et Plâtre': ['Peintre', 'Plâtrier', 'Marbrier', 'Vernisseur'],
+            'Maçonnerie et Finitions': ['Maçon', 'Carreleur', 'Crépisseur', 'isolation'],
+            'Mécanique et Machines': ['Mécanicien', 'moteurs', 'électrogènes'],
+            'Couture et Cuir': ['Tailleur', 'Couturière', 'Rapiéceur', 'Cordonnier', 'Maroquinier'],
+            'Verre et Miroiterie': ['verre', 'Verrier', 'Miroitier', 'Vitrier'],
+            'Métiers alimentaires artisanaux': ['Boulanger', 'Pâtissier', 'Fromager', 'Apiculteur', 'conserveur'],
+            'Jardinage et Espaces Verts': ['Jardinier', 'espaces verts', 'jardins', 'irrigation', 'Élagueur', 'palmiers']
+        };
+
         results = results.filter(e =>
-          activeFilters.selectedCategories.some(cat =>
-            (e.role || e.specialty || '').toLowerCase().includes(cat.toLowerCase())
-          )
+          activeFilters.selectedCategories.some(cat => {
+            const keys = categoryMap[cat] || [cat.substring(0, 5).toLowerCase()];
+            const spec = (e.role || e.specialty || '').toLowerCase();
+            return keys.some(k => spec.includes(k.toLowerCase())) || spec.includes(cat.toLowerCase());
+          })
         );
       }
 

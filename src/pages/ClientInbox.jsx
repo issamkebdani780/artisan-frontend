@@ -5,6 +5,10 @@ import apiService from '../services/api';
 const ClientInbox = () => {
   const [bookings, setBookings] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [reviewModal, setReviewModal] = useState(null); // { artisanId, artisanName }
+  const [reviewForm, setReviewForm] = useState({ rating: 0, comment: '' });
+  const [reviewSubmitting, setReviewSubmitting] = useState(false);
+  const [reviewedIds, setReviewedIds] = useState(new Set());
   const user = JSON.parse(localStorage.getItem('user'));
   const navigate = useNavigate();
 
@@ -25,6 +29,41 @@ const ClientInbox = () => {
     };
     fetchDevis();
   }, [user?.id]);
+
+  const handleDelete = async (devisId) => {
+    if (!window.confirm('Supprimer cette demande définitivement ?')) return;
+    try {
+      await apiService.deleteDevis(devisId);
+      setBookings(prev => prev.filter(d => d.id !== devisId));
+    } catch (err) {
+      alert("Erreur lors de la suppression.");
+    }
+  };
+
+  const handleSubmitReview = async (e) => {
+    e.preventDefault();
+    if (reviewForm.rating === 0) return alert('Veuillez choisir une note.');
+    setReviewSubmitting(true);
+    try {
+      const res = await apiService.submitReview({
+        artisan_id: reviewModal.artisanId,
+        rating: reviewForm.rating,
+        comment: reviewForm.comment,
+      });
+      if (res.error) {
+        alert(res.error);
+      } else {
+        setReviewedIds(prev => new Set([...prev, reviewModal.artisanId]));
+        setReviewModal(null);
+        setReviewForm({ rating: 0, comment: '' });
+        alert('⭐ Merci pour votre avis !');
+      }
+    } catch (err) {
+      alert('Erreur lors de l\'envoi.');
+    } finally {
+      setReviewSubmitting(false);
+    }
+  };
 
   const getStatusStyle = (status) => {
     switch(status) {
@@ -144,9 +183,22 @@ const ClientInbox = () => {
                        <span className="material-symbols-outlined text-sm font-bold">message</span>
                        Message
                     </button>
-                    <button className="flex-1 bg-white border-2 border-slate-100 text-slate-600 py-3 px-6 rounded-xl font-black text-xs hover:bg-slate-50 transition-all active:scale-95">
-                       Détails du devis
+                    <button
+                       onClick={() => handleDelete(devis.id)}
+                       className="flex-1 bg-red-50 border-2 border-red-100 text-red-600 py-3 px-6 rounded-xl font-black text-xs hover:bg-red-100 transition-all active:scale-95 flex items-center justify-center gap-2"
+                    >
+                       <span className="material-symbols-outlined text-sm">delete</span>
+                       Supprimer
                     </button>
+                    {(devis.status === 'accepté' || devis.status === 'terminé') && devis.artisan_id && !reviewedIds.has(devis.artisan_id) && (
+                      <button
+                        onClick={() => setReviewModal({ artisanId: devis.artisan_id, artisanName: devis.artisan_name })}
+                        className="flex-1 bg-amber-50 border-2 border-amber-200 text-amber-700 py-3 px-6 rounded-xl font-black text-xs hover:bg-amber-100 transition-all active:scale-95 flex items-center justify-center gap-2"
+                      >
+                        <span className="material-symbols-outlined text-sm">star</span>
+                        Laisser un avis
+                      </button>
+                    )}
                   </div>
                 </div>
               </div>
@@ -154,6 +206,70 @@ const ClientInbox = () => {
           </div>
         ) }
       </main>
+
+      {/* Review Modal */}
+      {reviewModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 px-4" onClick={() => setReviewModal(null)}>
+          <div className="bg-white rounded-3xl shadow-2xl p-8 w-full max-w-md" onClick={e => e.stopPropagation()}>
+            <div className="flex justify-between items-center mb-6">
+              <div>
+                <h3 className="text-2xl font-black text-slate-900">Votre avis</h3>
+                <p className="text-slate-500 text-sm mt-1">Pour <span className="font-bold text-blue-600">{reviewModal.artisanName}</span></p>
+              </div>
+              <button onClick={() => setReviewModal(null)} className="size-10 rounded-full bg-slate-100 flex items-center justify-center hover:bg-slate-200 transition-colors">
+                <span className="material-symbols-outlined text-slate-600">close</span>
+              </button>
+            </div>
+            <form onSubmit={handleSubmitReview} className="space-y-6">
+              {/* Star Rating */}
+              <div>
+                <p className="text-sm font-bold text-slate-700 mb-3">Note</p>
+                <div className="flex gap-2">
+                  {[1,2,3,4,5].map(star => (
+                    <button
+                      key={star}
+                      type="button"
+                      onClick={() => setReviewForm(f => ({ ...f, rating: star }))}
+                      className={`text-4xl transition-transform hover:scale-110 ${
+                        star <= reviewForm.rating ? 'text-amber-400' : 'text-slate-200'
+                      }`}
+                    >
+                      ★
+                    </button>
+                  ))}
+                </div>
+                {reviewForm.rating > 0 && (
+                  <p className="text-xs text-slate-500 mt-2">
+                    {['', 'Très mauvais', 'Mauvais', 'Bien', 'Très bien', 'Excellent !'][reviewForm.rating]}
+                  </p>
+                )}
+              </div>
+              {/* Comment */}
+              <div>
+                <label className="block text-sm font-bold text-slate-700 mb-2">Commentaire</label>
+                <textarea
+                  rows={4}
+                  placeholder="Décrivez votre expérience avec cet artisan..."
+                  value={reviewForm.comment}
+                  onChange={e => setReviewForm(f => ({ ...f, comment: e.target.value }))}
+                  className="w-full rounded-xl border-2 border-slate-100 p-4 text-slate-900 focus:border-blue-500 outline-none resize-none transition-colors"
+                />
+              </div>
+              <button
+                type="submit"
+                disabled={reviewSubmitting || reviewForm.rating === 0}
+                className="w-full bg-blue-600 text-white py-4 rounded-xl font-black text-sm hover:bg-blue-700 transition-all disabled:opacity-50 flex items-center justify-center gap-2"
+              >
+                {reviewSubmitting ? (
+                  <><span className="animate-spin h-5 w-5 border-4 border-white/30 border-t-white rounded-full"></span> Envoi...</>
+                ) : (
+                  <><span className="material-symbols-outlined text-sm">send</span> Publier mon avis</>
+                )}
+              </button>
+            </form>
+          </div>
+        </div>
+      )}
 
       <footer className="mt-20 border-t border-slate-100 py-12 text-center text-slate-400 text-sm">
         <p>© 2026 BricoloPro Algérie - Tableau de bord Client v2.0</p>

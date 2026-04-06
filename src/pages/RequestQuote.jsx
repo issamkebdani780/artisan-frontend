@@ -20,6 +20,14 @@ const RequestQuote = () => {
     budget: '',
     date: ''
   });
+  
+  const [artisan, setArtisan] = useState(null);
+  
+  useEffect(() => {
+    if (artisanId) {
+      apiService.getArtisanById(artisanId).then(data => setArtisan(data)).catch(console.error);
+    }
+  }, [artisanId]);
 
   useEffect(() => {
     const fetchCategories = async () => {
@@ -170,7 +178,7 @@ const RequestQuote = () => {
                       type="text" 
                       required
                       placeholder="Ex: Rénovation salle de bain" 
-                      className="px-4 rounded-xl border-2 border-slate-100 bg-white focus:border-blue-600 focus:bg-white outline-none h-14 transition-all" 
+                      className="px-4 rounded-xl border-2 border-slate-100 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:border-blue-600 focus:bg-white dark:focus:bg-slate-800 outline-none h-14 transition-all" 
                       value={formData.title}
                       onChange={(e) => setFormData({...formData, title: e.target.value})}
                     />
@@ -178,12 +186,31 @@ const RequestQuote = () => {
                   <label className="flex flex-col gap-2">
                     <span className="text-sm font-semibold">Catégorie</span>
                     <select 
-                      className="px-4 rounded-xl border-2 border-slate-100 bg-white focus:border-blue-600 outline-none h-14 transition-all"
+                      className="px-4 rounded-xl border-2 border-slate-100 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:border-blue-600 focus:bg-white dark:focus:bg-slate-800 outline-none h-14 transition-all"
                       value={formData.category_id}
                       onChange={(e) => setFormData({...formData, category_id: e.target.value})}
                     >
                       <option value="">Sélectionner une catégorie</option>
-                      {categories.map(c => (
+                      {categories.filter(c => {
+                        if (!artisan || !artisan.specialty) return true;
+                        
+                        const categoryMap = {
+                            'Menuiserie et Bois': ['Menuisier', 'Presseur', 'Décorateur bois', 'fenêtres en bois'],
+                            'Ferronnerie et Soudure': ['Ferronnier', 'Soudeur', 'Chaudronnier'],
+                            'Plomberie et Réseaux': ['Plombier', 'Monteur de réseaux', 'tuyauterie'],
+                            'Électricité et Énergie': ['Électricien', 'solaire', 'câbles', 'tableaux électriques'],
+                            'Peinture et Plâtre': ['Peintre', 'Plâtrier', 'Marbrier', 'Vernisseur'],
+                            'Maçonnerie et Finitions': ['Maçon', 'Carreleur', 'Crépisseur', 'isolation'],
+                            'Mécanique et Machines': ['Mécanicien', 'moteurs', 'électrogènes'],
+                            'Couture et Cuir': ['Tailleur', 'Couturière', 'Rapiéceur', 'Cordonnier', 'Maroquinier'],
+                            'Verre et Miroiterie': ['verre', 'Verrier', 'Miroitier', 'Vitrier'],
+                            'Métiers alimentaires artisanaux': ['Boulanger', 'Pâtissier', 'Fromager', 'Apiculteur', 'conserveur'],
+                            'Jardinage et Espaces Verts': ['Jardinier', 'espaces verts', 'jardins', 'irrigation', 'Élagueur', 'palmiers']
+                        };
+                        const keys = categoryMap[c.name] || [c.name.substring(0, 5).toLowerCase()];
+                        const spec = artisan.specialty.toLowerCase();
+                        return keys.some(k => spec.includes(k.toLowerCase())) || spec.includes(c.name.toLowerCase());
+                      }).map(c => (
                         <option key={c.id} value={c.id}>{c.name}</option>
                       ))}
                     </select>
@@ -198,7 +225,7 @@ const RequestQuote = () => {
                         type="tel" 
                         required
                         placeholder="05 XX XX XX XX" 
-                        className="w-full pl-12 pr-4 rounded-xl border-2 border-slate-100 bg-white focus:border-blue-600 outline-none h-14 transition-all" 
+                        className="w-full pl-12 pr-4 rounded-xl border-2 border-slate-100 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:border-blue-600 focus:bg-white dark:focus:bg-slate-800 outline-none h-14 transition-all" 
                         value={formData.phone}
                         onChange={(e) => setFormData({...formData, phone: e.target.value})}
                       />
@@ -216,7 +243,7 @@ const RequestQuote = () => {
                     rows="4" 
                     required
                     placeholder="Veuillez donner le plus de détails possible sur les travaux à réaliser..." 
-                    className="rounded-xl border-2 border-slate-100 bg-white focus:border-blue-600 outline-none p-4 transition-all"
+                    className="rounded-xl border-2 border-slate-100 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:border-blue-600 outline-none p-4 transition-all"
                     value={formData.description}
                     onChange={(e) => setFormData({...formData, description: e.target.value})}
                   ></textarea>
@@ -237,7 +264,7 @@ const RequestQuote = () => {
                         type="text" 
                         required
                         placeholder="Alger, Oran, etc." 
-                        className="w-full pl-12 pr-4 rounded-xl border-2 border-slate-100 bg-white focus:border-blue-600 outline-none h-14 transition-all" 
+                        className="w-full pl-12 pr-4 rounded-xl border-2 border-slate-100 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:border-blue-600 focus:bg-white dark:focus:bg-slate-800 outline-none h-14 transition-all" 
                         value={formData.address}
                         onChange={(e) => setFormData({...formData, address: e.target.value})}
                       />
@@ -256,7 +283,7 @@ const RequestQuote = () => {
                       type="number" 
                       required
                       placeholder="Ex: 15000" 
-                      className="px-4 rounded-xl border-2 border-slate-100 bg-white focus:border-blue-600 outline-none h-14 transition-all" 
+                      className="px-4 rounded-xl border-2 border-slate-100 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:border-blue-600 outline-none h-14 transition-all" 
                       value={formData.budget}
                       onChange={(e) => setFormData({...formData, budget: e.target.value})}
                     />
@@ -266,7 +293,7 @@ const RequestQuote = () => {
                     <input 
                       type="date" 
                       required
-                      className="px-4 rounded-xl border-2 border-slate-100 bg-white focus:border-blue-600 outline-none h-14 transition-all text-slate-600" 
+                      className="px-4 rounded-xl border-2 border-slate-100 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:border-blue-600 outline-none h-14 transition-all" 
                       value={formData.date}
                       onChange={(e) => setFormData({...formData, date: e.target.value})}
                     />

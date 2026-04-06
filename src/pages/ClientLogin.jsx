@@ -22,7 +22,7 @@ const ClientLogin = () => {
         setError(response.error || 'Identifiants invalides');
       }
     } catch (err) {
-      setError('Une erreur est survenue lors de la connexion');
+      setError(err.message || 'Une erreur est survenue lors de la connexion');
     } finally {
       setLoading(false);
     }

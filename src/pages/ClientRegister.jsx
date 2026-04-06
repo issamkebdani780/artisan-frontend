@@ -26,7 +26,7 @@ const ClientRegister = () => {
       if (res.userId) {
         // Auto-login after register
         await apiService.login({ email: clientForm.email, password: clientForm.password, role: 'client' });
-        navigate('/');
+        window.location.href = '/';
       } else {
         setError(res.error || 'Erreur lors de l\'inscription');
       }

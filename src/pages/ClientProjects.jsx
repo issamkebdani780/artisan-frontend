@@ -11,10 +11,22 @@ const ClientProjects = () => {
     const fetchProjects = async () => {
       try {
         if (user && user.id) {
-          const [bookingData, devisData] = await Promise.all([
-            apiService.getUserBookings(user.id),
-            apiService.getUserDevis(user.id)
-          ]);
+          let bookingData = [];
+          let devisData = [];
+
+          // Fetch bookings with error handling
+          try {
+            bookingData = await apiService.getUserBookings(user.id);
+          } catch (err) {
+            console.error('Failed to fetch bookings:', err);
+          }
+
+          // Fetch devis with error handling
+          try {
+            devisData = await apiService.getUserDevis(user.id);
+          } catch (err) {
+            console.error('Failed to fetch devis:', err);
+          }
 
           // Combine bookings and devis
           const combined = [
@@ -33,13 +45,28 @@ const ClientProjects = () => {
           setProjects(combined);
         }
       } catch (err) {
-        console.error('Error fetching client projects:', err);
+        console.error('Unexpected error fetching client projects:', err);
       } finally {
         setLoading(false);
       }
     };
     fetchProjects();
   }, []);
+
+  const handleDeleteProject = async (project) => {
+    if (!window.confirm('Supprimer cette demande définitivement ?')) return;
+    try {
+      if (project.type === 'devis') {
+        const id = project.id.replace('d-', '');
+        await apiService.deleteDevis(id);
+      } else {
+        await apiService.updateBookingStatus(project.id, 'cancelled');
+      }
+      setProjects(prev => prev.filter(p => p.id !== project.id));
+    } catch (err) {
+      alert("Erreur lors de la suppression.");
+    }
+  };
 
   return (
     <MainLayout>
@@ -65,12 +92,13 @@ const ClientProjects = () => {
                     <th className="px-8 py-5">Date</th>
                     <th className="px-8 py-5">Budget</th>
                     <th className="px-8 py-5">Statut</th>
+                    <th className="px-8 py-5 text-right">Actions</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-slate-100">
                   {loading ? (
                     <tr>
-                      <td colSpan="5" className="px-8 py-20 text-center">
+                      <td colSpan="6" className="px-8 py-20 text-center">
                         <div className="flex flex-col items-center gap-3">
                           <span className="animate-spin h-10 w-10 border-4 border-blue-600/30 border-t-blue-600 rounded-full"></span>
                           <p className="text-slate-400 font-bold">Chargement de vos projets...</p>
@@ -105,17 +133,26 @@ const ClientProjects = () => {
                         </td>
                         <td className="px-8 py-6 font-black text-slate-900">{project.total_price} DA</td>
                         <td className="px-8 py-6">
-                          <span className={`px-4 py-1.5 rounded-full text-[10px] font-black uppercase shadow-xs ${
-                            project.status === 'confirmed' || project.status === 'accepté' ? 'bg-blue-100 text-blue-700' :
-                            project.status === 'completed' ? 'bg-emerald-100 text-emerald-700' :
-                            project.status === 'cancelled' || project.status === 'refusé' || project.status === 'annulé' ? 'bg-red-100 text-red-700' :
-                            'bg-orange-100 text-orange-700'
-                          }`}>
-                            {project.status === 'pending' || project.status === 'en attente' ? '🔍 ' : 
-                             project.status === 'confirmed' || project.status === 'accepté' ? '✅ ' :
-                             project.status === 'completed' ? '⭐ ' : '❌ '}
+                          <span className={`px-4 py-1.5 rounded-full text-[10px] font-black uppercase shadow-xs ${project.status === 'confirmed' || project.status === 'accepté' ? 'bg-blue-100 text-blue-700' :
+                              project.status === 'completed' ? 'bg-emerald-100 text-emerald-700' :
+                                project.status === 'cancelled' || project.status === 'refusé' || project.status === 'annulé' ? 'bg-red-100 text-red-700' :
+                                  'bg-orange-100 text-orange-700'
+                            }`}>
+                            {project.status === 'pending' || project.status === 'en attente' ? '🔍 ' :
+                              project.status === 'confirmed' || project.status === 'accepté' ? '✅ ' :
+                                project.status === 'completed' ? '⭐ ' : '❌ '}
                             {project.status}
                           </span>
+                        </td>
+                        <td className="px-8 py-6 text-right">
+                          <button
+                            onClick={() => handleDeleteProject(project)}
+                            title="Supprimer"
+                            className="flex items-center gap-1.5 px-4 py-2 bg-red-50 text-red-600 rounded-xl font-bold text-xs hover:bg-red-100 active:scale-95 transition-all"
+                          >
+                            <span className="material-symbols-outlined text-sm">delete</span>
+                            Supprimer
+                          </button>
                         </td>
                       </tr>
                     ))

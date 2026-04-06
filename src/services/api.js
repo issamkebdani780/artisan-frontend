@@ -1,13 +1,83 @@
-const BASE_URL = window.location.hostname === 'localhost' 
+const BASE_URL = window.location.hostname === 'localhost'
   ? 'http://localhost:5000/api'
   : '/api';
 
+// Secure token management
+const TokenManager = {
+  // Store token with timestamp for expiration checking
+  setToken: (token, user) => {
+    if (token) {
+      localStorage.setItem('token', token);
+      localStorage.setItem('tokenTime', Date.now().toString());
+      localStorage.setItem('user', JSON.stringify(user));
+    }
+  },
+
+  getToken: () => {
+    const token = localStorage.getItem('token');
+    const tokenTime = localStorage.getItem('tokenTime');
+    
+    // Check if token is older than 24 hours (86400000 ms)
+    if (token && tokenTime) {
+      const age = Date.now() - parseInt(tokenTime);
+      if (age > 86400000) {
+        TokenManager.clearToken();
+        return null;
+      }
+    }
+    return token;
+  },
+
+  getUser: () => {
+    try {
+      const user = localStorage.getItem('user');
+      return user ? JSON.parse(user) : null;
+    } catch (e) {
+      console.error('Failed to parse user from storage:', e);
+      return null;
+    }
+  },
+
+  clearToken: () => {
+    localStorage.removeItem('token');
+    localStorage.removeItem('tokenTime');
+    localStorage.removeItem('user');
+    // Force reload to main page
+    if (window.location.pathname.includes('dashboard')) {
+      window.location.href = '/';
+    }
+  },
+
+  isTokenValid: () => {
+    const token = TokenManager.getToken();
+    return !!token;
+  }
+};
+
 const getAuthHeaders = () => {
-  const token = localStorage.getItem('token');
+  const token = TokenManager.getToken();
+  if (!token) {
+    TokenManager.clearToken();
+  }
   return {
     'Content-Type': 'application/json',
     ...(token ? { 'Authorization': `Bearer ${token}` } : {}),
   };
+};
+
+// Helper function to handle API responses with proper error checking
+const handleResponse = async (res) => {
+  // Handle 401 (Unauthorized) - token expired
+  if (res.status === 401) {
+    TokenManager.clearToken();
+    throw new Error('Session expired. Please log in again.');
+  }
+
+  if (!res.ok) {
+    const error = await res.json().catch(() => ({ error: 'API Error' }));
+    throw new Error(error.error || `HTTP ${res.status}: ${res.statusText}`);
+  }
+  return res.json();
 };
 
 const apiService = {
@@ -19,7 +89,7 @@ const apiService = {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(userData),
     });
-    return res.json();
+    return handleResponse(res);
   },
 
   login: async (credentials) => {
@@ -28,62 +98,68 @@ const apiService = {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(credentials),
     });
-    const data = await res.json();
+    const data = await handleResponse(res);
     if (data.token) {
-      localStorage.setItem('token', data.token);
-      localStorage.setItem('user', JSON.stringify(data.user));
+      TokenManager.setToken(data.token, data.user);
     }
     return data;
   },
 
   logout: () => {
-    localStorage.removeItem('token');
-    localStorage.removeItem('user');
+    TokenManager.clearToken();
+  },
+
+  isAuthenticated: () => {
+    return TokenManager.isTokenValid();
+  },
+
+  getCurrentUser: () => {
+    return TokenManager.getUser();
   },
 
   // ─── ARTISANS ──────────────────────────────────────────────────────────────
   getArtisans: async (filters = {}) => {
     const query = new URLSearchParams(filters).toString();
     const res = await fetch(`${BASE_URL}/artisans?${query}`);
-    return res.json();
+    return handleResponse(res);
   },
 
   getArtisanById: async (id) => {
     const res = await fetch(`${BASE_URL}/artisans/${id}`);
-    return res.json();
+    return handleResponse(res);
   },
 
   getFeaturedArtisans: async () => {
     const res = await fetch(`${BASE_URL}/artisans/featured`);
-    return res.json();
+    return handleResponse(res);
   },
 
   getArtisanDashboardStats: async (id) => {
     const res = await fetch(`${BASE_URL}/artisans/${id}/dashboard-stats`, {
       headers: getAuthHeaders(),
     });
-    return res.json();
+    return handleResponse(res);
   },
 
   // ─── SERVICES ──────────────────────────────────────────────────────────────
   getServices: async () => {
     const res = await fetch(`${BASE_URL}/services`);
-    return res.json();
+    return handleResponse(res);
   },
 
   getServiceById: async (id) => {
     const res = await fetch(`${BASE_URL}/services/${id}`);
-    return res.json();
+    return handleResponse(res);
   },
 
   getArtisanServices: async (id) => {
     const res = await fetch(`${BASE_URL}/services/artisan/${id}`);
-    return res.json();
+    return handleResponse(res);
   },
 
   getCategories: async () => {
     const res = await fetch(`${BASE_URL}/categories`);
-    return res.json();
+    return handleResponse(res);
   },
 
   createService: async (serviceData) => {
@@ -92,7 +168,7 @@ const apiService = {
       headers: getAuthHeaders(),
       body: JSON.stringify(serviceData),
     });
-    return res.json();
+    return handleResponse(res);
   },
 
   updateService: async (serviceId, serviceData) => {
@@ -101,7 +177,7 @@ const apiService = {
       headers: getAuthHeaders(),
       body: JSON.stringify(serviceData),
     });
-    return res.json();
+    return handleResponse(res);
   },
 
   deleteService: async (serviceId) => {
@@ -109,7 +185,7 @@ const apiService = {
       method: 'DELETE',
       headers: getAuthHeaders(),
     });
-    return res.json();
+    return handleResponse(res);
   },
 
   // ─── BOOKINGS ──────────────────────────────────────────────────────────────
@@ -119,21 +195,21 @@ const apiService = {
       headers: getAuthHeaders(),
       body: JSON.stringify(bookingData),
     });
-    return res.json();
+    return handleResponse(res);
   },
 
   getUserBookings: async (userId) => {
     const res = await fetch(`${BASE_URL}/bookings/user/${userId}`, {
       headers: getAuthHeaders(),
     });
-    return res.json();
+    return handleResponse(res);
   },
 
   getArtisanBookings: async (artisanId) => {
     const res = await fetch(`${BASE_URL}/bookings/artisan/${artisanId}`, {
       headers: getAuthHeaders(),
     });
-    return res.json();
+    return handleResponse(res);
   },
 
   updateBookingStatus: async (bookingId, status) => {
@@ -142,7 +218,7 @@ const apiService = {
       headers: getAuthHeaders(),
       body: JSON.stringify({ status }),
     });
-    return res.json();
+    return handleResponse(res);
   },
 
   // ─── DEVIS ─────────────────────────────────────────────────────────────────
@@ -152,28 +228,28 @@ const apiService = {
       headers: getAuthHeaders(),
       body: JSON.stringify(devisData),
     });
-    return res.json();
+    return handleResponse(res);
   },
 
   getUserDevis: async (userId) => {
     const res = await fetch(`${BASE_URL}/devis/user/${userId}`, {
       headers: getAuthHeaders(),
     });
-    return res.json();
+    return handleResponse(res);
   },
 
   getArtisanDevis: async (artisanId) => {
     const res = await fetch(`${BASE_URL}/devis/artisan/${artisanId}`, {
       headers: getAuthHeaders(),
     });
-    return res.json();
+    return handleResponse(res);
   },
 
   getPendingDevis: async (specialty) => {
     const res = await fetch(`${BASE_URL}/devis/pending/${encodeURIComponent(specialty)}`, {
       headers: getAuthHeaders(),
     });
-    return res.json();
+    return handleResponse(res);
   },
 
   acceptDevis: async (devisId) => {
@@ -181,7 +257,7 @@ const apiService = {
       method: 'PUT',
       headers: getAuthHeaders(),
     });
-    return res.json();
+    return handleResponse(res);
   },
 
   updateDevisStatus: async (devisId, status) => {
@@ -190,7 +266,15 @@ const apiService = {
       headers: getAuthHeaders(),
       body: JSON.stringify({ status }),
     });
-    return res.json();
+    return handleResponse(res);
+  },
+
+  deleteDevis: async (devisId) => {
+    const res = await fetch(`${BASE_URL}/devis/${devisId}`, {
+      method: 'DELETE',
+      headers: getAuthHeaders(),
+    });
+    return handleResponse(res);
   },
 
   // ─── REVIEWS ───────────────────────────────────────────────────────────────
@@ -200,12 +284,17 @@ const apiService = {
       headers: getAuthHeaders(),
       body: JSON.stringify(reviewData),
     });
-    return res.json();
+    return handleResponse(res);
+  },
+
+  getArtisanReviews: async (artisanId) => {
+    const res = await fetch(`${BASE_URL}/reviews/artisan/${artisanId}`);
+    return handleResponse(res);
   },
 
   getServiceReviews: async (serviceId) => {
     const res = await fetch(`${BASE_URL}/reviews/service/${serviceId}`);
-    return res.json();
+    return handleResponse(res);
   },
 
   // ─── PROFILE ───────────────────────────────────────────────────────────────
@@ -215,7 +304,7 @@ const apiService = {
       headers: getAuthHeaders(),
       body: JSON.stringify(profileData),
     });
-    return res.json();
+    return handleResponse(res);
   },
 
   changePassword: async (userId, currentPassword, newPassword) => {
@@ -224,7 +313,7 @@ const apiService = {
       headers: getAuthHeaders(),
       body: JSON.stringify({ currentPassword, newPassword }),
     });
-    return res.json();
+    return handleResponse(res);
   },
 
   // ─── ADMIN ─────────────────────────────────────────────────────────────────
@@ -232,14 +321,14 @@ const apiService = {
     const res = await fetch(`${BASE_URL}/admin/stats`, {
       headers: getAuthHeaders(),
     });
-    return res.json();
+    return handleResponse(res);
   },
 
   getUnverifiedArtisans: async () => {
     const res = await fetch(`${BASE_URL}/admin/artisans/unverified`, {
       headers: getAuthHeaders(),
     });
-    return res.json();
+    return handleResponse(res);
   },
 
   verifyArtisan: async (id) => {
@@ -247,7 +336,7 @@ const apiService = {
       method: 'PUT',
       headers: getAuthHeaders(),
     });
-    return res.json();
+    return handleResponse(res);
   },
 };
 

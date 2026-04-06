@@ -58,16 +58,22 @@ const ArtisanDashboard = () => {
     try {
       if (item.type === 'devis') {
         const devisId = item.id.toString().replace('d-', '');
-        // Map common "ui" statuses to devis specific database statuses
         let statusToUpdate = newStatus;
         if (newStatus === 'confirmed') statusToUpdate = 'accepté';
         if (newStatus === 'cancelled') statusToUpdate = 'refusé';
         
         await apiService.updateDevisStatus(devisId, statusToUpdate);
+        // Update state instead of reloading
+        setPendingDevis(prev => 
+          prev.map(d => d.id === item.id ? { ...d, status: statusToUpdate } : d)
+        );
       } else {
         await apiService.updateBookingStatus(item.id, newStatus);
+        // Update state instead of reloading
+        setBookings(prev =>
+          prev.map(b => b.id === item.id ? { ...b, status: newStatus } : b)
+        );
       }
-      window.location.reload(); // Refresh to update all stats and lists correctly
     } catch (err) {
       alert('Erreur lors de la mise à jour du statut');
     }
@@ -76,8 +82,9 @@ const ArtisanDashboard = () => {
   const handleAcceptDevis = async (devisId) => {
     try {
       await apiService.acceptDevis(devisId);
+      // Update state instead of reloading
+      setPendingDevis(prev => prev.filter(d => d.id !== `d-${devisId}`));
       alert('Bravo ! Vous avez accepté ce projet.');
-      window.location.reload();
     } catch (err) {
       alert('Erreur lors de l\'acceptation du devis');
     }
