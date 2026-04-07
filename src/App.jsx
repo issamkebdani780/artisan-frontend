@@ -36,6 +36,8 @@ import ParametresAdmin from './pages/ParametresAdmin';
 import VoirLesPreuvesAdmin from './pages/VoirLesPreuvesAdmin';
 import MovingBooking from './pages/MovingBooking';
 import MessageSuccess from './pages/MessageSuccess';
+import AboutUs from './pages/AboutUs';
+
 
 function App() {
   return (
@@ -54,6 +56,7 @@ function App() {
         <Route path="/service/:id" element={<MainLayout><ServiceDetails /></MainLayout>} />
         <Route path="/moving-booking" element={<MainLayout><MovingBooking /></MainLayout>} />
         <Route path="/message-success" element={<MainLayout><MessageSuccess /></MainLayout>} />
+        <Route path="/about-us" element={<MainLayout><AboutUs /></MainLayout>} />
         <Route path="/request-quote" element={<RequestQuote />} />
 
         {/* Private / Dashboard Routes - Rendered without MainLayout nav/footer */}

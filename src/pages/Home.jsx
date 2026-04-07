@@ -23,7 +23,7 @@ const Home = () => {
       <PopularServices />
 
       {/* Stats Section */}
-      <StatsSection />
+      {/* <StatsSection /> */}
 
       {/* How it works (Features renamed/reused) */}
       <section className="py-20 px-6 md:px-20 bg-slate-50 dark:bg-slate-900/50">

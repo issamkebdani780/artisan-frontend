@@ -2,12 +2,18 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const SERVICES = [
-  { id: 1, title: 'Montage', category: 'Montage', icon: 'handyman', desc: 'Meubles, étagères, luminaires...' },
-  { id: 2, title: 'Ménage', category: 'Nettoyage', icon: 'cleaning_services', desc: 'Nettoyage complet, vitres...' },
-  { id: 3, title: 'Plomberie', category: 'Plomberie et Réseaux', icon: 'plumbing', desc: 'Fuites, robinetterie, débouchage...' },
-  { id: 4, title: 'Électricité', category: 'Électricité et Énergie', icon: 'bolt', desc: 'Prises, tableaux, éclairage...' },
-  { id: 5, title: 'Peinture', category: 'Peinture et Plâtre', icon: 'format_paint', desc: 'Murs, plafonds, boiseries...' },
-  { id: 6, title: 'Déménagement', category: 'Déménagement et Transport', icon: 'local_shipping', desc: 'Transport, aide aux cartons...' },
+  { id: 1, title: 'Menuiserie et Bois', category: 'Menuiserie et Bois', icon: 'handyman', desc: 'Ebéniste, coffreur, charpentier, travaux de bois...' },
+  { id: 2, title: 'Ferronnerie et Soudure', category: 'Ferronnerie et Soudure', icon: 'precision_manufacturing', desc: 'Soudure arc et argon, ferronnerie d\'art, métallier...' },
+  { id: 3, title: 'Plomberie et Réseaux', category: 'Plomberie et Réseaux', icon: 'plumbing', desc: 'Sanitaire, chauffage central, fuites et débouchage...' },
+  { id: 4, title: 'Électricité et Énergie', category: 'Électricité et Énergie', icon: 'bolt', desc: 'Electricien bâtiment, industriel, solaire panneaux...' },
+  { id: 5, title: 'Peinture et Plâtre', category: 'Peinture et Plâtre', icon: 'format_paint', desc: 'Peintre décorateur, automobile, staff et enduit...' },
+  { id: 6, title: 'Maçonnerie et Finitions', category: 'Maçonnerie et Finitions', icon: 'foundation', desc: 'Maçon, carreleur, isolation, crépissage...' },
+  { id: 7, title: 'Mécanique et Machines', category: 'Mécanique et Machines', icon: 'settings', desc: 'Mécanicien auto et moto, maintenance industrielle...' },
+  { id: 8, title: 'Couture et Cuir', category: 'Couture et Cuir', icon: 'content_cut', desc: 'Tailleur, couturière, retouches, cordonnerie...' },
+  { id: 9, title: 'Verre et Miroiterie', category: 'Verre et Miroiterie', icon: 'window', desc: 'Menuisier aluminium, vitrier, miroitier...' },
+  { id: 10, title: 'Métiers Alimentaires', category: 'Métiers Alimentaires Artisanaux', icon: 'restaurant', desc: 'Boulanger, pâtissier, traiteur, apiculture...' },
+  { id: 11, title: 'Jardinage et Espaces Verts', category: 'Jardinage et Espaces Verts', icon: 'grass', desc: 'Paysagiste, entretien jardin, taille haies...' },
+  { id: 12, title: 'Déménagement et Transport', category: 'Déménagement et Transport', icon: 'local_shipping', desc: 'Transport, aide aux cartons, déchargement...' },
 ];
 
 const PopularServices = () => {
