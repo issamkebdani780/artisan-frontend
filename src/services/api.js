@@ -1,6 +1,4 @@
-const BASE_URL = window.location.hostname === 'bericolipro.linguaflo.me'
-  ? 'https://bericolipro.linguaflo.me/api'
-  : '/api';
+const BASE_URL = '/api';
 
 // Secure token management
 const TokenManager = {
