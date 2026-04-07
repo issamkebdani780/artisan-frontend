@@ -7,18 +7,22 @@ const ProfilArtisan = () => {
   const navigate = useNavigate();
   const [artisan, setArtisan] = useState(null);
   const [services, setServices] = useState([]);
+  const [reviews, setReviews] = useState([]);
   const [loading, setLoading] = useState(true);
+  const currentUser = apiService.getCurrentUser();
 
   useEffect(() => {
     window.scrollTo(0, 0);
     const fetchData = async () => {
       try {
-        const [artisanData, servicesData] = await Promise.all([
+        const [artisanData, servicesData, reviewsData] = await Promise.all([
           apiService.getArtisanById(id),
-          apiService.getArtisanServices(id)
+          apiService.getArtisanServices(id),
+          apiService.getArtisanReviews(id)
         ]);
         setArtisan(artisanData);
         setServices(servicesData);
+        setReviews(reviewsData);
       } catch (err) {
         console.error('Error fetching artisan details:', err);
       } finally {
@@ -45,12 +49,12 @@ const ProfilArtisan = () => {
         {/*  Banner Hero  */}
         <div className="relative mb-12">
           <div className="h-64 md:h-80 w-full rounded-3xl overflow-hidden bg-slate-200 dark:bg-slate-800 shadow-lg">
-            <div className="w-full h-full bg-cover bg-center" style={{backgroundImage: `url(${artisan.image || 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=2070&auto=format&fit=crop'})`}}></div>
+            <div className="w-full h-full bg-cover bg-center" style={{backgroundImage: `url(${artisan.profile_pic || 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=2070&auto=format&fit=crop'})`}}></div>
           </div>
           <div className="absolute -bottom-16 left-8 flex flex-col md:flex-row items-end md:items-center gap-6">
             <div className="relative">
               <div className="size-32 md:size-40 rounded-full border-4 border-white dark:border-background-dark overflow-hidden bg-white shadow-2xl">
-                <img src={artisan.image || 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop'} alt={artisan.name} className="w-full h-full object-cover" />
+                <img src={artisan.profile_pic || 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop'} alt={artisan.name} className="w-full h-full object-cover" />
               </div>
               <div className="absolute bottom-2 right-2 size-6 bg-green-500 rounded-full border-2 border-white dark:border-background-dark animate-pulse"></div>
             </div>
@@ -131,16 +135,41 @@ const ProfilArtisan = () => {
               </div>
             </section>
 
-            {/*  Reviews  */}
             <section>
               <h3 className="text-xl font-black mb-6 flex items-center gap-2">
                 <span className="material-symbols-outlined text-blue-600">reviews</span>
-                Avis Clients
+                Avis Clients ({reviews.length})
               </h3>
-              <div className="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm text-center">
-                 <span className="material-symbols-outlined text-slate-300 text-5xl mb-4">rate_review</span>
-                 <p className="text-slate-500 font-medium">Les avis pour cet artisan seront bientôt disponibles.</p>
-              </div>
+              {reviews.length === 0 ? (
+                <div className="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm text-center">
+                  <span className="material-symbols-outlined text-slate-300 text-5xl mb-4">rate_review</span>
+                  <p className="text-slate-500 font-medium">Aucun avis pour le moment.</p>
+                </div>
+              ) : (
+                <div className="space-y-4">
+                  {reviews.map(review => (
+                    <div key={review.id} className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+                      <div className="flex items-center gap-4 mb-3">
+                        <img
+                          src={review.client_pic || `https://ui-avatars.com/api/?name=${encodeURIComponent(review.client_name)}&background=random`}
+                          alt={review.client_name}
+                          className="w-10 h-10 rounded-full object-cover"
+                        />
+                        <div className="flex-1">
+                          <p className="font-black text-slate-900 text-sm">{review.client_name}</p>
+                          <p className="text-xs text-slate-400">{new Date(review.created_at).toLocaleDateString('fr-FR')}</p>
+                        </div>
+                        <div className="flex items-center gap-1">
+                          {[1,2,3,4,5].map(s => (
+                            <span key={s} className={`material-symbols-outlined text-base ${s <= review.rating ? 'text-yellow-400' : 'text-slate-200'}`} style={{fontVariationSettings:"'FILL' 1"}}>star</span>
+                          ))}
+                        </div>
+                      </div>
+                      {review.comment && <p className="text-sm text-slate-600 italic leading-relaxed">«&nbsp;{review.comment}&nbsp;»</p>}
+                    </div>
+                  ))}
+                </div>
+              )}
             </section>
           </div>
 
