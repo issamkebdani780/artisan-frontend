@@ -69,7 +69,16 @@ const ClientRegister = () => {
     if (clientForm.password.length < 8) { setError('Mot de passe trop court (8 caractères minimum)'); return; }
     setLoading(true);
     try {
-      const res = await apiService.register({ name: clientForm.name, email: clientForm.email, phone: clientForm.phone, password: clientForm.password, wilaya_id: clientForm.wilaya_id, commune_id: clientForm.commune_id, role: 'client' });
+      const formData = new FormData();
+      formData.append('name', clientForm.name);
+      formData.append('email', clientForm.email);
+      formData.append('phone', clientForm.phone);
+      formData.append('password', clientForm.password);
+      formData.append('wilaya_id', clientForm.wilaya_id);
+      formData.append('commune_id', clientForm.commune_id);
+      formData.append('role', 'client');
+
+      const res = await apiService.registerWithFiles(formData);
       if (res.userId) {
         // Auto-login after register
         await apiService.login({ email: clientForm.email, password: clientForm.password, role: 'client' });
