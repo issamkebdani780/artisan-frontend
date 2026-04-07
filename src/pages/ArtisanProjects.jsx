@@ -19,9 +19,12 @@ const ArtisanProjects = () => {
             apiService.getPendingDevis(user.specialty || 'Plomberie')
           ]);
           
+          const safeBookingData = Array.isArray(bookingData) ? bookingData : [];
+          const safeAssignedDevis = Array.isArray(assignedDevis) ? assignedDevis : [];
+
           const combined = [
-            ...bookingData.map(b => ({ ...b, type: 'booking' })),
-            ...assignedDevis.filter(d => d.artisan_id !== null).map(d => ({
+            ...safeBookingData.map(b => ({ ...b, type: 'booking' })),
+            ...safeAssignedDevis.filter(d => d.artisan_id !== null).map(d => ({
               id: `d-${d.id}`,
               service_title: d.category_name,
               client_name: d.client_name,

@@ -42,7 +42,7 @@ const FeaturedCraftsmen = () => {
         {craftsmen.map((craftsman) => (
           <div key={craftsman.id} className="group bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-slate-200 dark:border-slate-700 overflow-hidden hover:shadow-md transition-shadow">
             <div className="relative h-64 overflow-hidden">
-              <img alt={`Profile of ${craftsman.name}`} className="w-full h-full object-cover transition-transform group-hover:scale-105" src={craftsman.image} />
+              <img alt={`Profile of ${craftsman.name}`} className="w-full h-full object-cover transition-transform group-hover:scale-105" src={craftsman.image || 'https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=60'} />
               <div className="absolute top-3 right-3 bg-white/90 dark:bg-slate-900/90 backdrop-blur px-2 py-1 rounded text-primary font-bold text-sm flex items-center">
                 <span className="material-symbols-outlined text-xs fill-current mr-1">star</span> {Number(craftsman.rating || 0).toFixed(1)}
               </div>

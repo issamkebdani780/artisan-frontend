@@ -34,8 +34,8 @@ const FindExpert = () => {
         params.category = activeFilters.selectedCategories[0];
       }
 
-      const data = await apiService.getArtisans(params);
-      let results = Array.isArray(data) ? data : [];
+      const res = await apiService.getArtisans(params);
+      let results = res && Array.isArray(res.data) ? res.data : (Array.isArray(res) ? res : []);
 
       // Client-side filter for multi-category selection (if more than 1)
       if (activeFilters.selectedCategories.length > 1) {

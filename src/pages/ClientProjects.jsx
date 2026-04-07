@@ -28,10 +28,13 @@ const ClientProjects = () => {
             console.error('Failed to fetch devis:', err);
           }
 
-          // Combine bookings and devis
+          // Combine bookings and devis safely
+          const safeBookingData = Array.isArray(bookingData) ? bookingData : [];
+          const safeDevisData = Array.isArray(devisData) ? devisData : [];
+
           const combined = [
-            ...bookingData.map(b => ({ ...b, type: 'booking' })),
-            ...devisData.map(d => ({
+            ...safeBookingData.map(b => ({ ...b, type: 'booking' })),
+            ...safeDevisData.map(d => ({
               id: `d-${d.id}`,
               service_title: d.category_name,
               artisan_name: d.artisan_name || 'En attente d\'attribution',

@@ -8,7 +8,7 @@ const ExpertCard = ({ id, name, role, rating, reviews, location, availability, p
         <div className="flex items-start justify-between mb-4">
           <div className="relative">
             <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-primary/20 bg-slate-100">
-              <img src={image} alt={`Photo de profil ${role}`} className="w-full h-full object-cover" />
+              <img src={image || 'https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=60'} alt={`Photo de profil ${role}`} className="w-full h-full object-cover" />
             </div>
             {isVerified && (
               <div className="absolute -bottom-1 -right-1 bg-blue-600 text-white p-0.5 rounded-full border-2 border-white dark:border-slate-900">
