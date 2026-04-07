@@ -90,6 +90,7 @@ const ClientRegister = () => {
       setError(err.message || 'Une erreur est survenue. Vérifiez votre connexion.');
     } finally {
       setLoading(false);
+      
     }
   };
 
