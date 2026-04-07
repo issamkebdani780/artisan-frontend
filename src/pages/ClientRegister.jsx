@@ -266,20 +266,135 @@ const ClientRegister = () => {
                 </form>
               </div>
             ) : (
-              <div className="space-y-10 text-center py-10">
-                <div className="w-20 h-20 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="material-symbols-outlined text-blue-600 text-4xl">engineering</span>
-                </div>
+              <div className="space-y-10">
                 <div className="space-y-3">
-                  <h2 className="text-3xl font-black text-slate-900 tracking-tight">Devenir Partenaire Artisan</h2>
-                  <p className="text-slate-500 text-lg max-w-sm mx-auto">Prêt à propulser votre activité ? Créez votre profil professionnel complet.</p>
+                  <h2 className="text-4xl font-black text-slate-900 tracking-tight">Inscription Artisan</h2>
+                  <p className="text-slate-500 text-lg">Rejoignez notre réseau de professionnels qualifiés.</p>
                 </div>
-                <Link 
-                  to="/register/artisan" 
-                  className="inline-block px-10 py-5 bg-blue-600 text-white font-black text-sm uppercase tracking-widest rounded-2xl shadow-xl shadow-blue-200 hover:bg-blue-700 hover:-translate-y-0.5 transition-all duration-300"
-                >
-                  Ouvrir mon Atelier
-                </Link>
+                <form className="space-y-8" onSubmit={handleArtisanSubmit}>
+                  <div className="space-y-6">
+                    <div className="space-y-2">
+                      <label className="text-[11px] font-black uppercase tracking-widest text-slate-400 ml-1">Nom Complet</label>
+                      <div className="relative group">
+                        <span className="material-symbols-outlined absolute left-5 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-blue-600 transition-colors text-xl">person</span>
+                        <input name="name" type="text" value={artisanForm.name} onChange={handleArtisanChange} required placeholder="Rachid Mazouni" className="w-full pl-14 pr-6 py-5 bg-slate-50/50 rounded-2xl border border-transparent focus:border-blue-600/20 focus:ring-8 focus:ring-blue-600/5 focus:bg-white transition-all outline-none font-medium placeholder:text-slate-400" />
+                      </div>
+                    </div>
+
+                    <div className="space-y-4">
+                      <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-2 mb-2">
+                        <div>
+                          <label className="text-[11px] font-black uppercase tracking-widest text-slate-400 ml-1">Spécialité</label>
+                          <p className="text-slate-500 text-xs mt-1 ml-1">Choisissez votre métier principal.</p>
+                        </div>
+                        {artisanForm.specialty && (
+                          <span className="text-[10px] font-bold text-blue-600 uppercase tracking-widest bg-blue-50 px-2 py-1 rounded-lg border border-blue-100">Sélectionné</span>
+                        )}
+                      </div>
+
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-3 max-h-[300px] overflow-y-auto pr-2 custom-scrollbar p-1">
+                        {[
+                          { group: "Bâtiment", options: ["Plomberie", "Électricité", "Peinture", "Maçonnerie", "Menuiserie", "Déménagement"] },
+                          { group: "Extérieur", options: ["Jardinage", "Étanchéité", "Clôture", "Nettoyage façade"] },
+                          { group: "Autre", options: ["Mécanique", "Serrurerie", "Vitrerie", "Climatisation"] }
+                        ].map((group, idx) => (
+                          <div key={idx} className="space-y-2">
+                            <h4 className="text-[10px] font-black text-slate-400 uppercase tracking-wider">{group.group}</h4>
+                            <div className="flex flex-wrap gap-2">
+                              {group.options.map(option => {
+                                const isSelected = artisanForm.specialty === option;
+                                return (
+                                  <button
+                                    key={option}
+                                    type="button"
+                                    onClick={() => setArtisanForm({ ...artisanForm, specialty: option })}
+                                    className={`px-3 py-1.5 rounded-xl text-[11px] font-bold transition-all border-2 ${
+                                      isSelected 
+                                      ? 'bg-blue-600 border-blue-600 text-white shadow-lg shadow-blue-500/20' 
+                                      : 'bg-slate-50/50 border-transparent text-slate-600 hover:border-blue-600/30'
+                                    }`}
+                                  >
+                                    {option}
+                                  </button>
+                                );
+                              })}
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                    
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div className="space-y-2">
+                        <label className="text-[11px] font-black uppercase tracking-widest text-slate-400 ml-1">Email</label>
+                        <div className="relative group">
+                          <span className="material-symbols-outlined absolute left-5 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-blue-600 transition-colors text-xl">mail</span>
+                          <input name="email" type="email" value={artisanForm.email} onChange={handleArtisanChange} required placeholder="artisan@exemple.com" className="w-full pl-14 pr-6 py-5 bg-slate-50/50 rounded-2xl border border-transparent focus:border-blue-600/20 focus:ring-8 focus:ring-blue-600/5 focus:bg-white transition-all outline-none font-medium placeholder:text-slate-400" />
+                        </div>
+                      </div>
+                      <div className="space-y-2">
+                        <label className="text-[11px] font-black uppercase tracking-widest text-slate-400 ml-1">Téléphone</label>
+                        <div className="relative group">
+                          <span className="material-symbols-outlined absolute left-5 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-blue-600 transition-colors text-xl">call</span>
+                          <input name="phone" type="tel" value={artisanForm.phone} onChange={handleArtisanChange} placeholder="05 50 12 34 56" className="w-full pl-14 pr-6 py-5 bg-slate-50/50 rounded-2xl border border-transparent focus:border-blue-600/20 focus:ring-8 focus:ring-blue-600/5 focus:bg-white transition-all outline-none font-medium placeholder:text-slate-400" />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div className="space-y-2">
+                        <label className="text-[11px] font-black uppercase tracking-widest text-slate-400 ml-1">Wilaya</label>
+                        <div className="relative group">
+                          <span className="material-symbols-outlined absolute left-5 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-blue-600 transition-colors text-xl">location_on</span>
+                          <select name="wilaya_id" value={artisanForm.wilaya_id} onChange={handleArtisanWilayaChange} required className="w-full pl-14 pr-6 py-5 bg-slate-50/50 rounded-2xl border border-transparent focus:border-blue-600/20 focus:ring-8 focus:ring-blue-600/5 focus:bg-white transition-all outline-none font-medium">
+                            <option value="">Sélectionnez une wilaya</option>
+                            {wilayas.map(wilaya => (
+                              <option key={wilaya.id} value={wilaya.id}>{wilaya.name}</option>
+                            ))}
+                          </select>
+                        </div>
+                      </div>
+                      <div className="space-y-2">
+                        <label className="text-[11px] font-black uppercase tracking-widest text-slate-400 ml-1">Commune</label>
+                        <div className="relative group">
+                          <span className="material-symbols-outlined absolute left-5 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-blue-600 transition-colors text-xl">location_city</span>
+                          <select name="commune_id" value={artisanForm.commune_id} onChange={handleArtisanChange} required disabled={!artisanForm.wilaya_id} className="w-full pl-14 pr-6 py-5 bg-slate-50/50 rounded-2xl border border-transparent focus:border-blue-600/20 focus:ring-8 focus:ring-blue-600/5 focus:bg-white transition-all outline-none font-medium disabled:opacity-50">
+                            <option value="">Sélectionnez une commune</option>
+                            {communes.map(commune => (
+                              <option key={commune.id} value={commune.id}>{commune.name}</option>
+                            ))}
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div className="space-y-2">
+                        <label className="text-[11px] font-black uppercase tracking-widest text-slate-400 ml-1">Mot de passe</label>
+                        <div className="relative group">
+                          <span className="material-symbols-outlined absolute left-5 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-blue-600 transition-colors text-xl">lock</span>
+                          <input name="password" type="password" value={artisanForm.password} onChange={handleArtisanChange} required placeholder="••••••••" className="w-full pl-14 pr-6 py-5 bg-slate-50/50 rounded-2xl border border-transparent focus:border-blue-600/20 focus:ring-8 focus:ring-blue-600/5 focus:bg-white transition-all outline-none font-medium placeholder:text-slate-400" />
+                        </div>
+                      </div>
+                      <div className="space-y-2">
+                        <label className="text-[11px] font-black uppercase tracking-widest text-slate-400 ml-1">Confirmation</label>
+                        <div className="relative group">
+                          <span className="material-symbols-outlined absolute left-5 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-blue-600 transition-colors text-xl">verified_user</span>
+                          <input name="confirm" type="password" value={artisanForm.confirm} onChange={handleArtisanChange} required placeholder="••••••••" className="w-full pl-14 pr-6 py-5 bg-slate-50/50 rounded-2xl border border-transparent focus:border-blue-600/20 focus:ring-8 focus:ring-blue-600/5 focus:bg-white transition-all outline-none font-medium placeholder:text-slate-400" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="p-5 bg-blue-50/50 rounded-2xl space-y-2 border border-blue-100/50">
+                    <p className="text-[10px] font-black text-blue-600 uppercase tracking-widest">Informations</p>
+                    <p className="text-xs text-slate-500 font-medium leading-relaxed">Pour finaliser votre inscription et vérifier votre compte, vous devrez fournir vos documents justificatifs dans l'étape suivante sur votre tableau de bord.</p>
+                  </div>
+
+                  <button type="submit" disabled={loading} className="w-full py-5 bg-blue-600 text-white font-black text-sm uppercase tracking-widest rounded-2xl shadow-xl shadow-blue-200 hover:bg-blue-700 hover:-translate-y-0.5 active:scale-[0.98] transition-all duration-300 disabled:opacity-60 flex items-center justify-center gap-3">
+                    {loading ? <><span className="animate-spin h-5 w-5 border-4 border-white/30 border-t-white rounded-full"></span>Création...</> : "Créer mon Profil Pro"}
+                  </button>
+                </form>
               </div>
             )}
 

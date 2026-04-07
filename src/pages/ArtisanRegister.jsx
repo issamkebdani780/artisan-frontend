@@ -208,116 +208,84 @@ const ArtisanRegister = () => {
               </div>
 
               {/* Professional Fields */}
-              <div className="p-6 bg-orange-500/5 rounded-2xl border border-orange-500/20 space-y-5">
-                <div className="flex flex-col gap-2">
-                  <div className="flex items-center justify-between mb-1">
-                    <label className="text-[10px] font-black uppercase tracking-[0.15em] text-orange-500 ml-1">Catégorie Professionnelle</label>
-                    <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">(Ctrl/Cmd click pour plusieurs)</span>
+              <div className="p-8 bg-orange-500/5 rounded-3xl border border-orange-500/10 space-y-8">
+                <div className="flex flex-col gap-4">
+                  <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-2">
+                    <div>
+                      <label className="text-[10px] font-black uppercase tracking-[0.15em] text-orange-500 ml-1">Spécialités Professionnelles</label>
+                      <p className="text-slate-500 text-sm mt-1 ml-1">Sélectionnez tous les métiers que vous maîtrisez.</p>
+                    </div>
+                    <span className="text-[10px] font-bold text-orange-400 uppercase tracking-widest bg-orange-50 px-2 py-1 rounded-lg border border-orange-100">{form.specialty.length} sélectionnée(s)</span>
                   </div>
-                  <select multiple name="specialty" value={form.specialty} onChange={(e) => {
-                      const options = Array.from(e.target.selectedOptions, option => option.value);
-                      setForm({ ...form, specialty: options });
-                    }} required className="w-full h-32 p-3 rounded-xl bg-white border-2 border-orange-500/10 focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 font-semibold transition-all outline-none overflow-y-auto custom-scrollbar">
-                    <option value="" disabled>Sélectionnez votre(vos) spécialité(s)</option>
-                    
-                    <optgroup label="Menuiserie et Bois">
-                      <option>Menuisier ébéniste</option>
-                      <option>Menuisier de chantier (coffreur)</option>
-                      <option>Presseur de bois</option>
-                      <option>Décorateur bois intérieur</option>
-                      <option>Fabricant de portes et fenêtres en bois</option>
-                    </optgroup>
-
-                    <optgroup label="Ferronnerie et Soudure">
-                      <option>Ferronnier d’art</option>
-                      <option>Soudeur (arc et argon)</option>
-                      <option>Ferronnier métallier (portails et grilles)</option>
-                      <option>Chaudronnier industriel</option>
-                      <option>Soudeur carrosserie auto</option>
-                    </optgroup>
-
-                    <optgroup label="Plomberie et Réseaux">
-                      <option>Plombier sanitaire</option>
-                      <option>Plombier chauffage central</option>
-                      <option>Monteur de réseaux de gaz</option>
-                      <option>Installateur tuyauterie cuivre et PER</option>
-                      <option>Plombier maintenance eau</option>
-                    </optgroup>
-
-                    <optgroup label="Électricité et Énergie">
-                      <option>Électricien bâtiment</option>
-                      <option>Électricien industriel</option>
-                      <option>Technicien solaire photovoltaïque</option>
-                      <option>Tireur de câbles et filerie</option>
-                      <option>Réparateur tableaux électriques</option>
-                    </optgroup>
-
-                    <optgroup label="Peinture et Plâtre">
-                      <option>Peintre décorateur</option>
-                      <option>Peintre automobile</option>
-                      <option>Plâtrier staffeur</option>
-                      <option>Marbrier (ponçage et lustrage)</option>
-                      <option>Vernisseur sur bois</option>
-                    </optgroup>
-
-                    <optgroup label="Maçonnerie et Finitions">
-                      <option>Maçon (brique et ciment)</option>
-                      <option>Carreleur (faïence et marbre)</option>
-                      <option>Crépisseur (enduits traditionnels)</option>
-                      <option>Technicien isolation thermique et étanchéité</option>
-                      <option>Maçon rénovation</option>
-                    </optgroup>
-
-                    <optgroup label="Mécanique et Machines">
-                      <option>Mécanicien automobile</option>
-                      <option>Mécanicien moto</option>
-                      <option>Technicien moteurs électriques</option>
-                      <option>Réparateur groupes électrogènes et pompes</option>
-                      <option>Mécanicien agricole</option>
-                    </optgroup>
-
-                    <optgroup label="Couture et Cuir">
-                      <option>Tailleur homme</option>
-                      <option>Couturière sur mesure (femme)</option>
-                      <option>Rapiéceur retouche</option>
-                      <option>Cordonnier (chaussures cuir)</option>
-                      <option>Maroquinier (sellerie et petite maroquinerie)</option>
-                    </optgroup>
-
-                    <optgroup label="Verre et Miroiterie">
-                      <option>Menuisier aluminium et verre</option>
-                      <option>Verrier (coupe verre trempé)</option>
-                      <option>Miroitier (pose miroirs et décor verre)</option>
-                      <option>Vitrier automobile</option>
-                      <option>Souffleur de verre artisanal</option>
-                    </optgroup>
-
-                    <optgroup label="Métiers alimentaires artisanaux">
-                      <option>Boulanger traditionnel</option>
-                      <option>Pâtissier (oriental et viennoiserie)</option>
-                      <option>Fromager artisanal</option>
-                      <option>Apiculteur (miel et dérivés)</option>
-                      <option>Artisan conserveur (pickles et bocaux)</option>
-                    </optgroup>
-
-                    <optgroup label="Déménagement et Transport">
-                      <option>Déménageur professionnel</option>
-                      <option>Transporteur d'objets lourds</option>
-                      <option>Aide au déménagement (manutention)</option>
-                    </optgroup>
-
-                    <optgroup label="Jardinage et Espaces Verts">
-                      <option>Jardinier paysagiste</option>
-                      <option>Ouvrier en aménagement des espaces verts</option>
-                      <option>Technicien en entretien des jardins</option>
-                      <option>Technicien en irrigation goutte-à-goutte et arrosage</option>
-                      <option>Élagueur et tailleur d’arbres et palmiers</option>
-                    </optgroup>
-                  </select>
+                  
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-h-[400px] overflow-y-auto pr-2 custom-scrollbar p-1">
+                    {[
+                      {
+                        group: "Menuiserie",
+                        options: ["Menuisier ébéniste", "Menuisier de chantier", "Presseur de bois", "Décorateur bois", "Fabricant ouvertures bois"]
+                      },
+                      {
+                        group: "Soudure",
+                        options: ["Ferronnier d’art", "Soudeur arc/argon", "Chaudronnier", "Soudeur carrosserie"]
+                      },
+                      {
+                        group: "Plomberie",
+                        options: ["Plombier sanitaire", "Chauffage central", "Monteur gaz", "Tuyauterie cuivre/PER"]
+                      },
+                      {
+                        group: "Électricité",
+                        options: ["Électricien bâtiment", "Électricien industriel", "Technicien solaire", "Tireur de câbles"]
+                      },
+                      {
+                        group: "Peinture",
+                        options: ["Peintre décorateur", "Peintre automobile", "Plâtrier staffeur", "Marbrier", "Vernisseur"]
+                      },
+                      {
+                        group: "Maçonnerie",
+                        options: ["Maçon brique", "Carreleur", "Crépisseur", "Étanchéité", "Rénovation"]
+                      },
+                      {
+                        group: "Mécanique",
+                        options: ["Mécanicien auto", "Mécanicien moto", "Moteurs électriques", "Mécanicien agricole"]
+                      }
+                    ].map((group, idx) => (
+                      <div key={idx} className="space-y-3">
+                        <h4 className="text-[11px] font-black text-slate-800 uppercase tracking-wider flex items-center gap-2">
+                          <span className="w-1.5 h-1.5 rounded-full bg-orange-500"></span>
+                          {group.group}
+                        </h4>
+                        <div className="flex flex-wrap gap-2">
+                          {group.options.map(option => {
+                            const isSelected = form.specialty.includes(option);
+                            return (
+                              <button
+                                key={option}
+                                type="button"
+                                onClick={() => {
+                                  if (isSelected) {
+                                    setForm({ ...form, specialty: form.specialty.filter(s => s !== option) });
+                                  } else {
+                                    setForm({ ...form, specialty: [...form.specialty, option] });
+                                  }
+                                }}
+                                className={`px-4 py-2 rounded-xl text-xs font-bold transition-all border-2 ${
+                                  isSelected 
+                                  ? 'bg-orange-500 border-orange-500 text-white shadow-lg shadow-orange-500/20' 
+                                  : 'bg-white border-transparent text-slate-600 hover:border-orange-500/30 shadow-sm'
+                                }`}
+                              >
+                                {option}
+                              </button>
+                            );
+                          })}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
                 <div className="flex flex-col gap-2">
                   <label className="text-[10px] font-black uppercase tracking-[0.15em] text-orange-500 ml-1">Années d'Expérience</label>
-                  <input name="experience_years" type="number" min="0" value={form.experience_years} onChange={handleChange} placeholder="Ex: 10" className="w-full h-14 px-5 rounded-xl bg-white border-2 border-orange-500/10 focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 transition-all font-medium placeholder:text-slate-300 outline-none" />
+                  <input name="experience_years" type="number" min="0" value={form.experience_years} onChange={handleChange} placeholder="Ex: 10" className="w-full h-14 px-5 rounded-2xl bg-white border-none shadow-sm focus:ring-2 focus:ring-orange-500 transition-all font-medium placeholder:text-slate-300 outline-none" />
                 </div>
               </div>
 
@@ -365,7 +333,7 @@ const ArtisanRegister = () => {
               </div>
 
               {/* File Upload Section */}
-              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-2xl border-2 border-blue-200 space-y-5">
+              <div className="bg-linear-to-br from-blue-50 to-indigo-50 p-6 rounded-2xl border-2 border-blue-200 space-y-5">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="material-symbols-outlined text-blue-600" style={{ fontVariationSettings: "'FILL' 1" }}>cloud_upload</span>
                   <h4 className="text-[10px] font-black text-blue-700 uppercase tracking-[0.15em]">Documents Requis</h4>

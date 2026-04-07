@@ -9,6 +9,8 @@ const ArtisanLayout = ({ children, title = "Artisan PRO", subtitle = "Premium Pl
 
   const user = JSON.parse(localStorage.getItem('user'));
 
+  const [isSidebarOpen, setIsSidebarOpen] = React.useState(false);
+
   const handleLogout = () => {
     apiService.logout();
     navigate('/');
@@ -18,19 +20,27 @@ const ArtisanLayout = ({ children, title = "Artisan PRO", subtitle = "Premium Pl
     <div className="bg-[#f8f6f6] dark:bg-[#221610] font-sans text-slate-900 dark:text-slate-100 flex min-h-screen">
       
       {/* Sidebar Navigation */}
-      <aside className="w-72 bg-white dark:bg-stone-900 border-r border-secondary/10 flex flex-col justify-between shrink-0 h-screen sticky top-0">
+      <aside className={`
+        ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
+        fixed lg:sticky top-0 left-0 w-72 bg-white dark:bg-stone-900 border-r border-secondary/10 flex flex-col justify-between shrink-0 h-screen z-60 transition-transform duration-300
+      `}>
         <div className="flex flex-col gap-8 p-6">
-          <div className="flex items-center gap-3">
-            <div className="bg-secondary/10 p-2 rounded-xl">
-              <span className="material-symbols-outlined text-secondary text-3xl font-bold">handyman</span>
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <div className="bg-secondary/10 p-2 rounded-xl">
+                <span className="material-symbols-outlined text-secondary text-3xl font-bold">handyman</span>
+              </div>
+              <div className="flex flex-col">
+                <h1 className="text-xl font-black tracking-tight flex items-center gap-1">
+                  {title}
+                  <span className="material-symbols-outlined text-secondary text-sm" style={{ fontVariationSettings: "'FILL' 1" }}>verified</span>
+                </h1>
+                <p className="text-secondary text-xs font-bold uppercase tracking-widest">{subtitle}</p>
+              </div>
             </div>
-            <div className="flex flex-col">
-              <h1 className="text-xl font-black tracking-tight flex items-center gap-1">
-                {title}
-                <span className="material-symbols-outlined text-secondary text-sm" style={{ fontVariationSettings: "'FILL' 1" }}>verified</span>
-              </h1>
-              <p className="text-secondary text-xs font-bold uppercase tracking-widest">{subtitle}</p>
-            </div>
+            <button className="lg:hidden p-2 text-slate-400" onClick={() => setIsSidebarOpen(false)}>
+              <span className="material-symbols-outlined">close</span>
+            </button>
           </div>
           
           <nav className="flex flex-col gap-2 overflow-y-auto">
@@ -80,32 +90,43 @@ const ArtisanLayout = ({ children, title = "Artisan PRO", subtitle = "Premium Pl
         </div>
       </aside>
 
+      {/* Mobile Sidebar Overlay */}
+      {isSidebarOpen && (
+        <div 
+          className="fixed inset-0 bg-slate-900/40 backdrop-blur-sm z-50 lg:hidden"
+          onClick={() => setIsSidebarOpen(false)}
+        ></div>
+      )}
+
       {/* Main Content Area */}
-      <main className="flex-1 flex flex-col min-h-screen">
+      <main className="flex-1 flex flex-col min-w-0 min-h-screen">
         
         {/* Header */}
-        <header className="h-20 bg-white/80 dark:bg-stone-900/80 backdrop-blur-md border-b border-secondary/10 px-8 flex items-center justify-between sticky top-0 z-50 w-full shrink-0">
+        <header className="h-20 bg-white/80 dark:bg-stone-900/80 backdrop-blur-md border-b border-secondary/10 px-4 md:px-8 flex items-center justify-between sticky top-0 z-50 w-full shrink-0">
           <div className="flex items-center gap-4 flex-1">
-            <div className="relative w-96">
+            <button className="lg:hidden p-2 text-slate-600 dark:text-stone-300" onClick={() => setIsSidebarOpen(true)}>
+              <span className="material-symbols-outlined">menu</span>
+            </button>
+            <div className="relative w-96 hidden md:block">
               <span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
-              <input type="text" placeholder="Rechercher projets, clients..." className="w-full pl-10 pr-4 py-2 bg-[#f8f6f6] dark:bg-stone-800 border-none rounded-xl focus:ring-2 focus:ring-secondary outline-none transition-all" />
+              <input type="text" placeholder="Rechercher projets, clients..." className="w-full pl-10 pr-4 py-2 bg-[#f8f6f6] dark:bg-stone-800 border-none rounded-xl focus:ring-2 focus:ring-secondary outline-none transition-all text-sm" />
             </div>
           </div>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2 md:gap-4">
             <button className="p-2 rounded-xl bg-[#f8f6f6] dark:bg-stone-800 relative hover:bg-secondary/10 transition-colors">
-              <span className="material-symbols-outlined text-slate-600 dark:text-stone-300">notifications</span>
+              <span className="material-symbols-outlined text-slate-600 dark:text-stone-300 text-xl">notifications</span>
               <span className="absolute top-2 right-2.5 w-2 h-2 bg-secondary rounded-full border-2 border-white dark:border-stone-800"></span>
             </button>
-            <button className="p-2 rounded-xl bg-[#f8f6f6] dark:bg-stone-800 hover:bg-secondary/10 transition-colors">
-              <span className="material-symbols-outlined text-slate-600 dark:text-stone-300">chat_bubble</span>
+            <button className="p-2 rounded-xl bg-[#f8f6f6] dark:bg-stone-800 hover:bg-secondary/10 transition-colors hidden sm:block">
+              <span className="material-symbols-outlined text-slate-600 dark:text-stone-300 text-xl">chat_bubble</span>
             </button>
-            <div className="h-8 w-px bg-secondary/20 mx-2"></div>
-            <div className="flex items-center gap-3">
+            <div className="h-8 w-px bg-secondary/20 mx-1 md:mx-2"></div>
+            <div className="flex items-center gap-2 md:gap-3">
               <div className="text-right hidden sm:block">
-                <p className="text-sm font-bold">{user?.name || 'Artisan'}</p>
-                <p className="text-xs text-secondary font-medium">{user?.specialty || 'Expert'}</p>
+                <p className="text-sm font-bold truncate max-w-[120px]">{user?.name || 'Artisan'}</p>
+                <p className="text-xs text-secondary font-medium truncate max-w-[120px]">{user?.specialty || 'Expert'}</p>
               </div>
-              <div className="w-10 h-10 rounded-full bg-secondary/20 border-2 border-secondary overflow-hidden">
+              <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-secondary/20 border-2 border-secondary overflow-hidden shrink-0">
                 <img src={user?.profile_pic || "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=60"} alt="Profile" className="w-full h-full object-cover" />
               </div>
             </div>

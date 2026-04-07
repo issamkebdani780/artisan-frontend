@@ -44,7 +44,7 @@ const Hero = () => {
               />
             </div>
             <button 
-              className="bg-primary text-white font-bold px-8 py-3 rounded-lg hover:bg-primary/90 transition-all"
+              className="w-full md:w-auto bg-primary text-white font-bold px-8 py-3 rounded-lg hover:bg-primary/90 transition-all"
               onClick={handleSearch}
             >
               Rechercher
