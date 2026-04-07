@@ -5,5 +5,14 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), tailwindcss(),],
+  plugins: [react(), tailwindcss()],
+  server: {
+    proxy: {
+      '/api': {
+        target: 'https://bericolipro.linguaflo.me',
+        changeOrigin: true,
+        secure: false, // In case of SSL certificate issues during development
+      }
+    }
+  }
 })
