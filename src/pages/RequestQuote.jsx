@@ -58,6 +58,25 @@ const RequestQuote = () => {
       }
     };
     fetchWilayas();
+
+    // Fill user info automatically if logged in
+    const user = JSON.parse(localStorage.getItem('user'));
+    if (user) {
+      setFormData(prev => ({
+        ...prev,
+        phone: user.phone || '',
+        address: user.address || '',
+        wilaya_id: user.wilaya_id || '',
+        commune_id: user.commune_id || ''
+      }));
+
+      // If user has a wilaya, fetch its communes
+      if (user.wilaya_id) {
+        apiService.getCommunes(user.wilaya_id)
+          .then(data => setCommunes(data))
+          .catch(err => console.error('Error fetching prefilled communes:', err));
+      }
+    }
   }, []);
 
   // Handle wilaya change
@@ -105,6 +124,18 @@ const RequestQuote = () => {
       alert('Veuillez vous connecter pour faire une demande');
       navigate('/login/client');
       return;
+    }
+
+    // Date validation
+    if (formData.date) {
+      const selectedDate = new Date(formData.date);
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+      if (selectedDate < today) {
+        alert('La date d\'intervention ne peut pas être dans le passé');
+        setLoading(false);
+        return;
+      }
     }
 
     setLoading(true);
@@ -189,8 +220,8 @@ const RequestQuote = () => {
           {/* Main Form Section */}
           <div className="flex-1 space-y-8">
             <section>
-              <h1 className="text-3xl font-black mb-2 text-slate-900">Parlez-nous de votre projet</h1>
-              <p className="text-slate-500 text-lg">Remplissez ce formulaire pour recevoir un devis personnalisé.</p>
+              <h1 className="text-3xl font-black mb-2 text-slate-900 dark:text-white">Parlez-nous de votre projet</h1>
+              <p className="text-slate-500 dark:text-slate-400 text-lg">Remplissez ce formulaire pour recevoir un devis personnalisé.</p>
               
               {searchParams.get('artisanName') && (
                 <div className="mt-6 p-4 bg-blue-50 border-l-4 border-blue-600 rounded-r-xl flex items-center gap-3">
@@ -206,10 +237,10 @@ const RequestQuote = () => {
               
               {/* Project Details */}
               <div className="space-y-6">
-                <h3 className="text-lg font-bold border-b border-slate-100 dark:border-slate-800 pb-2">1. Détails du projet</h3>
+                <h3 className="text-lg font-bold border-b border-slate-100 dark:border-slate-800 pb-2 text-slate-900 dark:text-white">1. Détails du projet</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <label className="flex flex-col gap-2">
-                    <span className="text-sm font-semibold">Titre du projet</span>
+                    <span className="text-sm font-semibold text-slate-700 dark:text-slate-300">Titre du projet</span>
                     <input 
                       type="text" 
                       required
@@ -220,7 +251,7 @@ const RequestQuote = () => {
                     />
                   </label>
                   <label className="flex flex-col gap-2">
-                    <span className="text-sm font-semibold">Catégorie</span>
+                    <span className="text-sm font-semibold text-slate-700 dark:text-slate-300">Catégorie</span>
                     <select 
                       className="px-4 rounded-xl border-2 border-slate-100 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:border-blue-600 focus:bg-white dark:focus:bg-slate-800 outline-none h-14 transition-all"
                       value={formData.category_id}
@@ -252,7 +283,7 @@ const RequestQuote = () => {
                     </select>
                   </label>
                   <label className="flex flex-col gap-2 md:col-span-2">
-                    <span className="text-sm font-semibold">Numéro de téléphone</span>
+                    <span className="text-sm font-semibold text-slate-700 dark:text-slate-300">Numéro de téléphone</span>
                     <div className="relative">
                       <span className="absolute inset-y-0 left-4 flex items-center text-slate-400">
                         <span className="material-symbols-outlined">call</span>
@@ -272,9 +303,9 @@ const RequestQuote = () => {
 
               {/* Description Section */}
               <div className="space-y-6">
-                <h3 className="text-lg font-bold border-b border-slate-100 dark:border-slate-800 pb-2">2. Description détaillée</h3>
+                <h3 className="text-lg font-bold border-b border-slate-100 dark:border-slate-800 pb-2 text-slate-900 dark:text-white">2. Description détaillée</h3>
                 <label className="flex flex-col gap-2">
-                  <span className="text-sm font-semibold">Décrivez votre besoin</span>
+                  <span className="text-sm font-semibold text-slate-700 dark:text-slate-300">Décrivez votre besoin</span>
                   <textarea 
                     rows="4" 
                     required
@@ -288,10 +319,10 @@ const RequestQuote = () => {
 
               {/* Location */}
               <div className="space-y-6">
-                <h3 className="text-lg font-bold border-b border-slate-100 dark:border-slate-800 pb-2">3. Localisation</h3>
+                <h3 className="text-lg font-bold border-b border-slate-100 dark:border-slate-800 pb-2 text-slate-900 dark:text-white">3. Localisation</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <label className="flex flex-col gap-2">
-                    <span className="text-sm font-semibold">Wilaya</span>
+                    <span className="text-sm font-semibold text-slate-700 dark:text-slate-300">Wilaya</span>
                     <select 
                       required
                       className="w-full px-4 rounded-xl border-2 border-slate-100 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:border-blue-600 focus:bg-white dark:focus:bg-slate-800 outline-none h-14 transition-all"
@@ -305,7 +336,7 @@ const RequestQuote = () => {
                     </select>
                   </label>
                   <label className="flex flex-col gap-2">
-                    <span className="text-sm font-semibold">Commune</span>
+                    <span className="text-sm font-semibold text-slate-700 dark:text-slate-300">Commune</span>
                     <select 
                       required
                       disabled={!formData.wilaya_id}
@@ -320,7 +351,7 @@ const RequestQuote = () => {
                     </select>
                   </label>
                   <label className="flex flex-col gap-2 md:col-span-2">
-                    <span className="text-sm font-semibold">Adresse détaillée</span>
+                    <span className="text-sm font-semibold text-slate-700 dark:text-slate-300">Adresse détaillée</span>
                     <div className="relative">
                       <span className="absolute inset-y-0 left-4 flex items-center text-slate-400">
                         <span className="material-symbols-outlined">location_on</span>
@@ -340,10 +371,10 @@ const RequestQuote = () => {
 
               {/* Budget & Timing */}
               <div className="space-y-6">
-                <h3 className="text-lg font-bold border-b border-slate-100 dark:border-slate-800 pb-2">4. Budget et Délai</h3>
+                <h3 className="text-lg font-bold border-b border-slate-100 dark:border-slate-800 pb-2 text-slate-900 dark:text-white">4. Budget et Délai</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <label className="flex flex-col gap-2">
-                    <span className="text-sm font-semibold">Budget estimé (DA)</span>
+                    <span className="text-sm font-semibold text-slate-700 dark:text-slate-300">Budget estimé (DA)</span>
                     <input 
                       type="number" 
                       required
@@ -358,6 +389,7 @@ const RequestQuote = () => {
                     <input 
                       type="date" 
                       required
+                      min={new Date().toISOString().split('T')[0]}
                       className="px-4 rounded-xl border-2 border-slate-100 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:border-blue-600 outline-none h-14 transition-all" 
                       value={formData.date}
                       onChange={(e) => setFormData({...formData, date: e.target.value})}

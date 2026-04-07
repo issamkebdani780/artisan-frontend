@@ -52,13 +52,13 @@ const TokenManager = {
   }
 };
 
-const getAuthHeaders = () => {
+const getAuthHeaders = (isFormData = false) => {
   const token = TokenManager.getToken();
   if (!token) {
     TokenManager.clearToken();
   }
   return {
-    'Content-Type': 'application/json',
+    ...(isFormData ? {} : { 'Content-Type': 'application/json' }),
     ...(token ? { 'Authorization': `Bearer ${token}` } : {}),
   };
 };
@@ -159,6 +159,11 @@ const apiService = {
     const res = await fetch(`${BASE_URL}/artisans/featured`);
     return handleResponse(res);
   },
+  
+  getStats: async () => {
+    const res = await fetch(`${BASE_URL}/public/stats`);
+    return handleResponse(res);
+  },
 
   getArtisanDashboardStats: async (id) => {
     const res = await fetch(`${BASE_URL}/artisans/${id}/dashboard-stats`, {
@@ -221,19 +226,21 @@ const apiService = {
   },
 
   createService: async (serviceData) => {
+    const isFormData = serviceData instanceof FormData;
     const res = await fetch(`${BASE_URL}/services`, {
       method: 'POST',
-      headers: getAuthHeaders(),
-      body: JSON.stringify(serviceData),
+      headers: getAuthHeaders(isFormData),
+      body: isFormData ? serviceData : JSON.stringify(serviceData),
     });
     return handleResponse(res);
   },
 
   updateService: async (serviceId, serviceData) => {
+    const isFormData = serviceData instanceof FormData;
     const res = await fetch(`${BASE_URL}/services/${serviceId}`, {
       method: 'PUT',
-      headers: getAuthHeaders(),
-      body: JSON.stringify(serviceData),
+      headers: getAuthHeaders(isFormData),
+      body: isFormData ? serviceData : JSON.stringify(serviceData),
     });
     return handleResponse(res);
   },
@@ -356,11 +363,19 @@ const apiService = {
   },
 
   // ─── PROFILE ───────────────────────────────────────────────────────────────
-  updateProfile: async (userId, profileData) => {
-    const res = await fetch(`${BASE_URL}/users/${userId}`, {
+  updateProfile: async (id, data) => {
+    const res = await fetch(`${BASE_URL}/users/${id}`, {
       method: 'PUT',
       headers: getAuthHeaders(),
-      body: JSON.stringify(profileData),
+      body: JSON.stringify(data),
+    });
+    return handleResponse(res);
+  },
+
+  deleteAccount: async (id) => {
+    const res = await fetch(`${BASE_URL}/users/${id}`, {
+      method: 'DELETE',
+      headers: getAuthHeaders(),
     });
     return handleResponse(res);
   },

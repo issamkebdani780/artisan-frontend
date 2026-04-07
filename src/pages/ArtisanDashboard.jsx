@@ -66,7 +66,8 @@ const ArtisanDashboard = () => {
         const devisId = item.id.toString().replace('d-', '');
         let statusToUpdate = newStatus;
         if (newStatus === 'confirmed') statusToUpdate = 'accepté';
-        if (newStatus === 'cancelled') statusToUpdate = 'refusé';
+        if (newStatus === 'completed') statusToUpdate = 'terminé';
+        if (newStatus === 'cancelled') statusToUpdate = 'annulé';
         
         await apiService.updateDevisStatus(devisId, statusToUpdate);
         // Update state instead of reloading
@@ -109,7 +110,7 @@ const ArtisanDashboard = () => {
         {/* Welcome Section */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
           <div>
-            <h2 className="text-3xl font-black tracking-tight text-slate-900">Bonjour, {user?.name || 'Artisan'} 👋</h2>
+            <h2 className="text-3xl font-black tracking-tight text-slate-900 dark:text-white">Bonjour, {user?.name || 'Artisan'} 👋</h2>
             <p className="text-slate-500 mt-1">Vous avez <span className="text-secondary font-bold">{activeProjects}</span> projets en cours aujourd'hui.</p>
           </div>
           <div className="flex gap-3">
@@ -125,25 +126,25 @@ const ArtisanDashboard = () => {
 
         {/* New Opportunities (Devis Broadcast) */}
         {pendingDevis.length > 0 && (
-          <section className="bg-linear-to-r from-orange-50 to-orange-100 rounded-3xl p-8 border border-secondary/20">
+          <section className="bg-linear-to-r from-orange-50 to-orange-100 dark:from-orange-950/20 dark:to-orange-900/40 rounded-3xl p-8 border border-secondary/20">
             <div className="flex items-center gap-3 mb-6">
               <span className="relative flex h-3 w-3">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-3 w-3 bg-secondary"></span>
               </span>
-              <h3 className="text-xl font-black text-orange-900">Opportunités à saisir ({pendingDevis.length})</h3>
+              <h3 className="text-xl font-black text-orange-900 dark:text-orange-400">Opportunités à saisir ({pendingDevis.length})</h3>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {pendingDevis.map(devis => (
-                <div key={devis.id} className="bg-white p-6 rounded-2xl shadow-sm border border-secondary/20/50 space-y-4">
+                <div key={devis.id} className="bg-white dark:bg-stone-800 p-6 rounded-2xl shadow-sm border border-secondary/20/50 space-y-4">
                   <div className="flex justify-between items-start">
                     <div>
-                      <span className="px-3 py-1 bg-secondary/10 text-secondary rounded-full text-[10px] font-black uppercase">{devis.category_name}</span>
-                      <h4 className="mt-2 font-black text-slate-900 line-clamp-1">{devis.client_name} propose un projet</h4>
+                      <span className="px-3 py-1 bg-secondary/10 dark:bg-secondary/20 text-secondary rounded-full text-[10px] font-black uppercase">{devis.category_name}</span>
+                      <h4 className="mt-2 font-black text-slate-900 dark:text-white line-clamp-1">{devis.client_name} propose un projet</h4>
                     </div>
                     <span className="text-sm font-black text-secondary">{devis.budget} DA</span>
                   </div>
-                  <p className="text-sm text-slate-600 line-clamp-2 italic">"{devis.description}"</p>
+                  <p className="text-sm text-slate-600 dark:text-slate-300 whitespace-pre-line italic">"{devis.description}"</p>
                   <div className="flex items-center justify-between pt-2">
                     <span className="text-xs text-slate-400 font-bold flex items-center gap-1">
                       <span className="material-symbols-outlined text-xs">calendar_today</span>
@@ -165,30 +166,30 @@ const ArtisanDashboard = () => {
 
         {/* Stats Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div className="bg-white p-6 rounded-2xl border border-orange-500/10 shadow-sm relative overflow-hidden group">
+          <div className="bg-white dark:bg-stone-900 p-6 rounded-2xl border border-orange-500/10 dark:border-stone-800 shadow-sm relative overflow-hidden group">
             <div className="absolute -right-4 -top-4 w-24 h-24 bg-secondary/5 rounded-full group-hover:scale-150 transition-transform duration-500"></div>
-            <p className="text-slate-500 text-sm font-semibold relative z-10">Revenus Totaux</p>
-            <h3 className="text-3xl font-black mt-2 relative z-10 text-slate-900">{(stats.totalRevenue || 0).toLocaleString()} DA</h3>
+            <p className="text-slate-500 dark:text-slate-400 text-sm font-semibold relative z-10">Revenus Totaux</p>
+            <h3 className="text-3xl font-black mt-2 relative z-10 text-slate-900 dark:text-white">{(stats.totalRevenue || 0).toLocaleString()} DA</h3>
             <div className="flex items-center gap-1 mt-4 text-emerald-500 font-bold text-sm relative z-10">
               <span className="material-symbols-outlined text-sm">payments</span>
               <span>Paiements cumulés</span>
             </div>
           </div>
           
-          <div className="bg-white p-6 rounded-2xl border border-orange-500/10 shadow-sm relative overflow-hidden group">
+          <div className="bg-white dark:bg-stone-900 p-6 rounded-2xl border border-orange-500/10 dark:border-stone-800 shadow-sm relative overflow-hidden group">
             <div className="absolute -right-4 -top-4 w-24 h-24 bg-secondary/5 rounded-full group-hover:scale-150 transition-transform duration-500"></div>
-            <p className="text-slate-500 text-sm font-semibold relative z-10">Projets Actifs</p>
-            <h3 className="text-3xl font-black mt-2 relative z-10 text-slate-900">{(stats.activeBookings || 0) + (stats.pendingDevis || 0)}</h3>
+            <p className="text-slate-500 dark:text-slate-400 text-sm font-semibold relative z-10">Projets Actifs</p>
+            <h3 className="text-3xl font-black mt-2 relative z-10 text-slate-900 dark:text-white">{(stats.activeBookings || 0) + (stats.pendingDevis || 0)}</h3>
             <div className="flex items-center gap-1 mt-4 text-orange-500 font-bold text-sm relative z-10">
               <span className="material-symbols-outlined text-sm">pending_actions</span>
               <span>À traiter</span>
             </div>
           </div>
           
-          <div className="bg-white p-6 rounded-2xl border border-orange-500/10 shadow-sm relative overflow-hidden group">
+          <div className="bg-white dark:bg-stone-900 p-6 rounded-2xl border border-orange-500/10 dark:border-stone-800 shadow-sm relative overflow-hidden group">
             <div className="absolute -right-4 -top-4 w-24 h-24 bg-secondary/5 rounded-full group-hover:scale-150 transition-transform duration-500"></div>
-            <p className="text-slate-500 text-sm font-semibold relative z-10">Avis Clients</p>
-            <h3 className="text-3xl font-black mt-2 relative z-10 text-slate-900">{stats.rating || '0.0'}/5</h3>
+            <p className="text-slate-500 dark:text-slate-400 text-sm font-semibold relative z-10">Avis Clients</p>
+            <h3 className="text-3xl font-black mt-2 relative z-10 text-slate-900 dark:text-white">{stats.rating || '0.0'}/5</h3>
             <div className="flex items-center gap-1 mt-4 text-yellow-500 font-bold text-sm relative z-10">
               <span className="material-symbols-outlined text-sm" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
               <span>{stats.reviewCount || 0} avis</span>
@@ -207,23 +208,23 @@ const ArtisanDashboard = () => {
         </div>
 
         {/* Recent Projects List */}
-        <div className="bg-white rounded-2xl border border-orange-500/10 shadow-sm overflow-hidden min-h-[400px]">
-          <div className="p-6 border-b border-slate-100 flex justify-between items-center bg-slate-50/50">
-            <h4 className="text-xl font-black text-slate-800">Réservations Récentes</h4>
+        <div className="bg-white dark:bg-stone-900 rounded-2xl border border-orange-500/10 dark:border-stone-800 shadow-sm overflow-hidden min-h-[400px]">
+          <div className="p-6 border-b border-slate-100 dark:border-stone-800 flex justify-between items-center bg-slate-50/50 dark:bg-stone-900/50">
+            <h4 className="text-xl font-black text-slate-800 dark:text-white">Réservations Récentes</h4>
             <button className="text-orange-500 font-bold text-sm hover:underline" onClick={() => window.location.reload()}>Actualiser</button>
           </div>
           <div className="overflow-x-auto">
             <table className="w-full text-left border-collapse">
-              <thead className="bg-[#f8f6f6] border-b border-slate-200">
+              <thead className="bg-[#f8f6f6] dark:bg-stone-800/50 border-b border-slate-200 dark:border-stone-800">
                 <tr>
-                  <th className="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">Service / Client</th>
-                  <th className="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">Date</th>
-                  <th className="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">Statut</th>
-                  <th className="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider text-right">Montant</th>
-                  <th className="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider text-center">Actions</th>
+                  <th className="px-6 py-4 text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Service / Client</th>
+                  <th className="px-6 py-4 text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Date</th>
+                  <th className="px-6 py-4 text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Statut</th>
+                  <th className="px-6 py-4 text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider text-right">Montant</th>
+                  <th className="px-6 py-4 text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider text-center">Actions</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-slate-100">
+              <tbody className="divide-y divide-slate-100 dark:divide-stone-800">
                 {loading ? (
                   <tr>
                     <td colSpan="5" className="px-6 py-12 text-center text-slate-400">
@@ -241,17 +242,17 @@ const ArtisanDashboard = () => {
                   </tr>
                 ) : (
                   bookings.map((booking) => (
-                    <tr key={booking.id} className="hover:bg-slate-50 transition-colors group">
+                    <tr key={booking.id} className="hover:bg-slate-50 dark:hover:bg-stone-800 transition-colors group">
                       <td className="px-6 py-4">
                         <div className="flex flex-col">
-                          <span className="font-bold text-slate-900 capitalize">{booking.service_title}</span>
-                          <span className="text-xs text-slate-500 flex items-center gap-1 mt-1">
+                          <span className="font-bold text-slate-900 dark:text-white capitalize">{booking.service_title}</span>
+                          <span className="text-xs text-slate-500 dark:text-slate-400 flex items-center gap-1 mt-1">
                             <span className="material-symbols-outlined text-xs">person</span>
                             {booking.client_name} {booking.client_phone ? `• ${booking.client_phone}` : ''}
                           </span>
                         </div>
                       </td>
-                      <td className="px-6 py-4 text-sm text-slate-600 font-medium">
+                      <td className="px-6 py-4 text-sm text-slate-600 dark:text-slate-300 font-medium">
                         {new Date(booking.booking_date).toLocaleDateString('fr-FR', {
                           day: 'numeric',
                           month: 'short',
@@ -261,14 +262,14 @@ const ArtisanDashboard = () => {
                       <td className="px-6 py-4">
                         <span className={`px-3 py-1 text-[10px] font-bold rounded-full shadow-sm uppercase ${
                           booking.status === 'confirmed' || booking.status === 'accepté' ? 'bg-blue-100 text-blue-600' :
-                          booking.status === 'completed' ? 'bg-emerald-100 text-emerald-600' :
-                          booking.status === 'cancelled' || booking.status === 'refusé' ? 'bg-red-100 text-red-600' :
+                          booking.status === 'completed' || booking.status === 'terminé' ? 'bg-emerald-100 text-emerald-600' :
+                          booking.status === 'cancelled' || booking.status === 'refusé' || booking.status === 'annulé' ? 'bg-red-100 text-red-600' :
                           'bg-secondary/10 text-secondary'
                         }`}>
                           {booking.status}
                         </span>
                       </td>
-                      <td className="px-6 py-4 text-right font-black text-slate-900">{booking.total_price} DA</td>
+                      <td className="px-6 py-4 text-right font-black text-slate-900 dark:text-white">{booking.total_price} DA</td>
                       <td className="px-6 py-4 text-center">
                         <div className="flex items-center justify-center gap-2">
                           {(booking.status === 'pending' || booking.status === 'en attente') && (

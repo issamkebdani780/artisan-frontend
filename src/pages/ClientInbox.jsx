@@ -59,7 +59,7 @@ const ClientInbox = () => {
         alert('⭐ Merci pour votre avis !');
       }
     } catch (err) {
-      alert('Erreur lors de l\'envoi.');
+      alert(`Erreur lors de l'envoi: ${err.message}`);
     } finally {
       setReviewSubmitting(false);
     }

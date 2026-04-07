@@ -12,11 +12,14 @@ const FindExpert = () => {
   const [searchTerm, setSearchTerm] = useState(searchParams.get('specialty') || '');
   const [location, setLocation] = useState(searchParams.get('location') || '');
 
-  const [filters, setFilters] = useState({
-    selectedCategories: [],
-    minRating: null,
-    maxPrice: 1000,
-    availableNow: false,
+  const [filters, setFilters] = useState(() => {
+    const cat = searchParams.get('category');
+    return {
+      selectedCategories: cat ? [cat] : [],
+      minRating: null,
+      maxPrice: 10000,
+      availableNow: false,
+    };
   });
 
   const fetchExperts = useCallback(async (specialty, loc, activeFilters) => {
@@ -26,7 +29,9 @@ const FindExpert = () => {
       if (specialty) params.specialty = specialty;
       if (loc) params.location = loc;
       if (activeFilters.minRating) params.minRating = activeFilters.minRating;
-      if (activeFilters.maxPrice) params.maxPrice = activeFilters.maxPrice;
+      
+      // Only send maxPrice if it's not the maximum (10000 = unlimited)
+      if (activeFilters.maxPrice < 10000) params.maxPrice = activeFilters.maxPrice;
       if (activeFilters.availableNow) params.availableOnly = 1;
 
       // If only one category, send it to backend for better performance
@@ -82,6 +87,15 @@ const FindExpert = () => {
 
   const handleFiltersChange = (newFilters) => {
     setFilters(newFilters);
+    
+    // Update URL if category filter changed
+    const newParams = new URLSearchParams(searchParams);
+    if (newFilters.selectedCategories.length === 1) {
+      newParams.set('category', newFilters.selectedCategories[0]);
+    } else {
+      newParams.delete('category');
+    }
+    setSearchParams(newParams);
   };
 
   return (
@@ -165,7 +179,7 @@ const FindExpert = () => {
                 <h3 className="text-xl font-bold text-slate-900 dark:text-white">Aucun artisan trouvé</h3>
                 <p className="text-slate-500 max-w-sm">Essayez d'ajuster vos filtres ou votre recherche.</p>
                 <button
-                  onClick={() => { setFilters({ selectedCategories: [], minRating: null, maxPrice: 1000, availableNow: false }); setSearchTerm(''); setLocation(''); }}
+                  onClick={() => { setFilters({ selectedCategories: [], minRating: null, maxPrice: 10000, availableNow: false }); setSearchTerm(''); setLocation(''); }}
                   className="text-blue-600 font-bold hover:underline mt-2"
                 >
                   Réinitialiser la recherche

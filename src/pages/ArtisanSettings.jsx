@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import ArtisanLayout from '../layouts/ArtisanLayout';
 import apiService from '../services/api';
 
 const ArtisanSettings = () => {
+  const navigate = useNavigate();
   const user = JSON.parse(localStorage.getItem('user'));
   const [form, setForm] = useState({
     name: user?.name || '',
@@ -67,10 +69,19 @@ const ArtisanSettings = () => {
     }
   };
 
-  const handleDeleteAccount = () => {
-    if (window.confirm('Êtes-vous certain de vouloir supprimer votre compte ? Cette action est irréversible.')) {
-      alert('Action simulée : Votre compte a été marqué pour suppression.');
-      // Logic for actual deletion would go here
+  const handleDeleteAccount = async () => {
+    if (window.confirm('🚨 Êtes-vous certain de vouloir supprimer votre compte définitivement ? Toutes vos données (services, projets, avis) seront perdues.')) {
+      setLoading(true);
+      try {
+        await apiService.deleteAccount(user.id);
+        alert('Votre compte a été supprimé avec succès.');
+        localStorage.clear();
+        navigate('/register/artisan');
+      } catch (err) {
+        alert('Erreur lors de la suppression du compte.');
+      } finally {
+        setLoading(false);
+      }
     }
   };
 
@@ -106,18 +117,18 @@ const ArtisanSettings = () => {
 
                 <div className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
                   <div className="flex flex-col gap-1.5">
-                    <label className="text-xs font-bold uppercase tracking-wider text-slate-400">Nom complet</label>
-                    <input name="name" value={form.name} onChange={handleChange} type="text" className="w-full rounded-lg border border-slate-200 bg-slate-50 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none px-4 py-2 transition-all font-medium text-slate-900" />
+                    <label className="text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500">Nom complet</label>
+                    <input name="name" value={form.name} onChange={handleChange} type="text" className="w-full rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-stone-900 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none px-4 py-2 transition-all font-medium text-slate-900 dark:text-white" />
                   </div>
                   <div className="flex flex-col gap-1.5 md:col-span-2">
                     <div className="flex items-center justify-between mb-1">
-                      <label className="text-xs font-bold uppercase tracking-wider text-slate-400">Spécialités (Catégories multiples)</label>
-                      <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">(Ctrl/Cmd click pour plusieurs)</span>
+                      <label className="text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500">Spécialités (Catégories multiples)</label>
+                      <span className="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest">(Ctrl/Cmd click pour plusieurs)</span>
                     </div>
                     <select multiple name="specialty" value={form.specialty} onChange={(e) => {
                       const options = Array.from(e.target.selectedOptions, option => option.value);
                       setForm({ ...form, specialty: options });
-                    }} className="w-full h-32 rounded-lg border border-slate-200 bg-slate-50 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none px-4 py-2 transition-all font-medium text-slate-900 overflow-y-auto custom-scrollbar">
+                    }} className="w-full h-32 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-stone-900 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none px-4 py-2 transition-all font-medium text-slate-900 dark:text-white overflow-y-auto custom-scrollbar">
                       <optgroup label="Menuiserie et Bois">
                         <option>Menuisier ébéniste</option>
                         <option>Menuisier de chantier (coffreur)</option>
@@ -198,16 +209,16 @@ const ArtisanSettings = () => {
                     </select>
                   </div>
                   <div className="flex flex-col gap-1.5">
-                    <label className="text-xs font-bold uppercase tracking-wider text-slate-400">Téléphone</label>
-                    <input name="phone" value={form.phone} onChange={handleChange} type="tel" className="w-full rounded-lg border border-slate-200 bg-slate-50 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none px-4 py-2 transition-all font-medium text-slate-900" />
+                    <label className="text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500">Téléphone</label>
+                    <input name="phone" value={form.phone} onChange={handleChange} type="tel" className="w-full rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-stone-900 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none px-4 py-2 transition-all font-medium text-slate-900 dark:text-white" />
                   </div>
                   <div className="flex flex-col gap-1.5">
-                    <label className="text-xs font-bold uppercase tracking-wider text-slate-400">Années d'expérience</label>
-                    <input name="experience_years" value={form.experience_years} onChange={handleChange} type="number" className="w-full rounded-lg border border-slate-200 bg-slate-50 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none px-4 py-2 transition-all font-medium text-slate-900" />
+                    <label className="text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500">Années d'expérience</label>
+                    <input name="experience_years" value={form.experience_years} onChange={handleChange} type="number" className="w-full rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-stone-900 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none px-4 py-2 transition-all font-medium text-slate-900 dark:text-white" />
                   </div>
                   <div className="flex flex-col gap-1.5 md:col-span-2">
-                    <label className="text-xs font-bold uppercase tracking-wider text-slate-400">Adresse</label>
-                    <input name="address" value={form.address} onChange={handleChange} type="text" className="w-full rounded-lg border border-slate-200 bg-slate-50 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none px-4 py-2 transition-all font-medium text-slate-900" />
+                    <label className="text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500">Adresse</label>
+                    <input name="address" value={form.address} onChange={handleChange} type="text" className="w-full rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-stone-900 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none px-4 py-2 transition-all font-medium text-slate-900 dark:text-white" />
                   </div>
                 </div>
               </div>
@@ -229,21 +240,21 @@ const ArtisanSettings = () => {
               <h3 className="text-xl font-black tracking-tight">Sécurité du compte</h3>
             </div>
             
-            <div className="p-2 bg-slate-50/50 rounded-2xl border border-slate-100">
-              <div className="flex flex-col md:flex-row md:items-center justify-between p-6 rounded-xl bg-white border border-slate-200/50 shadow-xs">
+            <div className="p-2 bg-slate-50/50 dark:bg-stone-900/50 rounded-2xl border border-slate-100 dark:border-stone-800">
+              <div className="flex flex-col md:flex-row md:items-center justify-between p-6 rounded-xl bg-white dark:bg-stone-900 border border-slate-200/50 dark:border-stone-800 shadow-xs">
                 <div className="flex items-center gap-4">
-                  <div className="size-12 bg-slate-50 rounded-xl flex items-center justify-center text-slate-400">
+                  <div className="size-12 bg-slate-50 dark:bg-stone-800 rounded-xl flex items-center justify-center text-slate-400">
                     <span className="material-symbols-outlined">lock</span>
                   </div>
                   <div>
-                    <p className="font-black text-slate-900">Mot de passe</p>
+                    <p className="font-black text-slate-900 dark:text-white">Mot de passe</p>
                     <p className="text-sm text-slate-500 mt-0.5 font-medium">Dernière modification il y a 3 mois</p>
                   </div>
                 </div>
                 <button 
                   type="button" 
                   onClick={() => setShowPasswordModal(true)}
-                  className="mt-4 md:mt-0 px-8 py-2.5 bg-white border-2 border-slate-100 rounded-xl text-sm font-black text-slate-700 hover:bg-slate-50 hover:border-slate-200 transition-all shadow-sm"
+                  className="mt-4 md:mt-0 px-8 py-2.5 bg-white dark:bg-stone-800 border-2 border-slate-100 dark:border-stone-700 rounded-xl text-sm font-black text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-stone-700 hover:border-slate-200 transition-all shadow-sm"
                 >
                   Modifier
                 </button>
@@ -252,18 +263,24 @@ const ArtisanSettings = () => {
           </section>
 
           {/* Section: Zone de danger */}
-          <section className="bg-red-50/50 rounded-3xl p-10 border border-red-100/80 flex flex-col md:flex-row md:items-center justify-between gap-6 overflow-hidden relative group">
-            <div className="absolute right-0 top-0 w-32 h-32 bg-red-500/5 rounded-full -translate-x-1/2 -translate-y-1/2 blur-2xl group-hover:scale-150 transition-transform duration-700"></div>
-            <div className="relative z-10">
-              <h3 className="text-xl font-black text-red-700 mb-2 tracking-tight">Zone de danger</h3>
-              <p className="text-sm text-red-600/70 font-bold">Ces actions sont irréversibles. Soyez prudent.</p>
+          <section className="bg-red-50/30 dark:bg-red-950/10 rounded-3xl p-10 border border-red-100 dark:border-red-900/30 flex flex-col md:flex-row md:items-center justify-between gap-6 overflow-hidden relative group">
+            <div className="absolute right-0 top-0 w-64 h-64 bg-red-500/5 rounded-full -translate-x-1/4 -translate-y-1/2 blur-3xl group-hover:bg-red-500/10 transition-colors duration-700"></div>
+            <div className="relative z-10 max-w-lg">
+              <h3 className="text-xl font-black text-red-600 dark:text-red-500 mb-2 tracking-tight flex items-center gap-2">
+                <span className="material-symbols-outlined font-black">gpp_maybe</span>
+                Zone de danger
+              </h3>
+              <p className="text-sm text-red-600/80 dark:text-red-400/60 font-bold leading-relaxed">
+                La suppression de votre compte est définitive. Vous perdrez l'accès à vos services, vos projets, vos avis et l'ensemble de vos statistiques PRO.
+              </p>
             </div>
             <button 
               type="button" 
               onClick={handleDeleteAccount}
-              className="relative z-10 px-8 py-3 bg-white border-2 border-red-500/20 text-red-600 rounded-2xl text-sm font-black hover:bg-red-50 hover:border-red-500 transition-all shadow-sm flex items-center gap-3"
+              disabled={loading}
+              className="relative z-10 px-10 py-4 bg-white dark:bg-stone-900 border-2 border-red-500 text-red-600 dark:text-red-500 rounded-2xl text-sm font-black hover:bg-red-600 hover:text-white dark:hover:bg-red-600 dark:hover:text-white transition-all shadow-xl shadow-red-500/10 flex items-center justify-center gap-3 active:scale-95 disabled:opacity-50"
             >
-              <span className="material-symbols-outlined text-lg font-bold">delete</span>
+              <span className="material-symbols-outlined text-lg font-bold">delete_forever</span>
               Supprimer mon compte
             </button>
           </section>
@@ -272,46 +289,46 @@ const ArtisanSettings = () => {
 
         {/* Password Change Modal */}
         {showPasswordModal && (
-          <div className="fixed inset-0 z-100 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm">
-            <div className="bg-white rounded-3xl w-full max-w-md shadow-2xl border border-slate-200 overflow-hidden animate-in fade-in zoom-in duration-300">
-              <div className="p-8 border-b border-slate-100 flex justify-between items-center bg-slate-50/50">
-                <h3 className="text-xl font-black text-slate-900">Changer le mot de passe</h3>
-                <button onClick={() => setShowPasswordModal(false)} className="text-slate-400 hover:text-slate-600 transition-colors">
+          <div className="fixed inset-0 z-100 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm animate-fade-in">
+            <div className="bg-white dark:bg-stone-900 rounded-3xl w-full max-w-md shadow-2xl border border-slate-200 dark:border-stone-800 overflow-hidden animate-slide-up">
+              <div className="p-8 border-b border-slate-100 dark:border-stone-800 flex justify-between items-center bg-slate-50/50 dark:bg-stone-900/50">
+                <h3 className="text-xl font-black text-slate-900 dark:text-white">Changer le mot de passe</h3>
+                <button onClick={() => setShowPasswordModal(false)} className="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors">
                   <span className="material-symbols-outlined">close</span>
                 </button>
               </div>
               <form onSubmit={handlePasswordChange} className="p-8 space-y-6">
                 <div className="space-y-2">
-                  <label className="text-xs font-black uppercase tracking-widest text-slate-400 ml-1">Mot de passe actuel</label>
+                  <label className="text-xs font-black uppercase tracking-widest text-slate-400 dark:text-slate-500 ml-1">Mot de passe actuel</label>
                   <input 
                     type="password" 
                     required
                     value={passwordForm.current}
                     onChange={(e) => setPasswordForm({...passwordForm, current: e.target.value})}
-                    className="w-full h-14 px-5 rounded-2xl bg-slate-50 border-2 border-transparent focus:border-indigo-500 focus:bg-white transition-all outline-none font-medium" 
+                    className="w-full h-14 px-5 rounded-2xl bg-slate-50 dark:bg-stone-800 border-2 border-transparent focus:border-secondary focus:bg-white dark:focus:bg-stone-700 transition-all outline-none font-medium text-slate-900 dark:text-white" 
                     placeholder="••••••••"
                   />
                 </div>
                 <div className="space-y-4 pt-2">
                   <div className="space-y-2">
-                    <label className="text-xs font-black uppercase tracking-widest text-slate-400 ml-1">Nouveau mot de passe</label>
+                    <label className="text-xs font-black uppercase tracking-widest text-slate-400 dark:text-slate-500 ml-1">Nouveau mot de passe</label>
                     <input 
                       type="password" 
                       required
                       value={passwordForm.new}
                       onChange={(e) => setPasswordForm({...passwordForm, new: e.target.value})}
-                      className="w-full h-14 px-5 rounded-2xl bg-slate-50 border-2 border-transparent focus:border-indigo-500 focus:bg-white transition-all outline-none font-medium" 
+                      className="w-full h-14 px-5 rounded-2xl bg-slate-50 dark:bg-stone-800 border-2 border-transparent focus:border-secondary focus:bg-white dark:focus:bg-stone-700 transition-all outline-none font-medium text-slate-900 dark:text-white" 
                       placeholder="••••••••"
                     />
                   </div>
                   <div className="space-y-2">
-                    <label className="text-xs font-black uppercase tracking-widest text-slate-400 ml-1">Confirmer le nouveau</label>
+                    <label className="text-xs font-black uppercase tracking-widest text-slate-400 dark:text-slate-500 ml-1">Confirmer le nouveau</label>
                     <input 
                       type="password" 
                       required
                       value={passwordForm.confirm}
                       onChange={(e) => setPasswordForm({...passwordForm, confirm: e.target.value})}
-                      className="w-full h-14 px-5 rounded-2xl bg-slate-50 border-2 border-transparent focus:border-indigo-500 focus:bg-white transition-all outline-none font-medium" 
+                      className="w-full h-14 px-5 rounded-2xl bg-slate-50 dark:bg-stone-800 border-2 border-transparent focus:border-secondary focus:bg-white dark:focus:bg-stone-700 transition-all outline-none font-medium text-slate-900 dark:text-white" 
                       placeholder="••••••••"
                     />
                   </div>
@@ -320,13 +337,13 @@ const ArtisanSettings = () => {
                   <button 
                     type="button" 
                     onClick={() => setShowPasswordModal(false)}
-                    className="flex-1 h-14 rounded-2xl font-black text-slate-600 hover:bg-slate-100 transition-all border border-slate-200"
+                    className="flex-1 h-14 rounded-2xl font-black text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-stone-800 transition-all border border-slate-200 dark:border-stone-700"
                   >
                     Annuler
                   </button>
                   <button 
                     type="submit"
-                    className="flex-1 h-14 bg-slate-900 text-white rounded-2xl font-black hover:bg-slate-800 transition-all shadow-lg shadow-slate-900/20"
+                    className="flex-1 h-14 bg-slate-900 dark:bg-white dark:text-slate-900 text-white rounded-2xl font-black hover:bg-slate-800 transition-all shadow-lg shadow-slate-900/20"
                   >
                     Mettre à jour
                   </button>

@@ -91,38 +91,34 @@ const ArtisanProjects = () => {
       <div className="p-8 flex-1 flex flex-col overflow-y-auto">
         
         {/* Page Title & CTA */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8 text-slate-900">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8 text-slate-900 dark:text-white">
           <div>
-            <h1 className="text-3xl font-black tracking-tight mb-2">Gestion des Projets</h1>
+            <h1 className="text-3xl font-black tracking-tight mb-2 text-slate-900 dark:text-white">Gestion des Projets</h1>
             <p className="text-slate-500">Suivez l'état de vos chantiers en cours et passés.</p>
           </div>
-          <button className="flex items-center gap-2 bg-secondary text-white px-6 py-3 rounded-xl font-bold hover:bg-secondary/90 transition-colors shadow-lg shadow-secondary/20">
-            <span className="material-symbols-outlined text-lg">add</span>
-            Nouveau Projet
-          </button>
         </div>
 
         {/* Pending Opportunities Section */}
         {pendingDevis.length > 0 && (
-          <section className="mb-10 bg-linear-to-r from-orange-50 to-orange-100 rounded-3xl p-8 border border-orange-200">
+          <section className="mb-10 bg-linear-to-r from-orange-50 to-orange-100 dark:from-orange-950/20 dark:to-orange-900/20 rounded-3xl p-8 border border-orange-200 dark:border-orange-900/50">
             <div className="flex items-center gap-3 mb-6">
               <span className="relative flex h-3 w-3">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-3 w-3 bg-secondary"></span>
               </span>
-              <h3 className="text-xl font-black text-orange-900">Demandes disponibles dans votre secteur ({pendingDevis.length})</h3>
+              <h3 className="text-xl font-black text-orange-900 dark:text-orange-200">Demandes disponibles dans votre secteur ({pendingDevis.length})</h3>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {pendingDevis.map(devis => (
-                <div key={devis.id} className="bg-white p-6 rounded-2xl shadow-sm border border-orange-200/50 space-y-4">
+                <div key={devis.id} className="bg-white dark:bg-stone-900 p-6 rounded-2xl shadow-sm border border-orange-200/50 dark:border-stone-800 space-y-4">
                   <div className="flex justify-between items-start">
                     <div>
                       <span className="px-3 py-1 bg-secondary/10 text-secondary rounded-full text-[10px] font-black uppercase">{devis.category_name}</span>
-                      <h4 className="mt-2 font-black text-slate-900 line-clamp-1">{devis.client_name}</h4>
+                      <h4 className="mt-2 font-black text-slate-900 dark:text-white">{devis.client_name}</h4>
                     </div>
                     <span className="text-sm font-black text-secondary">{devis.budget} DA</span>
                   </div>
-                  <p className="text-sm text-slate-600 line-clamp-2 italic">"{devis.description}"</p>
+                  <p className="text-sm text-slate-600 dark:text-slate-400 line-clamp-2 italic">"{devis.description}"</p>
                   <div className="flex items-center justify-between pt-2">
                     <span className="text-xs text-slate-400 font-bold flex items-center gap-1">
                       <span className="material-symbols-outlined text-xs">calendar_today</span>
@@ -130,7 +126,7 @@ const ArtisanProjects = () => {
                     </span>
                     <button 
                       onClick={() => handleAcceptDevis(devis.id)}
-                      className="px-6 py-2 bg-slate-900 text-white rounded-xl text-xs font-black hover:bg-slate-800 transition-all"
+                      className="px-6 py-2 bg-slate-900 dark:bg-white dark:text-slate-900 text-white rounded-xl text-xs font-black hover:bg-slate-800 transition-all"
                     >
                       Accepter
                     </button>
@@ -148,7 +144,7 @@ const ArtisanProjects = () => {
               <button 
                 key={t}
                 onClick={() => setFilter(t)}
-                className={`border-b-2 pb-4 font-bold text-sm whitespace-nowrap transition-colors ${filter === t ? 'border-secondary text-secondary' : 'border-transparent text-slate-500 hover:text-slate-700'}`}
+                className={`border-b-2 pb-4 font-bold text-sm whitespace-nowrap transition-colors ${filter === t ? 'border-secondary text-secondary' : 'border-transparent text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200'}`}
               >
                 {t === 'Tous' ? 'Tous les projets' : t}
               </button>
@@ -157,20 +153,20 @@ const ArtisanProjects = () => {
         </div>
 
         {/* Table Card */}
-        <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col">
+        <div className="bg-white dark:bg-stone-900 rounded-2xl border border-slate-200 dark:border-stone-800 shadow-sm overflow-hidden flex flex-col">
           <div className="overflow-x-auto">
             <table className="w-full text-left">
-              <thead className="bg-slate-50">
+              <thead className="bg-slate-50 dark:bg-stone-800/50">
                 <tr>
-                  <th className="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">Projet / Service</th>
-                  <th className="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">Client</th>
-                  <th className="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">Date</th>
-                  <th className="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">Montant</th>
-                  <th className="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">Statut</th>
-                  <th className="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider text-right">Actions</th>
+                  <th className="px-6 py-4 text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Projet / Service</th>
+                  <th className="px-6 py-4 text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Client</th>
+                  <th className="px-6 py-4 text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Date</th>
+                  <th className="px-6 py-4 text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Montant</th>
+                  <th className="px-6 py-4 text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Statut</th>
+                  <th className="px-6 py-4 text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider text-right">Actions</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-slate-100">
+              <tbody className="divide-y divide-slate-100 dark:divide-stone-800">
                 {loading ? (
                   <tr>
                     <td colSpan="6" className="px-6 py-12 text-center text-slate-400">
@@ -188,22 +184,22 @@ const ArtisanProjects = () => {
                   </tr>
                 ) : (
                   filteredProjects.map((project) => (
-                    <tr key={project.id} className="hover:bg-slate-50 transition-colors group">
+                    <tr key={project.id} className="hover:bg-slate-50 dark:hover:bg-stone-800 transition-colors group">
                       <td className="px-6 py-5">
                         <div className="flex flex-col">
-                          <span className="font-bold text-slate-900 group-hover:text-secondary transition-colors capitalize">{project.service_title}</span>
-                          <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">{project.type}</span>
+                          <span className="font-bold text-slate-900 dark:text-white group-hover:text-secondary transition-colors capitalize">{project.service_title}</span>
+                          <span className="text-[10px] text-slate-400 dark:text-slate-500 font-bold uppercase tracking-wider">{project.type}</span>
                         </div>
                       </td>
-                      <td className="px-6 py-5 text-slate-600 font-medium">{project.client_name}</td>
-                      <td className="px-6 py-5 text-slate-600 text-sm">
+                      <td className="px-6 py-5 text-slate-600 dark:text-slate-300 font-medium">{project.client_name}</td>
+                      <td className="px-6 py-5 text-slate-600 dark:text-slate-400 text-sm">
                         {new Date(project.booking_date).toLocaleDateString('fr-FR', {
                           day: 'numeric',
                           month: 'short',
                           year: 'numeric'
                         })}
                       </td>
-                      <td className="px-6 py-5 font-black text-slate-900">{project.total_price} DA</td>
+                      <td className="px-6 py-5 font-black text-slate-900 dark:text-white">{project.total_price} DA</td>
                       <td className="px-6 py-5">
                         <span className={`inline-flex items-center px-3 py-1 rounded-full text-[10px] font-black uppercase ${
                           project.status === 'confirmed' || project.status === 'accepté' ? 'bg-blue-100 text-blue-700' :
@@ -252,8 +248,8 @@ const ArtisanProjects = () => {
             </table>
           </div>
 
-          <div className="px-6 py-4 bg-slate-50 border-t border-slate-100 flex items-center justify-between mt-auto">
-            <p className="text-sm text-slate-500">Affichage de {filteredProjects.length} projets</p>
+          <div className="px-6 py-4 bg-slate-50 dark:bg-stone-900/50 border-t border-slate-100 dark:border-stone-800 flex items-center justify-between mt-auto">
+            <p className="text-sm text-slate-500 dark:text-slate-400">Affichage de {filteredProjects.length} projets</p>
           </div>
         </div>
       </div>

@@ -74,7 +74,7 @@ const SearchFilters = ({ filters, onChange }) => {
           <span className="material-symbols-outlined text-sm text-blue-600">star_rate</span> ÉVALUATIONS
         </h3>
         <div className="space-y-3 px-1">
-          {[4.5, 4.0].map((rating) => {
+          {[5.0, 4.0, 3.0, 2.0, 1.0].map((rating) => {
             const selected = minRating === rating;
             return (
               <div
@@ -87,7 +87,7 @@ const SearchFilters = ({ filters, onChange }) => {
                   {selected && <div className="absolute w-2.5 h-2.5 bg-blue-600 rounded-full"></div>}
                 </div>
                 <span className={`text-sm font-semibold flex items-center gap-1.5 transition-colors ${selected ? 'text-blue-600' : 'text-slate-700 dark:text-slate-300'}`}>
-                  {rating}+
+                  {rating === 5 ? '5.0' : `${rating}+`}
                   <span className="material-symbols-outlined text-yellow-400 text-base" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
                 </span>
               </div>
@@ -105,15 +105,15 @@ const SearchFilters = ({ filters, onChange }) => {
           <input
             type="range"
             min={10}
-            max={1000}
-            step={10}
+            max={10000}
+            step={100}
             value={maxPrice}
             onChange={(e) => setMaxPrice(e.target.value)}
             className="w-full h-2 rounded-full accent-blue-600 cursor-pointer"
           />
           <div className="flex justify-between mt-4">
             <div className="bg-white dark:bg-slate-800 px-2 py-1 rounded-md border border-slate-200 dark:border-slate-700 text-[10px] font-bold text-slate-600 dark:text-slate-400">10 DA</div>
-            <div className="bg-blue-600 text-white px-2 py-1 rounded-md text-[10px] font-bold">{maxPrice} DA</div>
+            <div className="bg-blue-600 text-white px-2 py-1 rounded-md text-[10px] font-bold">{maxPrice >= 10000 ? 'Illimité' : `${maxPrice} DA`}</div>
           </div>
         </div>
       </div>
@@ -138,9 +138,9 @@ const SearchFilters = ({ filters, onChange }) => {
       </div>
 
       {/* RESET BUTTON */}
-      {(selectedCategories.length > 0 || minRating || availableNow || maxPrice !== 500) && (
+    {(selectedCategories.length > 0 || minRating || availableNow || maxPrice !== 10000) && (
         <button
-          onClick={() => onChange({ selectedCategories: [], minRating: null, maxPrice: 500, availableNow: false })}
+          onClick={() => onChange({ selectedCategories: [], minRating: null, maxPrice: 10000, availableNow: false })}
           className="w-full text-xs font-black text-red-500 hover:text-red-600 border border-red-200 hover:border-red-400 py-2 rounded-xl transition-all"
         >
           Réinitialiser les filtres

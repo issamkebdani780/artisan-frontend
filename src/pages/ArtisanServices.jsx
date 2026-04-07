@@ -15,6 +15,7 @@ const ArtisanServices = () => {
     base_price: '',
     image_url: ''
   });
+  const [selectedFile, setSelectedFile] = useState(null);
   const user = JSON.parse(localStorage.getItem('user'));
 
   useEffect(() => {
@@ -37,6 +38,7 @@ const ArtisanServices = () => {
   };
 
   const handleOpenModal = (service = null) => {
+    setSelectedFile(null);
     if (service) {
       setCurrentService(service);
       setForm({
@@ -61,16 +63,30 @@ const ArtisanServices = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const formData = new FormData();
+    formData.append('category_id', form.category_id);
+    formData.append('title', form.title);
+    formData.append('description', form.description);
+    formData.append('base_price', form.base_price);
+    
+    if (selectedFile) {
+      formData.append('serviceImage', selectedFile);
+    } else if (form.image_url) {
+      formData.append('image_url', form.image_url);
+    }
+
     try {
       if (currentService) {
-        await apiService.updateService(currentService.id, form);
+        await apiService.updateService(currentService.id, formData);
       } else {
-        await apiService.createService(form);
+        await apiService.createService(formData);
       }
       setShowModal(false);
+      setSelectedFile(null);
       fetchData();
     } catch (err) {
-      alert('Erreur lors de l\'enregistrement');
+      console.error('Error saving service:', err);
+      alert(err.message || 'Erreur lors de l\'enregistrement');
     }
   };
 
@@ -91,7 +107,7 @@ const ArtisanServices = () => {
         
         <div className="flex justify-between items-end mb-8">
           <div>
-            <h1 className="text-3xl font-black tracking-tight mb-2 text-slate-900">Mes Services & Tarifs</h1>
+            <h1 className="text-3xl font-black tracking-tight mb-2 text-slate-900 dark:text-white">Mes Services & Tarifs</h1>
             <p className="text-slate-500">Gérez les prestations que vous proposez aux clients.</p>
           </div>
           <button 
@@ -162,29 +178,29 @@ const ArtisanServices = () => {
         {/* Modal */}
         {showModal && (
           <div className="fixed inset-0 z-100 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm animate-fade-in">
-            <div className="bg-white w-full max-w-xl rounded-[2.5rem] shadow-2xl overflow-hidden animate-slide-up">
-              <div className="p-8 border-b border-slate-100 flex justify-between items-center">
-                <h2 className="text-2xl font-black text-slate-900">{currentService ? 'Modifier le Service' : 'Nouveau Service'}</h2>
-                <button onClick={() => setShowModal(false)} className="text-slate-400 hover:text-slate-600 transition-colors">
+            <div className="bg-white dark:bg-stone-900 w-full max-w-xl rounded-[2.5rem] shadow-2xl overflow-hidden animate-slide-up border border-slate-100 dark:border-stone-800">
+              <div className="p-8 border-b border-slate-100 dark:border-stone-800 flex justify-between items-center">
+                <h2 className="text-2xl font-black text-slate-900 dark:text-white">{currentService ? 'Modifier le Service' : 'Nouveau Service'}</h2>
+                <button onClick={() => setShowModal(false)} className="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors">
                   <span className="material-symbols-outlined">close</span>
                 </button>
               </div>
               <form onSubmit={handleSubmit} className="p-8 space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="flex flex-col gap-1.5">
-                    <label className="text-xs font-bold uppercase tracking-wider text-slate-400 ml-1">Catégorie</label>
+                    <label className="text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500 ml-1">Catégorie</label>
                     <select 
                       name="category_id" 
                       value={form.category_id} 
                       onChange={(e) => setForm({...form, category_id: e.target.value})}
                       required
-                      className="w-full h-12 px-4 rounded-xl bg-slate-50 border border-slate-200 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none font-bold text-sm transition-all"
+                      className="w-full h-12 px-4 rounded-xl bg-slate-50 dark:bg-stone-800 border border-slate-200 dark:border-stone-700 text-slate-900 dark:text-slate-100 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none font-bold text-sm transition-all"
                     >
                       {categories.map(c => <option key={c.id} value={c.id}>{c.name}</option>)}
                     </select>
                   </div>
                   <div className="flex flex-col gap-1.5">
-                    <label className="text-xs font-bold uppercase tracking-wider text-slate-400 ml-1">Prix de base (DA)</label>
+                    <label className="text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500 ml-1">Prix de base (DA)</label>
                     <input 
                       name="base_price" 
                       value={form.base_price} 
@@ -192,13 +208,13 @@ const ArtisanServices = () => {
                       placeholder="Ex: 5000"
                       type="number" 
                       required
-                      className="w-full h-12 px-4 rounded-xl bg-slate-50 border border-slate-200 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none font-bold text-sm transition-all"
+                      className="w-full h-12 px-4 rounded-xl bg-slate-50 dark:bg-stone-800 border border-slate-200 dark:border-stone-700 text-slate-900 dark:text-slate-100 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none font-bold text-sm transition-all placeholder:text-slate-300 dark:placeholder:text-slate-600"
                     />
                   </div>
                 </div>
 
                 <div className="flex flex-col gap-1.5">
-                  <label className="text-xs font-bold uppercase tracking-wider text-slate-400 ml-1">Titre du service</label>
+                  <label className="text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500 ml-1">Titre du service</label>
                   <input 
                     name="title" 
                     value={form.title} 
@@ -206,12 +222,12 @@ const ArtisanServices = () => {
                     placeholder="Ex: Rénovation peinture salon"
                     type="text" 
                     required
-                    className="w-full h-12 px-4 rounded-xl bg-slate-50 border border-slate-200 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none font-bold text-sm transition-all"
+                    className="w-full h-12 px-4 rounded-xl bg-slate-50 dark:bg-stone-800 border border-slate-200 dark:border-stone-700 text-slate-900 dark:text-slate-100 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none font-bold text-sm transition-all placeholder:text-slate-300 dark:placeholder:text-slate-600"
                   />
                 </div>
 
                 <div className="flex flex-col gap-1.5">
-                  <label className="text-xs font-bold uppercase tracking-wider text-slate-400 ml-1">Description</label>
+                  <label className="text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500 ml-1">Description</label>
                   <textarea 
                     name="description" 
                     value={form.description} 
@@ -219,27 +235,34 @@ const ArtisanServices = () => {
                     placeholder="Décrivez votre prestation en quelques mots..."
                     rows="3" 
                     required
-                    className="w-full p-4 rounded-xl bg-slate-50 border border-slate-200 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none font-medium text-sm transition-all resize-none"
+                    className="w-full p-4 rounded-xl bg-slate-50 dark:bg-stone-800 border border-slate-200 dark:border-stone-700 text-slate-900 dark:text-slate-100 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none font-medium text-sm transition-all resize-none placeholder:text-slate-300 dark:placeholder:text-slate-600"
                   ></textarea>
                 </div>
 
                 <div className="flex flex-col gap-1.5">
-                  <label className="text-xs font-bold uppercase tracking-wider text-slate-400 ml-1">URL Image (Optionnel)</label>
-                  <input 
-                    name="image_url" 
-                    value={form.image_url} 
-                    onChange={(e) => setForm({...form, image_url: e.target.value})}
-                    placeholder="https://images.unsplash.com/..."
-                    type="url" 
-                    className="w-full h-12 px-4 rounded-xl bg-slate-50 border border-slate-200 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none font-medium text-sm transition-all"
-                  />
+                  <label className="text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500 ml-1">Photo du Service (Direct Upload)</label>
+                  <div className="relative border-2 border-dashed border-slate-200 dark:border-stone-700 rounded-2xl p-6 hover:border-secondary hover:bg-secondary/5 dark:hover:bg-secondary/5 transition-all group cursor-pointer overflow-hidden">
+                    <input 
+                      type="file" 
+                      accept="image/*"
+                      onChange={(e) => setSelectedFile(e.target.files[0])}
+                      className="absolute inset-0 opacity-0 cursor-pointer z-10"
+                    />
+                    <div className="flex flex-col items-center justify-center text-center">
+                      <span className="material-symbols-outlined text-4xl text-slate-300 group-hover:text-secondary mb-2 transition-colors">add_photo_alternate</span>
+                      <p className="text-sm font-bold text-slate-500 dark:text-slate-400">
+                        {selectedFile ? selectedFile.name : (form.image_url ? 'Changer l\'image actuelle' : 'Cliquez pour ajouter une photo')}
+                      </p>
+                      <p className="text-[10px] text-slate-400 dark:text-slate-500 mt-1 uppercase tracking-widest font-black">JPG, PNG, WEBP • MAX 5MB</p>
+                    </div>
+                  </div>
                 </div>
 
-                <div className="flex justify-end gap-3 pt-6 border-t border-slate-100">
+                <div className="flex justify-end gap-3 pt-6 border-t border-slate-100 dark:border-stone-800">
                   <button 
                     type="button" 
                     onClick={() => setShowModal(false)}
-                    className="px-6 py-3 rounded-xl font-bold text-sm text-slate-500 hover:bg-slate-50 transition-colors"
+                    className="px-6 py-3 rounded-xl font-bold text-sm text-slate-500 hover:bg-slate-50 dark:hover:bg-stone-800 transition-colors"
                   >
                     Annuler
                   </button>

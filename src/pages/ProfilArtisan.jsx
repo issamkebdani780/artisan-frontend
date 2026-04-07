@@ -48,8 +48,11 @@ const ProfilArtisan = () => {
       <main className="max-w-7xl mx-auto w-full px-4 lg:px-20 py-8">
         {/*  Banner Hero  */}
         <div className="relative mb-12">
-          <div className="h-64 md:h-80 w-full rounded-3xl overflow-hidden bg-slate-200 dark:bg-slate-800 shadow-lg">
-            <div className="w-full h-full bg-cover bg-center" style={{backgroundImage: `url(${artisan.profile_pic || 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=2070&auto=format&fit=crop'})`}}></div>
+          <div className="h-64 md:h-96 w-full rounded-3xl overflow-hidden bg-slate-200 dark:bg-slate-800 shadow-lg border border-slate-200">
+            <div 
+              className="w-full h-full bg-cover bg-center transition-transform hover:scale-105 duration-700" 
+              style={{backgroundImage: `url(${artisan.artisan_documents || 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=2070&auto=format&fit=crop'})`}}
+            ></div>
           </div>
           <div className="absolute -bottom-16 left-8 flex flex-col md:flex-row items-end md:items-center gap-6">
             <div className="relative">

@@ -7,26 +7,75 @@ const MovingBooking = () => {
   const [weight, setWeight] = useState(450);
   const [loading, setLoading] = useState(false);
   const [selectedItems, setSelectedItems] = useState(['Bois', 'Plastique']);
-  const [bookingDate, setBookingDate] = useState('2024-05-03');
+  const [bookingDate, setBookingDate] = useState(new Date().toISOString().split('T')[0]);
   const [serviceId, setServiceId] = useState(null);
   const [locations, setLocations] = useState({
     departure: '',
-    destination: ''
+    destination: '',
+    departure_wilaya_id: '',
+    departure_commune_id: '',
+    destination_wilaya_id: '',
+    destination_commune_id: ''
   });
-  const [viewDate, setViewDate] = useState(new Date(2024, 4, 1));
+  const [wilayas, setWilayas] = useState([]);
+  const [departureCommunes, setDepartureCommunes] = useState([]);
+  const [destinationCommunes, setDestinationCommunes] = useState([]);
+  const [viewDate, setViewDate] = useState(new Date());
 
   useEffect(() => {
-    const fetchService = async () => {
+    const fetchData = async () => {
       try {
-        const services = await apiService.getServices();
-        const demoService = services.find(s => s.title.toLowerCase().includes('déménagement')) || services[0];
+        const [servicesList, wilayasList] = await Promise.all([
+          apiService.getServices(),
+          apiService.getWilayas()
+        ]);
+        
+        setWilayas(wilayasList);
+        
+        const demoService = servicesList.find(s => s.title.toLowerCase().includes('déménagement')) || servicesList[0];
         if (demoService) setServiceId(demoService.id);
+
+        // Pre-fill departure if logged in
+        const user = JSON.parse(localStorage.getItem('user'));
+        if (user && user.wilaya_id) {
+          setLocations(prev => ({
+            ...prev,
+            departure_wilaya_id: user.wilaya_id,
+            departure_commune_id: user.commune_id || '',
+            departure: user.address || ''
+          }));
+          
+          const userCommunes = await apiService.getCommunes(user.wilaya_id);
+          setDepartureCommunes(userCommunes);
+        }
       } catch (err) {
-        console.error('Error fetching services:', err);
+        console.error('Error fetching initial data:', err);
       }
     };
-    fetchService();
+    fetchData();
   }, []);
+
+  const handleWilayaChange = async (type, wilayaId) => {
+    const isDeparture = type === 'departure';
+    setLocations(prev => ({
+      ...prev,
+      [`${type}_wilaya_id`]: wilayaId,
+      [`${type}_commune_id`]: ''
+    }));
+    
+    if (isDeparture) setDepartureCommunes([]);
+    else setDestinationCommunes([]);
+
+    if (wilayaId) {
+      try {
+        const data = await apiService.getCommunes(wilayaId);
+        if (isDeparture) setDepartureCommunes(data);
+        else setDestinationCommunes(data);
+      } catch (err) {
+        console.error(`Error fetching ${type} communes:`, err);
+      }
+    }
+  };
 
   const totalPrice = weight * 1.5 + 500;
 
@@ -38,6 +87,15 @@ const MovingBooking = () => {
 
   const handleBooking = async () => {
     const user = JSON.parse(localStorage.getItem('user'));
+
+    // Date validation
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    const selectedDate = new Date(bookingDate);
+    if (selectedDate < today) {
+      setError('La date du déménagement ne peut pas être dans le passé.');
+      return;
+    }
     
     if (!user) {
       setError('Veuillez vous connecter pour réserver un déménagement. Redirection vers la page de connexion...');
@@ -63,12 +121,19 @@ const MovingBooking = () => {
         console.error('Could not fetch categories, using fallback ID');
       }
 
+      const departureWilaya = wilayas.find(w => w.id == locations.departure_wilaya_id)?.name || '';
+      const departureCommune = departureCommunes.find(c => c.id == locations.departure_commune_id)?.name || '';
+      const destinationWilaya = wilayas.find(w => w.id == locations.destination_wilaya_id)?.name || '';
+      const destinationCommune = destinationCommunes.find(c => c.id == locations.destination_commune_id)?.name || '';
+
       const devisData = {
         client_id: user.id,
         category_id: categoryId,
-        description: `DÉMÉNAGEMENT - Poids: ${weight}kg, Objets: ${selectedItems.join(', ')}. Trajet: ${locations.departure} -> ${locations.destination}`,
+        description: `DÉMÉNAGEMENT - Poids: ${weight}kg\nObjets: ${selectedItems.join(', ')}\nDE: ${departureWilaya} (${departureCommune}) - ${locations.departure}\nÀ: ${destinationWilaya} (${destinationCommune}) - ${locations.destination}`,
         budget: totalPrice,
-        date: bookingDate
+        date: bookingDate,
+        wilaya_id: locations.departure_wilaya_id,
+        commune_id: locations.departure_commune_id
       };
 
       console.log('Sending booking data:', devisData);
@@ -119,40 +184,67 @@ const MovingBooking = () => {
                     <h2 className="text-xl font-bold text-slate-900 dark:text-white">Itinéraire et Date</h2>
                   </div>
                   
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                    <div>
-                      <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">Lieu de départ</label>
-                      <div className="flex gap-2">
-                        <div className="relative grow">
-                          <span className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400">
-                            <span className="material-symbols-outlined text-lg">home</span>
-                          </span>
-                          <input 
-                            className="w-full pl-10 pr-4 py-3 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all" 
-                            placeholder="Adresse ou Code Postal" 
-                            type="text"
-                            value={locations.departure}
-                            onChange={(e) => setLocations({...locations, departure: e.target.value})}
-                          />
-                        </div>
-                      </div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-4 mb-8">
+                    {/* Departure */}
+                    <div className="space-y-4">
+                      <label className="block text-sm font-bold text-slate-800 dark:text-white uppercase tracking-tight">Départ</label>
+                      <select 
+                        required
+                        className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg outline-none"
+                        value={locations.departure_wilaya_id}
+                        onChange={(e) => handleWilayaChange('departure', e.target.value)}
+                      >
+                        <option value="">Wilaya de départ</option>
+                        {wilayas.map(w => <option key={w.id} value={w.id}>{w.name}</option>)}
+                      </select>
+                      <select 
+                        required
+                        disabled={!locations.departure_wilaya_id}
+                        className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg outline-none disabled:opacity-50"
+                        value={locations.departure_commune_id}
+                        onChange={(e) => setLocations({...locations, departure_commune_id: e.target.value})}
+                      >
+                        <option value="">Commune de départ</option>
+                        {departureCommunes.map(c => <option key={c.id} value={c.id}>{c.name}</option>)}
+                      </select>
+                      <input 
+                        className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg outline-none" 
+                        placeholder="Adresse précise (Ex: Rue 123)" 
+                        type="text"
+                        value={locations.departure}
+                        onChange={(e) => setLocations({...locations, departure: e.target.value})}
+                      />
                     </div>
-                    <div>
-                      <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">Destination</label>
-                      <div className="flex gap-2">
-                        <div className="relative grow">
-                          <span className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400">
-                            <span className="material-symbols-outlined text-lg">flag</span>
-                          </span>
-                          <input 
-                            className="w-full pl-10 pr-4 py-3 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all" 
-                            placeholder="Adresse d'arrivée" 
-                            type="text"
-                            value={locations.destination}
-                            onChange={(e) => setLocations({...locations, destination: e.target.value})}
-                          />
-                        </div>
-                      </div>
+
+                    {/* Destination */}
+                    <div className="space-y-4">
+                      <label className="block text-sm font-bold text-slate-800 dark:text-white uppercase tracking-tight">Arrivée</label>
+                      <select 
+                        required
+                        className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg outline-none"
+                        value={locations.destination_wilaya_id}
+                        onChange={(e) => handleWilayaChange('destination', e.target.value)}
+                      >
+                        <option value="">Wilaya d'arrivée</option>
+                        {wilayas.map(w => <option key={w.id} value={w.id}>{w.name}</option>)}
+                      </select>
+                      <select 
+                        required
+                        disabled={!locations.destination_wilaya_id}
+                        className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg outline-none disabled:opacity-50"
+                        value={locations.destination_commune_id}
+                        onChange={(e) => setLocations({...locations, destination_commune_id: e.target.value})}
+                      >
+                        <option value="">Commune d'arrivée</option>
+                        {destinationCommunes.map(c => <option key={c.id} value={c.id}>{c.name}</option>)}
+                      </select>
+                      <input 
+                        className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg outline-none" 
+                        placeholder="Adresse d'arrivée précise" 
+                        type="text"
+                        value={locations.destination}
+                        onChange={(e) => setLocations({...locations, destination: e.target.value})}
+                      />
                     </div>
                   </div>
 
@@ -234,12 +326,13 @@ const MovingBooking = () => {
                                 <button 
                                   key={idx}
                                   type="button"
+                                  disabled={new Date(dateStr) < new Date().setHours(0,0,0,0)}
                                   onClick={() => setBookingDate(dateStr)}
                                   className={`py-3 rounded-xl font-bold transition-all text-sm relative group ${
                                     isSelected 
                                     ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-200 dark:shadow-none scale-105' 
                                     : 'hover:bg-white dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300'
-                                  }`}
+                                  } disabled:opacity-20 disabled:cursor-not-allowed`}
                                 >
                                   {item.day}
                                   {isSelected && <span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-white rounded-full"></span>}
