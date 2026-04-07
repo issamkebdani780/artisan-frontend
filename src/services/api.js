@@ -65,15 +65,21 @@ const getAuthHeaders = () => {
 
 // Helper function to handle API responses with proper error checking
 const handleResponse = async (res) => {
-  // Handle 401 (Unauthorized) - token expired
-  if (res.status === 401) {
-    TokenManager.clearToken();
-    throw new Error('Session expired. Please log in again.');
-  }
-
   if (!res.ok) {
-    const error = await res.json().catch(() => ({ error: 'API Error' }));
-    throw new Error(error.error || `HTTP ${res.status}: ${res.statusText}`);
+    const errorData = await res.json().catch(() => ({ error: 'API Error' }));
+    
+    // Handle 401 (Unauthorized)
+    if (res.status === 401) {
+      if (errorData.error === 'User not found' || errorData.error === 'Invalid credentials' || res.url.includes('/auth/login')) {
+        throw new Error(errorData.error);
+      } else {
+        // Token expired / Unauthorized for protected routes
+        TokenManager.clearToken();
+        throw new Error('Session expired. Please log in again.');
+      }
+    }
+    
+    throw new Error(errorData.error || `HTTP ${res.status}: ${res.statusText}`);
   }
   return res.json();
 };
