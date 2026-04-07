@@ -9,11 +9,14 @@ const ArtisanDashboard = () => {
   const user = JSON.parse(localStorage.getItem('user'));
 
   const [stats, setStats] = useState({
-    revenue: 0,
-    totalProjects: 0,
-    activeProjects: 0,
+    totalRevenue: 0,
+    completedBookings: 0,
+    activeBookings: 0,
+    pendingDevis: 0,
+    totalDevis: 0,
     rating: 0,
-    reviews: 0
+    reviewCount: 0,
+    isVerified: false
   });
 
   useEffect(() => {
@@ -162,7 +165,7 @@ const ArtisanDashboard = () => {
           <div className="bg-white p-6 rounded-2xl border border-orange-500/10 shadow-sm relative overflow-hidden group">
             <div className="absolute -right-4 -top-4 w-24 h-24 bg-secondary/5 rounded-full group-hover:scale-150 transition-transform duration-500"></div>
             <p className="text-slate-500 text-sm font-semibold relative z-10">Revenus Totaux</p>
-            <h3 className="text-3xl font-black mt-2 relative z-10 text-slate-900">{(stats.revenue || 0).toLocaleString()} DA</h3>
+            <h3 className="text-3xl font-black mt-2 relative z-10 text-slate-900">{(stats.totalRevenue || 0).toLocaleString()} DA</h3>
             <div className="flex items-center gap-1 mt-4 text-emerald-500 font-bold text-sm relative z-10">
               <span className="material-symbols-outlined text-sm">payments</span>
               <span>Paiements cumulés</span>
@@ -172,7 +175,7 @@ const ArtisanDashboard = () => {
           <div className="bg-white p-6 rounded-2xl border border-orange-500/10 shadow-sm relative overflow-hidden group">
             <div className="absolute -right-4 -top-4 w-24 h-24 bg-secondary/5 rounded-full group-hover:scale-150 transition-transform duration-500"></div>
             <p className="text-slate-500 text-sm font-semibold relative z-10">Projets Actifs</p>
-            <h3 className="text-3xl font-black mt-2 relative z-10 text-slate-900">{stats.activeProjects || 0}</h3>
+            <h3 className="text-3xl font-black mt-2 relative z-10 text-slate-900">{(stats.activeBookings || 0) + (stats.pendingDevis || 0)}</h3>
             <div className="flex items-center gap-1 mt-4 text-orange-500 font-bold text-sm relative z-10">
               <span className="material-symbols-outlined text-sm">pending_actions</span>
               <span>À traiter</span>
@@ -185,14 +188,14 @@ const ArtisanDashboard = () => {
             <h3 className="text-3xl font-black mt-2 relative z-10 text-slate-900">{stats.rating || '0.0'}/5</h3>
             <div className="flex items-center gap-1 mt-4 text-yellow-500 font-bold text-sm relative z-10">
               <span className="material-symbols-outlined text-sm" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
-              <span>{stats.reviews || 0} avis</span>
+              <span>{stats.reviewCount || 0} avis</span>
             </div>
           </div>
           
           <div className="bg-secondary p-6 rounded-2xl shadow-xl shadow-secondary/20 text-white relative overflow-hidden group">
             <div className="absolute -right-4 -top-4 w-24 h-24 bg-white/10 rounded-full group-hover:scale-150 transition-transform duration-500"></div>
             <p className="text-white/80 text-sm font-semibold relative z-10">Total Projets</p>
-            <h3 className="text-3xl font-black mt-2 relative z-10">{stats.totalProjects || 0}</h3>
+            <h3 className="text-3xl font-black mt-2 relative z-10">{(stats.completedBookings || 0) + (stats.totalDevis || 0)}</h3>
             <div className="flex items-center gap-1 mt-4 font-bold text-sm relative z-10">
               <span className="material-symbols-outlined text-sm">assignment</span>
               Expérience globale
