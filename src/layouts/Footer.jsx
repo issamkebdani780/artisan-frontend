@@ -7,8 +7,8 @@ const Footer = () => {
       <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-10">
         <div className="col-span-2">
           <div className="flex items-center gap-3 text-primary mb-6">
-            <span className="material-symbols-outlined text-3xl font-bold">home_repair_service</span>
-            <h2 className="text-slate-900 dark:text-slate-100 text-xl font-bold leading-tight">BricoloPro</h2>
+            <span className="material-symbols-outlined text-3xl font-bold">settings</span>
+            <h2 className="text-slate-900 dark:text-slate-100 text-xl font-bold leading-tight">Mihnati</h2>
           </div>
           <p className="text-slate-500 dark:text-slate-400 max-w-xs mb-6">
             La plateforme de confiance pour tous vos besoins en bricolage et rénovation. Connectez-vous avec les meilleurs experts locaux.
@@ -47,7 +47,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="mt-12 pt-8 border-t border-slate-200 dark:border-slate-800 text-center text-slate-500 dark:text-slate-400 text-sm">
-        © 2024 BricoloPro. Tous droits réservés.
+        © 2024 Mihnati. Tous droits réservés.
       </div>
     </footer>
   );

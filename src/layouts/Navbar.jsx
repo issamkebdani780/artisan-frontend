@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import apiService from '../services/api';
+import logo from '../assets/logo.png';
 
 const Navbar = () => {
   const [user, setUser] = useState(null);
@@ -31,9 +32,9 @@ const Navbar = () => {
 
   return (
     <header className="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-800 px-6 md:px-20 py-4 bg-white dark:bg-slate-900 sticky top-0 z-50">
-      <Link to="/" className="flex items-center gap-3 text-indigo-600 hover:opacity-80 transition-opacity z-50">
-        <span className="material-symbols-outlined text-3xl font-bold">home_repair_service</span>
-        <h2 className="text-slate-900 dark:text-slate-100 text-xl font-bold leading-tight tracking-tight">BricoloPro</h2>
+      <Link to="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity z-50">
+        <img src={logo} alt="Mihnati Logo" className="h-8 md:h-10 w-auto object-contain" />
+        <h2 className="text-slate-900 dark:text-slate-100 text-xl font-bold leading-tight tracking-tight">Mihnati</h2>
       </Link>
 
       {/* Desktop Navigation */}

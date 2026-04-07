@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import StatsSection from '../components/StatsSection';
 import CtaSection from '../components/CtaSection';
+import logo from '../assets/logo.png';
 
 const AboutUs = () => {
   return (
@@ -23,7 +24,7 @@ const AboutUs = () => {
             </span>
           </h1>
           <p className="text-lg md:text-xl text-slate-500 dark:text-slate-400 max-w-3xl mx-auto leading-relaxed">
-            BricoloPro est née d'une idée simple : trouver un artisan de confiance ne devrait pas être un parcours du combattant. Nous construisons le futur des services à domicile.
+            Mihnati est née d'une idée simple : trouver un artisan de confiance ne devrait pas être un parcours du combattant. Nous construisons le futur des services à domicile.
           </p>
         </div>
       </section>
@@ -34,9 +35,9 @@ const AboutUs = () => {
           <div className="relative group">
             <div className="absolute -inset-4 bg-indigo-500/10 rounded-[40px] blur-2xl group-hover:bg-indigo-500/20 transition-all duration-500"></div>
             <img 
-              src="https://images.unsplash.com/photo-1581578731548-c64695ce6958?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
-              alt="Notre équipe au travail" 
-              className="relative rounded-[32px] shadow-2xl border-8 border-white dark:border-slate-800 object-cover aspect-4/3 w-full transform group-hover:scale-[1.02] transition-transform duration-500"
+              src={logo} 
+              alt="Mihnati Logo" 
+              className="relative rounded-[32px] shadow-2xl border-8 border-white dark:border-slate-800 object-contain aspect-4/3 w-full transform group-hover:scale-[1.02] transition-transform duration-500 bg-white p-8"
             />
             <div className="absolute -bottom-8 -right-8 bg-white dark:bg-slate-800 p-8 rounded-3xl shadow-xl border border-slate-100 dark:border-slate-700 max-w-[240px] hidden md:block animate-bounce-slow">
               <div className="flex items-center gap-4 mb-2">
@@ -88,7 +89,7 @@ const AboutUs = () => {
       <section className="py-24 px-6 md:px-20 bg-slate-50 dark:bg-slate-900/30">
         <div className="max-w-7xl mx-auto text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-black text-slate-900 dark:text-white mb-6">L'équipe de développement</h2>
-          <p className="text-slate-500 dark:text-slate-400 max-w-2xl mx-auto">Les esprits créatifs derrière la plateforme BricoloPro.</p>
+          <p className="text-slate-500 dark:text-slate-400 max-w-2xl mx-auto">Les esprits créatifs derrière la plateforme Mihnati.</p>
         </div>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 max-w-7xl mx-auto">

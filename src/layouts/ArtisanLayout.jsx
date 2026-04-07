@@ -1,8 +1,9 @@
 import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import apiService from '../services/api';
+import logo from '../assets/logo.png';
 
-const ArtisanLayout = ({ children, title = "Artisan PRO", subtitle = "Premium Plan" }) => {
+const ArtisanLayout = ({ children, title = "Mihnati PRO", subtitle = "Premium Plan" }) => {
   const location = useLocation();
   const navigate = useNavigate();
   const path = location.pathname;
@@ -17,7 +18,7 @@ const ArtisanLayout = ({ children, title = "Artisan PRO", subtitle = "Premium Pl
   };
 
   return (
-    <div className="bg-[#f8f6f6] dark:bg-[#221610] font-sans text-slate-900 dark:text-slate-100 flex min-h-screen">
+    <div className="bg-background-light dark:bg-background-dark font-sans text-slate-900 dark:text-slate-100 flex min-h-screen">
       
       {/* Sidebar Navigation */}
       <aside className={`
@@ -27,8 +28,8 @@ const ArtisanLayout = ({ children, title = "Artisan PRO", subtitle = "Premium Pl
         <div className="flex flex-col gap-8 p-6">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className="bg-secondary/10 p-2 rounded-xl">
-                <span className="material-symbols-outlined text-secondary text-3xl font-bold">handyman</span>
+              <div className="p-1 rounded-xl">
+                <img src={logo} alt="Mihnati Logo" className="h-10 w-auto object-contain" />
               </div>
               <div className="flex flex-col">
                 <h1 className="text-xl font-black tracking-tight flex items-center gap-1">
