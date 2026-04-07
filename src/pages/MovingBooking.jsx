@@ -156,41 +156,41 @@ const MovingBooking = () => {
   const [error, setError] = useState('');
 
   return (
-    <div className="bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-100 font-sans pb-20">
-      <main className="grow py-12 px-4 sm:px-6 lg:px-8">
+    <div className="bg-white text-slate-900 font-['Public_Sans',sans-serif] pb-20">
+      <main className="grow py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           {/* Hero Section */}
-          <div className="mb-10 text-center lg:text-left">
-            <h1 className="text-3xl font-extrabold text-slate-900 dark:text-white sm:text-4xl mb-3">Réservez votre déménagement professionnel</h1>
-            <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl leading-relaxed mx-auto lg:mx-0">
+          <div className="mb-16 text-center lg:text-left">
+            <h1 className="text-4xl md:text-6xl font-black text-slate-900 mb-6 uppercase tracking-tight">Réservez votre <br /><span className="text-primary italic">déménagement</span></h1>
+            <p className="text-lg md:text-xl text-slate-500 max-w-2xl leading-relaxed mx-auto lg:mx-0 font-bold">
               Calculez instantanément votre tarif basé sur la distance, le volume et la main-d'œuvre nécessaire. Simple, rapide et transparent.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Main Booking Form */}
-            <div className="lg:col-span-2 space-y-6">
+            <div className="lg:col-span-2 space-y-8">
               {error && (
-                <div className="p-4 bg-red-50 border-l-4 border-red-500 text-red-700 flex items-center gap-3 rounded-r-xl shadow-sm animate-shake">
-                   <span className="material-symbols-outlined font-bold">warning</span>
-                   <p className="font-bold text-sm tracking-tight">{error}</p>
+                <div className="p-5 bg-red-50 border-l-4 border-red-500 text-red-700 flex items-center gap-4 rounded-r-2xl shadow-sm animate-shake">
+                   <span className="material-symbols-outlined font-black">warning</span>
+                   <p className="font-black text-sm tracking-tight uppercase">{error}</p>
                 </div>
               )}
-              <div className="bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 p-6 sm:p-8">
+              <div className="bg-slate-50 rounded-[40px] border border-slate-100 p-8 md:p-12">
                 {/* Step 1: Route & Schedule */}
-                <section className="mb-10">
-                  <div className="flex items-center gap-3 mb-6 text-indigo-600">
-                    <span className="material-symbols-outlined text-2xl">location_on</span>
-                    <h2 className="text-xl font-bold text-slate-900 dark:text-white">Itinéraire et Date</h2>
+                <section className="mb-12">
+                  <div className="flex items-center gap-4 mb-8 text-primary">
+                    <span className="material-symbols-outlined text-3xl font-black">location_on</span>
+                    <h2 className="text-2xl font-black text-slate-900 uppercase tracking-tight">Itinéraire et Date</h2>
                   </div>
                   
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-4 mb-8">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6 mb-10">
                     {/* Departure */}
                     <div className="space-y-4">
-                      <label className="block text-sm font-bold text-slate-800 dark:text-white uppercase tracking-tight">Départ</label>
+                      <label className="block text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">Lieu de Départ</label>
                       <select 
                         required
-                        className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg outline-none"
+                        className="w-full px-5 py-4 bg-white border border-slate-100 rounded-2xl outline-none font-bold text-slate-900 focus:border-primary/30 transition-all shadow-sm"
                         value={locations.departure_wilaya_id}
                         onChange={(e) => handleWilayaChange('departure', e.target.value)}
                       >
@@ -200,7 +200,7 @@ const MovingBooking = () => {
                       <select 
                         required
                         disabled={!locations.departure_wilaya_id}
-                        className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg outline-none disabled:opacity-50"
+                        className="w-full px-5 py-4 bg-white border border-slate-100 rounded-2xl outline-none font-bold text-slate-900 focus:border-primary/30 transition-all shadow-sm disabled:opacity-50"
                         value={locations.departure_commune_id}
                         onChange={(e) => setLocations({...locations, departure_commune_id: e.target.value})}
                       >
@@ -208,7 +208,7 @@ const MovingBooking = () => {
                         {departureCommunes.map(c => <option key={c.id} value={c.id}>{c.name}</option>)}
                       </select>
                       <input 
-                        className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg outline-none" 
+                        className="w-full px-5 py-4 bg-white border border-slate-100 rounded-2xl outline-none font-bold text-slate-900 focus:border-primary/30 transition-all shadow-sm" 
                         placeholder="Adresse précise (Ex: Rue 123)" 
                         type="text"
                         value={locations.departure}
@@ -218,10 +218,10 @@ const MovingBooking = () => {
 
                     {/* Destination */}
                     <div className="space-y-4">
-                      <label className="block text-sm font-bold text-slate-800 dark:text-white uppercase tracking-tight">Arrivée</label>
+                      <label className="block text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">Lieu d'Arrivée</label>
                       <select 
                         required
-                        className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg outline-none"
+                        className="w-full px-5 py-4 bg-white border border-slate-100 rounded-2xl outline-none font-bold text-slate-900 focus:border-primary/30 transition-all shadow-sm"
                         value={locations.destination_wilaya_id}
                         onChange={(e) => handleWilayaChange('destination', e.target.value)}
                       >
@@ -231,7 +231,7 @@ const MovingBooking = () => {
                       <select 
                         required
                         disabled={!locations.destination_wilaya_id}
-                        className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg outline-none disabled:opacity-50"
+                        className="w-full px-5 py-4 bg-white border border-slate-100 rounded-2xl outline-none font-bold text-slate-900 focus:border-primary/30 transition-all shadow-sm disabled:opacity-50"
                         value={locations.destination_commune_id}
                         onChange={(e) => setLocations({...locations, destination_commune_id: e.target.value})}
                       >
@@ -239,7 +239,7 @@ const MovingBooking = () => {
                         {destinationCommunes.map(c => <option key={c.id} value={c.id}>{c.name}</option>)}
                       </select>
                       <input 
-                        className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg outline-none" 
+                        className="w-full px-5 py-4 bg-white border border-slate-100 rounded-2xl outline-none font-bold text-slate-900 focus:border-primary/30 transition-all shadow-sm" 
                         placeholder="Adresse d'arrivée précise" 
                         type="text"
                         value={locations.destination}
@@ -249,8 +249,8 @@ const MovingBooking = () => {
                   </div>
 
                   {/* SVG Map Mockup */}
-                  <div className="w-full h-64 bg-slate-100 dark:bg-slate-900 rounded-xl mb-8 relative overflow-hidden border border-slate-200 dark:border-slate-700 shadow-inner">
-                    <div className="absolute inset-0 bg-indigo-50/30"></div>
+                  <div className="w-full h-48 bg-white rounded-[32px] mb-10 relative overflow-hidden border border-slate-100 shadow-inner">
+                    <div className="absolute inset-0 bg-primary/5"></div>
                     <svg className="absolute inset-0 w-full h-full z-10 p-12" preserveAspectRatio="none" viewBox="0 0 400 200">
                       <path 
                         d="M50,150 C150,150 250,50 350,50" 
@@ -260,82 +260,66 @@ const MovingBooking = () => {
                         strokeLinecap="round" 
                         strokeWidth="4"
                       />
-                      <circle cx="50" cy="150" fill="white" r="8" stroke="#4f46e5" strokeWidth="3" />
-                      <circle cx="50" cy="150" fill="#4f46e5" r="3" />
-                      <circle cx="350" cy="50" fill="white" r="8" stroke="#4f46e5" strokeWidth="3" />
-                      <circle cx="350" cy="50" fill="#4f46e5" r="3" />
+                      <circle cx="50" cy="150" fill="white" r="10" stroke="#4f46e5" strokeWidth="4" />
+                      <circle cx="350" cy="50" fill="white" r="10" stroke="#4f46e5" strokeWidth="4" />
                     </svg>
                   </div>
 
-                  {/* Dynamic Calendar Widget */}
-                  <div className="bg-slate-50 dark:bg-slate-900 rounded-xl p-6 border border-slate-100 dark:border-slate-700">
+                  {/* Calendar Widget */}
+                  <div className="bg-white rounded-[32px] p-8 border border-slate-100 shadow-sm">
                     {(() => {
                       const daysInMonth = (year, month) => new Date(year, month + 1, 0).getDate();
                       const startDay = (year, month) => {
                         const day = new Date(year, month, 1).getDay();
-                        return day === 0 ? 6 : day - 1; // Adjust for LU-DI (Mon-Sun)
+                        return day === 0 ? 6 : day - 1; 
                       };
 
                       const year = viewDate.getFullYear();
                       const month = viewDate.getMonth();
                       const monthName = viewDate.toLocaleDateString('fr-FR', { month: 'long', year: 'numeric' });
-
-                      const prevMonth = () => setViewDate(new Date(year, month - 1, 1));
-                      const nextMonth = () => setViewDate(new Date(year, month + 1, 1));
-
-                      const prevDays = daysInMonth(year, month - 1);
                       const currentDays = daysInMonth(year, month);
                       const offset = startDay(year, month);
 
                       const days = [];
-                      // Padding from prev month
-                      for (let i = offset - 1; i >= 0; i--) {
-                        days.push({ day: prevDays - i, current: false });
-                      }
-                      // Current month days
-                      for (let i = 1; i <= currentDays; i++) {
-                        days.push({ day: i, current: true });
-                      }
+                      for (let i = 0; i < offset; i++) days.push({ day: '', current: false });
+                      for (let i = 1; i <= currentDays; i++) days.push({ day: i, current: true });
 
                       return (
                         <>
-                          <div className="flex items-center justify-between mb-6 px-2">
-                            <button onClick={prevMonth} type="button" className="p-2 hover:bg-slate-200 dark:hover:bg-slate-800 rounded-xl transition-all">
-                              <span className="material-symbols-outlined text-lg">chevron_left</span>
+                          <div className="flex items-center justify-between mb-8">
+                            <button onClick={() => setViewDate(new Date(year, month - 1, 1))} type="button" className="size-12 flex items-center justify-center hover:bg-slate-50 rounded-2xl transition-all border border-slate-50 text-slate-400">
+                              <span className="material-symbols-outlined">chevron_left</span>
                             </button>
-                            <span className="font-black text-slate-800 dark:text-white capitalize text-lg">{monthName}</span>
-                            <button onClick={nextMonth} type="button" className="p-2 hover:bg-slate-200 dark:hover:bg-slate-800 rounded-xl transition-all">
-                              <span className="material-symbols-outlined text-lg">chevron_right</span>
+                            <span className="font-black text-slate-900 uppercase tracking-widest text-lg">{monthName}</span>
+                            <button onClick={() => setViewDate(new Date(year, month + 1, 1))} type="button" className="size-12 flex items-center justify-center hover:bg-slate-50 rounded-2xl transition-all border border-slate-50 text-slate-400">
+                              <span className="material-symbols-outlined">chevron_right</span>
                             </button>
                           </div>
                           
-                          <div className="grid grid-cols-7 gap-2 text-center text-[10px] font-black text-slate-400 mb-4 uppercase tracking-widest">
+                          <div className="grid grid-cols-7 gap-2 text-center text-[10px] font-black text-slate-300 mb-6 uppercase tracking-[0.2em]">
                             {['lu', 'ma', 'me', 'je', 've', 'sa', 'di'].map(d => <div key={d}>{d}</div>)}
                           </div>
                           
-                          <div className="grid grid-cols-7 gap-2 text-center">
+                          <div className="grid grid-cols-7 gap-3 text-center">
                             {days.map((item, idx) => {
+                              if (!item.current) return <div key={idx}></div>;
                               const dateStr = `${year}-${(month + 1).toString().padStart(2, '0')}-${item.day.toString().padStart(2, '0')}`;
-                              const isSelected = item.current && bookingDate === dateStr;
-                              
-                              if (!item.current) {
-                                return <div key={idx} className="py-3 text-slate-300 dark:text-slate-700 text-sm font-medium">{item.day}</div>;
-                              }
+                              const isSelected = bookingDate === dateStr;
+                              const isPast = new Date(dateStr) < new Date().setHours(0,0,0,0);
                               
                               return (
                                 <button 
                                   key={idx}
                                   type="button"
-                                  disabled={new Date(dateStr) < new Date().setHours(0,0,0,0)}
+                                  disabled={isPast}
                                   onClick={() => setBookingDate(dateStr)}
-                                  className={`py-3 rounded-xl font-bold transition-all text-sm relative group ${
+                                  className={`aspect-square sm:h-12 flex items-center justify-center rounded-2xl font-black transition-all text-sm group ${
                                     isSelected 
-                                    ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-200 dark:shadow-none scale-105' 
-                                    : 'hover:bg-white dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300'
-                                  } disabled:opacity-20 disabled:cursor-not-allowed`}
+                                    ? 'bg-primary text-white shadow-xl shadow-primary/20 scale-110' 
+                                    : 'hover:bg-slate-50 text-slate-600'
+                                  } disabled:opacity-10`}
                                 >
                                   {item.day}
-                                  {isSelected && <span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-white rounded-full"></span>}
                                 </button>
                               );
                             })}
@@ -347,13 +331,13 @@ const MovingBooking = () => {
                 </section>
 
                 {/* Step 2: Items & Weight */}
-                <section className="mb-10">
-                  <div className="flex items-center gap-3 mb-6 text-indigo-600">
-                    <span className="material-symbols-outlined text-2xl">inventory_2</span>
-                    <h2 className="text-xl font-bold text-slate-900 dark:text-white">Détails des objets & Poids</h2>
+                <section className="mb-12 border-t border-slate-100 pt-12">
+                  <div className="flex items-center gap-4 mb-8 text-primary">
+                    <span className="material-symbols-outlined text-3xl font-black">inventory_2</span>
+                    <h2 className="text-2xl font-black text-slate-900 uppercase tracking-tight">Détails des objets & Poids</h2>
                   </div>
                   
-                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
                     {[
                       { icon: 'chair', label: 'Bois' },
                       { icon: 'grid_view', label: 'Verre' },
@@ -365,63 +349,56 @@ const MovingBooking = () => {
                         <button 
                           key={idx}
                           onClick={() => toggleItem(item.label)}
-                          className={`flex flex-col items-center justify-center p-4 border-2 rounded-xl transition-all ${
+                          className={`flex flex-col items-center justify-center p-6 border-2 rounded-[32px] transition-all ${
                             isSelected 
-                            ? 'border-indigo-600 bg-indigo-50 dark:bg-indigo-900/20 shadow-md' 
-                            : 'border-slate-100 dark:border-slate-700 bg-white dark:bg-slate-800 hover:border-slate-300'
+                            ? 'border-primary bg-white shadow-xl shadow-primary/5' 
+                            : 'border-white bg-white hover:border-slate-100 shadow-sm'
                           }`}
                         >
-                          <span className={`material-symbols-outlined text-3xl mb-2 ${isSelected ? 'text-indigo-600' : 'text-slate-400'}`}>
+                          <span className={`material-symbols-outlined text-4xl mb-3 ${isSelected ? 'text-primary' : 'text-slate-300'}`}>
                             {item.icon}
                           </span>
-                          <span className={`text-xs font-bold ${isSelected ? 'text-slate-900 dark:text-white' : 'text-slate-500'}`}>{item.label}</span>
-                          <div className={`mt-2 w-4 h-4 rounded-full flex items-center justify-center border ${
-                            isSelected ? 'bg-indigo-600 border-indigo-600' : 'border-slate-200 dark:border-slate-600'
-                          }`}>
-                            {isSelected && <span className="material-symbols-outlined text-[10px] text-white font-bold">check</span>}
-                          </div>
+                          <span className={`text-[10px] font-black uppercase tracking-widest ${isSelected ? 'text-slate-900' : 'text-slate-400'}`}>{item.label}</span>
                         </button>
                       );
                     })}
                   </div>
 
-                  <div className="space-y-6">
-                    <div>
-                      <label className="flex text-sm font-semibold text-slate-700 dark:text-slate-300 mb-4 justify-between">
-                        Estimation du poids <span>~ {weight} kg</span>
-                      </label>
-                      <input 
-                        className="w-full h-2 bg-slate-200 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer accent-indigo-600" 
-                        max="2000" min="0" step="100" type="range"
-                        value={weight}
-                        onChange={(e) => setWeight(parseInt(e.target.value))}
-                      />
-                      <div className="flex justify-between text-[10px] mt-2 text-slate-400 font-bold uppercase tracking-wider">
-                        <span>&lt; 100kg</span>
-                        <span>500kg</span>
-                        <span>1000kg</span>
-                        <span>1500kg</span>
-                        <span>2000kg+</span>
-                      </div>
+                  <div className="bg-white p-8 rounded-[32px] border border-slate-100 shadow-sm">
+                    <label className="flex text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-6 justify-between items-center">
+                      Estimation du poids <span className="text-primary text-lg font-black tracking-tight">{weight} <span className="text-xs uppercase">kg</span></span>
+                    </label>
+                    <input 
+                      className="w-full h-3 bg-slate-100 rounded-full appearance-none cursor-pointer accent-primary" 
+                      max="2000" min="0" step="100" type="range"
+                      value={weight}
+                      onChange={(e) => setWeight(parseInt(e.target.value))}
+                    />
+                    <div className="flex justify-between text-[10px] mt-4 text-slate-300 font-black uppercase tracking-widest">
+                      <span>MIN</span>
+                      <span>1000kg</span>
+                      <span>MAX</span>
                     </div>
                   </div>
                 </section>
 
                 {/* Step 3: Labor & Estimation */}
-                <section className="border-t border-slate-100 dark:border-slate-700 pt-8">
-                  <div className="flex items-center gap-3 mb-6 text-indigo-600">
-                    <span className="material-symbols-outlined text-2xl">payments</span>
-                    <h2 className="text-xl font-bold text-slate-900 dark:text-white">Estimation du Budget</h2>
+                <section className="border-t border-slate-100 pt-12">
+                  <div className="flex items-center gap-4 mb-8 text-primary">
+                    <span className="material-symbols-outlined text-3xl font-black">payments</span>
+                    <h2 className="text-2xl font-black text-slate-900 uppercase tracking-tight">Estimation & Réservation</h2>
                   </div>
                   
-                  <div className="bg-indigo-50 dark:bg-indigo-900/20 border border-indigo-100 dark:border-indigo-800 rounded-xl p-6 mb-8 flex flex-col md:flex-row items-center justify-between gap-4">
-                    <div>
-                      <p className="text-sm font-semibold text-indigo-800 dark:text-indigo-300 uppercase tracking-wide">Tarif estimé tout inclus</p>
-                      <p className="text-xs text-indigo-600 dark:text-indigo-400 mt-1">Distance, volume et assurance inclus.</p>
+                  <div className="bg-primary p-8 rounded-[40px] text-white shadow-2xl shadow-primary/20 flex flex-col md:flex-row items-center justify-between gap-8 mb-10 overflow-hidden relative">
+                    <div className="absolute top-0 right-0 size-64 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+                    <div className="relative z-10">
+                      <p className="text-[10px] font-black uppercase tracking-[0.2em] opacity-80 mb-2">Tarif estimé tout inclus</p>
+                      <h4 className="text-4xl md:text-5xl font-black tracking-tight">{totalPrice.toLocaleString()} DA</h4>
                     </div>
-                    <div className="text-center md:text-right">
-                      <span className="text-4xl font-black text-indigo-600 dark:text-indigo-400">{totalPrice.toLocaleString()} DA</span>
-                      <span className="block text-[10px] text-indigo-500 font-bold uppercase tracking-widest mt-1">Paiement sécurisé</span>
+                    <div className="relative z-10 text-center md:text-right">
+                      <p className="text-xs font-bold leading-relaxed opacity-90 max-w-[200px]">
+                        Comprend la logistique, la main-d'œuvre et l'assurance protection.
+                      </p>
                     </div>
                   </div>
 
@@ -429,22 +406,22 @@ const MovingBooking = () => {
                     <button 
                       onClick={handleBooking}
                       disabled={loading}
-                      className="grow bg-indigo-600 hover:bg-indigo-700 text-white font-black py-4 px-8 rounded-lg shadow-lg shadow-indigo-200 transition-all flex items-center justify-center gap-2 disabled:opacity-70"
+                      className="grow bg-primary hover:bg-primary/90 text-white font-black py-5 px-10 rounded-2xl shadow-xl shadow-primary/20 transition-all flex items-center justify-center gap-4 active:scale-95 disabled:opacity-70"
                     >
                       {loading ? (
                         <>
-                          <span className="animate-spin h-5 w-5 border-2 border-white/30 border-t-white rounded-full"></span>
+                          <span className="animate-spin h-6 w-6 border-4 border-white/30 border-t-white rounded-full"></span>
                           Traitement...
                         </>
                       ) : (
                         <>
-                          <span>Réserver mon déménagement</span>
-                          <span className="material-symbols-outlined">arrow_forward</span>
+                          <span className="uppercase tracking-widest text-sm">Confirmer & Réserver</span>
+                          <span className="material-symbols-outlined text-xl">arrow_forward</span>
                         </>
                       )}
                     </button>
-                    <button className="px-8 py-4 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 font-bold rounded-lg transition-all">
-                      Enregistrer
+                    <button className="px-10 py-5 bg-white border border-slate-100 text-slate-400 font-black uppercase tracking-widest text-xs rounded-2xl hover:bg-slate-50 shadow-sm transition-all">
+                      Plus tard
                     </button>
                   </div>
                 </section>
@@ -452,26 +429,30 @@ const MovingBooking = () => {
             </div>
 
             {/* Sidebar Info */}
-            <div className="space-y-6">
-              <div className="bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 p-6">
-                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-6 leading-tight">Pourquoi nous ?</h3>
-                <ul className="space-y-6">
+            <div className="space-y-8">
+              <div className="bg-slate-50 rounded-[40px] border border-slate-100 p-8 md:p-10">
+                <h3 className="text-xl font-black text-slate-900 mb-8 uppercase tracking-tight">Pourquoi nous ?</h3>
+                <ul className="space-y-8">
                   {[
-                    { icon: 'verified', title: 'Déménageurs Certifiés', desc: 'Tous nos partenaires sont rigoureusement vérifiés et assurés.' },
-                    { icon: 'history', title: 'Suivi Temps Réel', desc: "Suivez l'arrivée de votre équipe directement sur l'app." },
-                    { icon: 'support_agent', title: 'Support Dédié 7j/7', desc: 'Une équipe disponible pour vous accompagner à chaque étape.' }
+                    { icon: 'verified', title: 'Certifiés', desc: 'Partenaires rigoureusement vérifiés et assurés.' },
+                    { icon: 'shutter_speed', title: 'Rapidité', desc: "Intervention ponctuelle et efficace." },
+                    { icon: 'support_agent', title: 'Accompagnement', desc: 'Support dédié 7j/7 pour votre sérénité.' }
                   ].map((feature, idx) => (
-                    <li key={idx} className="flex gap-4">
-                      <div className="shrink-0 w-10 h-10 rounded-full bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 flex items-center justify-center">
-                        <span className="material-symbols-outlined">{feature.icon}</span>
+                    <li key={idx} className="flex gap-5 group">
+                      <div className="shrink-0 size-12 rounded-2xl bg-white shadow-sm flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+                        <span className="material-symbols-outlined text-2xl">{feature.icon}</span>
                       </div>
                       <div>
-                        <h4 className="font-bold text-sm text-slate-800 dark:text-slate-200">{feature.title}</h4>
-                        <p className="text-xs text-slate-500 dark:text-slate-400 mt-1 leading-relaxed">{feature.desc}</p>
+                        <h4 className="font-black text-slate-800 uppercase text-xs mb-1">{feature.title}</h4>
+                        <p className="text-xs text-slate-500 font-medium leading-relaxed">{feature.desc}</p>
                       </div>
                     </li>
                   ))}
                 </ul>
+              </div>
+              
+              <div className="p-1 text-center">
+                <p className="text-[10px] font-black text-slate-300 uppercase tracking-widest">Sécurisé par Mihnati Protection</p>
               </div>
             </div>
           </div>

@@ -199,61 +199,65 @@ const RequestQuote = () => {
   }
 
   return (
-    <div className="min-h-screen bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 w-full flex-col font-['Outfit',sans-serif]">
+    <div className="min-h-screen bg-white text-slate-900 w-full flex-col font-['Outfit',sans-serif]">
       
       {/* Top Navigation Bar */}
-      <header className="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-6 py-4 md:px-20 lg:px-40 sticky top-0 z-50">
+      <header className="flex items-center justify-between border-b border-slate-50 bg-white px-6 py-6 md:px-20 lg:px-40 sticky top-0 z-50 shadow-sm">
         <div className="flex items-center gap-4">
-          <div className="size-8 bg-blue-600 rounded-lg flex items-center justify-center text-white">
-            <span className="material-symbols-outlined">construction</span>
+          <div className="size-12 bg-primary/5 rounded-2xl flex items-center justify-center text-primary border border-primary/10">
+            <span className="material-symbols-outlined font-black">construction</span>
           </div>
-          <h2 className="text-xl font-bold tracking-tight">Demander un devis</h2>
+          <h2 className="text-xl font-black tracking-tight uppercase">Demander un devis</h2>
         </div>
-        <button onClick={() => navigate(-1)} className="flex items-center justify-center rounded-full h-10 w-10 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 transition-colors">
-          <span className="material-symbols-outlined text-slate-600 dark:text-slate-300">close</span>
+        <button onClick={() => navigate(-1)} className="flex items-center justify-center rounded-2xl h-12 w-12 bg-slate-50 hover:bg-slate-100 transition-colors border border-slate-100">
+          <span className="material-symbols-outlined text-slate-400">close</span>
         </button>
       </header>
 
-      <main className="flex-1 px-4 py-8 md:px-20 lg:px-40">
-        <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-8">
+      <main className="flex-1 px-4 py-16 md:px-20 lg:px-40">
+        <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-16">
           
           {/* Main Form Section */}
-          <div className="flex-1 space-y-8">
+          <div className="flex-1 space-y-12">
             <section>
-              <h1 className="text-3xl font-black mb-2 text-slate-900 dark:text-white">Parlez-nous de votre projet</h1>
-              <p className="text-slate-500 dark:text-slate-400 text-lg">Remplissez ce formulaire pour recevoir un devis personnalisé.</p>
+              <h1 className="text-4xl md:text-5xl font-black mb-4 text-slate-900 uppercase tracking-tight">Parlez-nous de <br /><span className="text-primary italic">votre projet</span></h1>
+              <p className="text-slate-500 text-lg font-bold">Remplissez ce formulaire pour recevoir un devis personnalisé sous 24h.</p>
               
               {searchParams.get('artisanName') && (
-                <div className="mt-6 p-4 bg-blue-50 border-l-4 border-blue-600 rounded-r-xl flex items-center gap-3">
-                  <span className="material-symbols-outlined text-blue-600">person</span>
-                  <p className="text-blue-800 font-bold">
-                    Vous demandez un devis à : <span className="underline">{decodeURIComponent(searchParams.get('artisanName'))}</span>
+                <div className="mt-8 p-6 bg-primary/5 border-l-4 border-primary rounded-r-[32px] flex items-center gap-4 shadow-sm">
+                  <div className="size-10 bg-white rounded-xl flex items-center justify-center text-primary shadow-sm">
+                    <span className="material-symbols-outlined">person</span>
+                  </div>
+                  <p className="text-primary font-black uppercase tracking-tight text-sm">
+                    À l'attention de : <span className="underline decoration-2 underline-offset-4">{decodeURIComponent(searchParams.get('artisanName'))}</span>
                   </p>
                 </div>
               )}
             </section>
             
-            <form className="space-y-10" onSubmit={handleSubmit}>
+            <form className="space-y-12" onSubmit={handleSubmit}>
               
               {/* Project Details */}
-              <div className="space-y-6">
-                <h3 className="text-lg font-bold border-b border-slate-100 dark:border-slate-800 pb-2 text-slate-900 dark:text-white">1. Détails du projet</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <label className="flex flex-col gap-2">
-                    <span className="text-sm font-semibold text-slate-700 dark:text-slate-300">Titre du projet</span>
+              <div className="space-y-8 bg-slate-50 p-8 md:p-10 rounded-[40px] border border-slate-100">
+                <h3 className="text-xs font-black text-slate-400 uppercase tracking-[0.3em] mb-4 flex items-center gap-3">
+                  <span className="size-6 bg-primary text-white rounded-lg flex items-center justify-center text-[10px]">1</span> DÉTAILS DU PROJET
+                </h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <label className="flex flex-col gap-3">
+                    <span className="text-sm font-black text-slate-900 uppercase tracking-tight">Titre du projet</span>
                     <input 
                       type="text" 
                       required
                       placeholder="Ex: Rénovation salle de bain" 
-                      className="px-4 rounded-xl border-2 border-slate-100 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:border-blue-600 focus:bg-white dark:focus:bg-slate-800 outline-none h-14 transition-all" 
+                      className="px-6 rounded-2xl border border-slate-100 bg-white text-slate-900 focus:border-primary/30 outline-none h-16 transition-all font-bold shadow-sm" 
                       value={formData.title}
                       onChange={(e) => setFormData({...formData, title: e.target.value})}
                     />
                   </label>
-                  <label className="flex flex-col gap-2">
-                    <span className="text-sm font-semibold text-slate-700 dark:text-slate-300">Catégorie</span>
+                  <label className="flex flex-col gap-3">
+                    <span className="text-sm font-black text-slate-900 uppercase tracking-tight">Catégorie</span>
                     <select 
-                      className="px-4 rounded-xl border-2 border-slate-100 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:border-blue-600 focus:bg-white dark:focus:bg-slate-800 outline-none h-14 transition-all"
+                      className="px-6 rounded-2xl border border-slate-100 bg-white text-slate-900 focus:border-primary/30 outline-none h-16 transition-all font-bold shadow-sm"
                       value={formData.category_id}
                       onChange={(e) => setFormData({...formData, category_id: e.target.value})}
                     >
@@ -282,17 +286,17 @@ const RequestQuote = () => {
                       ))}
                     </select>
                   </label>
-                  <label className="flex flex-col gap-2 md:col-span-2">
-                    <span className="text-sm font-semibold text-slate-700 dark:text-slate-300">Numéro de téléphone</span>
+                  <label className="flex flex-col gap-3 md:col-span-2">
+                    <span className="text-sm font-black text-slate-900 uppercase tracking-tight">Téléphone</span>
                     <div className="relative">
-                      <span className="absolute inset-y-0 left-4 flex items-center text-slate-400">
+                      <span className="absolute inset-y-0 left-6 flex items-center text-slate-300">
                         <span className="material-symbols-outlined">call</span>
                       </span>
                       <input 
                         type="tel" 
                         required
                         placeholder="05 XX XX XX XX" 
-                        className="w-full pl-12 pr-4 rounded-xl border-2 border-slate-100 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:border-blue-600 focus:bg-white dark:focus:bg-slate-800 outline-none h-14 transition-all" 
+                        className="w-full pl-14 pr-6 rounded-2xl border border-slate-100 bg-white text-slate-900 focus:border-primary/30 outline-none h-16 transition-all font-bold shadow-sm" 
                         value={formData.phone}
                         onChange={(e) => setFormData({...formData, phone: e.target.value})}
                       />
@@ -302,15 +306,17 @@ const RequestQuote = () => {
               </div>
 
               {/* Description Section */}
-              <div className="space-y-6">
-                <h3 className="text-lg font-bold border-b border-slate-100 dark:border-slate-800 pb-2 text-slate-900 dark:text-white">2. Description détaillée</h3>
-                <label className="flex flex-col gap-2">
-                  <span className="text-sm font-semibold text-slate-700 dark:text-slate-300">Décrivez votre besoin</span>
+              <div className="space-y-8 bg-slate-50 p-8 md:p-10 rounded-[40px] border border-slate-100">
+                <h3 className="text-xs font-black text-slate-400 uppercase tracking-[0.3em] mb-4 flex items-center gap-3">
+                  <span className="size-6 bg-primary text-white rounded-lg flex items-center justify-center text-[10px]">2</span> VOTRE BESOIN
+                </h3>
+                <label className="flex flex-col gap-3">
+                  <span className="text-sm font-black text-slate-900 uppercase tracking-tight">Description des travaux</span>
                   <textarea 
-                    rows="4" 
+                    rows="5" 
                     required
-                    placeholder="Veuillez donner le plus de détails possible sur les travaux à réaliser..." 
-                    className="rounded-xl border-2 border-slate-100 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:border-blue-600 outline-none p-4 transition-all"
+                    placeholder="Décrivez précisément votre projet..." 
+                    className="rounded-[32px] border border-slate-100 bg-white text-slate-900 focus:border-primary/30 outline-none p-8 transition-all font-bold shadow-sm"
                     value={formData.description}
                     onChange={(e) => setFormData({...formData, description: e.target.value})}
                   ></textarea>
@@ -318,14 +324,16 @@ const RequestQuote = () => {
               </div>
 
               {/* Location */}
-              <div className="space-y-6">
-                <h3 className="text-lg font-bold border-b border-slate-100 dark:border-slate-800 pb-2 text-slate-900 dark:text-white">3. Localisation</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <label className="flex flex-col gap-2">
-                    <span className="text-sm font-semibold text-slate-700 dark:text-slate-300">Wilaya</span>
+              <div className="space-y-8 bg-slate-50 p-8 md:p-10 rounded-[40px] border border-slate-100">
+                <h3 className="text-xs font-black text-slate-400 uppercase tracking-[0.3em] mb-4 flex items-center gap-3">
+                  <span className="size-6 bg-primary text-white rounded-lg flex items-center justify-center text-[10px]">3</span> LOCALISATION
+                </h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <label className="flex flex-col gap-3">
+                    <span className="text-sm font-black text-slate-900 uppercase tracking-tight">Wilaya</span>
                     <select 
                       required
-                      className="w-full px-4 rounded-xl border-2 border-slate-100 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:border-blue-600 focus:bg-white dark:focus:bg-slate-800 outline-none h-14 transition-all"
+                      className="w-full px-6 rounded-2xl border border-slate-100 bg-white text-slate-900 focus:border-primary/30 outline-none h-16 transition-all font-bold shadow-sm"
                       value={formData.wilaya_id}
                       onChange={handleWilayaChange}
                     >
@@ -335,12 +343,12 @@ const RequestQuote = () => {
                       ))}
                     </select>
                   </label>
-                  <label className="flex flex-col gap-2">
-                    <span className="text-sm font-semibold text-slate-700 dark:text-slate-300">Commune</span>
+                  <label className="flex flex-col gap-3">
+                    <span className="text-sm font-black text-slate-900 uppercase tracking-tight">Commune</span>
                     <select 
                       required
                       disabled={!formData.wilaya_id}
-                      className="w-full px-4 rounded-xl border-2 border-slate-100 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:border-blue-600 focus:bg-white dark:focus:bg-slate-800 outline-none h-14 transition-all disabled:opacity-50"
+                      className="w-full px-6 rounded-2xl border border-slate-100 bg-white text-slate-900 focus:border-primary/30 outline-none h-16 transition-all font-bold shadow-sm disabled:opacity-50"
                       value={formData.commune_id}
                       onChange={(e) => setFormData({...formData, commune_id: e.target.value})}
                     >
@@ -350,17 +358,17 @@ const RequestQuote = () => {
                       ))}
                     </select>
                   </label>
-                  <label className="flex flex-col gap-2 md:col-span-2">
-                    <span className="text-sm font-semibold text-slate-700 dark:text-slate-300">Adresse détaillée</span>
+                  <label className="flex flex-col gap-3 md:col-span-2">
+                    <span className="text-sm font-black text-slate-900 uppercase tracking-tight">Adresse exacte</span>
                     <div className="relative">
-                      <span className="absolute inset-y-0 left-4 flex items-center text-slate-400">
+                      <span className="absolute inset-y-0 left-6 flex items-center text-slate-300">
                         <span className="material-symbols-outlined">location_on</span>
                       </span>
                       <input 
                         type="text" 
                         required
                         placeholder="Numéro, rue, quartier..." 
-                        className="w-full pl-12 pr-4 rounded-xl border-2 border-slate-100 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:border-blue-600 focus:bg-white dark:focus:bg-slate-800 outline-none h-14 transition-all" 
+                        className="w-full pl-14 pr-6 rounded-2xl border border-slate-100 bg-white text-slate-900 focus:border-primary/30 outline-none h-16 transition-all font-bold shadow-sm" 
                         value={formData.address}
                         onChange={(e) => setFormData({...formData, address: e.target.value})}
                       />
@@ -370,27 +378,29 @@ const RequestQuote = () => {
               </div>
 
               {/* Budget & Timing */}
-              <div className="space-y-6">
-                <h3 className="text-lg font-bold border-b border-slate-100 dark:border-slate-800 pb-2 text-slate-900 dark:text-white">4. Budget et Délai</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <label className="flex flex-col gap-2">
-                    <span className="text-sm font-semibold text-slate-700 dark:text-slate-300">Budget estimé (DA)</span>
+              <div className="space-y-8 bg-slate-50 p-8 md:p-10 rounded-[40px] border border-slate-100">
+                <h3 className="text-xs font-black text-slate-400 uppercase tracking-[0.3em] mb-4 flex items-center gap-3">
+                  <span className="size-6 bg-primary text-white rounded-lg flex items-center justify-center text-[10px]">4</span> BUDGET & DÉLAI
+                </h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <label className="flex flex-col gap-3">
+                    <span className="text-sm font-black text-slate-900 uppercase tracking-tight">Budget (DA)</span>
                     <input 
                       type="number" 
                       required
                       placeholder="Ex: 15000" 
-                      className="px-4 rounded-xl border-2 border-slate-100 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:border-blue-600 outline-none h-14 transition-all" 
+                      className="px-6 rounded-2xl border border-slate-100 bg-white text-slate-900 focus:border-primary/30 outline-none h-16 transition-all font-bold shadow-sm" 
                       value={formData.budget}
                       onChange={(e) => setFormData({...formData, budget: e.target.value})}
                     />
                   </label>
-                  <label className="flex flex-col gap-2">
-                    <span className="text-sm font-semibold">Date d'intervention souhaitée</span>
+                  <label className="flex flex-col gap-3">
+                    <span className="text-sm font-black text-slate-900 uppercase tracking-tight">Délai souhaité</span>
                     <input 
                       type="date" 
                       required
                       min={new Date().toISOString().split('T')[0]}
-                      className="px-4 rounded-xl border-2 border-slate-100 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:border-blue-600 outline-none h-14 transition-all" 
+                      className="px-6 rounded-2xl border border-slate-100 bg-white text-slate-900 focus:border-primary/30 outline-none h-16 transition-all font-bold shadow-sm" 
                       value={formData.date}
                       onChange={(e) => setFormData({...formData, date: e.target.value})}
                     />
@@ -401,66 +411,57 @@ const RequestQuote = () => {
               <button 
                 type="submit" 
                 disabled={loading}
-                className="w-full bg-linear-to-r from-blue-600 to-indigo-700 text-white font-black py-5 rounded-xl hover:shadow-xl hover:shadow-blue-600/30 transition-all active:scale-[0.98] text-xl disabled:opacity-70 flex items-center justify-center gap-3"
+                className="w-full bg-primary text-white font-black py-6 rounded-3xl hover:shadow-2xl hover:shadow-primary/20 transition-all active:scale-[0.98] text-xl disabled:opacity-70 flex items-center justify-center gap-4 uppercase tracking-widest"
               >
                 {loading ? (
                   <>
                     <span className="animate-spin h-6 w-6 border-4 border-white/30 border-t-white rounded-full"></span>
-                    Envoi en cours...
+                    Envoi...
                   </>
                 ) : (
-                  'Envoyer ma demande de devis'
+                  <>
+                    <span>Envoyer ma demande</span>
+                    <span className="material-symbols-outlined">send</span>
+                  </>
                 )}
               </button>
             </form>
           </div>
 
-          {/* Sidebar: Artisan Summary */}
-          <aside className="w-full lg:w-[380px]">
-            <div className="sticky top-24 space-y-6">
-              <div className="bg-white rounded-3xl border border-slate-100 p-8 shadow-xl shadow-slate-200/50">
-                <div className="flex items-center gap-4 mb-8">
-                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
-                    <span className="material-symbols-outlined text-blue-600 text-3xl">construction</span>
+          {/* Sidebar: Summary */}
+          <aside className="w-full lg:w-[400px]">
+            <div className="sticky top-32 space-y-8">
+              <div className="bg-slate-50 rounded-[50px] border border-slate-100 p-10 md:p-12">
+                <div className="flex items-center gap-5 mb-10">
+                  <div className="size-16 bg-white rounded-3xl flex items-center justify-center text-primary shadow-xl shadow-slate-200">
+                    <span className="material-symbols-outlined text-3xl font-black">lock</span>
                   </div>
                   <div>
-                    <h4 className="font-black text-xl text-slate-900">Demande Sécurisée</h4>
-                    <p className="text-sm text-slate-500">Service 100% Gratuit</p>
+                    <h4 className="font-black text-xl text-slate-900 uppercase tracking-tight">Sécurisé</h4>
+                    <p className="text-xs font-black text-slate-400 uppercase tracking-widest">Garantie Mihnati</p>
                   </div>
                 </div>
 
-                <div className="space-y-6">
-                  <div className="flex items-start gap-4">
-                    <div className="mt-1 bg-emerald-100 text-emerald-600 p-1.5 rounded-lg flex items-center justify-center">
-                      <span className="material-symbols-outlined text-sm font-bold">check</span>
+                <div className="space-y-8">
+                  {[
+                    { icon: 'verified', title: 'Experts Vérifiés', desc: 'Certification rigoureuse', color: 'text-emerald-500' },
+                    { icon: 'bolt', title: 'Moins de 24h', desc: 'Réponse ultra rapide', color: 'text-amber-500' },
+                    { icon: 'payments', title: 'Prix Juste', desc: 'Devis sans engagement', color: 'text-blue-500' }
+                  ].map((feat, idx) => (
+                    <div key={idx} className="flex items-start gap-5">
+                      <div className={`mt-1 bg-white p-2 rounded-xl flex items-center justify-center shadow-sm ${feat.color}`}>
+                        <span className="material-symbols-outlined text-sm font-black">{feat.icon}</span>
+                      </div>
+                      <div>
+                        <p className="text-sm font-black text-slate-900 uppercase tracking-tight">{feat.title}</p>
+                        <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">{feat.desc}</p>
+                      </div>
                     </div>
-                    <div>
-                      <p className="text-sm font-bold text-slate-900">Artisans Vérifiés</p>
-                      <p className="text-xs text-slate-500">Tous nos experts sont certifiés</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-4">
-                    <div className="mt-1 bg-blue-100 text-blue-600 p-1.5 rounded-lg flex items-center justify-center">
-                      <span className="material-symbols-outlined text-sm font-bold">bolt</span>
-                    </div>
-                    <div>
-                      <p className="text-sm font-bold text-slate-900">Réponse Rapide</p>
-                      <p className="text-xs text-slate-500">Devis reçu sous 24h en moyenne</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-4">
-                    <div className="mt-1 bg-purple-100 text-purple-600 p-1.5 rounded-lg flex items-center justify-center">
-                      <span className="material-symbols-outlined text-sm font-bold">verified_user</span>
-                    </div>
-                    <div>
-                      <p className="text-sm font-bold text-slate-900">Paiement Sécurisé</p>
-                      <p className="text-xs text-slate-500">Protection acheteur incluse</p>
-                    </div>
-                  </div>
+                  ))}
                 </div>
 
-                <div className="mt-10 p-6 bg-slate-50 rounded-2xl italic text-slate-600 text-sm border-l-4 border-blue-600">
-                  "Nous vous mettons en relation avec les meilleurs artisans locaux pour garantir la réussite de vos projets."
+                <div className="mt-12 p-8 bg-white rounded-3xl italic text-slate-500 text-sm font-bold border-l-4 border-primary shadow-sm leading-relaxed">
+                  "Confiez-nous vos projets, nous trouvons pour vous les meilleurs talents algériens."
                 </div>
               </div>
             </div>
@@ -469,8 +470,8 @@ const RequestQuote = () => {
         </div>
       </main>
 
-      <footer className="mt-20 border-t border-slate-100 py-12 text-center text-slate-400 text-sm">
-        <p>© 2026 BricoloPro Algérie - La plateforme n°1 des artisans.</p>
+      <footer className="mt-20 border-t border-slate-50 py-16 text-center">
+        <p className="text-[10px] font-black text-slate-300 uppercase tracking-[0.3em]">© 2026 Mihnati Algérie — L'excellence artisanale</p>
       </footer>
       
     </div>

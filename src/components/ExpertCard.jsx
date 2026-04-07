@@ -3,50 +3,48 @@ import { Link } from 'react-router-dom';
 
 const ExpertCard = ({ id, name, role, rating, reviews, location, availability, price, image, isVerified }) => {
   return (
-    <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden hover:shadow-xl transition-all group shrink-0">
-      <div className="p-6">
-        <div className="flex items-start justify-between mb-4">
+    <div className="bg-white border border-slate-100 rounded-[32px] overflow-hidden hover:shadow-2xl hover:shadow-primary/5 transition-all group shrink-0">
+      <div className="p-8">
+        <div className="flex items-start justify-between mb-6">
           <div className="relative">
-            <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-primary/20 bg-slate-100">
-              <img src={image || 'https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=60'} alt={`Photo de profil ${role}`} className="w-full h-full object-cover" />
+            <div className="size-20 rounded-3xl overflow-hidden border-4 border-slate-50 bg-slate-50 shadow-sm">
+              <img src={image || 'https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=60'} alt={name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
             </div>
             {isVerified && (
-              <div className="absolute -bottom-1 -right-1 bg-blue-600 text-white p-0.5 rounded-full border-2 border-white dark:border-slate-900">
-                <span className="material-symbols-outlined text-[14px] font-bold">verified</span>
+              <div className="absolute -bottom-2 -right-2 bg-emerald-500 text-white p-1 rounded-xl border-4 border-white shadow-lg">
+                <span className="material-symbols-outlined text-sm font-black">verified</span>
               </div>
             )}
           </div>
           <div className="text-right">
-            <div className="flex items-center gap-1 text-sm font-bold text-slate-900 dark:text-white justify-end">
-              {rating} <span className="material-symbols-outlined text-yellow-400 text-sm fill-current">star</span>
+            <div className="flex items-center gap-1 text-sm font-black text-slate-900 justify-end">
+              {rating} <span className="material-symbols-outlined text-yellow-400 text-base fill-current">star</span>
             </div>
-            <span className="text-xs text-slate-500">({reviews} avis)</span>
+            <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest">{reviews} Avis</span>
           </div>
         </div>
         <div>
-          <h3 className="font-bold text-lg text-slate-900 dark:text-white group-hover:text-blue-600 transition-colors uppercase">{name}</h3>
-          <p className="text-sm text-blue-600 font-medium mb-3">{role}</p>
-          <div className="flex items-center gap-4 text-xs text-slate-500 mb-6">
-            <span className="flex items-center gap-1"><span className="material-symbols-outlined text-xs">location_on</span> {location}</span>
-            <span className="flex items-center gap-1 font-bold">
-              {availability === 'Disponible' ? (
-                <><span className="material-symbols-outlined text-xs text-green-500">circle</span> {availability}</>
-              ) : (
-                <><span className="material-symbols-outlined text-xs">schedule</span> {availability}</>
-              )}
+          <h3 className="font-black text-xl text-slate-900 mb-1 tracking-tight uppercase">{name}</h3>
+          <p className="text-sm text-primary font-bold mb-4 uppercase tracking-tight">{role}</p>
+          <div className="flex flex-wrap items-center gap-3 text-[10px] font-black uppercase tracking-widest text-slate-400 mb-8">
+            <span className="flex items-center gap-1.5 bg-slate-50 px-3 py-1.5 rounded-full border border-slate-100">
+              <span className="material-symbols-outlined text-sm">location_on</span> {location}
+            </span>
+            <span className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full border ${availability === 'Disponible' ? 'bg-emerald-50 border-emerald-100 text-emerald-600' : 'bg-slate-50 border-slate-100'}`}>
+              <span className="material-symbols-outlined text-sm">{availability === 'Disponible' ? 'circle' : 'schedule'}</span> {availability}
             </span>
           </div>
         </div>
-        <div className="flex items-center justify-between pt-4 border-t border-slate-100 dark:border-slate-800">
+        <div className="flex items-center justify-between pt-6 border-t border-slate-50">
           <div>
-            <span className="text-xs text-slate-500">À partir de</span>
-            <p className="font-bold text-slate-900 dark:text-white">{price} DA<span className="text-xs font-normal">/h</span></p>
+            <span className="text-[10px] font-black text-slate-300 uppercase tracking-widest leading-none">A partir de</span>
+            <p className="font-black text-xl text-slate-900 leading-none mt-1">{price} DA</p>
           </div>
           <Link 
             to={`/artisan/${id}`} 
-            className="bg-slate-100 dark:bg-slate-800 text-blue-600 px-4 py-2 rounded-lg font-bold text-sm hover:bg-blue-600 hover:text-white transition-all"
+            className="size-12 bg-slate-50 text-slate-400 rounded-2xl flex items-center justify-center hover:bg-primary hover:text-white transition-all shadow-sm border border-slate-100"
           >
-            Voir profil
+            <span className="material-symbols-outlined font-black">arrow_forward</span>
           </Link>
         </div>
       </div>

@@ -31,10 +31,9 @@ const Navbar = () => {
   ];
 
   return (
-    <header className="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-800 px-6 md:px-20 py-4 bg-white dark:bg-slate-900 sticky top-0 z-50">
-      <Link to="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity z-50">
-        <img src={logo} alt="Mihnati Logo" className="h-8 md:h-10 w-auto object-contain" />
-        <h2 className="text-slate-900 dark:text-slate-100 text-xl font-bold leading-tight tracking-tight">Mihnati</h2>
+    <header className="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-100 px-6 md:px-20 py-4 bg-white sticky top-0 z-50">
+      <Link to="/" className="flex items-center hover:opacity-80 transition-opacity z-50 bg-white rounded-2xl px-3 py-1.5 shadow-sm border border-slate-50">
+        <img src={logo} alt="Mihnati Logo" className="h-8 md:h-11 w-auto object-contain" />
       </Link>
 
       {/* Desktop Navigation */}
@@ -42,7 +41,7 @@ const Navbar = () => {
         {navLinks.map((link) => (
           <Link 
             key={link.to} 
-            className="text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 text-sm font-medium transition-colors" 
+            className="text-slate-600 hover:text-primary text-sm font-bold transition-colors uppercase tracking-tight" 
             to={link.to}
           >
             {link.name}
@@ -58,17 +57,17 @@ const Navbar = () => {
                 to={user.role === 'artisan' ? '/dashboard/artisan' : '/dashboard/client/inbox'} 
                 className="flex items-center gap-2 hover:opacity-80 transition-opacity"
               >
-                <div className="w-9 h-9 rounded-full bg-indigo-100 dark:bg-indigo-900/30 flex items-center justify-center text-indigo-600 border border-indigo-200">
+                <div className="w-9 h-9 rounded-full bg-slate-50 flex items-center justify-center text-primary border border-slate-100 shadow-sm">
                   <span className="material-symbols-outlined text-xl">account_circle</span>
                 </div>
                 <div className="flex flex-col items-start leading-tight">
                   <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest">{user.role}</span>
-                  <span className="text-sm font-bold text-slate-900 dark:text-slate-100 hidden lg:inline">{user.name}</span>
+                  <span className="text-sm font-bold text-slate-900 hidden lg:inline">{user.name}</span>
                 </div>
               </Link>
               <button 
                 onClick={handleLogout}
-                className="text-slate-400 hover:text-red-500 p-2 transition-colors"
+                className="text-slate-300 hover:text-red-500 p-2 transition-colors"
                 title="Déconnexion"
               >
                 <span className="material-symbols-outlined text-xl leading-none">logout</span>
@@ -76,11 +75,11 @@ const Navbar = () => {
             </div>
           ) : (
             <div className="flex items-center gap-3">
-               <Link to="/login/artisan" className="hidden lg:flex items-center gap-2 px-4 py-2 text-slate-600 hover:text-orange-600 transition-all font-bold text-sm">
+               <Link to="/login/artisan" className="hidden lg:flex items-center gap-2 px-4 py-2 text-slate-500 hover:text-primary transition-all font-bold text-sm">
                   <span className="material-symbols-outlined text-xl">construction</span>
                   Espace Artisan
                </Link>
-               <Link to="/login/client" className="flex min-w-[120px] bg-indigo-600 text-white rounded-xl h-11 px-6 items-center justify-center font-black text-sm shadow-xl shadow-indigo-600/20 hover:bg-indigo-700 transition-all active:scale-95">
+               <Link to="/login/client" className="flex min-w-[120px] bg-primary text-white rounded-xl h-11 px-6 items-center justify-center font-black text-sm shadow-xl shadow-primary/20 hover:bg-primary/90 transition-all active:scale-95">
                   Connexion
                </Link>
             </div>
@@ -89,7 +88,7 @@ const Navbar = () => {
 
         {/* Mobile Menu Toggle */}
         <button 
-          className="md:hidden p-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors"
+          className="md:hidden p-2 text-slate-500 hover:bg-slate-50 rounded-lg transition-colors"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           <span className="material-symbols-outlined text-2xl">
@@ -100,12 +99,12 @@ const Navbar = () => {
 
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
-        <div className="fixed inset-0 bg-white dark:bg-slate-900 z-40 md:hidden flex flex-col pt-24 px-6 gap-6 animate-in slide-in-from-top duration-300">
+        <div className="fixed inset-0 bg-white z-40 md:hidden flex flex-col pt-24 px-6 gap-6 animate-in slide-in-from-top duration-300">
           <nav className="flex flex-col gap-4">
             {navLinks.map((link) => (
               <Link 
                 key={link.to} 
-                className="text-xl font-bold text-slate-900 dark:text-white border-b border-slate-100 dark:border-slate-800 pb-4" 
+                className="text-xl font-bold text-slate-900 border-b border-slate-50 pb-4" 
                 to={link.to}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
@@ -119,15 +118,15 @@ const Navbar = () => {
               <>
                 <Link 
                   to={user.role === 'artisan' ? '/dashboard/artisan' : '/dashboard/client/inbox'}
-                  className="flex items-center gap-4 p-4 bg-slate-50 dark:bg-slate-800 rounded-2xl"
+                  className="flex items-center gap-4 p-4 bg-slate-50 rounded-2xl"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  <div className="w-12 h-12 rounded-full bg-indigo-100 dark:bg-indigo-900/30 flex items-center justify-center text-indigo-600">
+                  <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center text-primary shadow-sm">
                     <span className="material-symbols-outlined text-2xl">account_circle</span>
                   </div>
                   <div>
                     <p className="text-xs font-black text-slate-400 uppercase tracking-widest">{user.role}</p>
-                    <p className="font-bold text-slate-900 dark:text-white">{user.name}</p>
+                    <p className="font-bold text-slate-900">{user.name}</p>
                   </div>
                 </Link>
                 <button 
@@ -142,14 +141,14 @@ const Navbar = () => {
               <div className="flex flex-col gap-3">
                 <Link 
                   to="/login/client" 
-                  className="w-full bg-indigo-600 text-white rounded-xl h-12 flex items-center justify-center font-black text-sm shadow-xl shadow-indigo-600/20"
+                  className="w-full bg-primary text-white rounded-xl h-12 flex items-center justify-center font-black text-sm shadow-xl shadow-primary/20"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Connexion Client
                 </Link>
                 <Link 
                   to="/login/artisan" 
-                  className="w-full border-2 border-indigo-600 text-indigo-600 dark:text-indigo-400 rounded-xl h-12 flex items-center justify-center font-black text-sm"
+                  className="w-full border-2 border-primary text-primary rounded-xl h-12 flex items-center justify-center font-black text-sm"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Espace Artisan

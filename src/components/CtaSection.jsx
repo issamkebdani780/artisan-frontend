@@ -3,15 +3,32 @@ import { Link } from 'react-router-dom';
 
 const CtaSection = () => {
   return (
-    <section className="px-6 md:px-20 py-20 text-center">
-      <div className="bg-slate-900 rounded-3xl p-10 md:p-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-primary opacity-10"></div>
-        <div className="relative z-10 flex flex-col items-center gap-6">
-          <h2 className="text-white text-3xl md:text-5xl font-black max-w-2xl">Prêt à démarrer votre projet de rénovation ?</h2>
-          <p className="text-slate-400 text-lg max-w-xl">Inscrivez-vous dès aujourd'hui et recevez des devis gratuits d'artisans qualifiés près de chez vous.</p>
-          <div className="flex flex-col sm:flex-row gap-4 mt-4">
-            <Link to="/search" className="px-8 py-4 bg-primary text-white font-bold rounded-xl hover:scale-105 transition-transform flex items-center justify-center">Trouver un artisan</Link>
-            <Link to="/register/artisan" className="px-8 py-4 bg-white text-slate-900 font-bold rounded-xl hover:scale-105 transition-transform flex items-center justify-center">Devenir prestataire</Link>
+    <section className="px-6 md:px-20 py-24 text-center">
+      <div className="max-w-7xl mx-auto bg-slate-50 rounded-[50px] p-12 md:p-24 relative overflow-hidden border border-slate-100 shadow-2xl shadow-slate-100">
+        <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/4 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[100px]"></div>
+        <div className="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/4 w-[400px] h-[400px] bg-primary/5 rounded-full blur-[80px]"></div>
+        
+        <div className="relative z-10 flex flex-col items-center gap-8">
+          <h2 className="text-slate-900 text-4xl md:text-6xl font-black max-w-3xl leading-tight tracking-tight uppercase">
+            Prêt à démarrer votre <br /><span className="text-primary italic">projet de rénovation ?</span>
+          </h2>
+          <p className="text-slate-500 text-xl font-bold max-w-2xl leading-relaxed">
+            Inscrivez-vous dès aujourd'hui et recevez des devis gratuits d'artisans qualifiés près de chez vous.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-6 mt-6">
+            <Link 
+              to="/search" 
+              className="px-12 py-5 bg-primary text-white font-black uppercase tracking-widest text-sm rounded-2xl hover:bg-primary/90 transition-all shadow-xl shadow-primary/20 active:scale-95 flex items-center justify-center gap-3"
+            >
+              Trouver un artisan
+              <span className="material-symbols-outlined text-xl">arrow_forward</span>
+            </Link>
+            <Link 
+              to="/register/artisan" 
+              className="px-12 py-5 bg-white text-slate-900 font-black uppercase tracking-widest text-sm rounded-2xl border border-slate-100 shadow-lg hover:shadow-xl transition-all active:scale-95 flex items-center justify-center"
+            >
+              Devenir prestataire
+            </Link>
           </div>
         </div>
       </div>

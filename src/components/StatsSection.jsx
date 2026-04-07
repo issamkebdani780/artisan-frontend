@@ -17,22 +17,32 @@ const StatsSection = () => {
   }, []);
 
   return (
-    <section className="bg-blue-600 dark:bg-blue-700 py-16 px-6 md:px-20 relative overflow-hidden">
-      <div className="absolute top-0 left-0 w-64 h-64 bg-white/5 rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl scale-150"></div>
-      <div className="absolute bottom-0 right-0 w-64 h-64 bg-white/5 rounded-full translate-x-1/2 translate-y-1/2 blur-3xl scale-150"></div>
-      
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-center text-white relative z-10">
-        <div className="space-y-2">
-          <h3 className="text-4xl md:text-5xl font-black tracking-tight">{stats.clients.toLocaleString()}</h3>
-          <p className="text-blue-50 text-[10px] font-black uppercase tracking-[0.2em]">Clients satisfaits</p>
-        </div>
-        <div className="space-y-2 border-y md:border-y-0 md:border-x border-white/10 py-12 md:py-0">
-          <h3 className="text-4xl md:text-5xl font-black tracking-tight">{stats.artisans.toLocaleString()}</h3>
-          <p className="text-blue-50 text-[10px] font-black uppercase tracking-[0.2em]">Artisans Vérifiés</p>
-        </div>
-        <div className="space-y-2">
-          <h3 className="text-4xl md:text-5xl font-black tracking-tight">{stats.projects.toLocaleString()}</h3>
-          <p className="text-blue-50 text-[10px] font-black uppercase tracking-[0.2em]">Projets Réalisés</p>
+    <section className="bg-white py-24 px-6 md:px-20 relative overflow-hidden">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center relative z-10">
+          <div className="space-y-4 group">
+            <div className="size-16 bg-slate-50 rounded-2xl flex items-center justify-center text-primary mx-auto shadow-sm group-hover:scale-110 transition-transform">
+              <span className="material-symbols-outlined text-3xl">groups</span>
+            </div>
+            <h3 className="text-4xl md:text-6xl font-black text-slate-900 tracking-tighter tabular-nums">{stats.clients.toLocaleString()}</h3>
+            <p className="text-slate-400 text-[10px] font-black uppercase tracking-[0.3em]">Clients satisfaits</p>
+          </div>
+          
+          <div className="space-y-4 group border-y md:border-y-0 md:border-x border-slate-50 py-12 md:py-0">
+            <div className="size-16 bg-slate-50 rounded-2xl flex items-center justify-center text-primary mx-auto shadow-sm group-hover:scale-110 transition-transform">
+              <span className="material-symbols-outlined text-3xl">verified_user</span>
+            </div>
+            <h3 className="text-4xl md:text-6xl font-black text-slate-900 tracking-tighter tabular-nums">{stats.artisans.toLocaleString()}</h3>
+            <p className="text-slate-400 text-[10px] font-black uppercase tracking-[0.3em]">Artisans Vérifiés</p>
+          </div>
+
+          <div className="space-y-4 group">
+            <div className="size-16 bg-slate-50 rounded-2xl flex items-center justify-center text-primary mx-auto shadow-sm group-hover:scale-110 transition-transform">
+              <span className="material-symbols-outlined text-3xl">task_alt</span>
+            </div>
+            <h3 className="text-4xl md:text-6xl font-black text-slate-900 tracking-tighter tabular-nums">{stats.projects.toLocaleString()}</h3>
+            <p className="text-slate-400 text-[10px] font-black uppercase tracking-[0.3em]">Projets Réalisés</p>
+          </div>
         </div>
       </div>
     </section>

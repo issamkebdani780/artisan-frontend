@@ -99,65 +99,66 @@ const FindExpert = () => {
   };
 
   return (
-    <div className="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div className="bg-white text-slate-900 min-h-screen">
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Hero Search */}
-        <section className="mb-12">
-          <div className="relative rounded-2xl overflow-hidden bg-blue-600/10 dark:bg-blue-600/5 p-8 md:p-12 border border-blue-600/20">
-            <div className="relative z-10 max-w-2xl">
-              <h2 className="text-3xl md:text-4xl font-extrabold mb-4 text-slate-900 dark:text-white">
-                Trouvez l'artisan idéal pour vos projets
+        <section className="mb-16">
+          <div className="relative rounded-[40px] overflow-hidden bg-slate-50 p-8 md:p-20 border border-slate-100">
+            <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/4 w-[400px] h-[400px] bg-primary/5 rounded-full blur-3xl"></div>
+            <div className="relative z-10 max-w-4xl">
+              <h2 className="text-3xl md:text-6xl font-black mb-6 text-slate-900 leading-tight tracking-tight uppercase">
+                Trouvez l'expert <br /><span className="text-primary italic">idéal</span> pour vos projets
               </h2>
-              <p className="text-slate-600 dark:text-slate-400 mb-8 text-lg">
-                Des experts qualifiés et vérifiés prêts à intervenir chez vous.
+              <p className="text-slate-500 mb-10 text-xl font-bold">
+                Plus de 1000 artisans qualifiés et vérifiés à votre service.
               </p>
-              <div className="flex flex-col sm:flex-row gap-3 bg-white dark:bg-slate-900 p-2 rounded-xl shadow-lg border border-slate-200 dark:border-slate-800">
-                <div className="flex-1 flex items-center px-4 gap-3">
-                  <span className="material-symbols-outlined text-slate-400">search</span>
+              <div className="flex flex-col sm:flex-row gap-4 bg-white p-3 rounded-3xl shadow-2xl shadow-slate-200/50 border border-slate-100">
+                <div className="flex-2 flex items-center px-6 gap-4 border-b sm:border-b-0 sm:border-r border-slate-50">
+                  <span className="material-symbols-outlined text-slate-300">search</span>
                   <input
                     type="text"
-                    placeholder="Rechercher un artisan ou une spécialité..."
-                    className="w-full border-none focus:ring-0 bg-transparent text-slate-900 dark:text-white placeholder:text-slate-400 py-3 outline-none"
+                    placeholder="Plomberie, Peinture, Électricité..."
+                    className="w-full border-none focus:ring-0 bg-transparent text-slate-900 placeholder:text-slate-300 py-4 outline-none font-bold"
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
                     onKeyDown={(e) => e.key === 'Enter' && handleSearch()}
                   />
                 </div>
-                <div className="flex-none sm:border-l border-slate-200 dark:border-slate-800 flex items-center px-4 gap-3">
-                  <span className="material-symbols-outlined text-slate-400">location_on</span>
+                <div className="flex-1 flex items-center px-6 gap-4">
+                  <span className="material-symbols-outlined text-slate-300">location_on</span>
                   <input
                     type="text"
-                    placeholder="Ville"
-                    className="w-32 border-none focus:ring-0 bg-transparent text-slate-900 dark:text-white placeholder:text-slate-400 py-3 outline-none"
+                    placeholder="Votre ville"
+                    className="w-full border-none focus:ring-0 bg-transparent text-slate-900 placeholder:text-slate-300 py-4 outline-none font-bold"
                     value={location}
                     onChange={(e) => setLocation(e.target.value)}
                     onKeyDown={(e) => e.key === 'Enter' && handleSearch()}
                   />
                 </div>
                 <button
-                  className="bg-blue-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-blue-700 transition-all"
+                  className="bg-primary text-white px-10 py-4 rounded-2xl font-black uppercase tracking-widest text-sm hover:bg-primary/90 transition-all shadow-xl shadow-primary/20 active:scale-95"
                   onClick={handleSearch}
                 >
-                  Rechercher
+                  Trouver
                 </button>
               </div>
             </div>
           </div>
         </section>
 
-        <div className="flex flex-col lg:flex-row gap-8">
-          {/* Sidebar Filters — now fully connected */}
+        <div className="flex flex-col lg:flex-row gap-12">
+          {/* Sidebar Filters */}
           <SearchFilters filters={filters} onChange={handleFiltersChange} />
 
           {/* Expert Grid */}
           <div className="flex-1">
-            <div className="flex items-center justify-between mb-6">
-              <h2 className="text-xl font-bold">
+            <div className="flex items-center justify-between mb-8 pb-4 border-b border-slate-50">
+              <h2 className="text-sm font-black text-slate-400 uppercase tracking-[0.2em]">
                 {loading ? 'Recherche...' : `${experts.length} expert${experts.length !== 1 ? 's' : ''} trouvé${experts.length !== 1 ? 's' : ''}`}
               </h2>
-              <div className="flex items-center gap-2">
-                <span className="text-sm text-slate-500">Trier par:</span>
-                <select className="text-sm font-medium border-none bg-transparent focus:ring-0 cursor-pointer outline-none">
+              <div className="flex items-center gap-3">
+                <span className="text-[10px] font-black text-slate-300 uppercase tracking-widest">Trier par:</span>
+                <select className="text-xs font-black text-slate-600 bg-slate-50 px-4 py-2 rounded-xl border border-slate-100 focus:ring-0 cursor-pointer outline-none uppercase tracking-tight">
                   <option>Les mieux notés</option>
                   <option>Prix croissant</option>
                   <option>Disponibilité</option>
@@ -166,27 +167,29 @@ const FindExpert = () => {
             </div>
 
             {loading ? (
-              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-                {[1, 2, 3, 4, 5, 6].map((i) => (
-                  <div key={i} className="bg-white dark:bg-slate-800 rounded-xl h-72 animate-pulse border border-slate-100 dark:border-slate-700"></div>
+              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-8">
+                {[1, 2, 3, 4].map((i) => (
+                  <div key={i} className="bg-slate-50 rounded-[40px] h-[400px] animate-pulse"></div>
                 ))}
               </div>
             ) : experts.length === 0 ? (
-              <div className="flex flex-col items-center justify-center py-24 text-center space-y-4 bg-white dark:bg-slate-800 rounded-2xl border-2 border-dashed border-slate-200 dark:border-slate-700">
-                <div className="size-16 bg-slate-100 dark:bg-slate-700 rounded-full flex items-center justify-center">
-                  <span className="material-symbols-outlined text-slate-400 text-3xl">search_off</span>
+              <div className="flex flex-col items-center justify-center py-32 text-center space-y-6 bg-slate-50 rounded-[40px] border-2 border-dashed border-slate-200">
+                <div className="size-24 bg-white rounded-full flex items-center justify-center shadow-xl">
+                  <span className="material-symbols-outlined text-slate-200 text-5xl">person_search</span>
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 dark:text-white">Aucun artisan trouvé</h3>
-                <p className="text-slate-500 max-w-sm">Essayez d'ajuster vos filtres ou votre recherche.</p>
+                <div>
+                  <h3 className="text-2xl font-black text-slate-900 uppercase tracking-tight">Aucun artisan trouvé</h3>
+                  <p className="text-slate-400 font-bold mt-2">Essayez d'ajuster vos filtres ou votre recherche.</p>
+                </div>
                 <button
                   onClick={() => { setFilters({ selectedCategories: [], minRating: null, maxPrice: 10000, availableNow: false }); setSearchTerm(''); setLocation(''); }}
-                  className="text-blue-600 font-bold hover:underline mt-2"
+                  className="px-8 py-3 bg-white text-primary font-black uppercase tracking-widest text-[10px] rounded-xl border border-slate-100 shadow-lg hover:shadow-xl transition-all"
                 >
-                  Réinitialiser la recherche
+                  Réinitialiser
                 </button>
               </div>
             ) : (
-              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-8">
                 {experts.map((expert) => (
                   <ExpertCard key={expert.id} {...expert} />
                 ))}

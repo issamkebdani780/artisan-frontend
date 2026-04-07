@@ -28,8 +28,8 @@ const ArtisanLayout = ({ children, title = "Mihnati PRO", subtitle = "Premium Pl
         <div className="flex flex-col gap-8 p-6">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className="p-1 rounded-xl">
-                <img src={logo} alt="Mihnati Logo" className="h-10 w-auto object-contain" />
+              <div className="p-0">
+                <img src={logo} alt="Mihnati Logo" className="h-12 w-auto object-contain -ml-2" />
               </div>
               <div className="flex flex-col">
                 <h1 className="text-xl font-black tracking-tight flex items-center gap-1">

@@ -23,25 +23,25 @@ const FeaturedCraftsmen = () => {
 
   if (loading) return (
     <section className="px-6 md:px-20 py-20 text-center">
-      <div className="animate-spin inline-block size-12 border-4 border-blue-600 border-t-transparent rounded-full mb-4"></div>
+      <div className="animate-spin inline-block size-12 border-4 border-primary border-t-transparent rounded-full mb-4"></div>
       <p className="text-slate-500 font-bold uppercase tracking-widest text-xs">Recherche des meilleurs experts...</p>
     </section>
   );
 
   return (
-    <section className="px-6 md:px-20 py-24 bg-white dark:bg-slate-950">
+    <section className="px-6 md:px-20 py-24 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row items-end justify-between mb-16 gap-6">
           <div className="max-w-xl">
-            <h2 className="text-slate-900 dark:text-white text-3xl md:text-5xl font-black tracking-tight mb-4 lowercase first-letter:uppercase">Artisans à la une</h2>
-            <p className="text-slate-500 dark:text-slate-400 text-lg font-medium leading-relaxed">Découvrez les professionnels les mieux notés et vérifiés par notre communauté.</p>
+            <h2 className="text-slate-900 text-3xl md:text-5xl font-black tracking-tight mb-4 uppercase">Artisans à la une</h2>
+            <p className="text-slate-500 text-lg font-bold leading-relaxed">Découvrez les professionnels les mieux notés et vérifiés par notre communauté.</p>
           </div>
           <Link 
             to="/search" 
-            className="group flex items-center gap-2 text-blue-600 font-black uppercase tracking-widest text-xs hover:gap-4 transition-all"
+            className="group flex items-center gap-2 text-primary font-black uppercase tracking-widest text-[10px] hover:gap-4 transition-all"
           >
-            Voir tous les artisans
-            <span className="material-symbols-outlined font-black">arrow_forward</span>
+            Explorer le réseau
+            <span className="material-symbols-outlined font-black text-sm">arrow_forward</span>
           </Link>
         </div>
         
