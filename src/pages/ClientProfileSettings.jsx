@@ -1,197 +1,278 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import ClientLayout from '../layouts/ClientLayout';
+import apiService from '../services/api';
 
 const ClientProfileSettings = () => {
+  const navigate = useNavigate();
+  const user = JSON.parse(localStorage.getItem('user'));
+  
+  const [activeTab, setActiveTab] = useState('profil'); // profil, localisation, securite
+  
+  const [form, setForm] = useState({
+    name: user?.name || '',
+    email: user?.email || '',
+    phone: user?.phone || '',
+    address: user?.address || '',
+    wilaya_id: user?.wilaya_id || '',
+    commune_id: user?.commune_id || '',
+  });
+
+  const [wilayas, setWilayas] = useState([]);
+  const [communes, setCommunes] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState({ text: '', type: '' });
+  const [passwordForm, setPasswordForm] = useState({ current: '', new: '', confirm: '' });
+
+  useEffect(() => {
+    const fetchUserData = async () => {
+      try {
+        // Fetch fresh user data from DB
+        const freshUser = await apiService.getUserById(user.id);
+        setForm({
+          name: freshUser.name || '',
+          email: freshUser.email || '',
+          phone: freshUser.phone || '',
+          address: freshUser.address || '',
+          wilaya_id: freshUser.wilaya_id || '',
+          commune_id: freshUser.commune_id || '',
+        });
+        
+        // Update local storage too
+        localStorage.setItem('user', JSON.stringify({ ...user, ...freshUser }));
+
+        // Fetch Wilayas
+        const wilayaData = await apiService.getWilayas();
+        setWilayas(wilayaData);
+
+        // Fetch Communes if user has a wilaya
+        if (freshUser.wilaya_id) {
+          const communeData = await apiService.getCommunes(freshUser.wilaya_id);
+          setCommunes(communeData);
+        }
+      } catch (err) {
+        console.error('Error fetching settings data:', err);
+      }
+    };
+    fetchUserData();
+  }, []);
+
+  const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
+
+  const handleWilayaChange = async (e) => {
+    const wilayaId = e.target.value;
+    setForm({ ...form, wilaya_id: wilayaId, commune_id: '' });
+    setCommunes([]);
+    if (wilayaId) {
+      try {
+        const data = await apiService.getCommunes(wilayaId);
+        setCommunes(data);
+      } catch (err) {
+        console.error('Error fetching communes:', err);
+      }
+    }
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    try {
+      await apiService.updateProfile(user.id, form);
+      const updatedUser = { ...user, ...form };
+      localStorage.setItem('user', JSON.stringify(updatedUser));
+      setMessage({ text: 'Profil mis à jour !', type: 'success' });
+      setTimeout(() => setMessage({ text: '', type: '' }), 5000);
+    } catch (err) {
+      setMessage({ text: err.message || 'Erreur mise à jour.', type: 'error' });
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handlePasswordChange = async (e) => {
+    e.preventDefault();
+    if (passwordForm.new !== passwordForm.confirm) {
+      setMessage({ text: 'MDP différents', type: 'error' });
+      return;
+    }
+    setLoading(true);
+    try {
+      const result = await apiService.changePassword(user.id, passwordForm.current, passwordForm.new);
+      if (result.error) {
+        setMessage({ text: result.error, type: 'error' });
+      } else {
+        setMessage({ text: 'MDP mis à jour !', type: 'success' });
+        setPasswordForm({ current: '', new: '', confirm: '' });
+        setTimeout(() => setMessage({ text: '', type: '' }), 5000);
+      }
+    } catch (err) {
+      setMessage({ text: 'Erreur MDP.', type: 'error' });
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleLogout = () => { apiService.logout(); navigate('/'); };
+
   return (
-    <div className="flex h-full min-h-screen flex-col font-sans bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100">
-
-      {/* Header / Navigation */}
-      <header className="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-6 md:px-10 py-3 sticky top-0 z-50">
-        <div className="flex items-center gap-4 text-primary">
-          <div className="size-8 bg-primary text-white rounded-lg flex items-center justify-center font-black">
-            A
-          </div>
-          <h2 className="text-slate-900 dark:text-slate-50 text-xl font-bold leading-tight tracking-tight">ArtisanDirect</h2>
+    <ClientLayout title="Espace Client" subtitle="Paramètres">
+      <div className="flex-1 font-['Outfit',sans-serif] py-4 text-left max-w-6xl">
+        <div className="mb-10 px-2 text-left">
+          <h2 className="text-3xl font-black text-slate-900 tracking-tighter uppercase mb-2">Paramètres de compte</h2>
+          <p className="text-slate-500 font-bold max-w-xl leading-relaxed text-sm">Gérez vos informations, votre localisation et votre sécurité au même endroit.</p>
         </div>
-        <div className="flex flex-1 justify-end gap-8 items-center">
-          <nav className="hidden md:flex items-center gap-9">
-            <a href="/" className="text-slate-700 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors">Accueil</a>
-            <a href="#" className="text-primary text-sm font-bold border-b-2 border-primary pb-1">Profil</a>
-            <a href="#" className="text-slate-700 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors">Paramètres</a>
-          </nav>
-          <div className="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 ring-2 ring-primary/20" style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1542037104857-ffbb0b915546?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=60")' }}></div>
+
+        <div className="flex items-center gap-1 border-b border-slate-100 mb-10 px-2 overflow-x-auto whitespace-nowrap scrollbar-hide">
+          <button onClick={() => setActiveTab('profil')} className={`pb-4 px-6 text-sm font-black uppercase tracking-widest transition-all relative ${activeTab === 'profil' ? 'text-primary' : 'text-slate-400 hover:text-slate-600'}`}>
+            Profil
+            {activeTab === 'profil' && <div className="absolute bottom-0 left-0 right-0 h-1 bg-primary rounded-full" />}
+          </button>
+          <button onClick={() => setActiveTab('localisation')} className={`pb-4 px-6 text-sm font-black uppercase tracking-widest transition-all relative ${activeTab === 'localisation' ? 'text-primary' : 'text-slate-400 hover:text-slate-600'}`}>
+            Localisation
+            {activeTab === 'localisation' && <div className="absolute bottom-0 left-0 right-0 h-1 bg-primary rounded-full" />}
+          </button>
+          <button onClick={() => setActiveTab('securite')} className={`pb-4 px-6 text-sm font-black uppercase tracking-widest transition-all relative ${activeTab === 'securite' ? 'text-primary' : 'text-slate-400 hover:text-slate-600'}`}>
+            Sécurité
+            {activeTab === 'securite' && <div className="absolute bottom-0 left-0 right-0 h-1 bg-primary rounded-full" />}
+          </button>
         </div>
-      </header>
 
-      {/* Main Content */}
-      <main className="flex-1 flex justify-center py-8 px-4 md:px-0">
-        <div className="flex flex-col max-w-[960px] w-full gap-8">
-
-          {/* Page Title & Progress */}
-          <div className="bg-white dark:bg-slate-900 p-6 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800">
-            <div className="flex flex-wrap justify-between items-end gap-4 mb-6">
-              <div className="flex flex-col gap-1">
-                <h1 className="text-slate-900 dark:text-slate-50 text-3xl font-black leading-tight tracking-tight">Complétez votre profil</h1>
-                <p className="text-slate-500 dark:text-slate-400 text-base">Ces informations nous aident à personnaliser votre expérience sur ArtisanDirect.</p>
-              </div>
-              <div className="flex flex-col items-end gap-2 min-w-[120px]">
-                <div className="flex gap-2 items-center">
-                  <span className="text-slate-900 dark:text-slate-50 text-sm font-bold">Progression</span>
-                  <span className="text-primary text-sm font-black">65%</span>
-                </div>
-                <div className="w-full h-2 rounded-full bg-slate-100 dark:bg-slate-800 overflow-hidden">
-                  <div className="h-full rounded-full bg-primary" style={{ width: '65%' }}></div>
-                </div>
-              </div>
+        {message.text && (
+          <div className="mx-2 mb-8 max-w-2xl text-left">
+             <div className={`p-4 rounded-2xl flex items-center gap-4 animate-in slide-in-from-top-4 duration-500 ${message.type === 'success' ? 'bg-emerald-50 text-emerald-700 border border-emerald-100' : 'bg-red-50 text-red-700 border border-red-100'}`}>
+              <span className="material-symbols-outlined text-xl">{message.type === 'success' ? 'check_circle' : 'error'}</span>
+              <p className="font-bold text-xs uppercase tracking-tight">{message.text}</p>
             </div>
           </div>
+        )}
 
-          <form className="flex flex-col gap-6" onSubmit={(e) => e.preventDefault()}>
-
-            {/* Section 1: Informations Personnelles */}
-            <section className="bg-white dark:bg-slate-900 p-6 md:p-8 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800">
-              <div className="flex items-center gap-3 mb-6">
-                <span className="material-symbols-outlined text-primary">person</span>
-                <h2 className="text-slate-900 dark:text-slate-50 text-xl font-bold">Informations personnelles</h2>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-
-                {/* Photo Upload */}
-                <div className="flex flex-col items-center gap-4">
-                  <div className="relative group cursor-pointer">
-                    <div className="size-32 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center overflow-hidden border-4 border-slate-50 dark:border-slate-800 shadow-inner">
-                      <span className="material-symbols-outlined text-slate-400 text-5xl group-hover:hidden">add_a_photo</span>
-                      <img src="https://images.unsplash.com/photo-1542037104857-ffbb0b915546?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=60" alt="Profile" className="w-full h-full object-cover hidden group-hover:block" />
-                    </div>
-                    <div className="absolute bottom-0 right-0 bg-primary text-white p-2 rounded-full shadow-lg">
-                      <span className="material-symbols-outlined text-sm">edit</span>
-                    </div>
-                  </div>
-                  <p className="text-xs text-slate-500 text-center">JPG, PNG ou GIF. <br /> Max 5 Mo.</p>
-                </div>
-
-                {/* Name and Phone */}
-                <div className="md:col-span-2 flex flex-col gap-5">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div className="flex flex-col gap-2">
-                      <label className="text-sm font-semibold text-slate-700 dark:text-slate-300">Prénom</label>
-                      <input type="text" defaultValue="Jean" className="w-full rounded-lg border-slate-300 dark:border-slate-700 dark:bg-slate-800 focus:ring-2 focus:ring-primary focus:outline-none px-4 py-2" />
-                    </div>
-                    <div className="flex flex-col gap-2">
-                      <label className="text-sm font-semibold text-slate-700 dark:text-slate-300">Nom</label>
-                      <input type="text" defaultValue="Dupont" className="w-full rounded-lg border-slate-300 dark:border-slate-700 dark:bg-slate-800 focus:ring-2 focus:ring-primary focus:outline-none px-4 py-2" />
-                    </div>
-                  </div>
-                  <div className="flex flex-col gap-2">
-                    <label className="text-sm font-semibold text-slate-700 dark:text-slate-300">Numéro de téléphone</label>
-                    <div className="flex">
-                      <span className="inline-flex items-center px-3 rounded-l-lg border border-r-0 border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-500 text-sm">+33</span>
-                      <input type="tel" placeholder="06 12 34 56 78" className="w-full rounded-r-lg border-slate-300 dark:border-slate-700 dark:bg-slate-800 focus:ring-2 focus:ring-primary focus:outline-none px-4 py-2" />
-                    </div>
+        <div className="px-2 max-w-5xl text-left">
+          {activeTab === 'profil' && (
+            <div className="bg-white rounded-4xl p-8 lg:p-12 border border-slate-100 shadow-[0_20px_50px_-20px_rgba(0,0,0,0.05)] animate-in fade-in slide-in-from-bottom-2 duration-500">
+              <form onSubmit={handleSubmit} className="space-y-8">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="size-12 bg-primary/10 rounded-2xl flex items-center justify-center text-primary"><span className="material-symbols-outlined font-black">person</span></div>
+                  <div>
+                    <h3 className="text-xl font-black text-slate-900 uppercase tracking-tight">Informations de Profil</h3>
+                    <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Vos données de base</p>
                   </div>
                 </div>
-              </div>
-            </section>
-
-            {/* Section 2: Localisation */}
-            <section className="bg-white dark:bg-slate-900 p-6 md:p-8 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800">
-              <div className="flex items-center gap-3 mb-6">
-                <span className="material-symbols-outlined text-[#137fec]">location_on</span>
-                <h2 className="text-slate-900 dark:text-slate-50 text-xl font-bold">Localisation</h2>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                <div className="flex flex-col gap-2 md:col-span-2">
-                  <label className="text-sm font-semibold text-slate-700 dark:text-slate-300">Adresse</label>
-                  <input type="text" placeholder="15 Rue de la Paix" className="w-full rounded-lg border-slate-300 dark:border-slate-700 dark:bg-slate-800 focus:ring-2 focus:ring-primary focus:outline-none px-4 py-2" />
-                </div>
-                <div className="flex flex-col gap-2">
-                  <label className="text-sm font-semibold text-slate-700 dark:text-slate-300">Ville</label>
-                  <input type="text" placeholder="Paris" className="w-full rounded-lg border-slate-300 dark:border-slate-700 dark:bg-slate-800 focus:ring-2 focus:ring-primary focus:outline-none px-4 py-2" />
-                </div>
-                <div className="flex flex-col gap-2">
-                  <label className="text-sm font-semibold text-slate-700 dark:text-slate-300">Code Postal</label>
-                  <input type="text" placeholder="75002" className="w-full rounded-lg border-slate-300 dark:border-slate-700 dark:bg-slate-800 focus:ring-2 focus:ring-primary focus:outline-none px-4 py-2" />
-                </div>
-              </div>
-              <div className="mt-6 aspect-video w-full rounded-lg bg-slate-100 overflow-hidden relative border border-slate-200 dark:border-slate-800">
-                <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" alt="Map Preview" className="w-full h-full object-cover opacity-60 grayscale hover:grayscale-0 transition-opacity duration-700" />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="bg-primary text-white p-2 rounded-full shadow-lg ring-4 ring-white/50">
-                    <span className="material-symbols-outlined">person_pin_circle</span>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            {/* Section 3: Préférences */}
-            <section className="bg-white dark:bg-slate-900 p-6 md:p-8 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800">
-              <div className="flex items-center gap-3 mb-6">
-                <span className="material-symbols-outlined text-[#137fec]">settings</span>
-                <h2 className="text-slate-900 dark:text-slate-50 text-xl font-bold">Préférences</h2>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="flex flex-col gap-4">
-                  <label className="text-sm font-semibold text-slate-700 dark:text-slate-300">Langue préférée</label>
-                  <select className="w-full rounded-lg border-slate-300 dark:border-slate-700 dark:bg-slate-800 focus:ring-2 focus:ring-primary focus:outline-none px-4 py-2">
-                    <option value="fr">Français</option>
-                    <option value="en">English</option>
-                    <option value="es">Español</option>
-                  </select>
-                </div>
-                <div className="flex flex-col gap-4">
-                  <label className="text-sm font-semibold text-slate-700 dark:text-slate-300">Notifications</label>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div className="space-y-3">
-                    <label className="flex items-center gap-3 cursor-pointer group">
-                      <input type="checkbox" defaultChecked className="rounded text-primary focus:ring-primary size-5 border-slate-300 dark:border-slate-700 dark:bg-slate-800" />
-                      <span className="text-sm text-slate-600 dark:text-slate-400 group-hover:text-slate-900 dark:group-hover:text-slate-200 transition-colors">Alertes de nouveaux messages</span>
-                    </label>
-                    <label className="flex items-center gap-3 cursor-pointer group">
-                      <input type="checkbox" defaultChecked className="rounded text-primary focus:ring-primary size-5 border-slate-300 dark:border-slate-700 dark:bg-slate-800" />
-                      <span className="text-sm text-slate-600 dark:text-slate-400 group-hover:text-slate-900 dark:group-hover:text-slate-200 transition-colors">Mises à jour des projets</span>
-                    </label>
-                    <label className="flex items-center gap-3 cursor-pointer group">
-                      <input type="checkbox" className="rounded text-primary focus:ring-primary size-5 border-slate-300 dark:border-slate-700 dark:bg-slate-800" />
-                      <span className="text-sm text-slate-600 dark:text-slate-400 group-hover:text-slate-900 dark:group-hover:text-slate-200 transition-colors">Offres promotionnelles</span>
-                    </label>
+                    <label className="text-[11px] font-black uppercase tracking-widest text-slate-400 ml-1">Nom complet</label>
+                    <input name="name" value={form.name} onChange={handleChange} type="text" className="w-full h-15 rounded-2xl border border-slate-100 bg-slate-50 focus:border-primary focus:bg-white outline-none px-6 transition-all font-bold text-slate-900 shadow-sm" />
+                  </div>
+                  <div className="space-y-3">
+                    <label className="text-[11px] font-black uppercase tracking-widest text-slate-400 ml-1">Email</label>
+                    <input name="email" value={form.email} onChange={handleChange} type="email" className="w-full h-15 rounded-2xl border border-slate-100 bg-slate-50 focus:border-primary focus:bg-white outline-none px-6 transition-all font-bold text-slate-900 shadow-sm" />
+                  </div>
+                  <div className="space-y-3">
+                    <label className="text-[11px] font-black uppercase tracking-widest text-slate-400 ml-1">Téléphone</label>
+                    <input name="phone" value={form.phone} onChange={handleChange} type="tel" className="w-full h-15 rounded-2xl border border-slate-100 bg-slate-50 focus:border-primary focus:bg-white outline-none px-6 transition-all font-bold text-slate-900 shadow-sm" />
+                  </div>
+                  <div className="space-y-3">
+                    <label className="text-[11px] font-black uppercase tracking-widest text-slate-400 ml-1">Adresse Textuelle</label>
+                    <input name="address" value={form.address} onChange={handleChange} type="text" className="w-full h-15 rounded-2xl border border-slate-100 bg-slate-50 focus:border-primary focus:bg-white outline-none px-6 transition-all font-bold text-slate-900 shadow-sm" />
                   </div>
                 </div>
-              </div>
-            </section>
-
-            {/* Actions */}
-            <div className="flex flex-col sm:flex-row justify-end gap-4 pb-12">
-              <button type="button" className="px-8 py-3 rounded-lg font-bold text-slate-600 dark:text-slate-400 border border-slate-300 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all">
-                Annuler
-              </button>
-              <button type="submit" className="px-8 py-3 rounded-lg font-bold bg-primary text-white hover:bg-primary/90 shadow-md shadow-primary/20 transition-all flex items-center justify-center gap-2">
-                <span className="material-symbols-outlined text-base">save</span>
-                Enregistrer les modifications
-              </button>
+                <div className="pt-8 border-t border-slate-50 flex justify-start">
+                  <button type="submit" disabled={loading} className="px-10 py-5 bg-primary text-white rounded-[20px] font-black uppercase text-xs tracking-widest hover:opacity-90 transition-all shadow-xl shadow-primary/20 active:scale-95">Mettre à jour le profil</button>
+                </div>
+              </form>
             </div>
-          </form>
-        </div>
-      </main>
+          )}
 
-      {/* Footer */}
-      <footer className="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-12 mt-auto">
-        <div className="max-w-[960px] mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
-          <div className="flex flex-col gap-2 items-center md:items-start">
-            <div className="flex items-center gap-2 text-primary">
-              <div className="size-6 bg-primary text-white rounded-[4px] flex items-center justify-center font-black text-xs">
-                A
-              </div>
-              <span className="font-black text-slate-900 dark:text-slate-50">ArtisanDirect</span>
+          {activeTab === 'localisation' && (
+            <div className="bg-white rounded-4xl p-8 lg:p-12 border border-slate-100 shadow-[0_20px_50px_-20px_rgba(0,0,0,0.05)] animate-in fade-in slide-in-from-bottom-2 duration-500">
+               <form onSubmit={handleSubmit} className="space-y-8">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="size-12 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center"><span className="material-symbols-outlined font-black">location_on</span></div>
+                  <div>
+                    <h3 className="text-xl font-black text-slate-900 uppercase tracking-tight">Localisation Géo</h3>
+                    <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Région et Commune</p>
+                  </div>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <div className="space-y-3">
+                    <label className="text-[11px] font-black uppercase tracking-widest text-slate-400 ml-1">Wilaya</label>
+                    <div className="relative text-left">
+                      <select name="wilaya_id" value={form.wilaya_id} onChange={handleWilayaChange} className="w-full h-15 rounded-2xl border border-slate-100 bg-slate-50 focus:border-primary focus:bg-white outline-none px-6 transition-all font-bold text-slate-900 appearance-none shadow-sm text-left">
+                        <option value="">Sélectionnez</option>
+                        {wilayas.map(w => <option key={w.id} value={w.id}>{w.name}</option>)}
+                      </select>
+                      <span className="material-symbols-outlined absolute right-5 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none">expand_more</span>
+                    </div>
+                  </div>
+                  <div className="space-y-3">
+                    <label className="text-[11px] font-black uppercase tracking-widest text-slate-400 ml-1">Commune</label>
+                    <div className="relative text-left">
+                      <select name="commune_id" value={form.commune_id} onChange={handleChange} disabled={!form.wilaya_id} className="w-full h-15 rounded-2xl border border-slate-100 bg-slate-50 focus:border-primary focus:bg-white outline-none px-6 transition-all font-bold text-slate-900 appearance-none disabled:opacity-50 shadow-sm text-left">
+                        <option value="">Sélectionnez</option>
+                        {communes.map(c => <option key={c.id} value={c.id}>{c.name}</option>)}
+                      </select>
+                      <span className="material-symbols-outlined absolute right-5 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none">expand_more</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="pt-8 border-t border-slate-50 flex justify-start">
+                  <button type="submit" disabled={loading} className="px-10 py-5 bg-primary text-white rounded-[20px] font-black uppercase text-xs tracking-widest hover:opacity-90 transition-all shadow-xl shadow-primary/20 active:scale-95">Enregistrer ma position</button>
+                </div>
+              </form>
             </div>
-            <p className="text-sm text-slate-500">La plateforme n°1 pour trouver vos artisans locaux.</p>
-          </div>
-          <div className="flex gap-8">
-            <a href="#" className="text-sm text-slate-500 hover:text-primary">Conditions d'utilisation</a>
-            <a href="#" className="text-sm text-slate-500 hover:text-primary">Confidentialité</a>
-            <a href="#" className="text-sm text-slate-500 hover:text-primary">Support</a>
-          </div>
-          <p className="text-sm text-slate-500">© 2024 ArtisanDirect Inc.</p>
+          )}
+
+          {activeTab === 'securite' && (
+            <div className="space-y-10 animate-in fade-in slide-in-from-bottom-2 duration-500">
+               <div className="bg-white rounded-4xl p-8 lg:p-12 border border-slate-100 shadow-[0_20px_50px_-20px_rgba(0,0,0,0.05)]">
+                  <div className="flex items-center gap-4 mb-10">
+                    <div className="size-12 bg-indigo-50 text-indigo-600 rounded-2xl flex items-center justify-center"><span className="material-symbols-outlined font-black">shield</span></div>
+                    <div>
+                      <h3 className="text-xl font-black text-slate-900 uppercase tracking-tight">Accès & Protection</h3>
+                      <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Modifier identifiants</p>
+                    </div>
+                  </div>
+                  <form onSubmit={handlePasswordChange} className="space-y-8">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+                      <div className="space-y-3">
+                        <label className="text-[11px] font-black uppercase tracking-widest text-slate-400 ml-1">Ancien MDP</label>
+                        <input type="password" required value={passwordForm.current} onChange={(e) => setPasswordForm({...passwordForm, current: e.target.value})} className="w-full h-15 rounded-2xl border border-slate-100 bg-slate-50 focus:border-primary outline-none px-6 font-bold text-sm shadow-sm" placeholder="••••••••" />
+                      </div>
+                      <div className="space-y-3">
+                        <label className="text-[11px] font-black uppercase tracking-widest text-slate-400 ml-1">Nouveau MDP</label>
+                        <input type="password" required value={passwordForm.new} onChange={(e) => setPasswordForm({...passwordForm, new: e.target.value})} className="w-full h-15 rounded-2xl border border-slate-100 bg-slate-50 focus:border-primary outline-none px-6 font-bold text-sm shadow-sm" placeholder="••••••••" />
+                      </div>
+                      <div className="space-y-3">
+                        <label className="text-[11px] font-black uppercase tracking-widest text-slate-400 ml-1">Confirmation</label>
+                        <input type="password" required value={passwordForm.confirm} onChange={(e) => setPasswordForm({...passwordForm, confirm: e.target.value})} className="w-full h-15 rounded-2xl border border-slate-100 bg-slate-50 focus:border-primary outline-none px-6 font-bold text-sm shadow-sm" placeholder="••••••••" />
+                      </div>
+                    </div>
+                    <div className="pt-8 border-t border-slate-50 flex justify-start">
+                      <button type="submit" disabled={loading} className="px-10 py-5 bg-slate-900 text-white rounded-[20px] font-black uppercase text-xs tracking-widest hover:bg-slate-800 transition-all active:scale-95 shadow-xl shadow-slate-900/10">Valider MDP</button>
+                    </div>
+                  </form>
+               </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl">
+                  <div className="bg-red-50/20 rounded-4xl p-10 border border-red-100/50 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+                    <div>
+                      <h3 className="text-lg font-black text-red-600 uppercase mb-1">Session</h3>
+                      <p className="text-[10px] font-black text-red-400 uppercase tracking-widest">Quitter Mihnati</p>
+                    </div>
+                    <button onClick={handleLogout} className="px-8 py-4 bg-red-600 text-white rounded-xl font-black uppercase text-[10px] tracking-widest hover:bg-red-700 active:scale-95 transition-all shadow-xl shadow-red-600/10">Déconnexion</button>
+                  </div>
+                   <div className="bg-slate-50 rounded-4xl p-10 border border-slate-100 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+                    <div>
+                      <h3 className="text-lg font-black text-slate-900 uppercase mb-1">Compte</h3>
+                      <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Suppression</p>
+                    </div>
+                    <button onClick={() => { if(window.confirm('🚨 Supprimer ?')) { apiService.logout(); navigate('/'); } }} className="px-8 py-4 border-2 border-slate-200 text-slate-500 rounded-xl font-black uppercase text-[10px] tracking-widest hover:bg-red-600 hover:border-red-600 hover:text-white active:scale-95 transition-all">Supprimer</button>
+                  </div>
+                </div>
+            </div>
+          )}
         </div>
-      </footer>
-    </div>
+      </div>
+    </ClientLayout>
   );
 };
 

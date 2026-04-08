@@ -70,7 +70,7 @@ function App() {
         <Route path="/dashboard/client/projects" element={<ClientProjects />} />
         <Route path="/dashboard/client/bookings" element={<ClientProjects />} />
         <Route path="/dashboard/client/quotes" element={<ClientProjects />} />
-        <Route path="/profile/settings" element={<ClientProfileSettings />} />
+        <Route path="/dashboard/client/settings" element={<ClientProfileSettings />} />
         <Route path="/category/jardinage" element={<JardinageNouveau />} />
         
         {/* Public Pages wrapped in MainLayout */}
