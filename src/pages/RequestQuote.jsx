@@ -200,22 +200,8 @@ const RequestQuote = () => {
 
   return (
     <div className="min-h-screen bg-white text-slate-900 w-full flex-col font-['Outfit',sans-serif]">
-      
-      {/* Top Navigation Bar */}
-      <header className="flex items-center justify-between border-b border-slate-50 bg-white px-6 py-6 md:px-20 lg:px-40 sticky top-0 z-50 shadow-sm">
-        <div className="flex items-center gap-4">
-          <div className="size-12 bg-primary/5 rounded-2xl flex items-center justify-center text-primary border border-primary/10">
-            <span className="material-symbols-outlined font-black">construction</span>
-          </div>
-          <h2 className="text-xl font-black tracking-tight uppercase">Demander un devis</h2>
-        </div>
-        <button onClick={() => navigate(-1)} className="flex items-center justify-center rounded-2xl h-12 w-12 bg-slate-50 hover:bg-slate-100 transition-colors border border-slate-100">
-          <span className="material-symbols-outlined text-slate-400">close</span>
-        </button>
-      </header>
-
-      <main className="flex-1 px-4 py-16 md:px-20 lg:px-40">
-        <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-16">
+      <main className="flex-1 px-4 py-16 md:px-20 lg:px-40 flex flex-col items-center">
+        <div className="max-w-7xl w-full flex flex-col lg:flex-row gap-16">
           
           {/* Main Form Section */}
           <div className="flex-1 space-y-12">
@@ -470,10 +456,6 @@ const RequestQuote = () => {
         </div>
       </main>
 
-      <footer className="mt-20 border-t border-slate-50 py-16 text-center">
-        <p className="text-[10px] font-black text-slate-300 uppercase tracking-[0.3em]">© 2026 Mihnati Algérie — L'excellence artisanale</p>
-      </footer>
-      
     </div>
   );
 };

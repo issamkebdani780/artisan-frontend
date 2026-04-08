@@ -75,31 +75,9 @@ const ArtisanLayout = ({ children, title = "Mihnati PRO", subtitle = "Premium Pl
               );
             })}
             
-            {/* Logout Button */}
-            <button 
-              onClick={handleLogout} 
-              className="group flex items-center gap-4 px-6 py-5 rounded-2xl transition-all text-red-500 hover:bg-red-50 border border-transparent hover:border-red-100 font-bold text-xs uppercase tracking-[0.15em] mt-8"
-            >
-              <span className="material-symbols-outlined font-black group-hover:rotate-12 transition-transform">logout</span>
-              Déconnexion
-            </button>
           </nav>
         </div>
         
-        <div className="p-8 border-t border-slate-50">
-          <div className="bg-slate-50 border border-slate-100 p-6 rounded-[32px] flex flex-col gap-4 shadow-sm group/stats hover:bg-white hover:border-secondary transition-all">
-            <div className="flex justify-between items-center bg-white px-3 py-1.5 rounded-full border border-slate-100 shadow-sm w-fit">
-              <p className="text-[9px] font-black uppercase tracking-widest text-slate-400">Taux de réponse</p>
-            </div>
-            <div className="w-full bg-slate-200 h-2.5 rounded-full overflow-hidden shadow-inner">
-              <div className="bg-secondary h-full w-[95%] rounded-full shadow-[0_0_10px_rgba(255,107,0,0.3)] group-hover:w-full transition-all duration-1000"></div>
-            </div>
-            <p className="text-[10px] font-black text-slate-900 flex items-center gap-2">
-               <span className="size-2 rounded-full bg-emerald-500 animate-pulse"></span>
-               EXCELLENT (95%)
-            </p>
-          </div>
-        </div>
       </aside>
 
       {/* Mobile Sidebar Overlay */}
@@ -114,7 +92,7 @@ const ArtisanLayout = ({ children, title = "Mihnati PRO", subtitle = "Premium Pl
       <main className="flex-1 flex flex-col min-w-0 min-h-screen relative">
         
         {/* Header */}
-        <header className="h-24 bg-white/80 backdrop-blur-md border-b border-slate-50 px-8 flex items-center justify-between sticky top-0 z-50 w-full shrink-0">
+        <header className="h-24 bg-white/80 backdrop-blur-md border-b border-slate-50 px-8 flex items-center justify-between fixed lg:left-72 left-0 right-0 top-0 z-50 shrink-0 transition-all">
           <div className="flex items-center gap-6 flex-1">
             <button className="lg:hidden size-12 rounded-2xl bg-slate-50 flex items-center justify-center text-slate-600 shadow-sm" onClick={() => setIsSidebarOpen(true)}>
               <span className="material-symbols-outlined text-2xl">menu</span>
@@ -142,6 +120,9 @@ const ArtisanLayout = ({ children, title = "Mihnati PRO", subtitle = "Premium Pl
             </div>
           </div>
         </header>
+
+        {/* Header Spacer */}
+        <div className="h-24 shrink-0"></div>
 
         <div className="relative z-10">
           {children}

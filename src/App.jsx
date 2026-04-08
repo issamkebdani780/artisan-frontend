@@ -57,7 +57,7 @@ function App() {
         <Route path="/moving-booking" element={<MainLayout><MovingBooking /></MainLayout>} />
         <Route path="/message-success" element={<MainLayout><MessageSuccess /></MainLayout>} />
         <Route path="/about-us" element={<MainLayout><AboutUs /></MainLayout>} />
-        <Route path="/request-quote" element={<RequestQuote />} />
+        <Route path="/request-quote" element={<MainLayout><RequestQuote /></MainLayout>} />
 
         {/* Private / Dashboard Routes - Rendered without MainLayout nav/footer */}
         <Route path="/dashboard/artisan" element={<ArtisanDashboard />} />
