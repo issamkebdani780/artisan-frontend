@@ -88,45 +88,49 @@ const ArtisanProjects = () => {
 
   return (
     <ArtisanLayout title="Artisan PRO" subtitle="Gestion des projets">
-      <div className="p-8 flex-1 flex flex-col overflow-y-auto">
+      <div className="p-8 flex-1 flex flex-col overflow-y-auto font-['Outfit',sans-serif] bg-slate-50/20">
         
         {/* Page Title & CTA */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8 text-slate-900 dark:text-white">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-10">
           <div>
-            <h1 className="text-3xl font-black tracking-tight mb-2 text-slate-900 dark:text-white">Gestion des Projets</h1>
-            <p className="text-slate-500">Suivez l'état de vos chantiers en cours et passés.</p>
+            <h1 className="text-4xl font-black tracking-tight text-slate-900 uppercase">Gestion des Projets</h1>
+            <p className="text-slate-500 mt-2 font-bold uppercase tracking-widest text-xs">Suivez l'état de vos chantiers en temps réel</p>
+          </div>
+          <div className="flex gap-4">
+            <button className="flex items-center gap-3 px-8 py-4 bg-white border border-slate-100 text-slate-900 rounded-2xl font-black text-xs uppercase tracking-widest shadow-sm hover:bg-slate-50 transition-all">
+              <span className="material-symbols-outlined text-sm font-black">download</span>
+              Exporter PDF
+            </button>
           </div>
         </div>
 
         {/* Pending Opportunities Section */}
         {pendingDevis.length > 0 && (
-          <section className="mb-10 bg-linear-to-r from-orange-50 to-orange-100 dark:from-orange-950/20 dark:to-orange-900/20 rounded-3xl p-8 border border-orange-200 dark:border-orange-900/50">
-            <div className="flex items-center gap-3 mb-6">
-              <span className="relative flex h-3 w-3">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-3 w-3 bg-secondary"></span>
-              </span>
-              <h3 className="text-xl font-black text-orange-900 dark:text-orange-200">Demandes disponibles dans votre secteur ({pendingDevis.length})</h3>
+          <section className="mb-12 bg-white rounded-[40px] p-10 border-2 border-secondary/20 shadow-2xl shadow-secondary/5 relative overflow-hidden group">
+            <div className="absolute right-0 top-0 w-96 h-96 bg-secondary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4"></div>
+            <div className="flex items-center gap-4 mb-8 relative z-10">
+              <div className="size-3 rounded-full bg-secondary animate-pulse shadow-[0_0_15px_rgba(255,107,0,0.5)]"></div>
+              <h2 className="text-2xl font-black text-slate-900 uppercase tracking-tight">Opportunités à saisir ({pendingDevis.length})</h2>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10">
               {pendingDevis.map(devis => (
-                <div key={devis.id} className="bg-white dark:bg-stone-900 p-6 rounded-2xl shadow-sm border border-orange-200/50 dark:border-stone-800 space-y-4">
+                <div key={devis.id} className="bg-slate-50 p-8 rounded-[32px] border border-slate-100 space-y-6 hover:bg-white hover:border-secondary/30 transition-all group/card shadow-sm hover:shadow-xl">
                   <div className="flex justify-between items-start">
                     <div>
-                      <span className="px-3 py-1 bg-secondary/10 text-secondary rounded-full text-[10px] font-black uppercase">{devis.category_name}</span>
-                      <h4 className="mt-2 font-black text-slate-900 dark:text-white">{devis.client_name}</h4>
+                      <span className="px-4 py-1.5 bg-secondary text-white rounded-full text-[10px] font-black uppercase tracking-widest shadow-lg shadow-secondary/20">{devis.category_name}</span>
+                      <h4 className="mt-4 text-lg font-black text-slate-900 uppercase tracking-tight line-clamp-1">{devis.client_name}</h4>
                     </div>
-                    <span className="text-sm font-black text-secondary">{devis.budget} DA</span>
+                    <span className="text-xl font-black text-secondary">{devis.budget} DA</span>
                   </div>
-                  <p className="text-sm text-slate-600 dark:text-slate-400 line-clamp-2 italic">"{devis.description}"</p>
-                  <div className="flex items-center justify-between pt-2">
-                    <span className="text-xs text-slate-400 font-bold flex items-center gap-1">
-                      <span className="material-symbols-outlined text-xs">calendar_today</span>
-                      {new Date(devis.date).toLocaleDateString()}
+                  <p className="text-sm text-slate-500 font-medium leading-relaxed italic border-l-2 border-secondary/30 pl-4">"{devis.description}"</p>
+                  <div className="flex items-center justify-between pt-4 border-t border-slate-100">
+                    <span className="text-xs font-black text-slate-400 uppercase tracking-tight flex items-center gap-2">
+                       <span className="material-symbols-outlined text-sm">event</span>
+                       {new Date(devis.date).toLocaleDateString()}
                     </span>
                     <button 
                       onClick={() => handleAcceptDevis(devis.id)}
-                      className="px-6 py-2 bg-slate-900 dark:bg-white dark:text-slate-900 text-white rounded-xl text-xs font-black hover:bg-slate-800 transition-all"
+                      className="px-6 py-2.5 bg-slate-900 text-white rounded-xl text-[10px] font-black uppercase tracking-widest hover:bg-secondary transition-all shadow-xl"
                     >
                       Accepter
                     </button>
@@ -137,106 +141,115 @@ const ArtisanProjects = () => {
           </section>
         )}
 
-        {/* Tabs */}
-        <div className="border-b border-slate-200 mb-6">
-          <div className="flex gap-8 overflow-x-auto custom-scrollbar">
-            {['Tous', 'En cours', 'Terminés', 'Annulés'].map(t => (
-              <button 
-                key={t}
-                onClick={() => setFilter(t)}
-                className={`border-b-2 pb-4 font-bold text-sm whitespace-nowrap transition-colors ${filter === t ? 'border-secondary text-secondary' : 'border-transparent text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200'}`}
-              >
-                {t === 'Tous' ? 'Tous les projets' : t}
-              </button>
-            ))}
-          </div>
+        {/* Tabs / Filters */}
+        <div className="flex gap-4 mb-8 overflow-x-auto custom-scrollbar pb-2">
+          {['Tous', 'En cours', 'Terminés', 'Annulés'].map(t => (
+            <button 
+              key={t}
+              onClick={() => setFilter(t)}
+              className={`px-8 py-4 rounded-2xl font-black text-[10px] uppercase tracking-widest whitespace-nowrap transition-all border ${
+                filter === t 
+                ? 'bg-secondary text-white border-secondary shadow-xl shadow-secondary/20 scale-105 z-10' 
+                : 'bg-white text-slate-400 border-slate-100 hover:border-secondary/30 hover:text-secondary shadow-sm'
+              }`}
+            >
+              {t === 'Tous' ? 'Tous les projets' : t}
+            </button>
+          ))}
         </div>
 
         {/* Table Card */}
-        <div className="bg-white dark:bg-stone-900 rounded-2xl border border-slate-200 dark:border-stone-800 shadow-sm overflow-hidden flex flex-col">
+        <div className="bg-white rounded-[40px] border border-slate-100 shadow-2xl shadow-slate-200/40 overflow-hidden mb-12 flex flex-col">
           <div className="overflow-x-auto">
-            <table className="w-full text-left">
-              <thead className="bg-slate-50 dark:bg-stone-800/50">
-                <tr>
-                  <th className="px-6 py-4 text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Projet / Service</th>
-                  <th className="px-6 py-4 text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Client</th>
-                  <th className="px-6 py-4 text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Date</th>
-                  <th className="px-6 py-4 text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Montant</th>
-                  <th className="px-6 py-4 text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Statut</th>
-                  <th className="px-6 py-4 text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider text-right">Actions</th>
+            <table className="w-full text-left border-collapse">
+              <thead>
+                <tr className="bg-slate-50/50">
+                  <th className="px-10 py-6 text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">Projet / Service</th>
+                  <th className="px-10 py-6 text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">Client</th>
+                  <th className="px-10 py-6 text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">Date</th>
+                  <th className="px-10 py-6 text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">Montant</th>
+                  <th className="px-10 py-6 text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">Statut</th>
+                  <th className="px-10 py-6 text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] text-center">Actions</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-slate-100 dark:divide-stone-800">
+              <tbody className="divide-y divide-slate-50">
                 {loading ? (
                   <tr>
-                    <td colSpan="6" className="px-6 py-12 text-center text-slate-400">
-                      <div className="flex flex-col items-center gap-2">
-                        <span className="animate-spin h-8 w-8 border-4 border-secondary/30 border-t-secondary rounded-full"></span>
-                        Chargement des projets...
+                    <td colSpan="6" className="px-10 py-20 text-center">
+                      <div className="flex flex-col items-center gap-4">
+                        <span className="animate-spin h-10 w-10 border-4 border-secondary/20 border-t-secondary rounded-full"></span>
+                        <p className="text-xs font-black text-slate-400 uppercase tracking-widest">Chargement...</p>
                       </div>
                     </td>
                   </tr>
                 ) : filteredProjects.length === 0 ? (
                   <tr>
-                    <td colSpan="6" className="px-6 py-12 text-center text-slate-400">
-                      Aucun projet trouvé.
+                    <td colSpan="6" className="px-10 py-20 text-center">
+                       <div className="flex flex-col items-center gap-4 max-w-xs mx-auto">
+                          <div className="size-16 rounded-full bg-slate-50 flex items-center justify-center text-slate-300">
+                             <span className="material-symbols-outlined text-4xl">inbox</span>
+                          </div>
+                          <p className="text-xs font-black text-slate-400 uppercase tracking-widest">Aucun projet trouvé dans cette catégorie</p>
+                       </div>
                     </td>
                   </tr>
                 ) : (
                   filteredProjects.map((project) => (
-                    <tr key={project.id} className="hover:bg-slate-50 dark:hover:bg-stone-800 transition-colors group">
-                      <td className="px-6 py-5">
-                        <div className="flex flex-col">
-                          <span className="font-bold text-slate-900 dark:text-white group-hover:text-secondary transition-colors capitalize">{project.service_title}</span>
-                          <span className="text-[10px] text-slate-400 dark:text-slate-500 font-bold uppercase tracking-wider">{project.type}</span>
+                    <tr key={project.id} className="hover:bg-slate-50/50 transition-all group">
+                      <td className="px-10 py-8">
+                        <div className="flex flex-col gap-1">
+                          <span className="font-black text-slate-900 uppercase tracking-tight text-sm group-hover:text-secondary transition-colors">{project.service_title}</span>
+                          <span className="text-[9px] font-black text-slate-300 uppercase tracking-widest bg-slate-50 border border-slate-100 rounded px-2 py-0.5 w-fit">{project.type}</span>
                         </div>
                       </td>
-                      <td className="px-6 py-5 text-slate-600 dark:text-slate-300 font-medium">{project.client_name}</td>
-                      <td className="px-6 py-5 text-slate-600 dark:text-slate-400 text-sm">
-                        {new Date(project.booking_date).toLocaleDateString('fr-FR', {
-                          day: 'numeric',
-                          month: 'short',
-                          year: 'numeric'
-                        })}
+                      <td className="px-10 py-8 text-xs font-black text-slate-600 uppercase tracking-tight">{project.client_name}</td>
+                      <td className="px-10 py-8">
+                        <span className="text-xs font-black text-slate-500 uppercase">
+                          {new Date(project.booking_date).toLocaleDateString('fr-FR', {
+                            day: 'numeric',
+                            month: 'short',
+                            year: 'numeric'
+                          })}
+                        </span>
                       </td>
-                      <td className="px-6 py-5 font-black text-slate-900 dark:text-white">{project.total_price} DA</td>
-                      <td className="px-6 py-5">
-                        <span className={`inline-flex items-center px-3 py-1 rounded-full text-[10px] font-black uppercase ${
-                          project.status === 'confirmed' || project.status === 'accepté' ? 'bg-blue-100 text-blue-700' :
-                          project.status === 'completed' || project.status === 'terminé' ? 'bg-emerald-100 text-emerald-700' :
-                          project.status === 'cancelled' || project.status === 'annulé' || project.status === 'refusé' ? 'bg-red-100 text-red-700' :
-                          'bg-orange-100 text-orange-700'
+                      <td className="px-10 py-8 font-black text-lg text-slate-900">{project.total_price} DA</td>
+                      <td className="px-10 py-8">
+                        <span className={`px-4 py-1.5 text-[9px] font-black rounded-full shadow-sm uppercase tracking-widest ${
+                          project.status === 'confirmed' || project.status === 'accepté' ? 'bg-indigo-50 text-indigo-600 border border-indigo-100' :
+                          project.status === 'completed' || project.status === 'terminé' ? 'bg-emerald-50 text-emerald-600 border border-emerald-100' :
+                          project.status === 'cancelled' || project.status === 'annulé' || project.status === 'refusé' ? 'bg-red-50 text-red-600 border border-red-100' :
+                          'bg-slate-50 text-slate-600 border border-slate-100'
                         }`}>
                           {project.status}
                         </span>
                       </td>
-                      <td className="px-6 py-5 text-right">
-                        <div className="flex items-center justify-end gap-2">
+                      <td className="px-10 py-8">
+                        <div className="flex items-center justify-center gap-3">
                           {(project.status === 'pending' || project.status === 'en attente') && (
                             <button 
                               onClick={() => updateStatus(project, 'confirmed')}
-                              className="p-2 bg-emerald-50 text-emerald-600 rounded-lg hover:bg-emerald-100 transition-colors"
+                              className="size-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center hover:bg-indigo-600 hover:text-white transition-all shadow-sm active:scale-90"
                               title="Confirmer"
                             >
-                              <span className="material-symbols-outlined text-sm">check</span>
+                              <span className="material-symbols-outlined text-sm font-black">check</span>
                             </button>
                           )}
                           {(project.status === 'confirmed' || project.status === 'accepté') && (
                             <button 
                               onClick={() => updateStatus(project, 'completed')}
-                              className="p-2 bg-blue-50 text-blue-600 rounded-lg hover:bg-blue-100 transition-colors"
+                              className="size-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center hover:bg-emerald-600 hover:text-white transition-all shadow-sm active:scale-90"
                               title="Terminer"
                             >
-                              <span className="material-symbols-outlined text-sm">done_all</span>
+                              <span className="material-symbols-outlined text-sm font-black">done_all</span>
                             </button>
                           )}
                           {project.status !== 'completed' && project.status !== 'terminé' && project.status !== 'cancelled' && project.status !== 'annulé' && (
                             <button 
                               onClick={() => updateStatus(project, 'cancelled')}
-                              className="p-2 bg-red-50 text-red-600 rounded-lg hover:bg-red-100 transition-colors"
+                              className="size-10 rounded-xl bg-red-50 text-red-600 flex items-center justify-center hover:bg-red-600 hover:text-white transition-all shadow-sm active:scale-90"
                               title="Annuler"
                             >
-                              <span className="material-symbols-outlined text-sm">close</span>
+                              <span className="material-symbols-outlined text-sm font-black">close</span>
                             </button>
                           )}
                         </div>
@@ -248,8 +261,16 @@ const ArtisanProjects = () => {
             </table>
           </div>
 
-          <div className="px-6 py-4 bg-slate-50 dark:bg-stone-900/50 border-t border-slate-100 dark:border-stone-800 flex items-center justify-between mt-auto">
-            <p className="text-sm text-slate-500 dark:text-slate-400">Affichage de {filteredProjects.length} projets</p>
+          <div className="px-10 py-6 bg-slate-50/50 border-t border-slate-50 flex items-center justify-between">
+            <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Affichage de {filteredProjects.length} projets actifs</p>
+            <div className="flex gap-2">
+               <button className="size-8 rounded-lg bg-white border border-slate-100 flex items-center justify-center text-slate-400 hover:text-secondary transition-all shadow-sm">
+                  <span className="material-symbols-outlined text-sm">chevron_left</span>
+               </button>
+               <button className="size-8 rounded-lg bg-white border border-slate-100 flex items-center justify-center text-slate-400 hover:text-secondary transition-all shadow-sm">
+                  <span className="material-symbols-outlined text-sm">chevron_right</span>
+               </button>
+            </div>
           </div>
         </div>
       </div>

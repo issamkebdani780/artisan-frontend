@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Hero from '../components/Hero';
 import FeaturedCraftsmen from '../components/FeaturedCraftsmen';
 import PopularServices from '../components/PopularServices';
@@ -8,6 +9,17 @@ import CtaSection from '../components/CtaSection';
 
 const Home = () => {
   const [openFaq, setOpenFaq] = useState(null);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const userString = localStorage.getItem('user');
+    if (userString) {
+      const user = JSON.parse(userString);
+      if (user.role === 'artisan') {
+        navigate('/dashboard/artisan');
+      }
+    }
+  }, [navigate]);
 
   const faqs = [
     { q: "Comment les artisans sont-ils vérifiés ?", a: "Chaque artisan sur BricoloPro passe par un processus de vérification rigoureux comprenant la vérification de l'identité, des qualifications professionnelles et des antécédents. Nous consultons également les avis réels des clients précédents." },

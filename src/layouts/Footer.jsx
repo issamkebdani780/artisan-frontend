@@ -7,8 +7,8 @@ const Footer = () => {
     <footer className="bg-white border-t border-slate-100 px-6 md:px-20 py-16">
       <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12">
         <div className="col-span-2">
-          <div className="flex items-center mb-8">
-            <img src={logo} alt="Mihnati Logo" className="h-10 w-auto object-contain" />
+          <div className="flex items-center mb-10">
+            <img src={logo} alt="Mihnati Logo" className="h-16 w-auto object-contain" />
           </div>
           <p className="text-slate-500 font-bold max-w-xs mb-8 leading-relaxed">
             La plateforme de confiance pour tous vos besoins en bricolage et rénovation. Connectez-vous avec les meilleurs experts locaux.

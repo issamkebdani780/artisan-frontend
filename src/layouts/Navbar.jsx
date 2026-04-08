@@ -24,9 +24,14 @@ const Navbar = () => {
 
   const navLinks = [
     { name: 'Accueil', to: '/' },
-    { name: 'Services', to: '/search' },
-    { name: 'Déménagement', to: '/moving-booking' },
-    { name: 'Devis', to: '/request-quote' },
+    ...(user?.role === 'artisan'
+      ? [{ name: 'Tableau de Bord', to: '/dashboard/artisan' }]
+      : [
+          { name: 'Services', to: '/search' },
+          { name: 'Déménagement', to: '/moving-booking' },
+          { name: 'Devis', to: '/request-quote' },
+        ]
+    ),
     { name: 'About Us', to: '/about-us' },
   ];
 

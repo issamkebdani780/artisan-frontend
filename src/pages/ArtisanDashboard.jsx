@@ -105,57 +105,57 @@ const ArtisanDashboard = () => {
 
   return (
     <ArtisanLayout title="Artisan PRO" subtitle="Premium Plan">
-      <div className="p-8 flex flex-col gap-8 flex-1 overflow-y-auto font-['Outfit',sans-serif]">
+      <div className="p-8 flex flex-col gap-10 flex-1 overflow-y-auto font-['Outfit',sans-serif] bg-slate-50/20">
         
         {/* Welcome Section */}
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
           <div>
-            <h2 className="text-3xl font-black tracking-tight text-slate-900 dark:text-white">Bonjour, {user?.name || 'Artisan'} 👋</h2>
-            <p className="text-slate-500 mt-1">Vous avez <span className="text-secondary font-bold">{activeProjects}</span> projets en cours aujourd'hui.</p>
+            <h2 className="text-4xl font-black tracking-tight text-slate-900 uppercase">Bonjour, {user?.name || 'Artisan'} 👋</h2>
+            <p className="text-slate-500 mt-2 font-bold uppercase tracking-widest text-xs">Vous avez <span className="text-secondary">{activeProjects}</span> projets actifs à traiter</p>
           </div>
-          <div className="flex gap-3">
+          <div className="flex gap-4">
             <a 
               href="/dashboard/artisan/pricing"
-              className="flex items-center gap-2 px-6 py-3 bg-secondary text-white rounded-xl font-bold text-sm shadow-lg shadow-secondary/20 hover:scale-[1.02] transition-transform"
+              className="flex items-center gap-3 px-8 py-4 bg-secondary text-white rounded-2xl font-black text-xs uppercase tracking-widest shadow-2xl shadow-secondary/30 hover:scale-[1.02] active:scale-95 transition-all"
             >
-              <span className="material-symbols-outlined text-sm">add</span>
-              Ajouter un Service
+              <span className="material-symbols-outlined text-sm font-black">add_circle</span>
+              Nouveau Service
             </a>
           </div>
         </div>
 
         {/* New Opportunities (Devis Broadcast) */}
         {pendingDevis.length > 0 && (
-          <section className="bg-linear-to-r from-orange-50 to-orange-100 dark:from-orange-950/20 dark:to-orange-900/40 rounded-3xl p-8 border border-secondary/20">
-            <div className="flex items-center gap-3 mb-6">
-              <span className="relative flex h-3 w-3">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-3 w-3 bg-secondary"></span>
-              </span>
-              <h3 className="text-xl font-black text-orange-900 dark:text-orange-400">Opportunités à saisir ({pendingDevis.length})</h3>
+          <section className="bg-white rounded-[40px] p-10 border-2 border-secondary/20 shadow-2xl shadow-secondary/5 relative overflow-hidden group">
+            <div className="absolute right-0 top-0 w-96 h-96 bg-secondary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4"></div>
+            <div className="flex items-center gap-4 mb-8 relative z-10">
+              <div className="size-3 rounded-full bg-secondary animate-pulse shadow-[0_0_15px_rgba(255,107,0,0.5)]"></div>
+              <h3 className="text-2xl font-black text-slate-900 uppercase tracking-tight">Opportunités à saisir ({pendingDevis.length})</h3>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 relative z-10">
               {pendingDevis.map(devis => (
-                <div key={devis.id} className="bg-white dark:bg-stone-800 p-6 rounded-2xl shadow-sm border border-secondary/20/50 space-y-4">
+                <div key={devis.id} className="bg-slate-50 p-8 rounded-[32px] border border-slate-100 space-y-6 hover:bg-white hover:border-secondary/30 transition-all group/card shadow-sm hover:shadow-xl">
                   <div className="flex justify-between items-start">
                     <div>
-                      <span className="px-3 py-1 bg-secondary/10 dark:bg-secondary/20 text-secondary rounded-full text-[10px] font-black uppercase">{devis.category_name}</span>
-                      <h4 className="mt-2 font-black text-slate-900 dark:text-white line-clamp-1">{devis.client_name} propose un projet</h4>
+                      <span className="px-4 py-1.5 bg-secondary text-white rounded-full text-[10px] font-black uppercase tracking-widest shadow-lg shadow-secondary/20">{devis.category_name}</span>
+                      <h4 className="mt-4 text-lg font-black text-slate-900 uppercase tracking-tight">{devis.client_name}</h4>
                     </div>
-                    <span className="text-sm font-black text-secondary">{devis.budget} DA</span>
+                    <div className="text-right">
+                      <span className="text-xl font-black text-secondary">{devis.budget} DA</span>
+                      <p className="text-[10px] font-bold text-slate-400 uppercase mt-1">Budget estimé</p>
+                    </div>
                   </div>
-                  <p className="text-sm text-slate-600 dark:text-slate-300 whitespace-pre-line italic">"{devis.description}"</p>
-                  <div className="flex items-center justify-between pt-2">
-                    <span className="text-xs text-slate-400 font-bold flex items-center gap-1">
-                      <span className="material-symbols-outlined text-xs">calendar_today</span>
-                      Prévu le: {new Date(devis.date).toLocaleDateString()}
-                    </span>
+                  <p className="text-sm text-slate-500 font-medium leading-relaxed italic border-l-2 border-secondary/30 pl-4">"{devis.description}"</p>
+                  <div className="flex items-center justify-between pt-4 border-t border-slate-100">
+                    <div className="flex items-center gap-2 text-slate-400">
+                      <span className="material-symbols-outlined text-lg">event</span>
+                      <span className="text-xs font-black uppercase tracking-tight">{new Date(devis.date).toLocaleDateString()}</span>
+                    </div>
                     <button 
                       onClick={() => handleAcceptDevis(devis.id)}
-                      className="px-6 py-2 bg-slate-900 text-white rounded-xl text-xs font-black hover:bg-slate-800 transition-all flex items-center gap-2"
+                      className="px-8 py-3 bg-slate-900 text-white rounded-2xl text-[10px] font-black uppercase tracking-widest hover:bg-secondary transition-all shadow-xl active:scale-95"
                     >
-                      <span className="material-symbols-outlined text-sm font-bold">check_circle</span>
-                      Accepter ce projet
+                      Accepter
                     </button>
                   </div>
                 </div>
@@ -165,138 +165,115 @@ const ArtisanDashboard = () => {
         )}
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div className="bg-white dark:bg-stone-900 p-6 rounded-2xl border border-orange-500/10 dark:border-stone-800 shadow-sm relative overflow-hidden group">
-            <div className="absolute -right-4 -top-4 w-24 h-24 bg-secondary/5 rounded-full group-hover:scale-150 transition-transform duration-500"></div>
-            <p className="text-slate-500 dark:text-slate-400 text-sm font-semibold relative z-10">Revenus Totaux</p>
-            <h3 className="text-3xl font-black mt-2 relative z-10 text-slate-900 dark:text-white">{(stats.totalRevenue || 0).toLocaleString()} DA</h3>
-            <div className="flex items-center gap-1 mt-4 text-emerald-500 font-bold text-sm relative z-10">
-              <span className="material-symbols-outlined text-sm">payments</span>
-              <span>Paiements cumulés</span>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {[
+            { label: 'Revenus Totaux', value: `${(stats.totalRevenue || 0).toLocaleString()} DA`, icon: 'payments', trend: 'Paiements cumulés', color: 'bg-emerald-50 text-emerald-600' },
+            { label: 'Projets Actifs', value: (stats.activeBookings || 0) + (stats.pendingDevis || 0), icon: 'pending_actions', trend: 'À traiter', color: 'bg-orange-50 text-orange-600' },
+            { label: 'Avis Clients', value: `${stats.rating || '0.0'}/5`, icon: 'star', trend: `${stats.reviewCount || 0} avis`, color: 'bg-yellow-50 text-yellow-600' },
+            { label: 'Total Projets', value: (stats.completedBookings || 0) + (stats.totalDevis || 0), icon: 'assignment', trend: 'Expérience globale', color: 'bg-secondary text-white', highlight: true }
+          ].map((stat, i) => (
+            <div key={i} className={`p-8 rounded-[32px] border border-slate-100 shadow-xl shadow-slate-200/40 relative overflow-hidden group transition-all hover:translate-y-[-4px] ${stat.highlight ? 'bg-secondary text-white' : 'bg-white'}`}>
+              {!stat.highlight && <div className="absolute -right-6 -top-6 size-24 bg-slate-50 rounded-full group-hover:scale-150 transition-transform duration-700"></div>}
+              <div className="relative z-10">
+                <div className={`size-12 rounded-2xl flex items-center justify-center mb-6 shadow-sm ${stat.highlight ? 'bg-white/20' : stat.color}`}>
+                  <span className="material-symbols-outlined font-black">{stat.icon}</span>
+                </div>
+                <p className={`text-[10px] font-black uppercase tracking-widest mb-1 ${stat.highlight ? 'text-white/70' : 'text-slate-400'}`}>{stat.label}</p>
+                <h3 className="text-3xl font-black tracking-tighter">{stat.value}</h3>
+                <p className={`text-[10px] font-bold uppercase mt-4 flex items-center gap-1 ${stat.highlight ? 'text-white/80' : 'text-slate-500'}`}>
+                  <span className="material-symbols-outlined text-xs">trending_up</span>
+                  {stat.trend}
+                </p>
+              </div>
             </div>
-          </div>
-          
-          <div className="bg-white dark:bg-stone-900 p-6 rounded-2xl border border-orange-500/10 dark:border-stone-800 shadow-sm relative overflow-hidden group">
-            <div className="absolute -right-4 -top-4 w-24 h-24 bg-secondary/5 rounded-full group-hover:scale-150 transition-transform duration-500"></div>
-            <p className="text-slate-500 dark:text-slate-400 text-sm font-semibold relative z-10">Projets Actifs</p>
-            <h3 className="text-3xl font-black mt-2 relative z-10 text-slate-900 dark:text-white">{(stats.activeBookings || 0) + (stats.pendingDevis || 0)}</h3>
-            <div className="flex items-center gap-1 mt-4 text-orange-500 font-bold text-sm relative z-10">
-              <span className="material-symbols-outlined text-sm">pending_actions</span>
-              <span>À traiter</span>
-            </div>
-          </div>
-          
-          <div className="bg-white dark:bg-stone-900 p-6 rounded-2xl border border-orange-500/10 dark:border-stone-800 shadow-sm relative overflow-hidden group">
-            <div className="absolute -right-4 -top-4 w-24 h-24 bg-secondary/5 rounded-full group-hover:scale-150 transition-transform duration-500"></div>
-            <p className="text-slate-500 dark:text-slate-400 text-sm font-semibold relative z-10">Avis Clients</p>
-            <h3 className="text-3xl font-black mt-2 relative z-10 text-slate-900 dark:text-white">{stats.rating || '0.0'}/5</h3>
-            <div className="flex items-center gap-1 mt-4 text-yellow-500 font-bold text-sm relative z-10">
-              <span className="material-symbols-outlined text-sm" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
-              <span>{stats.reviewCount || 0} avis</span>
-            </div>
-          </div>
-          
-          <div className="bg-secondary p-6 rounded-2xl shadow-xl shadow-secondary/20 text-white relative overflow-hidden group">
-            <div className="absolute -right-4 -top-4 w-24 h-24 bg-white/10 rounded-full group-hover:scale-150 transition-transform duration-500"></div>
-            <p className="text-white/80 text-sm font-semibold relative z-10">Total Projets</p>
-            <h3 className="text-3xl font-black mt-2 relative z-10">{(stats.completedBookings || 0) + (stats.totalDevis || 0)}</h3>
-            <div className="flex items-center gap-1 mt-4 font-bold text-sm relative z-10">
-              <span className="material-symbols-outlined text-sm">assignment</span>
-              Expérience globale
-            </div>
-          </div>
+          ))}
         </div>
 
         {/* Recent Projects List */}
-        <div className="bg-white dark:bg-stone-900 rounded-2xl border border-orange-500/10 dark:border-stone-800 shadow-sm overflow-hidden min-h-[400px]">
-          <div className="p-6 border-b border-slate-100 dark:border-stone-800 flex justify-between items-center bg-slate-50/50 dark:bg-stone-900/50">
-            <h4 className="text-xl font-black text-slate-800 dark:text-white">Réservations Récentes</h4>
-            <button className="text-orange-500 font-bold text-sm hover:underline" onClick={() => window.location.reload()}>Actualiser</button>
+        <div className="bg-white rounded-[40px] border border-slate-100 shadow-xl shadow-slate-200/40 overflow-hidden mb-12">
+          <div className="p-8 md:p-10 border-b border-slate-50 flex justify-between items-center bg-white">
+            <div>
+              <h4 className="text-2xl font-black text-slate-900 uppercase tracking-tight">Réservations Récentes</h4>
+              <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mt-1">Historique des 30 derniers jours</p>
+            </div>
+            <button className="size-12 rounded-2xl bg-slate-50 flex items-center justify-center text-secondary hover:bg-secondary hover:text-white transition-all shadow-sm active:scale-90" onClick={() => window.location.reload()}>
+              <span className="material-symbols-outlined font-black">refresh</span>
+            </button>
           </div>
           <div className="overflow-x-auto">
             <table className="w-full text-left border-collapse">
-              <thead className="bg-[#f8f6f6] dark:bg-stone-800/50 border-b border-slate-200 dark:border-stone-800">
-                <tr>
-                  <th className="px-6 py-4 text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Service / Client</th>
-                  <th className="px-6 py-4 text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Date</th>
-                  <th className="px-6 py-4 text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Statut</th>
-                  <th className="px-6 py-4 text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider text-right">Montant</th>
-                  <th className="px-6 py-4 text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider text-center">Actions</th>
+              <thead>
+                <tr className="bg-slate-50/50">
+                  <th className="px-10 py-6 text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">Service / Client</th>
+                  <th className="px-10 py-6 text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">Date</th>
+                  <th className="px-10 py-6 text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">Statut</th>
+                  <th className="px-10 py-6 text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] text-right">Montant</th>
+                  <th className="px-10 py-6 text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] text-center">Actions</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-slate-100 dark:divide-stone-800">
+              <tbody className="divide-y divide-slate-50">
                 {loading ? (
                   <tr>
-                    <td colSpan="5" className="px-6 py-12 text-center text-slate-400">
-                      <div className="flex flex-col items-center gap-2">
-                        <span className="animate-spin h-8 w-8 border-4 border-orange-500/30 border-t-orange-500 rounded-full"></span>
-                        Chargement des données...
+                    <td colSpan="5" className="px-10 py-20 text-center">
+                      <div className="flex flex-col items-center gap-4">
+                        <span className="animate-spin h-10 w-10 border-4 border-secondary/20 border-t-secondary rounded-full"></span>
+                        <p className="text-xs font-black text-slate-400 uppercase tracking-widest">Chargement...</p>
                       </div>
                     </td>
                   </tr>
                 ) : bookings.length === 0 ? (
                   <tr>
-                    <td colSpan="5" className="px-6 py-12 text-center text-slate-400">
-                      Aucune réservation pour le moment.
+                    <td colSpan="5" className="px-10 py-20 text-center">
+                      <p className="text-xs font-black text-slate-400 uppercase tracking-widest">Aucune donnée disponible</p>
                     </td>
                   </tr>
                 ) : (
                   bookings.map((booking) => (
-                    <tr key={booking.id} className="hover:bg-slate-50 dark:hover:bg-stone-800 transition-colors group">
-                      <td className="px-6 py-4">
-                        <div className="flex flex-col">
-                          <span className="font-bold text-slate-900 dark:text-white capitalize">{booking.service_title}</span>
-                          <span className="text-xs text-slate-500 dark:text-slate-400 flex items-center gap-1 mt-1">
-                            <span className="material-symbols-outlined text-xs">person</span>
+                    <tr key={booking.id} className="hover:bg-slate-50/50 transition-all group">
+                      <td className="px-10 py-8">
+                        <div className="flex flex-col gap-1">
+                          <span className="font-black text-slate-900 uppercase tracking-tight text-sm">{booking.service_title}</span>
+                          <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest flex items-center gap-1.5">
+                            <span className="material-symbols-outlined text-xs">account_circle</span>
                             {booking.client_name} {booking.client_phone ? `• ${booking.client_phone}` : ''}
                           </span>
                         </div>
                       </td>
-                      <td className="px-6 py-4 text-sm text-slate-600 dark:text-slate-300 font-medium">
-                        {new Date(booking.booking_date).toLocaleDateString('fr-FR', {
-                          day: 'numeric',
-                          month: 'short',
-                          year: 'numeric'
-                        })}
+                      <td className="px-10 py-8">
+                        <span className="text-xs font-black text-slate-600 uppercase">
+                          {new Date(booking.booking_date).toLocaleDateString('fr-FR', {
+                            day: 'numeric', month: 'short', year: 'numeric'
+                          })}
+                        </span>
                       </td>
-                      <td className="px-6 py-4">
-                        <span className={`px-3 py-1 text-[10px] font-bold rounded-full shadow-sm uppercase ${
-                          booking.status === 'confirmed' || booking.status === 'accepté' ? 'bg-blue-100 text-blue-600' :
-                          booking.status === 'completed' || booking.status === 'terminé' ? 'bg-emerald-100 text-emerald-600' :
-                          booking.status === 'cancelled' || booking.status === 'refusé' || booking.status === 'annulé' ? 'bg-red-100 text-red-600' :
-                          'bg-secondary/10 text-secondary'
+                      <td className="px-10 py-8">
+                        <span className={`px-4 py-1.5 text-[9px] font-black rounded-full shadow-sm uppercase tracking-widest ${
+                          booking.status === 'confirmed' || booking.status === 'accepté' ? 'bg-indigo-50 text-indigo-600 border border-indigo-100' :
+                          booking.status === 'completed' || booking.status === 'terminé' ? 'bg-emerald-50 text-emerald-600 border border-emerald-100' :
+                          booking.status === 'cancelled' || booking.status === 'refusé' || booking.status === 'annulé' ? 'bg-red-50 text-red-600 border border-red-100' :
+                          'bg-slate-50 text-slate-600 border border-slate-100'
                         }`}>
                           {booking.status}
                         </span>
                       </td>
-                      <td className="px-6 py-4 text-right font-black text-slate-900 dark:text-white">{booking.total_price} DA</td>
-                      <td className="px-6 py-4 text-center">
-                        <div className="flex items-center justify-center gap-2">
+                      <td className="px-10 py-8 text-right">
+                        <span className="text-lg font-black text-slate-900">{booking.total_price} DA</span>
+                      </td>
+                      <td className="px-10 py-8 text-center">
+                        <div className="flex items-center justify-center gap-3">
                           {(booking.status === 'pending' || booking.status === 'en attente') && (
-                            <button 
-                              onClick={() => updateStatus(booking, 'confirmed')}
-                              className="p-2 bg-emerald-50 text-emerald-600 rounded-lg hover:bg-emerald-100 transition-colors"
-                              title="Confirmer"
-                            >
-                              <span className="material-symbols-outlined text-sm">check</span>
+                            <button onClick={() => updateStatus(booking, 'confirmed')} className="size-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center hover:bg-indigo-600 hover:text-white transition-all shadow-sm active:scale-90" title="Confirmer">
+                              <span className="material-symbols-outlined text-sm font-black">check</span>
                             </button>
                           )}
                           {(booking.status === 'confirmed' || booking.status === 'accepté') && (
-                            <button 
-                              onClick={() => updateStatus(booking, 'completed')}
-                              className="p-2 bg-blue-50 text-blue-600 rounded-lg hover:bg-blue-100 transition-colors"
-                              title="Terminer"
-                            >
-                              <span className="material-symbols-outlined text-sm">done_all</span>
+                            <button onClick={() => updateStatus(booking, 'completed')} className="size-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center hover:bg-emerald-600 hover:text-white transition-all shadow-sm active:scale-90" title="Terminer">
+                              <span className="material-symbols-outlined text-sm font-black">done_all</span>
                             </button>
                           )}
-                          {booking.status !== 'completed' && booking.status !== 'cancelled' && (
-                            <button 
-                              onClick={() => updateStatus(booking, 'cancelled')}
-                              className="p-2 bg-red-50 text-red-600 rounded-lg hover:bg-red-100 transition-colors"
-                              title="Annuler"
-                            >
-                              <span className="material-symbols-outlined text-sm">close</span>
+                          {booking.status !== 'completed' && booking.status !== 'cancelled' && booking.status !== 'terminé' && (
+                            <button onClick={() => updateStatus(booking, 'cancelled')} className="size-10 rounded-xl bg-red-50 text-red-600 flex items-center justify-center hover:bg-red-600 hover:text-white transition-all shadow-sm active:scale-90" title="Annuler">
+                              <span className="material-symbols-outlined text-sm font-black">close</span>
                             </button>
                           )}
                         </div>

@@ -206,7 +206,7 @@ const ProfilArtisan = () => {
           {/* Right Column (4 cols) - Sticky Actions */}
           <div className="lg:col-span-4">
             <div className="sticky top-24 space-y-6">
-              {currentUser?.id != id ? (
+              {currentUser?.id?.toString() !== id?.toString() ? (
                 <div className="bg-white rounded-[40px] border border-slate-100 shadow-2xl overflow-hidden">
                   <div className="p-8">
                     <h4 className="text-xl font-black mb-6">Demander un service</h4>

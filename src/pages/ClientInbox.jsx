@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import apiService from '../services/api';
+import ClientLayout from '../layouts/ClientLayout';
 
 const ClientInbox = () => {
   const [bookings, setBookings] = useState([]);
@@ -67,214 +68,192 @@ const ClientInbox = () => {
 
   const getStatusStyle = (status) => {
     switch(status) {
-      case 'en attente': return 'bg-amber-100 text-amber-700 border-amber-200';
-      case 'accepté': return 'bg-emerald-100 text-emerald-700 border-emerald-200';
-      case 'refusé': return 'bg-rose-100 text-rose-700 border-rose-200';
-      default: return 'bg-slate-100 text-slate-700 border-slate-200';
+      case 'en attente': return 'bg-amber-50 text-amber-600 border-amber-100';
+      case 'accepté': return 'bg-indigo-50 text-indigo-600 border-indigo-100';
+      case 'refusé': return 'bg-red-50 text-red-600 border-red-100';
+      case 'terminé': return 'bg-emerald-50 text-emerald-600 border-emerald-100';
+      default: return 'bg-slate-50 text-slate-600 border-slate-100';
     }
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 font-['Outfit',sans-serif]">
-      {/* Header */}
-      <header className="bg-white border-b border-slate-200 px-8 py-4 sticky top-0 z-50 flex justify-between items-center shadow-sm">
-        <div className="flex items-center gap-3 cursor-pointer" onClick={() => navigate('/')}>
-          <div className="size-10 bg-blue-600 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-blue-600/30">
-            <span className="material-symbols-outlined">construction</span>
-          </div>
-          <h1 className="text-2xl font-black tracking-tight text-slate-900">BricoloPro</h1>
-        </div>
-        <div className="flex items-center gap-4">
-          <div className="text-right hidden sm:block">
-            <p className="text-sm font-black text-slate-900">{user?.name}</p>
-            <p className="text-xs text-slate-500">Tableau de bord Client</p>
-          </div>
-          <div className="size-10 rounded-full bg-blue-100 border-2 border-blue-600/10 flex items-center justify-center font-black text-blue-600">
-            {user?.name?.charAt(0)}
-          </div>
-        </div>
-      </header>
-
-      <main className="max-w-6xl mx-auto px-6 py-12">
-        <div className="flex flex-col md:flex-row justify-between items-end gap-6 mb-12">
+    <ClientLayout title="Mihnati Client" subtitle="Gestion des demandes">
+      <div className="p-8 md:p-12 flex flex-col flex-1 bg-slate-50/20 font-['Outfit',sans-serif]">
+        
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-12">
           <div>
-            <h2 className="text-4xl font-black text-slate-900 mb-2">Mes Demandes</h2>
-            <p className="text-slate-500 text-lg">Suivez l'état de vos projets et contactez vos artisans.</p>
+            <h2 className="text-4xl font-black text-slate-900 uppercase tracking-tight">Mes Demandes</h2>
+            <p className="text-slate-500 mt-2 font-bold uppercase tracking-widest text-xs">Suivez l'état de vos projets en temps réel</p>
           </div>
-          <button 
-             onClick={() => navigate('/search')}
-             className="bg-blue-600 text-white px-8 py-3 rounded-2xl font-black hover:shadow-xl hover:shadow-blue-600/30 transition-all flex items-center gap-2"
-          >
-            <span className="material-symbols-outlined">add</span>
-            Nouveau Projet
-          </button>
         </div>
 
         {loading ? (
-          <div className="flex justify-center items-center py-20 text-slate-400">
-            <span className="animate-spin h-8 w-8 border-4 border-blue-600 border-t-transparent rounded-full mr-3"></span>
-            Chargement de vos projets...
+          <div className="flex-1 flex flex-col items-center justify-center py-20">
+            <span className="animate-spin h-12 w-12 border-4 border-primary border-t-transparent rounded-full mb-4"></span>
+            <p className="text-xs font-black text-slate-400 uppercase tracking-widest">Chargement de vos demandes...</p>
           </div>
         ) : bookings.length === 0 ? (
-          <div className="bg-white p-20 rounded-3xl border-2 border-dashed border-slate-200 text-center space-y-4 shadow-sm">
-            <div className="size-20 bg-slate-100 rounded-full flex items-center justify-center mx-auto text-slate-400 mb-6">
+          <div className="flex-1 flex flex-col items-center justify-center bg-white rounded-[40px] border-2 border-dashed border-slate-100 p-20 text-center shadow-sm">
+            <div className="size-20 bg-slate-50 rounded-full flex items-center justify-center text-slate-300 mb-8">
               <span className="material-symbols-outlined text-4xl">inventory_2</span>
             </div>
-            <h3 className="text-2xl font-black text-slate-900">Aucun projet en cours</h3>
-            <p className="text-slate-500 max-w-sm mx-auto">Commencez par rechercher un artisan pour votre prochain projet de rénovation.</p>
+            <h3 className="text-2xl font-black text-slate-900 uppercase tracking-tight mb-2">Aucune demande trouvée</h3>
+            <p className="text-slate-500 font-bold uppercase tracking-widest text-[10px] max-w-xs mx-auto mb-10 leading-relaxed text-center">Vous n'avez pas encore de demandes de devis actives sur la plateforme.</p>
             <button 
               onClick={() => navigate('/search')}
-              className="text-blue-600 font-black hover:underline mt-4 block mx-auto outline-none"
+              className="px-10 py-4 border-2 border-primary text-primary rounded-2xl font-black text-xs uppercase tracking-widest hover:bg-primary hover:text-white transition-all shadow-xl shadow-primary/10 active:scale-95"
             >
-              Parcourir les experts
+              Parcourir les artisans
             </button>
           </div>
         ) : (
-          <div className="grid grid-cols-1 lg:grid-cols-1 gap-6">
+          <div className="grid grid-cols-1 gap-8">
             {bookings.map(devis => (
-              <div key={devis.id} className="bg-white rounded-3xl border border-slate-100 p-8 shadow-xl shadow-slate-200/40 hover:shadow-2xl hover:shadow-slate-200/60 transition-all group border-l-8 border-l-blue-600">
-                <div className="flex flex-col md:flex-row gap-8">
-                  <div className="flex-1 space-y-6">
-                    <div className="flex flex-wrap items-center gap-3">
-                      <span className={`px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-wider border-2 ${getStatusStyle(devis.status)}`}>
+              <div key={devis.id} className="bg-white rounded-[40px] border border-slate-100 p-8 md:p-10 shadow-2xl shadow-slate-200/40 hover:shadow-primary/5 transition-all group overflow-hidden relative">
+                <div className="absolute right-0 top-0 w-32 h-full bg-slate-50/30 -skew-x-12 translate-x-16 group-hover:translate-x-12 transition-transform duration-700"></div>
+                
+                <div className="flex flex-col lg:flex-row gap-10 relative z-10">
+                  <div className="flex-1 space-y-8">
+                    <div className="flex flex-wrap items-center gap-4">
+                      <span className={`px-5 py-2 rounded-full text-[10px] font-black uppercase tracking-widest border shadow-sm ${getStatusStyle(devis.status)}`}>
                         {devis.status}
                       </span>
-                      <span className="text-slate-400 font-bold text-xs">•</span>
-                      <span className="text-slate-500 text-xs font-bold uppercase tracking-widest flex items-center gap-1">
-                        <span className="material-symbols-outlined text-sm">calendar_today</span>
-                        Prévu le: {new Date(devis.date).toLocaleDateString()}
+                      <div className="h-4 w-px bg-slate-200 hidden sm:block"></div>
+                      <span className="text-slate-400 text-[10px] font-black uppercase tracking-widest flex items-center gap-2">
+                        <span className="material-symbols-outlined text-sm">event</span>
+                        Créé le: {new Date(devis.createdAt || devis.date).toLocaleDateString()}
                       </span>
                     </div>
 
-                    <h4 className="text-2xl font-black text-slate-900 group-hover:text-blue-600 transition-colors uppercase tracking-tight">
-                      {devis.category_name}
-                    </h4>
+                    <div>
+                      <h4 className="text-3xl font-black text-slate-900 uppercase tracking-tight group-hover:text-primary transition-colors mb-3">
+                        {devis.category_name}
+                      </h4>
+                      <p className="text-slate-500 font-medium leading-relaxed italic border-l-3 border-primary/20 pl-6 text-sm">
+                        "{devis.description}"
+                      </p>
+                    </div>
 
-                    <p className="text-slate-500 line-clamp-2 text-sm leading-relaxed">
-                      {devis.description}
-                    </p>
-
-                    <div className="flex flex-wrap gap-8">
-                      <div className="flex items-center gap-3">
-                        <div className={`size-12 rounded-2xl flex items-center justify-center font-black ${devis.artisan_name ? 'bg-slate-100 text-slate-500' : 'bg-amber-50 text-amber-500 animate-pulse'}`}>
-                          {devis.artisan_name ? devis.artisan_name.charAt(0) : '?'}
+                    <div className="flex flex-wrap gap-12 pt-4">
+                      <div className="flex items-center gap-4">
+                        <div className={`size-14 rounded-2xl flex items-center justify-center font-black shadow-sm ${devis.artisan_name ? 'bg-slate-100 text-slate-400 border border-slate-200' : 'bg-amber-50 text-amber-500 border border-amber-100 animate-pulse'}`}>
+                          <span className="material-symbols-outlined">{devis.artisan_name ? 'person' : 'person_search'}</span>
                         </div>
                         <div>
-                          <p className="text-xs text-slate-400 font-black uppercase tracking-widest">Artisan</p>
-                          <p className={`text-sm font-bold ${devis.artisan_name ? 'text-slate-900' : 'text-amber-600 italic'}`}>
-                            {devis.artisan_name || "En attente d'acceptation"}
+                          <p className="text-[10px] text-slate-400 font-black uppercase tracking-widest mb-1">Artisan</p>
+                          <p className={`text-sm font-black uppercase tracking-tight ${devis.artisan_name ? 'text-slate-900' : 'text-amber-600'}`}>
+                            {devis.artisan_name || "En sélection..."}
                           </p>
                         </div>
                       </div>
-                      <div className="flex items-center gap-3">
-                        <div className="size-12 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-600">
-                          <span className="material-symbols-outlined text-2xl font-bold">payments</span>
+                      <div className="flex items-center gap-4">
+                        <div className="size-14 bg-indigo-50 border border-indigo-100 rounded-2xl flex items-center justify-center text-indigo-600 shadow-sm">
+                          <span className="material-symbols-outlined font-black">payments</span>
                         </div>
                         <div>
-                          <p className="text-xs text-slate-400 font-black uppercase tracking-widest">Budget Estimé</p>
-                          <p className="text-sm font-bold text-slate-900">{devis.budget} DA</p>
+                          <p className="text-[10px] text-slate-400 font-black uppercase tracking-widest mb-1">Budget Prévu</p>
+                          <p className="text-lg font-black text-slate-900 tracking-tight">{devis.budget} <span className="text-xs ml-1">DA</span></p>
                         </div>
                       </div>
                     </div>
                   </div>
 
-                  <div className="flex flex-row md:flex-col justify-end gap-3 min-w-[200px]">
-                    <button className="flex-1 bg-blue-600 text-white py-3 px-6 rounded-xl font-black text-xs hover:bg-blue-700 transition-all flex items-center justify-center gap-2">
-                       <span className="material-symbols-outlined text-sm font-bold">message</span>
-                       Message
-                    </button>
-                    <button
-                       onClick={() => handleDelete(devis.id)}
-                       className="flex-1 bg-red-50 border-2 border-red-100 text-red-600 py-3 px-6 rounded-xl font-black text-xs hover:bg-red-100 transition-all active:scale-95 flex items-center justify-center gap-2"
-                    >
-                       <span className="material-symbols-outlined text-sm">delete</span>
-                       Supprimer
+                  <div className="flex flex-row lg:flex-col justify-end gap-4 min-w-[240px] pt-8 lg:pt-0 border-t lg:border-t-0 lg:border-l border-slate-50 lg:pl-10">
+                    <button className="flex-1 lg:flex-none h-14 px-8 bg-primary text-white rounded-2xl font-black text-[10px] uppercase tracking-widest hover:shadow-xl hover:shadow-primary/20 transition-all flex items-center justify-center gap-3 active:scale-95">
+                       <span className="material-symbols-outlined text-sm font-black">message</span>
+                       Messages
                     </button>
                     {(devis.status === 'accepté' || devis.status === 'terminé') && devis.artisan_id && !reviewedIds.has(devis.artisan_id) && (
                       <button
                         onClick={() => setReviewModal({ artisanId: devis.artisan_id, artisanName: devis.artisan_name })}
-                        className="flex-1 bg-amber-50 border-2 border-amber-200 text-amber-700 py-3 px-6 rounded-xl font-black text-xs hover:bg-amber-100 transition-all active:scale-95 flex items-center justify-center gap-2"
+                        className="flex-1 lg:flex-none h-14 px-8 bg-amber-50 border border-amber-100 text-amber-600 rounded-2xl font-black text-[10px] uppercase tracking-widest hover:bg-amber-100 transition-all active:scale-95 flex items-center justify-center gap-3"
                       >
-                        <span className="material-symbols-outlined text-sm">star</span>
+                        <span className="material-symbols-outlined text-sm font-black">social_leaderboard</span>
                         Laisser un avis
                       </button>
                     )}
+                    <button
+                       onClick={() => handleDelete(devis.id)}
+                       className="flex-1 lg:flex-none h-14 px-8 bg-white border border-red-100 text-red-500 rounded-2xl font-black text-[10px] uppercase tracking-widest hover:bg-red-50 transition-all active:scale-95 flex items-center justify-center gap-3"
+                    >
+                       <span className="material-symbols-outlined text-sm font-black">delete</span>
+                       Supprimer
+                    </button>
                   </div>
                 </div>
               </div>
             ))}
           </div>
         ) }
-      </main>
+      </div>
 
       {/* Review Modal */}
       {reviewModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 px-4" onClick={() => setReviewModal(null)}>
-          <div className="bg-white rounded-3xl shadow-2xl p-8 w-full max-w-md" onClick={e => e.stopPropagation()}>
-            <div className="flex justify-between items-center mb-6">
+        <div className="fixed inset-0 z-100 flex items-center justify-center bg-slate-900/60 backdrop-blur-md px-4 animate-in fade-in duration-300" onClick={() => setReviewModal(null)}>
+          <div className="bg-white rounded-[40px] shadow-2xl p-10 w-full max-w-lg border border-slate-100 animate-in zoom-in-95 duration-300" onClick={e => e.stopPropagation()}>
+            <div className="flex justify-between items-center mb-8">
               <div>
-                <h3 className="text-2xl font-black text-slate-900">Votre avis</h3>
-                <p className="text-slate-500 text-sm mt-1">Pour <span className="font-bold text-blue-600">{reviewModal.artisanName}</span></p>
+                <p className="text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-2">Artisan: {reviewModal.artisanName}</p>
+                <h3 className="text-3xl font-black text-slate-900 uppercase tracking-tight">Rédiger un avis</h3>
               </div>
-              <button onClick={() => setReviewModal(null)} className="size-10 rounded-full bg-slate-100 flex items-center justify-center hover:bg-slate-200 transition-colors">
-                <span className="material-symbols-outlined text-slate-600">close</span>
+              <button onClick={() => setReviewModal(null)} className="size-12 rounded-2xl bg-slate-50 flex items-center justify-center text-slate-400 hover:text-red-500 transition-all active:scale-90 shadow-sm border border-slate-100">
+                <span className="material-symbols-outlined">close</span>
               </button>
             </div>
-            <form onSubmit={handleSubmitReview} className="space-y-6">
-              {/* Star Rating */}
-              <div>
-                <p className="text-sm font-bold text-slate-700 mb-3">Note</p>
-                <div className="flex gap-2">
+            <form onSubmit={handleSubmitReview} className="space-y-8">
+              <div className="bg-slate-50/50 p-8 rounded-[32px] border border-slate-100">
+                <p className="text-xs font-black text-slate-400 uppercase tracking-widest text-center mb-6">Quelle note donnez-vous ?</p>
+                <div className="flex justify-center gap-3">
                   {[1,2,3,4,5].map(star => (
                     <button
                       key={star}
                       type="button"
                       onClick={() => setReviewForm(f => ({ ...f, rating: star }))}
-                      className={`text-4xl transition-transform hover:scale-110 ${
-                        star <= reviewForm.rating ? 'text-amber-400' : 'text-slate-200'
+                      className={`text-4xl transition-all hover:scale-125 ${
+                        star <= reviewForm.rating ? 'text-amber-400 drop-shadow-md scale-110' : 'text-slate-200'
                       }`}
                     >
-                      ★
+                      {star <= reviewForm.rating ? '★' : '☆'}
                     </button>
                   ))}
                 </div>
                 {reviewForm.rating > 0 && (
-                  <p className="text-xs text-slate-500 mt-2">
-                    {['', 'Très mauvais', 'Mauvais', 'Bien', 'Très bien', 'Excellent !'][reviewForm.rating]}
+                  <p className="text-[10px] font-black text-amber-600 uppercase tracking-widest mt-6 text-center bg-white px-4 py-2 rounded-full border border-amber-100 shadow-sm w-fit mx-auto">
+                    {['', 'Insatisfaisant', 'Moyen', 'Satisfaisant', 'Très Satisfaisant', 'Exceptionnel !'][reviewForm.rating]}
                   </p>
                 )}
               </div>
-              {/* Comment */}
-              <div>
-                <label className="block text-sm font-bold text-slate-700 mb-2">Commentaire</label>
+              
+              <div className="space-y-3">
+                <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-4">Votre commentaire</label>
                 <textarea
                   rows={4}
-                  placeholder="Décrivez votre expérience avec cet artisan..."
+                  placeholder="Partagez votre expérience avec cet artisan..."
                   value={reviewForm.comment}
                   onChange={e => setReviewForm(f => ({ ...f, comment: e.target.value }))}
-                  className="w-full rounded-xl border-2 border-slate-100 p-4 text-slate-900 focus:border-blue-500 outline-none resize-none transition-colors"
+                  className="w-full rounded-[32px] bg-slate-50 border border-slate-100 p-8 text-slate-900 focus:bg-white focus:border-primary outline-none resize-none transition-all font-medium text-sm leading-relaxed"
                 />
               </div>
+              
               <button
                 type="submit"
                 disabled={reviewSubmitting || reviewForm.rating === 0}
-                className="w-full bg-blue-600 text-white py-4 rounded-xl font-black text-sm hover:bg-blue-700 transition-all disabled:opacity-50 flex items-center justify-center gap-2"
+                className="w-full bg-slate-900 text-white h-20 rounded-[32px] font-black text-sm uppercase tracking-widest hover:bg-primary transition-all disabled:opacity-50 flex items-center justify-center gap-4 shadow-2xl shadow-slate-900/20 active:scale-[0.98]"
               >
                 {reviewSubmitting ? (
-                  <><span className="animate-spin h-5 w-5 border-4 border-white/30 border-t-white rounded-full"></span> Envoi...</>
+                  <span className="animate-spin h-6 w-6 border-4 border-white/30 border-t-white rounded-full"></span>
                 ) : (
-                  <><span className="material-symbols-outlined text-sm">send</span> Publier mon avis</>
+                  <>
+                    <span className="material-symbols-outlined font-black">send_and_archive</span>
+                    Publier l'avis
+                  </>
                 )}
               </button>
             </form>
           </div>
         </div>
       )}
-
-      <footer className="mt-20 border-t border-slate-100 py-12 text-center text-slate-400 text-sm">
-        <p>© 2026 BricoloPro Algérie - Tableau de bord Client v2.0</p>
-      </footer>
-    </div>
+    </ClientLayout>
   );
 };
 
