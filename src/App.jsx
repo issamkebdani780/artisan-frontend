@@ -78,6 +78,7 @@ function App() {
         
         {/* Admin Dashboard Routes */}
         <Route path="/dashboard/admin" element={<AdminDashboard />} />
+        <Route path="/dashboard/admin/stats" element={<AdminDashboard />} />
         <Route path="/dashboard/admin/artisans" element={<AdminArtisans />} />
         <Route path="/dashboard/admin/clients" element={<AdminClients />} />
         <Route path="/dashboard/admin/disputes" element={<AdminDisputes />} />

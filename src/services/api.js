@@ -67,15 +67,15 @@ const getAuthHeaders = (isFormData = false) => {
 const handleResponse = async (res) => {
   if (!res.ok) {
     const errorData = await res.json().catch(() => ({ error: 'API Error' }));
-    
-    // Handle 401 (Unauthorized)
-    if (res.status === 401) {
+    // Handle 401 (Unauthorized) & 403 (Forbidden)
+    if (res.status === 401 || res.status === 403) {
       if (errorData.error === 'User not found' || errorData.error === 'Invalid credentials' || res.url.includes('/auth/login')) {
         throw new Error(errorData.error);
       } else {
         // Token expired / Unauthorized for protected routes
+        console.warn(`Auth Error (${res.status}): Clearing token...`);
         TokenManager.clearToken();
-        throw new Error('Session expired. Please log in again.');
+        throw new Error('Votre session a expiré ou vous n\'avez pas les permissions nécessaires.');
       }
     }
     
@@ -379,7 +379,7 @@ const apiService = {
     return handleResponse(res);
   },
 
-  deleteAccount: async (id) => {
+  deleteUser: async (id) => {
     const res = await fetch(`${BASE_URL}/users/${id}`, {
       method: 'DELETE',
       headers: getAuthHeaders(),
@@ -400,6 +400,50 @@ const apiService = {
   getPlatformStats: async () => {
     const res = await fetch(`${BASE_URL}/admin/stats`, {
       headers: getAuthHeaders(),
+    });
+    return handleResponse(res);
+  },
+
+  getDetailedStats: async () => {
+    const res = await fetch(`${BASE_URL}/admin/detailed-stats`, {
+      headers: getAuthHeaders(),
+    });
+    return handleResponse(res);
+  },
+
+  getAllArtisans: async () => {
+    const res = await fetch(`${BASE_URL}/admin/artisans`, {
+      headers: getAuthHeaders(),
+    });
+    return handleResponse(res);
+  },
+
+  getAllClients: async () => {
+    const res = await fetch(`${BASE_URL}/admin/clients`, {
+      headers: getAuthHeaders(),
+    });
+    return handleResponse(res);
+  },
+
+  getAllPayments: async () => {
+    const res = await fetch(`${BASE_URL}/admin/payments`, {
+      headers: getAuthHeaders(),
+    });
+    return handleResponse(res);
+  },
+
+  getAllDisputes: async () => {
+    const res = await fetch(`${BASE_URL}/admin/disputes`, {
+      headers: getAuthHeaders(),
+    });
+    return handleResponse(res);
+  },
+
+  updateDisputeStatus: async (id, status) => {
+    const res = await fetch(`${BASE_URL}/admin/disputes/${id}/status`, {
+      method: 'PUT',
+      headers: getAuthHeaders(),
+      body: JSON.stringify({ status }),
     });
     return handleResponse(res);
   },

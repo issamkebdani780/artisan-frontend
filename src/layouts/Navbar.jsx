@@ -27,10 +27,10 @@ const Navbar = () => {
     ...(user?.role === 'artisan'
       ? [{ name: 'Tableau de Bord', to: '/dashboard/artisan' }]
       : [
-          { name: 'Services', to: '/search' },
-          { name: 'Déménagement', to: '/moving-booking' },
-          { name: 'Devis', to: '/request-quote' },
-        ]
+        { name: 'Services', to: '/search' },
+        { name: 'Déménagement', to: '/moving-booking' },
+        { name: 'Devis', to: '/request-quote' },
+      ]
     ),
     { name: 'About Us', to: '/about-us' },
   ];
@@ -44,9 +44,9 @@ const Navbar = () => {
       {/* Desktop Navigation */}
       <nav className="hidden md:flex flex-1 justify-center gap-8">
         {navLinks.map((link) => (
-          <Link 
-            key={link.to} 
-            className="text-slate-600 hover:text-primary text-sm font-bold transition-colors uppercase tracking-tight" 
+          <Link
+            key={link.to}
+            className="text-slate-600 hover:text-primary text-sm font-bold transition-colors uppercase tracking-tight"
             to={link.to}
           >
             {link.name}
@@ -58,8 +58,8 @@ const Navbar = () => {
         <div className="hidden md:flex items-center gap-3">
           {user ? (
             <div className="flex items-center gap-4">
-              <Link 
-                to={user.role === 'artisan' ? '/dashboard/artisan' : '/dashboard/client/inbox'} 
+              <Link
+                to={user.role === 'artisan' ? '/dashboard/artisan' : '/dashboard/client/inbox'}
                 className="flex items-center gap-2 hover:opacity-80 transition-opacity"
               >
                 <div className="w-9 h-9 rounded-full bg-slate-50 flex items-center justify-center text-primary border border-slate-100 shadow-sm">
@@ -70,7 +70,7 @@ const Navbar = () => {
                   <span className="text-sm font-bold text-slate-900 hidden lg:inline">{user.name}</span>
                 </div>
               </Link>
-              <button 
+              <button
                 onClick={handleLogout}
                 className="text-slate-300 hover:text-red-500 p-2 transition-colors"
                 title="Déconnexion"
@@ -80,19 +80,19 @@ const Navbar = () => {
             </div>
           ) : (
             <div className="flex items-center gap-3">
-               <Link to="/login/artisan" className="hidden lg:flex items-center gap-2 px-4 py-2 text-slate-500 hover:text-primary transition-all font-bold text-sm">
-                  <span className="material-symbols-outlined text-xl">construction</span>
-                  Espace Artisan
-               </Link>
-               <Link to="/login/client" className="flex min-w-[120px] bg-primary text-white rounded-xl h-11 px-6 items-center justify-center font-black text-sm shadow-xl shadow-primary/20 hover:bg-primary/90 transition-all active:scale-95">
-                  Connexion
-               </Link>
+              <Link to="/login/artisan" className="hidden lg:flex items-center gap-2 px-4 py-2 text-slate-500 hover:text-primary transition-all font-bold text-sm">
+                <span className="material-symbols-outlined text-xl">construction</span>
+                Espace Artisan
+              </Link>
+              <Link to="/login/client" className="flex min-w-[120px] bg-primary text-white rounded-xl h-11 px-6 items-center justify-center font-black text-sm shadow-xl shadow-primary/20 hover:bg-primary/90 transition-all active:scale-95">
+                Connexion
+              </Link>
             </div>
           )}
         </div>
 
         {/* Mobile Menu Toggle */}
-        <button 
+        <button
           className="md:hidden p-2 text-slate-500 hover:bg-slate-50 rounded-lg transition-colors"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
@@ -107,9 +107,9 @@ const Navbar = () => {
         <div className="fixed inset-0 bg-white z-40 md:hidden flex flex-col pt-24 px-6 gap-6 animate-in slide-in-from-top duration-300">
           <nav className="flex flex-col gap-4">
             {navLinks.map((link) => (
-              <Link 
-                key={link.to} 
-                className="text-xl font-bold text-slate-900 border-b border-slate-50 pb-4" 
+              <Link
+                key={link.to}
+                className="text-xl font-bold text-slate-900 border-b border-slate-50 pb-4"
                 to={link.to}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
@@ -117,11 +117,11 @@ const Navbar = () => {
               </Link>
             ))}
           </nav>
-          
+
           <div className="mt-4 flex flex-col gap-4">
             {user ? (
               <>
-                <Link 
+                <Link
                   to={user.role === 'artisan' ? '/dashboard/artisan' : '/dashboard/client/inbox'}
                   className="flex items-center gap-4 p-4 bg-slate-50 rounded-2xl"
                   onClick={() => setIsMobileMenuOpen(false)}
@@ -134,7 +134,7 @@ const Navbar = () => {
                     <p className="font-bold text-slate-900">{user.name}</p>
                   </div>
                 </Link>
-                <button 
+                <button
                   onClick={handleLogout}
                   className="flex items-center gap-2 text-red-500 font-bold p-4"
                 >
@@ -144,15 +144,15 @@ const Navbar = () => {
               </>
             ) : (
               <div className="flex flex-col gap-3">
-                <Link 
-                  to="/login/client" 
+                <Link
+                  to="/login/client"
                   className="w-full bg-primary text-white rounded-xl h-12 flex items-center justify-center font-black text-sm shadow-xl shadow-primary/20"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Connexion Client
                 </Link>
-                <Link 
-                  to="/login/artisan" 
+                <Link
+                  to="/login/artisan"
                   className="w-full border-2 border-primary text-primary rounded-xl h-12 flex items-center justify-center font-black text-sm"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >

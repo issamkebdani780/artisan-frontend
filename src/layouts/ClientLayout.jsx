@@ -18,6 +18,7 @@ const ClientLayout = ({ children, title = "Mihnati Client", subtitle = "Tableau 
   };
 
   const navItems = [
+    { path: '/', icon: 'arrow_back', label: 'Retour à l\'accueil' },
     { path: '/dashboard/client/inbox', icon: 'home', label: 'Mes demandes' },
     { path: '/dashboard/client/settings', icon: 'settings', label: 'Paramètres' },
   ];

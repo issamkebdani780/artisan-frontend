@@ -1,147 +1,174 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import AdminLayout from '../layouts/AdminLayout';
+import apiService from '../services/api';
 
 const AdminDisputes = () => {
+  const [disputes, setDisputes] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [filter, setFilter] = useState('Tous');
+
+  useEffect(() => {
+    const fetchDisputes = async () => {
+      try {
+        const data = await apiService.getAllDisputes();
+        setDisputes(data);
+      } catch (err) {
+        console.error('Failed to fetch disputes:', err);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchDisputes();
+  }, []);
+
+  const handleUpdateStatus = async (id, status) => {
+    try {
+      await apiService.updateDisputeStatus(id, status);
+      setDisputes(disputes.map(d => d.id === id ? { ...d, status } : d));
+    } catch (err) {
+      alert('Erreur lors de la mise à jour : ' + err.message);
+    }
+  };
+
+  const filteredDisputes = disputes.filter(d => {
+    if (filter === 'Tous') return true;
+    return d.status === filter;
+  });
+
   return (
-    <AdminLayout>
-      <div className="p-8 space-y-8 flex-1 overflow-y-auto">
-        {/* Page Title */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
-          <div>
-            <h2 className="text-3xl font-black tracking-tight text-slate-900 dark:text-white">Gestion des Litiges</h2>
-            <p className="text-slate-500 dark:text-slate-400 mt-1">Suivi centralisé des dossiers de recours administratifs et médiations clients.</p>
+    <AdminLayout title="Litiges & Recours">
+      <div className="space-y-8">
+        
+        {/* Header Section */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
+          <div className="space-y-1">
+            <h2 className="text-3xl font-black tracking-tight text-slate-900 dark:text-white font-[Outfit,sans-serif]">Gestion des Litiges</h2>
+            <p className="text-slate-500 dark:text-slate-400 font-medium">Médiation et résolution des conflits entre clients et artisans.</p>
           </div>
-          <div className="flex gap-3">
-            <button className="flex items-center gap-2 px-4 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-sm font-bold shadow-sm hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors">
+          <div className="flex gap-4">
+            <button className="flex items-center gap-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/5 px-6 py-3 rounded-2xl font-bold text-sm shadow-sm hover:shadow-md transition-all">
               <span className="material-symbols-outlined text-lg">download</span>
               Exporter CSV
             </button>
-            <button className="flex items-center gap-2 px-4 py-2 bg-indigo-600 text-white rounded-xl text-sm font-bold shadow-md shadow-indigo-600/20 hover:bg-indigo-700 transition-colors">
-              <span className="material-symbols-outlined text-lg">add</span>
-              Nouveau Dossier
+            <button className="bg-primary text-white px-8 py-3 rounded-2xl font-black text-sm shadow-lg shadow-primary/30 hover:brightness-110 transition-all font-[Outfit,sans-serif] tracking-wide">
+              + Nouveau Dossier
             </button>
           </div>
         </div>
 
         {/* Stats Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div className="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm transition-transform hover:-translate-y-1">
-            <div className="flex justify-between items-start mb-4">
-              <div className="p-2 bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600">
-                <span className="material-symbols-outlined">folder_open</span>
+          {[
+            { label: 'Total Litiges', value: disputes.length, icon: 'folder_open', color: 'bg-primary' },
+            { label: 'En attente', value: disputes.filter(d => d.status === 'pending').length, icon: 'hourglass_empty', color: 'bg-amber-500' },
+            { label: 'En cours', value: disputes.filter(d => d.status === 'in_progress').length, icon: 'sync', color: 'bg-blue-500' },
+            { label: 'Résolus', value: disputes.filter(d => d.status === 'resolved').length, icon: 'task_alt', color: 'bg-emerald-500' },
+          ].map((stat, i) => (
+            <div key={i} className="bg-white dark:bg-slate-800 p-6 rounded-4xl shadow-xl shadow-slate-200/50 dark:shadow-none border border-white/50 dark:border-white/5 group hover:-translate-y-1 transition-all duration-300">
+              <div className="flex justify-between items-start">
+                <div className={`${stat.color} size-12 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-slate-200/20`}>
+                  <span className="material-symbols-outlined">{stat.icon}</span>
+                </div>
               </div>
-              <span className="text-xs font-bold text-green-500 bg-green-500/10 px-2 py-1 rounded-full">+5.2%</span>
-            </div>
-            <p className="text-slate-500 dark:text-slate-400 text-sm font-medium">Total Litiges</p>
-            <p className="text-2xl font-black mt-1">124</p>
-          </div>
-          
-          <div className="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm text-red-600 dark:text-red-400 transition-transform hover:-translate-y-1">
-            <div className="flex justify-between items-start mb-4 text-red-600">
-              <div className="p-2 bg-red-100 dark:bg-red-900/30 rounded-lg">
-                <span className="material-symbols-outlined">priority_high</span>
+              <div className="mt-4">
+                <p className="text-slate-400 font-bold text-[10px] uppercase tracking-widest">{stat.label}</p>
+                <p className="text-2xl font-black text-slate-900 dark:text-white mt-1 tracking-tighter">{loading ? '...' : stat.value}</p>
               </div>
-              <span className="text-xs font-bold bg-red-500/10 px-2 py-1 rounded-full">-2.4%</span>
             </div>
-            <p className="text-slate-500 dark:text-slate-400 text-sm font-medium">Urgence Haute</p>
-            <p className="text-2xl font-black mt-1">12</p>
-          </div>
-          
-          <div className="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm transition-transform hover:-translate-y-1">
-            <div className="flex justify-between items-start mb-4 text-amber-500">
-              <div className="p-2 bg-amber-100 dark:bg-amber-900/30 rounded-lg">
-                <span className="material-symbols-outlined">history</span>
-              </div>
-              <span className="text-xs font-bold bg-amber-500/10 px-2 py-1 rounded-full text-amber-600">Stagnant</span>
-            </div>
-            <p className="text-slate-500 dark:text-slate-400 text-sm font-medium">Délai Moyen</p>
-            <p className="text-2xl font-black mt-1">4.2 jrs</p>
-          </div>
-          
-          <div className="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm transition-transform hover:-translate-y-1">
-            <div className="flex justify-between items-start mb-4 text-indigo-600">
-              <div className="p-2 bg-indigo-100 dark:bg-indigo-900/30 rounded-lg">
-                <span className="material-symbols-outlined">task_alt</span>
-              </div>
-              <span className="text-xs font-bold text-green-500 bg-green-500/10 px-2 py-1 rounded-full">+12%</span>
-            </div>
-            <p className="text-slate-500 dark:text-slate-400 text-sm font-medium">Taux Résolution</p>
-            <p className="text-2xl font-black mt-1">88%</p>
-          </div>
+          ))}
         </div>
 
-        {/* Tabs & Filters */}
-        <div className="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden">
-          <div className="border-b border-slate-200 dark:border-slate-800 px-6">
-            <nav className="flex gap-8">
-              <button className="py-4 border-b-2 border-indigo-600 text-indigo-600 text-sm font-bold">Tous les dossiers</button>
-              <button className="py-4 border-b-2 border-transparent text-slate-500 dark:text-slate-400 text-sm font-medium hover:text-slate-900 dark:hover:text-slate-100 transition-colors">En attente (45)</button>
-              <button className="py-4 border-b-2 border-transparent text-slate-500 dark:text-slate-400 text-sm font-medium hover:text-slate-900 dark:hover:text-slate-100 transition-colors">En cours (22)</button>
-              <button className="py-4 border-b-2 border-transparent text-slate-500 dark:text-slate-400 text-sm font-medium hover:text-slate-900 dark:hover:text-slate-100 transition-colors">Résolus (57)</button>
-            </nav>
-          </div>
-          
-          {/* Table */}
+        {/* Filters */}
+        <div className="flex bg-white/50 dark:bg-slate-800/50 p-1.5 rounded-3xl border border-slate-200 dark:border-white/5 w-fit">
+          {['Tous', 'pending', 'in_progress', 'resolved'].map((tab) => (
+            <button
+              key={tab}
+              onClick={() => setFilter(tab)}
+              className={`px-6 py-2.5 rounded-2xl text-sm font-black transition-all ${filter === tab ? 'bg-primary text-white shadow-lg shadow-primary/20' : 'text-slate-500 hover:text-slate-700 dark:hover:text-slate-300'}`}
+            >
+              {tab === 'Tous' ? 'Tous' : tab === 'pending' ? 'En attente' : tab === 'in_progress' ? 'En cours' : 'Résolus'}
+            </button>
+          ))}
+        </div>
+
+        {/* Disputes Table */}
+        <div className="bg-white dark:bg-slate-800 rounded-[2.5rem] shadow-xl shadow-slate-200/50 dark:shadow-none border border-white/50 dark:border-white/5 overflow-hidden">
           <div className="overflow-x-auto">
-            <table className="w-full text-left border-collapse">
+            <table className="w-full border-separate border-spacing-0">
               <thead>
-                <tr className="bg-slate-50 dark:bg-slate-800/50 text-slate-500 dark:text-slate-400 text-xs font-bold uppercase tracking-wider">
-                  <th className="px-6 py-4">Dossier #</th>
-                  <th className="px-6 py-4">Parties Impliquées</th>
-                  <th className="px-6 py-4">Sévérité</th>
-                  <th className="px-6 py-4">Statut</th>
-                  <th className="px-6 py-4">Date Ouverture</th>
-                  <th className="px-6 py-4 text-right">Actions</th>
+                <tr className="text-left bg-slate-50/50 dark:bg-slate-900/50">
+                  <th className="px-8 py-5 text-[10px] font-black text-slate-400 uppercase tracking-widest border-b border-slate-100 dark:border-white/5">Dossier</th>
+                  <th className="px-8 py-5 text-[10px] font-black text-slate-400 uppercase tracking-widest border-b border-slate-100 dark:border-white/5">Parties Impliquées</th>
+                  <th className="px-8 py-5 text-[10px] font-black text-slate-400 uppercase tracking-widest border-b border-slate-100 dark:border-white/5">Motif</th>
+                  <th className="px-8 py-5 text-[10px] font-black text-slate-400 uppercase tracking-widest border-b border-slate-100 dark:border-white/5">Statut</th>
+                  <th className="px-8 py-5 text-[10px] font-black text-slate-400 uppercase tracking-widest border-b border-slate-100 dark:border-white/5 text-right">Actions</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-slate-100 dark:divide-slate-800">
-                <tr className="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors group">
-                  <td className="px-6 py-4">
-                    <p className="font-bold text-sm">L-2024-0891</p>
-                    <p className="text-xs text-slate-500">Médiation Civile</p>
-                  </td>
-                  <td className="px-6 py-4">
-                    <div className="flex flex-col gap-1">
-                      <div className="flex items-center gap-2">
-                        <span className="text-[10px] uppercase font-bold text-indigo-600 bg-indigo-50 dark:bg-indigo-900/30 px-1.5 rounded">Artisan</span>
-                        <span className="text-sm font-medium">BatiPlus SARL</span>
+              <tbody className="divide-y divide-slate-100 dark:divide-white/5">
+                {loading ? (
+                  [1, 2, 3].map(i => (
+                    <tr key={i} className="animate-pulse">
+                      <td colSpan="5" className="px-8 py-6"><div className="h-10 bg-slate-100 dark:bg-slate-700 rounded-2xl w-full"></div></td>
+                    </tr>
+                  ))
+                ) : filteredDisputes.length === 0 ? (
+                  <tr><td colSpan="5" className="text-center py-20 text-slate-400 font-bold italic font-[Outfit,sans-serif]">Aucun litige trouvé</td></tr>
+                ) : filteredDisputes.map((dispute) => (
+                  <tr key={dispute.id} className="hover:bg-slate-50/50 dark:hover:bg-white/5 transition-colors group text-[Outfit,sans-serif]">
+                    <td className="px-8 py-6">
+                      <p className="font-black text-slate-900 dark:text-white text-sm">#{dispute.id.toString().padStart(4, '0')}</p>
+                      <p className="text-[10px] text-slate-400 font-bold mt-1 uppercase tracking-tighter">OUVERT LE {new Date(dispute.created_at).toLocaleDateString('fr-FR')}</p>
+                    </td>
+                    <td className="px-8 py-6">
+                      <div className="flex flex-col gap-2">
+                        <div className="flex items-center gap-2">
+                           <span className="text-[9px] font-black px-2 py-0.5 bg-primary/10 text-primary rounded uppercase tracking-tighter">Client</span>
+                           <span className="text-xs font-black text-slate-700 dark:text-slate-300 tracking-tight">{dispute.client_name}</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                           <span className="text-[9px] font-black px-2 py-0.5 bg-secondary/10 text-secondary rounded uppercase tracking-tighter">Artisan</span>
+                           <span className="text-xs font-black text-slate-700 dark:text-slate-300 tracking-tight">{dispute.artisan_name}</span>
+                        </div>
                       </div>
-                      <div className="flex items-center gap-2">
-                        <span className="text-[10px] uppercase font-bold text-indigo-400 bg-indigo-400/10 px-1.5 rounded">Client</span>
-                        <span className="text-sm font-medium">Jean Dupont</span>
+                    </td>
+                    <td className="px-8 py-6">
+                       <p className="text-sm font-bold text-slate-600 dark:text-slate-400 line-clamp-1">{dispute.reason || 'Non spécifié'}</p>
+                    </td>
+                    <td className="px-8 py-6">
+                      <span className={`px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-tighter ${
+                        dispute.status === 'resolved' ? 'bg-emerald-100 text-emerald-700' : 
+                        dispute.status === 'in_progress' ? 'bg-blue-100 text-blue-700' : 
+                        'bg-amber-100 text-amber-700'
+                      }`}>
+                         {dispute.status === 'resolved' ? 'Résolu' : dispute.status === 'in_progress' ? 'En cours' : 'En attente'}
+                      </span>
+                    </td>
+                    <td className="px-8 py-6 text-right">
+                      <div className="flex justify-end gap-2">
+                         {dispute.status !== 'resolved' && (
+                           <button 
+                            onClick={() => handleUpdateStatus(dispute.id, 'resolved')}
+                            className="p-2 text-emerald-600 hover:bg-emerald-50 rounded-xl transition-all"
+                            title="Résoudre"
+                           >
+                              <span className="material-symbols-outlined font-bold">check_circle</span>
+                           </button>
+                         )}
+                         {dispute.status === 'pending' && (
+                           <button 
+                            onClick={() => handleUpdateStatus(dispute.id, 'in_progress')}
+                            className="p-2 text-blue-600 hover:bg-blue-50 rounded-xl transition-all"
+                            title="Prendre en charge"
+                           >
+                              <span className="material-symbols-outlined font-bold">handyman</span>
+                           </button>
+                         )}
                       </div>
-                    </div>
-                  </td>
-                  <td className="px-6 py-4">
-                    <div className="flex items-center gap-1.5 text-red-600 font-bold text-xs bg-red-100 dark:bg-red-900/30 px-3 py-1 rounded-full w-fit">
-                      <span className="size-2 bg-red-600 rounded-full animate-pulse"></span>
-                      Urgent
-                    </div>
-                  </td>
-                  <td className="px-6 py-4">
-                    <div className="flex items-center gap-1.5 text-amber-600 font-bold text-xs bg-amber-100 dark:bg-amber-900/30 px-3 py-1 rounded-full w-fit">
-                      En cours
-                    </div>
-                  </td>
-                  <td className="px-6 py-4 text-sm text-slate-500">12 Mai 2024</td>
-                  <td className="px-6 py-4 text-right">
-                    <button className="p-2 hover:bg-slate-200 dark:hover:bg-slate-700 rounded-lg transition-colors text-slate-400 group-hover:text-indigo-600">
-                      <span className="material-symbols-outlined text-xl">visibility</span>
-                    </button>
-                  </td>
-                </tr>
+                    </td>
+                  </tr>
+                ))}
               </tbody>
             </table>
-          </div>
-          
-          {/* Pagination */}
-          <div className="px-6 py-4 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between">
-            <p className="text-sm text-slate-500">Affichage de 1 dossiers</p>
-            <div className="flex gap-2">
-              <button className="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-lg text-sm font-bold disabled:opacity-50 transition-colors" disabled>Précédent</button>
-              <button className="px-3 py-1 bg-indigo-600 text-white rounded-lg text-sm font-bold shadow-md shadow-indigo-600/20">1</button>
-              <button className="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-lg text-sm font-bold hover:bg-slate-200 transition-colors">Suivant</button>
-            </div>
           </div>
         </div>
       </div>

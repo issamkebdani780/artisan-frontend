@@ -58,6 +58,7 @@ const ArtisanLayout = ({ children, title = "Mihnati PRO", subtitle = "Premium Pl
           
           <nav className="flex flex-col gap-3 overflow-y-auto custom-scrollbar">
             {[
+              { path: '/', icon: 'arrow_back', label: 'Retour à l\'accueil' },
               { path: '/dashboard/artisan', icon: 'home', label: 'Accueil' },
               { path: '/dashboard/artisan/projects', icon: 'work', label: 'Mes projets' },
               { path: `/artisan/${user?.id}`, icon: 'visibility', label: 'Profil Public', isExternal: true },

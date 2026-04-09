@@ -1,97 +1,126 @@
 import React from 'react';
-import { useLocation, Link } from 'react-router-dom';
+import { useLocation, Link, useNavigate } from 'react-router-dom';
+import apiService from '../services/api';
 
-const AdminLayout = ({ children, title = "Admin Portal", subtitle }) => {
+const AdminLayout = ({ children, title = "Admin", subtitle }) => {
   const location = useLocation();
   const path = location.pathname;
+  const user = apiService.getCurrentUser();
+  const navigate = useNavigate();
+
+  React.useEffect(() => {
+    if (!user || user.role !== 'admin') {
+      console.warn('Accès non autorisé au dashboard admin. Redirection...');
+      navigate('/login/admin');
+    }
+  }, [user, navigate]);
+
+  const handleLogout = () => {
+    apiService.logout();
+    navigate('/login/admin');
+  };
+
+  const navItems = [
+    { name: 'Tableau de bord', path: '/dashboard/admin', icon: 'dashboard' },
+    { name: 'Gestion des artisans', path: '/dashboard/admin/artisans', icon: 'engineering' },
+    { name: 'Gestion des clients', path: '/dashboard/admin/clients', icon: 'group' },
+    { name: 'Litiges & Recours', path: '/dashboard/admin/disputes', icon: 'report_problem' },
+    { name: 'Statistiques', path: '/dashboard/admin/stats', icon: 'bar_chart' },
+    { name: 'Paramètres', path: '/dashboard/admin/settings', icon: 'settings' },
+  ];
 
   return (
-    <div className="flex h-screen overflow-hidden font-sans bg-[#f8f6f6] dark:bg-[#1e1b4b] text-slate-900 dark:text-slate-100">
+    <div className="flex h-screen overflow-hidden font-sans bg-[#EEF2FF] dark:bg-[#0F172A] text-slate-900 dark:text-slate-100">
       
-      {/* Sidebar - Built with Indigo/Royal Purple Theme */}
-      <aside className="w-72 bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 flex flex-col shrink-0">
-        <div className="p-6 flex items-center gap-3">
-          <div className="bg-[#6366f1] size-10 rounded-xl flex items-center justify-center text-white">
-            <span className="material-symbols-outlined">admin_panel_settings</span>
+      {/* Sidebar - Dark Premium Theme */}
+      <aside className="w-72 bg-slate-900 text-white flex flex-col shrink-0 shadow-2xl relative z-50 border-r border-white/5">
+        <div className="p-8 flex items-center gap-4">
+          <div className="bg-linear-to-tr from-primary to-secondary size-11 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-primary/20">
+            <span className="material-symbols-outlined text-2xl font-bold">diamond</span>
           </div>
-          <div className="flex flex-col">
-            <h1 className="text-base font-bold leading-tight">{title}</h1>
-            <p className="text-xs text-slate-500 dark:text-slate-400">{subtitle || "Super Admin"}</p>
+          <div>
+            <h1 className="text-xl font-black tracking-tight leading-tight">{title}</h1>
+            <p className="text-[10px] text-primary font-black uppercase tracking-widest opacity-80 decoration-secondary/50 underline decoration-2 underline-offset-4">Premium Edition</p>
           </div>
         </div>
         
-        <nav className="flex-1 px-4 py-4 space-y-1 overflow-y-auto custom-scrollbar">
-          <Link to="/dashboard/admin" className={`flex items-center gap-3 px-3 py-2 rounded-xl transition-colors ${path === '/dashboard/admin' ? 'bg-[#6366f1]/10 text-[#6366f1] font-bold' : 'text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 font-medium'}`}>
-            <span className="material-symbols-outlined" style={{ fontVariationSettings: path === '/dashboard/admin' ? "'FILL' 1" : "" }}>dashboard</span>
-            <span className="text-sm">Tableau de bord</span>
-          </Link>
-          <Link to="/dashboard/admin/artisans" className={`flex items-center gap-3 px-3 py-2 rounded-xl transition-colors ${path === '/dashboard/admin/artisans' ? 'bg-[#6366f1]/10 text-[#6366f1] font-bold' : 'text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 font-medium'}`}>
-            <span className="material-symbols-outlined" style={{ fontVariationSettings: path === '/dashboard/admin/artisans' ? "'FILL' 1" : "" }}>engineering</span>
-            <span className="text-sm">Gestion Artisans</span>
-          </Link>
-          <Link to="/dashboard/admin/clients" className={`flex items-center gap-3 px-3 py-2 rounded-xl transition-colors ${path === '/dashboard/admin/clients' ? 'bg-[#6366f1]/10 text-[#6366f1] font-bold' : 'text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 font-medium'}`}>
-            <span className="material-symbols-outlined" style={{ fontVariationSettings: path === '/dashboard/admin/clients' ? "'FILL' 1" : "" }}>group</span>
-            <span className="text-sm">Gestion Clients</span>
-          </Link>
-          <Link to="/dashboard/admin/verifications" className={`flex items-center gap-3 px-3 py-2 rounded-xl transition-colors ${path === '/dashboard/admin/verifications' ? 'bg-[#6366f1]/10 text-[#6366f1] font-bold' : 'text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 font-medium'}`}>
-            <span className="material-symbols-outlined" style={{ fontVariationSettings: path === '/dashboard/admin/verifications' ? "'FILL' 1" : "" }}>verified_user</span>
-            <span className="text-sm">Vérifications</span>
-          </Link>
-          <Link to="/dashboard/admin/payments" className={`flex items-center gap-3 px-3 py-2 rounded-xl transition-colors ${path === '/dashboard/admin/payments' ? 'bg-[#6366f1]/10 text-[#6366f1] font-bold' : 'text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 font-medium'}`}>
-            <span className="material-symbols-outlined" style={{ fontVariationSettings: path === '/dashboard/admin/payments' ? "'FILL' 1" : "" }}>payments</span>
-            <span className="text-sm">Finances & Paiements</span>
-          </Link>
-          <Link to="/dashboard/admin/disputes" className={`flex items-center gap-3 px-3 py-2 rounded-xl transition-colors ${path === '/dashboard/admin/disputes' ? 'bg-[#6366f1]/10 text-[#6366f1] font-bold' : 'text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 font-medium'}`}>
-            <span className="material-symbols-outlined" style={{ fontVariationSettings: path === '/dashboard/admin/disputes' ? "'FILL' 1" : "" }}>report_problem</span>
-            <span className="text-sm">Litiges & Recours</span>
-          </Link>
-          <div className="pt-4 mt-4 border-t border-slate-200 dark:border-slate-800"></div>
-          <a href="#" className="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-xl transition-colors">
-            <span className="material-symbols-outlined">bar_chart</span>
-            <span className="text-sm font-medium">Statistiques</span>
-          </a>
-          <Link to="/dashboard/admin/settings" className="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-xl transition-colors">
-            <span className="material-symbols-outlined">settings</span>
-            <span className="text-sm font-medium">Paramètres Système</span>
-          </Link>
+        <nav className="flex-1 px-6 py-4 space-y-2 overflow-y-auto">
+          {navItems.map((item) => (
+            <Link 
+              key={item.path}
+              to={item.path} 
+              className={`flex items-center gap-4 px-4 py-3.5 rounded-2xl transition-all duration-300 group ${path === item.path ? 'bg-primary/20 text-white font-black shadow-sm' : 'text-slate-400 hover:text-white hover:bg-white/5'}`}
+            >
+              <span className={`material-symbols-outlined text-2xl transition-transform group-hover:scale-110 ${path === item.path ? 'text-primary' : 'text-slate-400 group-hover:text-primary'}`} style={{ fontVariationSettings: path === item.path ? "'FILL' 1" : "" }}>
+                {item.icon}
+              </span>
+              <span className="text-sm tracking-wide">{item.name}</span>
+              {path === item.path && (
+                <div className="ml-auto size-1.5 rounded-full bg-secondary shadow-[0_0_8px_rgba(242,139,44,0.8)]"></div>
+              )}
+            </Link>
+          ))}
         </nav>
         
-        <div className="p-4 border-t border-slate-200 dark:border-slate-800">
-          <div className="flex items-center gap-3 p-2 bg-slate-50 dark:bg-slate-800 rounded-xl">
-            <div className="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-8" style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=60")' }}></div>
-            <div className="flex-1 overflow-hidden">
-              <p className="text-xs font-bold truncate">Marc Lefebvre</p>
-              <p className="text-[10px] text-slate-500 dark:text-slate-400">Super Admin</p>
+        {/* User Profile at Bottom of Sidebar */}
+        <div className="p-6 mt-auto">
+          <div className="p-4 bg-white/5 backdrop-blur-md rounded-3xl border border-white/10 flex flex-col gap-4 shadow-xl">
+            <div className="flex items-center gap-4">
+              <div className="size-12 rounded-2xl bg-linear-to-br from-primary to-secondary flex items-center justify-center font-black text-white text-lg shadow-lg">
+                {user?.name?.charAt(0) || 'A'}
+              </div>
+              <div className="flex-1 min-w-0">
+                <p className="text-xs font-black text-white tracking-tight">{user?.name || 'Administrateur'}</p>
+                <p className="text-[10px] text-primary font-bold truncate">Super Admin</p>
+              </div>
             </div>
-            <span className="material-symbols-outlined text-slate-400 text-sm cursor-pointer hover:text-slate-600 dark:hover:text-slate-200">logout</span>
+            <button 
+              onClick={handleLogout}
+              className="w-full flex items-center justify-center gap-2 py-2.5 bg-white/10 hover:bg-rose-500 transition-all rounded-2xl text-[10px] font-black uppercase tracking-widest"
+            >
+              Déconnexion
+              <span className="material-symbols-outlined text-sm">logout</span>
+            </button>
           </div>
         </div>
       </aside>
 
       {/* Main Content Area */}
-      <main className="flex-1 flex flex-col overflow-y-auto">
+      <main className="flex-1 flex flex-col min-w-0">
         
-        {/* Header */}
-        <header className="h-16 border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/80 backdrop-blur flex items-center justify-between px-8 sticky top-0 z-50 shrink-0">
-          <div className="flex items-center gap-4 flex-1 max-w-xl">
-            <div className="relative w-full">
-              <span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xl">search</span>
-              <input type="text" placeholder="Rechercher sur la plateforme..." className="w-full pl-11 pr-4 py-2 bg-slate-100 dark:bg-slate-800 border-none rounded-xl text-sm focus:ring-2 focus:ring-[#6366f1] outline-none transition-all" />
+        {/* Header - Transparent & Integrated */}
+        <header className="h-24 bg-white/60 dark:bg-slate-900/60 backdrop-blur-3xl border-b border-slate-100 dark:border-white/5 flex items-center justify-between px-10 shrink-0 sticky top-0 z-40">
+          <div className="flex items-center gap-4 text-slate-400">
+             <span className="material-symbols-outlined text-xl">menu_open</span>
+             <div className="w-px h-6 bg-slate-200 dark:bg-white/10"></div>
+          </div>
+          <div className="flex items-center gap-6 flex-1 max-w-2xl">
+            <div className="relative w-full group">
+              <span className="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-primary transition-colors">search</span>
+              <input type="text" placeholder="Recherche globale (Command + K)" className="w-full pl-12 pr-6 py-3.5 bg-slate-100 dark:bg-white/5 border-transparent focus:bg-white dark:focus:bg-slate-900 border focus:border-primary/50 text-sm font-medium rounded-2xl outline-none transition-all" />
             </div>
           </div>
-          <div className="flex items-center gap-3">
-            <button className="size-10 flex items-center justify-center rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors relative">
-              <span className="material-symbols-outlined">notifications</span>
-              <span className="absolute top-2 right-2 size-2 bg-red-500 rounded-full border border-white dark:border-slate-900"></span>
+          
+          <div className="flex items-center gap-4">
+            <div className="flex bg-slate-100 dark:bg-white/5 p-1 rounded-2xl gap-1">
+              <button className="px-4 py-2 rounded-xl text-xs font-black uppercase tracking-widest bg-white dark:bg-slate-800 shadow-sm text-primary">Admin</button>
+              <Link to="/" className="px-4 py-2 rounded-xl text-xs font-black uppercase tracking-widest text-slate-400 hover:text-slate-600 transition-colors">Client</Link>
+            </div>
+            
+            <button className="size-11 flex items-center justify-center bg-white dark:bg-slate-800/50 rounded-2xl border border-slate-200 dark:border-white/5 shadow-sm hover:translate-y-px transition-all relative">
+              <span className="material-symbols-outlined text-slate-600 dark:text-slate-400">notifications</span>
+              <span className="absolute top-3 right-3 size-2 bg-secondary rounded-full border-2 border-white dark:border-slate-900"></span>
             </button>
-            <button className="size-10 flex items-center justify-center rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
-              <span className="material-symbols-outlined">help</span>
+            
+            <button className="flex items-center gap-2 px-3 py-2 bg-white dark:bg-slate-800/50 rounded-xl border border-slate-200 dark:border-white/5 hover:bg-slate-50 transition-all font-bold text-xs uppercase tracking-widest text-slate-600">
+              FR
+              <span className="material-symbols-outlined text-sm">keyboard_arrow_down</span>
             </button>
           </div>
         </header>
 
         {/* Dynamic Page Content */}
-        <div className="flex-1">
+        <div className="flex-1 overflow-y-auto custom-scrollbar p-10 bg-[#F4F7FE] dark:bg-slate-900/20">
           {children}
         </div>
       </main>

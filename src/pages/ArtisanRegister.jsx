@@ -113,7 +113,7 @@ const ArtisanRegister = () => {
       formData.append('commune_id', form.commune_id);
       formData.append('password', form.password);
       formData.append('role', 'artisan');
-      
+
       // Add files
       formData.append('profilePic', files.profilePic);
       files.documents.forEach((doc, index) => {
@@ -145,12 +145,11 @@ const ArtisanRegister = () => {
   );
 
   return (
-    <div className="bg-[#f8fafc] font-['Outfit',sans-serif] text-slate-900 antialiased overflow-x-hidden pt-20">
+    <div className="bg-[#f8fafc] font-['Outfit',sans-serif] text-slate-900 antialiased overflow-x-hidden">
       <main className="min-h-screen flex flex-col lg:flex-row">
         {/* Left Side: Visual */}
         <section className="hidden lg:flex w-[45%] relative overflow-hidden bg-slate-950">
-          <img alt="Professional Background" className="absolute inset-0 w-full h-full object-cover opacity-50" src="https://images.unsplash.com/photo-1542621323-22ea68988a8d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" />
-          <div className="relative z-10 flex flex-col justify-end p-16 w-full bg-linear-to-b from-slate-900/10 to-slate-900/90">
+          <div className="relative z-10 flex flex-col justify-center p-16 w-full bg-linear-to-b from-slate-900/10 to-slate-900/90">
             <div className="space-y-8 max-w-md">
               <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-500/20 text-orange-500 border border-orange-500/30 text-xs font-bold tracking-widest uppercase">REJOIGNEZ L'ÉLITE</span>
               <h1 className="text-5xl font-black text-white leading-tight tracking-tighter">
@@ -217,7 +216,7 @@ const ArtisanRegister = () => {
                     </div>
                     <span className="text-[10px] font-bold text-orange-400 uppercase tracking-widest bg-orange-50 px-2 py-1 rounded-lg border border-orange-100">{form.specialty.length} sélectionnée(s)</span>
                   </div>
-                  
+
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-h-[400px] overflow-y-auto pr-2 custom-scrollbar p-1">
                     {[
                       {
@@ -268,11 +267,10 @@ const ArtisanRegister = () => {
                                     setForm({ ...form, specialty: [...form.specialty, option] });
                                   }
                                 }}
-                                className={`px-4 py-2 rounded-xl text-xs font-bold transition-all border-2 ${
-                                  isSelected 
-                                  ? 'bg-orange-500 border-orange-500 text-white shadow-lg shadow-orange-500/20' 
-                                  : 'bg-white border-transparent text-slate-600 hover:border-orange-500/30 shadow-sm'
-                                }`}
+                                className={`px-4 py-2 rounded-xl text-xs font-bold transition-all border-2 ${isSelected
+                                    ? 'bg-orange-500 border-orange-500 text-white shadow-lg shadow-orange-500/20'
+                                    : 'bg-white border-transparent text-slate-600 hover:border-orange-500/30 shadow-sm'
+                                  }`}
                               >
                                 {option}
                               </button>

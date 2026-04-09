@@ -4,10 +4,12 @@ import apiService from '../services/api';
 
 const AdminDashboard = () => {
   const [stats, setStats] = useState({
-    artisans: 0,
-    clients: 0,
-    bookings: 0,
-    totalRevenue: 0
+    totalArtisans: 0,
+    totalClients: 0,
+    totalBookings: 0,
+    totalRevenue: 0,
+    pendingDisputes: 0,
+    recentActivities: []
   });
   const [unverified, setUnverified] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -15,29 +17,15 @@ const AdminDashboard = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        let statsData = { artisans: 0, clients: 0, bookings: 0, totalRevenue: 0 };
-        let unverifiedData = [];
-
-        // Fetch stats with error handling
-        try {
-          statsData = await apiService.getPlatformStats();
-        } catch (err) {
-          console.error('Failed to fetch stats:', err);
-          // Set default values
-        }
-
-        // Fetch unverified artisans with error handling
-        try {
-          unverifiedData = await apiService.getUnverifiedArtisans();
-        } catch (err) {
-          console.error('Failed to fetch unverified artisans:', err);
-          unverifiedData = [];
-        }
+        const [statsData, unverifiedData] = await Promise.all([
+          apiService.getDetailedStats(),
+          apiService.getUnverifiedArtisans()
+        ]);
 
         setStats(statsData);
         setUnverified(unverifiedData);
       } catch (err) {
-        console.error('Unexpected error in dashboard:', err);
+        console.error('Failed to fetch dashboard data:', err);
       } finally {
         setLoading(false);
       }
@@ -46,184 +34,219 @@ const AdminDashboard = () => {
   }, []);
 
   const handleVerify = async (id) => {
+    if (!window.confirm('Voulez-vous vraiment valider cet artisan ?')) return;
     try {
       await apiService.verifyArtisan(id);
       setUnverified(unverified.filter(a => a.id !== id));
-      // Optionally refresh stats
-      const newStats = await apiService.getPlatformStats();
+      const newStats = await apiService.getDetailedStats();
       setStats(newStats);
     } catch (err) {
-      alert('Verification failed');
+      alert('Échec de la vérification');
     }
   };
 
   return (
-    <AdminLayout>
-      <div className="p-8 space-y-8 flex-1 overflow-y-auto">
+    <AdminLayout title="Tableau de bord">
+      <div className="space-y-10">
         
-        {/* Stats Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div className="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 flex items-center gap-4 shadow-sm hover:shadow-md transition">
-            <div className="p-3 rounded-xl bg-indigo-100 dark:bg-indigo-900/40 text-indigo-600 dark:text-indigo-400">
-              <span className="material-symbols-outlined">engineering</span>
-            </div>
-            <div>
-              <p className="text-xs text-slate-500 font-medium uppercase tracking-wider">Total Artisans</p>
-              <div className="flex items-baseline gap-2">
-                <p className="text-xl font-bold">{loading ? '...' : stats.artisans.toLocaleString()}</p>
-                <span className="text-[10px] text-emerald-500 font-bold">+12.5%</span>
-              </div>
-            </div>
+        {/* Welcome Header */}
+        <div className="flex justify-between items-center">
+          <div>
+            <h2 className="text-3xl font-black text-slate-900 dark:text-white tracking-tight">Tableau de bord</h2>
+            <p className="text-slate-500 dark:text-slate-400 mt-1 font-medium">Bienvenue, voici un aperçu de l'activité de votre plateforme.</p>
           </div>
-          
-          <div className="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 flex items-center gap-4 shadow-sm hover:shadow-md transition">
-            <div className="p-3 rounded-xl bg-blue-100 dark:bg-blue-900/40 text-blue-600 dark:text-blue-400">
-              <span className="material-symbols-outlined">person_add</span>
-            </div>
-            <div>
-              <p className="text-xs text-slate-500 font-medium uppercase tracking-wider">Nouveaux Clients</p>
-              <div className="flex items-baseline gap-2">
-                <p className="text-xl font-bold">{loading ? '...' : stats.clients.toLocaleString()}</p>
-                <span className="text-[10px] text-emerald-500 font-bold">+5.2%</span>
-              </div>
-            </div>
-          </div>
-          
-          <div className="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 flex items-center gap-4 shadow-sm hover:shadow-md transition">
-            <div className="p-3 rounded-xl bg-green-100 dark:bg-green-900/40 text-green-600 dark:text-green-400">
-              <span className="material-symbols-outlined">payments</span>
-            </div>
-            <div>
-              <p className="text-xs text-slate-500 font-medium uppercase tracking-wider">Revenu Global</p>
-              <div className="flex items-baseline gap-2">
-                <p className="text-xl font-bold flex items-center">{loading ? '...' : `${Number(stats.totalRevenue).toLocaleString()} €`}</p>
-                <span className="text-[10px] text-emerald-500 font-bold">+8.1%</span>
-              </div>
-            </div>
-          </div>
-          
-          <div className="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 flex items-center gap-4 shadow-sm hover:shadow-md transition">
-            <div className="p-3 rounded-xl bg-pink-100 dark:bg-pink-900/40 text-pink-600 dark:text-pink-400">
-              <span className="material-symbols-outlined">pending_actions</span>
-            </div>
-            <div>
-              <p className="text-xs text-slate-500 font-medium uppercase tracking-wider">Total Bookings</p>
-              <div className="flex items-baseline gap-2">
-                <p className="text-xl font-bold">{loading ? '...' : stats.bookings.toLocaleString()}</p>
-                <span className="text-[10px] text-emerald-500 font-bold">+14%</span>
-              </div>
-            </div>
+          <div className="flex gap-4">
+            <button className="px-6 py-3 bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/10 rounded-2xl text-sm font-bold shadow-sm hover:shadow-md transition-all flex items-center gap-2">
+              <span className="material-symbols-outlined text-lg">download</span>
+              Télécharger Rapport
+            </button>
+            <button className="px-6 py-3 bg-primary text-white rounded-2xl text-sm font-black shadow-lg shadow-primary/30 hover:bg-primary-dark transition-all">
+              Nouvelle Campagne
+            </button>
           </div>
         </div>
 
-        {/* Main Charts Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          
-          {/* Revenue Growth */}
-          <div className="bg-white dark:bg-slate-900 p-8 rounded-2xl border border-slate-100 dark:border-slate-800 shadow-sm flex flex-col">
-            <div className="flex items-center justify-between mb-8">
+        {/* Premium Stats Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
+          {[
+            { label: 'Revenu Total', value: `${Number(stats.totalRevenue).toLocaleString()} €`, change: '+12.5%', icon: 'payments', color: 'bg-blue-500', trend: 'up' },
+            { label: 'Artisans Actifs', value: stats.totalArtisans, change: '+3.2%', icon: 'construction', color: 'bg-secondary', trend: 'up' },
+            { label: 'Nouveaux Clients', value: stats.totalClients, change: '+8.4%', icon: 'person_add', color: 'bg-primary', trend: 'up' },
+            { label: 'Litiges en cours', value: stats.pendingDisputes, change: '-2.1%', icon: 'warning', color: 'bg-rose-500', trend: 'down' },
+          ].map((card, i) => (
+            <div key={i} className="bg-white dark:bg-slate-800 p-8 rounded-[2.5rem] shadow-xl shadow-slate-200/50 dark:shadow-none border border-white/50 dark:border-white/5 flex flex-col gap-6 group hover:-translate-y-1 transition-all duration-500">
+              <div className="flex justify-between items-start">
+                <div className={`${card.color} size-14 rounded-2xl flex items-center justify-center text-white shadow-lg group-hover:rotate-6 transition-transform duration-500`}>
+                  <span className="material-symbols-outlined text-2xl font-bold">{card.icon}</span>
+                </div>
+                <div className={`px-3 py-1 rounded-full text-[11px] font-black flex items-center gap-1 ${card.trend === 'up' ? 'bg-emerald-100 text-emerald-600' : 'bg-rose-100 text-rose-600'}`}>
+                   <span className="material-symbols-outlined text-xs">{card.trend === 'up' ? 'trending_up' : 'trending_down'}</span>
+                   {card.change}
+                </div>
+              </div>
               <div>
-                <h3 className="text-lg font-bold text-slate-900 dark:text-white">Croissance des revenus</h3>
-                <p className="text-sm text-slate-500">Performance hebdomadaire du réseau</p>
-              </div>
-              <div className="text-right">
-                <p className="text-2xl font-black text-indigo-600">125k €</p>
-                <p className="text-xs text-emerald-500 font-bold">↑ 15.4% ce mois</p>
+                <p className="text-slate-400 font-bold text-xs uppercase tracking-widest leading-loose">{card.label}</p>
+                <p className="text-3xl font-black text-slate-900 dark:text-white tracking-tighter mt-1">
+                  {loading ? '...' : card.value}
+                </p>
               </div>
             </div>
-            <div className="h-64 relative flex-1 flex flex-col justify-end">
-              <div className="absolute inset-x-0 bottom-10 top-0 overflow-hidden pointer-events-none">
-                <svg className="w-full h-full" preserveAspectRatio="none" viewBox="0 0 500 200">
-                  <defs>
-                    <linearGradient id="chartGrad" x1="0" x2="0" y1="0" y2="1">
-                      <stop offset="0%" stopColor="#4f46e5" stopOpacity="0.2"></stop>
-                      <stop offset="100%" stopColor="#4f46e5" stopOpacity="0"></stop>
-                    </linearGradient>
-                  </defs>
-                  <path d="M0 160 Q 50 140 100 150 T 200 100 T 300 120 T 400 40 T 500 80 V 200 H 0 Z" fill="url(#chartGrad)"></path>
-                  <path d="M0 160 Q 50 140 100 150 T 200 100 T 300 120 T 400 40 T 500 80" fill="none" stroke="#4f46e5" strokeLinecap="round" strokeWidth="4"></path>
-                </svg>
-              </div>
-              <div className="relative flex justify-between mt-auto text-[10px] font-bold text-slate-400 uppercase tracking-widest px-2 pb-1">
-                <span>Lun</span><span>Mar</span><span>Mer</span><span>Jeu</span><span>Ven</span><span>Sam</span><span>Dim</span>
-              </div>
-            </div>
-          </div>
+          ))}
+        </div>
 
-          {/* User Activity */}
-          <div className="bg-white dark:bg-slate-900 p-8 rounded-2xl border border-slate-100 dark:border-slate-800 shadow-sm flex flex-col">
-            <div className="flex items-center justify-between mb-8">
+        {/* Main Content Row: Performance Chart & Recent Activities */}
+        <div className="grid grid-cols-1 xl:grid-cols-3 gap-10">
+          
+          {/* Performance Chart - Takes 2 columns */}
+          <div className="xl:col-span-2 bg-white dark:bg-slate-800 p-10 rounded-[3rem] shadow-xl shadow-slate-200/50 dark:shadow-none border border-white/50 dark:border-white/5 relative overflow-hidden group">
+            <div className="flex justify-between items-start mb-10 relative z-10">
               <div>
-                <h3 className="text-lg font-bold text-slate-900 dark:text-white">Activité des utilisateurs</h3>
-                <p className="text-sm text-slate-500">Utilisateurs actifs par mois</p>
+                <h3 className="text-2xl font-black text-slate-900 dark:text-white tracking-tight">Performance des ventes</h3>
+                <p className="text-slate-400 font-medium mt-1">Volume des transactions mensuelles</p>
               </div>
-              <div className="flex flex-col items-end">
-                <p className="text-2xl font-black text-slate-900 dark:text-white">8.5k</p>
-                <p className="text-xs text-emerald-500 font-bold">↑ 10.2% cette année</p>
+              <div className="px-4 py-2 bg-slate-50 dark:bg-slate-900/50 rounded-xl text-xs font-black text-slate-500 border border-slate-100 dark:border-white/5">
+                Année 2026
               </div>
             </div>
-            <div className="h-64 flex-1 flex flex-col justify-end">
-              <div className="flex items-end justify-between gap-3 px-2 h-48 w-full">
-                {[40, 65, 45, 80, 55, 90].map((val, idx) => (
-                  <div key={idx} className={`w-full ${idx === 5 ? 'bg-indigo-600' : 'bg-slate-100 dark:bg-slate-800'} rounded-t-xl relative group`} style={{ height: `${val}%` }}>
-                    {idx !== 5 && <div className="absolute inset-0 bg-indigo-600 opacity-20 group-hover:opacity-100 transition-opacity rounded-t-xl"></div>}
+            
+            {/* Custom SVG Bar Chart */}
+            <div className="h-80 flex items-end justify-between gap-4 px-4 relative z-10 mt-8">
+              {[35, 60, 52, 85, 78, 55, 95].map((val, i) => (
+                <div key={i} className="flex-1 flex flex-col items-center gap-4 group/bar">
+                  <div 
+                    className={`w-full rounded-2xl transition-all duration-1000 ease-out relative ${i === 6 ? 'bg-primary shadow-xl shadow-primary/40' : i === 3 ? 'bg-primary/80' : 'bg-blue-100 dark:bg-blue-900/30 group-hover/bar:bg-blue-200'}`}
+                    style={{ height: loading ? '0%' : `${val}%` }}
+                  >
+                    <div className="absolute -top-10 left-1/2 -translate-x-1/2 bg-slate-900 text-white text-[10px] font-black px-2 py-1 rounded-md opacity-0 group-hover/bar:opacity-100 transition-opacity whitespace-nowrap">
+                      {val}k €
+                    </div>
                   </div>
-                ))}
-              </div>
-              <div className="flex justify-between mt-4 text-[11px] font-bold text-slate-400 uppercase tracking-widest px-2">
-                <span>Jan</span><span>Fév</span><span>Mar</span><span>Avr</span><span>Mai</span><span>Juin</span>
-              </div>
+                  <span className="text-[11px] font-bold text-slate-400 uppercase tracking-tighter">
+                    {['Jan', 'Fev', 'Mar', 'Avr', 'Mai', 'Juin', 'Jul'][i]}
+                  </span>
+                </div>
+              ))}
             </div>
+            
+            {/* Background Decoration */}
+            <div className="absolute top-0 right-0 size-64 bg-primary/5 rounded-full blur-3xl -mr-32 -mt-32"></div>
+          </div>
+
+          {/* Recent Activity Feed */}
+          <div className="bg-[#1E1B4B] dark:bg-slate-950 p-10 rounded-[3rem] shadow-2xl text-white relative overflow-hidden">
+            <h3 className="text-2xl font-black tracking-tight mb-8 relative z-10">Activités Récentes</h3>
+            
+            <div className="space-y-8 relative z-10">
+              {loading ? (
+                <div className="space-y-4">
+                  {[1,2,3,4].map(i => <div key={i} className="h-16 bg-white/5 rounded-2xl animate-pulse"></div>)}
+                </div>
+              ) : stats.recentActivities && stats.recentActivities.length > 0 ? (
+                stats.recentActivities.map((act, i) => (
+                  <div key={i} className="flex gap-4 group">
+                    <div className="flex flex-col items-center gap-2">
+                       <div className={`size-3 rounded-full border-2 border-white/20 mt-1.5 ${i===0 ? 'bg-emerald-400' : i===1 ? 'bg-amber-400' : i===2 ? 'bg-blue-400' : 'bg-primary'}`}></div>
+                       {i !== stats.recentActivities.length - 1 && <div className="w-[2px] flex-1 bg-white/10 rounded-full"></div>}
+                    </div>
+                    <div className="flex-1 pb-2">
+                      <p className="font-bold text-sm tracking-tight">{act.name || act.type}</p>
+                      <p className="text-[11px] text-blue-200 font-medium uppercase tracking-tighter mt-1 opacity-80">
+                         {act.type === 'Nouvel Artisan' ? 'Inscrit il y a ' : 'Créé il y a '} 
+                         {Math.floor((new Date() - new Date(act.time)) / (1000 * 60 * 60))}h
+                      </p>
+                    </div>
+                  </div>
+                ))
+              ) : (
+                <p className="text-slate-400 text-sm italic">Aucune activité récente</p>
+              )}
+            </div>
+            
+            <button className="w-full mt-10 py-4 bg-white/10 hover:bg-white/20 rounded-2xl font-bold text-sm transition-all border border-white/5">
+              Voir tout l'historique
+            </button>
+            
+            {/* Decoration */}
+            <div className="absolute bottom-0 left-0 size-48 bg-primary/10 rounded-full blur-3xl -ml-24 -mb-24"></div>
           </div>
         </div>
 
-        {/* Recent Activity Table */}
-        <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 shadow-sm overflow-hidden">
-          <div className="p-6 border-b border-slate-100 dark:border-slate-800 flex items-center justify-between bg-slate-50/50 dark:bg-slate-800/20">
-            <h3 className="text-lg font-bold text-slate-900 dark:text-white">Dernières vérifications d'artisans</h3>
-            <button className="text-sm font-bold text-indigo-600 hover:underline">Voir tout</button>
+        {/* Bottom Section: Artisans awaiting validation */}
+        <div className="bg-white dark:bg-slate-800 p-10 rounded-[3rem] shadow-xl shadow-slate-200/50 dark:shadow-none border border-white/50 dark:border-white/5">
+          <div className="flex justify-between items-center mb-10">
+            <div>
+              <h3 className="text-2xl font-black text-slate-900 dark:text-white tracking-tight">Artisans en attente de validation</h3>
+              <p className="text-slate-400 font-medium mt-1">Gérez les nouveaux dossiers d'artisans</p>
+            </div>
+            <button className="text-primary font-black text-sm hover:underline">Voir tout</button>
           </div>
+          
           <div className="overflow-x-auto">
-            <table className="w-full text-left border-collapse">
+            <table className="w-full border-separate border-spacing-y-4">
               <thead>
-                <tr className="bg-slate-50 dark:bg-slate-800/50">
-                  <th className="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">Artisan</th>
-                  <th className="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">Métier</th>
-                  <th className="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">Date</th>
-                  <th className="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">Statut</th>
-                  <th className="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider text-right">Action</th>
+                <tr className="text-left">
+                  <th className="px-6 pb-2 text-[10px] font-black text-slate-400 uppercase tracking-widest">Artisan</th>
+                  <th className="px-6 pb-2 text-[10px] font-black text-slate-400 uppercase tracking-widest">Catégorie</th>
+                  <th className="px-6 pb-2 text-[10px] font-black text-slate-400 uppercase tracking-widest">Localisation</th>
+                  <th className="px-6 pb-2 text-[10px] font-black text-slate-400 uppercase tracking-widest">Inscrit le</th>
+                  <th className="px-6 pb-2 text-[10px] font-black text-slate-400 uppercase tracking-widest">Statut</th>
+                  <th className="px-6 pb-2 text-[10px] font-black text-slate-400 uppercase tracking-widest text-right">Action</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-slate-100 dark:divide-slate-800">
+              <tbody>
                 {loading ? (
-                   <tr><td colSpan="5" className="px-6 py-4 text-center text-slate-400">Chargement...</td></tr>
+                  <tr><td colSpan="6" className="text-center py-10 text-slate-400 animate-pulse font-bold">Chargement des données...</td></tr>
                 ) : unverified.length === 0 ? (
-                   <tr><td colSpan="5" className="px-6 py-4 text-center text-slate-400 italic">Aucune demande en attente</td></tr>
-                ) : unverified.map(artisan => (
-                  <tr key={artisan.id} className="hover:bg-slate-50/50 dark:hover:bg-slate-800/20 transition-colors">
-                    <td className="px-6 py-4">
-                      <div className="flex items-center gap-3">
-                        <div className="size-8 rounded-full bg-indigo-100 dark:bg-indigo-900/30 flex items-center justify-center font-bold text-indigo-700 text-xs shadow-inner">
-                          {artisan.name.charAt(0)}
+                  <tr><td colSpan="6" className="text-center py-10 text-slate-400 italic">Aucun artisan en attente</td></tr>
+                ) : unverified.map((artisan, i) => (
+                  <tr key={i} className="group hover:-translate-y-1 transition-transform duration-300">
+                    <td className="bg-slate-50 dark:bg-slate-900/40 px-6 py-5 rounded-l-3xl border-y border-l border-slate-100 dark:border-white/5">
+                      <div className="flex items-center gap-4">
+                        <div className="size-12 rounded-2xl bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center font-black text-primary dark:text-blue-400 text-sm">
+                          {artisan.name.split(' ').map(n=>n[0]).join('')}
                         </div>
-                        <span className="text-sm font-semibold text-slate-900 dark:text-white">{artisan.name}</span>
+                        <div>
+                          <p className="font-black text-slate-900 dark:text-white text-sm tracking-tight">{artisan.name}</p>
+                          <p className="text-[11px] text-slate-500 font-medium mt-0.5">{artisan.email}</p>
+                        </div>
                       </div>
                     </td>
-                    <td className="px-6 py-4 text-sm text-slate-600 dark:text-slate-400">{artisan.specialty || 'Général'}</td>
-                    <td className="px-6 py-4 text-sm text-slate-500">{new Date(artisan.created_at).toLocaleDateString()}</td>
-                    <td className="px-6 py-4">
-                      <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-bold bg-indigo-100 text-indigo-700 dark:bg-indigo-900/40 dark:text-indigo-300">
-                        <span className="size-1.5 rounded-full bg-indigo-500 animate-pulse"></span>
-                        En attente
+                    <td className="bg-slate-50 dark:bg-slate-900/40 px-6 py-5 border-y border-slate-100 dark:border-white/5 font-bold text-sm text-slate-600 dark:text-slate-300">
+                      {artisan.specialty || 'Non spécifié'}
+                    </td>
+                    <td className="bg-slate-50 dark:bg-slate-900/40 px-6 py-5 border-y border-slate-100 dark:border-white/5 font-bold text-sm text-slate-500">
+                      {artisan.address || 'Algérie'}
+                    </td>
+                    <td className="bg-slate-50 dark:bg-slate-900/40 px-6 py-5 border-y border-slate-100 dark:border-white/5 font-bold text-sm text-slate-500">
+                      {new Date(artisan.created_at).toLocaleDateString('fr-FR', { day: '2-digit', month: 'short', year: 'numeric' })}
+                    </td>
+                    <td className="bg-slate-50 dark:bg-slate-900/40 px-6 py-5 border-y border-slate-100 dark:border-white/5">
+                      <span className="px-3 py-1 rounded-full bg-amber-100 text-amber-700 text-[10px] font-black uppercase tracking-tighter">
+                         En attente
                       </span>
                     </td>
-                    <td className="px-6 py-4 text-right">
-                      <button 
-                        onClick={() => handleVerify(artisan.id)}
-                        className="text-sm font-bold text-indigo-600 hover:underline"
-                      >
-                        Vérifier
-                      </button>
+                    <td className="bg-slate-50 dark:bg-slate-900/40 px-6 py-5 rounded-r-3xl border-y border-r border-slate-100 dark:border-white/5 text-right">
+                       <div className="flex items-center justify-end gap-1">
+                         {artisan.artisan_documents && (
+                           <button 
+                             onClick={() => {
+                               const docs = artisan.artisan_documents.split(',');
+                               docs.forEach(url => window.open(url.trim(), '_blank'));
+                             }}
+                             className="p-2 text-indigo-500 hover:bg-white dark:hover:bg-slate-800 rounded-xl transition-colors"
+                             title="Voir Documents"
+                           >
+                             <span className="material-symbols-outlined font-bold">description</span>
+                           </button>
+                         )}
+                         <button 
+                          onClick={() => handleVerify(artisan.id)}
+                          className="p-2 text-primary hover:bg-white dark:hover:bg-slate-800 rounded-xl transition-colors"
+                          title="Vérifier l'artisan"
+                         >
+                           <span className="material-symbols-outlined font-bold">check_circle</span>
+                         </button>
+                       </div>
                     </td>
                   </tr>
                 ))}
@@ -231,6 +254,7 @@ const AdminDashboard = () => {
             </table>
           </div>
         </div>
+
       </div>
     </AdminLayout>
   );

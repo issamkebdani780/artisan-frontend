@@ -61,15 +61,26 @@ const ProfilArtisan = () => {
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
                 />
               </div>
-              <div className="absolute -bottom-2 -right-2 size-10 bg-emerald-500 rounded-2xl border-4 border-white z-20 flex items-center justify-center shadow-lg">
-                <span className="material-symbols-outlined text-white text-xl">check_circle</span>
-              </div>
+              {artisan.is_verified ? (
+                <div className="absolute -bottom-2 -right-2 size-10 bg-emerald-500 rounded-2xl border-4 border-white z-20 flex items-center justify-center shadow-lg" title="Vérifié par la plateforme">
+                  <span className="material-symbols-outlined text-white text-xl">verified</span>
+                </div>
+              ) : (
+                <div className="absolute -bottom-2 -right-2 size-10 bg-amber-500 rounded-2xl border-4 border-white z-20 flex items-center justify-center shadow-lg" title="En attente de vérification">
+                  <span className="material-symbols-outlined text-white text-xl">hourglass_empty</span>
+                </div>
+              )}
             </div>
 
             {/* Info Section */}
             <div className="flex-1 pb-2">
               <div className="flex flex-wrap items-center gap-4 mb-3">
-                <h1 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tight uppercase">{artisan.name}</h1>
+                <div className="flex items-center gap-3">
+                  <h1 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tight uppercase">{artisan.name}</h1>
+                  {artisan.is_verified && (
+                    <span className="material-symbols-outlined text-blue-500 text-3xl" style={{ fontVariationSettings: "'FILL' 1" }}>verified</span>
+                  )}
+                </div>
                 <span className="px-4 py-1.5 rounded-full bg-emerald-50 border border-emerald-100 text-emerald-700 text-[10px] font-black uppercase tracking-widest flex items-center gap-2">
                   <span className="size-2 bg-emerald-500 rounded-full"></span>
                   Disponible
@@ -77,13 +88,13 @@ const ProfilArtisan = () => {
               </div>
               <div className="flex flex-wrap items-center gap-4 text-slate-500">
                 <div className="flex items-center gap-2">
-                  <span className="material-symbols-outlined text-primary">verified_user</span>
+                  <span className="material-symbols-outlined text-primary">engineering</span>
                   <span className="font-bold text-sm md:text-base">{artisan.specialty}</span>
                 </div>
                 <span className="hidden md:block size-1 bg-slate-300 rounded-full"></span>
                 <div className="flex items-center gap-2">
                   <span className="material-symbols-outlined text-slate-400">location_on</span>
-                  <span className="font-medium text-sm md:text-base">Alger, Algérie</span>
+                  <span className="font-medium text-sm md:text-base">{artisan.address || 'Alger, Algérie'}</span>
                 </div>
               </div>
             </div>
@@ -262,13 +273,13 @@ const ProfilArtisan = () => {
                 <h4 className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Confiance & Sécurité</h4>
                 <div className="space-y-4">
                   {[
-                    { label: 'Identité Vérifiée', icon: 'verified' },
-                    { label: 'Docs Professionnels', icon: 'article' },
-                    { label: 'Réponte Rapide', icon: 'shutter_speed' }
+                    { label: 'Identité Vérifiée', icon: 'verified', active: artisan.is_verified },
+                    { label: 'Docs Professionnels', icon: 'article', active: artisan.is_verified },
+                    { label: 'Réponse Rapide', icon: 'shutter_speed', active: true }
                   ].map((v, i) => (
-                    <div key={i} className="flex items-center gap-3 text-sm font-black text-slate-700">
-                      <div className="size-8 rounded-full bg-white text-emerald-500 flex items-center justify-center shadow-sm">
-                        <span className="material-symbols-outlined text-lg">check</span>
+                    <div key={i} className={`flex items-center gap-3 text-sm font-black ${v.active ? 'text-slate-700' : 'text-slate-300 opacity-50'}`}>
+                      <div className={`size-8 rounded-full flex items-center justify-center shadow-sm ${v.active ? 'bg-white text-emerald-500' : 'bg-slate-100 text-slate-300'}`}>
+                        <span className="material-symbols-outlined text-lg">{v.active ? 'check' : 'close'}</span>
                       </div>
                       {v.label}
                     </div>
