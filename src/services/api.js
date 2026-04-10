@@ -225,6 +225,16 @@ const apiService = {
     return handleResponse(res);
   },
 
+  getSubcategoriesByCategory: async (categoryId) => {
+    const res = await fetch(`${BASE_URL}/categories/${categoryId}/subcategories`);
+    return handleResponse(res);
+  },
+
+  getSubcategoryDetails: async (subcategoryId) => {
+    const res = await fetch(`${BASE_URL}/subcategories/${subcategoryId}`);
+    return handleResponse(res);
+  },
+
   createService: async (serviceData) => {
     const isFormData = serviceData instanceof FormData;
     const res = await fetch(`${BASE_URL}/services`, {
@@ -462,6 +472,15 @@ const apiService = {
     });
     return handleResponse(res);
   },
+
+  refuseArtisan: async (id) => {
+    const res = await fetch(`${BASE_URL}/admin/artisans/${id}/refuse`, {
+      method: 'PUT',
+      headers: getAuthHeaders(),
+    });
+    return handleResponse(res);
+  },
+
 };
 
 export default apiService;

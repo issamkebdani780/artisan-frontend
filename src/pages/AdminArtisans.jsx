@@ -1,13 +1,27 @@
 import React, { useState, useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
+
 import AdminLayout from '../layouts/AdminLayout';
 import apiService from '../services/api';
-
 const AdminArtisans = () => {
+  const [searchParams] = useSearchParams();
   const [artisans, setArtisans] = useState([]);
   const [loading, setLoading] = useState(true);
   const [filter, setFilter] = useState('Tous');
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 8;
+  const searchQuery = searchParams.get('search')?.toLowerCase() || '';
+
+
 
   useEffect(() => {
+    const q = searchParams.get('search')?.toLowerCase() || '';
+    // No need for separate state here if we use searchParams directly in the filter
+    // but the filter logic already uses searchQuery which depends on searchParams.
+  }, [searchParams]);
+
+  useEffect(() => {
+
     const fetchArtisans = async () => {
       try {
         const data = await apiService.getAllArtisans();
@@ -31,6 +45,16 @@ const AdminArtisans = () => {
     }
   };
 
+  const handleRefuse = async (id) => {
+    if (!window.confirm('Voulez-vous vraiment refuser cet artisan ?')) return;
+    try {
+      await apiService.refuseArtisan(id);
+      setArtisans(artisans.map(a => a.id === id ? { ...a, is_verified: -1 } : a));
+    } catch (err) {
+      alert('Échec du refus');
+    }
+  };
+
   const handleDelete = async (id) => {
     if (!window.confirm('Voulez-vous vraiment supprimer ce compte artisan ? Cette action est irréversible.')) return;
     try {
@@ -42,11 +66,30 @@ const AdminArtisans = () => {
   };
 
   const filteredArtisans = artisans.filter(a => {
+    const matchesSearch = !searchQuery || 
+      a.name.toLowerCase().includes(searchQuery) || 
+      (a.specialty && a.specialty.toLowerCase().includes(searchQuery)) ||
+      a.email.toLowerCase().includes(searchQuery);
+
+    if (!matchesSearch) return false;
+    
     if (filter === 'Tous') return true;
-    if (filter === 'En attente') return !a.is_verified;
-    if (filter === 'Vérifiés') return a.is_verified;
+    if (filter === 'En attente') return a.is_verified === 0;
+    if (filter === 'Vérifiés') return a.is_verified === 1;
+    if (filter === 'Refusés') return a.is_verified === -1;
     return true;
   });
+
+
+  const totalPages = Math.ceil(filteredArtisans.length / itemsPerPage);
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentItems = filteredArtisans.slice(indexOfFirstItem, indexOfLastItem);
+
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
+
 
   return (
     <AdminLayout title="Gestion des artisans">
@@ -56,15 +99,13 @@ const AdminArtisans = () => {
             <h2 className="text-3xl font-black text-slate-900 dark:text-white tracking-tight font-[Outfit,sans-serif]">Annuaire des Artisans</h2>
             <p className="text-slate-500 dark:text-slate-400 mt-1 font-medium">Gérez et vérifiez les professionnels inscrits sur votre plateforme.</p>
           </div>
-          <button className="px-6 py-3 bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/10 rounded-2xl text-sm font-bold shadow-sm hover:shadow-md transition-all flex items-center gap-2">
-            <span className="material-symbols-outlined text-lg">download</span>
-            Exporter CSV
-          </button>
+          {/* Exporter CSV button removed */}
+
         </div>
 
         {/* Tabs / Filters */}
         <div className="flex bg-white/50 dark:bg-slate-800/50 p-1.5 rounded-3xl border border-slate-200 dark:border-white/5 w-fit">
-          {['Tous', 'En attente', 'Vérifiés', 'Suspendus'].map((tab) => (
+          {['Tous', 'En attente', 'Vérifiés', 'Refusés'].map((tab) => (
             <button
               key={tab}
               onClick={() => setFilter(tab)}
@@ -103,7 +144,8 @@ const AdminArtisans = () => {
                   ))
                 ) : filteredArtisans.length === 0 ? (
                   <tr><td colSpan="6" className="text-center py-20 text-slate-400 font-bold italic font-[Outfit,sans-serif]">Aucun artisan trouvé</td></tr>
-                ) : filteredArtisans.map((artisan) => (
+                ) : currentItems.map((artisan) => (
+
                   <tr key={artisan.id} className="hover:bg-slate-50/50 dark:hover:bg-white/5 transition-colors group font-[Outfit,sans-serif]">
                     <td className="px-8 py-6">
                       <div className="flex items-center gap-4">
@@ -120,8 +162,8 @@ const AdminArtisans = () => {
                       {artisan.specialty || 'Général'}
                     </td>
                     <td className="px-8 py-6">
-                      <span className={`px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-tighter ${artisan.is_verified ? 'bg-emerald-100 text-emerald-700' : 'bg-amber-100 text-amber-700'}`}>
-                        {artisan.is_verified ? 'Vérifié' : 'En attente'}
+                      <span className={`px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-tighter ${artisan.is_verified === 1 ? 'bg-emerald-100 text-emerald-700' : artisan.is_verified === -1 ? 'bg-rose-100 text-rose-700' : 'bg-amber-100 text-amber-700'}`}>
+                        {artisan.is_verified === 1 ? 'Vérifié' : artisan.is_verified === -1 ? 'Refusé' : 'En attente'}
                       </span>
                     </td>
                     <td className="px-8 py-6">
@@ -147,14 +189,23 @@ const AdminArtisans = () => {
                             <span className="material-symbols-outlined font-bold">description</span>
                           </button>
                         )}
-                        {!artisan.is_verified && (
-                          <button 
-                            onClick={() => handleVerify(artisan.id)}
-                            className="p-2 text-emerald-600 hover:bg-emerald-50 rounded-xl transition-colors"
-                            title="Vérifier"
-                          >
-                            <span className="material-symbols-outlined font-bold">check_circle</span>
-                          </button>
+                        {artisan.is_verified === 0 && (
+                          <>
+                            <button 
+                              onClick={() => handleVerify(artisan.id)}
+                              className="p-2 text-emerald-600 hover:bg-emerald-50 rounded-xl transition-colors"
+                              title="Vérifier"
+                            >
+                              <span className="material-symbols-outlined font-bold">check_circle</span>
+                            </button>
+                            <button 
+                              onClick={() => handleRefuse(artisan.id)}
+                              className="p-2 text-amber-600 hover:bg-amber-50 rounded-xl transition-colors"
+                              title="Refuser"
+                            >
+                              <span className="material-symbols-outlined font-bold">cancel</span>
+                            </button>
+                          </>
                         )}
                         <button 
                           onClick={() => handleDelete(artisan.id)}
@@ -170,8 +221,45 @@ const AdminArtisans = () => {
               </tbody>
             </table>
           </div>
+
+          {/* Pagination Controls */}
+          {totalPages > 1 && (
+            <div className="px-8 py-6 bg-slate-50/50 dark:bg-slate-900/50 border-t border-slate-100 dark:border-white/5 flex items-center justify-between">
+              <p className="text-xs font-bold text-slate-500 uppercase tracking-widest">
+                Affichage de {indexOfFirstItem + 1} à {Math.min(indexOfLastItem, filteredArtisans.length)} sur {filteredArtisans.length}
+              </p>
+              <div className="flex items-center gap-2">
+                <button
+                  onClick={() => handlePageChange(currentPage - 1)}
+                  disabled={currentPage === 1}
+                  className="p-2 rounded-xl border border-slate-200 dark:border-white/10 hover:bg-white dark:hover:bg-slate-800 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
+                >
+                  <span className="material-symbols-outlined text-xl">chevron_left</span>
+                </button>
+                
+                {[...Array(totalPages)].map((_, i) => (
+                  <button
+                    key={i + 1}
+                    onClick={() => handlePageChange(i + 1)}
+                    className={`size-10 rounded-xl text-sm font-black transition-all ${currentPage === i + 1 ? 'bg-primary text-white shadow-lg shadow-primary/20' : 'text-slate-500 hover:bg-white dark:hover:bg-slate-800 border border-transparent hover:border-slate-200'}`}
+                  >
+                    {i + 1}
+                  </button>
+                ))}
+
+                <button
+                  onClick={() => handlePageChange(currentPage + 1)}
+                  disabled={currentPage === totalPages}
+                  className="p-2 rounded-xl border border-slate-200 dark:border-white/10 hover:bg-white dark:hover:bg-slate-800 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
+                >
+                  <span className="material-symbols-outlined text-xl">chevron_right</span>
+                </button>
+              </div>
+            </div>
+          )}
         </div>
       </div>
+
     </AdminLayout>
   );
 };

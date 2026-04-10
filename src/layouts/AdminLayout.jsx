@@ -24,8 +24,8 @@ const AdminLayout = ({ children, title = "Admin", subtitle }) => {
     { name: 'Tableau de bord', path: '/dashboard/admin', icon: 'dashboard' },
     { name: 'Gestion des artisans', path: '/dashboard/admin/artisans', icon: 'engineering' },
     { name: 'Gestion des clients', path: '/dashboard/admin/clients', icon: 'group' },
-    { name: 'Litiges & Recours', path: '/dashboard/admin/disputes', icon: 'report_problem' },
     { name: 'Statistiques', path: '/dashboard/admin/stats', icon: 'bar_chart' },
+
     { name: 'Paramètres', path: '/dashboard/admin/settings', icon: 'settings' },
   ];
 
@@ -95,28 +95,31 @@ const AdminLayout = ({ children, title = "Admin", subtitle }) => {
              <div className="w-px h-6 bg-slate-200 dark:bg-white/10"></div>
           </div>
           <div className="flex items-center gap-6 flex-1 max-w-2xl">
-            <div className="relative w-full group">
+            <form 
+              onSubmit={(e) => {
+                e.preventDefault();
+                const q = e.target.search.value;
+                if (!q) return;
+                const target = path.includes('clients') ? 'clients' : 'artisans';
+                navigate(`/dashboard/admin/${target}?search=${q}`);
+              }}
+              className="relative w-full group"
+            >
+
               <span className="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-primary transition-colors">search</span>
-              <input type="text" placeholder="Recherche globale (Command + K)" className="w-full pl-12 pr-6 py-3.5 bg-slate-100 dark:bg-white/5 border-transparent focus:bg-white dark:focus:bg-slate-900 border focus:border-primary/50 text-sm font-medium rounded-2xl outline-none transition-all" />
-            </div>
+              <input 
+                name="search"
+                type="text" 
+                placeholder="Rechercher un artisan ou client..." 
+                className="w-full pl-12 pr-6 py-3.5 bg-slate-100 dark:bg-white/5 border-transparent focus:bg-white dark:focus:bg-slate-900 border focus:border-primary/50 text-sm font-medium rounded-2xl outline-none transition-all" 
+              />
+            </form>
           </div>
           
           <div className="flex items-center gap-4">
-            <div className="flex bg-slate-100 dark:bg-white/5 p-1 rounded-2xl gap-1">
-              <button className="px-4 py-2 rounded-xl text-xs font-black uppercase tracking-widest bg-white dark:bg-slate-800 shadow-sm text-primary">Admin</button>
-              <Link to="/" className="px-4 py-2 rounded-xl text-xs font-black uppercase tracking-widest text-slate-400 hover:text-slate-600 transition-colors">Client</Link>
-            </div>
-            
-            <button className="size-11 flex items-center justify-center bg-white dark:bg-slate-800/50 rounded-2xl border border-slate-200 dark:border-white/5 shadow-sm hover:translate-y-px transition-all relative">
-              <span className="material-symbols-outlined text-slate-600 dark:text-slate-400">notifications</span>
-              <span className="absolute top-3 right-3 size-2 bg-secondary rounded-full border-2 border-white dark:border-slate-900"></span>
-            </button>
-            
-            <button className="flex items-center gap-2 px-3 py-2 bg-white dark:bg-slate-800/50 rounded-xl border border-slate-200 dark:border-white/5 hover:bg-slate-50 transition-all font-bold text-xs uppercase tracking-widest text-slate-600">
-              FR
-              <span className="material-symbols-outlined text-sm">keyboard_arrow_down</span>
-            </button>
+            {/* Notification and Language buttons removed */}
           </div>
+
         </header>
 
         {/* Dynamic Page Content */}

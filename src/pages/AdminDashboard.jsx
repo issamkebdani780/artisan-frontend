@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+
 import AdminLayout from '../layouts/AdminLayout';
 import apiService from '../services/api';
 
@@ -13,6 +15,9 @@ const AdminDashboard = () => {
   });
   const [unverified, setUnverified] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 5;
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -33,6 +38,18 @@ const AdminDashboard = () => {
     fetchData();
   }, []);
 
+
+  const totalPages = Math.ceil(unverified.length / itemsPerPage);
+
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentItems = unverified.slice(indexOfFirstItem, indexOfLastItem);
+
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
+
+
   const handleVerify = async (id) => {
     if (!window.confirm('Voulez-vous vraiment valider cet artisan ?')) return;
     try {
@@ -42,6 +59,17 @@ const AdminDashboard = () => {
       setStats(newStats);
     } catch (err) {
       alert('Échec de la vérification');
+    }
+  };
+  const handleRefuse = async (id) => {
+    if (!window.confirm('Voulez-vous vraiment refuser cet artisan ?')) return;
+    try {
+      await apiService.refuseArtisan(id);
+      setUnverified(unverified.filter(a => a.id !== id));
+      const newStats = await apiService.getDetailedStats();
+      setStats(newStats);
+    } catch (err) {
+      alert('Échec du refus');
     }
   };
 
@@ -56,32 +84,23 @@ const AdminDashboard = () => {
             <p className="text-slate-500 dark:text-slate-400 mt-1 font-medium">Bienvenue, voici un aperçu de l'activité de votre plateforme.</p>
           </div>
           <div className="flex gap-4">
-            <button className="px-6 py-3 bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/10 rounded-2xl text-sm font-bold shadow-sm hover:shadow-md transition-all flex items-center gap-2">
-              <span className="material-symbols-outlined text-lg">download</span>
-              Télécharger Rapport
-            </button>
-            <button className="px-6 py-3 bg-primary text-white rounded-2xl text-sm font-black shadow-lg shadow-primary/30 hover:bg-primary-dark transition-all">
-              Nouvelle Campagne
-            </button>
+            {/* Download/Campaign buttons removed */}
           </div>
+
         </div>
 
         {/* Premium Stats Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
           {[
-            { label: 'Revenu Total', value: `${Number(stats.totalRevenue).toLocaleString()} €`, change: '+12.5%', icon: 'payments', color: 'bg-blue-500', trend: 'up' },
-            { label: 'Artisans Actifs', value: stats.totalArtisans, change: '+3.2%', icon: 'construction', color: 'bg-secondary', trend: 'up' },
-            { label: 'Nouveaux Clients', value: stats.totalClients, change: '+8.4%', icon: 'person_add', color: 'bg-primary', trend: 'up' },
-            { label: 'Litiges en cours', value: stats.pendingDisputes, change: '-2.1%', icon: 'warning', color: 'bg-rose-500', trend: 'down' },
+            { label: 'Revenu Total', value: `${Number(stats.totalRevenue).toLocaleString()} €`, change: stats.changes?.revenue || '0%', icon: 'payments', color: 'bg-blue-500', trend: 'up' },
+            { label: 'Artisans Actifs', value: stats.totalArtisans, change: stats.changes?.artisans || '0%', icon: 'construction', color: 'bg-secondary', trend: 'up' },
+            { label: 'Nouveaux Clients', value: stats.totalClients, change: stats.changes?.clients || '0%', icon: 'person_add', color: 'bg-primary', trend: 'up' },
           ].map((card, i) => (
+
             <div key={i} className="bg-white dark:bg-slate-800 p-8 rounded-[2.5rem] shadow-xl shadow-slate-200/50 dark:shadow-none border border-white/50 dark:border-white/5 flex flex-col gap-6 group hover:-translate-y-1 transition-all duration-500">
               <div className="flex justify-between items-start">
                 <div className={`${card.color} size-14 rounded-2xl flex items-center justify-center text-white shadow-lg group-hover:rotate-6 transition-transform duration-500`}>
                   <span className="material-symbols-outlined text-2xl font-bold">{card.icon}</span>
-                </div>
-                <div className={`px-3 py-1 rounded-full text-[11px] font-black flex items-center gap-1 ${card.trend === 'up' ? 'bg-emerald-100 text-emerald-600' : 'bg-rose-100 text-rose-600'}`}>
-                   <span className="material-symbols-outlined text-xs">{card.trend === 'up' ? 'trending_up' : 'trending_down'}</span>
-                   {card.change}
                 </div>
               </div>
               <div>
@@ -97,40 +116,7 @@ const AdminDashboard = () => {
         {/* Main Content Row: Performance Chart & Recent Activities */}
         <div className="grid grid-cols-1 xl:grid-cols-3 gap-10">
           
-          {/* Performance Chart - Takes 2 columns */}
-          <div className="xl:col-span-2 bg-white dark:bg-slate-800 p-10 rounded-[3rem] shadow-xl shadow-slate-200/50 dark:shadow-none border border-white/50 dark:border-white/5 relative overflow-hidden group">
-            <div className="flex justify-between items-start mb-10 relative z-10">
-              <div>
-                <h3 className="text-2xl font-black text-slate-900 dark:text-white tracking-tight">Performance des ventes</h3>
-                <p className="text-slate-400 font-medium mt-1">Volume des transactions mensuelles</p>
-              </div>
-              <div className="px-4 py-2 bg-slate-50 dark:bg-slate-900/50 rounded-xl text-xs font-black text-slate-500 border border-slate-100 dark:border-white/5">
-                Année 2026
-              </div>
-            </div>
-            
-            {/* Custom SVG Bar Chart */}
-            <div className="h-80 flex items-end justify-between gap-4 px-4 relative z-10 mt-8">
-              {[35, 60, 52, 85, 78, 55, 95].map((val, i) => (
-                <div key={i} className="flex-1 flex flex-col items-center gap-4 group/bar">
-                  <div 
-                    className={`w-full rounded-2xl transition-all duration-1000 ease-out relative ${i === 6 ? 'bg-primary shadow-xl shadow-primary/40' : i === 3 ? 'bg-primary/80' : 'bg-blue-100 dark:bg-blue-900/30 group-hover/bar:bg-blue-200'}`}
-                    style={{ height: loading ? '0%' : `${val}%` }}
-                  >
-                    <div className="absolute -top-10 left-1/2 -translate-x-1/2 bg-slate-900 text-white text-[10px] font-black px-2 py-1 rounded-md opacity-0 group-hover/bar:opacity-100 transition-opacity whitespace-nowrap">
-                      {val}k €
-                    </div>
-                  </div>
-                  <span className="text-[11px] font-bold text-slate-400 uppercase tracking-tighter">
-                    {['Jan', 'Fev', 'Mar', 'Avr', 'Mai', 'Juin', 'Jul'][i]}
-                  </span>
-                </div>
-              ))}
-            </div>
-            
-            {/* Background Decoration */}
-            <div className="absolute top-0 right-0 size-64 bg-primary/5 rounded-full blur-3xl -mr-32 -mt-32"></div>
-          </div>
+
 
           {/* Recent Activity Feed */}
           <div className="bg-[#1E1B4B] dark:bg-slate-950 p-10 rounded-[3rem] shadow-2xl text-white relative overflow-hidden">
@@ -162,99 +148,111 @@ const AdminDashboard = () => {
               )}
             </div>
             
-            <button className="w-full mt-10 py-4 bg-white/10 hover:bg-white/20 rounded-2xl font-bold text-sm transition-all border border-white/5">
+            <Link to="/dashboard/admin/artisans" className="w-full mt-10 py-4 bg-white/10 hover:bg-white/20 rounded-2xl font-bold text-sm transition-all border border-white/5 flex items-center justify-center">
               Voir tout l'historique
-            </button>
+            </Link>
+
             
             {/* Decoration */}
             <div className="absolute bottom-0 left-0 size-48 bg-primary/10 rounded-full blur-3xl -ml-24 -mb-24"></div>
           </div>
-        </div>
 
-        {/* Bottom Section: Artisans awaiting validation */}
-        <div className="bg-white dark:bg-slate-800 p-10 rounded-[3rem] shadow-xl shadow-slate-200/50 dark:shadow-none border border-white/50 dark:border-white/5">
-          <div className="flex justify-between items-center mb-10">
-            <div>
-              <h3 className="text-2xl font-black text-slate-900 dark:text-white tracking-tight">Artisans en attente de validation</h3>
-              <p className="text-slate-400 font-medium mt-1">Gérez les nouveaux dossiers d'artisans</p>
+          {/* Bottom Section: Artisans awaiting validation - Now beside Activity */}
+          <div className="xl:col-span-2 bg-white dark:bg-slate-800 p-10 rounded-[3rem] shadow-xl shadow-slate-200/50 dark:shadow-none border border-white/50 dark:border-white/5 h-full">
+            <div className="flex justify-between items-center mb-10">
+              <div>
+                <h3 className="text-2xl font-black text-slate-900 dark:text-white tracking-tight">Artisans en attente</h3>
+                <p className="text-slate-400 font-medium mt-1">Nouveaux dossiers à vérifier</p>
+              </div>
+              <Link to="/dashboard/admin/verifications" className="text-primary font-black text-sm hover:underline">Voir tout</Link>
             </div>
-            <button className="text-primary font-black text-sm hover:underline">Voir tout</button>
-          </div>
-          
-          <div className="overflow-x-auto">
-            <table className="w-full border-separate border-spacing-y-4">
-              <thead>
-                <tr className="text-left">
-                  <th className="px-6 pb-2 text-[10px] font-black text-slate-400 uppercase tracking-widest">Artisan</th>
-                  <th className="px-6 pb-2 text-[10px] font-black text-slate-400 uppercase tracking-widest">Catégorie</th>
-                  <th className="px-6 pb-2 text-[10px] font-black text-slate-400 uppercase tracking-widest">Localisation</th>
-                  <th className="px-6 pb-2 text-[10px] font-black text-slate-400 uppercase tracking-widest">Inscrit le</th>
-                  <th className="px-6 pb-2 text-[10px] font-black text-slate-400 uppercase tracking-widest">Statut</th>
-                  <th className="px-6 pb-2 text-[10px] font-black text-slate-400 uppercase tracking-widest text-right">Action</th>
-                </tr>
-              </thead>
-              <tbody>
-                {loading ? (
-                  <tr><td colSpan="6" className="text-center py-10 text-slate-400 animate-pulse font-bold">Chargement des données...</td></tr>
-                ) : unverified.length === 0 ? (
-                  <tr><td colSpan="6" className="text-center py-10 text-slate-400 italic">Aucun artisan en attente</td></tr>
-                ) : unverified.map((artisan, i) => (
-                  <tr key={i} className="group hover:-translate-y-1 transition-transform duration-300">
-                    <td className="bg-slate-50 dark:bg-slate-900/40 px-6 py-5 rounded-l-3xl border-y border-l border-slate-100 dark:border-white/5">
-                      <div className="flex items-center gap-4">
-                        <div className="size-12 rounded-2xl bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center font-black text-primary dark:text-blue-400 text-sm">
-                          {artisan.name.split(' ').map(n=>n[0]).join('')}
-                        </div>
-                        <div>
-                          <p className="font-black text-slate-900 dark:text-white text-sm tracking-tight">{artisan.name}</p>
-                          <p className="text-[11px] text-slate-500 font-medium mt-0.5">{artisan.email}</p>
-                        </div>
-                      </div>
-                    </td>
-                    <td className="bg-slate-50 dark:bg-slate-900/40 px-6 py-5 border-y border-slate-100 dark:border-white/5 font-bold text-sm text-slate-600 dark:text-slate-300">
-                      {artisan.specialty || 'Non spécifié'}
-                    </td>
-                    <td className="bg-slate-50 dark:bg-slate-900/40 px-6 py-5 border-y border-slate-100 dark:border-white/5 font-bold text-sm text-slate-500">
-                      {artisan.address || 'Algérie'}
-                    </td>
-                    <td className="bg-slate-50 dark:bg-slate-900/40 px-6 py-5 border-y border-slate-100 dark:border-white/5 font-bold text-sm text-slate-500">
-                      {new Date(artisan.created_at).toLocaleDateString('fr-FR', { day: '2-digit', month: 'short', year: 'numeric' })}
-                    </td>
-                    <td className="bg-slate-50 dark:bg-slate-900/40 px-6 py-5 border-y border-slate-100 dark:border-white/5">
-                      <span className="px-3 py-1 rounded-full bg-amber-100 text-amber-700 text-[10px] font-black uppercase tracking-tighter">
-                         En attente
-                      </span>
-                    </td>
-                    <td className="bg-slate-50 dark:bg-slate-900/40 px-6 py-5 rounded-r-3xl border-y border-r border-slate-100 dark:border-white/5 text-right">
-                       <div className="flex items-center justify-end gap-1">
-                         {artisan.artisan_documents && (
-                           <button 
-                             onClick={() => {
-                               const docs = artisan.artisan_documents.split(',');
-                               docs.forEach(url => window.open(url.trim(), '_blank'));
-                             }}
-                             className="p-2 text-indigo-500 hover:bg-white dark:hover:bg-slate-800 rounded-xl transition-colors"
-                             title="Voir Documents"
-                           >
-                             <span className="material-symbols-outlined font-bold">description</span>
-                           </button>
-                         )}
-                         <button 
-                          onClick={() => handleVerify(artisan.id)}
-                          className="p-2 text-primary hover:bg-white dark:hover:bg-slate-800 rounded-xl transition-colors"
-                          title="Vérifier l'artisan"
-                         >
-                           <span className="material-symbols-outlined font-bold">check_circle</span>
-                         </button>
-                       </div>
-                    </td>
+            
+            <div className="overflow-x-auto">
+              <table className="w-full border-separate border-spacing-y-4">
+                <thead>
+                  <tr className="text-left">
+                    <th className="px-6 pb-2 text-[10px] font-black text-slate-400 uppercase tracking-widest">Artisan</th>
+                    <th className="px-6 pb-2 text-[10px] font-black text-slate-400 uppercase tracking-widest text-right">Action</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody>
+                  {loading ? (
+                    <tr><td colSpan="2" className="text-center py-10 text-slate-400 animate-pulse font-bold">Chargement...</td></tr>
+                  ) : unverified.length === 0 ? (
+                    <tr><td colSpan="2" className="text-center py-10 text-slate-400 italic">Tout est à jour !</td></tr>
+                  ) : currentItems.map((artisan) => (
+                    <tr key={artisan.id}>
+                      <td className="bg-slate-50 dark:bg-slate-900/40 px-6 py-4 rounded-l-3xl border-y border-l border-slate-100 dark:border-white/5">
+                        <div className="flex items-center gap-4">
+                          <div className="size-10 rounded-xl bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center font-black text-primary dark:text-blue-400 text-xs">
+                            {artisan.name.split(' ').map(n=>n[0]).join('')}
+                          </div>
+                          <div>
+                            <p className="font-black text-slate-900 dark:text-white text-xs tracking-tight">{artisan.name}</p>
+                            <p className="text-[10px] text-slate-500 font-medium">{artisan.email}</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td className="bg-slate-50 dark:bg-slate-900/40 px-6 py-4 rounded-r-3xl border-y border-r border-slate-100 dark:border-white/5 text-right">
+                         <div className="flex items-center justify-end gap-1">
+                           <button 
+                            onClick={() => handleVerify(artisan.id)}
+                            className="p-2 text-emerald-600 hover:bg-emerald-50 rounded-xl transition-colors"
+                            title="Vérifier"
+                           >
+                             <span className="material-symbols-outlined font-bold">check_circle</span>
+                           </button>
+                           <button 
+                            onClick={() => handleRefuse(artisan.id)}
+                            className="p-2 text-amber-600 hover:bg-amber-50 rounded-xl transition-colors"
+                            title="Refuser"
+                           >
+                             <span className="material-symbols-outlined font-bold">cancel</span>
+                           </button>
+                         </div>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            
+            {unverified.length > itemsPerPage && (
+              <div className="flex justify-between items-center mt-6 pt-6 border-t border-slate-100 dark:border-white/5">
+                <p className="text-xs font-bold text-slate-400">
+                  Artisans {indexOfFirstItem + 1} - {Math.min(indexOfLastItem, unverified.length)} sur {unverified.length}
+                </p>
+                <div className="flex items-center gap-2">
+                  <button
+                    onClick={() => handlePageChange(currentPage - 1)}
+                    disabled={currentPage === 1}
+                    className="p-2 rounded-xl border border-slate-200 dark:border-white/10 hover:bg-white dark:hover:bg-slate-800 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
+                  >
+                    <span className="material-symbols-outlined text-xl">chevron_left</span>
+                  </button>
+                  
+                  {[...Array(totalPages)].map((_, i) => (
+                    <button
+                      key={i + 1}
+                      onClick={() => handlePageChange(i + 1)}
+                      className={`size-10 rounded-xl text-sm font-black transition-all ${currentPage === i + 1 ? 'bg-primary text-white shadow-lg shadow-primary/20' : 'text-slate-500 hover:bg-white dark:hover:bg-slate-800 border border-transparent hover:border-slate-200'}`}
+                    >
+                      {i + 1}
+                    </button>
+                  ))}
+
+                  <button
+                    onClick={() => handlePageChange(currentPage + 1)}
+                    disabled={currentPage === totalPages}
+                    className="p-2 rounded-xl border border-slate-200 dark:border-white/10 hover:bg-white dark:hover:bg-slate-800 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
+                  >
+                    <span className="material-symbols-outlined text-xl">chevron_right</span>
+                  </button>
+                </div>
+              </div>
+            )}
           </div>
         </div>
-
       </div>
     </AdminLayout>
   );

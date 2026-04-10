@@ -1,13 +1,26 @@
 import React, { useState, useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import AdminLayout from '../layouts/AdminLayout';
+
 import apiService from '../services/api';
 
 const AdminClients = () => {
+  const [searchParams] = useSearchParams();
   const [clients, setClients] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [search, setSearch] = useState('');
+  const [search, setSearch] = useState(searchParams.get('search') || '');
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 8;
+
+
 
   useEffect(() => {
+    const q = searchParams.get('search') || '';
+    setSearch(q);
+  }, [searchParams]);
+
+  useEffect(() => {
+
     const fetchClients = async () => {
       try {
         const data = await apiService.getAllClients();
@@ -31,10 +44,23 @@ const AdminClients = () => {
     }
   };
 
-  const filteredClients = clients.filter(c => 
-    c.name.toLowerCase().includes(search.toLowerCase()) || 
-    c.email.toLowerCase().includes(search.toLowerCase())
-  );
+  const filteredClients = clients.filter(c => {
+    const query = search.toLowerCase();
+    return c.name.toLowerCase().includes(query) || 
+           c.email.toLowerCase().includes(query) ||
+           (c.phone && c.phone.includes(query));
+  });
+
+
+  const totalPages = Math.ceil(filteredClients.length / itemsPerPage);
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentItems = filteredClients.slice(indexOfFirstItem, indexOfLastItem);
+
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
+
 
   return (
     <AdminLayout title="Gestion des clients">
@@ -47,14 +73,9 @@ const AdminClients = () => {
             <p className="text-slate-500 dark:text-slate-400 font-medium">Gérez et suivez les inscriptions sur votre plateforme.</p>
           </div>
           <div className="flex gap-4">
-            <button className="flex items-center gap-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/10 px-6 py-3 rounded-2xl font-bold text-sm shadow-sm hover:shadow-md transition-all">
-              <span className="material-symbols-outlined text-lg">download</span>
-              Exporter CSV
-            </button>
-            <button className="bg-primary text-white px-8 py-3 rounded-2xl font-black text-sm shadow-lg shadow-primary/30 hover:brightness-110 transition-all">
-              Audit Complet
-            </button>
+            {/* Exporter CSV and Audit buttons removed */}
           </div>
+
         </div>
 
         {/* Filters Bar */}
@@ -69,9 +90,8 @@ const AdminClients = () => {
               className="w-full pl-12 pr-6 py-4 bg-slate-50 dark:bg-slate-900/50 border border-slate-100 dark:border-white/5 rounded-2xl focus:ring-4 focus:ring-primary/10 focus:border-primary/50 text-sm font-medium outline-none transition-all" 
             />
           </div>
-          <button className="bg-primary text-white px-8 py-4 rounded-2xl font-black text-sm shadow-lg shadow-primary/30 hover:brightness-110 transition-all">
-            + Ajouter Client
-          </button>
+          {/* Ajouter Client button removed */}
+
         </div>
 
         {/* Clients Table */}
@@ -96,7 +116,8 @@ const AdminClients = () => {
                   ))
                 ) : filteredClients.length === 0 ? (
                   <tr><td colSpan="5" className="text-center py-20 text-slate-400 font-bold italic">Aucun client trouvé</td></tr>
-                ) : filteredClients.map((client) => (
+                ) : currentItems.map((client) => (
+
                   <tr key={client.id} className="hover:bg-slate-50/50 dark:hover:bg-white/5 transition-all group">
                     <td className="px-10 py-6">
                       <div className="flex items-center gap-5">
@@ -134,8 +155,45 @@ const AdminClients = () => {
               </tbody>
             </table>
           </div>
+
+          {/* Pagination Controls */}
+          {totalPages > 1 && (
+            <div className="px-8 py-6 bg-slate-50/50 dark:bg-slate-900/50 border-t border-slate-100 dark:border-white/5 flex items-center justify-between">
+              <p className="text-xs font-bold text-slate-500 uppercase tracking-widest">
+                Affichage de {indexOfFirstItem + 1} à {Math.min(indexOfLastItem, filteredClients.length)} sur {filteredClients.length}
+              </p>
+              <div className="flex items-center gap-2">
+                <button
+                  onClick={() => handlePageChange(currentPage - 1)}
+                  disabled={currentPage === 1}
+                  className="p-2 rounded-xl border border-slate-200 dark:border-white/10 hover:bg-white dark:hover:bg-slate-800 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
+                >
+                  <span className="material-symbols-outlined text-xl">chevron_left</span>
+                </button>
+                
+                {[...Array(totalPages)].map((_, i) => (
+                  <button
+                    key={i + 1}
+                    onClick={() => handlePageChange(i + 1)}
+                    className={`size-10 rounded-xl text-sm font-black transition-all ${currentPage === i + 1 ? 'bg-primary text-white shadow-lg shadow-primary/20' : 'text-slate-500 hover:bg-white dark:hover:bg-slate-800 border border-transparent hover:border-slate-200'}`}
+                  >
+                    {i + 1}
+                  </button>
+                ))}
+
+                <button
+                  onClick={() => handlePageChange(currentPage + 1)}
+                  disabled={currentPage === totalPages}
+                  className="p-2 rounded-xl border border-slate-200 dark:border-white/10 hover:bg-white dark:hover:bg-slate-800 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
+                >
+                  <span className="material-symbols-outlined text-xl">chevron_right</span>
+                </button>
+              </div>
+            </div>
+          )}
         </div>
       </div>
+
     </AdminLayout>
   );
 };

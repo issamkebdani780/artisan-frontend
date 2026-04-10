@@ -6,8 +6,10 @@ const RequestQuote = () => {
   const [searchParams] = useSearchParams();
   const serviceId = searchParams.get('serviceId');
   const artisanId = searchParams.get('artisanId');
+  const subcategoryIdFromUrl = searchParams.get('subcategory'); // New param
   const [categories, setCategories] = useState([]);
   const [loading, setLoading] = useState(false);
+
   const [success, setSuccess] = useState(false);
   const navigate = useNavigate();
 
@@ -40,12 +42,25 @@ const RequestQuote = () => {
       try {
         const data = await apiService.getCategories();
         setCategories(data);
+        
+        // If subcategoryId is provided, we need to find its parent category
+        if (subcategoryIdFromUrl) {
+          const subDetails = await apiService.getSubcategoryDetails(subcategoryIdFromUrl);
+          if (subDetails && subDetails.category_id) {
+            setFormData(prev => ({
+              ...prev,
+              category_id: subDetails.category_id,
+              title: subDetails.name || subDetails.title || prev.title // Optionally set title
+            }));
+          }
+        }
       } catch (err) {
-        console.error('Failed to fetch categories:', err);
+        console.error('Failed to fetch categories or subcategory details:', err);
       }
     };
     fetchCategories();
-  }, []);
+  }, [subcategoryIdFromUrl]);
+
 
   // Fetch wilayas on mount
   useEffect(() => {

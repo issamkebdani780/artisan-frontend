@@ -21,7 +21,8 @@ import AdminDashboard from './pages/AdminDashboard';
 import RequestQuote from './pages/RequestQuote';
 import AdminArtisans from './pages/AdminArtisans';
 import AdminClients from './pages/AdminClients';
-import AdminDisputes from './pages/AdminDisputes';
+
+
 import ClientProfileSettings from './pages/ClientProfileSettings';
 import ProfilArtisan from './pages/ProfilArtisan';
 import ClientProjects from './pages/ClientProjects';
@@ -37,6 +38,8 @@ import VoirLesPreuvesAdmin from './pages/VoirLesPreuvesAdmin';
 import MovingBooking from './pages/MovingBooking';
 import MessageSuccess from './pages/MessageSuccess';
 import AboutUs from './pages/AboutUs';
+import SubcategoryDetails from './pages/SubcategoryDetails';
+
 
 
 function App() {
@@ -58,6 +61,8 @@ function App() {
         <Route path="/message-success" element={<MainLayout><MessageSuccess /></MainLayout>} />
         <Route path="/about-us" element={<MainLayout><AboutUs /></MainLayout>} />
         <Route path="/request-quote" element={<MainLayout><RequestQuote /></MainLayout>} />
+        <Route path="/subcategory/:id" element={<MainLayout><SubcategoryDetails /></MainLayout>} />
+
 
         {/* Private / Dashboard Routes - Rendered without MainLayout nav/footer */}
         <Route path="/dashboard/artisan" element={<ArtisanDashboard />} />
@@ -81,7 +86,7 @@ function App() {
         <Route path="/dashboard/admin/stats" element={<AdminDashboard />} />
         <Route path="/dashboard/admin/artisans" element={<AdminArtisans />} />
         <Route path="/dashboard/admin/clients" element={<AdminClients />} />
-        <Route path="/dashboard/admin/disputes" element={<AdminDisputes />} />
+
         <Route path="/dashboard/admin/verifications" element={<VerificationsAdmin />} />
         <Route path="/dashboard/admin/payments" element={<PaiementsAdmin />} />
         <Route path="/dashboard/admin/configuration" element={<AdminConfigurationPlateforme />} />

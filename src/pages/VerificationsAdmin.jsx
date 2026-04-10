@@ -5,6 +5,11 @@ import apiService from '../services/api';
 const VerificationsAdmin = () => {
   const [artisans, setArtisans] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [stats, setStats] = useState(null);
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const itemsPerPage = 8;
+
 
   const fetchUnverified = async () => {
     try {
@@ -18,19 +23,46 @@ const VerificationsAdmin = () => {
   };
 
   useEffect(() => {
-    fetchUnverified();
+    const loadData = async () => {
+      try {
+        const [unverifiedData, statsData] = await Promise.all([
+          apiService.getUnverifiedArtisans(),
+          apiService.getDetailedStats()
+        ]);
+        setArtisans(unverifiedData);
+        setStats(statsData.verificationStats);
+      } catch (err) {
+        console.error('Failed to load verification data:', err);
+      } finally {
+        setLoading(false);
+      }
+    };
+    loadData();
   }, []);
+
 
   const handleVerify = async (id) => {
     if (!window.confirm('Voulez-vous vraiment vérifier cet artisan ?')) return;
     try {
       await apiService.verifyArtisan(id);
       setArtisans(artisans.filter(a => a.id !== id));
-      alert('Artisan vérifié avec succès');
     } catch (err) {
       alert('Erreur lors de la vérification');
     }
   };
+
+
+
+  const totalPages = Math.ceil(artisans.length / itemsPerPage);
+
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentItems = artisans.slice(indexOfFirstItem, indexOfLastItem);
+
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
+
 
   return (
     <AdminLayout title="Certification">
@@ -52,9 +84,10 @@ const VerificationsAdmin = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {[
             { label: 'Attente Action', value: artisans.length, icon: 'hourglass_empty', color: 'bg-indigo-600' },
-            { label: 'Certifiés ce mois', value: '124', icon: 'verified', color: 'bg-emerald-500' },
-            { label: 'Taux de Rejet', value: '2.4%', icon: 'error', color: 'bg-rose-500' },
+            { label: 'Certifiés ce mois', value: stats?.certifiedMonth || 0, icon: 'verified', color: 'bg-emerald-500' },
+            { label: 'Total Certifiés', value: stats?.totalCertified || 0, icon: 'verified_user', color: 'bg-primary' },
           ].map((stat, i) => (
+
             <div key={i} className="bg-white dark:bg-slate-800 p-8 rounded-[2.5rem] shadow-xl shadow-slate-200/50 dark:shadow-none border border-white/50 dark:border-white/5 group hover:-translate-y-1 transition-all duration-300">
               <div className="flex justify-between items-start mb-6">
                  <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest font-['Outfit',sans-serif]">{stat.label}</p>
@@ -98,7 +131,8 @@ const VerificationsAdmin = () => {
                   ))
                 ) : artisans.length === 0 ? (
                   <tr><td colSpan="4" className="text-center py-24 text-slate-400 font-bold italic">Aucune demande en attente</td></tr>
-                ) : artisans.map(artisan => (
+                ) : currentItems.map(artisan => (
+
                   <tr key={artisan.id} className="hover:bg-slate-50/50 dark:hover:bg-white/5 transition-all group">
                     <td className="px-10 py-6">
                       <div className="flex items-center gap-5">
@@ -135,8 +169,45 @@ const VerificationsAdmin = () => {
               </tbody>
             </table>
           </div>
+
+          {/* Pagination Controls */}
+          {totalPages > 1 && (
+            <div className="px-10 py-6 bg-slate-50/50 dark:bg-slate-900/50 border-t border-slate-100 dark:border-white/5 flex items-center justify-between">
+              <p className="text-xs font-bold text-slate-500 uppercase tracking-widest">
+                Dossiers {indexOfFirstItem + 1} - {Math.min(indexOfLastItem, artisans.length)} sur {artisans.length}
+              </p>
+              <div className="flex items-center gap-2">
+                <button
+                  onClick={() => handlePageChange(currentPage - 1)}
+                  disabled={currentPage === 1}
+                  className="p-2 rounded-xl border border-slate-200 dark:border-white/10 hover:bg-white dark:hover:bg-slate-800 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
+                >
+                  <span className="material-symbols-outlined text-xl">chevron_left</span>
+                </button>
+                
+                {[...Array(totalPages)].map((_, i) => (
+                  <button
+                    key={i + 1}
+                    onClick={() => handlePageChange(i + 1)}
+                    className={`size-10 rounded-xl text-sm font-black transition-all ${currentPage === i + 1 ? 'bg-primary text-white shadow-lg shadow-primary/20' : 'text-slate-500 hover:bg-white dark:hover:bg-slate-800 border border-transparent hover:border-slate-200'}`}
+                  >
+                    {i + 1}
+                  </button>
+                ))}
+
+                <button
+                  onClick={() => handlePageChange(currentPage + 1)}
+                  disabled={currentPage === totalPages}
+                  className="p-2 rounded-xl border border-slate-200 dark:border-white/10 hover:bg-white dark:hover:bg-slate-800 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
+                >
+                  <span className="material-symbols-outlined text-xl">chevron_right</span>
+                </button>
+              </div>
+            </div>
+          )}
         </div>
       </div>
+
     </AdminLayout>
   );
 };
