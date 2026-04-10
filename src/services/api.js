@@ -481,6 +481,14 @@ const apiService = {
     return handleResponse(res);
   },
 
+  updateAdminSettings: async (settingsData) => {
+    const res = await fetch(`${BASE_URL}/admin/settings`, {
+      method: 'PUT',
+      headers: getAuthHeaders(),
+      body: JSON.stringify(settingsData),
+    });
+    return handleResponse(res);
+  },
 };
 
 export default apiService;

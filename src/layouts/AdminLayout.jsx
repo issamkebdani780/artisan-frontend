@@ -30,7 +30,7 @@ const AdminLayout = ({ children, title = "Admin", subtitle }) => {
   ];
 
   return (
-    <div className="flex h-screen overflow-hidden font-sans bg-[#EEF2FF] dark:bg-[#0F172A] text-slate-900 dark:text-slate-100">
+    <div className="flex fixed inset-0 overflow-hidden font-sans bg-[#EEF2FF] dark:bg-[#0F172A] text-slate-900 dark:text-slate-100">
       
       {/* Sidebar - Dark Premium Theme */}
       <aside className="w-72 bg-slate-900 text-white flex flex-col shrink-0 shadow-2xl relative z-50 border-r border-white/5">
