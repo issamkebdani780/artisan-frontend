@@ -3,15 +3,31 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import apiService from '../services/api';
 import logo from '../assets/logo.png';
 
-const ArtisanLayout = ({ children, title = "Mihnati PRO", subtitle = "Premium Plan" }) => {
+const ArtisanLayout = ({ children, title = "Mihnati PRO", subtitle = "Premium Plan", hideHeader = false }) => {
   const location = useLocation();
   const navigate = useNavigate();
   const path = location.pathname;
 
-  const user = JSON.parse(localStorage.getItem('user'));
-
+  const [currentUser, setCurrentUser] = React.useState(JSON.parse(localStorage.getItem('user')));
   const [isSidebarOpen, setIsSidebarOpen] = React.useState(false);
   const [isCollapsed, setIsCollapsed] = React.useState(false);
+
+  React.useEffect(() => {
+    const fetchLatestStatus = async () => {
+      try {
+        if (currentUser?.id) {
+          const latestUser = await apiService.getUserById(currentUser.id);
+          if (JSON.stringify(latestUser) !== JSON.stringify(currentUser)) {
+            setCurrentUser(latestUser);
+            localStorage.setItem('user', JSON.stringify(latestUser));
+          }
+        }
+      } catch (err) {
+        console.error('Failed to sync user status:', err);
+      }
+    };
+    fetchLatestStatus();
+  }, []);
 
   const handleLogout = () => {
     apiService.logout();
@@ -37,9 +53,17 @@ const ArtisanLayout = ({ children, title = "Mihnati PRO", subtitle = "Premium Pl
               <div className="flex flex-col">
                 <h1 className="text-lg lg:text-xl font-black tracking-tighter flex items-center gap-1 uppercase truncate overflow-hidden">
                   {title}
-                  <span className="material-symbols-outlined text-secondary text-base" style={{ fontVariationSettings: "'FILL' 1" }}>verified</span>
+                  {Number(currentUser?.is_verified) === 1 ? (
+                    <span className="material-symbols-outlined text-secondary text-base" style={{ fontVariationSettings: "'FILL' 1" }}>verified</span>
+                  ) : Number(currentUser?.is_verified) === -1 ? (
+                    <span className="material-symbols-outlined text-red-500 text-base">error</span>
+                  ) : (
+                    <span className="material-symbols-outlined text-slate-300 text-base" title="En attente de vérification">hourglass_top</span>
+                  )}
                 </h1>
-                <p className="text-secondary text-[10px] font-black uppercase tracking-widest truncate overflow-hidden">{subtitle}</p>
+                <p className={`${Number(currentUser?.is_verified) === 1 ? 'text-secondary' : Number(currentUser?.is_verified) === -1 ? 'text-red-500' : 'text-slate-400'} text-[10px] font-black uppercase tracking-widest truncate overflow-hidden`}>
+                  {Number(currentUser?.is_verified) === 1 ? subtitle : Number(currentUser?.is_verified) === -1 ? 'Dossier Refusé' : 'En attente de vérification'}
+                </p>
               </div>
             </div>
             <button 
@@ -58,12 +82,11 @@ const ArtisanLayout = ({ children, title = "Mihnati PRO", subtitle = "Premium Pl
           
           <nav className="flex flex-col gap-3 overflow-y-auto custom-scrollbar">
             {[
-              { path: '/', icon: 'arrow_back', label: 'Retour à l\'accueil' },
               { path: '/dashboard/artisan', icon: 'home', label: 'Accueil' },
               { path: '/dashboard/artisan/projects', icon: 'work', label: 'Mes projets' },
-              { path: `/artisan/${user?.id}`, icon: 'visibility', label: 'Profil Public', isExternal: true },
+              { path: `/artisan/${currentUser?.id}`, icon: 'visibility', label: 'Profil Public', isExternal: true },
               { path: '/dashboard/artisan/pricing', icon: 'payments', label: 'Mes tarifs' },
-              { icon: 'verified_user', label: 'Vérifications' },
+              { path: '/dashboard/artisan/verifications', icon: 'verified_user', label: 'Vérifications' },
               { icon: 'mail', label: 'Messages' },
               { path: '/dashboard/artisan/settings', icon: 'settings', label: 'Paramètres' },
             ].map((item, idx) => {
@@ -114,37 +137,37 @@ const ArtisanLayout = ({ children, title = "Mihnati PRO", subtitle = "Premium Pl
       <main className="flex-1 flex flex-col min-w-0 min-h-screen relative transition-all duration-300">
         
         {/* Header */}
-        <header className={`h-24 bg-white/80 backdrop-blur-md border-b border-slate-50 px-8 flex items-center justify-between fixed ${headerLeft} left-0 right-0 top-0 z-50 shrink-0 transition-all duration-300`}>
-          <div className="flex items-center gap-6 flex-1">
-            <button className="lg:hidden size-12 rounded-2xl bg-slate-50 flex items-center justify-center text-slate-600 shadow-sm" onClick={() => setIsSidebarOpen(true)}>
-              <span className="material-symbols-outlined text-2xl">menu</span>
-            </button>
-            <div className={`relative w-full max-w-md transition-all duration-300 ${isCollapsed ? 'lg:max-w-xl' : 'lg:max-w-md'} hidden lg:block`}>
-              <span className="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">search</span>
-              <input type="text" placeholder="Rechercher projets, clients..." className="w-full pl-12 pr-6 h-12 bg-slate-50 border border-slate-100 rounded-2xl focus:ring-2 focus:ring-secondary/20 focus:bg-white outline-none transition-all text-xs font-bold" />
-            </div>
-          </div>
-          
-          <div className="flex items-center gap-2">
-            <button className="size-12 rounded-2xl bg-white border border-slate-100 flex items-center justify-center text-slate-400 relative hover:bg-slate-50 transition-colors shadow-sm">
-              <span className="material-symbols-outlined text-xl">notifications</span>
-              <span className="absolute top-3 right-3 size-2 bg-secondary rounded-full ring-4 ring-white"></span>
-            </button>
-            <div className="w-px h-8 bg-slate-100 mx-4"></div>
-            <div className="flex items-center gap-4 pl-2">
-              <div className="text-right hidden sm:block">
-                <p className="text-sm font-black text-slate-900 uppercase tracking-tight truncate max-w-[150px]">{user?.name || 'Artisan'}</p>
-                <p className="text-[10px] font-black text-secondary uppercase tracking-widest truncate max-w-[150px]">{user?.specialty || 'Expert'}</p>
+        {!hideHeader && (
+          <>
+            <header className={`h-24 bg-white/80 backdrop-blur-md border-b border-slate-50 px-8 flex items-center justify-between fixed ${headerLeft} left-0 right-0 top-0 z-50 shrink-0 transition-all duration-300`}>
+              <div className="flex items-center gap-6 flex-1">
+                <button className="lg:hidden size-12 rounded-2xl bg-slate-50 flex items-center justify-center text-slate-600 shadow-sm" onClick={() => setIsSidebarOpen(true)}>
+                  <span className="material-symbols-outlined text-2xl">menu</span>
+                </button>
+                <div className={`relative w-full max-w-md transition-all duration-300 ${isCollapsed ? 'lg:max-w-xl' : 'lg:max-w-md'} hidden lg:block`}>
+                  <span className="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+                  <input type="text" placeholder="Rechercher projets, clients..." className="w-full pl-12 pr-6 h-12 bg-slate-50 border border-slate-100 rounded-2xl focus:ring-2 focus:ring-secondary/20 focus:bg-white outline-none transition-all text-xs font-bold" />
+                </div>
               </div>
-              <div className="size-12 rounded-2xl bg-white p-1 border border-slate-100 shadow-xl shadow-slate-200/50 shrink-0">
-                <img src={user?.profile_pic || "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=60"} alt="Profile" className="w-full h-full object-cover rounded-xl" />
+              
+              <div className="flex items-center gap-2">
+                <div className="w-px h-8 bg-slate-100 mx-4"></div>
+                <div className="flex items-center gap-4 pl-2">
+                  <div className="text-right hidden sm:block">
+                    <p className="text-sm font-black text-slate-900 uppercase tracking-tight truncate max-w-[150px]">{currentUser?.name || 'Artisan'}</p>
+                    <p className="text-[10px] font-black text-secondary uppercase tracking-widest truncate max-w-[150px]">{currentUser?.specialty || 'Expert'}</p>
+                  </div>
+                  <div className="size-12 rounded-2xl bg-white p-1 border border-slate-100 shadow-xl shadow-slate-200/50 shrink-0">
+                    <img src={currentUser?.profile_pic || "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=60"} alt="Profile" className="w-full h-full object-cover rounded-xl" />
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-        </header>
+            </header>
 
-        {/* Header Spacer */}
-        <div className="h-24 shrink-0"></div>
+            {/* Header Spacer */}
+            <div className="h-24 shrink-0"></div>
+          </>
+        )}
 
         <div className="relative z-10 p-6 lg:p-12">
           {children}

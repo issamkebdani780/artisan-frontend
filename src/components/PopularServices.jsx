@@ -64,7 +64,7 @@ const PopularServices = () => {
     }
 
     setExpandedCategoryId(categoryId);
-    
+
     if (!subcategories[categoryId]) {
       try {
         const data = await apiService.getSubcategoriesByCategory(categoryId);
@@ -94,24 +94,22 @@ const PopularServices = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {categories.map((category) => (
-            <div 
+            <div
               key={category.id}
-              className={`group relative rounded-[48px] transition-all duration-500 cursor-pointer overflow-hidden border-2 ${
-                expandedCategoryId === category.id 
-                ? 'border-blue-600 bg-blue-50/30' 
+              className={`group relative rounded-[48px] transition-all duration-500 cursor-pointer overflow-hidden border-2 ${expandedCategoryId === category.id
+                ? 'border-blue-600 bg-blue-50/30'
                 : 'border-slate-50 bg-white hover:border-blue-200 hover:shadow-2xl'
-              }`}
+                }`}
               onClick={() => handleCategoryClick(category.id)}
             >
               <div className="p-10 flex items-start gap-8">
-                <div className={`size-20 rounded-3xl flex items-center justify-center shrink-0 transition-all duration-500 shadow-xl ${
-                  expandedCategoryId === category.id 
-                  ? 'bg-blue-600 text-white rotate-12' 
+                <div className={`size-20 rounded-3xl flex items-center justify-center shrink-0 transition-all duration-500 shadow-xl ${expandedCategoryId === category.id
+                  ? 'bg-blue-600 text-white rotate-12'
                   : 'bg-slate-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white'
-                }`}>
+                  }`}>
                   <span className="material-symbols-outlined text-4xl">{getIcon(category)}</span>
                 </div>
-                
+
                 <div className="flex-1 pr-8">
                   <h3 className="text-2xl font-black text-slate-900 mb-2 tracking-tight uppercase">{category.name}</h3>
                   <p className="text-base text-slate-400 leading-relaxed font-medium line-clamp-2">
@@ -125,9 +123,8 @@ const PopularServices = () => {
               </div>
 
               {/* Accordion Content */}
-              <div className={`transition-all duration-500 ease-[cubic-bezier(0.4, 0, 0.2, 1)] overflow-hidden ${
-                expandedCategoryId === category.id ? 'max-h-[800px] opacity-100' : 'max-h-0 opacity-0'
-              }`}>
+              <div className={`transition-all duration-500 ease-[cubic-bezier(0.4, 0, 0.2, 1)] overflow-hidden ${expandedCategoryId === category.id ? 'max-h-[800px] opacity-100' : 'max-h-0 opacity-0'
+                }`}>
                 <div className="px-10 pb-10 grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {subcategories[category.id]?.map((sub) => (
                     <button
@@ -147,7 +144,7 @@ const PopularServices = () => {
                   ))}
                   {(!subcategories[category.id] || subcategories[category.id].length === 0) && (
                     <div className="col-span-full py-8 text-center bg-white/50 rounded-3xl border-2 border-dashed border-slate-100">
-                        <p className="text-slate-400 text-sm font-bold uppercase tracking-widest italic animate-pulse">Chargement des métiers...</p>
+                      <p className="text-slate-400 text-sm font-bold uppercase tracking-widest italic animate-pulse">Chargement des métiers...</p>
                     </div>
                   )}
                 </div>

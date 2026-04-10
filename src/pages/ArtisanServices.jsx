@@ -2,9 +2,42 @@ import React, { useEffect, useState } from 'react';
 import ArtisanLayout from '../layouts/ArtisanLayout';
 import apiService from '../services/api';
 
+// Map specialty groups to category names in DB
+const specialtyToCategoryMap = {
+  'Menuiserie': 'Menuiserie et Bois',
+  'Soudure': 'Ferronnerie et Soudure',
+  'Plomberie': 'Plomberie et Réseaux',
+  'Électricité': 'Électricité et Énergie',
+  'Peinture': 'Peinture et Plâtre',
+  'Maçonnerie': 'Maçonnerie et Finitions',
+  'Mécanique': 'Mécanique et Machines',
+};
+
+// Map each specialty option to its group
+const specialtyOptionToGroup = {
+  'Menuisier ébéniste': 'Menuiserie', 'Menuisier de chantier': 'Menuiserie', 'Presseur de bois': 'Menuiserie', 'Décorateur bois': 'Menuiserie', 'Fabricant ouvertures bois': 'Menuiserie',
+  "Ferronnier d'art": 'Soudure', 'Soudeur arc/argon': 'Soudure', 'Chaudronnier': 'Soudure', 'Soudeur carrosserie': 'Soudure',
+  'Plombier sanitaire': 'Plomberie', 'Chauffage central': 'Plomberie', 'Monteur gaz': 'Plomberie', 'Tuyauterie cuivre/PER': 'Plomberie',
+  'Électricien bâtiment': 'Électricité', 'Électricien industriel': 'Électricité', 'Technicien solaire': 'Électricité', 'Tireur de câbles': 'Électricité',
+  'Peintre décorateur': 'Peinture', 'Peintre automobile': 'Peinture', 'Plâtrier staffeur': 'Peinture', 'Marbrier': 'Peinture', 'Vernisseur': 'Peinture',
+  'Maçon brique': 'Maçonnerie', 'Carreleur': 'Maçonnerie', 'Crépisseur': 'Maçonnerie', 'Étanchéité': 'Maçonnerie', 'Rénovation': 'Maçonnerie',
+  'Mécanicien auto': 'Mécanique', 'Mécanicien moto': 'Mécanique', 'Moteurs électriques': 'Mécanique', 'Mécanicien agricole': 'Mécanique',
+};
+
+const categoryIcons = {
+  'Menuiserie et Bois': 'carpenter',
+  'Ferronnerie et Soudure': 'hardware',
+  'Plomberie et Réseaux': 'plumbing',
+  'Électricité et Énergie': 'bolt',
+  'Peinture et Plâtre': 'format_paint',
+  'Maçonnerie et Finitions': 'foundation',
+  'Mécanique et Machines': 'precision_manufacturing',
+};
+
 const ArtisanServices = () => {
   const [services, setServices] = useState([]);
   const [categories, setCategories] = useState([]);
+  const [filteredCategories, setFilteredCategories] = useState([]);
   const [loading, setLoading] = useState(true);
   const [showModal, setShowModal] = useState(false);
   const [currentService, setCurrentService] = useState(null);
@@ -12,10 +45,8 @@ const ArtisanServices = () => {
     category_id: '',
     title: '',
     description: '',
-    base_price: '',
-    image_url: ''
+    base_price: ''
   });
-  const [selectedFile, setSelectedFile] = useState(null);
   const user = JSON.parse(localStorage.getItem('user'));
 
   useEffect(() => {
@@ -30,6 +61,23 @@ const ArtisanServices = () => {
       ]);
       setServices(servicesData);
       setCategories(categoriesData);
+
+      // Filter categories based on artisan's specialties
+      const userSpecialties = user?.specialty ? user.specialty.split(',').map(s => s.trim()) : [];
+      const matchedCategoryNames = new Set();
+      userSpecialties.forEach(spec => {
+        const group = specialtyOptionToGroup[spec];
+        if (group && specialtyToCategoryMap[group]) {
+          matchedCategoryNames.add(specialtyToCategoryMap[group]);
+        }
+      });
+      
+      if (matchedCategoryNames.size > 0) {
+        const filtered = categoriesData.filter(c => matchedCategoryNames.has(c.name));
+        setFilteredCategories(filtered.length > 0 ? filtered : categoriesData);
+      } else {
+        setFilteredCategories(categoriesData);
+      }
     } catch (err) {
       console.error('Error fetching data:', err);
     } finally {
@@ -38,24 +86,21 @@ const ArtisanServices = () => {
   };
 
   const handleOpenModal = (service = null) => {
-    setSelectedFile(null);
     if (service) {
       setCurrentService(service);
       setForm({
         category_id: service.category_id,
         title: service.title,
         description: service.description,
-        base_price: service.base_price,
-        image_url: service.image_url || ''
+        base_price: service.base_price
       });
     } else {
       setCurrentService(null);
       setForm({
-        category_id: categories[0]?.id || '',
+        category_id: filteredCategories[0]?.id || '',
         title: '',
         description: '',
-        base_price: '',
-        image_url: ''
+        base_price: ''
       });
     }
     setShowModal(true);
@@ -68,12 +113,6 @@ const ArtisanServices = () => {
     formData.append('title', form.title);
     formData.append('description', form.description);
     formData.append('base_price', form.base_price);
-    
-    if (selectedFile) {
-      formData.append('serviceImage', selectedFile);
-    } else if (form.image_url) {
-      formData.append('image_url', form.image_url);
-    }
 
     try {
       if (currentService) {
@@ -82,7 +121,6 @@ const ArtisanServices = () => {
         await apiService.createService(formData);
       }
       setShowModal(false);
-      setSelectedFile(null);
       fetchData();
     } catch (err) {
       console.error('Error saving service:', err);
@@ -101,71 +139,128 @@ const ArtisanServices = () => {
     }
   };
 
+  // Calculate stats
+  const totalServices = services.length;
+  const avgPrice = totalServices > 0 ? Math.round(services.reduce((sum, s) => sum + Number(s.base_price || 0), 0) / totalServices) : 0;
+  const uniqueCategories = [...new Set(services.map(s => s.category_name))].length;
+
   return (
-    <ArtisanLayout title="Artisan PRO" subtitle="Mes Services">
-      <div className="p-8 flex-1 flex flex-col overflow-y-auto font-['Outfit',sans-serif]">
+    <ArtisanLayout title="Artisan PRO" subtitle="Mes Services" hideHeader={true}>
+      <div className="p-4 md:p-8 flex-1 flex flex-col overflow-y-auto font-['Outfit',sans-serif]">
         
-        <div className="flex justify-between items-end mb-8">
+        {/* Header */}
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 mb-10">
           <div>
-            <h1 className="text-3xl font-black tracking-tight mb-2 text-slate-900 dark:text-white">Mes Services & Tarifs</h1>
-            <p className="text-slate-500">Gérez les prestations que vous proposez aux clients.</p>
+            <div className="flex items-center gap-3 mb-2">
+              <div className="size-10 rounded-2xl bg-secondary/10 flex items-center justify-center">
+                <span className="material-symbols-outlined text-secondary text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>storefront</span>
+              </div>
+              <h1 className="text-3xl font-black tracking-tighter text-slate-900">Mes Tarifs</h1>
+            </div>
+            <p className="text-slate-400 font-medium text-sm max-w-md">Gérez vos prestations et définissez vos prix pour attirer les meilleurs clients.</p>
           </div>
           <button 
             onClick={() => handleOpenModal()}
-            className="flex items-center gap-2 bg-secondary text-white px-6 py-3 rounded-xl font-bold hover:opacity-90 transition-all shadow-lg shadow-secondary/20"
+            className="flex items-center gap-2.5 bg-secondary text-white px-7 py-4 rounded-2xl font-black text-xs uppercase tracking-widest hover:shadow-2xl hover:shadow-secondary/30 hover:-translate-y-0.5 active:scale-95 transition-all shadow-xl shadow-secondary/20"
           >
-            <span className="material-symbols-outlined text-lg">add</span>
+            <span className="material-symbols-outlined text-lg">add_circle</span>
             Nouveau Service
           </button>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Stats Banner */}
+        {!loading && services.length > 0 && (
+          <div className="grid grid-cols-3 gap-4 mb-10">
+            {[
+              { label: 'Services Actifs', value: totalServices, icon: 'category', color: 'from-blue-500 to-indigo-600' },
+              { label: 'Prix Moyen', value: `${avgPrice} DA`, icon: 'payments', color: 'from-emerald-500 to-teal-600' },
+              { label: 'Catégories', value: uniqueCategories, icon: 'grid_view', color: 'from-orange-500 to-amber-600' },
+            ].map((stat, i) => (
+              <div key={i} className="relative overflow-hidden bg-white rounded-3xl border border-slate-100 p-6 group hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300">
+                <div className={`absolute top-0 right-0 w-24 h-24 bg-gradient-to-br ${stat.color} rounded-full blur-3xl opacity-10 group-hover:opacity-20 transition-opacity`}></div>
+                <div className="relative">
+                  <div className={`size-10 rounded-2xl bg-gradient-to-br ${stat.color} flex items-center justify-center mb-4 shadow-lg`}>
+                    <span className="material-symbols-outlined text-white text-lg" style={{ fontVariationSettings: "'FILL' 1" }}>{stat.icon}</span>
+                  </div>
+                  <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">{stat.label}</p>
+                  <p className="text-2xl font-black text-slate-900">{stat.value}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+
+        {/* Services List */}
+        <div className="space-y-4 shadow-2xl shadow-slate-100/50 rounded-3xl">
           {loading ? (
-            <div className="col-span-full py-20 text-center text-slate-400">
-               <span className="animate-spin h-8 w-8 border-4 border-secondary/30 border-t-secondary rounded-full mx-auto block mb-4"></span>
-               Chargement de vos services...
+            <div className="py-24 text-center bg-white rounded-[2rem] border border-slate-100">
+               <span className="animate-spin h-10 w-10 border-4 border-secondary/20 border-t-secondary rounded-full mx-auto block mb-6"></span>
+               <p className="text-slate-400 font-bold text-sm">Chargement de vos services...</p>
             </div>
           ) : services.length === 0 ? (
-            <div className="col-span-full py-20 text-center bg-white rounded-3xl border-2 border-dashed border-slate-200">
-              <span className="material-symbols-outlined text-6xl text-slate-200 mb-4">inventory_2</span>
-              <p className="text-slate-500 font-bold">Vous n'avez pas encore créé de service.</p>
-              <button 
-                onClick={() => handleOpenModal()}
-                className="mt-4 text-secondary font-black hover:underline"
-              >
-                Commencer maintenant
-              </button>
+            <div className="py-24 text-center bg-white rounded-[2rem] border-2 border-dashed border-slate-200 relative overflow-hidden group">
+              <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <div className="relative">
+                <div className="size-20 bg-slate-50 rounded-full flex items-center justify-center mx-auto mb-6 border border-dashed border-slate-200">
+                  <span className="material-symbols-outlined text-4xl text-slate-300">inventory_2</span>
+                </div>
+                <h3 className="text-xl font-black text-slate-900 mb-2">Aucun service créé</h3>
+                <p className="text-slate-400 font-medium mb-8 max-w-sm mx-auto text-sm">Créez votre premier service pour que les clients puissent voir vos offres et tarifs.</p>
+                <button 
+                  onClick={() => handleOpenModal()}
+                  className="inline-flex items-center gap-2 bg-secondary text-white px-8 py-4 rounded-2xl font-black text-xs uppercase tracking-widest hover:shadow-xl hover:shadow-secondary/20 transition-all active:scale-95"
+                >
+                  <span className="material-symbols-outlined text-lg">add_circle</span>
+                  Créer mon premier service
+                </button>
+              </div>
             </div>
           ) : (
-            services.map(service => (
-              <div key={service.id} className="bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden group hover:border-secondary/30 transition-all flex flex-col">
-                <div className="h-48 overflow-hidden relative">
-                  <img 
-                    src={service.image_url || 'https://images.unsplash.com/photo-1581244277943-fe4a9c777189?auto=format&fit=crop&q=80&w=800'} 
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" 
-                    alt={service.title}
-                  />
-                  <div className="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-black text-secondary shadow-sm">
-                    {service.category_name}
+            services.map((service) => (
+              <div key={service.id} className="bg-white rounded-3xl border border-slate-100 overflow-hidden group hover:border-secondary/20 hover:shadow-xl transition-all duration-300 relative">
+                {/* Left accent */}
+                <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-secondary to-secondary/30 rounded-l-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                
+                <div className="p-6 md:p-8 flex flex-col md:flex-row md:items-center gap-6">
+                  {/* Icon */}
+                  <div className="flex items-center gap-5 md:w-auto shrink-0">
+                    <div className="size-14 rounded-2xl bg-gradient-to-br from-slate-50 to-slate-100 border border-slate-100 flex items-center justify-center group-hover:from-secondary/10 group-hover:to-secondary/5 group-hover:border-secondary/20 transition-all duration-300">
+                      <span className="material-symbols-outlined text-slate-400 group-hover:text-secondary text-2xl transition-colors" style={{ fontVariationSettings: "'FILL' 1" }}>
+                        {categoryIcons[service.category_name] || 'handyman'}
+                      </span>
+                    </div>
+                    <div className="md:hidden">
+                      <span className="text-[9px] font-black text-secondary bg-secondary/5 px-2.5 py-1 rounded-lg uppercase tracking-widest border border-secondary/10">{service.category_name}</span>
+                    </div>
                   </div>
-                </div>
-                <div className="p-6 flex-1 flex flex-col">
-                  <h3 className="text-xl font-black text-slate-900 mb-2 truncate">{service.title}</h3>
-                  <p className="text-sm text-slate-500 line-clamp-2 italic mb-4 flex-1">"{service.description}"</p>
-                  <div className="flex justify-between items-center mt-auto pt-4 border-t border-slate-100">
-                    <span className="text-2xl font-black text-slate-900">{service.base_price} DA</span>
-                    <div className="flex gap-2">
+
+                  {/* Content */}
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center gap-3 mb-1.5">
+                      <h3 className="text-lg font-black text-slate-900 truncate">{service.title}</h3>
+                      <span className="hidden md:inline text-[9px] font-black text-secondary bg-secondary/5 px-2.5 py-1 rounded-lg uppercase tracking-widest border border-secondary/10 shrink-0">{service.category_name}</span>
+                    </div>
+                    <p className="text-sm text-slate-400 font-medium line-clamp-1">{service.description}</p>
+                  </div>
+
+                  {/* Price + Actions */}
+                  <div className="flex items-center gap-6 shrink-0">
+                    <div className="text-right">
+                      <p className="text-[9px] font-black text-slate-300 uppercase tracking-widest mb-0.5">À partir de</p>
+                      <p className="text-2xl font-black text-slate-900">{Number(service.base_price).toLocaleString()} <span className="text-sm text-slate-400">DA</span></p>
+                    </div>
+                    <div className="flex gap-1.5 pl-4 border-l border-slate-100">
                       <button 
                         onClick={() => handleOpenModal(service)}
-                        className="p-2 text-slate-400 hover:text-secondary hover:bg-secondary/5 rounded-lg transition-all"
+                        className="size-10 rounded-xl flex items-center justify-center text-slate-300 hover:text-secondary hover:bg-secondary/5 transition-all"
                       >
-                        <span className="material-symbols-outlined text-sm">edit</span>
+                        <span className="material-symbols-outlined text-lg">edit</span>
                       </button>
                       <button 
                         onClick={() => handleDelete(service.id)}
-                        className="p-2 text-slate-400 hover:text-red-500 hover:bg-red-50 rounded-lg transition-all"
+                        className="size-10 rounded-xl flex items-center justify-center text-slate-300 hover:text-red-500 hover:bg-red-50 transition-all"
                       >
-                        <span className="material-symbols-outlined text-sm">delete</span>
+                        <span className="material-symbols-outlined text-lg">delete</span>
                       </button>
                     </div>
                   </div>
@@ -177,44 +272,63 @@ const ArtisanServices = () => {
 
         {/* Modal */}
         {showModal && (
-          <div className="fixed inset-0 z-100 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm animate-fade-in">
-            <div className="bg-white dark:bg-stone-900 w-full max-w-xl rounded-[2.5rem] shadow-2xl overflow-hidden animate-slide-up border border-slate-100 dark:border-stone-800">
-              <div className="p-8 border-b border-slate-100 dark:border-stone-800 flex justify-between items-center">
-                <h2 className="text-2xl font-black text-slate-900 dark:text-white">{currentService ? 'Modifier le Service' : 'Nouveau Service'}</h2>
-                <button onClick={() => setShowModal(false)} className="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors">
-                  <span className="material-symbols-outlined">close</span>
-                </button>
-              </div>
-              <form onSubmit={handleSubmit} className="p-8 space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="flex flex-col gap-1.5">
-                    <label className="text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500 ml-1">Catégorie</label>
-                    <select 
-                      name="category_id" 
-                      value={form.category_id} 
-                      onChange={(e) => setForm({...form, category_id: e.target.value})}
-                      required
-                      className="w-full h-12 px-4 rounded-xl bg-slate-50 dark:bg-stone-800 border border-slate-200 dark:border-stone-700 text-slate-900 dark:text-slate-100 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none font-bold text-sm transition-all"
-                    >
-                      {categories.map(c => <option key={c.id} value={c.id}>{c.name}</option>)}
-                    </select>
+          <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-slate-950/70 backdrop-blur-md">
+            <div className="bg-white w-full max-w-lg rounded-[2.5rem] shadow-2xl overflow-hidden border border-slate-100 animate-in zoom-in-95 fade-in duration-300">
+              {/* Modal Header */}
+              <div className="relative overflow-hidden shrink-0">
+                <div className="absolute inset-0 bg-gradient-to-r from-secondary/10 to-orange-500/5"></div>
+                <div className="absolute -right-10 -top-10 size-32 bg-secondary/10 rounded-full blur-2xl"></div>
+                <div className="relative p-8 flex justify-between items-center">
+                  <div className="flex items-center gap-4">
+                    <div className="size-12 rounded-2xl bg-secondary/10 flex items-center justify-center shadow-inner">
+                      <span className="material-symbols-outlined text-secondary text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>{currentService ? 'edit_note' : 'add_business'}</span>
+                    </div>
+                    <div>
+                      <h2 className="text-xl font-black text-slate-900 tracking-tight">{currentService ? 'Modifier le Service' : 'Nouveau Service'}</h2>
+                      <p className="text-xs text-slate-400 font-bold uppercase tracking-widest">{currentService ? 'Mise à jour' : 'Ajout de prestation'}</p>
+                    </div>
                   </div>
-                  <div className="flex flex-col gap-1.5">
-                    <label className="text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500 ml-1">Prix de base (DA)</label>
+                  <button onClick={() => setShowModal(false)} className="size-10 rounded-xl bg-white border border-slate-100 shadow-sm flex items-center justify-center text-slate-400 hover:text-red-500 hover:border-red-100 transition-all active:scale-95">
+                    <span className="material-symbols-outlined text-lg">close</span>
+                  </button>
+                </div>
+              </div>
+
+              <form onSubmit={handleSubmit} className="p-8 pt-6 space-y-6 overflow-y-auto max-h-[70vh] custom-scrollbar">
+                {/* Category & Price */}
+                <div className="grid grid-cols-5 gap-5">
+                  <div className="col-span-3 flex flex-col gap-2.5">
+                    <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1">Catégorie</label>
+                    <div className="relative">
+                      <select 
+                        name="category_id" 
+                        value={form.category_id} 
+                        onChange={(e) => setForm({...form, category_id: e.target.value})}
+                        required
+                        className="w-full h-14 pl-5 pr-10 rounded-2xl bg-slate-50 border-2 border-slate-100 text-slate-900 focus:border-secondary focus:bg-white outline-none font-bold text-sm transition-all appearance-none"
+                      >
+                        {filteredCategories.map(c => <option key={c.id} value={c.id}>{c.name}</option>)}
+                      </select>
+                      <span className="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-slate-300 pointer-events-none">expand_more</span>
+                    </div>
+                  </div>
+                  <div className="col-span-2 flex flex-col gap-2.5">
+                    <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1">Prix (DA)</label>
                     <input 
                       name="base_price" 
                       value={form.base_price} 
                       onChange={(e) => setForm({...form, base_price: e.target.value})}
-                      placeholder="Ex: 5000"
+                      placeholder="5000"
                       type="number" 
                       required
-                      className="w-full h-12 px-4 rounded-xl bg-slate-50 dark:bg-stone-800 border border-slate-200 dark:border-stone-700 text-slate-900 dark:text-slate-100 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none font-bold text-sm transition-all placeholder:text-slate-300 dark:placeholder:text-slate-600"
+                      className="w-full h-14 px-5 rounded-2xl bg-slate-50 border-2 border-slate-100 text-slate-900 focus:border-secondary focus:bg-white outline-none font-black text-sm transition-all placeholder:text-slate-300 placeholder:font-medium"
                     />
                   </div>
                 </div>
 
-                <div className="flex flex-col gap-1.5">
-                  <label className="text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500 ml-1">Titre du service</label>
+                {/* Title */}
+                <div className="flex flex-col gap-2.5">
+                  <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1">Titre du service</label>
                   <input 
                     name="title" 
                     value={form.title} 
@@ -222,55 +336,39 @@ const ArtisanServices = () => {
                     placeholder="Ex: Rénovation peinture salon"
                     type="text" 
                     required
-                    className="w-full h-12 px-4 rounded-xl bg-slate-50 dark:bg-stone-800 border border-slate-200 dark:border-stone-700 text-slate-900 dark:text-slate-100 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none font-bold text-sm transition-all placeholder:text-slate-300 dark:placeholder:text-slate-600"
+                    className="w-full h-14 px-5 rounded-2xl bg-slate-50 border-2 border-slate-100 text-slate-900 focus:border-secondary focus:bg-white outline-none font-bold text-sm transition-all placeholder:text-slate-300 placeholder:font-medium"
                   />
                 </div>
 
-                <div className="flex flex-col gap-1.5">
-                  <label className="text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500 ml-1">Description</label>
+                {/* Description */}
+                <div className="flex flex-col gap-2.5">
+                  <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1">Description</label>
                   <textarea 
                     name="description" 
                     value={form.description} 
                     onChange={(e) => setForm({...form, description: e.target.value})}
                     placeholder="Décrivez votre prestation en quelques mots..."
-                    rows="3" 
+                    rows="4" 
                     required
-                    className="w-full p-4 rounded-xl bg-slate-50 dark:bg-stone-800 border border-slate-200 dark:border-stone-700 text-slate-900 dark:text-slate-100 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none font-medium text-sm transition-all resize-none placeholder:text-slate-300 dark:placeholder:text-slate-600"
+                    className="w-full p-5 rounded-2xl bg-slate-50 border-2 border-slate-100 text-slate-900 focus:border-secondary focus:bg-white outline-none font-medium text-sm transition-all resize-none placeholder:text-slate-300"
                   ></textarea>
                 </div>
 
-                <div className="flex flex-col gap-1.5">
-                  <label className="text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500 ml-1">Photo du Service (Direct Upload)</label>
-                  <div className="relative border-2 border-dashed border-slate-200 dark:border-stone-700 rounded-2xl p-6 hover:border-secondary hover:bg-secondary/5 dark:hover:bg-secondary/5 transition-all group cursor-pointer overflow-hidden">
-                    <input 
-                      type="file" 
-                      accept="image/*"
-                      onChange={(e) => setSelectedFile(e.target.files[0])}
-                      className="absolute inset-0 opacity-0 cursor-pointer z-10"
-                    />
-                    <div className="flex flex-col items-center justify-center text-center">
-                      <span className="material-symbols-outlined text-4xl text-slate-300 group-hover:text-secondary mb-2 transition-colors">add_photo_alternate</span>
-                      <p className="text-sm font-bold text-slate-500 dark:text-slate-400">
-                        {selectedFile ? selectedFile.name : (form.image_url ? 'Changer l\'image actuelle' : 'Cliquez pour ajouter une photo')}
-                      </p>
-                      <p className="text-[10px] text-slate-400 dark:text-slate-500 mt-1 uppercase tracking-widest font-black">JPG, PNG, WEBP • MAX 5MB</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="flex justify-end gap-3 pt-6 border-t border-slate-100 dark:border-stone-800">
+                {/* Actions */}
+                <div className="flex justify-end gap-3 pt-6 border-t border-slate-50">
                   <button 
                     type="button" 
                     onClick={() => setShowModal(false)}
-                    className="px-6 py-3 rounded-xl font-bold text-sm text-slate-500 hover:bg-slate-50 dark:hover:bg-stone-800 transition-colors"
+                    className="px-6 py-4 rounded-2xl font-black text-[10px] uppercase tracking-[0.2em] text-slate-400 hover:bg-slate-50 transition-colors"
                   >
                     Annuler
                   </button>
                   <button 
                     type="submit"
-                    className="bg-secondary text-white px-8 py-3 rounded-xl font-black text-sm hover:opacity-90 transition-all shadow-lg shadow-secondary/20"
+                    className="bg-secondary text-white px-8 py-4 rounded-2xl font-black text-[10px] uppercase tracking-[0.2em] hover:shadow-xl hover:shadow-secondary/20 hover:-translate-y-0.5 active:scale-95 transition-all shadow-lg shadow-secondary/20 flex items-center gap-2"
                   >
-                    Enregistrer le service
+                    <span className="material-symbols-outlined text-sm">check_circle</span>
+                    {currentService ? 'Enregistrer' : 'Créer'}
                   </button>
                 </div>
               </form>

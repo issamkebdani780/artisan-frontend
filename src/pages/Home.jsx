@@ -17,6 +17,8 @@ const Home = () => {
       const user = JSON.parse(userString);
       if (user.role === 'artisan') {
         navigate('/dashboard/artisan');
+      } else if (user.role === 'admin') {
+        navigate('/dashboard/admin');
       }
     }
   }, [navigate]);

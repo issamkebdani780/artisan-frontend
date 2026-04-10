@@ -17,7 +17,7 @@ const ArtisanSettings = () => {
     address: user?.address || '',
     wilaya_id: user?.wilaya_id || '',
     commune_id: user?.commune_id || '',
-    experience_years: user?.experience_years || 0,
+    experience_years: (() => { try { return JSON.parse(user?.experience_years || '{}'); } catch { return {}; } })(),
     profile_pic: user?.profile_pic || 'https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=60'
   });
 
@@ -80,6 +80,10 @@ const ArtisanSettings = () => {
         // Fetch fresh user data from DB
         const freshUser = await apiService.getUserById(user.id);
         const savedSpecialty = freshUser.specialty ? freshUser.specialty.split(',').map(s => s.trim()) : [];
+        let expObj = {};
+        try {
+          expObj = typeof freshUser.experience_years === 'string' ? JSON.parse(freshUser.experience_years) : (freshUser.experience_years || {});
+        } catch(e) {}
         setForm({
           name: freshUser.name || '',
           email: freshUser.email || '',
@@ -88,7 +92,7 @@ const ArtisanSettings = () => {
           wilaya_id: freshUser.wilaya_id || '',
           commune_id: freshUser.commune_id || '',
           specialty: savedSpecialty,
-          experience_years: freshUser.experience_years || 0,
+          experience_years: expObj,
           profile_pic: freshUser.profile_pic || form.profile_pic
         });
         
@@ -144,7 +148,8 @@ const ArtisanSettings = () => {
     try {
       const submissionData = {
         ...form,
-        specialty: Array.isArray(form.specialty) ? form.specialty.join(', ') : form.specialty
+        specialty: Array.isArray(form.specialty) ? form.specialty.join(', ') : form.specialty,
+        experience_years: JSON.stringify(form.experience_years)
       };
       await apiService.updateProfile(user.id, submissionData);
       const updatedUser = { ...user, ...submissionData };
@@ -206,6 +211,34 @@ const ArtisanSettings = () => {
           </button>
         </div>
 
+        {/* Hidden File Input */}
+        <input 
+          type="file" 
+          id="profilePicInput" 
+          hidden 
+          accept="image/*" 
+          onChange={async (e) => {
+            const file = e.target.files[0];
+            if (!file) return;
+            
+            setLoading(true);
+            try {
+              const formData = new FormData();
+              formData.append('profilePic', file);
+              const result = await apiService.updateArtisanProfilePicture(user.id, formData);
+              
+              const updatedUser = { ...user, profile_pic: result.profilePic };
+              localStorage.setItem('user', JSON.stringify(updatedUser));
+              setForm({ ...form, profile_pic: result.profilePic });
+              setMessage({ text: 'Photo de profil mise à jour !', type: 'success' });
+            } catch (err) {
+              setMessage({ text: err.message || 'Erreur lors de l\'upload.', type: 'error' });
+            } finally {
+              setLoading(false);
+            }
+          }}
+        />
+
         {message.text && (
           <div className="mx-4 mb-8 max-w-2xl text-left">
             <div className={`p-4 rounded-2xl flex items-center gap-4 animate-in slide-in-from-top-4 duration-500 ${message.type === 'success' ? 'bg-emerald-50 text-emerald-700 border border-emerald-100' : 'bg-red-50 text-red-700 border border-red-100'}`}>
@@ -224,7 +257,11 @@ const ArtisanSettings = () => {
                     <div className="h-44 w-44 rounded-[40px] overflow-hidden border-8 border-slate-50 shadow-2xl bg-slate-100 transition-all group-hover:scale-105 duration-500">
                       <img src={form.profile_pic} alt="Avatar" className="h-full w-full object-cover" />
                     </div>
-                    <button type="button" className="absolute -bottom-2 -right-2 bg-secondary text-white size-14 rounded-2xl shadow-2xl hover:scale-110 flex items-center justify-center border-4 border-white active:scale-95">
+                    <button 
+                      type="button" 
+                      onClick={() => document.getElementById('profilePicInput').click()}
+                      className="absolute -bottom-2 -right-2 bg-secondary text-white size-14 rounded-2xl shadow-2xl hover:scale-110 flex items-center justify-center border-4 border-white active:scale-95"
+                    >
                       <span className="material-symbols-outlined">photo_camera</span>
                     </button>
                   </div>
@@ -241,10 +278,7 @@ const ArtisanSettings = () => {
                         <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1">Téléphone</label>
                         <input name="phone" value={form.phone} onChange={handleChange} type="tel" className="w-full h-15 rounded-2xl border border-slate-100 bg-slate-50 focus:border-secondary focus:bg-white outline-none px-6 font-bold text-slate-900 shadow-sm" />
                       </div>
-                      <div className="space-y-2 text-left">
-                        <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1">Expérience (ans)</label>
-                        <input name="experience_years" value={form.experience_years} onChange={handleChange} type="number" className="w-full h-15 rounded-2xl border border-slate-100 bg-slate-50 focus:border-secondary focus:bg-white outline-none px-6 font-bold text-slate-900 shadow-sm" />
-                      </div>
+                      {/* Expérience input moved to Expertise tab */}
                    </div>
                 </div>
                 <div className="pt-10 border-t border-slate-50 flex justify-start">
@@ -303,6 +337,33 @@ const ArtisanSettings = () => {
                         </div>
                       ))}
                     </div>
+                  </div>
+                  
+                  <div className="bg-slate-50/50 rounded-4xl p-8 border border-slate-100 text-left">
+                    <h4 className="text-xs font-black text-slate-900 uppercase tracking-widest mb-6 px-2">Expérience par Spécialité (ans)</h4>
+                    {form.specialty.length === 0 ? (
+                      <p className="text-sm text-slate-400 font-bold px-2">Sélectionnez d'abord au moins une spécialité ci-dessus.</p>
+                    ) : (
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        {form.specialty.map(spec => (
+                          <div key={spec} className="space-y-2 bg-white p-4 rounded-2xl border border-slate-100 shadow-sm">
+                            <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1 truncate block" title={spec}>{spec}</label>
+                            <input 
+                              type="number" 
+                              min="0"
+                              value={form.experience_years?.[spec] || ''} 
+                              onChange={(e) => setForm({
+                                ...form,
+                                experience_years: { ...form.experience_years, [spec]: e.target.value }
+                              })} 
+                              placeholder="Années d'expérience" 
+                              required
+                              className="w-full h-12 rounded-xl bg-slate-50 border-none focus:border-secondary focus:bg-white outline-none px-4 font-bold text-slate-900 shadow-sm transition-all" 
+                            />
+                          </div>
+                        ))}
+                      </div>
+                    )}
                   </div>
                   <div className="pt-10 border-t border-slate-50 flex justify-start">
                     <button type="submit" disabled={loading} className="px-10 py-5 bg-secondary text-white rounded-[20px] font-black uppercase text-xs tracking-widest hover:opacity-90 transition-all shadow-xl shadow-secondary/20 active:scale-95">Sauvegarder Expertise</button>

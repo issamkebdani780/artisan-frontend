@@ -6,7 +6,7 @@ const ArtisanDashboard = () => {
   const [bookings, setBookings] = useState([]);
   const [pendingDevis, setPendingDevis] = useState([]);
   const [loading, setLoading] = useState(true);
-  const user = JSON.parse(localStorage.getItem('user'));
+  const [currentUser, setCurrentUser] = useState(JSON.parse(localStorage.getItem('user')));
 
   const [stats, setStats] = useState({
     totalRevenue: 0,
@@ -22,13 +22,18 @@ const ArtisanDashboard = () => {
   useEffect(() => {
     const fetchDashboardData = async () => {
       try {
-        if (user && user.id) {
-          const [bookingData, devisData, assignedDevis, dashboardStats] = await Promise.all([
-            apiService.getArtisanBookings(user.id),
-            apiService.getPendingDevis(user.specialty || 'Plomberie'),
-            apiService.getArtisanDevis(user.id),
-            apiService.getArtisanDashboardStats(user.id)
+        if (currentUser && currentUser.id) {
+          const [bookingData, devisData, assignedDevis, dashboardStats, latestUser] = await Promise.all([
+            apiService.getArtisanBookings(currentUser.id),
+            apiService.getPendingDevis(currentUser.specialty || 'Plomberie'),
+            apiService.getArtisanDevis(currentUser.id),
+            apiService.getArtisanDashboardStats(currentUser.id),
+            apiService.getUserById(currentUser.id)
           ]);
+
+          // Sync user status
+          setCurrentUser(latestUser);
+          localStorage.setItem('user', JSON.stringify(latestUser));
           
           // Combine bookings and assigned devis safely
           const safeBookingData = Array.isArray(bookingData) ? bookingData : [];
@@ -107,10 +112,35 @@ const ArtisanDashboard = () => {
     <ArtisanLayout title="Artisan PRO" subtitle="Premium Plan">
       <div className="p-8 flex flex-col gap-10 flex-1 overflow-y-auto font-['Outfit',sans-serif] bg-slate-50/20">
         
+        {/* Verification Status Banner */}
+        {Number(currentUser?.is_verified) !== 1 && (
+          <div className={`${Number(currentUser?.is_verified) === -1 ? 'bg-red-50 border-red-200 shadow-red-900/5' : 'bg-amber-50 border-amber-200 shadow-amber-900/5'} border-2 rounded-[32px] p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl animate-in fade-in slide-in-from-top-4 duration-700`}>
+            <div className="flex items-center gap-6">
+              <div className={`size-16 rounded-full ${Number(currentUser?.is_verified) === -1 ? 'bg-red-200/50 text-red-700' : 'bg-amber-200/50 text-amber-700'} flex items-center justify-center shrink-0`}>
+                <span className="material-symbols-outlined text-4xl font-black">{Number(currentUser?.is_verified) === -1 ? 'error' : 'pending_actions'}</span>
+              </div>
+              <div className="space-y-1 text-center md:text-left">
+                <h4 className={`text-xl font-black tracking-tight uppercase ${Number(currentUser?.is_verified) === -1 ? 'text-red-900' : 'text-amber-900'}`}>
+                  {Number(currentUser?.is_verified) === -1 ? 'Votre dossier a été refusé' : 'Votre profil est en cours de vérification'}
+                </h4>
+                <p className={`${Number(currentUser?.is_verified) === -1 ? 'text-red-700/70' : 'text-amber-700/70'} text-[10px] font-bold uppercase tracking-widest leading-relaxed`}>
+                  {Number(currentUser?.is_verified) === -1 
+                    ? "Certains documents ne sont pas conformes. Veuillez consulter vos messages pour plus de détails et mettre à jour votre profil."
+                    : "Nos administrateurs examinent vos documents. Vous recevrez une notification une fois validé."
+                  }
+                </p>
+              </div>
+            </div>
+            <a href="/dashboard/artisan/settings" className={`px-8 py-4 ${Number(currentUser?.is_verified) === -1 ? 'bg-red-900 shadow-red-900/20' : 'bg-amber-900 shadow-amber-900/20'} text-white rounded-2xl font-black text-[10px] uppercase tracking-widest shadow-xl hover:scale-[1.02] active:scale-95 transition-all`}>
+              {Number(currentUser?.is_verified) === -1 ? 'Rectifier mon dossier' : 'Vérifier mes documents'}
+            </a>
+          </div>
+        )}
+
         {/* Welcome Section */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
           <div>
-            <h2 className="text-4xl font-black tracking-tight text-slate-900 uppercase">Bonjour, {user?.name || 'Artisan'} 👋</h2>
+            <h2 className="text-4xl font-black tracking-tight text-slate-900 uppercase">Bonjour, {currentUser?.name || 'Artisan'} 👋</h2>
             <p className="text-slate-500 mt-2 font-bold uppercase tracking-widest text-xs">Vous avez <span className="text-secondary">{activeProjects}</span> projets actifs à traiter</p>
           </div>
           <div className="flex gap-4">

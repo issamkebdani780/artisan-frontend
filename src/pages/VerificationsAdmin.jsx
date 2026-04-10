@@ -51,6 +51,16 @@ const VerificationsAdmin = () => {
     }
   };
 
+  const handleReject = async (id) => {
+    if (!window.confirm('Voulez-vous vraiment refuser cet artisan ?')) return;
+    try {
+      await apiService.refuseArtisan(id);
+      setArtisans(artisans.filter(a => a.id !== id));
+    } catch (err) {
+      alert('Erreur lors du refus');
+    }
+  };
+
 
 
   const totalPages = Math.ceil(artisans.length / itemsPerPage);
@@ -107,9 +117,6 @@ const VerificationsAdmin = () => {
         <div className="bg-white dark:bg-slate-800 rounded-[2.5rem] shadow-xl shadow-slate-200/50 dark:shadow-none border border-white/50 dark:border-white/5 overflow-hidden">
           <div className="p-10 border-b border-slate-100 dark:border-white/5 flex justify-between items-center">
             <h3 className="text-2xl font-black text-slate-900 dark:text-white tracking-tight">Dossiers à traiter</h3>
-            <button className="p-3 bg-slate-50 dark:bg-slate-900/50 border border-slate-100 dark:border-white/5 rounded-2xl hover:bg-slate-100 transition-all text-slate-400">
-               <span className="material-symbols-outlined">filter_list</span>
-            </button>
           </div>
           
           <div className="overflow-x-auto">
@@ -159,8 +166,11 @@ const VerificationsAdmin = () => {
                         >
                           Approuver
                         </button>
-                        <button className="p-3 bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-white/10 text-slate-600 dark:text-slate-400 rounded-2xl hover:bg-slate-50 transition-all shadow-sm">
-                          <span className="material-symbols-outlined text-sm">visibility</span>
+                        <button 
+                          onClick={() => handleReject(artisan.id)}
+                          className="px-8 py-3 bg-rose-500 hover:bg-rose-600 text-white rounded-2xl text-[10px] font-black uppercase tracking-widest shadow-lg shadow-rose-500/20 transition-all active:scale-95"
+                        >
+                          Rejeter
                         </button>
                       </div>
                     </td>

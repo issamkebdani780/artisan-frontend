@@ -22,10 +22,10 @@ const AdminLayout = ({ children, title = "Admin", subtitle }) => {
 
   const navItems = [
     { name: 'Tableau de bord', path: '/dashboard/admin', icon: 'dashboard' },
+    { name: 'Vérifications', path: '/dashboard/admin/verifications', icon: 'verified_user' },
     { name: 'Gestion des artisans', path: '/dashboard/admin/artisans', icon: 'engineering' },
     { name: 'Gestion des clients', path: '/dashboard/admin/clients', icon: 'group' },
     { name: 'Statistiques', path: '/dashboard/admin/stats', icon: 'bar_chart' },
-
     { name: 'Paramètres', path: '/dashboard/admin/settings', icon: 'settings' },
   ];
 

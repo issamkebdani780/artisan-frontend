@@ -5,7 +5,7 @@ import apiService from '../services/api';
 const ArtisanRegister = () => {
   const navigate = useNavigate();
   const [form, setForm] = useState({
-    name: '', birthday: '', specialty: [], experience_years: '',
+    name: '', birthday: '', specialty: [], experience_years: {},
     email: '', phone: '', address: '', password: '', confirm: '',
     wilaya_id: '', commune_id: ''
   });
@@ -92,6 +92,10 @@ const ArtisanRegister = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
+    if (form.birthday) {
+      const bDate = new Date(form.birthday);
+      if (bDate > new Date()) { setError('La date de naissance ne peut pas dépasser la date actuelle'); return; }
+    }
     if (form.password !== form.confirm) { setError('Les mots de passe ne correspondent pas'); return; }
     if (!passwordChecks.length) { setError('Mot de passe trop court (8 caractères minimum)'); return; }
     if (!terms) { setError('Vous devez accepter les conditions d\'utilisation'); return; }
@@ -108,7 +112,7 @@ const ArtisanRegister = () => {
       formData.append('address', form.address);
       formData.append('birthday', form.birthday);
       formData.append('specialty', form.specialty.join(', '));
-      formData.append('experience_years', form.experience_years);
+      formData.append('experience_years', JSON.stringify(form.experience_years));
       formData.append('wilaya_id', form.wilaya_id);
       formData.append('commune_id', form.commune_id);
       formData.append('password', form.password);
@@ -202,7 +206,7 @@ const ArtisanRegister = () => {
                 </div>
                 <div className="flex flex-col gap-2">
                   <label className="text-[10px] font-black uppercase tracking-[0.15em] text-slate-400 ml-1">Date de Naissance</label>
-                  <input name="birthday" type="date" value={form.birthday} onChange={handleChange} className="w-full h-14 px-5 rounded-xl bg-[#e2e8f0] border-none focus:ring-2 focus:ring-orange-500 transition-all font-medium outline-none" />
+                  <input name="birthday" type="date" value={form.birthday} onChange={handleChange} max={new Date().toISOString().split('T')[0]} className="w-full h-14 px-5 rounded-xl bg-[#e2e8f0] border-none focus:ring-2 focus:ring-orange-500 transition-all font-medium outline-none" />
                 </div>
               </div>
 
@@ -281,9 +285,31 @@ const ArtisanRegister = () => {
                     ))}
                   </div>
                 </div>
-                <div className="flex flex-col gap-2">
-                  <label className="text-[10px] font-black uppercase tracking-[0.15em] text-orange-500 ml-1">Années d'Expérience</label>
-                  <input name="experience_years" type="number" min="0" value={form.experience_years} onChange={handleChange} placeholder="Ex: 10" className="w-full h-14 px-5 rounded-2xl bg-white border-none shadow-sm focus:ring-2 focus:ring-orange-500 transition-all font-medium placeholder:text-slate-300 outline-none" />
+                <div className="flex flex-col gap-4 mt-6 border-t border-orange-500/10 pt-6">
+                  <h4 className="text-[10px] font-black uppercase tracking-[0.15em] text-orange-500 ml-1">Années d'Expérience par spécialité</h4>
+                  {form.specialty.length === 0 ? (
+                    <p className="text-sm text-slate-400 pl-1">Sélectionnez d'abord au moins une spécialité ci-dessus.</p>
+                  ) : (
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      {form.specialty.map(spec => (
+                        <div key={spec} className="flex flex-col gap-2 bg-white p-4 rounded-2xl border border-orange-500/10 shadow-sm">
+                          <label className="text-[10px] font-bold text-slate-600 truncate">{spec}</label>
+                          <input 
+                            type="number" 
+                            min="0" 
+                            value={form.experience_years[spec] || ''} 
+                            onChange={(e) => setForm({
+                              ...form,
+                              experience_years: { ...form.experience_years, [spec]: e.target.value }
+                            })} 
+                            placeholder="Années (ex: 5)" 
+                            required
+                            className="w-full h-12 px-4 rounded-xl bg-slate-50 border-none focus:ring-2 focus:ring-orange-500 focus:bg-white transition-all font-medium placeholder:text-slate-300 outline-none" 
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  )}
                 </div>
               </div>
 

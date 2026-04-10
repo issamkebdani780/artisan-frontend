@@ -3,6 +3,28 @@ import { useParams, Link, useNavigate } from 'react-router-dom';
 import apiService from '../services/api';
 import logo from '../assets/logo.png';
 
+// Map specialty groups to category names in DB
+const specialtyToCategoryMap = {
+  'Menuiserie': 'Menuiserie et Bois',
+  'Soudure': 'Ferronnerie et Soudure',
+  'Plomberie': 'Plomberie et Réseaux',
+  'Électricité': 'Électricité et Énergie',
+  'Peinture': 'Peinture et Plâtre',
+  'Maçonnerie': 'Maçonnerie et Finitions',
+  'Mécanique': 'Mécanique et Machines',
+};
+
+// Map each specialty option to its group
+const specialtyOptionToGroup = {
+  'Menuisier ébéniste': 'Menuiserie', 'Menuisier de chantier': 'Menuiserie', 'Presseur de bois': 'Menuiserie', 'Décorateur bois': 'Menuiserie', 'Fabricant ouvertures bois': 'Menuiserie',
+  "Ferronnier d'art": 'Soudure', 'Soudeur arc/argon': 'Soudure', 'Chaudronnier': 'Soudure', 'Soudeur carrosserie': 'Soudure',
+  'Plombier sanitaire': 'Plomberie', 'Chauffage central': 'Plomberie', 'Monteur gaz': 'Plomberie', 'Tuyauterie cuivre/PER': 'Plomberie',
+  'Électricien bâtiment': 'Électricité', 'Électricien industriel': 'Électricité', 'Technicien solaire': 'Électricité', 'Tireur de câbles': 'Électricité',
+  'Peintre décorateur': 'Peinture', 'Peintre automobile': 'Peinture', 'Plâtrier staffeur': 'Peinture', 'Marbrier': 'Peinture', 'Vernisseur': 'Peinture',
+  'Maçon brique': 'Maçonnerie', 'Carreleur': 'Maçonnerie', 'Crépisseur': 'Maçonnerie', 'Étanchéité': 'Maçonnerie', 'Rénovation': 'Maçonnerie',
+  'Mécanicien auto': 'Mécanique', 'Mécanicien moto': 'Mécanique', 'Moteurs électriques': 'Mécanique', 'Mécanicien agricole': 'Mécanique',
+};
+
 const ProfilArtisan = () => {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -43,6 +65,20 @@ const ProfilArtisan = () => {
   );
 
   if (!artisan) return <div className="text-center py-20">Artisan non trouvé.</div>;
+
+  const displayExperience = (() => {
+    try {
+      if (!artisan.experience_years) return 0;
+      const exp = typeof artisan.experience_years === 'string' ? JSON.parse(artisan.experience_years) : artisan.experience_years;
+      if (typeof exp === 'object' && exp !== null) {
+        const years = Object.values(exp).map(v => parseInt(v) || 0);
+        return years.length > 0 ? Math.max(...years) : 0;
+      }
+      return parseInt(exp) || 0;
+    } catch {
+      return parseInt(artisan.experience_years) || 0;
+    }
+  })();
 
   return (
     <div className="min-h-screen bg-white font-['Public_Sans',sans-serif] text-slate-900">
@@ -111,7 +147,7 @@ const ProfilArtisan = () => {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {[
                 { label: 'Projets', value: artisan.review_count || '0', icon: 'auto_awesome' },
-                { label: 'Expérience', value: `${artisan.experience_years || 0} Ans`, icon: 'history_edu' },
+                { label: 'Expérience', value: `${displayExperience} Ans`, icon: 'history_edu' },
                 { label: 'Note Globale', value: artisan.rating || '5.0', icon: 'star', color: 'text-yellow-400' },
                 { label: 'Réponse', value: '< 24h', icon: 'bolt', color: 'text-blue-500' }
               ].map((stat, i) => (
@@ -137,23 +173,45 @@ const ProfilArtisan = () => {
               </div>
               <div className="p-8">
                 <div className="grid gap-4">
-                  {services.length > 0 ? services.map(service => (
-                    <div key={service.id} className="group p-5 rounded-2xl bg-slate-50 border border-slate-100 flex flex-col md:flex-row md:items-center justify-between gap-4 hover:bg-white hover:border-primary/30 hover:shadow-lg transition-all">
-                      <div className="flex items-center gap-4">
-                        <div className="size-12 rounded-xl bg-white flex items-center justify-center text-slate-400 group-hover:bg-primary group-hover:text-white transition-colors shadow-sm">
-                          <span className="material-symbols-outlined">settings</span>
+                  {services.length > 0 ? services.map(service => {
+                    // Extract experience for this specific category
+                    let categoryExp = 0;
+                    try {
+                      const expObj = typeof artisan.experience_years === 'string' ? JSON.parse(artisan.experience_years) : artisan.experience_years;
+                      if (typeof expObj === 'object' && expObj !== null) {
+                        const relevantYears = Object.keys(expObj)
+                          .filter(spec => specialtyToCategoryMap[specialtyOptionToGroup[spec]] === service.category_name)
+                          .map(spec => parseInt(expObj[spec]) || 0);
+                        categoryExp = relevantYears.length > 0 ? Math.max(...relevantYears) : 0;
+                      }
+                    } catch (e) {}
+
+                    return (
+                      <div key={service.id} className="group p-5 rounded-2xl bg-slate-50 border border-slate-100 flex flex-col md:flex-row md:items-center justify-between gap-4 hover:bg-white hover:border-primary/30 hover:shadow-lg transition-all">
+                        <div className="flex items-center gap-4 flex-1">
+                          <div className="size-12 rounded-xl bg-white flex items-center justify-center text-slate-400 group-hover:bg-primary group-hover:text-white transition-colors shadow-sm shrink-0">
+                            <span className="material-symbols-outlined">settings</span>
+                          </div>
+                          <div className="min-w-0">
+                            <p className="font-black text-slate-900 truncate">{service.title}</p>
+                            <div className="flex items-center gap-2">
+                              <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">{service.category_name}</p>
+                              {categoryExp > 0 && (
+                                <>
+                                  <span className="size-1 bg-slate-300 rounded-full"></span>
+                                  <p className="text-[10px] text-primary font-black uppercase tracking-widest">{categoryExp} ans d'expérience</p>
+                                </>
+                              )}
+                            </div>
+                          </div>
                         </div>
-                        <div>
-                          <p className="font-black text-slate-900">{service.title}</p>
-                          <p className="text-xs text-slate-400 font-bold uppercase tracking-wider">{service.category_name}</p>
+                        <div className="flex items-center justify-between md:justify-end gap-8 px-4 py-2 bg-white rounded-xl md:bg-transparent shrink-0 border border-slate-100 md:border-0">
+                          <p className="text-slate-400 text-[10px] font-black uppercase md:hidden tracking-widest">A partir de</p>
+                          <p className="text-xl font-black text-primary">{Number(service.base_price).toLocaleString()} DA</p>
                         </div>
                       </div>
-                      <div className="flex items-center justify-between md:justify-end gap-8 px-4 py-2 bg-white rounded-xl md:bg-transparent">
-                        <p className="text-slate-400 text-[10px] font-black uppercase md:hidden tracking-widest">A partir de</p>
-                        <p className="text-xl font-black text-primary">{service.base_price} DA</p>
-                      </div>
-                    </div>
-                  )) : (
+                    );
+                  }) : (
                     <div className="py-12 text-center">
                       <div className="size-20 bg-slate-50 rounded-full flex items-center justify-center mx-auto mb-4 border border-dashed border-slate-200">
                         <span className="material-symbols-outlined text-slate-300 text-3xl">inbox_customize</span>

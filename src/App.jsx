@@ -39,6 +39,7 @@ import MovingBooking from './pages/MovingBooking';
 import MessageSuccess from './pages/MessageSuccess';
 import AboutUs from './pages/AboutUs';
 import SubcategoryDetails from './pages/SubcategoryDetails';
+import VerificationEtDocuments from './pages/VerificationEtDocuments';
 
 
 
@@ -69,6 +70,7 @@ function App() {
         <Route path="/dashboard/artisan/projects" element={<ArtisanProjects />} />
         <Route path="/dashboard/artisan/settings" element={<ArtisanSettings />} />
         <Route path="/dashboard/artisan/pricing" element={<ArtisanServices />} />
+        <Route path="/dashboard/artisan/verifications" element={<VerificationEtDocuments />} />
         
         {/* Client Routes */}
         <Route path="/dashboard/client/inbox" element={<ClientInbox />} />

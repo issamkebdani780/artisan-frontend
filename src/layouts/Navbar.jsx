@@ -24,7 +24,9 @@ const Navbar = () => {
 
   const navLinks = [
     { name: 'Accueil', to: '/' },
-    ...(user?.role === 'artisan'
+    ...(user?.role === 'admin'
+      ? [{ name: 'Tableau de Bord', to: '/dashboard/admin' }]
+      : user?.role === 'artisan'
       ? [{ name: 'Tableau de Bord', to: '/dashboard/artisan' }]
       : [
         { name: 'Services', to: '/search' },
@@ -59,7 +61,7 @@ const Navbar = () => {
           {user ? (
             <div className="flex items-center gap-4">
               <Link
-                to={user.role === 'artisan' ? '/dashboard/artisan' : '/dashboard/client/inbox'}
+                to={user.role === 'admin' ? '/dashboard/admin' : user.role === 'artisan' ? '/dashboard/artisan' : '/dashboard/client/inbox'}
                 className="flex items-center gap-2 hover:opacity-80 transition-opacity"
               >
                 <div className="w-9 h-9 rounded-full bg-slate-50 flex items-center justify-center text-primary border border-slate-100 shadow-sm">
@@ -122,7 +124,7 @@ const Navbar = () => {
             {user ? (
               <>
                 <Link
-                  to={user.role === 'artisan' ? '/dashboard/artisan' : '/dashboard/client/inbox'}
+                  to={user.role === 'admin' ? '/dashboard/admin' : user.role === 'artisan' ? '/dashboard/artisan' : '/dashboard/client/inbox'}
                   className="flex items-center gap-4 p-4 bg-slate-50 rounded-2xl"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >

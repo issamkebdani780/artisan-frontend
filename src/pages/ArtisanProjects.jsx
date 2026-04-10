@@ -97,10 +97,6 @@ const ArtisanProjects = () => {
             <p className="text-slate-500 mt-2 font-bold uppercase tracking-widest text-xs">Suivez l'état de vos chantiers en temps réel</p>
           </div>
           <div className="flex gap-4">
-            <button className="flex items-center gap-3 px-8 py-4 bg-white border border-slate-100 text-slate-900 rounded-2xl font-black text-xs uppercase tracking-widest shadow-sm hover:bg-slate-50 transition-all">
-              <span className="material-symbols-outlined text-sm font-black">download</span>
-              Exporter PDF
-            </button>
           </div>
         </div>
 
