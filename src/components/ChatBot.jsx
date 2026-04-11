@@ -29,21 +29,26 @@ const ChatBot = () => {
           apiService.getSubcategoryDetails(null).catch(() => []) // Fallback to get all if possible or just categories
         ]);
 
-        const artisansContext = artisans.map(a => 
-          `- Nom: ${a.name}, Spécialité: ${a.role}, Ville: ${a.location}, Note: ${a.rating}/5, Avis: ${a.reviews}, Prix: ${a.price || 'Sur devis'} DA`
+        const artisansList = artisans.data || artisans; 
+
+        const artisansContext = artisansList.map(a => 
+          `- Nom: ${a.name}, Spécialité: ${a.role}, Ville: ${a.location}, Note: ${a.rating}/5, Avis: ${a.review_count || 0}`
         ).join('\n');
 
         const categoriesContext = categories.map(c => 
           `- ${c.name}: ${c.description || 'Service professionnel'}`
         ).join('\n');
 
-        setContext(`
-          LISTE DES ARTISANS RÉELS SUR LA PLATEFORME (Tu DOIS les recommander par leur nom) :
+        const fullContext = `
+          LISTE DES ARTISANS RÉELS SUR LA PLATEFORME :
           ${artisansContext}
 
           CATÉGORIES DE SERVICES DISPONIBLES :
           ${categoriesContext}
-        `);
+        `;
+
+        setContext(fullContext);
+        console.log('ChatBot RAG Context Status:', artisansList.length, 'artisans loaded.');
       } catch (err) {
         console.error('Error fetching context for chatbot:', err);
       }
