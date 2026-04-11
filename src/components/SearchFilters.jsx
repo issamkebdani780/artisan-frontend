@@ -15,7 +15,7 @@ const CATEGORIES = [
 ];
 
 const SearchFilters = ({ filters, onChange }) => {
-  const { selectedCategories = [], minRating = null, maxPrice = 500, availableNow = false } = filters;
+  const { selectedCategories = [], minRating = null, maxPrice = 500, onlyFavorites = false } = filters;
 
   const toggleCategory = (cat) => {
     const updated = selectedCategories.includes(cat)
@@ -32,8 +32,8 @@ const SearchFilters = ({ filters, onChange }) => {
     onChange({ ...filters, maxPrice: Number(val) });
   };
 
-  const setAvailableNow = (val) => {
-    onChange({ ...filters, availableNow: val });
+  const setOnlyFavorites = (val) => {
+    onChange({ ...filters, onlyFavorites: val });
   };
 
   return (
@@ -114,29 +114,29 @@ const SearchFilters = ({ filters, onChange }) => {
         </div>
       </div>
 
-      {/* AVAILABILITY */}
+      {/* FAVORITES */}
       <div className="pt-10 border-t border-slate-50">
         <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-300 mb-8 flex items-center gap-3">
-          <span className="material-symbols-outlined text-sm text-primary">event_available</span> STATUT
+          <span className="material-symbols-outlined text-sm text-rose-500">favorite</span> FAVORIS
         </h3>
         <div className="px-1">
           <div 
-            onClick={() => setAvailableNow(!availableNow)}
-            className={`relative flex items-center justify-between cursor-pointer p-5 rounded-2xl border transition-all ${availableNow ? 'bg-emerald-50 border-emerald-100 shadow-xl shadow-emerald-500/5' : 'bg-slate-50 border-slate-50'}`}
+            onClick={() => setOnlyFavorites(!onlyFavorites)}
+            className={`relative flex items-center justify-between cursor-pointer p-5 rounded-2xl border transition-all ${onlyFavorites ? 'bg-rose-50 border-rose-100 shadow-xl shadow-rose-500/5' : 'bg-slate-50 border-slate-50'}`}
           >
-            <span className={`text-xs font-black uppercase tracking-tight ${availableNow ? 'text-emerald-600' : 'text-slate-500'}`}>Disponible maintenant</span>
+            <span className={`text-xs font-black uppercase tracking-tight ${onlyFavorites ? 'text-rose-600' : 'text-slate-500'}`}>Mes Artisans Favoris</span>
             <div className="relative">
-              <div className={`w-10 h-5 rounded-full transition-colors ${availableNow ? 'bg-emerald-500' : 'bg-slate-200'}`}></div>
-              <div className={`absolute top-[2px] left-[2px] w-4 h-4 bg-white rounded-full shadow-sm transition-transform ${availableNow ? 'translate-x-5' : ''}`}></div>
+              <div className={`w-10 h-5 rounded-full transition-colors ${onlyFavorites ? 'bg-rose-500' : 'bg-slate-200'}`}></div>
+              <div className={`absolute top-[2px] left-[2px] w-4 h-4 bg-white rounded-full shadow-sm transition-transform ${onlyFavorites ? 'translate-x-5' : ''}`}></div>
             </div>
           </div>
         </div>
       </div>
 
       {/* RESET BUTTON */}
-    {(selectedCategories.length > 0 || minRating || availableNow || maxPrice !== 10000) && (
+    {(selectedCategories.length > 0 || minRating || onlyFavorites || maxPrice !== 10000) && (
         <button
-          onClick={() => onChange({ selectedCategories: [], minRating: null, maxPrice: 10000, availableNow: false })}
+          onClick={() => onChange({ selectedCategories: [], minRating: null, maxPrice: 10000, onlyFavorites: false })}
           className="w-full text-xs font-black text-red-500 hover:text-red-600 border border-red-200 hover:border-red-400 py-2 rounded-xl transition-all"
         >
           Réinitialiser les filtres

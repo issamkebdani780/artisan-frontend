@@ -18,7 +18,7 @@ const FindExpert = () => {
       selectedCategories: cat ? [cat] : [],
       minRating: null,
       maxPrice: 10000,
-      availableNow: false,
+      onlyFavorites: false,
     };
   });
 
@@ -32,7 +32,7 @@ const FindExpert = () => {
       
       // Only send maxPrice if it's not the maximum (10000 = unlimited)
       if (activeFilters.maxPrice < 10000) params.maxPrice = activeFilters.maxPrice;
-      if (activeFilters.availableNow) params.availableOnly = 1;
+      if (activeFilters.onlyFavorites) params.onlyFavorites = 1;
 
       // If only one category, send it to backend for better performance
       if (activeFilters.selectedCategories.length === 1) {
@@ -182,7 +182,7 @@ const FindExpert = () => {
                   <p className="text-slate-400 font-bold mt-2">Essayez d'ajuster vos filtres ou votre recherche.</p>
                 </div>
                 <button
-                  onClick={() => { setFilters({ selectedCategories: [], minRating: null, maxPrice: 10000, availableNow: false }); setSearchTerm(''); setLocation(''); }}
+                  onClick={() => { setFilters({ selectedCategories: [], minRating: null, maxPrice: 10000, onlyFavorites: false }); setSearchTerm(''); setLocation(''); }}
                   className="px-8 py-3 bg-white text-primary font-black uppercase tracking-widest text-[10px] rounded-xl border border-slate-100 shadow-lg hover:shadow-xl transition-all"
                 >
                   Réinitialiser

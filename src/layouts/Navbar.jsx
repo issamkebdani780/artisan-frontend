@@ -39,9 +39,9 @@ const Navbar = () => {
   ];
 
   return (
-    <header className="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-100 px-6 md:px-20 py-4 bg-white fixed top-0 left-0 right-0 z-50 shadow-sm transition-all">
+    <header className="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-100 px-6 md:px-20 py-2 bg-white fixed top-0 left-0 right-0 z-50 shadow-sm transition-all">
       <Link to="/" className="flex items-center hover:opacity-80 transition-opacity z-50 bg-white rounded-2xl p-1 shadow-sm border border-slate-50 overflow-hidden">
-        <img src={logo} alt="Mihnati Logo" className="h-14 md:h-24 w-auto object-contain transform scale-110" />
+        <img src={logo} alt="Mihnati Logo" className="h-10 md:h-16 w-auto object-contain" />
       </Link>
 
       {/* Desktop Navigation */}
