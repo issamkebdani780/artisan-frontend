@@ -26,6 +26,8 @@ import AdminClients from './pages/AdminClients';
 import ClientProfileSettings from './pages/ClientProfileSettings';
 import ProfilArtisan from './pages/ProfilArtisan';
 import ClientProjects from './pages/ClientProjects';
+import ClientFavorites from './pages/ClientFavorites';
+import ChatBot from './components/ChatBot';
 
 // Bulk Migrated Components
 import VerificationsAdmin from './pages/VerificationsAdmin';
@@ -78,6 +80,7 @@ function App() {
         <Route path="/dashboard/client/bookings" element={<ClientProjects />} />
         <Route path="/dashboard/client/quotes" element={<ClientProjects />} />
         <Route path="/dashboard/client/settings" element={<ClientProfileSettings />} />
+        <Route path="/dashboard/client/favorites" element={<MainLayout><ClientFavorites /></MainLayout>} />
         <Route path="/category/jardinage" element={<JardinageNouveau />} />
         
         {/* Public Pages wrapped in MainLayout */}
@@ -95,6 +98,7 @@ function App() {
         <Route path="/dashboard/admin/settings" element={<ParametresAdmin />} />
         <Route path="/dashboard/admin/evidence" element={<VoirLesPreuvesAdmin />} />
       </Routes>
+      <ChatBot />
       </Router>
     </ErrorBoundary>
   );

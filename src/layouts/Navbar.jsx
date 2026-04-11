@@ -32,6 +32,7 @@ const Navbar = () => {
         { name: 'Services', to: '/search' },
         { name: 'Déménagement', to: '/moving-booking' },
         { name: 'Devis', to: '/request-quote' },
+        ...(user?.role === 'client' ? [{ name: 'Favoris', to: '/dashboard/client/favorites' }] : []),
       ]
     ),
     { name: 'About Us', to: '/about-us' },

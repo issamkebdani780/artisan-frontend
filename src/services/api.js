@@ -1,4 +1,4 @@
-const BASE_URL = '/api';
+const BASE_URL = import.meta.env.VITE_API_URL || '/api';
 
 // Secure token management
 const TokenManager = {
@@ -146,7 +146,9 @@ const apiService = {
   // ─── ARTISANS ──────────────────────────────────────────────────────────────
   getArtisans: async (filters = {}) => {
     const query = new URLSearchParams(filters).toString();
-    const res = await fetch(`${BASE_URL}/artisans?${query}`);
+    const res = await fetch(`${BASE_URL}/artisans?${query}`, {
+      headers: getAuthHeaders(),
+    });
     return handleResponse(res);
   },
 
@@ -156,7 +158,9 @@ const apiService = {
   },
 
   getFeaturedArtisans: async () => {
-    const res = await fetch(`${BASE_URL}/artisans/featured`);
+    const res = await fetch(`${BASE_URL}/artisans/featured`, {
+      headers: getAuthHeaders(),
+    });
     return handleResponse(res);
   },
   
@@ -258,6 +262,23 @@ const apiService = {
   deleteService: async (serviceId) => {
     const res = await fetch(`${BASE_URL}/services/${serviceId}`, {
       method: 'DELETE',
+      headers: getAuthHeaders(),
+    });
+    return handleResponse(res);
+  },
+
+  // ─── FAVORITES ─────────────────────────────────────────────────────────────
+  toggleFavorite: async (artisanId) => {
+    const res = await fetch(`${BASE_URL}/favorites/toggle`, {
+      method: 'POST',
+      headers: getAuthHeaders(),
+      body: JSON.stringify({ artisan_id: artisanId }),
+    });
+    return handleResponse(res);
+  },
+
+  getFavorites: async () => {
+    const res = await fetch(`${BASE_URL}/favorites`, {
       headers: getAuthHeaders(),
     });
     return handleResponse(res);

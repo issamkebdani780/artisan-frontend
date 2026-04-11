@@ -97,13 +97,13 @@ const ProfilArtisan = () => {
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
                 />
               </div>
-              {artisan.is_verified ? (
+              {Number(artisan.is_verified) === 1 ? (
                 <div className="absolute -bottom-2 -right-2 size-10 bg-emerald-500 rounded-2xl border-4 border-white z-20 flex items-center justify-center shadow-lg" title="Vérifié par la plateforme">
                   <span className="material-symbols-outlined text-white text-xl">verified</span>
                 </div>
               ) : (
-                <div className="absolute -bottom-2 -right-2 size-10 bg-amber-500 rounded-2xl border-4 border-white z-20 flex items-center justify-center shadow-lg" title="En attente de vérification">
-                  <span className="material-symbols-outlined text-white text-xl">hourglass_empty</span>
+                <div className="absolute -bottom-2 -right-2 size-10 bg-amber-500 rounded-2xl border-4 border-white z-20 flex items-center justify-center shadow-lg" title={Number(artisan.is_verified) === -1 ? "Vérification refusée" : "En attente de vérification"}>
+                  <span className="material-symbols-outlined text-white text-xl">{Number(artisan.is_verified) === -1 ? 'block' : 'hourglass_empty'}</span>
                 </div>
               )}
             </div>
@@ -113,12 +113,11 @@ const ProfilArtisan = () => {
               <div className="flex flex-wrap items-center gap-4 mb-3">
                 <div className="flex items-center gap-3">
                   <h1 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tight uppercase">{artisan.name}</h1>
-                  {artisan.is_verified && (
+                  {Number(artisan.is_verified) === 1 && (
                     <span className="material-symbols-outlined text-blue-500 text-3xl" style={{ fontVariationSettings: "'FILL' 1" }}>verified</span>
                   )}
                 </div>
-                <span className="px-4 py-1.5 rounded-full bg-emerald-50 border border-emerald-100 text-emerald-700 text-[10px] font-black uppercase tracking-widest flex items-center gap-2">
-                  <span className="size-2 bg-emerald-500 rounded-full"></span>
+                <span className="px-4 py-1.5 rounded-full bg-emerald-50 border border-emerald-100 text-emerald-700 text-[10px] font-black uppercase tracking-widest flex items-center justify-center">
                   Disponible
                 </span>
               </div>
@@ -331,8 +330,8 @@ const ProfilArtisan = () => {
                 <h4 className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Confiance & Sécurité</h4>
                 <div className="space-y-4">
                   {[
-                    { label: 'Identité Vérifiée', icon: 'verified', active: artisan.is_verified },
-                    { label: 'Docs Professionnels', icon: 'article', active: artisan.is_verified },
+                    { label: 'Identité Vérifiée', icon: 'verified', active: Number(artisan.is_verified) === 1 },
+                    { label: 'Docs Professionnels', icon: 'article', active: Number(artisan.is_verified) === 1 },
                     { label: 'Réponse Rapide', icon: 'shutter_speed', active: true }
                   ].map((v, i) => (
                     <div key={i} className={`flex items-center gap-3 text-sm font-black ${v.active ? 'text-slate-700' : 'text-slate-300 opacity-50'}`}>
