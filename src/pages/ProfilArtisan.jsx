@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import apiService from '../services/api';
 import logo from '../assets/logo.png';
+import ChatModal from '../components/ChatModal';
 
 // Map specialty groups to category names in DB
 const specialtyToCategoryMap = {
@@ -32,6 +33,7 @@ const ProfilArtisan = () => {
   const [services, setServices] = useState([]);
   const [reviews, setReviews] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [isChatOpen, setIsChatOpen] = useState(false);
   const currentUser = apiService.getCurrentUser();
 
   useEffect(() => {
@@ -291,7 +293,18 @@ const ProfilArtisan = () => {
                           <span className="material-symbols-outlined">send</span>
                           Demander un Devis
                         </button>
-                        <button className="w-full bg-slate-900 border-2 border-slate-900 text-white font-black h-16 rounded-2xl flex items-center justify-center gap-3 hover:bg-slate-800 transition-all">
+                        <button 
+                          onClick={() => {
+                            if (!currentUser) {
+                              if (window.confirm("Vous devez être connecté pour envoyer un message. Se connecter ?")) {
+                                navigate('/login/client');
+                              }
+                              return;
+                            }
+                            setIsChatOpen(true);
+                          }}
+                          className="w-full bg-slate-900 border-2 border-slate-900 text-white font-black h-16 rounded-2xl flex items-center justify-center gap-3 hover:bg-slate-800 transition-all active:scale-95"
+                        >
                           <span className="material-symbols-outlined">mark_chat_unread</span>
                           Envoyer un Message
                         </button>
@@ -365,6 +378,13 @@ const ProfilArtisan = () => {
           </div>
         </div>
       </footer>
+       {isChatOpen && artisan && (
+        <ChatModal 
+          isOpen={isChatOpen}
+          onClose={() => setIsChatOpen(false)}
+          otherUser={{ id: artisan.id, name: artisan.name, profile_pic: artisan.profile_pic }}
+        />
+      )}
     </div>
   );
 };
