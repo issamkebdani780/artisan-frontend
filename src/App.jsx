@@ -43,6 +43,7 @@ import AboutUs from './pages/AboutUs';
 import SubcategoryDetails from './pages/SubcategoryDetails';
 import VerificationEtDocuments from './pages/VerificationEtDocuments';
 import FullMessages from './pages/FullMessages';
+import ForgotPassword from './pages/ForgotPassword';
 
 
 
@@ -75,6 +76,7 @@ function App() {
         <Route path="/about-us" element={<MainLayout><AboutUs /></MainLayout>} />
         <Route path="/request-quote" element={<MainLayout><RequestQuote /></MainLayout>} />
         <Route path="/subcategory/:id" element={<MainLayout><SubcategoryDetails /></MainLayout>} />
+        <Route path="/forgot-password" element={<MainLayout><ForgotPassword /></MainLayout>} />
 
 
         {/* Private / Dashboard Routes - Rendered without MainLayout nav/footer */}

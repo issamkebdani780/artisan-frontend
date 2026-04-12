@@ -143,6 +143,33 @@ const apiService = {
     return TokenManager.getUser();
   },
 
+  forgotPassword: async (email) => {
+    const res = await fetch(`${BASE_URL}/auth/forgot-password`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email }),
+    });
+    return handleResponse(res);
+  },
+
+  verifyOTP: async (email, otp, type) => {
+    const res = await fetch(`${BASE_URL}/auth/verify-otp`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, otp, type }),
+    });
+    return handleResponse(res);
+  },
+
+  resetPassword: async (email, otp, newPassword) => {
+    const res = await fetch(`${BASE_URL}/auth/reset-password`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, otp, newPassword }),
+    });
+    return handleResponse(res);
+  },
+
   // ─── ARTISANS ──────────────────────────────────────────────────────────────
   getArtisans: async (filters = {}) => {
     const query = new URLSearchParams(filters).toString();
