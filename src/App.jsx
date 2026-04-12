@@ -42,6 +42,7 @@ import MessageSuccess from './pages/MessageSuccess';
 import AboutUs from './pages/AboutUs';
 import SubcategoryDetails from './pages/SubcategoryDetails';
 import VerificationEtDocuments from './pages/VerificationEtDocuments';
+import FullMessages from './pages/FullMessages';
 
 
 
@@ -82,6 +83,7 @@ function App() {
         <Route path="/dashboard/artisan/settings" element={<ArtisanSettings />} />
         <Route path="/dashboard/artisan/pricing" element={<ArtisanServices />} />
         <Route path="/dashboard/artisan/verifications" element={<VerificationEtDocuments />} />
+        <Route path="/dashboard/artisan/messages" element={<FullMessages />} />
         
         {/* Client Routes */}
         <Route path="/dashboard/client/inbox" element={<ClientInbox />} />
@@ -89,6 +91,7 @@ function App() {
         <Route path="/dashboard/client/bookings" element={<ClientProjects />} />
         <Route path="/dashboard/client/quotes" element={<ClientProjects />} />
         <Route path="/dashboard/client/settings" element={<ClientProfileSettings />} />
+        <Route path="/dashboard/client/messages" element={<FullMessages />} />
         <Route path="/dashboard/client/favorites" element={<MainLayout><ClientFavorites /></MainLayout>} />
         <Route path="/category/jardinage" element={<JardinageNouveau />} />
         

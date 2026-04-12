@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import apiService from '../services/api';
 import ClientLayout from '../layouts/ClientLayout';
 import PaymentModal from '../components/PaymentModal';
+import ChatModal from '../components/ChatModal';
 
 const ClientInbox = () => {
   const [bookings, setBookings] = useState([]);
@@ -13,6 +14,8 @@ const ClientInbox = () => {
   const [reviewedIds, setReviewedIds] = useState(new Set());
   const [selectedProject, setSelectedProject] = useState(null);
   const [isPaymentOpen, setIsPaymentOpen] = useState(false);
+  const [isChatOpen, setIsChatOpen] = useState(false);
+  const [chatUser, setChatUser] = useState(null);
   const user = JSON.parse(localStorage.getItem('user'));
   const navigate = useNavigate();
 
@@ -181,7 +184,15 @@ const ClientInbox = () => {
                           Débloquer le paiement
                         </button>
                      )}
-                    <button className="flex-1 lg:flex-none h-14 px-8 bg-primary text-white rounded-2xl font-black text-[10px] uppercase tracking-widest hover:shadow-xl hover:shadow-primary/20 transition-all flex items-center justify-center gap-3 active:scale-95">
+                    <button 
+                      onClick={() => {
+                        setChatUser({ id: devis.artisan_id, name: devis.artisan_name });
+                        setSelectedProject(devis);
+                        setIsChatOpen(true);
+                      }}
+                      disabled={!devis.artisan_id}
+                      className="flex-1 lg:flex-none h-14 px-8 bg-primary text-white rounded-2xl font-black text-[10px] uppercase tracking-widest hover:shadow-xl hover:shadow-primary/20 transition-all flex items-center justify-center gap-3 active:scale-95 disabled:opacity-50"
+                    >
                        <span className="material-symbols-outlined text-sm font-black">message</span>
                        Messages
                     </button>
@@ -282,6 +293,15 @@ const ClientInbox = () => {
           onClose={() => setIsPaymentOpen(false)}
           project={selectedProject}
           onPaymentSuccess={fetchDevis}
+        />
+       )}
+
+       {selectedProject && isChatOpen && (
+        <ChatModal 
+          isOpen={isChatOpen}
+          onClose={() => setIsChatOpen(false)}
+          otherUser={chatUser}
+          devisId={selectedProject.id}
         />
        )}
     </ClientLayout>

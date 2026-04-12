@@ -2,12 +2,15 @@ import React, { useEffect, useState } from 'react';
 import apiService from '../services/api';
 import MainLayout from '../layouts/MainLayout';
 import PaymentModal from '../components/PaymentModal';
+import ChatModal from '../components/ChatModal';
 
 const ClientProjects = () => {
   const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(true);
   const [selectedProject, setSelectedProject] = useState(null);
   const [isPaymentOpen, setIsPaymentOpen] = useState(false);
+  const [isChatOpen, setIsChatOpen] = useState(false);
+  const [chatUser, setChatUser] = useState(null);
   const user = JSON.parse(localStorage.getItem('user'));
 
   const fetchProjects = async () => {
@@ -143,9 +146,9 @@ const ClientProjects = () => {
                         <td className="px-8 py-6 font-black text-slate-900">{project.total_price} DA</td>
                         <td className="px-8 py-6">
                           <span className={`px-4 py-1.5 rounded-full text-[10px] font-black uppercase shadow-xs ${project.status === 'confirmed' || project.status === 'accepté' ? 'bg-blue-100 text-blue-700' :
-                              project.status === 'completed' ? 'bg-emerald-100 text-emerald-700' :
-                                project.status === 'cancelled' || project.status === 'refusé' || project.status === 'annulé' ? 'bg-red-100 text-red-700' :
-                                  'bg-orange-100 text-orange-700'
+                                project.status === 'completed' ? 'bg-emerald-100 text-emerald-700' :
+                                  project.status === 'cancelled' || project.status === 'refusé' || project.status === 'annulé' ? 'bg-red-100 text-red-700' :
+                                    'bg-orange-100 text-orange-700'
                             }`}>
                             {project.status === 'pending' || project.status === 'en attente' ? '🔍 ' :
                               project.status === 'confirmed' || project.status === 'accepté' ? '✅ ' :
@@ -167,6 +170,18 @@ const ClientProjects = () => {
                                   Payer
                                 </button>
                              )}
+                            <button
+                              onClick={() => {
+                                setChatUser({ id: project.artisan_id, name: project.artisan_name });
+                                setSelectedProject(project);
+                                setIsChatOpen(true);
+                              }}
+                              disabled={!project.artisan_id}
+                              className="flex items-center gap-1.5 px-4 py-2 bg-blue-50 text-blue-600 rounded-xl font-bold text-xs hover:bg-blue-100 active:scale-95 transition-all disabled:opacity-50"
+                            >
+                              <span className="material-symbols-outlined text-sm">message</span>
+                              Messages
+                            </button>
                             <button
                               onClick={() => handleDeleteProject(project)}
                               title="Supprimer"
@@ -193,6 +208,16 @@ const ClientProjects = () => {
           onClose={() => setIsPaymentOpen(false)}
           project={selectedProject}
           onPaymentSuccess={fetchProjects}
+        />
+      )}
+
+      {selectedProject && isChatOpen && (
+        <ChatModal 
+          isOpen={isChatOpen}
+          onClose={() => setIsChatOpen(false)}
+          otherUser={chatUser}
+          devisId={selectedProject.id?.toString().startsWith('d-') ? selectedProject.id.replace('d-', '') : null}
+          bookingId={!selectedProject.id?.toString().startsWith('d-') ? selectedProject.id : null}
         />
       )}
     </MainLayout>

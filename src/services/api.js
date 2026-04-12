@@ -472,6 +472,29 @@ const apiService = {
     return handleResponse(res);
   },
 
+  sendMessage: async (messageData) => {
+    const res = await fetch(`${BASE_URL}/messages`, {
+      method: 'POST',
+      headers: getAuthHeaders(),
+      body: JSON.stringify(messageData),
+    });
+    return handleResponse(res);
+  },
+
+  getConversation: async (otherUserId) => {
+    const res = await fetch(`${BASE_URL}/messages/${otherUserId}`, {
+      headers: getAuthHeaders(),
+    });
+    return handleResponse(res);
+  },
+
+  getConversations: async () => {
+    const res = await fetch(`${BASE_URL}/conversations`, {
+      headers: getAuthHeaders(),
+    });
+    return handleResponse(res);
+  },
+
   getAllDisputes: async () => {
     const res = await fetch(`${BASE_URL}/admin/disputes`, {
       headers: getAuthHeaders(),

@@ -87,7 +87,7 @@ const ArtisanLayout = ({ children, title = "Mihnati PRO", subtitle = "Premium Pl
               { path: `/artisan/${currentUser?.id}`, icon: 'visibility', label: 'Profil Public', isExternal: true },
               { path: '/dashboard/artisan/pricing', icon: 'payments', label: 'Mes tarifs' },
               { path: '/dashboard/artisan/verifications', icon: 'verified_user', label: 'Vérifications' },
-              { icon: 'mail', label: 'Messages' },
+              { path: '/dashboard/artisan/messages', icon: 'mail', label: 'Messages' },
               { path: '/dashboard/artisan/settings', icon: 'settings', label: 'Paramètres' },
             ].map((item, idx) => {
               const isActive = path === item.path;
