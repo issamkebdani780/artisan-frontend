@@ -33,99 +33,146 @@ const PaymentModal = ({ isOpen, onClose, project, onPaymentSuccess }) => {
   };
 
   return (
-    <div className="fixed inset-0 z-100 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm animate-fade-in font-['Outfit',sans-serif]">
-      <div className="bg-white dark:bg-slate-900 w-full max-w-md rounded-[2.5rem] shadow-2xl shadow-indigo-500/10 overflow-hidden border border-slate-100 dark:border-white/5">
+    <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4 md:p-6 bg-slate-900/80 backdrop-blur-xl animate-in fade-in duration-300 font-['Outfit',sans-serif]">
+      <div className="bg-white dark:bg-[#0f172a] w-full max-w-lg rounded-[2.5rem] shadow-[0_32px_128px_-16px_rgba(0,0,0,0.5)] overflow-hidden border border-white/20 dark:border-white/5 relative">
         
+        {/* Animated Background Highlights */}
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-indigo-500 to-transparent"></div>
+        <div className="absolute -top-24 -left-24 size-48 bg-indigo-500/10 blur-[100px] rounded-full"></div>
+        <div className="absolute -bottom-24 -right-24 size-48 bg-purple-500/10 blur-[100px] rounded-full"></div>
+
         {/* Header */}
-        <div className="p-8 border-b border-slate-50 dark:border-white/5 relative">
-          <button onClick={onClose} className="absolute top-6 right-6 text-slate-400 hover:text-slate-600 dark:hover:text-white transition-colors">
-            <span className="material-symbols-outlined font-black">close</span>
+        <div className="p-8 md:p-10 border-b border-slate-50 dark:border-white/5 relative overflow-hidden">
+          <button 
+            onClick={onClose} 
+            className="absolute top-8 right-8 size-10 rounded-full bg-slate-50 dark:bg-white/5 flex items-center justify-center text-slate-400 hover:text-red-500 dark:hover:text-red-400 transition-all active:scale-90 z-10"
+          >
+            <span className="material-symbols-outlined font-black text-xl">close</span>
           </button>
-          <h2 className="text-2xl font-black text-slate-900 dark:text-white tracking-tight">Paiement Sécurisé</h2>
-          <p className="text-slate-500 dark:text-slate-400 text-sm mt-1">Transaction directe avec l'artisan {project.artisan_name}</p>
+          
+          <div className="flex items-center gap-4 mb-2">
+            <div className="px-3 py-1 bg-indigo-100 dark:bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 text-[10px] font-black uppercase tracking-[0.2em] rounded-full">
+              Safe Transaction
+            </div>
+          </div>
+          <h2 className="text-3xl font-black text-slate-900 dark:text-white tracking-tight leading-none">Paiement Sécurisé</h2>
+          <p className="text-slate-500 dark:text-slate-400 text-sm mt-3 font-medium">Réparer votre maison avec l'expert <span className="text-indigo-600 dark:text-indigo-400 font-bold">{project.artisan_name}</span></p>
         </div>
 
-        <div className="p-8">
+        <div className="p-8 md:p-10">
           {step === 1 && (
-            <div className="space-y-6">
-              <div className="bg-indigo-50 dark:bg-indigo-900/30 p-6 rounded-3xl border border-indigo-100 dark:border-indigo-500/20">
-                <p className="text-[10px] font-black uppercase text-indigo-400 tracking-widest mb-1">Montant à régler</p>
-                <p className="text-4xl font-black text-indigo-600 dark:text-indigo-400 tracking-tighter">{project.total_price} DA</p>
+            <div className="space-y-8">
+              <div className="relative group">
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-3xl blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
+                <div className="relative bg-slate-50 dark:bg-white/5 p-8 rounded-3xl border border-white dark:border-white/5">
+                  <p className="text-[10px] font-black uppercase text-slate-400 dark:text-slate-500 tracking-widest mb-2">Total de la commande</p>
+                  <div className="flex items-baseline gap-2">
+                    <p className="text-5xl font-black text-slate-900 dark:text-white tracking-tighter">{project.total_price}</p>
+                    <p className="text-xl font-black text-indigo-500 tracking-widest">DA</p>
+                  </div>
+                </div>
               </div>
 
-              <div className="grid grid-cols-1 gap-4">
+              <div className="space-y-4">
+                <p className="text-[10px] font-black uppercase text-slate-400 tracking-[0.2em] ml-2">Sélectionner une méthode</p>
+                
                 <button 
                   onClick={() => setStep(2)}
-                  className="flex items-center justify-between p-5 bg-white dark:bg-slate-800 border-2 border-slate-100 dark:border-white/5 rounded-3xl hover:border-indigo-500 hover:shadow-lg transition-all group"
+                  className="w-full flex items-center justify-between p-6 bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 rounded-3xl hover:border-indigo-500 dark:hover:border-indigo-500 hover:shadow-2xl hover:shadow-indigo-500/10 transition-all group scale-100 active:scale-[0.98]"
                 >
-                  <div className="flex items-center gap-4">
-                    <div className="size-12 rounded-2xl bg-indigo-100 dark:bg-indigo-900/40 text-indigo-600 flex items-center justify-center">
-                      <span className="material-symbols-outlined font-black">credit_card</span>
+                  <div className="flex items-center gap-5">
+                    <div className="size-14 rounded-2xl bg-indigo-50 dark:bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 flex items-center justify-center transform group-hover:rotate-6 transition-transform">
+                      <span className="material-symbols-outlined text-2xl font-black">credit_card</span>
                     </div>
                     <div className="text-left">
-                      <p className="font-bold text-slate-900 dark:text-white">Carte Bancaire / CIB</p>
-                      <p className="text-xs text-slate-500">Paiement instantané</p>
+                      <p className="font-black text-slate-900 dark:text-white text-base">Carte Bancaire / CIB</p>
+                      <p className="text-xs text-slate-500 dark:text-slate-400">Confirmation instantanée</p>
                     </div>
                   </div>
-                  <span className="material-symbols-outlined text-slate-300 group-hover:text-indigo-500 transition-colors">chevron_right</span>
+                  <div className="size-8 rounded-full border border-slate-100 dark:border-white/10 flex items-center justify-center group-hover:bg-indigo-500 group-hover:text-white transition-all">
+                    <span className="material-symbols-outlined text-sm">chevron_right</span>
+                  </div>
                 </button>
 
                 <button 
                   onClick={() => handlePayment('transfer')}
                   disabled={loading}
-                  className="flex items-center justify-between p-5 bg-white dark:bg-slate-800 border-2 border-slate-100 dark:border-white/5 rounded-3xl hover:border-amber-500 hover:shadow-lg transition-all group"
+                  className="w-full flex items-center justify-between p-6 bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 rounded-3xl hover:border-amber-500 dark:hover:border-amber-500 hover:shadow-2xl hover:shadow-amber-500/10 transition-all group scale-100 active:scale-[0.98]"
                 >
-                  <div className="flex items-center gap-4">
-                    <div className="size-12 rounded-2xl bg-amber-100 dark:bg-amber-900/40 text-amber-600 flex items-center justify-center">
-                      <span className="material-symbols-outlined font-black">account_balance</span>
+                  <div className="flex items-center gap-5">
+                    <div className="size-14 rounded-2xl bg-amber-50 dark:bg-amber-500/10 text-amber-600 dark:text-amber-400 flex items-center justify-center transform group-hover:rotate-6 transition-transform">
+                      <span className="material-symbols-outlined text-2xl font-black">account_balance</span>
                     </div>
                     <div className="text-left">
-                      <p className="font-bold text-slate-900 dark:text-white">Virement Bancaire</p>
-                      <p className="text-xs text-slate-500">Validation sous 24h</p>
+                      <p className="font-black text-slate-900 dark:text-white text-base">Virement Bancaire (CCP)</p>
+                      <p className="text-xs text-slate-500 dark:text-slate-400">Validation manuelle</p>
                     </div>
                   </div>
-                  <span className="material-symbols-outlined text-slate-300 group-hover:text-amber-500 transition-colors">chevron_right</span>
+                  <div className="size-8 rounded-full border border-slate-100 dark:border-white/10 flex items-center justify-center group-hover:bg-amber-500 group-hover:text-white transition-all">
+                    <span className="material-symbols-outlined text-sm">chevron_right</span>
+                  </div>
                 </button>
+              </div>
+
+              <div className="flex items-center justify-center gap-2 text-[10px] font-black uppercase text-slate-400 tracking-widest bg-slate-50 dark:bg-white/5 py-3 rounded-2xl border border-slate-100 dark:border-white/5">
+                <span className="material-symbols-outlined text-sm text-emerald-500">lock</span>
+                Chiffrage SSL 256-bit
               </div>
             </div>
           )}
 
           {step === 2 && (
-            <div className="space-y-6">
+            <div className="space-y-8 animate-in slide-in-from-right-8 duration-300">
                <div className="space-y-4">
-                  <div className="space-y-1">
-                    <label className="text-[10px] font-black uppercase text-slate-400 tracking-widest ml-1">Numéro de carte</label>
-                    <input type="text" placeholder="0000 0000 0000 0000" className="w-full px-5 py-4 bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-white/5 rounded-2xl focus:border-indigo-500 outline-none transition-all dark:text-white" />
+                  <div className="space-y-2">
+                    <label className="text-[10px] font-black uppercase text-slate-400 dark:text-slate-500 tracking-widest ml-1">Numéro de carte</label>
+                    <div className="relative">
+                      <span className="absolute left-5 top-1/2 -translate-y-1/2 material-symbols-outlined text-slate-400">credit_card</span>
+                      <input type="text" placeholder="0000 0000 0000 0000" className="w-full pl-14 pr-5 py-5 bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-2xl focus:border-indigo-500 dark:focus:border-indigo-500 outline-none transition-all dark:text-white font-mono tracking-widest" />
+                    </div>
                   </div>
                   <div className="grid grid-cols-2 gap-4">
-                    <div className="space-y-1">
-                      <label className="text-[10px] font-black uppercase text-slate-400 tracking-widest ml-1">Expiration</label>
-                      <input type="text" placeholder="MM/YY" className="w-full px-5 py-4 bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-white/5 rounded-2xl focus:border-indigo-500 outline-none transition-all dark:text-white" />
+                    <div className="space-y-2">
+                      <label className="text-[10px] font-black uppercase text-slate-400 dark:text-slate-500 tracking-widest ml-1">Expiration</label>
+                      <input type="text" placeholder="MM / YY" className="w-full px-5 py-5 bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-2xl focus:border-indigo-500 dark:focus:border-indigo-500 outline-none transition-all dark:text-white font-mono text-center" />
                     </div>
-                    <div className="space-y-1">
-                      <label className="text-[10px] font-black uppercase text-slate-400 tracking-widest ml-1">CVC</label>
-                      <input type="text" placeholder="123" className="w-full px-5 py-4 bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-white/5 rounded-2xl focus:border-indigo-500 outline-none transition-all dark:text-white" />
+                    <div className="space-y-2">
+                      <label className="text-[10px] font-black uppercase text-slate-400 dark:text-slate-500 tracking-widest ml-1">CVC</label>
+                      <input type="password" placeholder="***" className="w-full px-5 py-5 bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-2xl focus:border-indigo-500 dark:focus:border-indigo-500 outline-none transition-all dark:text-white font-mono text-center" />
                     </div>
                   </div>
                </div>
-               <button 
-                onClick={() => handlePayment('card')}
-                disabled={loading}
-                className="w-full py-5 bg-indigo-600 text-white rounded-[1.5rem] font-black text-sm uppercase tracking-widest hover:bg-indigo-700 shadow-xl shadow-indigo-600/20 active:scale-95 transition-all disabled:opacity-50"
-               >
-                 {loading ? 'Traitement...' : `Payer ${project.total_price} DA`}
-               </button>
-               <button onClick={() => setStep(1)} className="w-full py-2 text-slate-400 font-bold text-xs hover:text-slate-600 transition-colors uppercase tracking-widest">Retour</button>
+               
+               <div className="space-y-4">
+                <button 
+                  onClick={() => handlePayment('card')}
+                  disabled={loading}
+                  className="w-full py-6 bg-indigo-600 text-white rounded-[1.5rem] font-black text-sm uppercase tracking-widest shadow-[0_20px_40px_-10px_rgba(79,70,229,0.3)] hover:bg-indigo-700 active:scale-95 transition-all disabled:opacity-50 flex items-center justify-center gap-3"
+                >
+                  {loading ? (
+                    <span className="animate-spin size-5 border-2 border-white/30 border-t-white rounded-full"></span>
+                  ) : (
+                    <>
+                      <span className="material-symbols-outlined">verified_user</span>
+                      Confirmer le paiement
+                    </>
+                  )}
+                </button>
+                <button onClick={() => setStep(1)} className="w-full py-2 text-slate-400 dark:text-slate-500 font-black text-[10px] hover:text-slate-600 dark:hover:text-white transition-colors uppercase tracking-[0.3em]">Annuler et retourner</button>
+               </div>
             </div>
           )}
 
           {step === 3 && (
-            <div className="py-10 text-center space-y-4">
-              <div className="size-20 bg-emerald-100 dark:bg-emerald-900/40 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6 scale-110">
-                <span className="material-symbols-outlined text-4xl font-black">verified</span>
+            <div className="py-12 text-center space-y-6 animate-in zoom-in-95 duration-500">
+              <div className="size-24 bg-emerald-50 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 rounded-full flex items-center justify-center mx-auto mb-8 relative">
+                <div className="absolute inset-0 bg-emerald-500 animate-ping rounded-full opacity-20"></div>
+                <span className="material-symbols-outlined text-5xl font-black relative z-10">check_circle</span>
               </div>
-              <h3 className="text-2xl font-black text-slate-900 dark:text-white tracking-tight">Paiement Réussi !</h3>
-              <p className="text-slate-500 dark:text-slate-400">Votre demande est désormais validée et payée. L'artisan va débuter l'intervention.</p>
+              <div className="space-y-2">
+                <h3 className="text-3xl font-black text-slate-900 dark:text-white tracking-tight">Paiement Réussi</h3>
+                <p className="text-slate-500 dark:text-slate-400 font-medium max-w-xs mx-auto">Votre intervention a été validée. L'artisan recevra ses fonds dès la fin des travaux.</p>
+              </div>
             </div>
           )}
         </div>
