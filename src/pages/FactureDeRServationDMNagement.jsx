@@ -197,7 +197,7 @@ const FactureDeRServationDMNagement = () => {
 </div>
 <div>
 <p className="text-sm font-bold text-slate-900 dark:text-white">Carte Bancaire Visa</p>
-<p className="text-xs text-slate-500">Terminant par ‚Ä¢‚Ä¢‚Ä¢‚Ä¢ 1234</p>
+<p className="text-xs text-slate-500">Terminant par ‚DA¢‚DA¢‚DA¢‚DA¢ 1234</p>
 </div>
 <div className="ml-auto">
 <span className="material-symbols-outlined text-green-500">check_circle</span>

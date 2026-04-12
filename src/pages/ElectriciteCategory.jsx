@@ -198,7 +198,7 @@ const ElectriciteCategory = () => {
 <blockquote className="text-lg italic text-slate-300">
                         "Un service impeccable. L'électricien est arrivé en 45 minutes pour une panne totale. Travail propre et facture conforme au devis initial. Je recommande !"
                     </blockquote>
-<p className="mt-4 font-bold">— Marc D., Paris 15ème</p>
+<p className="mt-4 font-bold">�DA� Marc D., Paris 15ème</p>
 </div>
 </div>
 </section>
@@ -221,7 +221,7 @@ const ElectriciteCategory = () => {
 </div>
 <div className="p-5">
 <h4 className="font-bold text-lg mb-1">Thomas G.</h4>
-<p className="text-slate-500 text-sm mb-4">Électricien Indépendant • 12 ans d'exp.</p>
+<p className="text-slate-500 text-sm mb-4">Électricien Indépendant �DA� 12 ans d'exp.</p>
 <div className="flex flex-wrap gap-2 mb-6">
 <span className="text-[10px] uppercase font-black bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">Dépannage</span>
 <span className="text-[10px] uppercase font-black bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">Domotique</span>
@@ -239,7 +239,7 @@ const ElectriciteCategory = () => {
 </div>
 <div className="p-5">
 <h4 className="font-bold text-lg mb-1">Sarah M.</h4>
-<p className="text-slate-500 text-sm mb-4">SARL Élec Pro • 8 ans d'exp.</p>
+<p className="text-slate-500 text-sm mb-4">SARL Élec Pro �DA� 8 ans d'exp.</p>
 <div className="flex flex-wrap gap-2 mb-6">
 <span className="text-[10px] uppercase font-black bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">Mise aux normes</span>
 <span className="text-[10px] uppercase font-black bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">Rénovation</span>
@@ -257,7 +257,7 @@ const ElectriciteCategory = () => {
 </div>
 <div className="p-5">
 <h4 className="font-bold text-lg mb-1">Jean-Luc B.</h4>
-<p className="text-slate-500 text-sm mb-4">Expert Maintenance • 20 ans d'exp.</p>
+<p className="text-slate-500 text-sm mb-4">Expert Maintenance �DA� 20 ans d'exp.</p>
 <div className="flex flex-wrap gap-2 mb-6">
 <span className="text-[10px] uppercase font-black bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">Industriel</span>
 <span className="text-[10px] uppercase font-black bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">Tableaux</span>
@@ -275,7 +275,7 @@ const ElectriciteCategory = () => {
 </div>
 <div className="p-5">
 <h4 className="font-bold text-lg mb-1">Karim A.</h4>
-<p className="text-slate-500 text-sm mb-4">Éco-Solution Élec • 5 ans d'exp.</p>
+<p className="text-slate-500 text-sm mb-4">Éco-Solution Élec �DA� 5 ans d'exp.</p>
 <div className="flex flex-wrap gap-2 mb-6">
 <span className="text-[10px] uppercase font-black bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">Bornes IRVE</span>
 <span className="text-[10px] uppercase font-black bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">Solaire</span>
@@ -293,7 +293,7 @@ const ElectriciteCategory = () => {
 <div>
 <h5 className="font-bold mb-4">ProServices</h5>
 <ul className="space-y-2 text-sm text-slate-500">
-<li><a className="hover:text-primary" href="#">À propos</a></li>
+<li><a className="hover:text-primary" href="#">�DA propos</a></li>
 <li><a className="hover:text-primary" href="#">Carrières</a></li>
 <li><a className="hover:text-primary" href="#">Presse</a></li>
 </ul>

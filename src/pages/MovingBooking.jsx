@@ -4,6 +4,14 @@ import apiService from '../services/api';
 
 const MovingBooking = () => {
   const navigate = useNavigate();
+
+  // Redirect if not logged in
+  useEffect(() => {
+    const user = localStorage.getItem('user');
+    if (!user) {
+      navigate('/login/client');
+    }
+  }, [navigate]);
   const [weight, setWeight] = useState(450);
   const [loading, setLoading] = useState(false);
   const [selectedItems, setSelectedItems] = useState(['Bois', 'Plastique']);
@@ -129,7 +137,7 @@ const MovingBooking = () => {
       const devisData = {
         client_id: user.id,
         category_id: categoryId,
-        description: `DÉMÉNAGEMENT - Poids: ${weight}kg\nObjets: ${selectedItems.join(', ')}\nDE: ${departureWilaya} (${departureCommune}) - ${locations.departure}\nÀ: ${destinationWilaya} (${destinationCommune}) - ${locations.destination}`,
+        description: `DÉMÉNAGEMENT - Poids: ${weight}kg\nObjets: ${selectedItems.join(', ')}\nDE: ${departureWilaya} (${departureCommune}) - ${locations.departure}\n�DA: ${destinationWilaya} (${destinationCommune}) - ${locations.destination}`,
         budget: totalPrice,
         date: bookingDate,
         wilaya_id: locations.departure_wilaya_id,

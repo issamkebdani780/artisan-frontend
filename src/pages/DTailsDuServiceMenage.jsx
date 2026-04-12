@@ -316,7 +316,7 @@ const DTailsDuServiceMenage = () => {
 <div>
 <h4 className="text-white font-bold mb-6">Société</h4>
 <ul className="space-y-3 text-sm">
-<li><a className="hover:text-primary transition-colors" href="#">À propos</a></li>
+<li><a className="hover:text-primary transition-colors" href="#">�DA propos</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Devenir agent</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Blog</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Contact</a></li>

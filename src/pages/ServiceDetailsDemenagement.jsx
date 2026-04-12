@@ -244,7 +244,7 @@ const ServiceDetailsDemenagement = () => {
 <div>
 <h5 className="font-bold text-sm uppercase tracking-wider text-slate-900 dark:text-slate-100 mb-4">Entreprise</h5>
 <ul className="space-y-2 text-sm text-slate-500">
-<li><a className="hover:text-primary" href="#">Ã€ propos</a></li>
+<li><a className="hover:text-primary" href="#">ÃDA propos</a></li>
 <li><a className="hover:text-primary" href="#">Recrutement</a></li>
 <li><a className="hover:text-primary" href="#">Nos engagements</a></li>
 </ul>

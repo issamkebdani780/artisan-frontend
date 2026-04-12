@@ -6,7 +6,19 @@ import logo from '../assets/logo.png';
 const Navbar = () => {
   const [user, setUser] = useState(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [theme, setTheme] = useState(localStorage.getItem('admin-theme') || 'dark');
   const navigate = useNavigate();
+
+  useEffect(() => {
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+    localStorage.setItem('admin-theme', theme);
+  }, [theme]);
+
+  const toggleTheme = () => setTheme(prev => prev === 'light' ? 'dark' : 'light');
 
   useEffect(() => {
     const storedUser = localStorage.getItem('user');
@@ -57,53 +69,62 @@ const Navbar = () => {
         ))}
       </nav>
 
-      <div className="flex items-center gap-3 z-50">
-        <div className="hidden md:flex items-center gap-3">
-          {user ? (
-            <div className="flex items-center gap-4">
-              <Link
-                to={user.role === 'admin' ? '/dashboard/admin' : user.role === 'artisan' ? '/dashboard/artisan' : '/dashboard/client/inbox'}
-                className="flex items-center gap-2 hover:opacity-80 transition-opacity"
-              >
-                <div className="w-9 h-9 rounded-full bg-slate-50 flex items-center justify-center text-primary border border-slate-100 shadow-sm">
-                  <span className="material-symbols-outlined text-xl">account_circle</span>
-                </div>
-                <div className="flex flex-col items-start leading-tight">
-                  <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest">{user.role}</span>
-                  <span className="text-sm font-bold text-slate-900 hidden lg:inline">{user.name}</span>
-                </div>
-              </Link>
-              <button
-                onClick={handleLogout}
-                className="text-slate-300 hover:text-red-500 p-2 transition-colors"
-                title="Déconnexion"
-              >
-                <span className="material-symbols-outlined text-xl leading-none">logout</span>
-              </button>
-            </div>
-          ) : (
-            <div className="flex items-center gap-3">
-              <Link to="/login/artisan" className="hidden lg:flex items-center gap-2 px-4 py-2 text-slate-500 hover:text-primary transition-all font-bold text-sm">
-                <span className="material-symbols-outlined text-xl">construction</span>
-                Espace Artisan
-              </Link>
-              <Link to="/login/client" className="flex min-w-[120px] bg-primary text-white rounded-xl h-11 px-6 items-center justify-center font-black text-sm shadow-xl shadow-primary/20 hover:bg-primary/90 transition-all active:scale-95">
-                Connexion
-              </Link>
-            </div>
-          )}
-        </div>
+        <div className="flex items-center gap-3 z-50">
+          <div className="hidden md:flex items-center gap-3">
+            {user ? (
+              <div className="flex items-center gap-4">
+                <Link
+                  to={user.role === 'admin' ? '/dashboard/admin' : user.role === 'artisan' ? '/dashboard/artisan' : '/dashboard/client/inbox'}
+                  className="flex items-center gap-2 hover:opacity-80 transition-opacity"
+                >
+                  <div className="w-9 h-9 rounded-full bg-slate-50 flex items-center justify-center text-primary border border-slate-100 shadow-sm">
+                    <span className="material-symbols-outlined text-xl">account_circle</span>
+                  </div>
+                  <div className="flex flex-col items-start leading-tight">
+                    <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest">{user.role}</span>
+                    <span className="text-sm font-bold text-slate-900 hidden lg:inline">{user.name}</span>
+                  </div>
+                </Link>
+                <button
+                  onClick={handleLogout}
+                  className="text-slate-300 hover:text-red-500 p-2 transition-colors"
+                  title="Déconnexion"
+                >
+                  <span className="material-symbols-outlined text-xl leading-none">logout</span>
+                </button>
+              </div>
+            ) : (
+              <div className="flex items-center gap-3">
+                <Link to="/login/artisan" className="hidden lg:flex items-center gap-2 px-4 py-2 text-slate-500 hover:text-primary transition-all font-bold text-sm">
+                  <span className="material-symbols-outlined text-xl">construction</span>
+                  Espace Artisan
+                </Link>
+                <Link to="/login/client" className="flex min-w-[120px] bg-primary text-white rounded-xl h-11 px-6 items-center justify-center font-black text-sm shadow-xl shadow-primary/20 hover:bg-primary/90 transition-all active:scale-95">
+                  Connexion
+                </Link>
+              </div>
+            )}
+          </div>
 
-        {/* Mobile Menu Toggle */}
-        <button
-          className="md:hidden p-2 text-slate-500 hover:bg-slate-50 rounded-lg transition-colors"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        >
-          <span className="material-symbols-outlined text-2xl">
-            {isMobileMenuOpen ? 'close' : 'menu'}
-          </span>
-        </button>
-      </div>
+          <button 
+            onClick={toggleTheme}
+            className="p-2 text-slate-500 hover:text-primary transition-colors"
+            title={theme === 'light' ? 'Mode sombre' : 'Mode clair'}
+          >
+            <span className="material-symbols-outlined text-2xl">
+              {theme === 'light' ? 'dark_mode' : 'light_mode'}
+            </span>
+          </button>
+
+          <button
+            className="md:hidden p-2 text-slate-500 hover:bg-slate-50 rounded-lg transition-colors"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            <span className="material-symbols-outlined text-2xl">
+              {isMobileMenuOpen ? 'close' : 'menu'}
+            </span>
+          </button>
+        </div>
 
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (

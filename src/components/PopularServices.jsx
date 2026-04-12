@@ -113,7 +113,7 @@ const PopularServices = () => {
                 <div className="flex-1 pr-8">
                   <h3 className="text-2xl font-black text-slate-900 mb-2 tracking-tight uppercase">{category.name}</h3>
                   <p className="text-base text-slate-400 leading-relaxed font-medium line-clamp-2">
-                    {category.description || 'Profitez de services dâ€™exception avec nos meilleurs artisans locaux.'}
+                    {category.description || 'Profitez de services dâDA™exception avec nos meilleurs artisans locaux.'}
                   </p>
                 </div>
 

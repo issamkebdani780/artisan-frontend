@@ -206,7 +206,7 @@ const ServiceMenage = () => {
 <div>
 <h4 className="text-white font-bold mb-6">Entreprise</h4>
 <ul className="space-y-3 text-sm">
-<li><a className="hover:text-primary transition-colors" href="#">Ã€ propos</a></li>
+<li><a className="hover:text-primary transition-colors" href="#">ÃDA propos</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Nos tarifs</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Recrutement</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">FAQ</a></li>

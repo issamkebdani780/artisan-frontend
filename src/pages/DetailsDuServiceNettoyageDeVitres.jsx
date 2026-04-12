@@ -53,7 +53,7 @@ const DetailsDuServiceNettoyageDeVitres = () => {
 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
 <div className="flex flex-col gap-2 rounded-xl p-6 border-2 border-teal-100 dark:border-teal-900 bg-white dark:bg-slate-900 shadow-sm">
 <p className="text-slate-500 dark:text-slate-400 text-sm font-medium uppercase tracking-wider">Forfait Résidentiel</p>
-<p className="text-slate-900 dark:text-slate-100 text-3xl font-black">À partir de 5€ <span className="text-sm font-normal text-slate-500">/ vitre</span></p>
+<p className="text-slate-900 dark:text-slate-100 text-3xl font-black">�DA partir de 5€ <span className="text-sm font-normal text-slate-500">/ vitre</span></p>
 <p className="text-slate-600 dark:text-slate-400 text-sm">Idéal pour les maisons individuelles et appartements. Nettoyage intérieur et extérieur inclus.</p>
 </div>
 <div className="flex flex-col gap-2 rounded-xl p-6 border-2 border-teal-100 dark:border-teal-900 bg-white dark:bg-slate-900 shadow-sm">

@@ -99,7 +99,7 @@ const DTailsDuServiceElectricite = () => {
 <div className="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-shadow">
 <div className="flex justify-between items-start mb-4">
 <span className="material-symbols-outlined text-4xl text-[#f39c12]">build_circle</span>
-<span className="text-sm font-bold px-3 py-1 rounded-full text-[#f39c12] bg-[#f39c12]/10">À partir de 50€</span>
+<span className="text-sm font-bold px-3 py-1 rounded-full text-[#f39c12] bg-[#f39c12]/10">�DA partir de 50€</span>
 </div>
 <h3 className="text-lg font-bold mb-2">Diagnostic &amp; Réparation</h3>
 <p className="text-slate-600 dark:text-slate-400 text-sm mb-6">Recherche de panne, remplacement de fusibles ou réparation de tableau électrique.</p>
@@ -108,7 +108,7 @@ const DTailsDuServiceElectricite = () => {
 <div className="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-shadow">
 <div className="flex justify-between items-start mb-4">
 <span className="material-symbols-outlined text-4xl text-[#f39c12]">light</span>
-<span className="text-sm font-bold px-3 py-1 rounded-full text-[#f39c12] bg-[#f39c12]/10">À partir de 45€</span>
+<span className="text-sm font-bold px-3 py-1 rounded-full text-[#f39c12] bg-[#f39c12]/10">�DA partir de 45€</span>
 </div>
 <h3 className="text-lg font-bold mb-2">Installation Luminaires</h3>
 <p className="text-slate-600 dark:text-slate-400 text-sm mb-6">Pose de lustres, spots LED, appliques murales ou remplacement d'interrupteurs.</p>
@@ -211,7 +211,7 @@ const DTailsDuServiceElectricite = () => {
 <span className="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
 </summary>
 <div className="mt-4 text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
-                                Les prix affichés "À partir de" incluent le diagnostic et la main-d'œuvre de base. Le coût des pièces spécifiques (interrupteurs, disjoncteurs, câbles) est facturé en sus après validation du devis sur place.
+                                Les prix affichés "�DA partir de" incluent le diagnostic et la main-d'œuvre de base. Le coût des pièces spécifiques (interrupteurs, disjoncteurs, câbles) est facturé en sus après validation du devis sur place.
                             </div>
 </details>
 <details className="group bg-slate-50 dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 p-4">
@@ -258,7 +258,7 @@ const DTailsDuServiceElectricite = () => {
 <div>
 <h4 className="font-bold mb-6 text-slate-900 dark:text-white">Entreprise</h4>
 <ul className="space-y-4 text-sm text-slate-500 dark:text-slate-400">
-<li><a className="transition-colors hover:text-[#f39c12]" href="#">À propos</a></li>
+<li><a className="transition-colors hover:text-[#f39c12]" href="#">�DA propos</a></li>
 <li><a className="transition-colors hover:text-[#f39c12]" href="#">Recrutement</a></li>
 <li><a className="transition-colors hover:text-[#f39c12]" href="#">Blog</a></li>
 <li><a className="transition-colors hover:text-[#f39c12]" href="#">Presse</a></li>

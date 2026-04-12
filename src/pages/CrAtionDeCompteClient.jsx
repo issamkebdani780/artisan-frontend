@@ -117,11 +117,11 @@ const CrAtionDeCompteClient = () => {
 <div className="grid grid-cols-2 gap-8">
 <div className="flex flex-col gap-3">
 <label className="text-xs font-bold uppercase tracking-widest text-slate-400 ml-1">Mot de passe</label>
-<input className="w-full h-14 px-5 rounded-xl bg-surface-container-low border border-slate-100 focus:ring-2 focus:ring-primary/40 focus:border-transparent text-on-surface transition-all" placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢" type="password"/>
+<input className="w-full h-14 px-5 rounded-xl bg-surface-container-low border border-slate-100 focus:ring-2 focus:ring-primary/40 focus:border-transparent text-on-surface transition-all" placeholder="âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢" type="password"/>
 </div>
 <div className="flex flex-col gap-3">
 <label className="text-xs font-bold uppercase tracking-widest text-slate-400 ml-1">Confirmer</label>
-<input className="w-full h-14 px-5 rounded-xl bg-surface-container-low border border-slate-100 focus:ring-2 focus:ring-primary/40 focus:border-transparent text-on-surface transition-all" placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢" type="password"/>
+<input className="w-full h-14 px-5 rounded-xl bg-surface-container-low border border-slate-100 focus:ring-2 focus:ring-primary/40 focus:border-transparent text-on-surface transition-all" placeholder="âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢" type="password"/>
 </div>
 </div>
 {/*  Password Requirements  */}

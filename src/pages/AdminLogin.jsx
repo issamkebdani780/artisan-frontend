@@ -146,7 +146,7 @@ const AdminLogin = () => {
         
         {/* Footer info */}
         <p className="mt-8 text-center text-slate-500 dark:text-slate-600 text-[9px] font-black uppercase tracking-[0.3em] opacity-50">
-          © 2026 BRICOLOPRO ADMINISTRATION • V.4.0.5 • SÉCURITÉ RENFORCÉE
+          © 2026 BRICOLOPRO ADMINISTRATION �DA� V.4.0.5 �DA� SÉCURITÉ RENFORCÉE
         </p>
       </div>
     </div>

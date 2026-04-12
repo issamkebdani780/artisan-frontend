@@ -46,6 +46,15 @@ import VerificationEtDocuments from './pages/VerificationEtDocuments';
 
 
 function App() {
+  React.useEffect(() => {
+    const theme = localStorage.getItem('admin-theme') || 'dark';
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }, []);
+
   return (
     <ErrorBoundary>
       <Router>

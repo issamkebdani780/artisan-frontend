@@ -118,7 +118,7 @@ const ParametresAdmin = () => {
                       className="w-full bg-slate-50 dark:bg-slate-800 border-none rounded-xl p-3 text-sm focus:ring-2 focus:ring-indigo-500 transition-all outline-none" 
                       id="admin-pass-confirm" 
                       type="password" 
-                      placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢" 
+                      placeholder="âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢" 
                     />
                   </div>
                 </div>

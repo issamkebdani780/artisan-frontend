@@ -235,15 +235,15 @@ const ClientProfileSettings = () => {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
                       <div className="space-y-3">
                         <label className="text-[11px] font-black uppercase tracking-widest text-slate-400 ml-1">Ancien MDP</label>
-                        <input type="password" required value={passwordForm.current} onChange={(e) => setPasswordForm({...passwordForm, current: e.target.value})} className="w-full h-15 rounded-2xl border border-slate-100 bg-slate-50 focus:border-primary outline-none px-6 font-bold text-sm shadow-sm" placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢" />
+                        <input type="password" required value={passwordForm.current} onChange={(e) => setPasswordForm({...passwordForm, current: e.target.value})} className="w-full h-15 rounded-2xl border border-slate-100 bg-slate-50 focus:border-primary outline-none px-6 font-bold text-sm shadow-sm" placeholder="âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢" />
                       </div>
                       <div className="space-y-3">
                         <label className="text-[11px] font-black uppercase tracking-widest text-slate-400 ml-1">Nouveau MDP</label>
-                        <input type="password" required value={passwordForm.new} onChange={(e) => setPasswordForm({...passwordForm, new: e.target.value})} className="w-full h-15 rounded-2xl border border-slate-100 bg-slate-50 focus:border-primary outline-none px-6 font-bold text-sm shadow-sm" placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢" />
+                        <input type="password" required value={passwordForm.new} onChange={(e) => setPasswordForm({...passwordForm, new: e.target.value})} className="w-full h-15 rounded-2xl border border-slate-100 bg-slate-50 focus:border-primary outline-none px-6 font-bold text-sm shadow-sm" placeholder="âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢" />
                       </div>
                       <div className="space-y-3">
                         <label className="text-[11px] font-black uppercase tracking-widest text-slate-400 ml-1">Confirmation</label>
-                        <input type="password" required value={passwordForm.confirm} onChange={(e) => setPasswordForm({...passwordForm, confirm: e.target.value})} className="w-full h-15 rounded-2xl border border-slate-100 bg-slate-50 focus:border-primary outline-none px-6 font-bold text-sm shadow-sm" placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢" />
+                        <input type="password" required value={passwordForm.confirm} onChange={(e) => setPasswordForm({...passwordForm, confirm: e.target.value})} className="w-full h-15 rounded-2xl border border-slate-100 bg-slate-50 focus:border-primary outline-none px-6 font-bold text-sm shadow-sm" placeholder="âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢" />
                       </div>
                     </div>
                     <div className="pt-8 border-t border-slate-50 flex justify-start">

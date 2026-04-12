@@ -48,7 +48,7 @@ const DetailsDuServiceInstallationLuminaire = () => {
 {/*  CTA & Pricing Quick Stats  */}
 <div className="flex flex-wrap justify-between items-center gap-6 p-6 bg-white dark:bg-slate-900 rounded-xl mt-6 border border-slate-100 dark:border-slate-800 shadow-sm">
 <div className="flex flex-col gap-1">
-<p className="text-slate-900 dark:text-slate-100 text-2xl font-bold">À partir de 45€ <span className="text-sm font-normal text-slate-500">/ luminaire</span></p>
+<p className="text-slate-900 dark:text-slate-100 text-2xl font-bold">�DA partir de 45€ <span className="text-sm font-normal text-slate-500">/ luminaire</span></p>
 <div className="flex items-center gap-2">
 <span className="material-symbols-outlined text-primary text-sm">verified_user</span>
 <p className="text-slate-600 dark:text-slate-400 text-sm">Assurance responsabilité civile incluse</p>

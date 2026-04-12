@@ -148,7 +148,7 @@ const ServicedetailsMontage = () => {
 <h3 className="text-lg font-bold text-slate-900 dark:text-white">Estimation de prix</h3>
 <div className="mt-6 space-y-4">
 <div className="flex justify-between items-center p-3 rounded-lg bg-slate-50 dark:bg-slate-800/50">
-<span className="text-sm font-medium">À l'unité</span>
+<span className="text-sm font-medium">�DA l'unité</span>
 <span className="text-lg font-bold text-primary">Dès 15€</span>
 </div>
 <div className="flex justify-between items-center p-3 rounded-lg bg-slate-50 dark:bg-slate-800/50">
@@ -216,7 +216,7 @@ const ServicedetailsMontage = () => {
 <div>
 <h4 className="font-bold mb-4">Société</h4>
 <ul className="text-sm space-y-2 text-slate-500">
-<li><a className="hover:text-primary" href="#">À propos</a></li>
+<li><a className="hover:text-primary" href="#">�DA propos</a></li>
 <li><a className="hover:text-primary" href="#">Jobs</a></li>
 <li><a className="hover:text-primary" href="#">Presse</a></li>
 </ul>

@@ -289,7 +289,7 @@ const DetailsDuServiceJardinage = () => {
 <div>
 <h5 className="font-bold mb-4">Entreprise</h5>
 <ul className="space-y-2 text-sm text-slate-500 dark:text-slate-400">
-<li><a className="hover:text-primary" href="#">Ã€ propos</a></li>
+<li><a className="hover:text-primary" href="#">ÃDA propos</a></li>
 <li><a className="hover:text-primary" href="#">Nos Jardiniers</a></li>
 <li><a className="hover:text-primary" href="#">Blog Jardin</a></li>
 <li><a className="hover:text-primary" href="#">Contact</a></li>

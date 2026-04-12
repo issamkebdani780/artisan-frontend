@@ -34,7 +34,7 @@ const OuvertureDUnRecoursAdministratif = () => {
 <h1 className="text-slate-900 dark:text-slate-100 text-3xl font-bold leading-tight">Soumettre un Recours Administratif</h1>
 <div className="flex items-center gap-2">
 <span className="px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-xs font-mono font-bold tracking-wider">REF: AD-2024-0812</span>
-<span className="text-slate-400 dark:text-slate-500 text-sm">‚Ä¢ Warning reference for appeal</span>
+<span className="text-slate-400 dark:text-slate-500 text-sm">‚DA¢ Warning reference for appeal</span>
 </div>
 </div>
 {/*  Info Box  */}

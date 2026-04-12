@@ -229,7 +229,7 @@ const ArtisanRegister = () => {
                       },
                       {
                         group: "Soudure",
-                        options: ["Ferronnier dâ€™art", "Soudeur arc/argon", "Chaudronnier", "Soudeur carrosserie"]
+                        options: ["Ferronnier dâDA™art", "Soudeur arc/argon", "Chaudronnier", "Soudeur carrosserie"]
                       },
                       {
                         group: "Plomberie",
@@ -423,11 +423,11 @@ const ArtisanRegister = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="flex flex-col gap-2">
                   <label className="text-[10px] font-black uppercase tracking-[0.15em] text-slate-400 ml-1">Mot de passe</label>
-                  <input name="password" type="password" value={form.password} onChange={handleChange} required placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢" className="w-full h-14 px-5 rounded-xl bg-[#e2e8f0] border-none focus:ring-2 focus:ring-orange-500 transition-all font-medium outline-none" />
+                  <input name="password" type="password" value={form.password} onChange={handleChange} required placeholder="âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢" className="w-full h-14 px-5 rounded-xl bg-[#e2e8f0] border-none focus:ring-2 focus:ring-orange-500 transition-all font-medium outline-none" />
                 </div>
                 <div className="flex flex-col gap-2">
                   <label className="text-[10px] font-black uppercase tracking-[0.15em] text-slate-400 ml-1">Confirmer</label>
-                  <input name="confirm" type="password" value={form.confirm} onChange={handleChange} required placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢" className="w-full h-14 px-5 rounded-xl bg-[#e2e8f0] border-none focus:ring-2 focus:ring-orange-500 transition-all font-medium outline-none" />
+                  <input name="confirm" type="password" value={form.confirm} onChange={handleChange} required placeholder="âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢" className="w-full h-14 px-5 rounded-xl bg-[#e2e8f0] border-none focus:ring-2 focus:ring-orange-500 transition-all font-medium outline-none" />
                 </div>
               </div>
 

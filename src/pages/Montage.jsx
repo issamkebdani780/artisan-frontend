@@ -429,7 +429,7 @@ const Montage = () => {
 <div>
 <h4 className="text-white font-bold mb-6">Liens Rapides</h4>
 <ul className="space-y-4 text-sm">
-<li><a className="hover:text-primary transition-colors" href="#">À propos de nous</a></li>
+<li><a className="hover:text-primary transition-colors" href="#">�DA propos de nous</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Comment ça marche</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Devenir Artisan</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Blog &amp; Conseils</a></li>

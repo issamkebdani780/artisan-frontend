@@ -246,7 +246,7 @@ const ArtisanServices = () => {
                   {/* Price + Actions */}
                   <div className="flex items-center gap-6 shrink-0">
                     <div className="text-right">
-                      <p className="text-[9px] font-black text-slate-300 uppercase tracking-widest mb-0.5">Ã€ partir de</p>
+                      <p className="text-[9px] font-black text-slate-300 uppercase tracking-widest mb-0.5">ÃDA partir de</p>
                       <p className="text-2xl font-black text-slate-900">{Number(service.base_price).toLocaleString()} <span className="text-sm text-slate-400">DA</span></p>
                     </div>
                     <div className="flex gap-1.5 pl-4 border-l border-slate-100">

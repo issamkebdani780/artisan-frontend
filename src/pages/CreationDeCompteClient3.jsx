@@ -136,11 +136,11 @@ const CreationDeCompteClient3 = () => {
 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
 <div className="flex flex-col gap-1.5">
 <label className="text-[10px] font-bold uppercase tracking-widest text-slate-500 ml-1">Mot de passe</label>
-<input className="w-full h-11 px-4 rounded-lg bg-surface-container-high border-none focus:ring-2 focus:ring-primary/40 text-on-surface transition-all placeholder:text-slate-400 text-sm" placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢" type="password"/>
+<input className="w-full h-11 px-4 rounded-lg bg-surface-container-high border-none focus:ring-2 focus:ring-primary/40 text-on-surface transition-all placeholder:text-slate-400 text-sm" placeholder="âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢" type="password"/>
 </div>
 <div className="flex flex-col gap-1.5">
 <label className="text-[10px] font-bold uppercase tracking-widest text-slate-500 ml-1">Confirmer</label>
-<input className="w-full h-11 px-4 rounded-lg bg-surface-container-high border-none focus:ring-2 focus:ring-primary/40 text-on-surface transition-all placeholder:text-slate-400 text-sm" placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢" type="password"/>
+<input className="w-full h-11 px-4 rounded-lg bg-surface-container-high border-none focus:ring-2 focus:ring-primary/40 text-on-surface transition-all placeholder:text-slate-400 text-sm" placeholder="âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢" type="password"/>
 </div>
 </div>
 {/*  Password Requirements  */}

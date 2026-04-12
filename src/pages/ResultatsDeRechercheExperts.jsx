@@ -116,10 +116,10 @@ const ResultatsDeRechercheExperts = () => {
                                         <h3 className="text-lg font-bold text-slate-900 dark:text-white">Thomas Martin</h3>
                                         <span className="material-symbols-outlined text-primary text-lg" title="Profil vérifié">verified</span>
                                     </div>
-                                    <p className="text-slate-500 dark:text-slate-400 text-sm mb-4">Plombier Expert • 12 ans d'exp.</p>
+                                    <p className="text-slate-500 dark:text-slate-400 text-sm mb-4">Plombier Expert �DA� 12 ans d'exp.</p>
                                     <div className="flex items-center justify-between mt-auto pt-4 border-t border-slate-100 dark:border-slate-800">
                                         <div>
-                                            <span className="text-xs text-slate-400 block">À partir de</span>
+                                            <span className="text-xs text-slate-400 block">�DA partir de</span>
                                             <span className="text-lg font-bold text-primary">45€/h</span>
                                         </div>
                                         <button className="bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white px-4 py-2 rounded-lg text-sm font-bold hover:bg-primary hover:text-white transition-colors">
@@ -145,7 +145,7 @@ const ResultatsDeRechercheExperts = () => {
                                     <p className="text-slate-500 dark:text-slate-400 text-sm mb-4">Installation &amp; Dépannage</p>
                                     <div className="flex items-center justify-between mt-auto pt-4 border-t border-slate-100 dark:border-slate-800">
                                         <div>
-                                            <span className="text-xs text-slate-400 block">À partir de</span>
+                                            <span className="text-xs text-slate-400 block">�DA partir de</span>
                                             <span className="text-lg font-bold text-primary">50€/h</span>
                                         </div>
                                         <button className="bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white px-4 py-2 rounded-lg text-sm font-bold hover:bg-primary hover:text-white transition-colors">
@@ -171,7 +171,7 @@ const ResultatsDeRechercheExperts = () => {
                                     <p className="text-slate-500 dark:text-slate-400 text-sm mb-4">Chauffage &amp; Sanitaire</p>
                                     <div className="flex items-center justify-between mt-auto pt-4 border-t border-slate-100 dark:border-slate-800">
                                         <div>
-                                            <span className="text-xs text-slate-400 block">À partir de</span>
+                                            <span className="text-xs text-slate-400 block">�DA partir de</span>
                                             <span className="text-lg font-bold text-primary">42€/h</span>
                                         </div>
                                         <button className="bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white px-4 py-2 rounded-lg text-sm font-bold hover:bg-primary hover:text-white transition-colors">
@@ -197,7 +197,7 @@ const ResultatsDeRechercheExperts = () => {
                                     <p className="text-slate-500 dark:text-slate-400 text-sm mb-4">Urgence Plomberie 24/7</p>
                                     <div className="flex items-center justify-between mt-auto pt-4 border-t border-slate-100 dark:border-slate-800">
                                         <div>
-                                            <span className="text-xs text-slate-400 block">À partir de</span>
+                                            <span className="text-xs text-slate-400 block">�DA partir de</span>
                                             <span className="text-lg font-bold text-primary">60€/h</span>
                                         </div>
                                         <button className="bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white px-4 py-2 rounded-lg text-sm font-bold hover:bg-primary hover:text-white transition-colors">
@@ -223,7 +223,7 @@ const ResultatsDeRechercheExperts = () => {
                                     <p className="text-slate-500 dark:text-slate-400 text-sm mb-4">Rénovation Salles de Bain</p>
                                     <div className="flex items-center justify-between mt-auto pt-4 border-t border-slate-100 dark:border-slate-800">
                                         <div>
-                                            <span className="text-xs text-slate-400 block">À partir de</span>
+                                            <span className="text-xs text-slate-400 block">�DA partir de</span>
                                             <span className="text-lg font-bold text-primary">48€/h</span>
                                         </div>
                                         <button className="bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white px-4 py-2 rounded-lg text-sm font-bold hover:bg-primary hover:text-white transition-colors">
@@ -249,7 +249,7 @@ const ResultatsDeRechercheExperts = () => {
                                     <p className="text-slate-500 dark:text-slate-400 text-sm mb-4">Plombier Chauffagiste Qualifié</p>
                                     <div className="flex items-center justify-between mt-auto pt-4 border-t border-slate-100 dark:border-slate-800">
                                         <div>
-                                            <span className="text-xs text-slate-400 block">À partir de</span>
+                                            <span className="text-xs text-slate-400 block">�DA partir de</span>
                                             <span className="text-lg font-bold text-primary">55€/h</span>
                                         </div>
                                         <button className="bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white px-4 py-2 rounded-lg text-sm font-bold hover:bg-primary hover:text-white transition-colors">

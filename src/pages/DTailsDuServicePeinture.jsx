@@ -258,7 +258,7 @@ const DTailsDuServicePeinture = () => {
 <div>
 <h4 className="font-bold mb-4">Entreprise</h4>
 <ul className="space-y-2 text-sm text-slate-500">
-<li><a className="hover:text-primary transition-colors" href="#">À propos</a></li>
+<li><a className="hover:text-primary transition-colors" href="#">�DA propos</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Notre équipe</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Avis clients</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Contact</a></li>

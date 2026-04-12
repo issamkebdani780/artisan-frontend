@@ -7,6 +7,18 @@ const AdminLayout = ({ children, title = "Admin", subtitle }) => {
   const path = location.pathname;
   const user = apiService.getCurrentUser();
   const navigate = useNavigate();
+  const [theme, setTheme] = React.useState(localStorage.getItem('admin-theme') || 'dark');
+
+  React.useEffect(() => {
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+    localStorage.setItem('admin-theme', theme);
+  }, [theme]);
+
+  const toggleTheme = () => setTheme(prev => prev === 'light' ? 'dark' : 'light');
 
   React.useEffect(() => {
     if (!user || user.role !== 'admin') {
@@ -117,7 +129,15 @@ const AdminLayout = ({ children, title = "Admin", subtitle }) => {
           </div>
           
           <div className="flex items-center gap-4">
-            {/* Notification and Language buttons removed */}
+            <button 
+              onClick={toggleTheme}
+              className="size-11 rounded-2xl bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 flex items-center justify-center text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary hover:border-primary/30 transition-all shadow-sm"
+              title={theme === 'light' ? 'Passer en mode sombre' : 'Passer en mode clair'}
+            >
+              <span className="material-symbols-outlined text-xl">
+                {theme === 'light' ? 'dark_mode' : 'light_mode'}
+              </span>
+            </button>
           </div>
 
         </header>

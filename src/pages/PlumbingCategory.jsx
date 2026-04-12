@@ -117,7 +117,7 @@ const PlumbingCategory = () => {
                                 Détection non-destructive et colmatage immédiat de vos tuyauteries et robinetteries.
                             </p>
 <span className="text-sm font-bold text-primary group-hover:gap-2 flex items-center gap-1 transition-all">
-                                À partir de 89€ <span className="material-symbols-outlined text-sm">chevron_right</span>
+                                �DA partir de 89€ <span className="material-symbols-outlined text-sm">chevron_right</span>
 </span>
 </div>
 {/*  Card 2  */}
@@ -143,7 +143,7 @@ const PlumbingCategory = () => {
                                 Canalisations obstruées, évacuations lentes : intervention haute pression disponible.
                             </p>
 <span className="text-sm font-bold text-primary group-hover:gap-2 flex items-center gap-1 transition-all">
-                                À partir de 120€ <span className="material-symbols-outlined text-sm">chevron_right</span>
+                                �DA partir de 120€ <span className="material-symbols-outlined text-sm">chevron_right</span>
 </span>
 </div>
 </div>
@@ -276,7 +276,7 @@ const PlumbingCategory = () => {
 <div>
 <h5 className="font-bold mb-6">Compagnie</h5>
 <ul className="space-y-4 text-sm text-slate-500 dark:text-slate-400">
-<li><a className="hover:text-primary" href="#">À propos</a></li>
+<li><a className="hover:text-primary" href="#">�DA propos</a></li>
 <li><a className="hover:text-primary" href="#">Nos Réalisations</a></li>
 <li><a className="hover:text-primary" href="#">Recrutement</a></li>
 <li><a className="hover:text-primary" href="#">Contact</a></li>

@@ -135,7 +135,7 @@ const ResultatsDeRechercheArtisansLesMieuxNotes = () => {
 </div>
 <div className="bg-slate-50 dark:bg-slate-800/50 p-3 rounded-lg border-l-4 border-primary/40 italic text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
                                         "Travail d'une précision incroyable pour ma bibliothèque. Jean est ponctuel et très soigneux, je recommande vivement !"
-                                        <span className="block mt-1 font-semibold not-italic text-slate-500 dark:text-slate-500 text-xs">— Marie L.</span>
+                                        <span className="block mt-1 font-semibold not-italic text-slate-500 dark:text-slate-500 text-xs">�DA� Marie L.</span>
 </div>
 <div className="flex items-center justify-between mt-2 pt-3 border-t border-slate-100 dark:border-slate-800">
 <div className="flex gap-4">
@@ -180,7 +180,7 @@ const ResultatsDeRechercheArtisansLesMieuxNotes = () => {
 </div>
 <div className="bg-slate-50 dark:bg-slate-800/50 p-3 rounded-lg border-l-4 border-primary/40 italic text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
                                         "Réactif et très pédagogue sur les explications. L'installation est propre et aux normes. Un vrai pro !"
-                                        <span className="block mt-1 font-semibold not-italic text-slate-500 dark:text-slate-500 text-xs">— Thomas D.</span>
+                                        <span className="block mt-1 font-semibold not-italic text-slate-500 dark:text-slate-500 text-xs">�DA� Thomas D.</span>
 </div>
 <div className="flex items-center justify-between mt-2 pt-3 border-t border-slate-100 dark:border-slate-800">
 <div className="flex gap-4">
@@ -225,7 +225,7 @@ const ResultatsDeRechercheArtisansLesMieuxNotes = () => {
 </div>
 <div className="bg-slate-50 dark:bg-slate-800/50 p-3 rounded-lg border-l-4 border-primary/40 italic text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
                                         "Les pièces de Sophie sont magnifiques et uniques. J'ai aussi pris un cours avec elle, c'était une expérience géniale !"
-                                        <span className="block mt-1 font-semibold not-italic text-slate-500 dark:text-slate-500 text-xs">— Claire G.</span>
+                                        <span className="block mt-1 font-semibold not-italic text-slate-500 dark:text-slate-500 text-xs">�DA� Claire G.</span>
 </div>
 <div className="flex items-center justify-between mt-2 pt-3 border-t border-slate-100 dark:border-slate-800">
 <div className="flex gap-4">

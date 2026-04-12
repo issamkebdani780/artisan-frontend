@@ -106,7 +106,7 @@ const InstallationRobinetterie = () => {
 </div>
 <h3 className="font-bold mb-2">Standard</h3>
 <p className="text-sm text-slate-500 mb-4">Mitigeurs classiques pour évier ou lavabo. Simplicité et efficacité.</p>
-<p className="text-primary font-bold">À partir de 89€</p>
+<p className="text-primary font-bold">�DA partir de 89€</p>
 </div>
 <div className="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-primary transition-colors">
 <div className="size-12 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center mb-4">
@@ -114,7 +114,7 @@ const InstallationRobinetterie = () => {
 </div>
 <h3 className="font-bold mb-2">Pack Installation</h3>
 <p className="text-sm text-slate-500 mb-4">Matériel inclus + pose. La solution clé en main pour votre cuisine ou bain.</p>
-<p className="text-primary font-bold">À partir de 159€</p>
+<p className="text-primary font-bold">�DA partir de 159€</p>
 </div>
 <div className="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-primary transition-colors">
 <div className="size-12 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center mb-4">
@@ -176,7 +176,7 @@ const InstallationRobinetterie = () => {
 <span className="text-xs font-bold ml-1">4.9 (124 avis)</span>
 </div>
 </div>
-<p className="text-xs text-slate-500">Expert Robinetterie &amp; Sanitaire • Disponible aujourd'hui</p>
+<p className="text-xs text-slate-500">Expert Robinetterie &amp; Sanitaire �DA� Disponible aujourd'hui</p>
 <div className="flex items-center gap-2 mt-2">
 <span className="text-[10px] bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded">RGE</span>
 <span className="text-[10px] bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded">Garantie Décennale</span>
@@ -193,7 +193,7 @@ const InstallationRobinetterie = () => {
 <span className="text-xs font-bold ml-1">4.8 (89 avis)</span>
 </div>
 </div>
-<p className="text-xs text-slate-500">Spécialiste installation cuisine • Prochain RDV demain</p>
+<p className="text-xs text-slate-500">Spécialiste installation cuisine �DA� Prochain RDV demain</p>
 <div className="flex items-center gap-2 mt-2">
 <span className="text-[10px] bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded">Qualibat</span>
 </div>
@@ -256,7 +256,7 @@ const InstallationRobinetterie = () => {
 <div>
 <h5 className="text-white font-bold mb-6">Entreprise</h5>
 <ul className="space-y-4 text-sm">
-<li><a className="hover:text-primary transition-colors" href="#">À Propos</a></li>
+<li><a className="hover:text-primary transition-colors" href="#">�DA Propos</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Recrutement</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Mentions Légales</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Contact</a></li>

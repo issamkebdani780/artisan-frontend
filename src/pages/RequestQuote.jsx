@@ -13,6 +13,14 @@ const RequestQuote = () => {
   const [success, setSuccess] = useState(false);
   const navigate = useNavigate();
 
+  // Redirect if not logged in
+  useEffect(() => {
+    const user = localStorage.getItem('user');
+    if (!user) {
+      navigate('/login/client');
+    }
+  }, [navigate]);
+
   // Location data
   const [wilayas, setWilayas] = useState([]);
   const [communes, setCommunes] = useState([]);
@@ -230,7 +238,7 @@ const RequestQuote = () => {
                     <span className="material-symbols-outlined">person</span>
                   </div>
                   <p className="text-primary font-black uppercase tracking-tight text-sm">
-                    Ã€ l'attention de : <span className="underline decoration-2 underline-offset-4">{decodeURIComponent(searchParams.get('artisanName'))}</span>
+                    ÃDA l'attention de : <span className="underline decoration-2 underline-offset-4">{decodeURIComponent(searchParams.get('artisanName'))}</span>
                   </p>
                 </div>
               )}

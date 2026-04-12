@@ -90,7 +90,7 @@ const DetailsDuServicePlomberie = () => {
 <div className="p-6 bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800">
 <div className="flex justify-between items-start mb-4">
 <h3 className="text-lg font-bold">Réparation de fuite</h3>
-<span className="text-primary font-bold">À partir de 45€</span>
+<span className="text-primary font-bold">�DA partir de 45€</span>
 </div>
 <ul className="space-y-3 mb-6 text-slate-600 dark:text-slate-400 text-sm">
 <li className="flex items-center gap-2"><span className="material-symbols-outlined text-green-500 text-lg">check_circle</span> Diagnostic inclus</li>
@@ -102,7 +102,7 @@ const DetailsDuServicePlomberie = () => {
 <div className="p-6 bg-primary text-white rounded-xl shadow-xl scale-105 border-2 border-primary">
 <div className="flex justify-between items-start mb-4">
 <h3 className="text-lg font-bold">Installation robinet</h3>
-<span className="text-white font-bold">À partir de 60€</span>
+<span className="text-white font-bold">�DA partir de 60€</span>
 </div>
 <ul className="space-y-3 mb-6 text-white/80 text-sm">
 <li className="flex items-center gap-2"><span className="material-symbols-outlined text-white text-lg">check_circle</span> Dépose ancien robinet</li>
@@ -114,7 +114,7 @@ const DetailsDuServicePlomberie = () => {
 <div className="p-6 bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800">
 <div className="flex justify-between items-start mb-4">
 <h3 className="text-lg font-bold">Débouchage canalisation</h3>
-<span className="text-primary font-bold">À partir de 50€</span>
+<span className="text-primary font-bold">�DA partir de 50€</span>
 </div>
 <ul className="space-y-3 mb-6 text-slate-600 dark:text-slate-400 text-sm">
 <li className="flex items-center gap-2"><span className="material-symbols-outlined text-green-500 text-lg">check_circle</span> Utilisation furet/pompe</li>

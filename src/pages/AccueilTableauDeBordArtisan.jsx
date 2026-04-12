@@ -145,7 +145,7 @@ const AccueilTableauDeBordArtisan = () => {
 </div>
 <div className="flex-1">
 <h4 className="font-bold text-slate-900 dark:text-white">R√©novation Cuisine - Villa Arras</h4>
-<p className="text-sm text-slate-500">Client: Jean Dupont ‚Ä¢ 12 Oct 2023</p>
+<p className="text-sm text-slate-500">Client: Jean Dupont ‚DA¢ 12 Oct 2023</p>
 </div>
 <div className="text-right">
 <span className="px-3 py-1 rounded-full text-xs font-bold bg-blue-100 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400">En cours</span>
@@ -159,7 +159,7 @@ const AccueilTableauDeBordArtisan = () => {
 </div>
 <div className="flex-1">
 <h4 className="font-bold text-slate-900 dark:text-white">Installation √âlectrique Bureau</h4>
-<p className="text-sm text-slate-500">Client: SARL Tech ‚Ä¢ 09 Oct 2023</p>
+<p className="text-sm text-slate-500">Client: SARL Tech ‚DA¢ 09 Oct 2023</p>
 </div>
 <div className="text-right">
 <span className="px-3 py-1 rounded-full text-xs font-bold bg-green-100 text-green-600 dark:bg-green-900/30 dark:text-green-400">Termin√©</span>
@@ -173,7 +173,7 @@ const AccueilTableauDeBordArtisan = () => {
 </div>
 <div className="flex-1">
 <h4 className="font-bold text-slate-900 dark:text-white">R√©paration Fuite Canalisation</h4>
-<p className="text-sm text-slate-500">Client: Marie Curie ‚Ä¢ 05 Oct 2023</p>
+<p className="text-sm text-slate-500">Client: Marie Curie ‚DA¢ 05 Oct 2023</p>
 </div>
 <div className="text-right">
 <span className="px-3 py-1 rounded-full text-xs font-bold bg-orange-100 text-orange-600 dark:bg-orange-900/30 dark:text-orange-400">En attente</span>
@@ -197,7 +197,7 @@ const AccueilTableauDeBordArtisan = () => {
 </div>
 <div className="flex-1 min-w-0">
 <p className="text-sm font-bold text-slate-900 dark:text-white truncate">Visite technique - Loft Paris</p>
-<p className="text-xs text-slate-500 mt-0.5">09:00 - 10:30 ‚Ä¢ 2.5km</p>
+<p className="text-xs text-slate-500 mt-0.5">09:00 - 10:30 ‚DA¢ 2.5km</p>
 </div>
 <button className="size-8 flex items-center justify-center rounded-lg bg-white dark:bg-slate-900 text-slate-400 hover:text-primary border border-slate-200 dark:border-slate-700">
 <span className="material-symbols-outlined text-sm">navigation</span>
@@ -211,7 +211,7 @@ const AccueilTableauDeBordArtisan = () => {
 </div>
 <div className="flex-1 min-w-0">
 <p className="text-sm font-bold text-slate-900 dark:text-white truncate">Signature Contrat - Agence Immo</p>
-<p className="text-xs text-slate-500 mt-0.5">14:00 - 15:00 ‚Ä¢ Zoom</p>
+<p className="text-xs text-slate-500 mt-0.5">14:00 - 15:00 ‚DA¢ Zoom</p>
 </div>
 <button className="size-8 flex items-center justify-center rounded-lg bg-white dark:bg-slate-900 text-slate-400 hover:text-primary border border-slate-200 dark:border-slate-700">
 <span className="material-symbols-outlined text-sm">videocam</span>
@@ -225,7 +225,7 @@ const AccueilTableauDeBordArtisan = () => {
 </div>
 <div className="flex-1 min-w-0">
 <p className="text-sm font-bold text-slate-900 dark:text-white truncate">Maintenance Climatisation</p>
-<p className="text-xs text-slate-500 mt-0.5">10:30 - 12:00 ‚Ä¢ 5.0km</p>
+<p className="text-xs text-slate-500 mt-0.5">10:30 - 12:00 ‚DA¢ 5.0km</p>
 </div>
 <button className="size-8 flex items-center justify-center rounded-lg bg-white dark:bg-slate-900 text-slate-400 hover:text-primary border border-slate-200 dark:border-slate-700">
 <span className="material-symbols-outlined text-sm">navigation</span>

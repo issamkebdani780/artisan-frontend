@@ -267,7 +267,7 @@ const MessagesEtLitiges = () => {
 </div>
 <div className="min-w-0">
 <p className="text-[11px] font-bold truncate">Plans_cuisine_v2.pdf</p>
-<p className="text-[9px] text-slate-400">2.4 MB ‚Ä¢ 22 Oct</p>
+<p className="text-[9px] text-slate-400">2.4 MB ‚DA¢ 22 Oct</p>
 </div>
 </div>
 <div className="flex items-center gap-3 p-2 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg cursor-pointer">
@@ -276,7 +276,7 @@ const MessagesEtLitiges = () => {
 </div>
 <div className="min-w-0">
 <p className="text-[11px] font-bold truncate">Inspiration_ilot.jpg</p>
-<p className="text-[9px] text-slate-400">1.1 MB ‚Ä¢ Hier</p>
+<p className="text-[9px] text-slate-400">1.1 MB ‚DA¢ Hier</p>
 </div>
 </div>
 </div>

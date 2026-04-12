@@ -128,17 +128,17 @@ const TransportDObjetsLourds = () => {
 <tbody className="divide-y divide-slate-200 dark:divide-slate-700">
 <tr>
 <td className="px-6 py-4 font-medium">Piano Droit</td>
-<td className="px-6 py-4 text-primary font-bold">À partir de 150€</td>
+<td className="px-6 py-4 text-primary font-bold">�DA partir de 150€</td>
 <td className="px-6 py-4 text-sm text-slate-500">Protection housse incluse</td>
 </tr>
 <tr>
 <td className="px-6 py-4 font-medium">Piano à Queue</td>
-<td className="px-6 py-4 text-primary font-bold">À partir de 350€</td>
+<td className="px-6 py-4 text-primary font-bold">�DA partir de 350€</td>
 <td className="px-6 py-4 text-sm text-slate-500">Démontage lyre et pieds</td>
 </tr>
 <tr>
 <td className="px-6 py-4 font-medium">Coffre-fort (&lt; 200kg)</td>
-<td className="px-6 py-4 text-primary font-bold">À partir de 200€</td>
+<td className="px-6 py-4 text-primary font-bold">�DA partir de 200€</td>
 <td className="px-6 py-4 text-sm text-slate-500">Ancrage possible sur demande</td>
 </tr>
 </tbody>

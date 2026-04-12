@@ -104,7 +104,7 @@ const ParametresSecuriteAdmin = () => {
 <div className="grid grid-cols-1 md:grid-cols-4 gap-4 items-center">
 <label className="text-sm font-bold text-slate-500 uppercase tracking-wider" htmlFor="current-password">Actuel</label>
 <div className="md:col-span-3">
-<input className="w-full bg-slate-50 dark:bg-slate-800 border-none rounded-xl p-3 text-sm focus:ring-2 focus:ring-purple-500 transition-all outline-none" id="current-password" placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢" type="password"/>
+<input className="w-full bg-slate-50 dark:bg-slate-800 border-none rounded-xl p-3 text-sm focus:ring-2 focus:ring-purple-500 transition-all outline-none" id="current-password" placeholder="âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢" type="password"/>
 </div>
 </div>
 <div className="grid grid-cols-1 md:grid-cols-4 gap-4 items-center">
@@ -151,7 +151,7 @@ const ParametresSecuriteAdmin = () => {
 <span className="material-symbols-outlined text-slate-400">laptop_mac</span>
 <div>
 <p className="text-sm font-bold">MacBook Pro - Chrome</p>
-<p className="text-xs text-slate-500">Paris, France â€¢ En ce moment mÃªme</p>
+<p className="text-xs text-slate-500">Paris, France âDA¢ En ce moment mÃªme</p>
 </div>
 </div>
 <span className="text-xs font-bold text-green-500 bg-green-50 dark:bg-green-500/10 px-2 py-1 rounded">Session actuelle</span>
@@ -161,7 +161,7 @@ const ParametresSecuriteAdmin = () => {
 <span className="material-symbols-outlined text-slate-400">smartphone</span>
 <div>
 <p className="text-sm font-bold">iPhone 14 - App Mobile</p>
-<p className="text-xs text-slate-500">Lyon, France â€¢ Il y a 2 heures</p>
+<p className="text-xs text-slate-500">Lyon, France âDA¢ Il y a 2 heures</p>
 </div>
 </div>
 <button className="text-xs font-bold text-red-500 hover:text-red-600 transition-colors">DÃ©connecter</button>
