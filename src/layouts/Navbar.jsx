@@ -2,23 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import apiService from '../services/api';
 import logo from '../assets/logo.png';
+import ThemeToggle from '../components/ThemeToggle';
 
 const Navbar = () => {
   const [user, setUser] = useState(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [theme, setTheme] = useState(localStorage.getItem('admin-theme') || 'dark');
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    if (theme === 'dark') {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-    localStorage.setItem('admin-theme', theme);
-  }, [theme]);
-
-  const toggleTheme = () => setTheme(prev => prev === 'light' ? 'dark' : 'light');
 
   useEffect(() => {
     const storedUser = localStorage.getItem('user');
@@ -51,7 +39,7 @@ const Navbar = () => {
   ];
 
   return (
-    <header className="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-100 px-6 md:px-20 py-2 bg-white fixed top-0 left-0 right-0 z-50 shadow-sm transition-all">
+    <header className="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-100 dark:border-white/5 px-6 md:px-20 py-2 bg-white dark:bg-slate-900 fixed top-0 left-0 right-0 z-50 shadow-sm transition-all">
       <Link to="/" className="flex items-center hover:opacity-80 transition-opacity z-50 bg-white rounded-2xl p-1 shadow-sm border border-slate-50 overflow-hidden">
         <img src={logo} alt="Mihnati Logo" className="h-10 md:h-16 w-auto object-contain" />
       </Link>
@@ -61,7 +49,7 @@ const Navbar = () => {
         {navLinks.map((link) => (
           <Link
             key={link.to}
-            className="text-slate-600 hover:text-primary text-sm font-bold transition-colors uppercase tracking-tight"
+            className="text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-bold transition-colors uppercase tracking-tight"
             to={link.to}
           >
             {link.name}
@@ -77,12 +65,12 @@ const Navbar = () => {
                   to={user.role === 'admin' ? '/dashboard/admin' : user.role === 'artisan' ? '/dashboard/artisan' : '/dashboard/client/inbox'}
                   className="flex items-center gap-2 hover:opacity-80 transition-opacity"
                 >
-                  <div className="w-9 h-9 rounded-full bg-slate-50 flex items-center justify-center text-primary border border-slate-100 shadow-sm">
+                  <div className="w-9 h-9 rounded-full bg-slate-50 dark:bg-white/5 flex items-center justify-center text-primary border border-slate-100 dark:border-white/5 shadow-sm">
                     <span className="material-symbols-outlined text-xl">account_circle</span>
                   </div>
                   <div className="flex flex-col items-start leading-tight">
                     <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest">{user.role}</span>
-                    <span className="text-sm font-bold text-slate-900 hidden lg:inline">{user.name}</span>
+                    <span className="text-sm font-bold text-slate-900 dark:text-white hidden lg:inline">{user.name}</span>
                   </div>
                 </Link>
                 <button
@@ -95,7 +83,7 @@ const Navbar = () => {
               </div>
             ) : (
               <div className="flex items-center gap-3">
-                <Link to="/login/artisan" className="hidden lg:flex items-center gap-2 px-4 py-2 text-slate-500 hover:text-primary transition-all font-bold text-sm">
+                <Link to="/login/artisan" className="hidden lg:flex items-center gap-2 px-4 py-2 text-slate-500 dark:text-slate-400 hover:text-primary transition-all font-bold text-sm">
                   <span className="material-symbols-outlined text-xl">construction</span>
                   Espace Artisan
                 </Link>
@@ -106,18 +94,10 @@ const Navbar = () => {
             )}
           </div>
 
-          <button 
-            onClick={toggleTheme}
-            className="p-2 text-slate-500 hover:text-primary transition-colors"
-            title={theme === 'light' ? 'Mode sombre' : 'Mode clair'}
-          >
-            <span className="material-symbols-outlined text-2xl">
-              {theme === 'light' ? 'dark_mode' : 'light_mode'}
-            </span>
-          </button>
+          <ThemeToggle className="ml-2" />
 
           <button
-            className="md:hidden p-2 text-slate-500 hover:bg-slate-50 rounded-lg transition-colors"
+            className="md:hidden p-2 text-slate-500 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-white/5 rounded-lg transition-colors"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             <span className="material-symbols-outlined text-2xl">
@@ -128,12 +108,12 @@ const Navbar = () => {
 
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
-        <div className="fixed inset-0 bg-white z-40 md:hidden flex flex-col pt-24 px-6 gap-6 animate-in slide-in-from-top duration-300">
+        <div className="fixed inset-0 bg-white dark:bg-slate-900 z-40 md:hidden flex flex-col pt-24 px-6 gap-6 animate-in slide-in-from-top duration-300">
           <nav className="flex flex-col gap-4">
             {navLinks.map((link) => (
               <Link
                 key={link.to}
-                className="text-xl font-bold text-slate-900 border-b border-slate-50 pb-4"
+                className="text-xl font-bold text-slate-900 dark:text-white border-b border-slate-50 dark:border-white/5 pb-4"
                 to={link.to}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
@@ -147,15 +127,15 @@ const Navbar = () => {
               <>
                 <Link
                   to={user.role === 'admin' ? '/dashboard/admin' : user.role === 'artisan' ? '/dashboard/artisan' : '/dashboard/client/inbox'}
-                  className="flex items-center gap-4 p-4 bg-slate-50 rounded-2xl"
+                  className="flex items-center gap-4 p-4 bg-slate-50 dark:bg-white/5 rounded-2xl"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center text-primary shadow-sm">
+                  <div className="w-12 h-12 rounded-full bg-white dark:bg-slate-800 flex items-center justify-center text-primary shadow-sm">
                     <span className="material-symbols-outlined text-2xl">account_circle</span>
                   </div>
                   <div>
                     <p className="text-xs font-black text-slate-400 uppercase tracking-widest">{user.role}</p>
-                    <p className="font-bold text-slate-900">{user.name}</p>
+                    <p className="font-bold text-slate-900 dark:text-white">{user.name}</p>
                   </div>
                 </Link>
                 <button

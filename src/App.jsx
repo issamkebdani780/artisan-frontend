@@ -47,6 +47,8 @@ import ForgotPassword from './pages/ForgotPassword';
 
 
 
+import ScrollToTop from './components/ScrollToTop';
+
 function App() {
   React.useEffect(() => {
     const theme = localStorage.getItem('admin-theme') || 'dark';
@@ -60,6 +62,7 @@ function App() {
   return (
     <ErrorBoundary>
       <Router>
+        <ScrollToTop />
         <Routes>
         {/* Public Routes - Wrapped in MainLayout */}
         <Route path="/" element={<MainLayout><Home /></MainLayout>} />

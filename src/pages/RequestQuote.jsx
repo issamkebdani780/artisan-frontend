@@ -51,14 +51,13 @@ const RequestQuote = () => {
         const data = await apiService.getCategories();
         setCategories(data);
         
-        // If subcategoryId is provided, we need to find its parent category
         if (subcategoryIdFromUrl) {
           const subDetails = await apiService.getSubcategoryDetails(subcategoryIdFromUrl);
           if (subDetails && subDetails.category_id) {
             setFormData(prev => ({
               ...prev,
               category_id: subDetails.category_id,
-              title: subDetails.name || subDetails.title || prev.title // Optionally set title
+              title: subDetails.name || subDetails.title || prev.title 
             }));
           }
         }
@@ -82,7 +81,6 @@ const RequestQuote = () => {
     };
     fetchWilayas();
 
-    // Fill user info automatically if logged in
     const user = JSON.parse(localStorage.getItem('user'));
     if (user) {
       setFormData(prev => ({
@@ -93,7 +91,6 @@ const RequestQuote = () => {
         commune_id: user.commune_id || ''
       }));
 
-      // If user has a wilaya, fetch its communes
       if (user.wilaya_id) {
         apiService.getCommunes(user.wilaya_id)
           .then(data => setCommunes(data))
@@ -102,7 +99,6 @@ const RequestQuote = () => {
     }
   }, []);
 
-  // Handle wilaya change
   const handleWilayaChange = async (e) => {
     const wilayaId = e.target.value;
     setFormData({ ...formData, wilaya_id: wilayaId, commune_id: '' });
@@ -149,13 +145,12 @@ const RequestQuote = () => {
       return;
     }
 
-    // Date validation
     if (formData.date) {
       const selectedDate = new Date(formData.date);
       const today = new Date();
       today.setHours(0, 0, 0, 0);
       if (selectedDate < today) {
-        alert('La date d\'intervention ne peut pas Ãªtre dans le passÃ©');
+        alert("La date d'intervention ne peut pas être dans le passé");
         setLoading(false);
         return;
       }
@@ -165,7 +160,6 @@ const RequestQuote = () => {
     try {
       let response;
       if (serviceId) {
-        // Direct Booking
         const bookingData = {
           service_id: parseInt(serviceId),
           booking_date: formData.date,
@@ -177,7 +171,6 @@ const RequestQuote = () => {
           setTimeout(() => navigate('/dashboard/client/bookings'), 3000);
         }
       } else {
-        // Request Quote (Devis)
         const devisData = {
           category_id: formData.category_id || 1, 
           description: formData.description,
@@ -195,7 +188,7 @@ const RequestQuote = () => {
       }
     } catch (err) {
       console.error(err);
-      alert('Erreur lors de l\'envoi de la demande');
+      alert("Erreur lors de l'envoi de la demande");
     } finally {
       setLoading(false);
     }
@@ -208,9 +201,9 @@ const RequestQuote = () => {
           <div className="w-24 h-24 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-8 animate-bounce">
             <span className="material-symbols-outlined text-5xl">check_circle</span>
           </div>
-          <h2 className="text-3xl font-black text-slate-900 mb-4">Demande EnvoyÃ©e !</h2>
+          <h2 className="text-3xl font-black text-slate-900 mb-4">Demande Envoyée !</h2>
           <p className="text-slate-500 mb-8 leading-relaxed">
-            Votre demande de devis a Ã©tÃ© transmise avec succÃ¨s. L'artisan vous contactera sous peu.
+            Votre demande de devis a été transmise avec succès. L'artisan vous contactera sous peu.
           </p>
           <div className="h-2 bg-slate-100 rounded-full overflow-hidden">
             <div className="h-full bg-emerald-500 animate-[progress_3s_linear]"></div>
@@ -226,11 +219,10 @@ const RequestQuote = () => {
       <main className="flex-1 px-4 py-16 md:px-20 lg:px-40 flex flex-col items-center">
         <div className="max-w-7xl w-full flex flex-col lg:flex-row gap-16">
           
-          {/* Main Form Section */}
           <div className="flex-1 space-y-12">
             <section>
               <h1 className="text-4xl md:text-5xl font-black mb-4 text-slate-900 uppercase tracking-tight">Parlez-nous de <br /><span className="text-primary italic">votre projet</span></h1>
-              <p className="text-slate-500 text-lg font-bold">Remplissez ce formulaire pour recevoir un devis personnalisÃ© sous 24h.</p>
+              <p className="text-slate-500 text-lg font-bold">Remplissez ce formulaire pour recevoir un devis personnalisé sous 24h.</p>
               
               {searchParams.get('artisanName') && (
                 <div className="mt-8 p-6 bg-primary/5 border-l-4 border-primary rounded-r-[32px] flex items-center gap-4 shadow-sm">
@@ -238,7 +230,7 @@ const RequestQuote = () => {
                     <span className="material-symbols-outlined">person</span>
                   </div>
                   <p className="text-primary font-black uppercase tracking-tight text-sm">
-                    ÃDA l'attention de : <span className="underline decoration-2 underline-offset-4">{decodeURIComponent(searchParams.get('artisanName'))}</span>
+                    À l'attention de : <span className="underline decoration-2 underline-offset-4">{decodeURIComponent(searchParams.get('artisanName'))}</span>
                   </p>
                 </div>
               )}
@@ -246,10 +238,9 @@ const RequestQuote = () => {
             
             <form className="space-y-12" onSubmit={handleSubmit}>
               
-              {/* Project Details */}
               <div className="space-y-8 bg-slate-50 p-8 md:p-10 rounded-[40px] border border-slate-100">
                 <h3 className="text-xs font-black text-slate-400 uppercase tracking-[0.3em] mb-4 flex items-center gap-3">
-                  <span className="size-6 bg-primary text-white rounded-lg flex items-center justify-center text-[10px]">1</span> DÃ‰TAILS DU PROJET
+                  <span className="size-6 bg-primary text-white rounded-lg flex items-center justify-center text-[10px]">1</span> DÉTAILS DU PROJET
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <label className="flex flex-col gap-3">
@@ -257,35 +248,35 @@ const RequestQuote = () => {
                     <input 
                       type="text" 
                       required
-                      placeholder="Ex: RÃ©novation salle de bain" 
+                      placeholder="Ex: Rénovation salle de bain" 
                       className="px-6 rounded-2xl border border-slate-100 bg-white text-slate-900 focus:border-primary/30 outline-none h-16 transition-all font-bold shadow-sm" 
                       value={formData.title}
                       onChange={(e) => setFormData({...formData, title: e.target.value})}
                     />
                   </label>
                   <label className="flex flex-col gap-3">
-                    <span className="text-sm font-black text-slate-900 uppercase tracking-tight">CatÃ©gorie</span>
+                    <span className="text-sm font-black text-slate-900 uppercase tracking-tight">Catégorie</span>
                     <select 
                       className="px-6 rounded-2xl border border-slate-100 bg-white text-slate-900 focus:border-primary/30 outline-none h-16 transition-all font-bold shadow-sm"
                       value={formData.category_id}
                       onChange={(e) => setFormData({...formData, category_id: e.target.value})}
                     >
-                      <option value="">SÃ©lectionner une catÃ©gorie</option>
+                      <option value="">Sélectionner une catégorie</option>
                       {categories.filter(c => {
                         if (!artisan || !artisan.specialty) return true;
                         
                         const categoryMap = {
-                            'Menuiserie et Bois': ['Menuisier', 'Presseur', 'DÃ©corateur bois', 'fenÃªtres en bois'],
+                            'Menuiserie et Bois': ['Menuisier', 'Presseur', 'Décorateur bois', 'fenêtres en bois'],
                             'Ferronnerie et Soudure': ['Ferronnier', 'Soudeur', 'Chaudronnier'],
-                            'Plomberie et RÃ©seaux': ['Plombier', 'Monteur de rÃ©seaux', 'tuyauterie'],
-                            'Ã‰lectricitÃ© et Ã‰nergie': ['Ã‰lectricien', 'solaire', 'cÃ¢bles', 'tableaux Ã©lectriques'],
-                            'Peinture et PlÃ¢tre': ['Peintre', 'PlÃ¢trier', 'Marbrier', 'Vernisseur'],
-                            'MaÃ§onnerie et Finitions': ['MaÃ§on', 'Carreleur', 'CrÃ©pisseur', 'isolation'],
-                            'MÃ©canique et Machines': ['MÃ©canicien', 'moteurs', 'Ã©lectrogÃ¨nes'],
-                            'Couture et Cuir': ['Tailleur', 'CouturiÃ¨re', 'RapiÃ©ceur', 'Cordonnier', 'Maroquinier'],
+                            'Plomberie et Réseaux': ['Plombier', 'Monteur de réseaux', 'tuyauterie'],
+                            'Électricité et Énergie': ['Électricien', 'solaire', 'câbles', 'tableaux électriques'],
+                            'Peinture et Plâtre': ['Peintre', 'Plâtrier', 'Marbrier', 'Vernisseur'],
+                            'Maçonnerie et Finitions': ['Maçon', 'Carreleur', 'Crépisseur', 'isolation'],
+                            'Mécanique et Machines': ['Mécanicien', 'moteurs', 'électrogènes'],
+                            'Couture et Cuir': ['Tailleur', 'Couturière', 'Rapiéceur', 'Cordonnier', 'Maroquinier'],
                             'Verre et Miroiterie': ['verre', 'Verrier', 'Miroitier', 'Vitrier'],
-                            'MÃ©tiers alimentaires artisanaux': ['Boulanger', 'PÃ¢tissier', 'Fromager', 'Apiculteur', 'conserveur'],
-                            'Jardinage et Espaces Verts': ['Jardinier', 'espaces verts', 'jardins', 'irrigation', 'Ã‰lagueur', 'palmiers']
+                            'Métiers alimentaires artisanaux': ['Boulanger', 'Pâtissier', 'Fromager', 'Apiculteur', 'conserveur'],
+                            'Jardinage et Espaces Verts': ['Jardinier', 'espaces verts', 'jardins', 'irrigation', 'Élagueur', 'palmiers']
                         };
                         const keys = categoryMap[c.name] || [c.name.substring(0, 5).toLowerCase()];
                         const spec = artisan.specialty.toLowerCase();
@@ -296,7 +287,7 @@ const RequestQuote = () => {
                     </select>
                   </label>
                   <label className="flex flex-col gap-3 md:col-span-2">
-                    <span className="text-sm font-black text-slate-900 uppercase tracking-tight">TÃ©lÃ©phone</span>
+                    <span className="text-sm font-black text-slate-900 uppercase tracking-tight">Téléphone</span>
                     <div className="relative">
                       <span className="absolute inset-y-0 left-6 flex items-center text-slate-300">
                         <span className="material-symbols-outlined">call</span>
@@ -314,7 +305,6 @@ const RequestQuote = () => {
                 </div>
               </div>
 
-              {/* Description Section */}
               <div className="space-y-8 bg-slate-50 p-8 md:p-10 rounded-[40px] border border-slate-100">
                 <h3 className="text-xs font-black text-slate-400 uppercase tracking-[0.3em] mb-4 flex items-center gap-3">
                   <span className="size-6 bg-primary text-white rounded-lg flex items-center justify-center text-[10px]">2</span> VOTRE BESOIN
@@ -324,7 +314,7 @@ const RequestQuote = () => {
                   <textarea 
                     rows="5" 
                     required
-                    placeholder="DÃ©crivez prÃ©cisÃ©ment votre projet..." 
+                    placeholder="Décrivez précisément votre projet..." 
                     className="rounded-[32px] border border-slate-100 bg-white text-slate-900 focus:border-primary/30 outline-none p-8 transition-all font-bold shadow-sm"
                     value={formData.description}
                     onChange={(e) => setFormData({...formData, description: e.target.value})}
@@ -332,7 +322,6 @@ const RequestQuote = () => {
                 </label>
               </div>
 
-              {/* Location */}
               <div className="space-y-8 bg-slate-50 p-8 md:p-10 rounded-[40px] border border-slate-100">
                 <h3 className="text-xs font-black text-slate-400 uppercase tracking-[0.3em] mb-4 flex items-center gap-3">
                   <span className="size-6 bg-primary text-white rounded-lg flex items-center justify-center text-[10px]">3</span> LOCALISATION
@@ -346,7 +335,7 @@ const RequestQuote = () => {
                       value={formData.wilaya_id}
                       onChange={handleWilayaChange}
                     >
-                      <option value="">SÃ©lectionnez une wilaya</option>
+                      <option value="">Sélectionnez une wilaya</option>
                       {wilayas.map(wilaya => (
                         <option key={wilaya.id} value={wilaya.id}>{wilaya.name}</option>
                       ))}
@@ -361,7 +350,7 @@ const RequestQuote = () => {
                       value={formData.commune_id}
                       onChange={(e) => setFormData({...formData, commune_id: e.target.value})}
                     >
-                      <option value="">SÃ©lectionnez une commune</option>
+                      <option value="">Sélectionnez une commune</option>
                       {communes.map(commune => (
                         <option key={commune.id} value={commune.id}>{commune.name}</option>
                       ))}
@@ -376,7 +365,7 @@ const RequestQuote = () => {
                       <input 
                         type="text" 
                         required
-                        placeholder="NumÃ©ro, rue, quartier..." 
+                        placeholder="Numéro, rue, quartier..." 
                         className="w-full pl-14 pr-6 rounded-2xl border border-slate-100 bg-white text-slate-900 focus:border-primary/30 outline-none h-16 transition-all font-bold shadow-sm" 
                         value={formData.address}
                         onChange={(e) => setFormData({...formData, address: e.target.value})}
@@ -386,10 +375,9 @@ const RequestQuote = () => {
                 </div>
               </div>
 
-              {/* Budget & Timing */}
               <div className="space-y-8 bg-slate-50 p-8 md:p-10 rounded-[40px] border border-slate-100">
                 <h3 className="text-xs font-black text-slate-400 uppercase tracking-[0.3em] mb-4 flex items-center gap-3">
-                  <span className="size-6 bg-primary text-white rounded-lg flex items-center justify-center text-[10px]">4</span> BUDGET & DÃ‰LAI
+                  <span className="size-6 bg-primary text-white rounded-lg flex items-center justify-center text-[10px]">4</span> BUDGET & DÉLAI
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <label className="flex flex-col gap-3">
@@ -404,7 +392,7 @@ const RequestQuote = () => {
                     />
                   </label>
                   <label className="flex flex-col gap-3">
-                    <span className="text-sm font-black text-slate-900 uppercase tracking-tight">DÃ©lai souhaitÃ©</span>
+                    <span className="text-sm font-black text-slate-900 uppercase tracking-tight">Délai souhaité</span>
                     <input 
                       type="date" 
                       required
@@ -437,7 +425,6 @@ const RequestQuote = () => {
             </form>
           </div>
 
-          {/* Sidebar: Summary */}
           <aside className="w-full lg:w-[400px]">
             <div className="sticky top-32 space-y-8">
               <div className="bg-slate-50 rounded-[50px] border border-slate-100 p-10 md:p-12">
@@ -446,15 +433,15 @@ const RequestQuote = () => {
                     <span className="material-symbols-outlined text-3xl font-black">lock</span>
                   </div>
                   <div>
-                    <h4 className="font-black text-xl text-slate-900 uppercase tracking-tight">SÃ©curisÃ©</h4>
+                    <h4 className="font-black text-xl text-slate-900 uppercase tracking-tight">Sécurisé</h4>
                     <p className="text-xs font-black text-slate-400 uppercase tracking-widest">Garantie Mihnati</p>
                   </div>
                 </div>
 
                 <div className="space-y-8">
                   {[
-                    { icon: 'verified', title: 'Experts VÃ©rifiÃ©s', desc: 'Certification rigoureuse', color: 'text-emerald-500' },
-                    { icon: 'bolt', title: 'Moins de 24h', desc: 'RÃ©ponse ultra rapide', color: 'text-amber-500' },
+                    { icon: 'verified', title: 'Experts Vérifiés', desc: 'Certification rigoureuse', color: 'text-emerald-500' },
+                    { icon: 'bolt', title: 'Moins de 24h', desc: 'Réponse ultra rapide', color: 'text-amber-500' },
                     { icon: 'payments', title: 'Prix Juste', desc: 'Devis sans engagement', color: 'text-blue-500' }
                   ].map((feat, idx) => (
                     <div key={idx} className="flex items-start gap-5">
@@ -470,7 +457,7 @@ const RequestQuote = () => {
                 </div>
 
                 <div className="mt-12 p-8 bg-white rounded-3xl italic text-slate-500 text-sm font-bold border-l-4 border-primary shadow-sm leading-relaxed">
-                  "Confiez-nous vos projets, nous trouvons pour vous les meilleurs talents algÃ©riens."
+                  "Confiez-nous vos projets, nous trouvons pour vous les meilleurs talents algériens."
                 </div>
               </div>
             </div>
