@@ -463,6 +463,15 @@ const apiService = {
     return handleResponse(res);
   },
 
+  processPayment: async (paymentData) => {
+    const res = await fetch(`${BASE_URL}/payments`, {
+      method: 'POST',
+      headers: getAuthHeaders(),
+      body: JSON.stringify(paymentData),
+    });
+    return handleResponse(res);
+  },
+
   getAllDisputes: async () => {
     const res = await fetch(`${BASE_URL}/admin/disputes`, {
       headers: getAuthHeaders(),

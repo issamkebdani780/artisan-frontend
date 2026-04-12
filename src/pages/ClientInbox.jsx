@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import apiService from '../services/api';
 import ClientLayout from '../layouts/ClientLayout';
+import PaymentModal from '../components/PaymentModal';
 
 const ClientInbox = () => {
   const [bookings, setBookings] = useState([]);
@@ -10,6 +11,8 @@ const ClientInbox = () => {
   const [reviewForm, setReviewForm] = useState({ rating: 0, comment: '' });
   const [reviewSubmitting, setReviewSubmitting] = useState(false);
   const [reviewedIds, setReviewedIds] = useState(new Set());
+  const [selectedProject, setSelectedProject] = useState(null);
+  const [isPaymentOpen, setIsPaymentOpen] = useState(false);
   const user = JSON.parse(localStorage.getItem('user'));
   const navigate = useNavigate();
 
@@ -18,18 +21,19 @@ const ClientInbox = () => {
       navigate('/login/client');
       return;
     }
-    const fetchDevis = async () => {
-      try {
-        const data = await apiService.getUserDevis(user.id);
-        setBookings(data);
-      } catch (err) {
-        console.error('Failed to fetch devis:', err);
-      } finally {
-        setLoading(false);
-      }
-    };
     fetchDevis();
   }, [user?.id]);
+
+  const fetchDevis = async () => {
+    try {
+      const data = await apiService.getUserDevis(user.id);
+      setBookings(data);
+    } catch (err) {
+      console.error('Failed to fetch devis:', err);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   const handleDelete = async (devisId) => {
     if (!window.confirm('Supprimer cette demande définitivement ?')) return;
@@ -159,6 +163,24 @@ const ClientInbox = () => {
                   </div>
 
                   <div className="flex flex-row lg:flex-col justify-end gap-4 min-w-[240px] pt-8 lg:pt-0 border-t lg:border-t-0 lg:border-l border-slate-50 lg:pl-10">
+                     {devis.status === 'accepté' && (
+                        <button
+                          onClick={() => {
+                            setSelectedProject({
+                              ...devis,
+                              id: `d-${devis.id}`,
+                              type: 'devis',
+                              total_price: devis.budget,
+                              service_title: devis.category_name
+                            });
+                            setIsPaymentOpen(true);
+                          }}
+                          className="flex-1 lg:flex-none h-14 px-8 bg-indigo-600 text-white rounded-2xl font-black text-[10px] uppercase tracking-widest shadow-xl shadow-indigo-600/20 hover:bg-indigo-700 transition-all flex items-center justify-center gap-3 active:scale-95"
+                        >
+                          <span className="material-symbols-outlined text-sm font-black">payments</span>
+                          Débloquer le paiement
+                        </button>
+                     )}
                     <button className="flex-1 lg:flex-none h-14 px-8 bg-primary text-white rounded-2xl font-black text-[10px] uppercase tracking-widest hover:shadow-xl hover:shadow-primary/20 transition-all flex items-center justify-center gap-3 active:scale-95">
                        <span className="material-symbols-outlined text-sm font-black">message</span>
                        Messages
@@ -253,6 +275,15 @@ const ClientInbox = () => {
           </div>
         </div>
       )}
+
+       {selectedProject && (
+        <PaymentModal 
+          isOpen={isPaymentOpen}
+          onClose={() => setIsPaymentOpen(false)}
+          project={selectedProject}
+          onPaymentSuccess={fetchDevis}
+        />
+       )}
     </ClientLayout>
   );
 };

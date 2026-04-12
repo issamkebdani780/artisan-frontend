@@ -1,58 +1,64 @@
 import React, { useEffect, useState } from 'react';
 import apiService from '../services/api';
 import MainLayout from '../layouts/MainLayout';
+import PaymentModal from '../components/PaymentModal';
 
 const ClientProjects = () => {
   const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [selectedProject, setSelectedProject] = useState(null);
+  const [isPaymentOpen, setIsPaymentOpen] = useState(false);
   const user = JSON.parse(localStorage.getItem('user'));
 
-  useEffect(() => {
-    const fetchProjects = async () => {
-      try {
-        if (user && user.id) {
-          let bookingData = [];
-          let devisData = [];
+  const fetchProjects = async () => {
+    setLoading(true);
+    try {
+      if (user && user.id) {
+        let bookingData = [];
+        let devisData = [];
 
-          // Fetch bookings with error handling
-          try {
-            bookingData = await apiService.getUserBookings(user.id);
-          } catch (err) {
-            console.error('Failed to fetch bookings:', err);
-          }
-
-          // Fetch devis with error handling
-          try {
-            devisData = await apiService.getUserDevis(user.id);
-          } catch (err) {
-            console.error('Failed to fetch devis:', err);
-          }
-
-          // Combine bookings and devis safely
-          const safeBookingData = Array.isArray(bookingData) ? bookingData : [];
-          const safeDevisData = Array.isArray(devisData) ? devisData : [];
-
-          const combined = [
-            ...safeBookingData.map(b => ({ ...b, type: 'booking' })),
-            ...safeDevisData.map(d => ({
-              id: `d-${d.id}`,
-              service_title: d.category_name,
-              artisan_name: d.artisan_name || 'En attente d\'attribution',
-              booking_date: d.date,
-              status: d.status,
-              total_price: d.budget,
-              type: 'devis'
-            }))
-          ].sort((a, b) => new Date(b.booking_date) - new Date(a.booking_date));
-
-          setProjects(combined);
+        // Fetch bookings with error handling
+        try {
+          bookingData = await apiService.getUserBookings(user.id);
+        } catch (err) {
+          console.error('Failed to fetch bookings:', err);
         }
-      } catch (err) {
-        console.error('Unexpected error fetching client projects:', err);
-      } finally {
-        setLoading(false);
+
+        // Fetch devis with error handling
+        try {
+          devisData = await apiService.getUserDevis(user.id);
+        } catch (err) {
+          console.error('Failed to fetch devis:', err);
+        }
+
+        // Combine bookings and devis safely
+        const safeBookingData = Array.isArray(bookingData) ? bookingData : [];
+        const safeDevisData = Array.isArray(devisData) ? devisData : [];
+
+        const combined = [
+          ...safeBookingData.map(b => ({ ...b, type: 'booking' })),
+          ...safeDevisData.map(d => ({
+            id: `d-${d.id}`,
+            artisan_id: d.artisan_id, // Important for payment
+            service_title: d.category_name,
+            artisan_name: d.artisan_name || 'En attente d\'attribution',
+            booking_date: d.date,
+            status: d.status,
+            total_price: d.budget,
+            type: 'devis'
+          }))
+        ].sort((a, b) => new Date(b.booking_date) - new Date(a.booking_date));
+
+        setProjects(combined);
       }
-    };
+    } catch (err) {
+      console.error('Unexpected error fetching client projects:', err);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
     fetchProjects();
   }, []);
 
@@ -148,14 +154,28 @@ const ClientProjects = () => {
                           </span>
                         </td>
                         <td className="px-8 py-6 text-right">
-                          <button
-                            onClick={() => handleDeleteProject(project)}
-                            title="Supprimer"
-                            className="flex items-center gap-1.5 px-4 py-2 bg-red-50 text-red-600 rounded-xl font-bold text-xs hover:bg-red-100 active:scale-95 transition-all"
-                          >
-                            <span className="material-symbols-outlined text-sm">delete</span>
-                            Supprimer
-                          </button>
+                          <div className="flex items-center justify-end gap-2">
+                             {(project.status === 'accepté' || (project.status === 'confirmed' && project.type === 'booking')) && (
+                                <button
+                                  onClick={() => {
+                                    setSelectedProject(project);
+                                    setIsPaymentOpen(true);
+                                  }}
+                                  className="flex items-center gap-1.5 px-6 py-2 bg-indigo-600 text-white rounded-xl font-bold text-xs hover:bg-indigo-700 shadow-lg shadow-indigo-600/20 active:scale-95 transition-all"
+                                >
+                                  <span className="material-symbols-outlined text-sm">payments</span>
+                                  Payer
+                                </button>
+                             )}
+                            <button
+                              onClick={() => handleDeleteProject(project)}
+                              title="Supprimer"
+                              className="flex items-center gap-1.5 px-4 py-2 bg-red-50 text-red-600 rounded-xl font-bold text-xs hover:bg-red-100 active:scale-95 transition-all"
+                            >
+                              <span className="material-symbols-outlined text-sm">delete</span>
+                              Supprimer
+                            </button>
+                          </div>
                         </td>
                       </tr>
                     ))
@@ -166,6 +186,15 @@ const ClientProjects = () => {
           </div>
         </div>
       </div>
+      
+      {selectedProject && (
+        <PaymentModal 
+          isOpen={isPaymentOpen}
+          onClose={() => setIsPaymentOpen(false)}
+          project={selectedProject}
+          onPaymentSuccess={fetchProjects}
+        />
+      )}
     </MainLayout>
   );
 };
