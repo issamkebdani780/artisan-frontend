@@ -1,9 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import ReactDOM from 'react-dom';
 import apiService from '../services/api';
 
 const PaymentModal = ({ isOpen, onClose, project, onPaymentSuccess }) => {
   const [loading, setLoading] = useState(false);
   const [step, setStep] = useState(1); // 1: Method selection, 2: Card details, 3: Success
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => { document.body.style.overflow = 'unset'; };
+  }, [isOpen]);
 
   if (!isOpen) return null;
 
@@ -32,8 +42,8 @@ const PaymentModal = ({ isOpen, onClose, project, onPaymentSuccess }) => {
     }
   };
 
-  return (
-    <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4 md:p-6 bg-slate-900/80 backdrop-blur-xl animate-in fade-in duration-300 font-['Outfit',sans-serif]">
+  const modalContent = (
+    <div className="fixed inset-0 z-[10000] flex items-center justify-center p-4 md:p-6 bg-slate-900/80 backdrop-blur-xl animate-in fade-in duration-300 font-['Outfit',sans-serif]">
       <div className="bg-white dark:bg-[#0f172a] w-full max-w-lg rounded-[2.5rem] shadow-[0_32px_128px_-16px_rgba(0,0,0,0.5)] overflow-hidden border border-white/20 dark:border-white/5 relative">
         
         {/* Animated Background Highlights */}
@@ -59,7 +69,7 @@ const PaymentModal = ({ isOpen, onClose, project, onPaymentSuccess }) => {
           <p className="text-slate-500 dark:text-slate-400 text-sm mt-3 font-medium">Réparer votre maison avec l'expert <span className="text-indigo-600 dark:text-indigo-400 font-bold">{project.artisan_name}</span></p>
         </div>
 
-        <div className="p-8 md:p-10">
+        <div className="p-8 md:p-10 max-h-[70vh] overflow-y-auto custom-scrollbar">
           {step === 1 && (
             <div className="space-y-8">
               <div className="relative group">
@@ -179,6 +189,8 @@ const PaymentModal = ({ isOpen, onClose, project, onPaymentSuccess }) => {
       </div>
     </div>
   );
+
+  return ReactDOM.createPortal(modalContent, document.body);
 };
 
 export default PaymentModal;
