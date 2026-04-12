@@ -46,7 +46,7 @@ const TransportDObjetsLourds = () => {
 </div>
 <div className="bg-primary p-6 rounded-xl text-white shadow-lg flex flex-col gap-4">
 <h3 className="font-bold text-lg">Besoin d'un devis gratuit ?</h3>
-<p className="text-sm opacity-90">Nos experts évaluent votre projet de transport en moins de 24h.</p>
+<p className="text-sm opacity-90">Nos experts Ã©valuent votre projet de transport en moins de 24h.</p>
 <button className="w-full py-3 bg-white text-primary rounded-lg font-bold text-sm hover:bg-slate-50 transition-colors">
                             Demander mon devis
                         </button>
@@ -55,12 +55,12 @@ const TransportDObjetsLourds = () => {
 <div className="flex-1 flex flex-col gap-8">
 <section className="rounded-xl overflow-hidden relative min-h-[300px] flex items-end p-8 bg-slate-900 shadow-xl">
 <div className="absolute inset-0 opacity-60">
-<img alt="Transport de piano" className="w-full h-full object-cover" data-alt="Déménageurs professionnels déplaçant un piano à queue avec précaution" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDs-e-FHVJNc2x67xvx-Ny741BYyoJSErBqr7_-WPAztzCn2QPZd9wzRcchTvb_b5Ig9mpA3kItC9slzOKDvLRvKATat2HTWAbbBkb5fAWTjqTUrTCzylHgzpqiclaMir0tDrciNIz760yKx5SQgN7yYGq6Ajil8RzgOE8q0RYDZVjfpoA_TXCpFdk6Tn0ZsDvk7KB1ka-vQGt2GOfpCZ_4_EOJOSaTuWLlkhsHtwnMJaA8u0qqUsbuMg5L3T1Wb7oHjfrIak5vPY2R"/>
+<img alt="Transport de piano" className="w-full h-full object-cover" data-alt="DÃ©mÃ©nageurs professionnels dÃ©plaÃ§ant un piano Ã  queue avec prÃ©caution" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDs-e-FHVJNc2x67xvx-Ny741BYyoJSErBqr7_-WPAztzCn2QPZd9wzRcchTvb_b5Ig9mpA3kItC9slzOKDvLRvKATat2HTWAbbBkb5fAWTjqTUrTCzylHgzpqiclaMir0tDrciNIz760yKx5SQgN7yYGq6Ajil8RzgOE8q0RYDZVjfpoA_TXCpFdk6Tn0ZsDvk7KB1ka-vQGt2GOfpCZ_4_EOJOSaTuWLlkhsHtwnMJaA8u0qqUsbuMg5L3T1Wb7oHjfrIak5vPY2R"/>
 </div>
 <div className="relative z-10 max-w-2xl">
 <span className="bg-primary text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest mb-4 inline-block">Service Premium</span>
 <h1 className="text-white text-4xl lg:text-5xl font-bold leading-tight mb-4">Transport d'Objets Lourds</h1>
-<p className="text-slate-200 text-lg">Spécialistes du déplacement de pianos, coffres-forts et équipements industriels avec une précision chirurgicale.</p>
+<p className="text-slate-200 text-lg">SpÃ©cialistes du dÃ©placement de pianos, coffres-forts et Ã©quipements industriels avec une prÃ©cision chirurgicale.</p>
 </div>
 </section>
 <section>
@@ -74,9 +74,9 @@ const TransportDObjetsLourds = () => {
 <span className="material-symbols-outlined text-3xl">construction</span>
 </div>
 <div>
-<h3 className="font-bold text-lg mb-2">Équipement spécialisé</h3>
+<h3 className="font-bold text-lg mb-2">Ã‰quipement spÃ©cialisÃ©</h3>
 <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
-                                        Nous utilisons des chariots élévateurs haute performance, des sangles de levage professionnelles et des grues de fenêtre si nécessaire.
+                                        Nous utilisons des chariots Ã©lÃ©vateurs haute performance, des sangles de levage professionnelles et des grues de fenÃªtre si nÃ©cessaire.
                                     </p>
 </div>
 </div>
@@ -85,9 +85,9 @@ const TransportDObjetsLourds = () => {
 <span className="material-symbols-outlined text-3xl">shield</span>
 </div>
 <div>
-<h3 className="font-bold text-lg mb-2">Sécurité maximale</h3>
+<h3 className="font-bold text-lg mb-2">SÃ©curitÃ© maximale</h3>
 <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
-                                        Protection multicouche pour vos sols et murs. Protocoles de sécurité rigoureux pour garantir l'intégrité de vos objets de valeur.
+                                        Protection multicouche pour vos sols et murs. Protocoles de sÃ©curitÃ© rigoureux pour garantir l'intÃ©gritÃ© de vos objets de valeur.
                                     </p>
 </div>
 </div>
@@ -97,19 +97,19 @@ const TransportDObjetsLourds = () => {
 <h2 className="text-2xl font-bold mb-8">Nos Experts en Manutention</h2>
 <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
 <div className="flex items-center gap-4">
-<img alt="Jean Dupont" className="w-20 h-20 rounded-full object-cover border-4 border-white dark:border-slate-700 shadow-sm" data-alt="Portrait d'un expert déménageur souriant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVErJYB1JoAVZ6LzlUHZqnsEm3gQodvM_7c2ehaEdcw4V-b19reUUoEpmjsqzAdZak-bbnhuMQe6ly29UuHDxorDRUcJMKbnlNsbkkuuHqKlCDPlGNzVmH5MX8S_t-scuFZ2wZZYMfbLx18SX0PmT3v01AEK_HfaIjT9ZK8SX1iqUcNrRxjx3zcuG8Uv9lbqe1V_x_nBJkCcImcObZMjXAjp54rAQ8P0-mD0ROhireuIFyPgT6Z9KtRed81FMjNtuAfF7V_WdGXXYp"/>
+<img alt="Jean Dupont" className="w-20 h-20 rounded-full object-cover border-4 border-white dark:border-slate-700 shadow-sm" data-alt="Portrait d'un expert dÃ©mÃ©nageur souriant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVErJYB1JoAVZ6LzlUHZqnsEm3gQodvM_7c2ehaEdcw4V-b19reUUoEpmjsqzAdZak-bbnhuMQe6ly29UuHDxorDRUcJMKbnlNsbkkuuHqKlCDPlGNzVmH5MX8S_t-scuFZ2wZZYMfbLx18SX0PmT3v01AEK_HfaIjT9ZK8SX1iqUcNrRxjx3zcuG8Uv9lbqe1V_x_nBJkCcImcObZMjXAjp54rAQ8P0-mD0ROhireuIFyPgT6Z9KtRed81FMjNtuAfF7V_WdGXXYp"/>
 <div>
 <h4 className="font-bold text-lg">Jean Dupont</h4>
-<p className="text-primary text-sm font-semibold uppercase">Chef d'équipe Levage</p>
-<p className="text-slate-500 text-xs mt-1">15 ans d'expérience</p>
+<p className="text-primary text-sm font-semibold uppercase">Chef d'Ã©quipe Levage</p>
+<p className="text-slate-500 text-xs mt-1">15 ans d'expÃ©rience</p>
 </div>
 </div>
 <div className="flex items-center gap-4">
 <img alt="Marie Laurent" className="w-20 h-20 rounded-full object-cover border-4 border-white dark:border-slate-700 shadow-sm" data-alt="Portrait d'une experte logistique professionnelle" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-01UR7uK-wQONueD-Be8JD_UxIn5_-5XMwsmIN-q2ofNNgD-fjkBkgSgBlgZsq_CO99te9Nsp02mQyNhUjvIrAiRoCARx5aC5yYw603JCj4jSstnkAEX8ZIR2XjNc_-KA-jpi5qg0KlA9ibCeXzeMwFzb1EOyqPHCPLmvF52pWAqwKjU4FPfayLBTsWKTcAPVohP43EGGOQvkrldLcMxifFujw_a0q9ISS_Yi4Jfh95Rxle19v8f1ICKAfRTnnbdNkngDNd3y-XdU"/>
 <div>
 <h4 className="font-bold text-lg">Marie Laurent</h4>
-<p className="text-primary text-sm font-semibold uppercase">Logistique Spécialisée</p>
-<p className="text-slate-500 text-xs mt-1">Spécialiste Objets d'Art</p>
+<p className="text-primary text-sm font-semibold uppercase">Logistique SpÃ©cialisÃ©e</p>
+<p className="text-slate-500 text-xs mt-1">SpÃ©cialiste Objets d'Art</p>
 </div>
 </div>
 </div>
@@ -122,23 +122,23 @@ const TransportDObjetsLourds = () => {
 <tr>
 <th className="px-6 py-4 text-sm font-bold uppercase tracking-wider">Type d'Objet</th>
 <th className="px-6 py-4 text-sm font-bold uppercase tracking-wider">Prix de Base</th>
-<th className="px-6 py-4 text-sm font-bold uppercase tracking-wider">Spécificités</th>
+<th className="px-6 py-4 text-sm font-bold uppercase tracking-wider">SpÃ©cificitÃ©s</th>
 </tr>
 </thead>
 <tbody className="divide-y divide-slate-200 dark:divide-slate-700">
 <tr>
 <td className="px-6 py-4 font-medium">Piano Droit</td>
-<td className="px-6 py-4 text-primary font-bold">�DA partir de 150€</td>
+<td className="px-6 py-4 text-primary font-bold">ÃDA partir de 150â‚¬</td>
 <td className="px-6 py-4 text-sm text-slate-500">Protection housse incluse</td>
 </tr>
 <tr>
-<td className="px-6 py-4 font-medium">Piano à Queue</td>
-<td className="px-6 py-4 text-primary font-bold">�DA partir de 350€</td>
-<td className="px-6 py-4 text-sm text-slate-500">Démontage lyre et pieds</td>
+<td className="px-6 py-4 font-medium">Piano Ã  Queue</td>
+<td className="px-6 py-4 text-primary font-bold">ÃDA partir de 350â‚¬</td>
+<td className="px-6 py-4 text-sm text-slate-500">DÃ©montage lyre et pieds</td>
 </tr>
 <tr>
 <td className="px-6 py-4 font-medium">Coffre-fort (&lt; 200kg)</td>
-<td className="px-6 py-4 text-primary font-bold">�DA partir de 200€</td>
+<td className="px-6 py-4 text-primary font-bold">ÃDA partir de 200â‚¬</td>
 <td className="px-6 py-4 text-sm text-slate-500">Ancrage possible sur demande</td>
 </tr>
 </tbody>
@@ -147,7 +147,7 @@ const TransportDObjetsLourds = () => {
 <div className="mt-4 p-4 bg-primary/5 rounded-lg border-l-4 border-primary flex gap-4">
 <span className="material-symbols-outlined text-primary">info</span>
 <p className="text-sm text-slate-700 dark:text-slate-300">
-<strong>Garantie Assurance :</strong> Tous nos transports sont couverts par une assurance "Ad Valorem" jusqu'à 50 000€ par objet. Une extension est possible pour les objets de collection.
+<strong>Garantie Assurance :</strong> Tous nos transports sont couverts par une assurance "Ad Valorem" jusqu'Ã  50 000â‚¬ par objet. Une extension est possible pour les objets de collection.
                             </p>
 </div>
 </section>
@@ -160,7 +160,7 @@ const TransportDObjetsLourds = () => {
 <span className="material-symbols-outlined">precision_manufacturing</span>
 <span className="font-bold text-lg text-slate-900 dark:text-white">TransportLourd</span>
 </div>
-<p className="text-slate-500 text-sm leading-relaxed">Leader européen du transport d'objets lourds et fragiles. Expertise, sécurité et ponctualité à votre service.</p>
+<p className="text-slate-500 text-sm leading-relaxed">Leader europÃ©en du transport d'objets lourds et fragiles. Expertise, sÃ©curitÃ© et ponctualitÃ© Ã  votre service.</p>
 </div>
 <div>
 <h4 className="font-bold mb-4">Liens Rapides</h4>
@@ -173,7 +173,7 @@ const TransportDObjetsLourds = () => {
 </div>
 <div>
 <h4 className="font-bold mb-4">Newsletter</h4>
-<p className="text-sm text-slate-500 mb-4">Recevez nos conseils pour votre déménagement.</p>
+<p className="text-sm text-slate-500 mb-4">Recevez nos conseils pour votre dÃ©mÃ©nagement.</p>
 <div className="flex gap-2">
 <input className="flex-1 rounded-lg border-slate-300 dark:border-slate-700 dark:bg-slate-800 text-sm focus:ring-primary focus:border-primary" placeholder="Votre email" type="email"/>
 <button className="bg-primary text-white p-2 rounded-lg hover:opacity-90 transition-opacity">
@@ -183,7 +183,7 @@ const TransportDObjetsLourds = () => {
 </div>
 </div>
 <div className="border-t border-slate-200 dark:border-slate-800 mt-10 pt-6 text-center text-xs text-slate-400">
-                    © 2024 TransportLourd SAS. Tous droits réservés. Mentions Légales | Politique de Confidentialité
+                    Â© 2024 TransportLourd SAS. Tous droits rÃ©servÃ©s. Mentions LÃ©gales | Politique de ConfidentialitÃ©
                 </div>
 </footer>
 </div>

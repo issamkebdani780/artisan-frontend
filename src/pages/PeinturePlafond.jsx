@@ -15,7 +15,7 @@ const PeinturePlafond = () => {
 </div>
 <nav className="hidden md:flex items-center gap-8">
 <a className="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary" href="#">Expertise</a>
-<a className="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary" href="#">Équipement</a>
+<a className="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary" href="#">Ã‰quipement</a>
 <a className="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary" href="#">Tarifs</a>
 <a className="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary" href="#">Peintres</a>
 </nav>
@@ -64,15 +64,15 @@ const PeinturePlafond = () => {
 </a>
 <a className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-primary/10 hover:text-primary transition-colors" href="#">
 <span className="material-symbols-outlined">grid_view</span>
-<p className="text-sm font-semibold">Plâtrerie</p>
+<p className="text-sm font-semibold">PlÃ¢trerie</p>
 </a>
 <a className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-primary/10 hover:text-primary transition-colors" href="#">
 <span className="material-symbols-outlined">wallpaper</span>
-<p className="text-sm font-semibold">Revêtements</p>
+<p className="text-sm font-semibold">RevÃªtements</p>
 </a>
 <a className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-primary/10 hover:text-primary transition-colors mt-4" href="#">
 <span className="material-symbols-outlined">settings</span>
-<p className="text-sm font-semibold">Paramètres</p>
+<p className="text-sm font-semibold">ParamÃ¨tres</p>
 </a>
 </nav>
 </div>
@@ -89,12 +89,12 @@ const PeinturePlafond = () => {
 <div className="max-w-2xl">
 <div className="flex flex-wrap gap-2 mb-4">
 <span className="px-3 py-1 bg-primary/40 backdrop-blur-md text-white text-xs font-bold rounded-full uppercase tracking-widest">Premium Service</span>
-<span className="px-3 py-1 bg-green-500/40 backdrop-blur-md text-white text-xs font-bold rounded-full uppercase tracking-widest">Certifié NF</span>
+<span className="px-3 py-1 bg-green-500/40 backdrop-blur-md text-white text-xs font-bold rounded-full uppercase tracking-widest">CertifiÃ© NF</span>
 </div>
 <h1 className="text-white text-4xl md:text-5xl font-black leading-tight mb-4">L'excellence pour vos plafonds</h1>
-<p className="text-slate-200 text-lg font-medium max-w-lg mb-6">Finitions haute définition sans aucune trace de rouleau. Une expertise technique pour transformer vos espaces.</p>
+<p className="text-slate-200 text-lg font-medium max-w-lg mb-6">Finitions haute dÃ©finition sans aucune trace de rouleau. Une expertise technique pour transformer vos espaces.</p>
 <div className="flex gap-4">
-<button className="px-6 py-3 bg-white text-primary rounded-xl font-bold shadow-xl">Découvrir l'offre</button>
+<button className="px-6 py-3 bg-white text-primary rounded-xl font-bold shadow-xl">DÃ©couvrir l'offre</button>
 <button className="px-6 py-3 bg-transparent border border-white/40 text-white rounded-xl font-bold hover:bg-white/10">Calculer mon projet</button>
 </div>
 </div>
@@ -116,23 +116,23 @@ const PeinturePlafond = () => {
 <span className="material-symbols-outlined text-2xl font-bold">verified</span>
 </div>
 <div>
-<h3 className="text-xl font-black">Expertise Certifiée</h3>
-<p className="text-slate-500 text-sm">Normes de qualité et labels professionnels</p>
+<h3 className="text-xl font-black">Expertise CertifiÃ©e</h3>
+<p className="text-slate-500 text-sm">Normes de qualitÃ© et labels professionnels</p>
 </div>
 </div>
 <ul className="space-y-4">
 <li className="flex items-start gap-3">
 <span className="material-symbols-outlined text-primary text-xl">check_circle</span>
 <div>
-<p className="font-bold text-slate-800 dark:text-slate-200">Préparation des supports</p>
-<p className="text-sm text-slate-500">Nettoyage, rebouchage et ponçage intégral pour une surface miroir.</p>
+<p className="font-bold text-slate-800 dark:text-slate-200">PrÃ©paration des supports</p>
+<p className="text-sm text-slate-500">Nettoyage, rebouchage et ponÃ§age intÃ©gral pour une surface miroir.</p>
 </div>
 </li>
 <li className="flex items-start gap-3">
 <span className="material-symbols-outlined text-primary text-xl">check_circle</span>
 <div>
 <p className="font-bold text-slate-800 dark:text-slate-200">Peinture "Sans Trace"</p>
-<p className="text-sm text-slate-500">Application croisée optimisée pour un aspect mat profond ou satiné régulier.</p>
+<p className="text-sm text-slate-500">Application croisÃ©e optimisÃ©e pour un aspect mat profond ou satinÃ© rÃ©gulier.</p>
 </div>
 </li>
 </ul>
@@ -143,7 +143,7 @@ const PeinturePlafond = () => {
 <span className="material-symbols-outlined text-2xl font-bold">construction</span>
 </div>
 <div>
-<h3 className="text-xl font-black">Matériel Spécialisé</h3>
+<h3 className="text-xl font-black">MatÃ©riel SpÃ©cialisÃ©</h3>
 <p className="text-slate-500 text-sm">Technologie de pointe pour un rendu parfait</p>
 </div>
 </div>
@@ -151,12 +151,12 @@ const PeinturePlafond = () => {
 <div className="p-4 rounded-xl bg-slate-50 dark:bg-slate-800 border border-primary/5">
 <span className="material-symbols-outlined text-primary mb-2">sprinkler</span>
 <p className="font-bold text-sm">Station Airless</p>
-<p className="text-xs text-slate-500">Projection haute pression pour zéro grain.</p>
+<p className="text-xs text-slate-500">Projection haute pression pour zÃ©ro grain.</p>
 </div>
 <div className="p-4 rounded-xl bg-slate-50 dark:bg-slate-800 border border-primary/5">
 <span className="material-symbols-outlined text-primary mb-2">precision_manufacturing</span>
 <p className="font-bold text-sm">Ponceuse Girafe</p>
-<p className="text-xs text-slate-500">Ponçage sans poussière avec aspiration.</p>
+<p className="text-xs text-slate-500">PonÃ§age sans poussiÃ¨re avec aspiration.</p>
 </div>
 </div>
 </section>
@@ -164,36 +164,36 @@ const PeinturePlafond = () => {
 {/*  Pricing Section  */}
 <div className="px-6 pb-6">
 <section className="bg-primary/5 dark:bg-primary/10 p-8 rounded-3xl">
-<h3 className="text-2xl font-black mb-6 text-center">Traitements Spécifiques &amp; Tarifs</h3>
+<h3 className="text-2xl font-black mb-6 text-center">Traitements SpÃ©cifiques &amp; Tarifs</h3>
 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 <div className="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-lg border-b-4 border-primary">
-<h4 className="font-black text-lg mb-2">Rafraîchissement</h4>
-<p className="text-slate-500 text-sm mb-4">Pour plafonds sains sans dégâts majeurs.</p>
-<div className="text-3xl font-black text-primary mb-4">18€ <span className="text-sm text-slate-400">/ m²</span></div>
+<h4 className="font-black text-lg mb-2">RafraÃ®chissement</h4>
+<p className="text-slate-500 text-sm mb-4">Pour plafonds sains sans dÃ©gÃ¢ts majeurs.</p>
+<div className="text-3xl font-black text-primary mb-4">18â‚¬ <span className="text-sm text-slate-400">/ mÂ²</span></div>
 <ul className="text-xs space-y-2 text-slate-600 dark:text-slate-400">
-<li>�DA� Lessivage léger</li>
-<li>�DA� 2 couches mat</li>
-<li>�DA� Protection sol incluse</li>
+<li>âDA¢ Lessivage lÃ©ger</li>
+<li>âDA¢ 2 couches mat</li>
+<li>âDA¢ Protection sol incluse</li>
 </ul>
 </div>
 <div className="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-lg border-b-4 border-orange-500">
-<h4 className="font-black text-lg mb-2">Traitement Fumée</h4>
+<h4 className="font-black text-lg mb-2">Traitement FumÃ©e</h4>
 <p className="text-slate-500 text-sm mb-4">Isolation des traces de nicotine et suie.</p>
-<div className="text-3xl font-black text-orange-500 mb-4">26€ <span className="text-sm text-slate-400">/ m²</span></div>
+<div className="text-3xl font-black text-orange-500 mb-4">26â‚¬ <span className="text-sm text-slate-400">/ mÂ²</span></div>
 <ul className="text-xs space-y-2 text-slate-600 dark:text-slate-400">
-<li>�DA� Impression isolante solvantée</li>
-<li>�DA� Neutralisation des odeurs</li>
-<li>�DA� Finition haute opacité</li>
+<li>âDA¢ Impression isolante solvantÃ©e</li>
+<li>âDA¢ Neutralisation des odeurs</li>
+<li>âDA¢ Finition haute opacitÃ©</li>
 </ul>
 </div>
 <div className="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-lg border-b-4 border-red-500">
-<h4 className="font-black text-lg mb-2">Sinistre / Humidité</h4>
-<p className="text-slate-500 text-sm mb-4">Après dégâts des eaux ou taches rebelles.</p>
-<div className="text-3xl font-black text-red-500 mb-4">32€ <span className="text-sm text-slate-400">/ m²</span></div>
+<h4 className="font-black text-lg mb-2">Sinistre / HumiditÃ©</h4>
+<p className="text-slate-500 text-sm mb-4">AprÃ¨s dÃ©gÃ¢ts des eaux ou taches rebelles.</p>
+<div className="text-3xl font-black text-red-500 mb-4">32â‚¬ <span className="text-sm text-slate-400">/ mÂ²</span></div>
 <ul className="text-xs space-y-2 text-slate-600 dark:text-slate-400">
-<li>�DA� Traitement anti-salpêtre</li>
-<li>�DA� Durcisseur de fonds</li>
-<li>�DA� Peinture hydrofuge</li>
+<li>âDA¢ Traitement anti-salpÃªtre</li>
+<li>âDA¢ Durcisseur de fonds</li>
+<li>âDA¢ Peinture hydrofuge</li>
 </ul>
 </div>
 </div>
@@ -203,8 +203,8 @@ const PeinturePlafond = () => {
 <div className="px-6 pb-12">
 <div className="flex items-center justify-between mb-8">
 <div>
-<h3 className="text-2xl font-black">Nos Maîtres Peintres</h3>
-<p className="text-slate-500">Experts sélectionnés avec plus de 10 ans d'expérience</p>
+<h3 className="text-2xl font-black">Nos MaÃ®tres Peintres</h3>
+<p className="text-slate-500">Experts sÃ©lectionnÃ©s avec plus de 10 ans d'expÃ©rience</p>
 </div>
 <button className="text-primary font-bold flex items-center gap-1 hover:underline">
                                 Voir tous les experts <span className="material-symbols-outlined">arrow_forward</span>
@@ -221,7 +221,7 @@ const PeinturePlafond = () => {
 </div>
 <div className="text-center">
 <h4 className="font-black">Julien Morel</h4>
-<p className="text-primary text-xs font-bold uppercase tracking-wider mb-3">Spécialiste Airless</p>
+<p className="text-primary text-xs font-bold uppercase tracking-wider mb-3">SpÃ©cialiste Airless</p>
 <div className="flex items-center justify-center gap-1 text-orange-400 mb-4">
 <span className="material-symbols-outlined fill-1 text-sm">star</span>
 <span className="material-symbols-outlined fill-1 text-sm">star</span>
@@ -230,7 +230,7 @@ const PeinturePlafond = () => {
 <span className="material-symbols-outlined fill-1 text-sm">star</span>
 <span className="text-slate-400 text-xs ml-1">(128)</span>
 </div>
-<button className="w-full py-2 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white rounded-lg text-xs font-bold group-hover:bg-primary group-hover:text-white transition-all">Réserver Julien</button>
+<button className="w-full py-2 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white rounded-lg text-xs font-bold group-hover:bg-primary group-hover:text-white transition-all">RÃ©server Julien</button>
 </div>
 </div>
 {/*  Painter 2  */}
@@ -252,7 +252,7 @@ const PeinturePlafond = () => {
 <span className="material-symbols-outlined fill-1 text-sm">star</span>
 <span className="text-slate-400 text-xs ml-1">(94)</span>
 </div>
-<button className="w-full py-2 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white rounded-lg text-xs font-bold group-hover:bg-primary group-hover:text-white transition-all">Réserver Sarah</button>
+<button className="w-full py-2 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white rounded-lg text-xs font-bold group-hover:bg-primary group-hover:text-white transition-all">RÃ©server Sarah</button>
 </div>
 </div>
 {/*  Painter 3  */}
@@ -274,7 +274,7 @@ const PeinturePlafond = () => {
 <span className="material-symbols-outlined fill-1 text-sm">star_half</span>
 <span className="text-slate-400 text-xs ml-1">(215)</span>
 </div>
-<button className="w-full py-2 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white rounded-lg text-xs font-bold group-hover:bg-primary group-hover:text-white transition-all">Réserver Marc</button>
+<button className="w-full py-2 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white rounded-lg text-xs font-bold group-hover:bg-primary group-hover:text-white transition-all">RÃ©server Marc</button>
 </div>
 </div>
 {/*  Painter 4  */}
@@ -287,7 +287,7 @@ const PeinturePlafond = () => {
 </div>
 <div className="text-center">
 <h4 className="font-black">Karim Bensaid</h4>
-<p className="text-primary text-xs font-bold uppercase tracking-wider mb-3">Vitesse &amp; Précision</p>
+<p className="text-primary text-xs font-bold uppercase tracking-wider mb-3">Vitesse &amp; PrÃ©cision</p>
 <div className="flex items-center justify-center gap-1 text-orange-400 mb-4">
 <span className="material-symbols-outlined fill-1 text-sm">star</span>
 <span className="material-symbols-outlined fill-1 text-sm">star</span>
@@ -296,7 +296,7 @@ const PeinturePlafond = () => {
 <span className="material-symbols-outlined fill-1 text-sm">star</span>
 <span className="text-slate-400 text-xs ml-1">(67)</span>
 </div>
-<button className="w-full py-2 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white rounded-lg text-xs font-bold group-hover:bg-primary group-hover:text-white transition-all">Réserver Karim</button>
+<button className="w-full py-2 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white rounded-lg text-xs font-bold group-hover:bg-primary group-hover:text-white transition-all">RÃ©server Karim</button>
 </div>
 </div>
 </div>

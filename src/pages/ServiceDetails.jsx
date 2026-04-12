@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+﻿import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import apiService from '../services/api';
 
@@ -56,7 +56,7 @@ const ServiceDetails = () => {
         {/* CTA & Quick Stats */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-8 p-8 bg-white rounded-3xl -mt-12 relative z-20 border border-slate-100 shadow-2xl shadow-slate-200/50">
           <div className="flex flex-col gap-2">
-            <p className="text-slate-900 text-3xl font-black">�DA partir de {service.base_price} DA</p>
+            <p className="text-slate-900 text-3xl font-black">À partir de {service.base_price} DA</p>
             <div className="flex items-center gap-2">
               <span className="material-symbols-outlined text-emerald-500 text-xl font-bold">verified_user</span>
               <p className="text-slate-500 font-medium">Artisans certifiés et travaux garantis</p>

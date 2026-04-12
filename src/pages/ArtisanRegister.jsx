@@ -66,12 +66,12 @@ const ArtisanRegister = () => {
   const handleDocumentsChange = (e) => {
     const selectedFiles = Array.from(e.target.files || []);
     if (selectedFiles.length > 5) {
-      setError('Maximum 5 documents autorisés');
+      setError('Maximum 5 documents autorisÃ©s');
       return;
     }
     const validFiles = selectedFiles.filter(file => {
       if (file.size > 10 * 1024 * 1024) {
-        setError(`${file.name} dépasse 10MB`);
+        setError(`${file.name} dÃ©passe 10MB`);
         return false;
       }
       return true;
@@ -94,10 +94,10 @@ const ArtisanRegister = () => {
     setError('');
     if (form.birthday) {
       const bDate = new Date(form.birthday);
-      if (bDate > new Date()) { setError('La date de naissance ne peut pas dépasser la date actuelle'); return; }
+      if (bDate > new Date()) { setError('La date de naissance ne peut pas dÃ©passer la date actuelle'); return; }
     }
     if (form.password !== form.confirm) { setError('Les mots de passe ne correspondent pas'); return; }
-    if (!passwordChecks.length) { setError('Mot de passe trop court (8 caractères minimum)'); return; }
+    if (!passwordChecks.length) { setError('Mot de passe trop court (8 caractÃ¨res minimum)'); return; }
     if (!terms) { setError('Vous devez accepter les conditions d\'utilisation'); return; }
     if (!files.profilePic) { setError('La photo de profil est requise'); return; }
     if (files.documents.length === 0) { setError('Au moins un document est requis'); return; }
@@ -133,7 +133,7 @@ const ArtisanRegister = () => {
         setError(res.error || 'Erreur lors de l\'inscription');
       }
     } catch (err) {
-      setError(err.message || 'Une erreur est survenue. Vérifiez votre connexion.');
+      setError(err.message || 'Une erreur est survenue. VÃ©rifiez votre connexion.');
     } finally {
       setLoading(false);
     }
@@ -155,18 +155,18 @@ const ArtisanRegister = () => {
         <section className="hidden lg:flex w-[45%] relative overflow-hidden bg-slate-950">
           <div className="relative z-10 flex flex-col justify-center p-16 w-full bg-linear-to-b from-slate-900/10 to-slate-900/90">
             <div className="space-y-8 max-w-md">
-              <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-500/20 text-orange-500 border border-orange-500/30 text-xs font-bold tracking-widest uppercase">REJOIGNEZ L'ÉLITE</span>
+              <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-500/20 text-orange-500 border border-orange-500/30 text-xs font-bold tracking-widest uppercase">REJOIGNEZ L'Ã‰LITE</span>
               <h1 className="text-5xl font-black text-white leading-tight tracking-tighter">
-                Rejoignez l'élite des <span className="text-orange-500">services professionnels.</span>
+                Rejoignez l'Ã©lite des <span className="text-orange-500">services professionnels.</span>
               </h1>
               <p className="text-lg text-slate-300 leading-relaxed font-light">
-                Accédez à un réseau exclusif de professionnels vérifiés et gérez vos projets en toute sérénité.
+                AccÃ©dez Ã  un rÃ©seau exclusif de professionnels vÃ©rifiÃ©s et gÃ©rez vos projets en toute sÃ©rÃ©nitÃ©.
               </p>
               <div className="space-y-4">
                 {[
-                  { icon: 'verified', title: 'Pros Vérifiés', desc: 'Chaque membre subit un processus de vérification rigoureux.' },
-                  { icon: 'payments', title: 'Paiements Sécurisés', desc: 'Infrastructure de paiement cryptée de bout en bout.' },
-                  { icon: 'support_agent', title: 'Support 24/7', desc: 'Une équipe dédiée disponible à tout moment.' }
+                  { icon: 'verified', title: 'Pros VÃ©rifiÃ©s', desc: 'Chaque membre subit un processus de vÃ©rification rigoureux.' },
+                  { icon: 'payments', title: 'Paiements SÃ©curisÃ©s', desc: 'Infrastructure de paiement cryptÃ©e de bout en bout.' },
+                  { icon: 'support_agent', title: 'Support 24/7', desc: 'Une Ã©quipe dÃ©diÃ©e disponible Ã  tout moment.' }
                 ].map((item, i) => (
                   <div key={i} className="bg-white/10 backdrop-blur-md p-5 rounded-2xl border border-white/10 flex items-start gap-4">
                     <div className="w-12 h-12 rounded-xl bg-orange-500 flex items-center justify-center shrink-0">
@@ -187,8 +187,8 @@ const ArtisanRegister = () => {
         <section className="w-full lg:w-[55%] bg-[#f8fafc] flex items-center justify-center py-16 px-6 sm:px-12 lg:px-24">
           <div className="w-full max-w-2xl">
             <div className="mb-10 text-center lg:text-left">
-              <h2 className="text-4xl font-black text-slate-900 tracking-tighter">Créer votre profil Artisan</h2>
-              <p className="text-slate-500 mt-2 text-lg">Commencez votre aventure dès aujourd'hui.</p>
+              <h2 className="text-4xl font-black text-slate-900 tracking-tighter">CrÃ©er votre profil Artisan</h2>
+              <p className="text-slate-500 mt-2 text-lg">Commencez votre aventure dÃ¨s aujourd'hui.</p>
             </div>
 
             {error && (
@@ -215,41 +215,41 @@ const ArtisanRegister = () => {
                 <div className="flex flex-col gap-4">
                   <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-2">
                     <div>
-                      <label className="text-[10px] font-black uppercase tracking-[0.15em] text-orange-500 ml-1">Spécialités Professionnelles</label>
-                      <p className="text-slate-500 text-sm mt-1 ml-1">Sélectionnez tous les métiers que vous maîtrisez.</p>
+                      <label className="text-[10px] font-black uppercase tracking-[0.15em] text-orange-500 ml-1">SpÃ©cialitÃ©s Professionnelles</label>
+                      <p className="text-slate-500 text-sm mt-1 ml-1">SÃ©lectionnez tous les mÃ©tiers que vous maÃ®trisez.</p>
                     </div>
-                    <span className="text-[10px] font-bold text-orange-400 uppercase tracking-widest bg-orange-50 px-2 py-1 rounded-lg border border-orange-100">{form.specialty.length} sélectionnée(s)</span>
+                    <span className="text-[10px] font-bold text-orange-400 uppercase tracking-widest bg-orange-50 px-2 py-1 rounded-lg border border-orange-100">{form.specialty.length} sÃ©lectionnÃ©e(s)</span>
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-h-[400px] overflow-y-auto pr-2 custom-scrollbar p-1">
                     {[
                       {
                         group: "Menuiserie",
-                        options: ["Menuisier ébéniste", "Menuisier de chantier", "Presseur de bois", "Décorateur bois", "Fabricant ouvertures bois"]
+                        options: ["Menuisier Ã©bÃ©niste", "Menuisier de chantier", "Presseur de bois", "DÃ©corateur bois", "Fabricant ouvertures bois"]
                       },
                       {
                         group: "Soudure",
-                        options: ["Ferronnier d�DA�art", "Soudeur arc/argon", "Chaudronnier", "Soudeur carrosserie"]
+                        options: ["Ferronnier dâDA™art", "Soudeur arc/argon", "Chaudronnier", "Soudeur carrosserie"]
                       },
                       {
                         group: "Plomberie",
                         options: ["Plombier sanitaire", "Chauffage central", "Monteur gaz", "Tuyauterie cuivre/PER"]
                       },
                       {
-                        group: "Électricité",
-                        options: ["Électricien bâtiment", "Électricien industriel", "Technicien solaire", "Tireur de câbles"]
+                        group: "Ã‰lectricitÃ©",
+                        options: ["Ã‰lectricien bÃ¢timent", "Ã‰lectricien industriel", "Technicien solaire", "Tireur de cÃ¢bles"]
                       },
                       {
                         group: "Peinture",
-                        options: ["Peintre décorateur", "Peintre automobile", "Plâtrier staffeur", "Marbrier", "Vernisseur"]
+                        options: ["Peintre dÃ©corateur", "Peintre automobile", "PlÃ¢trier staffeur", "Marbrier", "Vernisseur"]
                       },
                       {
-                        group: "Maçonnerie",
-                        options: ["Maçon brique", "Carreleur", "Crépisseur", "Étanchéité", "Rénovation"]
+                        group: "MaÃ§onnerie",
+                        options: ["MaÃ§on brique", "Carreleur", "CrÃ©pisseur", "Ã‰tanchÃ©itÃ©", "RÃ©novation"]
                       },
                       {
-                        group: "Mécanique",
-                        options: ["Mécanicien auto", "Mécanicien moto", "Moteurs électriques", "Mécanicien agricole"]
+                        group: "MÃ©canique",
+                        options: ["MÃ©canicien auto", "MÃ©canicien moto", "Moteurs Ã©lectriques", "MÃ©canicien agricole"]
                       }
                     ].map((group, idx) => (
                       <div key={idx} className="space-y-3">
@@ -286,9 +286,9 @@ const ArtisanRegister = () => {
                   </div>
                 </div>
                 <div className="flex flex-col gap-4 mt-6 border-t border-orange-500/10 pt-6">
-                  <h4 className="text-[10px] font-black uppercase tracking-[0.15em] text-orange-500 ml-1">Années d'Expérience par spécialité</h4>
+                  <h4 className="text-[10px] font-black uppercase tracking-[0.15em] text-orange-500 ml-1">AnnÃ©es d'ExpÃ©rience par spÃ©cialitÃ©</h4>
                   {form.specialty.length === 0 ? (
-                    <p className="text-sm text-slate-400 pl-1">Sélectionnez d'abord au moins une spécialité ci-dessus.</p>
+                    <p className="text-sm text-slate-400 pl-1">SÃ©lectionnez d'abord au moins une spÃ©cialitÃ© ci-dessus.</p>
                   ) : (
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       {form.specialty.map(spec => (
@@ -302,7 +302,7 @@ const ArtisanRegister = () => {
                               ...form,
                               experience_years: { ...form.experience_years, [spec]: e.target.value }
                             })} 
-                            placeholder="Années (ex: 5)" 
+                            placeholder="AnnÃ©es (ex: 5)" 
                             required
                             className="w-full h-12 px-4 rounded-xl bg-slate-50 border-none focus:ring-2 focus:ring-orange-500 focus:bg-white transition-all font-medium placeholder:text-slate-300 outline-none" 
                           />
@@ -318,7 +318,7 @@ const ArtisanRegister = () => {
                 <div className="flex flex-col gap-2">
                   <label className="text-[10px] font-black uppercase tracking-[0.15em] text-slate-400 ml-1">Wilaya</label>
                   <select name="wilaya_id" value={form.wilaya_id} onChange={handleWilayaChange} required className="w-full h-14 px-5 rounded-xl bg-[#e2e8f0] border-none focus:ring-2 focus:ring-orange-500 transition-all font-medium outline-none">
-                    <option value="">Sélectionnez une wilaya</option>
+                    <option value="">SÃ©lectionnez une wilaya</option>
                     {wilayas.map(wilaya => (
                       <option key={wilaya.id} value={wilaya.id}>{wilaya.name}</option>
                     ))}
@@ -327,7 +327,7 @@ const ArtisanRegister = () => {
                 <div className="flex flex-col gap-2">
                   <label className="text-[10px] font-black uppercase tracking-[0.15em] text-slate-400 ml-1">Commune</label>
                   <select name="commune_id" value={form.commune_id} onChange={handleChange} required disabled={!form.wilaya_id} className="w-full h-14 px-5 rounded-xl bg-[#e2e8f0] border-none focus:ring-2 focus:ring-orange-500 transition-all font-medium outline-none disabled:opacity-50">
-                    <option value="">Sélectionnez une commune</option>
+                    <option value="">SÃ©lectionnez une commune</option>
                     {communes.map(commune => (
                       <option key={commune.id} value={commune.id}>{commune.name}</option>
                     ))}
@@ -342,7 +342,7 @@ const ArtisanRegister = () => {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="flex flex-col gap-2">
-                  <label className="text-[10px] font-black uppercase tracking-[0.15em] text-slate-400 ml-1">Téléphone</label>
+                  <label className="text-[10px] font-black uppercase tracking-[0.15em] text-slate-400 ml-1">TÃ©lÃ©phone</label>
                   <div className="relative flex items-center">
                     <div className="absolute left-4 flex items-center gap-2 pointer-events-none border-r border-slate-300 pr-3">
                       <span className="text-sm font-bold text-slate-600">+213</span>
@@ -379,9 +379,9 @@ const ArtisanRegister = () => {
                     <div className="text-center py-6">
                       <span className="material-symbols-outlined text-3xl text-blue-400 block mb-2 group-hover:text-blue-600 transition-colors">image</span>
                       <p className="text-sm font-bold text-slate-600" >
-                        {files.profilePic ? files.profilePic.name : 'Cliquez pour télécharger votre photo'}
+                        {files.profilePic ? files.profilePic.name : 'Cliquez pour tÃ©lÃ©charger votre photo'}
                       </p>
-                      <p className="text-xs text-slate-400 mt-1">ou glissez-déposez une image</p>
+                      <p className="text-xs text-slate-400 mt-1">ou glissez-dÃ©posez une image</p>
                     </div>
                   </div>
                 </div>
@@ -403,9 +403,9 @@ const ArtisanRegister = () => {
                     <div className="text-center py-6">
                       <span className="material-symbols-outlined text-3xl text-indigo-400 block mb-2 group-hover:text-indigo-600 transition-colors">folder_open</span>
                       <p className="text-sm font-bold text-slate-600">
-                        {files.documents.length > 0 ? `${files.documents.length} fichier(s) sélectionné(s)` : 'Sélectionnez vos documents'}
+                        {files.documents.length > 0 ? `${files.documents.length} fichier(s) sÃ©lectionnÃ©(s)` : 'SÃ©lectionnez vos documents'}
                       </p>
-                      <p className="text-xs text-slate-400 mt-1">PDF, DOC, DOCX, JPG, PNG acceptés</p>
+                      <p className="text-xs text-slate-400 mt-1">PDF, DOC, DOCX, JPG, PNG acceptÃ©s</p>
                     </div>
                   </div>
                   {files.documents.length > 0 && (
@@ -423,18 +423,18 @@ const ArtisanRegister = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="flex flex-col gap-2">
                   <label className="text-[10px] font-black uppercase tracking-[0.15em] text-slate-400 ml-1">Mot de passe</label>
-                  <input name="password" type="password" value={form.password} onChange={handleChange} required placeholder="�DA��DA��DA��DA��DA��DA��DA��DA�" className="w-full h-14 px-5 rounded-xl bg-[#e2e8f0] border-none focus:ring-2 focus:ring-orange-500 transition-all font-medium outline-none" />
+                  <input name="password" type="password" value={form.password} onChange={handleChange} required placeholder="âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢" className="w-full h-14 px-5 rounded-xl bg-[#e2e8f0] border-none focus:ring-2 focus:ring-orange-500 transition-all font-medium outline-none" />
                 </div>
                 <div className="flex flex-col gap-2">
                   <label className="text-[10px] font-black uppercase tracking-[0.15em] text-slate-400 ml-1">Confirmer</label>
-                  <input name="confirm" type="password" value={form.confirm} onChange={handleChange} required placeholder="�DA��DA��DA��DA��DA��DA��DA��DA�" className="w-full h-14 px-5 rounded-xl bg-[#e2e8f0] border-none focus:ring-2 focus:ring-orange-500 transition-all font-medium outline-none" />
+                  <input name="confirm" type="password" value={form.confirm} onChange={handleChange} required placeholder="âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢" className="w-full h-14 px-5 rounded-xl bg-[#e2e8f0] border-none focus:ring-2 focus:ring-orange-500 transition-all font-medium outline-none" />
                 </div>
               </div>
 
               <div className="bg-slate-100 p-5 rounded-xl border-l-4 border-orange-500">
-                <h4 className="text-[10px] font-black text-slate-500 mb-3 uppercase tracking-wider">Sécurité du mot de passe :</h4>
+                <h4 className="text-[10px] font-black text-slate-500 mb-3 uppercase tracking-wider">SÃ©curitÃ© du mot de passe :</h4>
                 <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2">
-                  <Check ok={passwordChecks.length} label="8+ Caractères" />
+                  <Check ok={passwordChecks.length} label="8+ CaractÃ¨res" />
                   <Check ok={passwordChecks.startLetter} label="Commence par une lettre" />
                   <Check ok={passwordChecks.hasUpper} label="Contient une majuscule" />
                   <Check ok={passwordChecks.hasNumber} label="Contient un chiffre" />
@@ -444,13 +444,13 @@ const ArtisanRegister = () => {
               <div className="flex items-start gap-3 py-2">
                 <input type="checkbox" checked={terms} onChange={(e) => setTerms(e.target.checked)} className="mt-1 w-5 h-5 rounded border-none bg-[#e2e8f0] text-orange-500 focus:ring-orange-500 cursor-pointer" />
                 <label className="text-sm text-slate-500 leading-relaxed cursor-pointer" onClick={() => setTerms(!terms)}>
-                  J'accepte les <a href="#" className="text-orange-500 font-bold hover:underline">Conditions d'Utilisation</a> et la <a href="#" className="text-orange-500 font-bold hover:underline">Politique de Confidentialité</a>.
+                  J'accepte les <a href="#" className="text-orange-500 font-bold hover:underline">Conditions d'Utilisation</a> et la <a href="#" className="text-orange-500 font-bold hover:underline">Politique de ConfidentialitÃ©</a>.
                 </label>
               </div>
 
               <button type="submit" disabled={loading} className="w-full h-16 bg-orange-500 text-white font-black text-lg rounded-2xl shadow-xl shadow-orange-500/30 hover:-translate-y-0.5 active:scale-[0.99] transition-all flex items-center justify-center gap-3 disabled:opacity-60">
                 {loading ? (
-                  <><span className="animate-spin h-6 w-6 border-4 border-white/30 border-t-white rounded-full"></span>Création du compte...</>
+                  <><span className="animate-spin h-6 w-6 border-4 border-white/30 border-t-white rounded-full"></span>CrÃ©ation du compte...</>
                 ) : (
                   <>S'inscrire en tant que Professionnel<span className="material-symbols-outlined">arrow_forward</span></>
                 )}
@@ -458,7 +458,7 @@ const ArtisanRegister = () => {
 
               <div className="pt-2 text-center">
                 <p className="text-slate-500 text-sm font-medium">
-                  Déjà membre ? <Link to="/login/artisan" className="text-orange-500 font-black ml-1 hover:underline">Se connecter</Link>
+                  DÃ©jÃ  membre ? <Link to="/login/artisan" className="text-orange-500 font-black ml-1 hover:underline">Se connecter</Link>
                 </p>
               </div>
             </form>

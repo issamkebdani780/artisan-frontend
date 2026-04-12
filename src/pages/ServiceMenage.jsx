@@ -12,13 +12,13 @@ const ServiceMenage = () => {
 <div className="size-8">
 <span className="material-symbols-outlined text-3xl">cleaning_services</span>
 </div>
-<h2 className="text-slate-900 dark:text-white text-xl font-bold leading-tight tracking-tight">Ménage</h2>
+<h2 className="text-slate-900 dark:text-white text-xl font-bold leading-tight tracking-tight">MÃ©nage</h2>
 </div>
 <div className="flex flex-1 justify-end gap-8 items-center">
 <nav className="hidden lg:flex items-center gap-8">
 <a className="text-slate-700 dark:text-slate-200 text-sm font-medium hover:text-primary transition-colors" href="#">Accueil</a>
 <a className="text-primary text-sm font-bold" href="#">Services</a>
-<a className="text-slate-700 dark:text-slate-200 text-sm font-medium hover:text-primary transition-colors" href="#">Réalisations</a>
+<a className="text-slate-700 dark:text-slate-200 text-sm font-medium hover:text-primary transition-colors" href="#">RÃ©alisations</a>
 <a className="text-slate-700 dark:text-slate-200 text-sm font-medium hover:text-primary transition-colors" href="#">Blog</a>
 <a className="text-slate-700 dark:text-slate-200 text-sm font-medium hover:text-primary transition-colors" href="#">Contact</a>
 </nav>
@@ -42,10 +42,10 @@ const ServiceMenage = () => {
 </div>
 <div className="relative z-10 max-w-2xl">
 <h1 className="text-white text-4xl md:text-6xl font-black leading-tight mb-4">
-                                Services de Ménage à Domicile
+                                Services de MÃ©nage Ã  Domicile
                             </h1>
 <p className="text-slate-200 text-lg md:text-xl font-normal mb-8 max-w-lg">
-                                Des solutions professionnelles pour un intérieur impeccable, sain et serein au quotidien.
+                                Des solutions professionnelles pour un intÃ©rieur impeccable, sain et serein au quotidien.
                             </p>
 <button className="bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-lg font-bold text-lg transition-all shadow-lg hover:shadow-primary/50">
                                 En savoir plus
@@ -61,7 +61,7 @@ const ServiceMenage = () => {
 <span className="material-symbols-outlined text-primary text-4xl mb-4">request_quote</span>
 <h3 className="text-slate-900 dark:text-white text-xl font-bold mb-2">Besoin d'un devis gratuit?</h3>
 <p className="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
-                                    Obtenez une estimation personnalisée en moins de 2 minutes pour vos besoins spécifiques.
+                                    Obtenez une estimation personnalisÃ©e en moins de 2 minutes pour vos besoins spÃ©cifiques.
                                 </p>
 <button className="w-full flex items-center justify-center rounded-lg h-12 px-6 bg-primary text-white font-bold hover:bg-primary-dark transition-all shadow-md">
                                     Demander mon devis
@@ -73,15 +73,15 @@ const ServiceMenage = () => {
 <ul className="space-y-4">
 <li className="flex items-start gap-3">
 <span className="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
-<span className="text-slate-600 dark:text-slate-400 text-sm">Personnel qualifié et vérifié</span>
+<span className="text-slate-600 dark:text-slate-400 text-sm">Personnel qualifiÃ© et vÃ©rifiÃ©</span>
 </li>
 <li className="flex items-start gap-3">
 <span className="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
-<span className="text-slate-600 dark:text-slate-400 text-sm">Produits éco-responsables</span>
+<span className="text-slate-600 dark:text-slate-400 text-sm">Produits Ã©co-responsables</span>
 </li>
 <li className="flex items-start gap-3">
 <span className="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
-<span className="text-slate-600 dark:text-slate-400 text-sm">Sans engagement de durée</span>
+<span className="text-slate-600 dark:text-slate-400 text-sm">Sans engagement de durÃ©e</span>
 </li>
 </ul>
 </div>
@@ -92,7 +92,7 @@ const ServiceMenage = () => {
 {/*  Statistics  */}
 <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
 <div className="flex flex-col gap-2 rounded-xl p-8 border border-primary/10 bg-white dark:bg-slate-800 shadow-sm text-center">
-<p className="text-slate-500 dark:text-slate-400 text-sm font-medium uppercase tracking-wider">Maisons nettoyées</p>
+<p className="text-slate-500 dark:text-slate-400 text-sm font-medium uppercase tracking-wider">Maisons nettoyÃ©es</p>
 <p className="text-primary text-4xl font-black">8000+</p>
 </div>
 <div className="flex flex-col gap-2 rounded-xl p-8 border border-primary/10 bg-white dark:bg-slate-800 shadow-sm text-center">
@@ -117,7 +117,7 @@ const ServiceMenage = () => {
 <div className="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-4">
 <span className="material-symbols-outlined text-2xl">home_work</span>
 </div>
-<h4 className="text-slate-900 dark:text-white text-xl font-bold mb-2">Ménage régulier</h4>
+<h4 className="text-slate-900 dark:text-white text-xl font-bold mb-2">MÃ©nage rÃ©gulier</h4>
 <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Entretien hebdomadaire ou bimensuel pour garder votre foyer toujours propre.</p>
 </div>
 <div className="group p-6 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-primary transition-all">
@@ -125,21 +125,21 @@ const ServiceMenage = () => {
 <span className="material-symbols-outlined text-2xl">mop</span>
 </div>
 <h4 className="text-slate-900 dark:text-white text-xl font-bold mb-2">Nettoyage profond</h4>
-<p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Un grand nettoyage de printemps pour désinfecter et assainir chaque recoin.</p>
+<p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Un grand nettoyage de printemps pour dÃ©sinfecter et assainir chaque recoin.</p>
 </div>
 <div className="group p-6 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-primary transition-all">
 <div className="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-4">
 <span className="material-symbols-outlined text-2xl">window</span>
 </div>
 <h4 className="text-slate-900 dark:text-white text-xl font-bold mb-2">Vitres</h4>
-<p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Lavage de vitres professionnel pour une transparence éclatante et sans traces.</p>
+<p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Lavage de vitres professionnel pour une transparence Ã©clatante et sans traces.</p>
 </div>
 <div className="group p-6 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-primary transition-all">
 <div className="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-4">
 <span className="material-symbols-outlined text-2xl">iron</span>
 </div>
 <h4 className="text-slate-900 dark:text-white text-xl font-bold mb-2">Repassage</h4>
-<p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Soin du linge et repassage soigné pour vous libérer de cette corvée quotidienne.</p>
+<p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Soin du linge et repassage soignÃ© pour vous libÃ©rer de cette corvÃ©e quotidienne.</p>
 </div>
 </div>
 </section>
@@ -165,7 +165,7 @@ const ServiceMenage = () => {
 <div className="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-sm italic relative">
 <span className="material-symbols-outlined text-primary/20 text-6xl absolute top-2 right-4">format_quote</span>
 <p className="text-slate-700 dark:text-slate-300 mb-4 relative z-10">
-                                        "Très professionnel et ponctuel. Le service de nettoyage de vitres a transformé mon appartement. Je recommande vivement."
+                                        "TrÃ¨s professionnel et ponctuel. Le service de nettoyage de vitres a transformÃ© mon appartement. Je recommande vivement."
                                     </p>
 <div className="flex items-center gap-3">
 <div className="size-10 rounded-full bg-slate-200 overflow-hidden">
@@ -188,16 +188,16 @@ const ServiceMenage = () => {
 <div className="col-span-1 md:col-span-1">
 <div className="flex items-center gap-3 text-white mb-6">
 <span className="material-symbols-outlined text-primary text-3xl">cleaning_services</span>
-<span className="text-xl font-bold">Ménage</span>
+<span className="text-xl font-bold">MÃ©nage</span>
 </div>
 <p className="text-sm leading-relaxed">
-                            Votre partenaire de confiance pour un domicile sain. Services professionnels, écologiques et assurés.
+                            Votre partenaire de confiance pour un domicile sain. Services professionnels, Ã©cologiques et assurÃ©s.
                         </p>
 </div>
 <div>
 <h4 className="text-white font-bold mb-6">Services</h4>
 <ul className="space-y-3 text-sm">
-<li><a className="hover:text-primary transition-colors" href="#">Nettoyage régulier</a></li>
+<li><a className="hover:text-primary transition-colors" href="#">Nettoyage rÃ©gulier</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Lavage de vitres</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Repassage</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Fin de bail</a></li>
@@ -206,7 +206,7 @@ const ServiceMenage = () => {
 <div>
 <h4 className="text-white font-bold mb-6">Entreprise</h4>
 <ul className="space-y-3 text-sm">
-<li><a className="hover:text-primary transition-colors" href="#">�DA propos</a></li>
+<li><a className="hover:text-primary transition-colors" href="#">ÃDA propos</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Nos tarifs</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Recrutement</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">FAQ</a></li>
@@ -228,7 +228,7 @@ const ServiceMenage = () => {
 </div>
 </div>
 <div className="border-t border-slate-800 mt-12 pt-8 text-center text-xs">
-                    © 2024 Ménage Inc. Tous droits réservés.
+                    Â© 2024 MÃ©nage Inc. Tous droits rÃ©servÃ©s.
                 </div>
 </footer>
 </div>

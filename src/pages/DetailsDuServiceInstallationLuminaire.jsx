@@ -18,7 +18,7 @@ const DetailsDuServiceInstallationLuminaire = () => {
 <nav className="hidden md:flex items-center gap-9">
 <a className="text-slate-700 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">Accueil</a>
 <a className="text-slate-700 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">Services</a>
-<a className="text-slate-700 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">Réalisations</a>
+<a className="text-slate-700 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">RÃ©alisations</a>
 <a className="text-slate-700 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">Contact</a>
 </nav>
 <div className="flex gap-2">
@@ -40,7 +40,7 @@ const DetailsDuServiceInstallationLuminaire = () => {
 <div className="flex flex-col p-8 gap-2">
 <span className="bg-primary text-white text-xs font-bold px-3 py-1 rounded-full w-fit uppercase tracking-widest">Service Premium</span>
 <h1 className="text-white text-4xl md:text-5xl font-black leading-tight tracking-tight">Installation de Luminaire</h1>
-<p className="text-slate-200 text-lg max-w-2xl">Sublimez votre intérieur avec une installation professionnelle, sécurisée et sur-mesure pour tous vos systèmes d'éclairage.</p>
+<p className="text-slate-200 text-lg max-w-2xl">Sublimez votre intÃ©rieur avec une installation professionnelle, sÃ©curisÃ©e et sur-mesure pour tous vos systÃ¨mes d'Ã©clairage.</p>
 </div>
 </div>
 </div>
@@ -48,15 +48,15 @@ const DetailsDuServiceInstallationLuminaire = () => {
 {/*  CTA & Pricing Quick Stats  */}
 <div className="flex flex-wrap justify-between items-center gap-6 p-6 bg-white dark:bg-slate-900 rounded-xl mt-6 border border-slate-100 dark:border-slate-800 shadow-sm">
 <div className="flex flex-col gap-1">
-<p className="text-slate-900 dark:text-slate-100 text-2xl font-bold">�DA partir de 45€ <span className="text-sm font-normal text-slate-500">/ luminaire</span></p>
+<p className="text-slate-900 dark:text-slate-100 text-2xl font-bold">ÃDA partir de 45â‚¬ <span className="text-sm font-normal text-slate-500">/ luminaire</span></p>
 <div className="flex items-center gap-2">
 <span className="material-symbols-outlined text-primary text-sm">verified_user</span>
-<p className="text-slate-600 dark:text-slate-400 text-sm">Assurance responsabilité civile incluse</p>
+<p className="text-slate-600 dark:text-slate-400 text-sm">Assurance responsabilitÃ© civile incluse</p>
 </div>
 </div>
 <div className="flex gap-3">
 <button className="flex items-center justify-center rounded-lg h-12 px-8 bg-primary text-white text-base font-bold transition-transform hover:scale-105">
-                                Réserver mon technicien
+                                RÃ©server mon technicien
                             </button>
 <button className="flex items-center justify-center rounded-lg h-12 px-6 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-100 text-base font-bold">
                                 Devis gratuit
@@ -83,7 +83,7 @@ const DetailsDuServiceInstallationLuminaire = () => {
 </div>
 {/*  Expertises Section  */}
 <section className="py-8">
-<h2 className="text-slate-900 dark:text-slate-100 text-3xl font-bold mb-8">Nos Expertises Spécialisées</h2>
+<h2 className="text-slate-900 dark:text-slate-100 text-3xl font-bold mb-8">Nos Expertises SpÃ©cialisÃ©es</h2>
 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 <div className="flex items-start gap-4 p-5 rounded-xl bg-primary/5 border border-primary/10">
 <div className="bg-primary text-white p-3 rounded-lg">
@@ -91,7 +91,7 @@ const DetailsDuServiceInstallationLuminaire = () => {
 </div>
 <div>
 <h3 className="text-lg font-bold mb-1">Lustres &amp; Suspensions</h3>
-<p className="text-slate-600 dark:text-slate-400 text-sm">Installation délicate de pièces lourdes ou complexes nécessitant des fixations renforcées.</p>
+<p className="text-slate-600 dark:text-slate-400 text-sm">Installation dÃ©licate de piÃ¨ces lourdes ou complexes nÃ©cessitant des fixations renforcÃ©es.</p>
 </div>
 </div>
 <div className="flex items-start gap-4 p-5 rounded-xl bg-primary/5 border border-primary/10">
@@ -99,8 +99,8 @@ const DetailsDuServiceInstallationLuminaire = () => {
 <span className="material-symbols-outlined">blur_on</span>
 </div>
 <div>
-<h3 className="text-lg font-bold mb-1">Spots Encastrés</h3>
-<p className="text-slate-600 dark:text-slate-400 text-sm">Perçage précis et raccordement électrique pour faux-plafonds, avec isolation thermique.</p>
+<h3 className="text-lg font-bold mb-1">Spots EncastrÃ©s</h3>
+<p className="text-slate-600 dark:text-slate-400 text-sm">PerÃ§age prÃ©cis et raccordement Ã©lectrique pour faux-plafonds, avec isolation thermique.</p>
 </div>
 </div>
 <div className="flex items-start gap-4 p-5 rounded-xl bg-primary/5 border border-primary/10">
@@ -108,8 +108,8 @@ const DetailsDuServiceInstallationLuminaire = () => {
 <span className="material-symbols-outlined">settings_input_component</span>
 </div>
 <div>
-<h3 className="text-lg font-bold mb-1">Éclairage Connecté</h3>
-<p className="text-slate-600 dark:text-slate-400 text-sm">Configuration de systèmes Philips Hue, Lutron ou autres solutions domotiques.</p>
+<h3 className="text-lg font-bold mb-1">Ã‰clairage ConnectÃ©</h3>
+<p className="text-slate-600 dark:text-slate-400 text-sm">Configuration de systÃ¨mes Philips Hue, Lutron ou autres solutions domotiques.</p>
 </div>
 </div>
 <div className="flex items-start gap-4 p-5 rounded-xl bg-primary/5 border border-primary/10">
@@ -117,8 +117,8 @@ const DetailsDuServiceInstallationLuminaire = () => {
 <span className="material-symbols-outlined">outdoor_grill</span>
 </div>
 <div>
-<h3 className="text-lg font-bold mb-1">Éclairage Extérieur</h3>
-<p className="text-slate-600 dark:text-slate-400 text-sm">Installation étanche (norme IP65/67) pour jardins, terrasses et façades.</p>
+<h3 className="text-lg font-bold mb-1">Ã‰clairage ExtÃ©rieur</h3>
+<p className="text-slate-600 dark:text-slate-400 text-sm">Installation Ã©tanche (norme IP65/67) pour jardins, terrasses et faÃ§ades.</p>
 </div>
 </div>
 </div>
@@ -127,12 +127,12 @@ const DetailsDuServiceInstallationLuminaire = () => {
 <section className="py-12 px-8 bg-slate-900 text-white rounded-2xl my-8">
 <div className="flex flex-col md:flex-row gap-12 items-center">
 <div className="flex-1">
-<h2 className="text-3xl font-bold mb-6">La Sécurité : Notre Priorité Absolue</h2>
+<h2 className="text-3xl font-bold mb-6">La SÃ©curitÃ© : Notre PrioritÃ© Absolue</h2>
 <p className="text-slate-400 mb-8">Toutes nos interventions respectent rigoureusement la norme NFC 15-100 pour garantir la protection des personnes et des biens.</p>
 <ul className="space-y-4">
 <li className="flex gap-3 items-center">
 <span className="material-symbols-outlined text-primary">check_circle</span>
-<span>Vérification systématique de la mise à la terre</span>
+<span>VÃ©rification systÃ©matique de la mise Ã  la terre</span>
 </li>
 <li className="flex gap-3 items-center">
 <span className="material-symbols-outlined text-primary">check_circle</span>
@@ -140,7 +140,7 @@ const DetailsDuServiceInstallationLuminaire = () => {
 </li>
 <li className="flex gap-3 items-center">
 <span className="material-symbols-outlined text-primary">check_circle</span>
-<span>Coupure de sécurité et vérification d'absence de tension</span>
+<span>Coupure de sÃ©curitÃ© et vÃ©rification d'absence de tension</span>
 </li>
 <li className="flex gap-3 items-center">
 <span className="material-symbols-outlined text-primary">check_circle</span>
@@ -150,8 +150,8 @@ const DetailsDuServiceInstallationLuminaire = () => {
 </div>
 <div className="w-full md:w-1/3 bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20 text-center">
 <span className="material-symbols-outlined text-6xl text-primary mb-4">gavel</span>
-<h3 className="text-xl font-bold mb-2">Conformité Totale</h3>
-<p className="text-sm text-slate-300">Tous nos électriciens sont certifiés Qualifelec et disposent d'habilitations électriques à jour.</p>
+<h3 className="text-xl font-bold mb-2">ConformitÃ© Totale</h3>
+<p className="text-sm text-slate-300">Tous nos Ã©lectriciens sont certifiÃ©s Qualifelec et disposent d'habilitations Ã©lectriques Ã  jour.</p>
 </div>
 </div>
 </section>
@@ -159,8 +159,8 @@ const DetailsDuServiceInstallationLuminaire = () => {
 <section className="py-8">
 <div className="flex justify-between items-end mb-8">
 <div>
-<h2 className="text-slate-900 dark:text-slate-100 text-3xl font-bold">Nos Électriciens Certifiés</h2>
-<p className="text-slate-600 dark:text-slate-400 mt-2">Des experts passionnés près de chez vous.</p>
+<h2 className="text-slate-900 dark:text-slate-100 text-3xl font-bold">Nos Ã‰lectriciens CertifiÃ©s</h2>
+<p className="text-slate-600 dark:text-slate-400 mt-2">Des experts passionnÃ©s prÃ¨s de chez vous.</p>
 </div>
 <button className="text-primary font-bold text-sm flex items-center gap-2">
                                 Voir tous les experts <span className="material-symbols-outlined">arrow_forward</span>
@@ -174,10 +174,10 @@ const DetailsDuServiceInstallationLuminaire = () => {
 <div className="flex justify-between items-start mb-2">
 <h3 className="font-bold text-lg">Thomas Morel</h3>
 <div className="flex items-center gap-1 bg-green-100 text-green-700 px-2 py-0.5 rounded text-xs font-bold">
-<span className="material-symbols-outlined text-xs">verified</span> VÉRIFIÉ
+<span className="material-symbols-outlined text-xs">verified</span> VÃ‰RIFIÃ‰
                                         </div>
 </div>
-<p className="text-slate-500 text-sm mb-4">Expert en éclairage LED &amp; Domotique</p>
+<p className="text-slate-500 text-sm mb-4">Expert en Ã©clairage LED &amp; Domotique</p>
 <div className="flex items-center gap-1 text-primary mb-4">
 <span className="material-symbols-outlined text-sm">star</span>
 <span className="material-symbols-outlined text-sm">star</span>
@@ -196,10 +196,10 @@ const DetailsDuServiceInstallationLuminaire = () => {
 <div className="flex justify-between items-start mb-2">
 <h3 className="font-bold text-lg">Sami Benali</h3>
 <div className="flex items-center gap-1 bg-green-100 text-green-700 px-2 py-0.5 rounded text-xs font-bold">
-<span className="material-symbols-outlined text-xs">verified</span> VÉRIFIÉ
+<span className="material-symbols-outlined text-xs">verified</span> VÃ‰RIFIÃ‰
                                         </div>
 </div>
-<p className="text-slate-500 text-sm mb-4">Spécialiste Lustres &amp; Haute-Tension</p>
+<p className="text-slate-500 text-sm mb-4">SpÃ©cialiste Lustres &amp; Haute-Tension</p>
 <div className="flex items-center gap-1 text-primary mb-4">
 <span className="material-symbols-outlined text-sm">star</span>
 <span className="material-symbols-outlined text-sm">star</span>
@@ -218,7 +218,7 @@ const DetailsDuServiceInstallationLuminaire = () => {
 <div className="flex justify-between items-start mb-2">
 <h3 className="font-bold text-lg">Nicolas Dubois</h3>
 <div className="flex items-center gap-1 bg-green-100 text-green-700 px-2 py-0.5 rounded text-xs font-bold">
-<span className="material-symbols-outlined text-xs">verified</span> VÉRIFIÉ
+<span className="material-symbols-outlined text-xs">verified</span> VÃ‰RIFIÃ‰
                                         </div>
 </div>
 <p className="text-slate-500 text-sm mb-4">Installation Tertiaire &amp; Habitat</p>
@@ -239,14 +239,14 @@ const DetailsDuServiceInstallationLuminaire = () => {
 <section className="py-12">
 <div className="rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden bg-white dark:bg-slate-900">
 <div className="p-6 border-b border-slate-200 dark:border-slate-800">
-<h2 className="text-xl font-bold">Détail des Tarifs Publics</h2>
+<h2 className="text-xl font-bold">DÃ©tail des Tarifs Publics</h2>
 </div>
 <div className="overflow-x-auto">
 <table className="w-full text-left border-collapse">
 <thead>
 <tr className="bg-slate-50 dark:bg-slate-800/50">
 <th className="p-4 font-bold text-sm text-slate-500 uppercase">Prestation</th>
-<th className="p-4 font-bold text-sm text-slate-500 uppercase">Délai Estimé</th>
+<th className="p-4 font-bold text-sm text-slate-500 uppercase">DÃ©lai EstimÃ©</th>
 <th className="p-4 font-bold text-sm text-slate-500 uppercase">Tarif Unitaire</th>
 </tr>
 </thead>
@@ -254,28 +254,28 @@ const DetailsDuServiceInstallationLuminaire = () => {
 <tr>
 <td className="p-4">Applique Murale / Plafonnier standard</td>
 <td className="p-4">30 - 45 min</td>
-<td className="p-4 font-bold text-primary">45€</td>
+<td className="p-4 font-bold text-primary">45â‚¬</td>
 </tr>
 <tr>
 <td className="p-4">Suspension Design ou Lustre (&lt; 5kg)</td>
 <td className="p-4">45 - 60 min</td>
-<td className="p-4 font-bold text-primary">65€</td>
+<td className="p-4 font-bold text-primary">65â‚¬</td>
 </tr>
 <tr>
 <td className="p-4">Lustre lourd ou complexe (&gt; 5kg)</td>
 <td className="p-4">1h30 - 2h</td>
-<td className="p-4 font-bold text-primary">95€</td>
+<td className="p-4 font-bold text-primary">95â‚¬</td>
 </tr>
 <tr>
-<td className="p-4">Installation Spot (unité supplémentaire)</td>
+<td className="p-4">Installation Spot (unitÃ© supplÃ©mentaire)</td>
 <td className="p-4">15 min</td>
-<td className="p-4 font-bold text-primary">25€</td>
+<td className="p-4 font-bold text-primary">25â‚¬</td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
-<p className="mt-4 text-sm text-slate-500 text-center italic">* Les tarifs peuvent varier selon la complexité du support et l'état de l'installation électrique existante.</p>
+<p className="mt-4 text-sm text-slate-500 text-center italic">* Les tarifs peuvent varier selon la complexitÃ© du support et l'Ã©tat de l'installation Ã©lectrique existante.</p>
 </section>
 </div>
 </main>
@@ -287,13 +287,13 @@ const DetailsDuServiceInstallationLuminaire = () => {
 <span className="material-symbols-outlined">lightbulb</span>
 <span className="font-bold text-lg text-slate-900 dark:text-slate-100">LuxEclair Pro</span>
 </div>
-<p className="text-sm text-slate-500 leading-relaxed">Le réseau n°1 d'électriciens experts pour vos besoins domestiques et professionnels.</p>
+<p className="text-sm text-slate-500 leading-relaxed">Le rÃ©seau nÂ°1 d'Ã©lectriciens experts pour vos besoins domestiques et professionnels.</p>
 </div>
 <div>
 <h4 className="font-bold mb-4">Services</h4>
 <ul className="text-sm space-y-2 text-slate-500">
-<li><a className="hover:text-primary" href="#">Eclairage intérieur</a></li>
-<li><a className="hover:text-primary" href="#">Dépannage urgent</a></li>
+<li><a className="hover:text-primary" href="#">Eclairage intÃ©rieur</a></li>
+<li><a className="hover:text-primary" href="#">DÃ©pannage urgent</a></li>
 <li><a className="hover:text-primary" href="#">Mise aux normes</a></li>
 <li><a className="hover:text-primary" href="#">Domotique</a></li>
 </ul>
@@ -304,7 +304,7 @@ const DetailsDuServiceInstallationLuminaire = () => {
 <li><a className="hover:text-primary" href="#">FAQ</a></li>
 <li><a className="hover:text-primary" href="#">Garanties</a></li>
 <li><a className="hover:text-primary" href="#">Nous contacter</a></li>
-<li><a className="hover:text-primary" href="#">Mentions légales</a></li>
+<li><a className="hover:text-primary" href="#">Mentions lÃ©gales</a></li>
 </ul>
 </div>
 <div>
@@ -317,7 +317,7 @@ const DetailsDuServiceInstallationLuminaire = () => {
 </div>
 </div>
 <div className="max-w-[1024px] mx-auto mt-12 pt-8 border-t border-slate-100 dark:border-slate-800 text-center text-xs text-slate-400">
-                    © 2024 LuxEclair Pro. Tous droits réservés.
+                    Â© 2024 LuxEclair Pro. Tous droits rÃ©servÃ©s.
                 </div>
 </footer>
 </div>

@@ -43,7 +43,7 @@ const ResultatsDeRechercheExperts = () => {
                             <div className="space-y-1">
                                 <button className="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary/10 text-primary font-semibold transition-colors">
                                     <span className="material-symbols-outlined text-xl">sell</span>
-                                    <span className="text-sm">Catégories</span>
+                                    <span className="text-sm">CatÃ©gories</span>
                                 </button>
                                 <button className="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
                                     <span className="material-symbols-outlined text-xl">star</span>
@@ -55,7 +55,7 @@ const ResultatsDeRechercheExperts = () => {
                                 </button>
                                 <button className="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
                                     <span className="material-symbols-outlined text-xl">calendar_today</span>
-                                    <span className="text-sm">Disponibilité</span>
+                                    <span className="text-sm">DisponibilitÃ©</span>
                                 </button>
                             </div>
                             <hr className="my-6 border-slate-200 dark:border-slate-800" />
@@ -87,15 +87,15 @@ const ResultatsDeRechercheExperts = () => {
                             <div className="flex flex-wrap items-center justify-between gap-4">
                                 <div className="flex flex-col">
                                     <h1 className="text-2xl font-bold text-slate-900 dark:text-white">128 experts disponibles pour "Plombier"</h1>
-                                    <p className="text-slate-500 dark:text-slate-400 text-sm">Trouvez le professionnel idéal pour vos travaux</p>
+                                    <p className="text-slate-500 dark:text-slate-400 text-sm">Trouvez le professionnel idÃ©al pour vos travaux</p>
                                 </div>
                                 <div className="flex items-center gap-3">
                                     <span className="text-sm font-medium text-slate-500 hidden sm:inline">Trier par :</span>
                                     <select className="form-select bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg py-2 pl-3 pr-10 text-sm font-medium focus:ring-primary focus:border-primary">
-                                        <option>Les mieux notés</option>
+                                        <option>Les mieux notÃ©s</option>
                                         <option>Prix croissants</option>
-                                        <option>Plus récents</option>
-                                        <option>Proximité</option>
+                                        <option>Plus rÃ©cents</option>
+                                        <option>ProximitÃ©</option>
                                     </select>
                                 </div>
                             </div>
@@ -114,13 +114,13 @@ const ResultatsDeRechercheExperts = () => {
                                 <div className="p-5">
                                     <div className="flex items-center gap-2 mb-1">
                                         <h3 className="text-lg font-bold text-slate-900 dark:text-white">Thomas Martin</h3>
-                                        <span className="material-symbols-outlined text-primary text-lg" title="Profil vérifié">verified</span>
+                                        <span className="material-symbols-outlined text-primary text-lg" title="Profil vÃ©rifiÃ©">verified</span>
                                     </div>
-                                    <p className="text-slate-500 dark:text-slate-400 text-sm mb-4">Plombier Expert �DA� 12 ans d'exp.</p>
+                                    <p className="text-slate-500 dark:text-slate-400 text-sm mb-4">Plombier Expert âDA¢ 12 ans d'exp.</p>
                                     <div className="flex items-center justify-between mt-auto pt-4 border-t border-slate-100 dark:border-slate-800">
                                         <div>
-                                            <span className="text-xs text-slate-400 block">�DA partir de</span>
-                                            <span className="text-lg font-bold text-primary">45€/h</span>
+                                            <span className="text-xs text-slate-400 block">ÃDA partir de</span>
+                                            <span className="text-lg font-bold text-primary">45â‚¬/h</span>
                                         </div>
                                         <button className="bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white px-4 py-2 rounded-lg text-sm font-bold hover:bg-primary hover:text-white transition-colors">
                                             Voir profil
@@ -140,13 +140,13 @@ const ResultatsDeRechercheExperts = () => {
                                 <div className="p-5">
                                     <div className="flex items-center gap-2 mb-1">
                                         <h3 className="text-lg font-bold text-slate-900 dark:text-white">Sophie Bernard</h3>
-                                        <span className="material-symbols-outlined text-primary text-lg" title="Profil vérifié">verified</span>
+                                        <span className="material-symbols-outlined text-primary text-lg" title="Profil vÃ©rifiÃ©">verified</span>
                                     </div>
-                                    <p className="text-slate-500 dark:text-slate-400 text-sm mb-4">Installation &amp; Dépannage</p>
+                                    <p className="text-slate-500 dark:text-slate-400 text-sm mb-4">Installation &amp; DÃ©pannage</p>
                                     <div className="flex items-center justify-between mt-auto pt-4 border-t border-slate-100 dark:border-slate-800">
                                         <div>
-                                            <span className="text-xs text-slate-400 block">�DA partir de</span>
-                                            <span className="text-lg font-bold text-primary">50€/h</span>
+                                            <span className="text-xs text-slate-400 block">ÃDA partir de</span>
+                                            <span className="text-lg font-bold text-primary">50â‚¬/h</span>
                                         </div>
                                         <button className="bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white px-4 py-2 rounded-lg text-sm font-bold hover:bg-primary hover:text-white transition-colors">
                                             Voir profil
@@ -166,13 +166,13 @@ const ResultatsDeRechercheExperts = () => {
                                 <div className="p-5">
                                     <div className="flex items-center gap-2 mb-1">
                                         <h3 className="text-lg font-bold text-slate-900 dark:text-white">Jean Dupont</h3>
-                                        <span className="material-symbols-outlined text-primary text-lg" title="Profil vérifié">verified</span>
+                                        <span className="material-symbols-outlined text-primary text-lg" title="Profil vÃ©rifiÃ©">verified</span>
                                     </div>
                                     <p className="text-slate-500 dark:text-slate-400 text-sm mb-4">Chauffage &amp; Sanitaire</p>
                                     <div className="flex items-center justify-between mt-auto pt-4 border-t border-slate-100 dark:border-slate-800">
                                         <div>
-                                            <span className="text-xs text-slate-400 block">�DA partir de</span>
-                                            <span className="text-lg font-bold text-primary">42€/h</span>
+                                            <span className="text-xs text-slate-400 block">ÃDA partir de</span>
+                                            <span className="text-lg font-bold text-primary">42â‚¬/h</span>
                                         </div>
                                         <button className="bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white px-4 py-2 rounded-lg text-sm font-bold hover:bg-primary hover:text-white transition-colors">
                                             Voir profil
@@ -183,7 +183,7 @@ const ResultatsDeRechercheExperts = () => {
                             {/*  Artisan Card 4  */}
                             <div className="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm hover:shadow-md transition-shadow group">
                                 <div className="h-48 w-full bg-slate-100 relative overflow-hidden">
-                                    <img alt="Marc Lavigne" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Portrait de Marc Lavigne artisan qualifié" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5IeJNXrOmwN5WerSMDoWZpM27zZW7VdiygNPdWLUj6aq3upP8slxs3d02fx9lWjxNZdz53dOTnINbUF96n7eM7gUBkIDH6rEb1d9obyfIj69T9Lnt7gR5mRAbOtN_u0PdUQN4uoFZZxZn_ui7WdE7gZcb5BWSfNbkfZjTZiLWdKy44e8X-lkxmZqfjcOyJOQOiwAtz8m3UPNI2eDzQSq1qiFYfgn_xyjftoXKXXpzgTKTeYI0I_RAd7fl5suurod576N7VzhEnTcW" />
+                                    <img alt="Marc Lavigne" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Portrait de Marc Lavigne artisan qualifiÃ©" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5IeJNXrOmwN5WerSMDoWZpM27zZW7VdiygNPdWLUj6aq3upP8slxs3d02fx9lWjxNZdz53dOTnINbUF96n7eM7gUBkIDH6rEb1d9obyfIj69T9Lnt7gR5mRAbOtN_u0PdUQN4uoFZZxZn_ui7WdE7gZcb5BWSfNbkfZjTZiLWdKy44e8X-lkxmZqfjcOyJOQOiwAtz8m3UPNI2eDzQSq1qiFYfgn_xyjftoXKXXpzgTKTeYI0I_RAd7fl5suurod576N7VzhEnTcW" />
                                     <div className="absolute top-3 right-3 bg-white/90 dark:bg-slate-900/90 backdrop-blur px-2 py-1 rounded-lg flex items-center gap-1 shadow-sm">
                                         <span className="material-symbols-outlined text-yellow-500 text-sm fill-1">star</span>
                                         <span className="text-xs font-bold text-slate-900 dark:text-white">5.0</span>
@@ -192,13 +192,13 @@ const ResultatsDeRechercheExperts = () => {
                                 <div className="p-5">
                                     <div className="flex items-center gap-2 mb-1">
                                         <h3 className="text-lg font-bold text-slate-900 dark:text-white">Marc Lavigne</h3>
-                                        <span className="material-symbols-outlined text-primary text-lg" title="Profil vérifié">verified</span>
+                                        <span className="material-symbols-outlined text-primary text-lg" title="Profil vÃ©rifiÃ©">verified</span>
                                     </div>
                                     <p className="text-slate-500 dark:text-slate-400 text-sm mb-4">Urgence Plomberie 24/7</p>
                                     <div className="flex items-center justify-between mt-auto pt-4 border-t border-slate-100 dark:border-slate-800">
                                         <div>
-                                            <span className="text-xs text-slate-400 block">�DA partir de</span>
-                                            <span className="text-lg font-bold text-primary">60€/h</span>
+                                            <span className="text-xs text-slate-400 block">ÃDA partir de</span>
+                                            <span className="text-lg font-bold text-primary">60â‚¬/h</span>
                                         </div>
                                         <button className="bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white px-4 py-2 rounded-lg text-sm font-bold hover:bg-primary hover:text-white transition-colors">
                                             Voir profil
@@ -209,7 +209,7 @@ const ResultatsDeRechercheExperts = () => {
                             {/*  Artisan Card 5  */}
                             <div className="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm hover:shadow-md transition-shadow group">
                                 <div className="h-48 w-full bg-slate-100 relative overflow-hidden">
-                                    <img alt="Lucie Morel" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Lucie Morel spécialiste en rénovation salle de bain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAd2lF2Rjm7Gdg9DD6qLxOqK5-PRcttFRHDSuelUSaDxIW5WO7tNPdEV05x79t8m-DmWZgqXHe9CqHapkzvw5jRF5FhnRSpmF1-dP_gX8nuBF1jp-rnYBNTkOIQy70buLy8TLhzugQr1FEAORQbCRuWpXUOfU_VxvyNBTh4psIcP97Ex93h0lxbwRKnkfPyH-Wm3Fm1IEHPTurF38VQWQ4BX8nJZ5Gfr2kbMg6L18rLBeUR7FwZCe1zbDeWAMpG_0qiUSW3eULLQrs1" />
+                                    <img alt="Lucie Morel" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Lucie Morel spÃ©cialiste en rÃ©novation salle de bain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAd2lF2Rjm7Gdg9DD6qLxOqK5-PRcttFRHDSuelUSaDxIW5WO7tNPdEV05x79t8m-DmWZgqXHe9CqHapkzvw5jRF5FhnRSpmF1-dP_gX8nuBF1jp-rnYBNTkOIQy70buLy8TLhzugQr1FEAORQbCRuWpXUOfU_VxvyNBTh4psIcP97Ex93h0lxbwRKnkfPyH-Wm3Fm1IEHPTurF38VQWQ4BX8nJZ5Gfr2kbMg6L18rLBeUR7FwZCe1zbDeWAMpG_0qiUSW3eULLQrs1" />
                                     <div className="absolute top-3 right-3 bg-white/90 dark:bg-slate-900/90 backdrop-blur px-2 py-1 rounded-lg flex items-center gap-1 shadow-sm">
                                         <span className="material-symbols-outlined text-yellow-500 text-sm fill-1">star</span>
                                         <span className="text-xs font-bold text-slate-900 dark:text-white">4.6</span>
@@ -218,13 +218,13 @@ const ResultatsDeRechercheExperts = () => {
                                 <div className="p-5">
                                     <div className="flex items-center gap-2 mb-1">
                                         <h3 className="text-lg font-bold text-slate-900 dark:text-white">Lucie Morel</h3>
-                                        <span className="material-symbols-outlined text-primary text-lg" title="Profil vérifié">verified</span>
+                                        <span className="material-symbols-outlined text-primary text-lg" title="Profil vÃ©rifiÃ©">verified</span>
                                     </div>
-                                    <p className="text-slate-500 dark:text-slate-400 text-sm mb-4">Rénovation Salles de Bain</p>
+                                    <p className="text-slate-500 dark:text-slate-400 text-sm mb-4">RÃ©novation Salles de Bain</p>
                                     <div className="flex items-center justify-between mt-auto pt-4 border-t border-slate-100 dark:border-slate-800">
                                         <div>
-                                            <span className="text-xs text-slate-400 block">�DA partir de</span>
-                                            <span className="text-lg font-bold text-primary">48€/h</span>
+                                            <span className="text-xs text-slate-400 block">ÃDA partir de</span>
+                                            <span className="text-lg font-bold text-primary">48â‚¬/h</span>
                                         </div>
                                         <button className="bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white px-4 py-2 rounded-lg text-sm font-bold hover:bg-primary hover:text-white transition-colors">
                                             Voir profil
@@ -244,13 +244,13 @@ const ResultatsDeRechercheExperts = () => {
                                 <div className="p-5">
                                     <div className="flex items-center gap-2 mb-1">
                                         <h3 className="text-lg font-bold text-slate-900 dark:text-white">Paul Robert</h3>
-                                        <span className="material-symbols-outlined text-primary text-lg" title="Profil vérifié">verified</span>
+                                        <span className="material-symbols-outlined text-primary text-lg" title="Profil vÃ©rifiÃ©">verified</span>
                                     </div>
-                                    <p className="text-slate-500 dark:text-slate-400 text-sm mb-4">Plombier Chauffagiste Qualifié</p>
+                                    <p className="text-slate-500 dark:text-slate-400 text-sm mb-4">Plombier Chauffagiste QualifiÃ©</p>
                                     <div className="flex items-center justify-between mt-auto pt-4 border-t border-slate-100 dark:border-slate-800">
                                         <div>
-                                            <span className="text-xs text-slate-400 block">�DA partir de</span>
-                                            <span className="text-lg font-bold text-primary">55€/h</span>
+                                            <span className="text-xs text-slate-400 block">ÃDA partir de</span>
+                                            <span className="text-lg font-bold text-primary">55â‚¬/h</span>
                                         </div>
                                         <button className="bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white px-4 py-2 rounded-lg text-sm font-bold hover:bg-primary hover:text-white transition-colors">
                                             Voir profil
@@ -287,12 +287,12 @@ const ResultatsDeRechercheExperts = () => {
                                 </div>
                                 <span className="font-bold text-lg text-slate-900 dark:text-white">ArtisanDirect</span>
                             </div>
-                            <p className="text-sm text-slate-500 dark:text-slate-400">La plateforme n°1 pour trouver des artisans qualifiés près de chez vous.</p>
+                            <p className="text-sm text-slate-500 dark:text-slate-400">La plateforme nÂ°1 pour trouver des artisans qualifiÃ©s prÃ¨s de chez vous.</p>
                         </div>
                         <div>
                             <h4 className="font-bold text-slate-900 dark:text-white mb-4">Plateforme</h4>
                             <ul className="space-y-2 text-sm text-slate-500 dark:text-slate-400">
-                                <li><a className="hover:text-primary" href="#">Comment ça marche</a></li>
+                                <li><a className="hover:text-primary" href="#">Comment Ã§a marche</a></li>
                                 <li><a className="hover:text-primary" href="#">Devenir Artisan</a></li>
                                 <li><a className="hover:text-primary" href="#">Garanties</a></li>
                             </ul>
@@ -306,16 +306,16 @@ const ResultatsDeRechercheExperts = () => {
                             </ul>
                         </div>
                         <div>
-                            <h4 className="font-bold text-slate-900 dark:text-white mb-4">Légal</h4>
+                            <h4 className="font-bold text-slate-900 dark:text-white mb-4">LÃ©gal</h4>
                             <ul className="space-y-2 text-sm text-slate-500 dark:text-slate-400">
-                                <li><a className="hover:text-primary" href="#">Mentions Légales</a></li>
-                                <li><a className="hover:text-primary" href="#">Confidentialité</a></li>
+                                <li><a className="hover:text-primary" href="#">Mentions LÃ©gales</a></li>
+                                <li><a className="hover:text-primary" href="#">ConfidentialitÃ©</a></li>
                                 <li><a className="hover:text-primary" href="#">CGU</a></li>
                             </ul>
                         </div>
                     </div>
                     <div className="max-w-7xl mx-auto px-6 mt-10 pt-6 border-t border-slate-100 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
-                        <p className="text-xs text-slate-400">© 2024 ArtisanDirect. Tous droits réservés.</p>
+                        <p className="text-xs text-slate-400">Â© 2024 ArtisanDirect. Tous droits rÃ©servÃ©s.</p>
                         <div className="flex gap-4">
                             <a className="text-slate-400 hover:text-primary" href="#"><span className="material-symbols-outlined text-lg">public</span></a>
                             <a className="text-slate-400 hover:text-primary" href="#"><span className="material-symbols-outlined text-lg">mail</span></a>

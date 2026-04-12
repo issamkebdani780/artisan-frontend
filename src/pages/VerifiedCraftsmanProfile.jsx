@@ -37,7 +37,7 @@ const VerifiedCraftsmanProfile = () => {
 </div>
 </div>
 <h1 className="mt-4 text-2xl font-bold text-slate-900 dark:text-slate-100">Robert Miller</h1>
-<p className="text-primary font-semibold text-sm">Master Carpenter �DA� 12 years exp.</p>
+<p className="text-primary font-semibold text-sm">Master Carpenter âDA¢ 12 years exp.</p>
 <div className="flex items-center gap-1 mt-2 text-yellow-500">
 <span className="material-symbols-outlined fill-1">star</span>
 <span className="font-bold text-slate-900 dark:text-slate-100">4.9</span>
@@ -215,7 +215,7 @@ const VerifiedCraftsmanProfile = () => {
 <a className="hover:text-primary transition-colors" href="#">Support</a>
 <a className="hover:text-primary transition-colors" href="#">Terms</a>
 </div>
-<p className="text-xs text-slate-400">© 2024 CraftsmanHub Pro. All rights reserved.</p>
+<p className="text-xs text-slate-400">Â© 2024 CraftsmanHub Pro. All rights reserved.</p>
 </div>
 </footer>
 </div>

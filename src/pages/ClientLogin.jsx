@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+ï»¿import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import apiService from '../services/api';
 
@@ -78,7 +78,7 @@ const ClientLogin = () => {
                   type="password" 
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  placeholder="âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢" 
+                  placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢" 
                   required
                   className="w-full bg-slate-100 border-2 border-transparent rounded-xl py-5 pl-14 pr-6 text-lg text-slate-900 focus:ring-0 focus:border-blue-500 focus:bg-white transition-all outline-none" 
                 />

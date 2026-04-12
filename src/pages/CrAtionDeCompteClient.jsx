@@ -48,7 +48,7 @@ const CrAtionDeCompteClient = () => {
 <div className="text-2xl font-black text-slate-900 tracking-tighter">ArtisanHub</div>
 <nav className="hidden md:flex items-center gap-8">
 <a className="text-slate-500 hover:text-slate-900 transition-colors font-medium text-sm" href="#">Trouver des Pros</a>
-<a className="text-slate-500 hover:text-slate-900 transition-colors font-medium text-sm" href="#">Comment ça marche</a>
+<a className="text-slate-500 hover:text-slate-900 transition-colors font-medium text-sm" href="#">Comment Ã§a marche</a>
 <a className="text-slate-500 hover:text-slate-900 transition-colors font-medium text-sm" href="#">Tarifs</a>
 </nav>
 <div className="flex items-center gap-4">
@@ -64,8 +64,8 @@ const CrAtionDeCompteClient = () => {
 </div>
 {/*  Title Section  */}
 <div className="mb-12 text-center">
-<h2 className="text-5xl font-black text-slate-900 tracking-tighter mb-4">Créer un compte client</h2>
-<p className="text-on-surface-variant text-xl">Rejoignez-nous et commencez à gérer vos projets aujourd'hui.</p>
+<h2 className="text-5xl font-black text-slate-900 tracking-tighter mb-4">CrÃ©er un compte client</h2>
+<p className="text-on-surface-variant text-xl">Rejoignez-nous et commencez Ã  gÃ©rer vos projets aujourd'hui.</p>
 </div>
 {/*  Registration Form  */}
 <section className="w-full max-w-3xl">
@@ -73,7 +73,7 @@ const CrAtionDeCompteClient = () => {
 {/*  Name Group  */}
 <div className="grid grid-cols-2 gap-8">
 <div className="flex flex-col gap-3">
-<label className="text-xs font-bold uppercase tracking-widest text-slate-400 ml-1">Prénom</label>
+<label className="text-xs font-bold uppercase tracking-widest text-slate-400 ml-1">PrÃ©nom</label>
 <input className="w-full h-14 px-5 rounded-xl bg-surface-container-low border border-slate-100 focus:ring-2 focus:ring-primary/40 focus:border-transparent text-on-surface transition-all placeholder:text-slate-400" placeholder="Jean" type="text"/>
 </div>
 <div className="flex flex-col gap-3">
@@ -88,7 +88,7 @@ const CrAtionDeCompteClient = () => {
 <input className="w-full h-14 px-5 rounded-xl bg-surface-container-low border border-slate-100 focus:ring-2 focus:ring-primary/40 focus:border-transparent text-on-surface transition-all placeholder:text-slate-400" placeholder="jean.dupont@exemple.com" type="email"/>
 </div>
 <div className="flex flex-col gap-3">
-<label className="text-xs font-bold uppercase tracking-widest text-slate-400 ml-1">Téléphone</label>
+<label className="text-xs font-bold uppercase tracking-widest text-slate-400 ml-1">TÃ©lÃ©phone</label>
 <div className="relative flex items-center">
 <div className="absolute left-4 flex items-center gap-2 pointer-events-none border-r border-slate-200 pr-3">
 <span className="text-sm font-bold text-slate-600">+213</span>
@@ -110,29 +110,29 @@ const CrAtionDeCompteClient = () => {
 </div>
 {/*  Address  */}
 <div className="flex flex-col gap-3">
-<label className="text-xs font-bold uppercase tracking-widest text-slate-400 ml-1">Adresse Détaillée</label>
-<input className="w-full h-14 px-5 rounded-xl bg-surface-container-low border border-slate-100 focus:ring-2 focus:ring-primary/40 focus:border-transparent text-on-surface transition-all" placeholder="N° 45, Rue des Frères, Quartier Central" type="text"/>
+<label className="text-xs font-bold uppercase tracking-widest text-slate-400 ml-1">Adresse DÃ©taillÃ©e</label>
+<input className="w-full h-14 px-5 rounded-xl bg-surface-container-low border border-slate-100 focus:ring-2 focus:ring-primary/40 focus:border-transparent text-on-surface transition-all" placeholder="NÂ° 45, Rue des FrÃ¨res, Quartier Central" type="text"/>
 </div>
 {/*  Password Group  */}
 <div className="grid grid-cols-2 gap-8">
 <div className="flex flex-col gap-3">
 <label className="text-xs font-bold uppercase tracking-widest text-slate-400 ml-1">Mot de passe</label>
-<input className="w-full h-14 px-5 rounded-xl bg-surface-container-low border border-slate-100 focus:ring-2 focus:ring-primary/40 focus:border-transparent text-on-surface transition-all" placeholder="�DA��DA��DA��DA��DA��DA��DA��DA�" type="password"/>
+<input className="w-full h-14 px-5 rounded-xl bg-surface-container-low border border-slate-100 focus:ring-2 focus:ring-primary/40 focus:border-transparent text-on-surface transition-all" placeholder="âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢" type="password"/>
 </div>
 <div className="flex flex-col gap-3">
 <label className="text-xs font-bold uppercase tracking-widest text-slate-400 ml-1">Confirmer</label>
-<input className="w-full h-14 px-5 rounded-xl bg-surface-container-low border border-slate-100 focus:ring-2 focus:ring-primary/40 focus:border-transparent text-on-surface transition-all" placeholder="�DA��DA��DA��DA��DA��DA��DA��DA�" type="password"/>
+<input className="w-full h-14 px-5 rounded-xl bg-surface-container-low border border-slate-100 focus:ring-2 focus:ring-primary/40 focus:border-transparent text-on-surface transition-all" placeholder="âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢" type="password"/>
 </div>
 </div>
 {/*  Password Requirements  */}
 <div className="bg-slate-50 p-6 rounded-2xl border-l-4 border-primary">
-<h4 className="text-xs font-black text-slate-700 mb-4 uppercase tracking-tighter">Exigences de sécurité :</h4>
+<h4 className="text-xs font-black text-slate-700 mb-4 uppercase tracking-tighter">Exigences de sÃ©curitÃ© :</h4>
 <ul className="grid grid-cols-2 gap-4">
 <li className="flex items-center gap-2 text-xs font-medium text-slate-600">
-<span className="material-symbols-outlined text-[18px] text-green-500" >check_circle</span> 8+ caractères
+<span className="material-symbols-outlined text-[18px] text-green-500" >check_circle</span> 8+ caractÃ¨res
                             </li>
 <li className="flex items-center gap-2 text-xs font-medium text-slate-600">
-<span className="material-symbols-outlined text-[18px] text-slate-300">circle</span> Débute par une lettre
+<span className="material-symbols-outlined text-[18px] text-slate-300">circle</span> DÃ©bute par une lettre
                             </li>
 <li className="flex items-center gap-2 text-xs font-medium text-slate-600">
 <span className="material-symbols-outlined text-[18px] text-slate-300">circle</span> Contient un chiffre
@@ -143,7 +143,7 @@ const CrAtionDeCompteClient = () => {
 <div className="flex items-start gap-4 py-2">
 <input className="mt-1 w-6 h-6 rounded border-slate-300 text-primary focus:ring-primary/40 cursor-pointer" id="consent" type="checkbox"/>
 <label className="text-sm font-medium text-on-surface-variant leading-relaxed" htmlFor="consent">
-                            J'accepte les <a className="text-primary font-bold hover:underline" href="#">Conditions d'Utilisation</a> et la <a className="text-primary font-bold hover:underline" href="#">Politique de Confidentialité</a>.
+                            J'accepte les <a className="text-primary font-bold hover:underline" href="#">Conditions d'Utilisation</a> et la <a className="text-primary font-bold hover:underline" href="#">Politique de ConfidentialitÃ©</a>.
                         </label>
 </div>
 {/*  CTA  */}
@@ -156,7 +156,7 @@ const CrAtionDeCompteClient = () => {
 {/*  Footer Link  */}
 <div className="pt-2 text-center">
 <p className="text-on-surface-variant font-medium">
-                            Vous avez déjà un compte ? 
+                            Vous avez dÃ©jÃ  un compte ? 
                             <a className="text-primary font-black ml-1 hover:underline text-lg" href="#">Sign In</a>
 </p>
 </div>
@@ -168,12 +168,12 @@ const CrAtionDeCompteClient = () => {
 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 px-8 max-w-7xl mx-auto">
 <div className="space-y-4">
 <div className="text-xl font-bold text-slate-900 tracking-tighter">ArtisanHub</div>
-<p className="text-sm text-slate-500 font-medium">© 2024 ArtisanHub. Créé pour l'Excellence.</p>
+<p className="text-sm text-slate-500 font-medium">Â© 2024 ArtisanHub. CrÃ©Ã© pour l'Excellence.</p>
 </div>
 <div className="flex flex-col gap-3">
 <h4 className="text-xs font-bold uppercase tracking-widest text-slate-400">Plateforme</h4>
 <a className="text-slate-500 hover:text-slate-900 text-sm font-medium transition-colors" href="#">Annuaire</a>
-<a className="text-slate-500 hover:text-slate-900 text-sm font-medium transition-colors" href="#">Comment ça marche</a>
+<a className="text-slate-500 hover:text-slate-900 text-sm font-medium transition-colors" href="#">Comment Ã§a marche</a>
 </div>
 <div className="flex flex-col gap-3">
 <h4 className="text-xs font-bold uppercase tracking-widest text-slate-400">Support</h4>
@@ -181,8 +181,8 @@ const CrAtionDeCompteClient = () => {
 <a className="text-slate-500 hover:text-slate-900 text-sm font-medium transition-colors" href="#">Contact</a>
 </div>
 <div className="flex flex-col gap-3">
-<h4 className="text-xs font-bold uppercase tracking-widest text-slate-400">Légal</h4>
-<a className="text-slate-500 hover:text-slate-900 text-sm font-medium transition-colors" href="#">Confidentialité</a>
+<h4 className="text-xs font-bold uppercase tracking-widest text-slate-400">LÃ©gal</h4>
+<a className="text-slate-500 hover:text-slate-900 text-sm font-medium transition-colors" href="#">ConfidentialitÃ©</a>
 <a className="text-slate-500 hover:text-slate-900 text-sm font-medium transition-colors" href="#">Conditions</a>
 </div>
 </div>

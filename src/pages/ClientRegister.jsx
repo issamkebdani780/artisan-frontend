@@ -66,7 +66,7 @@ const ClientRegister = () => {
     e.preventDefault();
     setError('');
     if (clientForm.password !== clientForm.confirm) { setError('Les mots de passe ne correspondent pas'); return; }
-    if (clientForm.password.length < 8) { setError('Mot de passe trop court (8 caractères minimum)'); return; }
+    if (clientForm.password.length < 8) { setError('Mot de passe trop court (8 caractÃ¨res minimum)'); return; }
     setLoading(true);
     try {
       const formData = new FormData();
@@ -87,7 +87,7 @@ const ClientRegister = () => {
         setError(res.error || 'Erreur lors de l\'inscription');
       }
     } catch (err) {
-      setError(err.message || 'Une erreur est survenue. Vérifiez votre connexion.');
+      setError(err.message || 'Une erreur est survenue. VÃ©rifiez votre connexion.');
     } finally {
       setLoading(false);
       
@@ -98,7 +98,7 @@ const ClientRegister = () => {
     e.preventDefault();
     setError('');
     if (artisanForm.password !== artisanForm.confirm) { setError('Les mots de passe ne correspondent pas'); return; }
-    if (artisanForm.password.length < 8) { setError('Mot de passe trop court (8 caractères minimum)'); return; }
+    if (artisanForm.password.length < 8) { setError('Mot de passe trop court (8 caractÃ¨res minimum)'); return; }
     setLoading(true);
     try {
       const res = await apiService.register({ name: artisanForm.name, email: artisanForm.email, phone: artisanForm.phone, specialty: artisanForm.specialty, password: artisanForm.password, wilaya_id: artisanForm.wilaya_id, commune_id: artisanForm.commune_id, role: 'artisan' });
@@ -109,7 +109,7 @@ const ClientRegister = () => {
         setError(res.error || 'Erreur lors de l\'inscription');
       }
     } catch (err) {
-      setError('Une erreur est survenue. Vérifiez votre connexion.');
+      setError('Une erreur est survenue. VÃ©rifiez votre connexion.');
     } finally {
       setLoading(false);
     }
@@ -125,15 +125,15 @@ const ClientRegister = () => {
               Rejoignez <span className="text-blue-600 italic">l'excellence</span>
             </h1>
             <p className="text-xl text-slate-500 leading-relaxed font-normal max-w-md">
-              Accédez à un écosystème privilégié où le savoir-faire rencontre la passion. Créez votre profil en quelques instants.
+              AccÃ©dez Ã  un Ã©cosystÃ¨me privilÃ©giÃ© oÃ¹ le savoir-faire rencontre la passion. CrÃ©ez votre profil en quelques instants.
             </p>
           </div>
           
           <div className="space-y-5">
             {[
-              { icon: 'verified', title: 'Qualité Certifiée', desc: 'Un réseau rigoureusement sélectionné pour garantir une authenticité absolue.' },
-              { icon: 'security', title: 'Confiance Totale', desc: 'Transactions sécurisées par des protocoles bancaires de nouvelle génération.' },
-              { icon: 'history_edu', title: 'Savoir-faire Unique', desc: 'Découvrez des histoires et des pièces qui ne se trouvent nulle part ailleurs.' }
+              { icon: 'verified', title: 'QualitÃ© CertifiÃ©e', desc: 'Un rÃ©seau rigoureusement sÃ©lectionnÃ© pour garantir une authenticitÃ© absolue.' },
+              { icon: 'security', title: 'Confiance Totale', desc: 'Transactions sÃ©curisÃ©es par des protocoles bancaires de nouvelle gÃ©nÃ©ration.' },
+              { icon: 'history_edu', title: 'Savoir-faire Unique', desc: 'DÃ©couvrez des histoires et des piÃ¨ces qui ne se trouvent nulle part ailleurs.' }
             ].map((item, i) => (
               <div key={i} className="group p-6 rounded-2xl bg-white border border-slate-100 flex items-start gap-5 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07)] transition-all duration-300 hover:border-blue-600/20">
                 <div className="w-14 h-14 rounded-xl bg-blue-50 flex items-center justify-center shrink-0 text-blue-600 transition-all duration-300 group-hover:bg-blue-600 group-hover:text-white group-hover:scale-110">
@@ -177,8 +177,8 @@ const ClientRegister = () => {
             {activeTab === 'client' ? (
               <div className="space-y-10">
                 <div className="space-y-3">
-                  <h2 className="text-4xl font-black text-slate-900 tracking-tight">Créer mon profil</h2>
-                  <p className="text-slate-500 text-lg">Découvrez le monde de l'artisanat d'exception.</p>
+                  <h2 className="text-4xl font-black text-slate-900 tracking-tight">CrÃ©er mon profil</h2>
+                  <p className="text-slate-500 text-lg">DÃ©couvrez le monde de l'artisanat d'exception.</p>
                 </div>
                 <form className="space-y-8" onSubmit={handleClientSubmit}>
                   <div className="space-y-6">
@@ -199,7 +199,7 @@ const ClientRegister = () => {
                         </div>
                       </div>
                       <div className="space-y-2">
-                        <label className="text-[11px] font-black uppercase tracking-widest text-slate-400 ml-1">Téléphone</label>
+                        <label className="text-[11px] font-black uppercase tracking-widest text-slate-400 ml-1">TÃ©lÃ©phone</label>
                         <div className="relative group">
                           <span className="material-symbols-outlined absolute left-5 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-blue-600 transition-colors text-xl">call</span>
                           <input name="phone" type="tel" value={clientForm.phone} onChange={handleClientChange} placeholder="05 50 12 34 56" className="w-full pl-14 pr-6 py-5 bg-slate-50/50 rounded-2xl border border-transparent focus:border-blue-600/20 focus:ring-8 focus:ring-blue-600/5 focus:bg-white transition-all outline-none font-medium placeholder:text-slate-400" />
@@ -213,7 +213,7 @@ const ClientRegister = () => {
                         <div className="relative group">
                           <span className="material-symbols-outlined absolute left-5 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-blue-600 transition-colors text-xl">location_on</span>
                           <select name="wilaya_id" value={clientForm.wilaya_id} onChange={handleClientWilayaChange} required className="w-full pl-14 pr-6 py-5 bg-slate-50/50 rounded-2xl border border-transparent focus:border-blue-600/20 focus:ring-8 focus:ring-blue-600/5 focus:bg-white transition-all outline-none font-medium">
-                            <option value="">Sélectionnez une wilaya</option>
+                            <option value="">SÃ©lectionnez une wilaya</option>
                             {wilayas.map(wilaya => (
                               <option key={wilaya.id} value={wilaya.id}>{wilaya.name}</option>
                             ))}
@@ -225,7 +225,7 @@ const ClientRegister = () => {
                         <div className="relative group">
                           <span className="material-symbols-outlined absolute left-5 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-blue-600 transition-colors text-xl">location_city</span>
                           <select name="commune_id" value={clientForm.commune_id} onChange={handleClientChange} required disabled={!clientForm.wilaya_id} className="w-full pl-14 pr-6 py-5 bg-slate-50/50 rounded-2xl border border-transparent focus:border-blue-600/20 focus:ring-8 focus:ring-blue-600/5 focus:bg-white transition-all outline-none font-medium disabled:opacity-50">
-                            <option value="">Sélectionnez une commune</option>
+                            <option value="">SÃ©lectionnez une commune</option>
                             {communes.map(commune => (
                               <option key={commune.id} value={commune.id}>{commune.name}</option>
                             ))}
@@ -239,29 +239,29 @@ const ClientRegister = () => {
                         <label className="text-[11px] font-black uppercase tracking-widest text-slate-400 ml-1">Mot de passe</label>
                         <div className="relative group">
                           <span className="material-symbols-outlined absolute left-5 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-blue-600 transition-colors text-xl">lock</span>
-                          <input name="password" type="password" value={clientForm.password} onChange={handleClientChange} required placeholder="�DA��DA��DA��DA��DA��DA��DA��DA�" className="w-full pl-14 pr-6 py-5 bg-slate-50/50 rounded-2xl border border-transparent focus:border-blue-600/20 focus:ring-8 focus:ring-blue-600/5 focus:bg-white transition-all outline-none font-medium placeholder:text-slate-400" />
+                          <input name="password" type="password" value={clientForm.password} onChange={handleClientChange} required placeholder="âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢" className="w-full pl-14 pr-6 py-5 bg-slate-50/50 rounded-2xl border border-transparent focus:border-blue-600/20 focus:ring-8 focus:ring-blue-600/5 focus:bg-white transition-all outline-none font-medium placeholder:text-slate-400" />
                         </div>
                       </div>
                       <div className="space-y-2">
                         <label className="text-[11px] font-black uppercase tracking-widest text-slate-400 ml-1">Confirmation</label>
                         <div className="relative group">
                           <span className="material-symbols-outlined absolute left-5 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-blue-600 transition-colors text-xl">verified_user</span>
-                          <input name="confirm" type="password" value={clientForm.confirm} onChange={handleClientChange} required placeholder="�DA��DA��DA��DA��DA��DA��DA��DA�" className="w-full pl-14 pr-6 py-5 bg-slate-50/50 rounded-2xl border border-transparent focus:border-blue-600/20 focus:ring-8 focus:ring-blue-600/5 focus:bg-white transition-all outline-none font-medium placeholder:text-slate-400" />
+                          <input name="confirm" type="password" value={clientForm.confirm} onChange={handleClientChange} required placeholder="âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢" className="w-full pl-14 pr-6 py-5 bg-slate-50/50 rounded-2xl border border-transparent focus:border-blue-600/20 focus:ring-8 focus:ring-blue-600/5 focus:bg-white transition-all outline-none font-medium placeholder:text-slate-400" />
                         </div>
                       </div>
                     </div>
                   </div>
 
                   <div className="p-5 bg-blue-50/50 rounded-2xl space-y-2 border border-blue-100/50">
-                    <p className="text-[10px] font-black text-blue-600 uppercase tracking-widest">Sécurité requise</p>
+                    <p className="text-[10px] font-black text-blue-600 uppercase tracking-widest">SÃ©curitÃ© requise</p>
                     <li className={`flex items-center gap-2.5 text-xs ${clientForm.password.length >= 8 ? 'text-emerald-600' : 'text-slate-500'}`}>
                       <span className="material-symbols-outlined text-sm" style={{ fontVariationSettings: "'FILL' 1" }}>{clientForm.password.length >= 8 ? 'check_circle' : 'radio_button_unchecked'}</span>
-                      <span className="font-medium">8 caractères minimum</span>
+                      <span className="font-medium">8 caractÃ¨res minimum</span>
                     </li>
                   </div>
 
                   <button type="submit" disabled={loading} className="w-full py-5 bg-blue-600 text-white font-black text-sm uppercase tracking-widest rounded-2xl shadow-xl shadow-blue-200 hover:bg-blue-700 hover:-translate-y-0.5 active:scale-[0.98] transition-all duration-300 disabled:opacity-60 flex items-center justify-center gap-3">
-                    {loading ? <><span className="animate-spin h-5 w-5 border-4 border-white/30 border-t-white rounded-full"></span>Création...</> : "S'inscrire Maintenant"}
+                    {loading ? <><span className="animate-spin h-5 w-5 border-4 border-white/30 border-t-white rounded-full"></span>CrÃ©ation...</> : "S'inscrire Maintenant"}
                   </button>
                 </form>
               </div>
@@ -269,7 +269,7 @@ const ClientRegister = () => {
               <div className="space-y-10">
                 <div className="space-y-3">
                   <h2 className="text-4xl font-black text-slate-900 tracking-tight">Inscription Artisan</h2>
-                  <p className="text-slate-500 text-lg">Rejoignez notre réseau de professionnels qualifiés.</p>
+                  <p className="text-slate-500 text-lg">Rejoignez notre rÃ©seau de professionnels qualifiÃ©s.</p>
                 </div>
                 <form className="space-y-8" onSubmit={handleArtisanSubmit}>
                   <div className="space-y-6">
@@ -284,19 +284,19 @@ const ClientRegister = () => {
                     <div className="space-y-4">
                       <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-2 mb-2">
                         <div>
-                          <label className="text-[11px] font-black uppercase tracking-widest text-slate-400 ml-1">Spécialité</label>
-                          <p className="text-slate-500 text-xs mt-1 ml-1">Choisissez votre métier principal.</p>
+                          <label className="text-[11px] font-black uppercase tracking-widest text-slate-400 ml-1">SpÃ©cialitÃ©</label>
+                          <p className="text-slate-500 text-xs mt-1 ml-1">Choisissez votre mÃ©tier principal.</p>
                         </div>
                         {artisanForm.specialty && (
-                          <span className="text-[10px] font-bold text-blue-600 uppercase tracking-widest bg-blue-50 px-2 py-1 rounded-lg border border-blue-100">Sélectionné</span>
+                          <span className="text-[10px] font-bold text-blue-600 uppercase tracking-widest bg-blue-50 px-2 py-1 rounded-lg border border-blue-100">SÃ©lectionnÃ©</span>
                         )}
                       </div>
 
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-3 max-h-[300px] overflow-y-auto pr-2 custom-scrollbar p-1">
                         {[
-                          { group: "Bâtiment", options: ["Plomberie", "Électricité", "Peinture", "Maçonnerie", "Menuiserie", "Déménagement"] },
-                          { group: "Extérieur", options: ["Jardinage", "Étanchéité", "Clôture", "Nettoyage façade"] },
-                          { group: "Autre", options: ["Mécanique", "Serrurerie", "Vitrerie", "Climatisation"] }
+                          { group: "BÃ¢timent", options: ["Plomberie", "Ã‰lectricitÃ©", "Peinture", "MaÃ§onnerie", "Menuiserie", "DÃ©mÃ©nagement"] },
+                          { group: "ExtÃ©rieur", options: ["Jardinage", "Ã‰tanchÃ©itÃ©", "ClÃ´ture", "Nettoyage faÃ§ade"] },
+                          { group: "Autre", options: ["MÃ©canique", "Serrurerie", "Vitrerie", "Climatisation"] }
                         ].map((group, idx) => (
                           <div key={idx} className="space-y-2">
                             <h4 className="text-[10px] font-black text-slate-400 uppercase tracking-wider">{group.group}</h4>
@@ -333,7 +333,7 @@ const ClientRegister = () => {
                         </div>
                       </div>
                       <div className="space-y-2">
-                        <label className="text-[11px] font-black uppercase tracking-widest text-slate-400 ml-1">Téléphone</label>
+                        <label className="text-[11px] font-black uppercase tracking-widest text-slate-400 ml-1">TÃ©lÃ©phone</label>
                         <div className="relative group">
                           <span className="material-symbols-outlined absolute left-5 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-blue-600 transition-colors text-xl">call</span>
                           <input name="phone" type="tel" value={artisanForm.phone} onChange={handleArtisanChange} placeholder="05 50 12 34 56" className="w-full pl-14 pr-6 py-5 bg-slate-50/50 rounded-2xl border border-transparent focus:border-blue-600/20 focus:ring-8 focus:ring-blue-600/5 focus:bg-white transition-all outline-none font-medium placeholder:text-slate-400" />
@@ -347,7 +347,7 @@ const ClientRegister = () => {
                         <div className="relative group">
                           <span className="material-symbols-outlined absolute left-5 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-blue-600 transition-colors text-xl">location_on</span>
                           <select name="wilaya_id" value={artisanForm.wilaya_id} onChange={handleArtisanWilayaChange} required className="w-full pl-14 pr-6 py-5 bg-slate-50/50 rounded-2xl border border-transparent focus:border-blue-600/20 focus:ring-8 focus:ring-blue-600/5 focus:bg-white transition-all outline-none font-medium">
-                            <option value="">Sélectionnez une wilaya</option>
+                            <option value="">SÃ©lectionnez une wilaya</option>
                             {wilayas.map(wilaya => (
                               <option key={wilaya.id} value={wilaya.id}>{wilaya.name}</option>
                             ))}
@@ -359,7 +359,7 @@ const ClientRegister = () => {
                         <div className="relative group">
                           <span className="material-symbols-outlined absolute left-5 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-blue-600 transition-colors text-xl">location_city</span>
                           <select name="commune_id" value={artisanForm.commune_id} onChange={handleArtisanChange} required disabled={!artisanForm.wilaya_id} className="w-full pl-14 pr-6 py-5 bg-slate-50/50 rounded-2xl border border-transparent focus:border-blue-600/20 focus:ring-8 focus:ring-blue-600/5 focus:bg-white transition-all outline-none font-medium disabled:opacity-50">
-                            <option value="">Sélectionnez une commune</option>
+                            <option value="">SÃ©lectionnez une commune</option>
                             {communes.map(commune => (
                               <option key={commune.id} value={commune.id}>{commune.name}</option>
                             ))}
@@ -373,14 +373,14 @@ const ClientRegister = () => {
                         <label className="text-[11px] font-black uppercase tracking-widest text-slate-400 ml-1">Mot de passe</label>
                         <div className="relative group">
                           <span className="material-symbols-outlined absolute left-5 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-blue-600 transition-colors text-xl">lock</span>
-                          <input name="password" type="password" value={artisanForm.password} onChange={handleArtisanChange} required placeholder="�DA��DA��DA��DA��DA��DA��DA��DA�" className="w-full pl-14 pr-6 py-5 bg-slate-50/50 rounded-2xl border border-transparent focus:border-blue-600/20 focus:ring-8 focus:ring-blue-600/5 focus:bg-white transition-all outline-none font-medium placeholder:text-slate-400" />
+                          <input name="password" type="password" value={artisanForm.password} onChange={handleArtisanChange} required placeholder="âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢" className="w-full pl-14 pr-6 py-5 bg-slate-50/50 rounded-2xl border border-transparent focus:border-blue-600/20 focus:ring-8 focus:ring-blue-600/5 focus:bg-white transition-all outline-none font-medium placeholder:text-slate-400" />
                         </div>
                       </div>
                       <div className="space-y-2">
                         <label className="text-[11px] font-black uppercase tracking-widest text-slate-400 ml-1">Confirmation</label>
                         <div className="relative group">
                           <span className="material-symbols-outlined absolute left-5 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-blue-600 transition-colors text-xl">verified_user</span>
-                          <input name="confirm" type="password" value={artisanForm.confirm} onChange={handleArtisanChange} required placeholder="�DA��DA��DA��DA��DA��DA��DA��DA�" className="w-full pl-14 pr-6 py-5 bg-slate-50/50 rounded-2xl border border-transparent focus:border-blue-600/20 focus:ring-8 focus:ring-blue-600/5 focus:bg-white transition-all outline-none font-medium placeholder:text-slate-400" />
+                          <input name="confirm" type="password" value={artisanForm.confirm} onChange={handleArtisanChange} required placeholder="âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢" className="w-full pl-14 pr-6 py-5 bg-slate-50/50 rounded-2xl border border-transparent focus:border-blue-600/20 focus:ring-8 focus:ring-blue-600/5 focus:bg-white transition-all outline-none font-medium placeholder:text-slate-400" />
                         </div>
                       </div>
                     </div>
@@ -388,11 +388,11 @@ const ClientRegister = () => {
 
                   <div className="p-5 bg-blue-50/50 rounded-2xl space-y-2 border border-blue-100/50">
                     <p className="text-[10px] font-black text-blue-600 uppercase tracking-widest">Informations</p>
-                    <p className="text-xs text-slate-500 font-medium leading-relaxed">Pour finaliser votre inscription et vérifier votre compte, vous devrez fournir vos documents justificatifs dans l'étape suivante sur votre tableau de bord.</p>
+                    <p className="text-xs text-slate-500 font-medium leading-relaxed">Pour finaliser votre inscription et vÃ©rifier votre compte, vous devrez fournir vos documents justificatifs dans l'Ã©tape suivante sur votre tableau de bord.</p>
                   </div>
 
                   <button type="submit" disabled={loading} className="w-full py-5 bg-blue-600 text-white font-black text-sm uppercase tracking-widest rounded-2xl shadow-xl shadow-blue-200 hover:bg-blue-700 hover:-translate-y-0.5 active:scale-[0.98] transition-all duration-300 disabled:opacity-60 flex items-center justify-center gap-3">
-                    {loading ? <><span className="animate-spin h-5 w-5 border-4 border-white/30 border-t-white rounded-full"></span>Création...</> : "Créer mon Profil Pro"}
+                    {loading ? <><span className="animate-spin h-5 w-5 border-4 border-white/30 border-t-white rounded-full"></span>CrÃ©ation...</> : "CrÃ©er mon Profil Pro"}
                   </button>
                 </form>
               </div>
@@ -400,7 +400,7 @@ const ClientRegister = () => {
 
             <div className="mt-12 pt-10 border-t border-slate-100 flex flex-col items-center gap-4">
               <p className="text-sm text-slate-500 font-medium">
-                Déjà parmi nous ? <Link to={activeTab === 'client' ? '/login/client' : '/login/artisan'} className="text-blue-600 font-bold hover:underline ml-1">Se connecter</Link>
+                DÃ©jÃ  parmi nous ? <Link to={activeTab === 'client' ? '/login/client' : '/login/artisan'} className="text-blue-600 font-bold hover:underline ml-1">Se connecter</Link>
               </p>
             </div>
           </div>

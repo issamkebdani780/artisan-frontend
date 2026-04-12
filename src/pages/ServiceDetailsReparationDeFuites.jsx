@@ -39,10 +39,10 @@ const ServiceDetailsReparationDeFuites = () => {
 <div className="relative z-10 space-y-2">
 <div className="flex items-center gap-2 text-primary-light text-sm font-semibold uppercase tracking-wider text-primary">
 <span className="material-symbols-outlined text-sm">verified</span>
-                                Service Certifié
+                                Service CertifiÃ©
                             </div>
-<h1 className="text-white text-4xl font-extrabold leading-tight">Réparation de fuites</h1>
-<p className="text-slate-200 max-w-2xl text-lg">Intervention rapide en moins de 2h pour stopper vos fuites d'eau et éviter les dégâts majeurs.</p>
+<h1 className="text-white text-4xl font-extrabold leading-tight">RÃ©paration de fuites</h1>
+<p className="text-slate-200 max-w-2xl text-lg">Intervention rapide en moins de 2h pour stopper vos fuites d'eau et Ã©viter les dÃ©gÃ¢ts majeurs.</p>
 </div>
 </div>
 {/*  Breadcrumbs  */}
@@ -51,30 +51,30 @@ const ServiceDetailsReparationDeFuites = () => {
 <span className="material-symbols-outlined text-xs text-slate-400">chevron_right</span>
 <a className="text-slate-500 hover:text-primary transition-colors" href="#">Plomberie</a>
 <span className="material-symbols-outlined text-xs text-slate-400">chevron_right</span>
-<span className="text-slate-900 dark:text-white font-medium">Réparation de fuites</span>
+<span className="text-slate-900 dark:text-white font-medium">RÃ©paration de fuites</span>
 </div>
 <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
 {/*  Left Column: Content  */}
 <div className="lg:col-span-2 space-y-10">
 {/*  Service Description  */}
 <section>
-<h3 className="text-2xl font-bold mb-4">�DA propos de ce service</h3>
+<h3 className="text-2xl font-bold mb-4">ÃDA propos de ce service</h3>
 <p className="text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
-                                    Une fuite d'eau, même minime, peut causer des dommages structurels importants et alourdir considérablement votre facture. Nos experts interviennent avec un équipement de pointe pour détecter et colmater tout type de fuite : canalisations encastrées, robinetterie, chauffe-eau ou WC.
+                                    Une fuite d'eau, mÃªme minime, peut causer des dommages structurels importants et alourdir considÃ©rablement votre facture. Nos experts interviennent avec un Ã©quipement de pointe pour dÃ©tecter et colmater tout type de fuite : canalisations encastrÃ©es, robinetterie, chauffe-eau ou WC.
                                 </p>
 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
 <div className="flex items-start gap-3 p-4 rounded-xl bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700">
 <span className="material-symbols-outlined text-primary">bolt</span>
 <div>
 <h4 className="font-bold">Intervention Express</h4>
-<p className="text-sm text-slate-500">Arrivée sur place en moins de 60 minutes pour les urgences.</p>
+<p className="text-sm text-slate-500">ArrivÃ©e sur place en moins de 60 minutes pour les urgences.</p>
 </div>
 </div>
 <div className="flex items-start gap-3 p-4 rounded-xl bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700">
 <span className="material-symbols-outlined text-primary">security</span>
 <div>
 <h4 className="font-bold">Garantie 2 ans</h4>
-<p className="text-sm text-slate-500">Toutes nos réparations sont couvertes par une garantie décennale.</p>
+<p className="text-sm text-slate-500">Toutes nos rÃ©parations sont couvertes par une garantie dÃ©cennale.</p>
 </div>
 </div>
 </div>
@@ -84,18 +84,18 @@ const ServiceDetailsReparationDeFuites = () => {
 <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
 <div>
 <h3 className="text-2xl font-bold">Tarification transparente</h3>
-<p className="text-slate-600 dark:text-slate-400">Pas de frais cachés, devis gratuit avant intervention.</p>
+<p className="text-slate-600 dark:text-slate-400">Pas de frais cachÃ©s, devis gratuit avant intervention.</p>
 </div>
 <div className="text-right">
-<span className="text-sm text-slate-500 block uppercase tracking-wide font-bold">�DA partir de</span>
-<span className="text-4xl font-black text-primary">45€</span>
+<span className="text-sm text-slate-500 block uppercase tracking-wide font-bold">ÃDA partir de</span>
+<span className="text-4xl font-black text-primary">45â‚¬</span>
 </div>
 </div>
 <hr className="my-6 border-primary/10"/>
 <ul className="space-y-3">
 <li className="flex items-center gap-2 text-sm">
 <span className="material-symbols-outlined text-green-500 text-lg">check_circle</span>
-                                        Déplacement inclus (zone urbaine)
+                                        DÃ©placement inclus (zone urbaine)
                                     </li>
 <li className="flex items-center gap-2 text-sm">
 <span className="material-symbols-outlined text-green-500 text-lg">check_circle</span>
@@ -103,7 +103,7 @@ const ServiceDetailsReparationDeFuites = () => {
                                     </li>
 <li className="flex items-center gap-2 text-sm">
 <span className="material-symbols-outlined text-green-500 text-lg">check_circle</span>
-                                        Petites fournitures incluses (joints, téflon)
+                                        Petites fournitures incluses (joints, tÃ©flon)
                                     </li>
 </ul>
 </section>
@@ -127,7 +127,7 @@ const ServiceDetailsReparationDeFuites = () => {
 </div>
 </div>
 </div>
-<p className="text-sm text-slate-500 mb-4 line-clamp-2">Spécialiste en recherche de fuites non-destructive. 12 ans d'expérience.</p>
+<p className="text-sm text-slate-500 mb-4 line-clamp-2">SpÃ©cialiste en recherche de fuites non-destructive. 12 ans d'expÃ©rience.</p>
 <button className="w-full py-2 bg-slate-100 dark:bg-slate-700 hover:bg-primary hover:text-white transition-all rounded-lg text-sm font-bold">Choisir Marc</button>
 </div>
 {/*  Plumber Card 2  */}
@@ -143,7 +143,7 @@ const ServiceDetailsReparationDeFuites = () => {
 </div>
 </div>
 </div>
-<p className="text-sm text-slate-500 mb-4 line-clamp-2">Experte en rénovation de tuyauterie et urgences sanitaires. Réactive et rigoureuse.</p>
+<p className="text-sm text-slate-500 mb-4 line-clamp-2">Experte en rÃ©novation de tuyauterie et urgences sanitaires. RÃ©active et rigoureuse.</p>
 <button className="w-full py-2 bg-slate-100 dark:bg-slate-700 hover:bg-primary hover:text-white transition-all rounded-lg text-sm font-bold">Choisir Sophie</button>
 </div>
 </div>
@@ -152,13 +152,13 @@ const ServiceDetailsReparationDeFuites = () => {
 {/*  Right Column: Booking Card  */}
 <div className="lg:col-span-1">
 <div className="sticky top-28 bg-white dark:bg-slate-800 rounded-2xl shadow-xl border border-slate-100 dark:border-slate-700 p-6">
-<h3 className="text-xl font-bold mb-6">Réserver une intervention</h3>
+<h3 className="text-xl font-bold mb-6">RÃ©server une intervention</h3>
 <form className="space-y-4">
 <div>
 <label className="block text-xs font-bold text-slate-500 uppercase mb-1">Type de fuite</label>
 <select className="w-full rounded-lg border-slate-200 dark:border-slate-700 bg-transparent text-sm focus:ring-primary focus:border-primary">
 <option>Robinet / Mitigeur</option>
-<option>Canalisation bouchée / percée</option>
+<option>Canalisation bouchÃ©e / percÃ©e</option>
 <option>WC / Chasse d'eau</option>
 <option>Chauffe-eau</option>
 <option>Inconnu (Urgence)</option>
@@ -172,7 +172,7 @@ const ServiceDetailsReparationDeFuites = () => {
 </div>
 </div>
 <div>
-<label className="block text-xs font-bold text-slate-500 uppercase mb-1">Date souhaitée</label>
+<label className="block text-xs font-bold text-slate-500 uppercase mb-1">Date souhaitÃ©e</label>
 <div className="relative">
 <span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-lg">calendar_today</span>
 <input className="w-full pl-10 rounded-lg border-slate-200 dark:border-slate-700 bg-transparent text-sm focus:ring-primary focus:border-primary" type="date"/>
@@ -181,13 +181,13 @@ const ServiceDetailsReparationDeFuites = () => {
 <div className="pt-4">
 <div className="flex justify-between text-sm mb-2">
 <span className="text-slate-500">Estimation</span>
-<span className="font-bold">�DA partir de 45€</span>
+<span className="font-bold">ÃDA partir de 45â‚¬</span>
 </div>
 <button className="w-full bg-primary text-white py-4 rounded-xl font-bold text-lg hover:bg-blue-600 transition-all shadow-lg shadow-primary/25" type="submit">
-                                            Confirmer la réservation
+                                            Confirmer la rÃ©servation
                                         </button>
 <p className="text-[10px] text-center text-slate-400 mt-4 leading-tight">
-                                            En cliquant, vous acceptez nos conditions générales de service. Paiement sécurisé après intervention.
+                                            En cliquant, vous acceptez nos conditions gÃ©nÃ©rales de service. Paiement sÃ©curisÃ© aprÃ¨s intervention.
                                         </p>
 </div>
 </form>
@@ -204,13 +204,13 @@ const ServiceDetailsReparationDeFuites = () => {
 <span className="material-symbols-outlined text-2xl">plumbing</span>
 <h2 className="text-slate-900 dark:text-white text-lg font-bold tracking-tight">PlumbPro</h2>
 </div>
-<p className="text-sm text-slate-500 leading-relaxed">Le réseau n°1 de plombiers certifiés pour vos interventions d'urgence et rénovations.</p>
+<p className="text-sm text-slate-500 leading-relaxed">Le rÃ©seau nÂ°1 de plombiers certifiÃ©s pour vos interventions d'urgence et rÃ©novations.</p>
 </div>
 <div>
 <h4 className="font-bold mb-4">Services</h4>
 <ul className="space-y-2 text-sm text-slate-500">
-<li><a className="hover:text-primary transition-colors" href="#">Réparation fuite</a></li>
-<li><a className="hover:text-primary transition-colors" href="#">Débouchage</a></li>
+<li><a className="hover:text-primary transition-colors" href="#">RÃ©paration fuite</a></li>
+<li><a className="hover:text-primary transition-colors" href="#">DÃ©bouchage</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Installation sanitaire</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Entretien chauffe-eau</a></li>
 </ul>
@@ -218,7 +218,7 @@ const ServiceDetailsReparationDeFuites = () => {
 <div>
 <h4 className="font-bold mb-4">Compagnie</h4>
 <ul className="space-y-2 text-sm text-slate-500">
-<li><a className="hover:text-primary transition-colors" href="#">�DA propos</a></li>
+<li><a className="hover:text-primary transition-colors" href="#">ÃDA propos</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Recrutement</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Blog</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Contact</a></li>
@@ -236,10 +236,10 @@ const ServiceDetailsReparationDeFuites = () => {
 </div>
 </div>
 <div className="mt-12 pt-8 border-t border-slate-100 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-400">
-<p>© 2024 PlumbPro Expertise. Tous droits réservés.</p>
+<p>Â© 2024 PlumbPro Expertise. Tous droits rÃ©servÃ©s.</p>
 <div className="flex gap-6">
-<a className="hover:underline" href="#">Mentions Légales</a>
-<a className="hover:underline" href="#">Confidentialité</a>
+<a className="hover:underline" href="#">Mentions LÃ©gales</a>
+<a className="hover:underline" href="#">ConfidentialitÃ©</a>
 </div>
 </div>
 </footer>

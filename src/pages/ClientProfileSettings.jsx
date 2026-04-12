@@ -80,10 +80,10 @@ const ClientProfileSettings = () => {
       await apiService.updateProfile(user.id, form);
       const updatedUser = { ...user, ...form };
       localStorage.setItem('user', JSON.stringify(updatedUser));
-      setMessage({ text: 'Profil mis à jour !', type: 'success' });
+      setMessage({ text: 'Profil mis Ã  jour !', type: 'success' });
       setTimeout(() => setMessage({ text: '', type: '' }), 5000);
     } catch (err) {
-      setMessage({ text: err.message || 'Erreur mise à jour.', type: 'error' });
+      setMessage({ text: err.message || 'Erreur mise Ã  jour.', type: 'error' });
     } finally {
       setLoading(false);
     }
@@ -92,7 +92,7 @@ const ClientProfileSettings = () => {
   const handlePasswordChange = async (e) => {
     e.preventDefault();
     if (passwordForm.new !== passwordForm.confirm) {
-      setMessage({ text: 'MDP différents', type: 'error' });
+      setMessage({ text: 'MDP diffÃ©rents', type: 'error' });
       return;
     }
     setLoading(true);
@@ -101,7 +101,7 @@ const ClientProfileSettings = () => {
       if (result.error) {
         setMessage({ text: result.error, type: 'error' });
       } else {
-        setMessage({ text: 'MDP mis à jour !', type: 'success' });
+        setMessage({ text: 'MDP mis Ã  jour !', type: 'success' });
         setPasswordForm({ current: '', new: '', confirm: '' });
         setTimeout(() => setMessage({ text: '', type: '' }), 5000);
       }
@@ -115,11 +115,11 @@ const ClientProfileSettings = () => {
   const handleLogout = () => { apiService.logout(); navigate('/'); };
 
   return (
-    <ClientLayout title="Espace Client" subtitle="Paramètres">
+    <ClientLayout title="Espace Client" subtitle="ParamÃ¨tres">
       <div className="flex-1 font-['Outfit',sans-serif] py-4 text-left max-w-6xl">
         <div className="mb-10 px-2 text-left">
-          <h2 className="text-3xl font-black text-slate-900 tracking-tighter uppercase mb-2">Paramètres de compte</h2>
-          <p className="text-slate-500 font-bold max-w-xl leading-relaxed text-sm">Gérez vos informations, votre localisation et votre sécurité au même endroit.</p>
+          <h2 className="text-3xl font-black text-slate-900 tracking-tighter uppercase mb-2">ParamÃ¨tres de compte</h2>
+          <p className="text-slate-500 font-bold max-w-xl leading-relaxed text-sm">GÃ©rez vos informations, votre localisation et votre sÃ©curitÃ© au mÃªme endroit.</p>
         </div>
 
         <div className="flex items-center gap-1 border-b border-slate-100 mb-10 px-2 overflow-x-auto whitespace-nowrap scrollbar-hide">
@@ -132,7 +132,7 @@ const ClientProfileSettings = () => {
             {activeTab === 'localisation' && <div className="absolute bottom-0 left-0 right-0 h-1 bg-primary rounded-full" />}
           </button>
           <button onClick={() => setActiveTab('securite')} className={`pb-4 px-6 text-sm font-black uppercase tracking-widest transition-all relative ${activeTab === 'securite' ? 'text-primary' : 'text-slate-400 hover:text-slate-600'}`}>
-            Sécurité
+            SÃ©curitÃ©
             {activeTab === 'securite' && <div className="absolute bottom-0 left-0 right-0 h-1 bg-primary rounded-full" />}
           </button>
         </div>
@@ -154,7 +154,7 @@ const ClientProfileSettings = () => {
                   <div className="size-12 bg-primary/10 rounded-2xl flex items-center justify-center text-primary"><span className="material-symbols-outlined font-black">person</span></div>
                   <div>
                     <h3 className="text-xl font-black text-slate-900 uppercase tracking-tight">Informations de Profil</h3>
-                    <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Vos données de base</p>
+                    <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Vos donnÃ©es de base</p>
                   </div>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -167,7 +167,7 @@ const ClientProfileSettings = () => {
                     <input name="email" value={form.email} onChange={handleChange} type="email" className="w-full h-15 rounded-2xl border border-slate-100 bg-slate-50 focus:border-primary focus:bg-white outline-none px-6 transition-all font-bold text-slate-900 shadow-sm" />
                   </div>
                   <div className="space-y-3">
-                    <label className="text-[11px] font-black uppercase tracking-widest text-slate-400 ml-1">Téléphone</label>
+                    <label className="text-[11px] font-black uppercase tracking-widest text-slate-400 ml-1">TÃ©lÃ©phone</label>
                     <input name="phone" value={form.phone} onChange={handleChange} type="tel" className="w-full h-15 rounded-2xl border border-slate-100 bg-slate-50 focus:border-primary focus:bg-white outline-none px-6 transition-all font-bold text-slate-900 shadow-sm" />
                   </div>
                   <div className="space-y-3">
@@ -176,7 +176,7 @@ const ClientProfileSettings = () => {
                   </div>
                 </div>
                 <div className="pt-8 border-t border-slate-50 flex justify-start">
-                  <button type="submit" disabled={loading} className="px-10 py-5 bg-primary text-white rounded-[20px] font-black uppercase text-xs tracking-widest hover:opacity-90 transition-all shadow-xl shadow-primary/20 active:scale-95">Mettre à jour le profil</button>
+                  <button type="submit" disabled={loading} className="px-10 py-5 bg-primary text-white rounded-[20px] font-black uppercase text-xs tracking-widest hover:opacity-90 transition-all shadow-xl shadow-primary/20 active:scale-95">Mettre Ã  jour le profil</button>
                 </div>
               </form>
             </div>
@@ -188,8 +188,8 @@ const ClientProfileSettings = () => {
                 <div className="flex items-center gap-4 mb-6">
                   <div className="size-12 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center"><span className="material-symbols-outlined font-black">location_on</span></div>
                   <div>
-                    <h3 className="text-xl font-black text-slate-900 uppercase tracking-tight">Localisation Géo</h3>
-                    <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Région et Commune</p>
+                    <h3 className="text-xl font-black text-slate-900 uppercase tracking-tight">Localisation GÃ©o</h3>
+                    <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">RÃ©gion et Commune</p>
                   </div>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -197,7 +197,7 @@ const ClientProfileSettings = () => {
                     <label className="text-[11px] font-black uppercase tracking-widest text-slate-400 ml-1">Wilaya</label>
                     <div className="relative text-left">
                       <select name="wilaya_id" value={form.wilaya_id} onChange={handleWilayaChange} className="w-full h-15 rounded-2xl border border-slate-100 bg-slate-50 focus:border-primary focus:bg-white outline-none px-6 transition-all font-bold text-slate-900 appearance-none shadow-sm text-left">
-                        <option value="">Sélectionnez</option>
+                        <option value="">SÃ©lectionnez</option>
                         {wilayas.map(w => <option key={w.id} value={w.id}>{w.name}</option>)}
                       </select>
                       <span className="material-symbols-outlined absolute right-5 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none">expand_more</span>
@@ -207,7 +207,7 @@ const ClientProfileSettings = () => {
                     <label className="text-[11px] font-black uppercase tracking-widest text-slate-400 ml-1">Commune</label>
                     <div className="relative text-left">
                       <select name="commune_id" value={form.commune_id} onChange={handleChange} disabled={!form.wilaya_id} className="w-full h-15 rounded-2xl border border-slate-100 bg-slate-50 focus:border-primary focus:bg-white outline-none px-6 transition-all font-bold text-slate-900 appearance-none disabled:opacity-50 shadow-sm text-left">
-                        <option value="">Sélectionnez</option>
+                        <option value="">SÃ©lectionnez</option>
                         {communes.map(c => <option key={c.id} value={c.id}>{c.name}</option>)}
                       </select>
                       <span className="material-symbols-outlined absolute right-5 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none">expand_more</span>
@@ -227,7 +227,7 @@ const ClientProfileSettings = () => {
                   <div className="flex items-center gap-4 mb-10">
                     <div className="size-12 bg-indigo-50 text-indigo-600 rounded-2xl flex items-center justify-center"><span className="material-symbols-outlined font-black">shield</span></div>
                     <div>
-                      <h3 className="text-xl font-black text-slate-900 uppercase tracking-tight">Accès & Protection</h3>
+                      <h3 className="text-xl font-black text-slate-900 uppercase tracking-tight">AccÃ¨s & Protection</h3>
                       <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Modifier identifiants</p>
                     </div>
                   </div>
@@ -235,15 +235,15 @@ const ClientProfileSettings = () => {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
                       <div className="space-y-3">
                         <label className="text-[11px] font-black uppercase tracking-widest text-slate-400 ml-1">Ancien MDP</label>
-                        <input type="password" required value={passwordForm.current} onChange={(e) => setPasswordForm({...passwordForm, current: e.target.value})} className="w-full h-15 rounded-2xl border border-slate-100 bg-slate-50 focus:border-primary outline-none px-6 font-bold text-sm shadow-sm" placeholder="�DA��DA��DA��DA��DA��DA��DA��DA�" />
+                        <input type="password" required value={passwordForm.current} onChange={(e) => setPasswordForm({...passwordForm, current: e.target.value})} className="w-full h-15 rounded-2xl border border-slate-100 bg-slate-50 focus:border-primary outline-none px-6 font-bold text-sm shadow-sm" placeholder="âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢" />
                       </div>
                       <div className="space-y-3">
                         <label className="text-[11px] font-black uppercase tracking-widest text-slate-400 ml-1">Nouveau MDP</label>
-                        <input type="password" required value={passwordForm.new} onChange={(e) => setPasswordForm({...passwordForm, new: e.target.value})} className="w-full h-15 rounded-2xl border border-slate-100 bg-slate-50 focus:border-primary outline-none px-6 font-bold text-sm shadow-sm" placeholder="�DA��DA��DA��DA��DA��DA��DA��DA�" />
+                        <input type="password" required value={passwordForm.new} onChange={(e) => setPasswordForm({...passwordForm, new: e.target.value})} className="w-full h-15 rounded-2xl border border-slate-100 bg-slate-50 focus:border-primary outline-none px-6 font-bold text-sm shadow-sm" placeholder="âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢" />
                       </div>
                       <div className="space-y-3">
                         <label className="text-[11px] font-black uppercase tracking-widest text-slate-400 ml-1">Confirmation</label>
-                        <input type="password" required value={passwordForm.confirm} onChange={(e) => setPasswordForm({...passwordForm, confirm: e.target.value})} className="w-full h-15 rounded-2xl border border-slate-100 bg-slate-50 focus:border-primary outline-none px-6 font-bold text-sm shadow-sm" placeholder="�DA��DA��DA��DA��DA��DA��DA��DA�" />
+                        <input type="password" required value={passwordForm.confirm} onChange={(e) => setPasswordForm({...passwordForm, confirm: e.target.value})} className="w-full h-15 rounded-2xl border border-slate-100 bg-slate-50 focus:border-primary outline-none px-6 font-bold text-sm shadow-sm" placeholder="âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢" />
                       </div>
                     </div>
                     <div className="pt-8 border-t border-slate-50 flex justify-start">
@@ -258,14 +258,14 @@ const ClientProfileSettings = () => {
                       <h3 className="text-lg font-black text-red-600 uppercase mb-1">Session</h3>
                       <p className="text-[10px] font-black text-red-400 uppercase tracking-widest">Quitter Mihnati</p>
                     </div>
-                    <button onClick={handleLogout} className="px-8 py-4 bg-red-600 text-white rounded-xl font-black uppercase text-[10px] tracking-widest hover:bg-red-700 active:scale-95 transition-all shadow-xl shadow-red-600/10">Déconnexion</button>
+                    <button onClick={handleLogout} className="px-8 py-4 bg-red-600 text-white rounded-xl font-black uppercase text-[10px] tracking-widest hover:bg-red-700 active:scale-95 transition-all shadow-xl shadow-red-600/10">DÃ©connexion</button>
                   </div>
                    <div className="bg-slate-50 rounded-4xl p-10 border border-slate-100 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
                     <div>
                       <h3 className="text-lg font-black text-slate-900 uppercase mb-1">Compte</h3>
                       <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Suppression</p>
                     </div>
-                    <button onClick={() => { if(window.confirm('🚨 Supprimer ?')) { apiService.logout(); navigate('/'); } }} className="px-8 py-4 border-2 border-slate-200 text-slate-500 rounded-xl font-black uppercase text-[10px] tracking-widest hover:bg-red-600 hover:border-red-600 hover:text-white active:scale-95 transition-all">Supprimer</button>
+                    <button onClick={() => { if(window.confirm('ðŸš¨ Supprimer ?')) { apiService.logout(); navigate('/'); } }} className="px-8 py-4 border-2 border-slate-200 text-slate-500 rounded-xl font-black uppercase text-[10px] tracking-widest hover:bg-red-600 hover:border-red-600 hover:text-white active:scale-95 transition-all">Supprimer</button>
                   </div>
                 </div>
             </div>

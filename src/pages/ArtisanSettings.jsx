@@ -30,47 +30,47 @@ const ArtisanSettings = () => {
   const categoryGroups = [
     {
       group: "Menuiserie et Bois",
-      options: ["Menuisier ébéniste", "Menuisier de chantier (coffreur)", "Presseur de bois", "Décorateur bois intérieur", "Fabricant de portes et fenêtres en bois"]
+      options: ["Menuisier Ã©bÃ©niste", "Menuisier de chantier (coffreur)", "Presseur de bois", "DÃ©corateur bois intÃ©rieur", "Fabricant de portes et fenÃªtres en bois"]
     },
     {
       group: "Ferronnerie et Soudure",
-      options: ["Ferronnier d�DA�art", "Soudeur (arc et argon)", "Ferronnier métallier (portails et grilles)", "Chaudronnier industriel", "Soudeur carrosserie auto"]
+      options: ["Ferronnier dâDA™art", "Soudeur (arc et argon)", "Ferronnier mÃ©tallier (portails et grilles)", "Chaudronnier industriel", "Soudeur carrosserie auto"]
     },
     {
-      group: "Plomberie et Réseaux",
-      options: ["Plombier sanitaire", "Plombier chauffage central", "Monteur de réseaux de gaz", "Installateur tuyauterie cuivre et PER", "Plombier maintenance eau"]
+      group: "Plomberie et RÃ©seaux",
+      options: ["Plombier sanitaire", "Plombier chauffage central", "Monteur de rÃ©seaux de gaz", "Installateur tuyauterie cuivre et PER", "Plombier maintenance eau"]
     },
     {
-      group: "Électricité et Énergie",
-      options: ["Électricien bâtiment", "Électricien industriel", "Technicien solaire photovoltaïque", "Tireur de câbles et filerie", "Réparateur tableaux électriques"]
+      group: "Ã‰lectricitÃ© et Ã‰nergie",
+      options: ["Ã‰lectricien bÃ¢timent", "Ã‰lectricien industriel", "Technicien solaire photovoltaÃ¯que", "Tireur de cÃ¢bles et filerie", "RÃ©parateur tableaux Ã©lectriques"]
     },
     {
-      group: "Peinture et Plâtre",
-      options: ["Peintre décorateur", "Peintre automobile", "Plâtrier staffeur", "Marbrier (ponçage et lustrage)", "Vernisseur sur bois"]
+      group: "Peinture et PlÃ¢tre",
+      options: ["Peintre dÃ©corateur", "Peintre automobile", "PlÃ¢trier staffeur", "Marbrier (ponÃ§age et lustrage)", "Vernisseur sur bois"]
     },
     {
-      group: "Maçonnerie et Finitions",
-      options: ["Maçon (brique et ciment)", "Carreleur (faïence et marbre)", "Crépisseur (enduits traditionnels)", "Technicien isolation thermique et étanchéité", "Maçon rénovation"]
+      group: "MaÃ§onnerie et Finitions",
+      options: ["MaÃ§on (brique et ciment)", "Carreleur (faÃ¯ence et marbre)", "CrÃ©pisseur (enduits traditionnels)", "Technicien isolation thermique et Ã©tanchÃ©itÃ©", "MaÃ§on rÃ©novation"]
     },
     {
-      group: "Mécanique et Machines",
-      options: ["Mécanicien automobile", "Mécanicien moto", "Technicien moteurs électriques", "Réparateur groupes électrogènes et pompes", "Mécanicien agricole"]
+      group: "MÃ©canique et Machines",
+      options: ["MÃ©canicien automobile", "MÃ©canicien moto", "Technicien moteurs Ã©lectriques", "RÃ©parateur groupes Ã©lectrogÃ¨nes et pompes", "MÃ©canicien agricole"]
     },
     {
       group: "Couture et Cuir",
-      options: ["Tailleur homme", "Couturière sur mesure (femme)", "Rapiéceur retouche", "Cordonnier (chaussures cuir)", "Maroquinier (sellerie et petite maroquinerie)"]
+      options: ["Tailleur homme", "CouturiÃ¨re sur mesure (femme)", "RapiÃ©ceur retouche", "Cordonnier (chaussures cuir)", "Maroquinier (sellerie et petite maroquinerie)"]
     },
     {
       group: "Verre et Miroiterie",
-      options: ["Menuisier aluminium et verre", "Verrier (coupe verre trempé)", "Miroitier (pose miroirs et décor verre)", "Vitrier automobile", "Souffleur de verre artisanal"]
+      options: ["Menuisier aluminium et verre", "Verrier (coupe verre trempÃ©)", "Miroitier (pose miroirs et dÃ©cor verre)", "Vitrier automobile", "Souffleur de verre artisanal"]
     },
     {
-      group: "Métiers alimentaires artisanaux",
-      options: ["Boulanger traditionnel", "Pâtissier (oriental et viennoiserie)", "Fromager artisanal", "Apiculteur (miel et dérivés)", "Artisan conserveur (pickles et bocaux)"]
+      group: "MÃ©tiers alimentaires artisanaux",
+      options: ["Boulanger traditionnel", "PÃ¢tissier (oriental et viennoiserie)", "Fromager artisanal", "Apiculteur (miel et dÃ©rivÃ©s)", "Artisan conserveur (pickles et bocaux)"]
     },
     {
       group: "Jardinage et Espaces Verts",
-      options: ["Jardinier paysagiste", "Ouvrier en aménagement des espaces verts", "Technicien en entretien des jardins", "Technicien en irrigation goutte-à-goutte et arrosage", "Élagueur et tailleur d�DA�arbres et palmiers"]
+      options: ["Jardinier paysagiste", "Ouvrier en amÃ©nagement des espaces verts", "Technicien en entretien des jardins", "Technicien en irrigation goutte-Ã -goutte et arrosage", "Ã‰lagueur et tailleur dâDA™arbres et palmiers"]
     }
   ];
 
@@ -154,10 +154,10 @@ const ArtisanSettings = () => {
       await apiService.updateProfile(user.id, submissionData);
       const updatedUser = { ...user, ...submissionData };
       localStorage.setItem('user', JSON.stringify(updatedUser));
-      setMessage({ text: 'Profil PRO mis à jour !', type: 'success' });
+      setMessage({ text: 'Profil PRO mis Ã  jour !', type: 'success' });
       setTimeout(() => setMessage({ text: '', type: '' }), 5000);
     } catch (err) {
-      setMessage({ text: err.message || 'Erreur lors de la mise à jour.', type: 'error' });
+      setMessage({ text: err.message || 'Erreur lors de la mise Ã  jour.', type: 'error' });
     } finally {
       setLoading(false);
     }
@@ -166,7 +166,7 @@ const ArtisanSettings = () => {
   const handlePasswordChange = async (e) => {
     e.preventDefault();
     if (passwordForm.new !== passwordForm.confirm) {
-      setMessage({ text: 'MDP différents', type: 'error' });
+      setMessage({ text: 'MDP diffÃ©rents', type: 'error' });
       return;
     }
     setLoading(true);
@@ -175,7 +175,7 @@ const ArtisanSettings = () => {
       if (result.error) {
         setMessage({ text: result.error, type: 'error' });
       } else {
-        setMessage({ text: 'MDP mis à jour !', type: 'success' });
+        setMessage({ text: 'MDP mis Ã  jour !', type: 'success' });
         setPasswordForm({ current: '', new: '', confirm: '' });
         setTimeout(() => setMessage({ text: '', type: '' }), 5000);
       }
@@ -189,16 +189,16 @@ const ArtisanSettings = () => {
   const handleLogout = () => { apiService.logout(); navigate('/'); };
 
   return (
-    <ArtisanLayout title="Artisan PRO" subtitle="Paramètres">
+    <ArtisanLayout title="Artisan PRO" subtitle="ParamÃ¨tres">
       <div className="flex-1 font-['Outfit',sans-serif] text-left max-w-6xl py-4">
         <div className="mb-10 px-4 text-left">
-          <h2 className="text-3xl font-black text-slate-900 tracking-tighter uppercase mb-2">Paramètres Expert</h2>
-          <p className="text-slate-500 font-bold max-w-xl text-sm leading-relaxed">Gérez votre visibilité et la sécurité de votre compte professionnel.</p>
+          <h2 className="text-3xl font-black text-slate-900 tracking-tighter uppercase mb-2">ParamÃ¨tres Expert</h2>
+          <p className="text-slate-500 font-bold max-w-xl text-sm leading-relaxed">GÃ©rez votre visibilitÃ© et la sÃ©curitÃ© de votre compte professionnel.</p>
         </div>
 
          <div className="flex items-center gap-1 border-b border-slate-100 mb-10 px-4 overflow-x-auto whitespace-nowrap scrollbar-hide">
           <button onClick={() => setActiveTab('profil')} className={`pb-4 px-6 text-xs font-black uppercase tracking-widest transition-all relative ${activeTab === 'profil' ? 'text-secondary' : 'text-slate-400 hover:text-slate-600'}`}>
-            Identité
+            IdentitÃ©
             {activeTab === 'profil' && <div className="absolute bottom-0 left-0 right-0 h-1 bg-secondary rounded-full" />}
           </button>
           <button onClick={() => setActiveTab('expertise')} className={`pb-4 px-6 text-xs font-black uppercase tracking-widest transition-all relative ${activeTab === 'expertise' ? 'text-secondary' : 'text-slate-400 hover:text-slate-600'}`}>
@@ -206,7 +206,7 @@ const ArtisanSettings = () => {
             {activeTab === 'expertise' && <div className="absolute bottom-0 left-0 right-0 h-1 bg-secondary rounded-full" />}
           </button>
           <button onClick={() => setActiveTab('securite')} className={`pb-4 px-6 text-xs font-black uppercase tracking-widest transition-all relative ${activeTab === 'securite' ? 'text-secondary' : 'text-slate-400 hover:text-slate-600'}`}>
-            Accès & Sécurité
+            AccÃ¨s & SÃ©curitÃ©
             {activeTab === 'securite' && <div className="absolute bottom-0 left-0 right-0 h-1 bg-secondary rounded-full" />}
           </button>
         </div>
@@ -230,7 +230,7 @@ const ArtisanSettings = () => {
               const updatedUser = { ...user, profile_pic: result.profilePic };
               localStorage.setItem('user', JSON.stringify(updatedUser));
               setForm({ ...form, profile_pic: result.profilePic });
-              setMessage({ text: 'Photo de profil mise à jour !', type: 'success' });
+              setMessage({ text: 'Photo de profil mise Ã  jour !', type: 'success' });
             } catch (err) {
               setMessage({ text: err.message || 'Erreur lors de l\'upload.', type: 'error' });
             } finally {
@@ -275,14 +275,14 @@ const ArtisanSettings = () => {
                         <input name="email" value={form.email} onChange={handleChange} type="email" className="w-full h-15 rounded-2xl border border-slate-100 bg-slate-50 focus:border-secondary focus:bg-white outline-none px-6 font-bold text-slate-900 shadow-sm" />
                       </div>
                       <div className="space-y-2 text-left">
-                        <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1">Téléphone</label>
+                        <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1">TÃ©lÃ©phone</label>
                         <input name="phone" value={form.phone} onChange={handleChange} type="tel" className="w-full h-15 rounded-2xl border border-slate-100 bg-slate-50 focus:border-secondary focus:bg-white outline-none px-6 font-bold text-slate-900 shadow-sm" />
                       </div>
-                      {/* Expérience input moved to Expertise tab */}
+                      {/* ExpÃ©rience input moved to Expertise tab */}
                    </div>
                 </div>
                 <div className="pt-10 border-t border-slate-50 flex justify-start">
-                  <button type="submit" disabled={loading} className="px-10 py-5 bg-secondary text-white rounded-[20px] font-black uppercase text-xs tracking-widest hover:opacity-90 transition-all shadow-xl shadow-secondary/20 active:scale-95">Mettre à jour l'identité</button>
+                  <button type="submit" disabled={loading} className="px-10 py-5 bg-secondary text-white rounded-[20px] font-black uppercase text-xs tracking-widest hover:opacity-90 transition-all shadow-xl shadow-secondary/20 active:scale-95">Mettre Ã  jour l'identitÃ©</button>
                 </div>
                </form>
             </div>
@@ -296,7 +296,7 @@ const ArtisanSettings = () => {
                       <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1">Wilaya</label>
                       <div className="relative text-left">
                         <select name="wilaya_id" value={form.wilaya_id} onChange={handleWilayaChange} className="w-full h-15 rounded-2xl border border-slate-100 bg-slate-50 focus:border-secondary focus:bg-white outline-none px-6 font-bold text-slate-900 appearance-none shadow-sm text-left">
-                          <option value="">Sélectionnez</option>
+                          <option value="">SÃ©lectionnez</option>
                           {wilayas.map(w => <option key={w.id} value={w.id}>{w.name}</option>)}
                         </select>
                         <span className="material-symbols-outlined absolute right-5 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none">expand_more</span>
@@ -306,7 +306,7 @@ const ArtisanSettings = () => {
                       <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1">Commune</label>
                       <div className="relative text-left">
                         <select name="commune_id" value={form.commune_id} onChange={handleChange} disabled={!form.wilaya_id} className="w-full h-15 rounded-2xl border border-slate-100 bg-slate-50 focus:border-secondary focus:bg-white outline-none px-6 font-bold text-slate-900 appearance-none disabled:opacity-50 shadow-sm text-left">
-                          <option value="">Sélectionnez</option>
+                          <option value="">SÃ©lectionnez</option>
                           {communes.map(c => <option key={c.id} value={c.id}>{c.name}</option>)}
                         </select>
                         <span className="material-symbols-outlined absolute right-5 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none">expand_more</span>
@@ -318,7 +318,7 @@ const ArtisanSettings = () => {
                     <input name="address" value={form.address} onChange={handleChange} type="text" className="w-full h-15 rounded-2xl border border-slate-100 bg-slate-50 focus:border-secondary focus:bg-white outline-none px-6 font-bold text-slate-900 shadow-sm" />
                   </div>
                   <div className="bg-slate-50/50 rounded-4xl p-8 border border-slate-100 text-left">
-                    <h4 className="text-xs font-black text-slate-900 uppercase tracking-widest mb-6 px-2">Spécialités Expert</h4>
+                    <h4 className="text-xs font-black text-slate-900 uppercase tracking-widest mb-6 px-2">SpÃ©cialitÃ©s Expert</h4>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 max-h-[400px] overflow-y-auto pr-4 custom-scrollbar">
                       {categoryGroups.map((group, idx) => (
                         <div key={idx} className="space-y-4 text-left">
@@ -340,9 +340,9 @@ const ArtisanSettings = () => {
                   </div>
                   
                   <div className="bg-slate-50/50 rounded-4xl p-8 border border-slate-100 text-left">
-                    <h4 className="text-xs font-black text-slate-900 uppercase tracking-widest mb-6 px-2">Expérience par Spécialité (ans)</h4>
+                    <h4 className="text-xs font-black text-slate-900 uppercase tracking-widest mb-6 px-2">ExpÃ©rience par SpÃ©cialitÃ© (ans)</h4>
                     {form.specialty.length === 0 ? (
-                      <p className="text-sm text-slate-400 font-bold px-2">Sélectionnez d'abord au moins une spécialité ci-dessus.</p>
+                      <p className="text-sm text-slate-400 font-bold px-2">SÃ©lectionnez d'abord au moins une spÃ©cialitÃ© ci-dessus.</p>
                     ) : (
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {form.specialty.map(spec => (
@@ -356,7 +356,7 @@ const ArtisanSettings = () => {
                                 ...form,
                                 experience_years: { ...form.experience_years, [spec]: e.target.value }
                               })} 
-                              placeholder="Années d'expérience" 
+                              placeholder="AnnÃ©es d'expÃ©rience" 
                               required
                               className="w-full h-12 rounded-xl bg-slate-50 border-none focus:border-secondary focus:bg-white outline-none px-4 font-bold text-slate-900 shadow-sm transition-all" 
                             />
@@ -377,21 +377,21 @@ const ArtisanSettings = () => {
                <div className="bg-white rounded-4xl p-8 md:p-12 border border-slate-100 shadow-[0_20px_50px_-20px_rgba(0,0,0,0.05)]">
                   <div className="flex items-center gap-4 mb-10 text-slate-900 uppercase">
                     <span className="material-symbols-outlined font-black text-2xl">key</span>
-                    <h3 className="text-xl font-black">Accès & Sécurité</h3>
+                    <h3 className="text-xl font-black">AccÃ¨s & SÃ©curitÃ©</h3>
                   </div>
                   <form onSubmit={handlePasswordChange} className="space-y-8">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
                        <div className="space-y-3">
                         <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1">Ancien MDP</label>
-                        <input type="password" required value={passwordForm.current} onChange={(e) => setPasswordForm({...passwordForm, current: e.target.value})} className="w-full h-15 rounded-2xl border border-slate-100 bg-slate-50 focus:border-secondary outline-none px-6 font-bold text-sm shadow-sm" placeholder="�DA��DA��DA��DA��DA��DA��DA��DA�" />
+                        <input type="password" required value={passwordForm.current} onChange={(e) => setPasswordForm({...passwordForm, current: e.target.value})} className="w-full h-15 rounded-2xl border border-slate-100 bg-slate-50 focus:border-secondary outline-none px-6 font-bold text-sm shadow-sm" placeholder="âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢" />
                       </div>
                       <div className="space-y-3">
                         <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1">Nouveau MDP</label>
-                        <input type="password" required value={passwordForm.new} onChange={(e) => setPasswordForm({...passwordForm, new: e.target.value})} className="w-full h-15 rounded-2xl border border-slate-100 bg-slate-50 focus:border-secondary outline-none px-6 font-bold text-sm shadow-sm" placeholder="�DA��DA��DA��DA��DA��DA��DA��DA�" />
+                        <input type="password" required value={passwordForm.new} onChange={(e) => setPasswordForm({...passwordForm, new: e.target.value})} className="w-full h-15 rounded-2xl border border-slate-100 bg-slate-50 focus:border-secondary outline-none px-6 font-bold text-sm shadow-sm" placeholder="âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢" />
                       </div>
                       <div className="space-y-3">
                         <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1">Confirmation</label>
-                        <input type="password" required value={passwordForm.confirm} onChange={(e) => setPasswordForm({...passwordForm, confirm: e.target.value})} className="w-full h-15 rounded-2xl border border-slate-100 bg-slate-50 focus:border-secondary outline-none px-6 font-bold text-sm shadow-sm" placeholder="�DA��DA��DA��DA��DA��DA��DA��DA�" />
+                        <input type="password" required value={passwordForm.confirm} onChange={(e) => setPasswordForm({...passwordForm, confirm: e.target.value})} className="w-full h-15 rounded-2xl border border-slate-100 bg-slate-50 focus:border-secondary outline-none px-6 font-bold text-sm shadow-sm" placeholder="âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢" />
                       </div>
                     </div>
                     <div className="pt-10 border-t border-slate-50 flex justify-start">
@@ -406,14 +406,14 @@ const ArtisanSettings = () => {
                       <h3 className="text-lg font-black text-red-600 uppercase mb-1">Session PRO</h3>
                       <p className="text-[10px] font-black text-red-400 uppercase tracking-widest">Quitter l'espace</p>
                     </div>
-                    <button onClick={handleLogout} className="px-8 py-4 bg-red-600 text-white rounded-xl font-black uppercase text-[10px] tracking-widest hover:bg-red-700 active:scale-95 transition-all shadow-xl shadow-red-600/10">Déconnexion</button>
+                    <button onClick={handleLogout} className="px-8 py-4 bg-red-600 text-white rounded-xl font-black uppercase text-[10px] tracking-widest hover:bg-red-700 active:scale-95 transition-all shadow-xl shadow-red-600/10">DÃ©connexion</button>
                   </div>
                    <div className="bg-slate-50 rounded-4xl p-10 border border-slate-100 flex items-center justify-between group text-left">
                     <div className="text-left">
-                      <h3 className="text-lg font-black text-slate-900 uppercase mb-1">Accès Expert</h3>
+                      <h3 className="text-lg font-black text-slate-900 uppercase mb-1">AccÃ¨s Expert</h3>
                       <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Action Critique</p>
                     </div>
-                    <button onClick={() => { if(window.confirm('🚨 Supprimer profil expert ?')) { apiService.logout(); navigate('/'); } }} className="px-8 py-4 border-2 border-slate-200 text-slate-500 rounded-xl font-black uppercase text-[10px] tracking-widest hover:bg-red-600 hover:border-red-600 hover:text-white active:scale-95 transition-all">Supprimer</button>
+                    <button onClick={() => { if(window.confirm('ðŸš¨ Supprimer profil expert ?')) { apiService.logout(); navigate('/'); } }} className="px-8 py-4 border-2 border-slate-200 text-slate-500 rounded-xl font-black uppercase text-[10px] tracking-widest hover:bg-red-600 hover:border-red-600 hover:text-white active:scale-95 transition-all">Supprimer</button>
                   </div>
                 </div>
             </div>

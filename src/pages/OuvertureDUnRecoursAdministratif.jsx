@@ -34,7 +34,7 @@ const OuvertureDUnRecoursAdministratif = () => {
 <h1 className="text-slate-900 dark:text-slate-100 text-3xl font-bold leading-tight">Soumettre un Recours Administratif</h1>
 <div className="flex items-center gap-2">
 <span className="px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-xs font-mono font-bold tracking-wider">REF: AD-2024-0812</span>
-<span className="text-slate-400 dark:text-slate-500 text-sm">�DA� Warning reference for appeal</span>
+<span className="text-slate-400 dark:text-slate-500 text-sm">âDA¢ Warning reference for appeal</span>
 </div>
 </div>
 {/*  Info Box  */}
@@ -45,7 +45,7 @@ const OuvertureDUnRecoursAdministratif = () => {
 <div className="flex flex-col gap-1">
 <p className="text-slate-900 dark:text-slate-100 text-base font-bold">Processus d'examen impartial</p>
 <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
-                            Ce recours sera examiné par un comité impartial dans un délai maximum de 48 heures ouvrées. Assurez-vous de fournir tous les justificatifs pertinents (photos, logs de communication, factures) pour appuyer votre demande.
+                            Ce recours sera examinÃ© par un comitÃ© impartial dans un dÃ©lai maximum de 48 heures ouvrÃ©es. Assurez-vous de fournir tous les justificatifs pertinents (photos, logs de communication, factures) pour appuyer votre demande.
                         </p>
 <a className="text-primary text-sm font-semibold flex items-center gap-1 mt-2 hover:underline" href="#">
                             Consulter la charte de recours
@@ -61,18 +61,18 @@ const OuvertureDUnRecoursAdministratif = () => {
 <label className="text-slate-700 dark:text-slate-300 text-sm font-semibold">Motif du recours</label>
 <select className="w-full h-12 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 px-4 text-slate-900 dark:text-slate-100 focus:ring-2 focus:ring-primary focus:border-primary transition-all appearance-none">
 <option disabled selected="" value="">Choisir une raison principale</option>
-<option value="contestation_faits">Contestation des faits reprochés</option>
-<option value="circonstances_attenuantes">Circonstances atténuantes exceptionnelles</option>
-<option value="erreur_administrative">Erreur administrative constatée</option>
-<option value="preuve_nouvelle">Nouvel élément de preuve déterminant</option>
-<option value="autre">Autre raison (à préciser ci-dessous)</option>
+<option value="contestation_faits">Contestation des faits reprochÃ©s</option>
+<option value="circonstances_attenuantes">Circonstances attÃ©nuantes exceptionnelles</option>
+<option value="erreur_administrative">Erreur administrative constatÃ©e</option>
+<option value="preuve_nouvelle">Nouvel Ã©lÃ©ment de preuve dÃ©terminant</option>
+<option value="autre">Autre raison (Ã  prÃ©ciser ci-dessous)</option>
 </select>
 </div>
 {/*  Justification  */}
 <div className="flex flex-col gap-2">
-<label className="text-slate-700 dark:text-slate-300 text-sm font-semibold">Explication détaillée / Justification</label>
-<textarea className="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 px-4 py-3 text-slate-900 dark:text-slate-100 focus:ring-2 focus:ring-primary focus:border-primary transition-all resize-none" placeholder="Décrivez précisément les faits et les raisons pour lesquelles vous contestez cet avertissement..." rows="6"></textarea>
-<p className="text-slate-400 text-xs">Minimum 100 caractères recommandés pour une analyse approfondie.</p>
+<label className="text-slate-700 dark:text-slate-300 text-sm font-semibold">Explication dÃ©taillÃ©e / Justification</label>
+<textarea className="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 px-4 py-3 text-slate-900 dark:text-slate-100 focus:ring-2 focus:ring-primary focus:border-primary transition-all resize-none" placeholder="DÃ©crivez prÃ©cisÃ©ment les faits et les raisons pour lesquelles vous contestez cet avertissement..." rows="6"></textarea>
+<p className="text-slate-400 text-xs">Minimum 100 caractÃ¨res recommandÃ©s pour une analyse approfondie.</p>
 </div>
 {/*  File Upload  */}
 <div className="flex flex-col gap-2">
@@ -103,7 +103,7 @@ const OuvertureDUnRecoursAdministratif = () => {
 <div className="flex justify-center mb-10">
 <p className="text-slate-500 dark:text-slate-500 text-sm flex items-center gap-2">
 <span className="material-symbols-outlined text-sm" data-icon="security">security</span>
-                        Vos données sont traitées en toute confidentialité.
+                        Vos donnÃ©es sont traitÃ©es en toute confidentialitÃ©.
                     </p>
 </div>
 </div>

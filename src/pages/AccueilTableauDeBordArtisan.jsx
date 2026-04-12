@@ -32,7 +32,7 @@ const AccueilTableauDeBordArtisan = () => {
 </a>
 <a className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
 <span className="material-symbols-outlined text-slate-400">verified_user</span>
-<span className="text-sm">Vérification et documents</span>
+<span className="text-sm">VÃ©rification et documents</span>
 </a>
 <a className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
 <span className="material-symbols-outlined text-slate-400">business_center</span>
@@ -44,7 +44,7 @@ const AccueilTableauDeBordArtisan = () => {
 </a>
 <a className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
 <span className="material-symbols-outlined text-slate-400">settings</span>
-<span className="text-sm">Paramètres</span>
+<span className="text-sm">ParamÃ¨tres</span>
 </a>
 </nav>
 <div className="p-6 border-t border-slate-200 dark:border-slate-800">
@@ -84,7 +84,7 @@ const AccueilTableauDeBordArtisan = () => {
 {/*  Welcome Section  */}
 <div>
 <h2 className="text-3xl font-black tracking-tight text-slate-900 dark:text-white">Bonjour, Ahmed Mohamed</h2>
-<p className="text-slate-500 dark:text-slate-400 mt-1">Voici un aperçu de votre activité aujourd'hui.</p>
+<p className="text-slate-500 dark:text-slate-400 mt-1">Voici un aperÃ§u de votre activitÃ© aujourd'hui.</p>
 </div>
 {/*  Stats Grid  */}
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -96,7 +96,7 @@ const AccueilTableauDeBordArtisan = () => {
 <span className="text-xs font-bold text-green-500 bg-green-500/10 px-2 py-1 rounded-full">+12%</span>
 </div>
 <p className="text-sm font-medium text-slate-500 dark:text-slate-400">Revenus ce mois</p>
-<p className="text-2xl font-black text-slate-900 dark:text-white mt-1">2,450 €</p>
+<p className="text-2xl font-black text-slate-900 dark:text-white mt-1">2,450 â‚¬</p>
 </div>
 <div className="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
 <div className="flex justify-between items-start mb-4">
@@ -134,7 +134,7 @@ const AccueilTableauDeBordArtisan = () => {
 {/*  Recent Missions (List)  */}
 <div className="xl:col-span-2 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden">
 <div className="p-6 border-b border-slate-100 dark:border-slate-800 flex justify-between items-center">
-<h3 className="text-lg font-bold text-slate-900 dark:text-white">Missions récentes</h3>
+<h3 className="text-lg font-bold text-slate-900 dark:text-white">Missions rÃ©centes</h3>
 <button className="text-primary text-sm font-bold hover:underline">Tout voir</button>
 </div>
 <div className="divide-y divide-slate-100 dark:divide-slate-800">
@@ -144,12 +144,12 @@ const AccueilTableauDeBordArtisan = () => {
 <img alt="Mission" className="w-full h-full object-cover" data-alt="Renovation site photo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7cOgj9gXN0jcOF3nEYF-w97S1wj03cQqqag0Tcx120lFrzQ_J2ESC1c-Gad7dimunyRsMwC8eERH06tCk8oXSLgdpUls0pbAN3CZ5e4RFX24JG1PI8lmLEXZ3chZZ5y3ZJ5hud_PQQAKfmFIvUc38LKctxE7HxzndlsuYp0gMgu8Q6DQczVeIge4AmH0K7thx0__qv289R57Zplb5zRE_Np3FNsOqq6yaZwBNpkf3d4f-naWs4J3zfUNi2aV5HZCIgwKyJFfIKlaa"/>
 </div>
 <div className="flex-1">
-<h4 className="font-bold text-slate-900 dark:text-white">Rénovation Cuisine - Villa Arras</h4>
-<p className="text-sm text-slate-500">Client: Jean Dupont �DA� 12 Oct 2023</p>
+<h4 className="font-bold text-slate-900 dark:text-white">RÃ©novation Cuisine - Villa Arras</h4>
+<p className="text-sm text-slate-500">Client: Jean Dupont âDA¢ 12 Oct 2023</p>
 </div>
 <div className="text-right">
 <span className="px-3 py-1 rounded-full text-xs font-bold bg-blue-100 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400">En cours</span>
-<p className="text-sm font-bold text-slate-900 dark:text-white mt-1">1,200 €</p>
+<p className="text-sm font-bold text-slate-900 dark:text-white mt-1">1,200 â‚¬</p>
 </div>
 </div>
 {/*  Mission 2  */}
@@ -158,12 +158,12 @@ const AccueilTableauDeBordArtisan = () => {
 <img alt="Mission" className="w-full h-full object-cover" data-alt="Electrical wiring maintenance" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHyJmuHXj1suDm4lF9QUdZzfGj9nkb7YOYyopISV11l21Z_HmQY6fm3n1NqcwmBB3LVmofsv3pDymbpXU6k1b-0_Wp8tnhH6CMBroiEW2TTohF8JRGeCwjtWWmJIjIvA8X4-V0vdrRi6YS_ovoisbhSqkzBffjTke4BGb6ts-3IK5rSOJZcLVR8W2tXnKSmNX2BoDeCZEw9eA4ysST7jiaftQOMYHJLgqZoylCb4f5YRHFx25qSSojAfvWQH8mQpq2gg4PqSckwaIm"/>
 </div>
 <div className="flex-1">
-<h4 className="font-bold text-slate-900 dark:text-white">Installation Électrique Bureau</h4>
-<p className="text-sm text-slate-500">Client: SARL Tech �DA� 09 Oct 2023</p>
+<h4 className="font-bold text-slate-900 dark:text-white">Installation Ã‰lectrique Bureau</h4>
+<p className="text-sm text-slate-500">Client: SARL Tech âDA¢ 09 Oct 2023</p>
 </div>
 <div className="text-right">
-<span className="px-3 py-1 rounded-full text-xs font-bold bg-green-100 text-green-600 dark:bg-green-900/30 dark:text-green-400">Terminé</span>
-<p className="text-sm font-bold text-slate-900 dark:text-white mt-1">850 €</p>
+<span className="px-3 py-1 rounded-full text-xs font-bold bg-green-100 text-green-600 dark:bg-green-900/30 dark:text-green-400">TerminÃ©</span>
+<p className="text-sm font-bold text-slate-900 dark:text-white mt-1">850 â‚¬</p>
 </div>
 </div>
 {/*  Mission 3  */}
@@ -172,12 +172,12 @@ const AccueilTableauDeBordArtisan = () => {
 <img alt="Mission" className="w-full h-full object-cover" data-alt="Plumbing work pipes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCF3-PZ64pkbPNOOFTV0UBMkV8PLCkVRns4L-XGFQjQMPdxolYjTgfhqdypg05PbC6m50d8U3Acrrxsv12WqCOPojNTOvktodw2dShZGDuLXYYZTPz2eMlK39rACK_JRv__lUmVL9mHXFiDIO72EuCbe8ZHK30K8rcRDo7MxVZnFQa21mbHi8P8wpr49M0yqxGTnzzMZN1nXQuIMk6-FxADURaEIUnAlnpq_gP5NM88JTIvtG1SXdFwPQ4mLJB7SlX0KvUpZCYMt4kH"/>
 </div>
 <div className="flex-1">
-<h4 className="font-bold text-slate-900 dark:text-white">Réparation Fuite Canalisation</h4>
-<p className="text-sm text-slate-500">Client: Marie Curie �DA� 05 Oct 2023</p>
+<h4 className="font-bold text-slate-900 dark:text-white">RÃ©paration Fuite Canalisation</h4>
+<p className="text-sm text-slate-500">Client: Marie Curie âDA¢ 05 Oct 2023</p>
 </div>
 <div className="text-right">
 <span className="px-3 py-1 rounded-full text-xs font-bold bg-orange-100 text-orange-600 dark:bg-orange-900/30 dark:text-orange-400">En attente</span>
-<p className="text-sm font-bold text-slate-900 dark:text-white mt-1">320 €</p>
+<p className="text-sm font-bold text-slate-900 dark:text-white mt-1">320 â‚¬</p>
 </div>
 </div>
 </div>
@@ -197,7 +197,7 @@ const AccueilTableauDeBordArtisan = () => {
 </div>
 <div className="flex-1 min-w-0">
 <p className="text-sm font-bold text-slate-900 dark:text-white truncate">Visite technique - Loft Paris</p>
-<p className="text-xs text-slate-500 mt-0.5">09:00 - 10:30 �DA� 2.5km</p>
+<p className="text-xs text-slate-500 mt-0.5">09:00 - 10:30 âDA¢ 2.5km</p>
 </div>
 <button className="size-8 flex items-center justify-center rounded-lg bg-white dark:bg-slate-900 text-slate-400 hover:text-primary border border-slate-200 dark:border-slate-700">
 <span className="material-symbols-outlined text-sm">navigation</span>
@@ -211,7 +211,7 @@ const AccueilTableauDeBordArtisan = () => {
 </div>
 <div className="flex-1 min-w-0">
 <p className="text-sm font-bold text-slate-900 dark:text-white truncate">Signature Contrat - Agence Immo</p>
-<p className="text-xs text-slate-500 mt-0.5">14:00 - 15:00 �DA� Zoom</p>
+<p className="text-xs text-slate-500 mt-0.5">14:00 - 15:00 âDA¢ Zoom</p>
 </div>
 <button className="size-8 flex items-center justify-center rounded-lg bg-white dark:bg-slate-900 text-slate-400 hover:text-primary border border-slate-200 dark:border-slate-700">
 <span className="material-symbols-outlined text-sm">videocam</span>
@@ -225,7 +225,7 @@ const AccueilTableauDeBordArtisan = () => {
 </div>
 <div className="flex-1 min-w-0">
 <p className="text-sm font-bold text-slate-900 dark:text-white truncate">Maintenance Climatisation</p>
-<p className="text-xs text-slate-500 mt-0.5">10:30 - 12:00 �DA� 5.0km</p>
+<p className="text-xs text-slate-500 mt-0.5">10:30 - 12:00 âDA¢ 5.0km</p>
 </div>
 <button className="size-8 flex items-center justify-center rounded-lg bg-white dark:bg-slate-900 text-slate-400 hover:text-primary border border-slate-200 dark:border-slate-700">
 <span className="material-symbols-outlined text-sm">navigation</span>
