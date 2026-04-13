@@ -23,50 +23,51 @@ const ArtisanDashboard = () => {
     isVerified: false
   });
 
-  useEffect(() => {
-    const fetchDashboardData = async () => {
-      try {
-        if (currentUser && currentUser.id) {
-          const [bookingData, devisData, assignedDevis, dashboardStats, latestUser] = await Promise.all([
-            apiService.getArtisanBookings(currentUser.id),
-            apiService.getPendingDevis(currentUser.specialty || 'Plomberie'),
-            apiService.getArtisanDevis(currentUser.id),
-            apiService.getArtisanDashboardStats(currentUser.id),
-            apiService.getUserById(currentUser.id)
-          ]);
+  const fetchDashboardData = async () => {
+    setLoading(true);
+    try {
+      if (currentUser && currentUser.id) {
+        const [bookingData, devisData, assignedDevis, dashboardStats, latestUser] = await Promise.all([
+          apiService.getArtisanBookings(currentUser.id),
+          apiService.getPendingDevis(currentUser.specialty || 'Plomberie'),
+          apiService.getArtisanDevis(currentUser.id),
+          apiService.getArtisanDashboardStats(currentUser.id),
+          apiService.getUserById(currentUser.id)
+        ]);
 
-          // Sync user status
-          setCurrentUser(latestUser);
-          localStorage.setItem('user', JSON.stringify(latestUser));
-          
-          const safeBookingData = Array.isArray(bookingData) ? bookingData : [];
-          const safeAssignedDevis = Array.isArray(assignedDevis) ? assignedDevis : [];
+        setCurrentUser(latestUser);
+        localStorage.setItem('user', JSON.stringify(latestUser));
+        
+        const safeBookingData = Array.isArray(bookingData) ? bookingData : [];
+        const safeAssignedDevis = Array.isArray(assignedDevis) ? assignedDevis : [];
 
-          const combined = [
-            ...safeBookingData.map(b => ({ ...b, type: 'booking' })),
-            ...safeAssignedDevis.filter(d => d.artisan_id !== null).map(d => ({
-              id: `d-${d.id}`,
-              service_title: d.category_name,
-              client_name: d.client_name,
-              booking_date: d.date,
-              status: d.status,
-              total_price: d.budget,
-              type: 'devis'
-            }))
-          ].sort((a, b) => new Date(b.booking_date) - new Date(a.booking_date));
+        const combined = [
+          ...safeBookingData.map(b => ({ ...b, type: 'booking' })),
+          ...safeAssignedDevis.filter(d => d.artisan_id !== null).map(d => ({
+            id: `d-${d.id}`,
+            service_title: d.category_name,
+            client_name: d.client_name,
+            booking_date: d.date,
+            status: d.status,
+            total_price: d.budget,
+            type: 'devis'
+          }))
+        ].sort((a, b) => new Date(b.booking_date) - new Date(a.booking_date));
 
-          setBookings(combined);
-          setPendingDevis(devisData);
-          setStats(dashboardStats);
-        }
-      } catch (err) {
-        console.error('Error fetching dashboard data:', err);
-      } finally {
-        setLoading(false);
+        setBookings(combined);
+        setPendingDevis(devisData);
+        setStats(dashboardStats);
       }
-    };
+    } catch (err) {
+      console.error('Error fetching dashboard data:', err);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
     fetchDashboardData();
-  }, []);
+  }, [currentUser?.id]);
 
   const updateStatus = async (item, newStatus) => {
     try {
@@ -78,8 +79,8 @@ const ArtisanDashboard = () => {
         if (newStatus === 'cancelled') statusToUpdate = 'annulé';
         
         await apiService.updateDevisStatus(devisId, statusToUpdate);
-        setPendingDevis(prev => 
-          prev.map(d => d.id === item.id ? { ...d, status: statusToUpdate } : d)
+        setBookings(prev => 
+          prev.map(b => b.id === item.id ? { ...b, status: statusToUpdate } : b)
         );
       } else {
         await apiService.updateBookingStatus(item.id, newStatus);
@@ -87,6 +88,7 @@ const ArtisanDashboard = () => {
           prev.map(b => b.id === item.id ? { ...b, status: newStatus } : b)
         );
       }
+      fetchDashboardData(); // Refresh stats mostly
     } catch (err) {
       alert('Erreur lors de la mise à jour du statut');
     }
@@ -95,7 +97,8 @@ const ArtisanDashboard = () => {
   const handleAcceptDevis = async (devisId) => {
     try {
       await apiService.acceptDevis(devisId);
-      setPendingDevis(prev => prev.filter(d => d.id !== `d-${devisId}`));
+      setPendingDevis(prev => prev.filter(d => d.id !== devisId));
+      fetchDashboardData(); // Refresh bookings and stats
       alert('Bravo ! Vous avez accepté ce projet.');
     } catch (err) {
       alert("Erreur lors de l'acceptation du devis");

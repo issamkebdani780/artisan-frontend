@@ -115,15 +115,17 @@ const ClientInbox = () => {
           </div>
         ) : (
           <div className="grid grid-cols-1 gap-8">
-            {bookings.map(devis => (
+            {bookings.map(devis => {
+              const displayStatus = (!devis.artisan_id && (devis.status === 'accepté' || devis.status === 'confirmed')) ? 'en attente' : devis.status;
+              return (
               <div key={devis.id} className="bg-white rounded-[40px] border border-slate-100 p-8 md:p-10 shadow-2xl shadow-slate-200/40 hover:shadow-primary/5 transition-all group overflow-hidden relative">
                 <div className="absolute right-0 top-0 w-32 h-full bg-slate-50/30 -skew-x-12 translate-x-16 group-hover:translate-x-12 transition-transform duration-700"></div>
                 
                 <div className="flex flex-col lg:flex-row gap-10 relative z-10">
                   <div className="flex-1 space-y-8">
                     <div className="flex flex-wrap items-center gap-4">
-                      <span className={`px-5 py-2 rounded-full text-[10px] font-black uppercase tracking-widest border shadow-sm ${getStatusStyle(devis.status)}`}>
-                        {devis.status}
+                      <span className={`px-5 py-2 rounded-full text-[10px] font-black uppercase tracking-widest border shadow-sm ${getStatusStyle(displayStatus)}`}>
+                        {displayStatus}
                       </span>
                       <div className="h-4 w-px bg-slate-200 hidden sm:block"></div>
                       <span className="text-slate-400 text-[10px] font-black uppercase tracking-widest flex items-center gap-2">
@@ -215,7 +217,8 @@ const ClientInbox = () => {
                   </div>
                 </div>
               </div>
-            ))}
+            );
+          })}
           </div>
         ) }
       </div>

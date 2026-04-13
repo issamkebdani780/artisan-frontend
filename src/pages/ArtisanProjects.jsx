@@ -9,41 +9,43 @@ const ArtisanProjects = () => {
   const [filter, setFilter] = useState('Tous');
   const user = JSON.parse(localStorage.getItem('user'));
 
-  useEffect(() => {
-    const fetchProjects = async () => {
-      try {
-        if (user && user.id) {
-          const [bookingData, assignedDevis, unassignedDevis] = await Promise.all([
-            apiService.getArtisanBookings(user.id),
-            apiService.getArtisanDevis(user.id),
-            apiService.getPendingDevis(user.specialty || 'Plomberie')
-          ]);
-          
-          const safeBookingData = Array.isArray(bookingData) ? bookingData : [];
-          const safeAssignedDevis = Array.isArray(assignedDevis) ? assignedDevis : [];
+  const fetchProjects = async () => {
+    setLoading(true);
+    try {
+      if (user && user.id) {
+        const [bookingData, assignedDevis, unassignedDevis] = await Promise.all([
+          apiService.getArtisanBookings(user.id),
+          apiService.getArtisanDevis(user.id),
+          apiService.getPendingDevis(user.specialty || 'Plomberie')
+        ]);
+        
+        const safeBookingData = Array.isArray(bookingData) ? bookingData : [];
+        const safeAssignedDevis = Array.isArray(assignedDevis) ? assignedDevis : [];
 
-          const combined = [
-            ...safeBookingData.map(b => ({ ...b, type: 'booking' })),
-            ...safeAssignedDevis.filter(d => d.artisan_id !== null).map(d => ({
-              id: `d-${d.id}`,
-              service_title: d.category_name,
-              client_name: d.client_name,
-              booking_date: d.date,
-              status: d.status,
-              total_price: d.budget,
-              type: 'devis'
-            }))
-          ].sort((a, b) => new Date(b.booking_date) - new Date(a.booking_date));
+        const combined = [
+          ...safeBookingData.map(b => ({ ...b, type: 'booking' })),
+          ...safeAssignedDevis.filter(d => d.artisan_id !== null).map(d => ({
+            id: `d-${d.id}`,
+            service_title: d.category_name,
+            client_name: d.client_name,
+            booking_date: d.date,
+            status: d.status,
+            total_price: d.budget,
+            type: 'devis'
+          }))
+        ].sort((a, b) => new Date(b.booking_date) - new Date(a.booking_date));
 
-          setProjects(combined);
-          setPendingDevis(unassignedDevis);
-        }
-      } catch (err) {
-        console.error('Error fetching projects:', err);
-      } finally {
-        setLoading(false);
+        setProjects(combined);
+        setPendingDevis(unassignedDevis);
       }
-    };
+    } catch (err) {
+      console.error('Error fetching projects:', err);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
     fetchProjects();
   }, []);
 
@@ -62,6 +64,7 @@ const ArtisanProjects = () => {
         await apiService.updateBookingStatus(item.id, newStatus);
         setProjects(projects.map(p => p.id === item.id ? { ...p, status: newStatus } : p));
       }
+      fetchProjects();
     } catch (err) {
       alert('Erreur lors de la mise à jour du statut');
     }
@@ -70,8 +73,9 @@ const ArtisanProjects = () => {
   const handleAcceptDevis = async (devisId) => {
     try {
       await apiService.acceptDevis(devisId);
+      setPendingDevis(prev => prev.filter(d => d.id !== devisId));
+      fetchProjects();
       alert('Bravo ! Vous avez accepté ce projet.');
-      window.location.reload();
     } catch (err) {
       alert('Erreur lors de l\'acceptation du devis');
     }

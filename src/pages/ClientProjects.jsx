@@ -127,7 +127,9 @@ const ClientProjects = () => {
                       </td>
                     </tr>
                   ) : (
-                    projects.map((project) => (
+                    projects.map((project) => {
+                      const displayStatus = (!project.artisan_id && (project.status === 'accepté' || project.status === 'confirmed')) ? 'en attente' : project.status;
+                      return (
                       <tr key={project.id} className="hover:bg-slate-50/50 transition-colors group">
                         <td className="px-8 py-6">
                           <div className="flex flex-col">
@@ -145,15 +147,15 @@ const ClientProjects = () => {
                         </td>
                         <td className="px-8 py-6 font-black text-slate-900">{project.total_price} DA</td>
                         <td className="px-8 py-6">
-                          <span className={`inline-flex items-center gap-1 px-4 py-1.5 rounded-full text-[10px] font-black uppercase shadow-xs whitespace-nowrap w-fit ${project.status === 'confirmed' || project.status === 'accepté' ? 'bg-blue-100 text-blue-700' :
-                                project.status === 'completed' || project.status === 'terminé' ? 'bg-emerald-100 text-emerald-700' :
-                                  project.status === 'cancelled' || project.status === 'refusé' || project.status === 'annulé' ? 'bg-red-100 text-red-700' :
+                          <span className={`inline-flex items-center gap-1 px-4 py-1.5 rounded-full text-[10px] font-black uppercase shadow-xs whitespace-nowrap w-fit ${displayStatus === 'confirmed' || displayStatus === 'accepté' ? 'bg-blue-100 text-blue-700' :
+                                displayStatus === 'completed' || displayStatus === 'terminé' ? 'bg-emerald-100 text-emerald-700' :
+                                  displayStatus === 'cancelled' || displayStatus === 'refusé' || displayStatus === 'annulé' ? 'bg-red-100 text-red-700' :
                                     'bg-orange-100 text-orange-700'
                             }`}>
-                            {project.status === 'pending' || project.status === 'en attente' ? '🔍' :
-                              project.status === 'confirmed' || project.status === 'accepté' ? '✅' :
-                                project.status === 'completed' || project.status === 'terminé' ? '✅' : '❌'}
-                            {project.status}
+                            {displayStatus === 'pending' || displayStatus === 'en attente' ? '🔍' :
+                              displayStatus === 'confirmed' || displayStatus === 'accepté' ? '✅' :
+                                displayStatus === 'completed' || displayStatus === 'terminé' ? '✅' : '❌'}
+                            {displayStatus}
                           </span>
                         </td>
                         <td className="px-8 py-6 text-right">
@@ -193,7 +195,8 @@ const ClientProjects = () => {
                           </div>
                         </td>
                       </tr>
-                    ))
+                    );
+                  })
                   )}
                 </tbody>
               </table>
