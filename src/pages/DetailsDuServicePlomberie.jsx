@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 
 const DetailsDuServicePlomberie = () => {
   return (
@@ -38,13 +38,13 @@ const DetailsDuServicePlomberie = () => {
 <img alt="Plombier professionnel travaillant sur une tuyauterie" className="absolute inset-0 h-full w-full object-cover opacity-60" data-alt="Professional plumber working on metal pipes under a sink" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeAYjDdw3xzyNxuMzzRB0ZXoxrbTeNtBXldDEguDS_tPgWmQ_gKpnTk9kH8ar27T9NU4WpJEVyP8hM4rg5HGu4lH6LojAXPvnkzWpgkFKsayjUsiC_TJgEGHFz8mDk6B2dcVzapdKPWSzOm-PADso6jqyq7GXR2DDvqkefVQKL8Z5eBGXT1q5oAo6mM7TgvTikOLRn0iSeWFpO34x-a3t3iVnLXR_APE9dDc1dy3lMVRp1z_yqRTvJZrSuVs2tWSr-NhrhE8ct2cks"/>
 <div className="relative p-8 md:p-12 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent">
 <h1 className="text-white text-4xl md:text-5xl font-extrabold leading-tight max-w-2xl mb-4">
-                            Dépannage et Installation de Plomberie
+                            DÃ©pannage et Installation de Plomberie
                         </h1>
 <p className="text-slate-200 text-lg md:text-xl max-w-3xl leading-relaxed">
-                            Confiez vos travaux de plomberie à des experts certifiés. Qu'il s'agisse d'une fuite urgente, d'une installation de robinetterie ou d'un débouchage, nous sommes là pour vous.
+                            Confiez vos travaux de plomberie Ã  des experts certifiÃ©s. Qu'il s'agisse d'une fuite urgente, d'une installation de robinetterie ou d'un dÃ©bouchage, nous sommes lÃ  pour vous.
                         </p>
 <div className="mt-8 flex gap-4">
-<button className="bg-primary text-white px-8 py-3 rounded-lg font-bold hover:bg-primary/90 transition-all shadow-lg">Réserver maintenant</button>
+<button className="bg-primary text-white px-8 py-3 rounded-lg font-bold hover:bg-primary/90 transition-all shadow-lg">RÃ©server maintenant</button>
 <button className="bg-white/10 backdrop-blur-md text-white border border-white/20 px-8 py-3 rounded-lg font-bold hover:bg-white/20 transition-all">Voir les tarifs</button>
 </div>
 </div>
@@ -52,28 +52,28 @@ const DetailsDuServicePlomberie = () => {
 </section>
 {/*  How it works  */}
 <section className="px-6 md:px-20 py-12 bg-white">
-<h2 className="text-2xl md:text-3xl font-bold text-center mb-12">Comment ça marche</h2>
+<h2 className="text-2xl md:text-3xl font-bold text-center mb-12">Comment Ã§a marche</h2>
 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 <div className="flex flex-col items-center text-center p-8 rounded-xl border border-slate-200 bg-background-light hover:shadow-md transition-shadow">
 <div className="size-16 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-6">
 <span className="material-symbols-outlined text-4xl">calendar_month</span>
 </div>
-<h3 className="text-xl font-bold mb-3">1. Réservez</h3>
-<p className="text-slate-600">Décrivez votre problème en quelques clics via notre formulaire simple et rapide.</p>
+<h3 className="text-xl font-bold mb-3">1. RÃ©servez</h3>
+<p className="text-slate-600">DÃ©crivez votre problÃ¨me en quelques clics via notre formulaire simple et rapide.</p>
 </div>
 <div className="flex flex-col items-center text-center p-8 rounded-xl border border-slate-200 bg-background-light hover:shadow-md transition-shadow">
 <div className="size-16 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-6">
 <span className="material-symbols-outlined text-4xl">engineering</span>
 </div>
 <h3 className="text-xl font-bold mb-3">2. Choisissez</h3>
-<p className="text-slate-600">Sélectionnez un expert local qualifié parmi nos professionnels vérifiés et certifiés.</p>
+<p className="text-slate-600">SÃ©lectionnez un expert local qualifiÃ© parmi nos professionnels vÃ©rifiÃ©s et certifiÃ©s.</p>
 </div>
 <div className="flex flex-col items-center text-center p-8 rounded-xl border border-slate-200 bg-background-light hover:shadow-md transition-shadow">
 <div className="size-16 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-6">
 <span className="material-symbols-outlined text-4xl">verified_user</span>
 </div>
-<h3 className="text-xl font-bold mb-3">3. C'est réparé</h3>
-<p className="text-slate-600">Le plombier intervient rapidement et vous payez en toute sécurité après la prestation.</p>
+<h3 className="text-xl font-bold mb-3">3. C'est rÃ©parÃ©</h3>
+<p className="text-slate-600">Le plombier intervient rapidement et vous payez en toute sÃ©curitÃ© aprÃ¨s la prestation.</p>
 </div>
 </div>
 </section>
@@ -81,20 +81,20 @@ const DetailsDuServicePlomberie = () => {
 <section className="px-6 md:px-20 py-16">
 <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
 <div>
-<h2 className="text-3xl font-bold">Tarification et Détails</h2>
-<p className="text-slate-500 mt-2">Des prix transparents, sans frais cachés.</p>
+<h2 className="text-3xl font-bold">Tarification et DÃ©tails</h2>
+<p className="text-slate-500 mt-2">Des prix transparents, sans frais cachÃ©s.</p>
 </div>
 <a className="text-primary font-semibold flex items-center gap-2" href="#">Voir tous les services <span className="material-symbols-outlined text-sm">arrow_forward</span></a>
 </div>
 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 <div className="p-6 bg-white rounded-xl shadow-sm border border-slate-200">
 <div className="flex justify-between items-start mb-4">
-<h3 className="text-lg font-bold">Réparation de fuite</h3>
-<span className="text-primary font-bold">À partir de 45€</span>
+<h3 className="text-lg font-bold">RÃ©paration de fuite</h3>
+<span className="text-primary font-bold">Ã€ partir de 45â‚¬</span>
 </div>
 <ul className="space-y-3 mb-6 text-slate-600 text-sm">
 <li className="flex items-center gap-2"><span className="material-symbols-outlined text-green-500 text-lg">check_circle</span> Diagnostic inclus</li>
-<li className="flex items-center gap-2"><span className="material-symbols-outlined text-green-500 text-lg">check_circle</span> Réparation immédiate</li>
+<li className="flex items-center gap-2"><span className="material-symbols-outlined text-green-500 text-lg">check_circle</span> RÃ©paration immÃ©diate</li>
 <li className="flex items-center gap-2"><span className="material-symbols-outlined text-green-500 text-lg">check_circle</span> Garantie 1 an</li>
 </ul>
 <button className="w-full py-2 bg-slate-100 hover:bg-primary hover:text-white transition-colors rounded-lg font-semibold">Choisir</button>
@@ -102,23 +102,23 @@ const DetailsDuServicePlomberie = () => {
 <div className="p-6 bg-primary text-white rounded-xl shadow-xl scale-105 border-2 border-primary">
 <div className="flex justify-between items-start mb-4">
 <h3 className="text-lg font-bold">Installation robinet</h3>
-<span className="text-white font-bold">À partir de 60€</span>
+<span className="text-white font-bold">Ã€ partir de 60â‚¬</span>
 </div>
 <ul className="space-y-3 mb-6 text-white/80 text-sm">
-<li className="flex items-center gap-2"><span className="material-symbols-outlined text-white text-lg">check_circle</span> Dépose ancien robinet</li>
+<li className="flex items-center gap-2"><span className="material-symbols-outlined text-white text-lg">check_circle</span> DÃ©pose ancien robinet</li>
 <li className="flex items-center gap-2"><span className="material-symbols-outlined text-white text-lg">check_circle</span> Raccordement standard</li>
-<li className="flex items-center gap-2"><span className="material-symbols-outlined text-white text-lg">check_circle</span> Test d'étanchéité</li>
+<li className="flex items-center gap-2"><span className="material-symbols-outlined text-white text-lg">check_circle</span> Test d'Ã©tanchÃ©itÃ©</li>
 </ul>
 <button className="w-full py-2 bg-white text-primary hover:bg-slate-100 transition-colors rounded-lg font-bold">Choisir</button>
 </div>
 <div className="p-6 bg-white rounded-xl shadow-sm border border-slate-200">
 <div className="flex justify-between items-start mb-4">
-<h3 className="text-lg font-bold">Débouchage canalisation</h3>
-<span className="text-primary font-bold">À partir de 50€</span>
+<h3 className="text-lg font-bold">DÃ©bouchage canalisation</h3>
+<span className="text-primary font-bold">Ã€ partir de 50â‚¬</span>
 </div>
 <ul className="space-y-3 mb-6 text-slate-600 text-sm">
 <li className="flex items-center gap-2"><span className="material-symbols-outlined text-green-500 text-lg">check_circle</span> Utilisation furet/pompe</li>
-<li className="flex items-center gap-2"><span className="material-symbols-outlined text-green-500 text-lg">check_circle</span> Désinfection rapide</li>
+<li className="flex items-center gap-2"><span className="material-symbols-outlined text-green-500 text-lg">check_circle</span> DÃ©sinfection rapide</li>
 <li className="flex items-center gap-2"><span className="material-symbols-outlined text-green-500 text-lg">check_circle</span> Conseils entretien</li>
 </ul>
 <button className="w-full py-2 bg-slate-100 hover:bg-primary hover:text-white transition-colors rounded-lg font-semibold">Choisir</button>
@@ -143,11 +143,11 @@ const DetailsDuServicePlomberie = () => {
 </div>
 </div>
 <p className="text-slate-600 text-sm leading-relaxed mb-4">
-                            Expert en dépannage d'urgence avec plus de 15 ans d'expérience. Spécialiste des systèmes de chauffage et tuyauterie cuivre.
+                            Expert en dÃ©pannage d'urgence avec plus de 15 ans d'expÃ©rience. SpÃ©cialiste des systÃ¨mes de chauffage et tuyauterie cuivre.
                         </p>
 <div className="flex gap-2">
 <span className="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold rounded uppercase">Urgence</span>
-<span className="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold rounded uppercase">Certifié</span>
+<span className="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold rounded uppercase">CertifiÃ©</span>
 </div>
 </div>
 {/*  Expert 2  */}
@@ -164,7 +164,7 @@ const DetailsDuServicePlomberie = () => {
 </div>
 </div>
 <p className="text-slate-600 text-sm leading-relaxed mb-4">
-                            Spécialisée dans la rénovation de salle de bain et l'installation de robinetterie haut de gamme. Travail soigné et précis.
+                            SpÃ©cialisÃ©e dans la rÃ©novation de salle de bain et l'installation de robinetterie haut de gamme. Travail soignÃ© et prÃ©cis.
                         </p>
 <div className="flex gap-2">
 <span className="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold rounded uppercase">Design</span>
@@ -185,35 +185,35 @@ const DetailsDuServicePlomberie = () => {
 </div>
 </div>
 <p className="text-slate-600 text-sm leading-relaxed mb-4">
-                            Expert en débouchage complexe et assainissement. Disponible 24/7 pour toute intervention majeure sur le réseau.
+                            Expert en dÃ©bouchage complexe et assainissement. Disponible 24/7 pour toute intervention majeure sur le rÃ©seau.
                         </p>
 <div className="flex gap-2">
 <span className="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold rounded uppercase">24/7</span>
-<span className="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold rounded uppercase">Maître Artisan</span>
+<span className="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold rounded uppercase">MaÃ®tre Artisan</span>
 </div>
 </div>
 </div>
 </section>
 {/*  FAQ Section  */}
 <section className="px-6 md:px-20 py-16 max-w-4xl mx-auto">
-<h2 className="text-3xl font-bold mb-10 text-center">Questions fréquentes</h2>
+<h2 className="text-3xl font-bold mb-10 text-center">Questions frÃ©quentes</h2>
 <div className="space-y-4">
 <details className="group bg-white rounded-lg border border-slate-200 p-4" open="">
 <summary className="flex items-center justify-between cursor-pointer font-bold list-none">
-<span>Quels sont vos délais d'intervention pour une urgence ?</span>
+<span>Quels sont vos dÃ©lais d'intervention pour une urgence ?</span>
 <span className="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
 </summary>
 <p className="mt-4 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-4">
-                            Pour les urgences comme une fuite d'eau importante ou un débouchage total, nos experts interviennent en moyenne en moins de 45 minutes dans les zones couvertes.
+                            Pour les urgences comme une fuite d'eau importante ou un dÃ©bouchage total, nos experts interviennent en moyenne en moins de 45 minutes dans les zones couvertes.
                         </p>
 </details>
 <details className="group bg-white rounded-lg border border-slate-200 p-4">
 <summary className="flex items-center justify-between cursor-pointer font-bold list-none">
-<span>Les pièces de rechange sont-elles incluses dans le prix ?</span>
+<span>Les piÃ¨ces de rechange sont-elles incluses dans le prix ?</span>
 <span className="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
 </summary>
 <p className="mt-4 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-4">
-                            Le tarif affiché correspond à la main-d'Å“uvre et au déplacement. Les pièces de rechange nécessaires (joints, robinets, siphons) sont facturées en supplément après validation d'un devis gratuit sur place.
+                            Le tarif affichÃ© correspond Ã  la main-d'Ã…â€œuvre et au dÃ©placement. Les piÃ¨ces de rechange nÃ©cessaires (joints, robinets, siphons) sont facturÃ©es en supplÃ©ment aprÃ¨s validation d'un devis gratuit sur place.
                         </p>
 </details>
 <details className="group bg-white rounded-lg border border-slate-200 p-4">
@@ -222,7 +222,7 @@ const DetailsDuServicePlomberie = () => {
 <span className="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
 </summary>
 <p className="mt-4 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-4">
-                            Le paiement s'effectue directement sur notre plateforme sécurisée une fois la prestation terminée et validée par vos soins. Nous acceptons les cartes bancaires et les virements instantanés.
+                            Le paiement s'effectue directement sur notre plateforme sÃ©curisÃ©e une fois la prestation terminÃ©e et validÃ©e par vos soins. Nous acceptons les cartes bancaires et les virements instantanÃ©s.
                         </p>
 </details>
 </div>
@@ -241,14 +241,14 @@ const DetailsDuServicePlomberie = () => {
 <span className="text-xl font-bold">Plomberie Pro</span>
 </div>
 <p className="text-sm leading-relaxed">
-                        Votre partenaire de confiance pour tous vos besoins en plomberie. Rapidité, efficacité et transparence au meilleur prix.
+                        Votre partenaire de confiance pour tous vos besoins en plomberie. RapiditÃ©, efficacitÃ© et transparence au meilleur prix.
                     </p>
 </div>
 <div>
 <h5 className="text-white font-bold mb-6">Services</h5>
 <ul className="space-y-4 text-sm">
-<li><a className="hover:text-primary transition-colors" href="#">Réparation fuites</a></li>
-<li><a className="hover:text-primary transition-colors" href="#">Débouchage</a></li>
+<li><a className="hover:text-primary transition-colors" href="#">RÃ©paration fuites</a></li>
+<li><a className="hover:text-primary transition-colors" href="#">DÃ©bouchage</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Installation</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Entretien chauffe-eau</a></li>
 </ul>
@@ -258,8 +258,8 @@ const DetailsDuServicePlomberie = () => {
 <ul className="space-y-4 text-sm">
 <li><a className="hover:text-primary transition-colors" href="#">Aide &amp; FAQ</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Contact</a></li>
-<li><a className="hover:text-primary transition-colors" href="#">Conditions Générales</a></li>
-<li><a className="hover:text-primary transition-colors" href="#">Confidentialité</a></li>
+<li><a className="hover:text-primary transition-colors" href="#">Conditions GÃ©nÃ©rales</a></li>
+<li><a className="hover:text-primary transition-colors" href="#">ConfidentialitÃ©</a></li>
 </ul>
 </div>
 <div>
@@ -285,9 +285,9 @@ const DetailsDuServicePlomberie = () => {
 </div>
 </div>
 <div className="pt-8 border-t border-slate-800 text-xs text-center md:text-left flex flex-col md:flex-row justify-between gap-4">
-<span>© 2024 Plomberie Pro. Tous droits réservés.</span>
+<span>Â© 2024 Plomberie Pro. Tous droits rÃ©servÃ©s.</span>
 <div className="flex justify-center md:justify-end gap-6">
-<a href="#">Mentions légales</a>
+<a href="#">Mentions lÃ©gales</a>
 <a href="#">Cookies</a>
 </div>
 </div>
@@ -299,3 +299,4 @@ const DetailsDuServicePlomberie = () => {
 };
 
 export default DetailsDuServicePlomberie;
+

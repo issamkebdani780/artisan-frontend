@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import apiService from '../services/api';
 import ClientLayout from '../layouts/ClientLayout';
@@ -39,7 +39,7 @@ const ClientInbox = () => {
   };
 
   const handleDelete = async (devisId) => {
-    if (!window.confirm('Supprimer cette demande définitivement ?')) return;
+    if (!window.confirm('Supprimer cette demande dÃ©finitivement ?')) return;
     try {
       await apiService.deleteDevis(devisId);
       setBookings(prev => prev.filter(d => d.id !== devisId));
@@ -64,7 +64,7 @@ const ClientInbox = () => {
         setReviewedIds(prev => new Set([...prev, reviewModal.artisanId]));
         setReviewModal(null);
         setReviewForm({ rating: 0, comment: '' });
-        alert('⭐ Merci pour votre avis !');
+        alert('â­ Merci pour votre avis !');
       }
     } catch (err) {
       alert(`Erreur lors de l'envoi: ${err.message}`);
@@ -76,9 +76,9 @@ const ClientInbox = () => {
   const getStatusStyle = (status) => {
     switch(status) {
       case 'en attente': return 'bg-amber-50 text-amber-600 border-amber-100';
-      case 'accepté': return 'bg-indigo-50 text-indigo-600 border-indigo-100';
-      case 'refusé': return 'bg-red-50 text-red-600 border-red-100';
-      case 'terminé': return 'bg-emerald-50 text-emerald-600 border-emerald-100';
+      case 'acceptÃ©': return 'bg-indigo-50 text-indigo-600 border-indigo-100';
+      case 'refusÃ©': return 'bg-red-50 text-red-600 border-red-100';
+      case 'terminÃ©': return 'bg-emerald-50 text-emerald-600 border-emerald-100';
       default: return 'bg-slate-50 text-slate-600 border-slate-100';
     }
   };
@@ -90,7 +90,7 @@ const ClientInbox = () => {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-12">
           <div>
             <h2 className="text-4xl font-black text-slate-900 uppercase tracking-tight">Mes Demandes</h2>
-            <p className="text-slate-500 mt-2 font-bold uppercase tracking-widest text-xs">Suivez l'état de vos projets en temps réel</p>
+            <p className="text-slate-500 mt-2 font-bold uppercase tracking-widest text-xs">Suivez l'Ã©tat de vos projets en temps rÃ©el</p>
           </div>
         </div>
 
@@ -104,7 +104,7 @@ const ClientInbox = () => {
             <div className="size-20 bg-slate-50 rounded-full flex items-center justify-center text-slate-300 mb-8">
               <span className="material-symbols-outlined text-4xl">inventory_2</span>
             </div>
-            <h3 className="text-2xl font-black text-slate-900 uppercase tracking-tight mb-2">Aucune demande trouvée</h3>
+            <h3 className="text-2xl font-black text-slate-900 uppercase tracking-tight mb-2">Aucune demande trouvÃ©e</h3>
             <p className="text-slate-500 font-bold uppercase tracking-widest text-[10px] max-w-xs mx-auto mb-10 leading-relaxed text-center">Vous n'avez pas encore de demandes de devis actives sur la plateforme.</p>
             <button 
               onClick={() => navigate('/search')}
@@ -116,7 +116,7 @@ const ClientInbox = () => {
         ) : (
           <div className="grid grid-cols-1 gap-8">
             {bookings.map(devis => {
-              const displayStatus = (!devis.artisan_id && (devis.status === 'accepté' || devis.status === 'confirmed')) ? 'en attente' : devis.status;
+              const displayStatus = (!devis.artisan_id && (devis.status === 'acceptÃ©' || devis.status === 'confirmed')) ? 'en attente' : devis.status;
               return (
               <div key={devis.id} className="bg-white rounded-[40px] border border-slate-100 p-8 md:p-10 shadow-2xl shadow-slate-200/40 hover:shadow-primary/5 transition-all group overflow-hidden relative">
                 <div className="absolute right-0 top-0 w-32 h-full bg-slate-50/30 -skew-x-12 translate-x-16 group-hover:translate-x-12 transition-transform duration-700"></div>
@@ -130,7 +130,7 @@ const ClientInbox = () => {
                       <div className="h-4 w-px bg-slate-200 hidden sm:block"></div>
                       <span className="text-slate-400 text-[10px] font-black uppercase tracking-widest flex items-center gap-2">
                         <span className="material-symbols-outlined text-sm">event</span>
-                        Créé le: {new Date(devis.createdAt || devis.date).toLocaleDateString()}
+                        CrÃ©Ã© le: {new Date(devis.createdAt || devis.date).toLocaleDateString()}
                       </span>
                     </div>
 
@@ -151,7 +151,7 @@ const ClientInbox = () => {
                         <div>
                           <p className="text-[10px] text-slate-400 font-black uppercase tracking-widest mb-1">Artisan</p>
                           <p className={`text-sm font-black uppercase tracking-tight ${devis.artisan_name ? 'text-slate-900' : 'text-amber-600'}`}>
-                            {devis.artisan_name || "En sélection..."}
+                            {devis.artisan_name || "En sÃ©lection..."}
                           </p>
                         </div>
                       </div>
@@ -160,7 +160,7 @@ const ClientInbox = () => {
                           <span className="material-symbols-outlined font-black">payments</span>
                         </div>
                         <div>
-                          <p className="text-[10px] text-slate-400 font-black uppercase tracking-widest mb-1">Budget Prévu</p>
+                          <p className="text-[10px] text-slate-400 font-black uppercase tracking-widest mb-1">Budget PrÃ©vu</p>
                           <p className="text-lg font-black text-slate-900 tracking-tight">{devis.budget} <span className="text-xs ml-1">DA</span></p>
                         </div>
                       </div>
@@ -168,7 +168,7 @@ const ClientInbox = () => {
                   </div>
 
                   <div className="flex flex-row lg:flex-col justify-end gap-4 min-w-[240px] pt-8 lg:pt-0 border-t lg:border-t-0 lg:border-l border-slate-50 lg:pl-10">
-                     {devis.status === 'accepté' && devis.artisan_id && (
+                     {devis.status === 'acceptÃ©' && devis.artisan_id && (
                         <button
                           onClick={() => {
                             setSelectedProject({
@@ -183,7 +183,7 @@ const ClientInbox = () => {
                           className="flex-1 lg:flex-none h-14 px-8 bg-indigo-600 text-white rounded-2xl font-black text-[10px] uppercase tracking-widest shadow-xl shadow-indigo-600/20 hover:bg-indigo-700 transition-all flex items-center justify-center gap-3 active:scale-95"
                         >
                           <span className="material-symbols-outlined text-sm font-black">payments</span>
-                          Débloquer le paiement
+                          DÃ©bloquer le paiement
                         </button>
                      )}
                     <button 
@@ -198,7 +198,7 @@ const ClientInbox = () => {
                        <span className="material-symbols-outlined text-sm font-black">message</span>
                        Messages
                     </button>
-                    {(devis.status === 'accepté' || devis.status === 'terminé') && devis.artisan_id && !reviewedIds.has(devis.artisan_id) && (
+                    {(devis.status === 'acceptÃ©' || devis.status === 'terminÃ©') && devis.artisan_id && !reviewedIds.has(devis.artisan_id) && (
                       <button
                         onClick={() => setReviewModal({ artisanId: devis.artisan_id, artisanName: devis.artisan_name })}
                         className="flex-1 lg:flex-none h-14 px-8 bg-amber-50 border border-amber-100 text-amber-600 rounded-2xl font-black text-[10px] uppercase tracking-widest hover:bg-amber-100 transition-all active:scale-95 flex items-center justify-center gap-3"
@@ -230,7 +230,7 @@ const ClientInbox = () => {
             <div className="flex justify-between items-center mb-8">
               <div>
                 <p className="text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-2">Artisan: {reviewModal.artisanName}</p>
-                <h3 className="text-3xl font-black text-slate-900 uppercase tracking-tight">Rédiger un avis</h3>
+                <h3 className="text-3xl font-black text-slate-900 uppercase tracking-tight">RÃ©diger un avis</h3>
               </div>
               <button onClick={() => setReviewModal(null)} className="size-12 rounded-2xl bg-slate-50 flex items-center justify-center text-slate-400 hover:text-red-500 transition-all active:scale-90 shadow-sm border border-slate-100">
                 <span className="material-symbols-outlined">close</span>
@@ -249,13 +249,13 @@ const ClientInbox = () => {
                         star <= reviewForm.rating ? 'text-amber-400 drop-shadow-md scale-110' : 'text-slate-200'
                       }`}
                     >
-                      {star <= reviewForm.rating ? '★' : '☆'}
+                      {star <= reviewForm.rating ? 'â˜…' : 'â˜†'}
                     </button>
                   ))}
                 </div>
                 {reviewForm.rating > 0 && (
                   <p className="text-[10px] font-black text-amber-600 uppercase tracking-widest mt-6 text-center bg-white px-4 py-2 rounded-full border border-amber-100 shadow-sm w-fit mx-auto">
-                    {['', 'Insatisfaisant', 'Moyen', 'Satisfaisant', 'Très Satisfaisant', 'Exceptionnel !'][reviewForm.rating]}
+                    {['', 'Insatisfaisant', 'Moyen', 'Satisfaisant', 'TrÃ¨s Satisfaisant', 'Exceptionnel !'][reviewForm.rating]}
                   </p>
                 )}
               </div>
@@ -264,7 +264,7 @@ const ClientInbox = () => {
                 <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-4">Votre commentaire</label>
                 <textarea
                   rows={4}
-                  placeholder="Partagez votre expérience avec cet artisan..."
+                  placeholder="Partagez votre expÃ©rience avec cet artisan..."
                   value={reviewForm.comment}
                   onChange={e => setReviewForm(f => ({ ...f, comment: e.target.value }))}
                   className="w-full rounded-[32px] bg-slate-50 border border-slate-100 p-8 text-slate-900 focus:bg-white focus:border-primary outline-none resize-none transition-all font-medium text-sm leading-relaxed"
@@ -312,3 +312,4 @@ const ClientInbox = () => {
 };
 
 export default ClientInbox;
+

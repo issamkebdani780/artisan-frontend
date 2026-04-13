@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 
 const JardinageNouveau = () => {
   return (
@@ -36,12 +36,12 @@ const JardinageNouveau = () => {
 </a>
 <a className="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-100 transition-colors" href="#">
 <span className="material-symbols-outlined">settings</span>
-<span className="text-sm font-medium">Paramètres</span>
+<span className="text-sm font-medium">ParamÃ¨tres</span>
 </a>
 </nav>
 <button className="mt-auto w-full bg-primary hover:bg-primary/90 text-white rounded-lg py-3 px-4 text-sm font-bold transition-all shadow-sm flex items-center justify-center gap-2">
 <span className="material-symbols-outlined text-sm">add_circle</span>
-                Réserver un expert
+                RÃ©server un expert
             </button>
 </div>
 </aside>
@@ -57,7 +57,7 @@ const JardinageNouveau = () => {
 <nav className="flex items-center gap-6">
 <a className="text-slate-900 text-sm font-semibold border-b-2 border-primary pb-1" href="#">Services</a>
 <a className="text-slate-500 hover:text-primary text-sm font-medium transition-colors" href="#">Tarifs</a>
-<a className="text-slate-500 hover:text-primary text-sm font-medium transition-colors" href="#">Réalisations</a>
+<a className="text-slate-500 hover:text-primary text-sm font-medium transition-colors" href="#">RÃ©alisations</a>
 <a className="text-slate-500 hover:text-primary text-sm font-medium transition-colors" href="#">Aide</a>
 </nav>
 </div>
@@ -84,9 +84,9 @@ const JardinageNouveau = () => {
 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent z-10"></div>
 <img alt="Hero background" className="absolute inset-0 w-full h-full object-cover" data-alt="Beau jardin entretenu avec pelouse verte et fleurs" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAF5es-Z9F-7CRPnmfhf_gZjmf94MY6VkhNVldRSggvsQ-3n5mNfJwa5rdnbZEvxf3zHBgZQjciO1VgYsvb_yqdBFyA2FjumdbvIGwb6LfFikNRPPV8R15DdufwNupzwx4GQ-JYxkaB0EpTxL4l018LnMNksFZBm6MGJmUxYhnRHIOtFqzkZOR0dwC7WvW-mUYKJjmYKaKICU0HYmeyZPZphMXf1ONq4aoMkTPAcu1D-2TwHRnh8pkDr6TMdszgNzKaJw897VzcVgiW"/>
 <div className="relative z-20 max-w-2xl">
-<h2 className="text-4xl lg:text-5xl font-extrabold text-white mb-4 leading-tight">Donnez vie à vos espaces extérieurs</h2>
+<h2 className="text-4xl lg:text-5xl font-extrabold text-white mb-4 leading-tight">Donnez vie Ã  vos espaces extÃ©rieurs</h2>
 <p className="text-slate-200 text-lg mb-8 leading-relaxed">
-                        Que ce soit pour un entretien régulier ou une transformation complète, nos experts paysagistes s'occupent de tout pour faire rayonner votre jardin.
+                        Que ce soit pour un entretien rÃ©gulier ou une transformation complÃ¨te, nos experts paysagistes s'occupent de tout pour faire rayonner votre jardin.
                     </p>
 <div className="flex flex-wrap gap-4">
 <button className="bg-primary text-white px-8 py-3 rounded-xl font-bold hover:bg-primary/90 transition-all flex items-center gap-2">
@@ -103,7 +103,7 @@ const JardinageNouveau = () => {
 <section className="mb-16">
 <div className="mb-10 text-center max-w-2xl mx-auto">
 <h3 className="text-3xl font-bold mb-4">Nos solutions sur mesure</h3>
-<p className="text-slate-500">Une gamme complète de services pour répondre à tous les besoins de votre jardin, quelle que soit la saison.</p>
+<p className="text-slate-500">Une gamme complÃ¨te de services pour rÃ©pondre Ã  tous les besoins de votre jardin, quelle que soit la saison.</p>
 </div>
 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 <div className="group bg-white p-8 rounded-2xl border border-slate-200 hover:border-primary transition-all shadow-sm">
@@ -111,7 +111,7 @@ const JardinageNouveau = () => {
 <span className="material-symbols-outlined text-4xl">energy_savings_leaf</span>
 </div>
 <h4 className="text-xl font-bold mb-3">Entretien Courant</h4>
-<p className="text-slate-500 mb-6 text-sm leading-relaxed">Tonte de pelouse, désherbage des massifs, nettoyage des allées et évacuation des déchets verts.</p>
+<p className="text-slate-500 mb-6 text-sm leading-relaxed">Tonte de pelouse, dÃ©sherbage des massifs, nettoyage des allÃ©es et Ã©vacuation des dÃ©chets verts.</p>
 <a className="text-primary font-bold text-sm flex items-center gap-2 hover:gap-3 transition-all" href="#">
                             En savoir plus <span className="material-symbols-outlined text-sm">arrow_forward</span>
 </a>
@@ -120,8 +120,8 @@ const JardinageNouveau = () => {
 <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
 <span className="material-symbols-outlined text-4xl">content_cut</span>
 </div>
-<h4 className="text-xl font-bold mb-3">Taille &amp; Élague</h4>
-<p className="text-slate-500 mb-6 text-sm leading-relaxed">Taille de haies, d'arbustes décoratifs, d'arbres fruitiers et élagage sécurisé pour la santé de vos plantes.</p>
+<h4 className="text-xl font-bold mb-3">Taille &amp; Ã‰lague</h4>
+<p className="text-slate-500 mb-6 text-sm leading-relaxed">Taille de haies, d'arbustes dÃ©coratifs, d'arbres fruitiers et Ã©lagage sÃ©curisÃ© pour la santÃ© de vos plantes.</p>
 <a className="text-primary font-bold text-sm flex items-center gap-2 hover:gap-3 transition-all" href="#">
                             En savoir plus <span className="material-symbols-outlined text-sm">arrow_forward</span>
 </a>
@@ -131,7 +131,7 @@ const JardinageNouveau = () => {
 <span className="material-symbols-outlined text-4xl">landscape</span>
 </div>
 <h4 className="text-xl font-bold mb-3">Paysagisme</h4>
-<p className="text-slate-500 mb-6 text-sm leading-relaxed">Création de nouveaux espaces, plantation, pose de gazon en rouleau et aménagement de terrasses.</p>
+<p className="text-slate-500 mb-6 text-sm leading-relaxed">CrÃ©ation de nouveaux espaces, plantation, pose de gazon en rouleau et amÃ©nagement de terrasses.</p>
 <a className="text-primary font-bold text-sm flex items-center gap-2 hover:gap-3 transition-all" href="#">
                             En savoir plus <span className="material-symbols-outlined text-sm">arrow_forward</span>
 </a>
@@ -144,7 +144,7 @@ const JardinageNouveau = () => {
 <div className="flex flex-col md:flex-row justify-between items-end mb-10 gap-4">
 <div className="max-w-lg">
 <h3 className="text-3xl font-bold mb-4">Des tarifs transparents</h3>
-<p className="text-slate-500">Choisissez la formule qui convient le mieux à vos besoins et à votre budget.</p>
+<p className="text-slate-500">Choisissez la formule qui convient le mieux Ã  vos besoins et Ã  votre budget.</p>
 </div>
 <div className="flex bg-white p-1 rounded-lg border border-slate-200">
 <button className="px-4 py-2 rounded-md bg-primary text-white text-sm font-bold">Ponctuel</button>
@@ -156,13 +156,13 @@ const JardinageNouveau = () => {
 <div className="bg-white rounded-2xl p-8 border border-slate-200 flex flex-col">
 <span className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Essentiel</span>
 <div className="flex items-baseline gap-1 mb-6">
-<span className="text-4xl font-black">45€</span>
+<span className="text-4xl font-black">45â‚¬</span>
 <span className="text-slate-500 text-sm">/heure</span>
 </div>
 <ul className="space-y-4 mb-8 flex-1">
 <li className="flex items-center gap-3 text-sm">
 <span className="material-symbols-outlined text-primary text-xl">check_circle</span>
-                                    Tonte de pelouse (-100m²)
+                                    Tonte de pelouse (-100mÂ²)
                                 </li>
 <li className="flex items-center gap-3 text-sm text-slate-400 line-through">
 <span className="material-symbols-outlined text-slate-300 text-xl">cancel</span>
@@ -170,7 +170,7 @@ const JardinageNouveau = () => {
                                 </li>
 <li className="flex items-center gap-3 text-sm">
 <span className="material-symbols-outlined text-primary text-xl">check_circle</span>
-                                    Désherbage manuel
+                                    DÃ©sherbage manuel
                                 </li>
 </ul>
 <button className="w-full py-3 border border-primary text-primary font-bold rounded-xl hover:bg-primary/5 transition-colors">Choisir ce pack</button>
@@ -180,7 +180,7 @@ const JardinageNouveau = () => {
 <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-white text-xs font-bold py-1 px-4 rounded-full uppercase tracking-widest">Le plus populaire</div>
 <span className="text-xs font-bold text-primary uppercase tracking-widest mb-2">Complet</span>
 <div className="flex items-baseline gap-1 mb-6">
-<span className="text-4xl font-black">120€</span>
+<span className="text-4xl font-black">120â‚¬</span>
 <span className="text-slate-500 text-sm">/forfait</span>
 </div>
 <ul className="space-y-4 mb-8 flex-1">
@@ -190,11 +190,11 @@ const JardinageNouveau = () => {
                                 </li>
 <li className="flex items-center gap-3 text-sm">
 <span className="material-symbols-outlined text-primary text-xl">check_circle</span>
-                                    Taille de haies jusqu'à 2m
+                                    Taille de haies jusqu'Ã  2m
                                 </li>
 <li className="flex items-center gap-3 text-sm">
 <span className="material-symbols-outlined text-primary text-xl">check_circle</span>
-                                    Évacuation des déchets
+                                    Ã‰vacuation des dÃ©chets
                                 </li>
 </ul>
 <button className="w-full py-3 bg-primary text-white font-bold rounded-xl hover:bg-primary/90 transition-colors shadow-lg">Choisir ce pack</button>
@@ -212,11 +212,11 @@ const JardinageNouveau = () => {
                                 </li>
 <li className="flex items-center gap-3 text-sm">
 <span className="material-symbols-outlined text-primary text-xl">check_circle</span>
-                                    Élagage grands arbres
+                                    Ã‰lagage grands arbres
                                 </li>
 <li className="flex items-center gap-3 text-sm">
 <span className="material-symbols-outlined text-primary text-xl">check_circle</span>
-                                    Systèmes d'arrosage auto
+                                    SystÃ¨mes d'arrosage auto
                                 </li>
 </ul>
 <button className="w-full py-3 border border-slate-300 text-slate-700 font-bold rounded-xl hover:bg-slate-50 transition-colors">Demander un devis</button>
@@ -227,7 +227,7 @@ const JardinageNouveau = () => {
 {/*  Experts Nearby  */}
 <section className="mb-16">
 <div className="flex items-center justify-between mb-8">
-<h3 className="text-2xl font-bold">Experts à proximité de chez vous</h3>
+<h3 className="text-2xl font-bold">Experts Ã  proximitÃ© de chez vous</h3>
 <a className="text-primary font-semibold text-sm hover:underline" href="#">Voir tout (24)</a>
 </div>
 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -236,7 +236,7 @@ const JardinageNouveau = () => {
 <img alt="Expert" className="w-full h-full object-cover rounded-full" data-alt="Portrait d'un jardinier professionnel souriant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0qoo0pwlOyBl5kP2lEOVbLvo3nsgkKefes-q_5y0YDAJwAfoFQn0KFBUHzUQXjy9K6KX17Y9SSuqn6FvyyXgbkPNLX4p0UiFt-78wPznT9e5AJPEVxTsBH-sbKtC2dNIR2WZoY_WdlcOyE6fM7J394T5IUyHA2lE1AL7CC9PR1Lw2a3r7NxO8aGhpOtny9my0MO0Q_E1tQtZxv8hN6O79LpFP89gsjvo8OHmAU0NlXmHH0OXn1Zf3-EcWsK1Y_PRvrmqZ-V_6IXQT"/>
 </div>
 <h5 className="font-bold text-slate-900">Julien Morel</h5>
-<p className="text-xs text-slate-500 mb-2">Paysagiste Diplômé</p>
+<p className="text-xs text-slate-500 mb-2">Paysagiste DiplÃ´mÃ©</p>
 <div className="flex items-center gap-1 mb-4">
 <span className="material-symbols-outlined text-yellow-500 text-sm">star</span>
 <span className="text-xs font-bold">4.9</span>
@@ -246,10 +246,10 @@ const JardinageNouveau = () => {
 </div>
 <div className="bg-white rounded-xl overflow-hidden border border-slate-200 p-4 flex flex-col items-center text-center group">
 <div className="w-20 h-20 rounded-full mb-4 ring-2 ring-primary/20 p-1">
-<img alt="Expert" className="w-full h-full object-cover rounded-full" data-alt="Portrait d'une jardinière professionnelle experte" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCX-LEx1Z2aDbeYGjJJ0PXld6XYOyVb25xhfnU7xLIOpHvKT_GkHZjFYuDPaWas_JypIEXlVsXd0M94blp_-6LG7OwgJzir0M9eXdYQHiWTdeT7RaRxBkCXCavdqivPgmjcweSMc1zrqMO8lK5RpfoLHZxmclyeVHQnnMcllVCuOGVD7kgxzbWudOyfuvGplX5hhu06eJue-b5VzHXFvcBHtT02n-Y8bhbiZlXPMCAUuqsBb6GcO9Wbg2AqNKLqLPkfarVZ9XDii5IX"/>
+<img alt="Expert" className="w-full h-full object-cover rounded-full" data-alt="Portrait d'une jardiniÃ¨re professionnelle experte" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCX-LEx1Z2aDbeYGjJJ0PXld6XYOyVb25xhfnU7xLIOpHvKT_GkHZjFYuDPaWas_JypIEXlVsXd0M94blp_-6LG7OwgJzir0M9eXdYQHiWTdeT7RaRxBkCXCavdqivPgmjcweSMc1zrqMO8lK5RpfoLHZxmclyeVHQnnMcllVCuOGVD7kgxzbWudOyfuvGplX5hhu06eJue-b5VzHXFvcBHtT02n-Y8bhbiZlXPMCAUuqsBb6GcO9Wbg2AqNKLqLPkfarVZ9XDii5IX"/>
 </div>
 <h5 className="font-bold text-slate-900">Sarah Lefebvre</h5>
-<p className="text-xs text-slate-500 mb-2">Spécialiste Taille &amp; Haies</p>
+<p className="text-xs text-slate-500 mb-2">SpÃ©cialiste Taille &amp; Haies</p>
 <div className="flex items-center gap-1 mb-4">
 <span className="material-symbols-outlined text-yellow-500 text-sm">star</span>
 <span className="text-xs font-bold">4.8</span>
@@ -259,10 +259,10 @@ const JardinageNouveau = () => {
 </div>
 <div className="bg-white rounded-xl overflow-hidden border border-slate-200 p-4 flex flex-col items-center text-center group">
 <div className="w-20 h-20 rounded-full mb-4 ring-2 ring-primary/20 p-1">
-<img alt="Expert" className="w-full h-full object-cover rounded-full" data-alt="Portrait d'un élagueur professionnel" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmUhJexNRy8ajaSZDLvkl42XV18scRhtaNBcpGi57RQK4bOh1rEIniUwmKF-Te9qlO75fANrYVyvMhQH-REF9zfNhxe4kz_LcgcuN3wmUnLONhEkQLfLF8Ue71tvL8PjE7G-i3eVhcwYnO0iCYEEX1yg-HGym8hWei2zBdm8jTwiby2G2AX47ud8R_VRVO4g6W3kQO742YCLf31CkHdBKGJwo0vIvbly32z2L1SoRIDmLYBFdEiMUw-okJV1AMk_CnfAYF2XHbpfi1"/>
+<img alt="Expert" className="w-full h-full object-cover rounded-full" data-alt="Portrait d'un Ã©lagueur professionnel" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmUhJexNRy8ajaSZDLvkl42XV18scRhtaNBcpGi57RQK4bOh1rEIniUwmKF-Te9qlO75fANrYVyvMhQH-REF9zfNhxe4kz_LcgcuN3wmUnLONhEkQLfLF8Ue71tvL8PjE7G-i3eVhcwYnO0iCYEEX1yg-HGym8hWei2zBdm8jTwiby2G2AX47ud8R_VRVO4g6W3kQO742YCLf31CkHdBKGJwo0vIvbly32z2L1SoRIDmLYBFdEiMUw-okJV1AMk_CnfAYF2XHbpfi1"/>
 </div>
 <h5 className="font-bold text-slate-900">Marc Dubois</h5>
-<p className="text-xs text-slate-500 mb-2">Élagueur Certifié</p>
+<p className="text-xs text-slate-500 mb-2">Ã‰lagueur CertifiÃ©</p>
 <div className="flex items-center gap-1 mb-4">
 <span className="material-symbols-outlined text-yellow-500 text-sm">star</span>
 <span className="text-xs font-bold">5.0</span>
@@ -274,8 +274,8 @@ const JardinageNouveau = () => {
 <div className="w-20 h-20 rounded-full mb-4 ring-2 ring-primary/20 p-1">
 <img alt="Expert" className="w-full h-full object-cover rounded-full" data-alt="Portrait d'une architecte paysagiste" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_x9qc2tjzhTKl9XzPz3sinQ1rORzHXlDpH5BASu-22c0iVN1s8Yz03ESct2XW1dSZ6qsGucyMi8vWlLJVOW4SUnsxhKYn_jhiwD9Q4hUsv9-dODPXrWigTbiRC2cZCK5KTo1MkXoMBLLE0RI1BL_EeOIQIjAn0dg2PSUzsFp_1fOQ_RYaNV6trI-q0UlhrQ9tTVDy1AkUBqCA4bZSA2EZt4iZmhSLjUdrfLo4QDQmvdeJydeyGG9YA8zHPOfmn6sWsio7qrcF0gx5"/>
 </div>
-<h5 className="font-bold text-slate-900">Amélie Petit</h5>
-<p className="text-xs text-slate-500 mb-2">Architecte Extérieur</p>
+<h5 className="font-bold text-slate-900">AmÃ©lie Petit</h5>
+<p className="text-xs text-slate-500 mb-2">Architecte ExtÃ©rieur</p>
 <div className="flex items-center gap-1 mb-4">
 <span className="material-symbols-outlined text-yellow-500 text-sm">star</span>
 <span className="text-xs font-bold">4.7</span>
@@ -287,7 +287,7 @@ const JardinageNouveau = () => {
 </section>
 {/*  FAQ Section  */}
 <section className="max-w-3xl mx-auto mb-16">
-<h3 className="text-2xl font-bold mb-8 text-center">Questions fréquentes</h3>
+<h3 className="text-2xl font-bold mb-8 text-center">Questions frÃ©quentes</h3>
 <div className="space-y-4">
 <div className="bg-white border border-slate-200 rounded-xl p-6">
 <div className="flex items-center justify-between cursor-pointer">
@@ -295,24 +295,24 @@ const JardinageNouveau = () => {
 <span className="material-symbols-outlined text-slate-400">expand_more</span>
 </div>
 <p className="mt-4 text-sm text-slate-500 leading-relaxed">
-                            Pour des raisons de sécurité et pour ne pas dégrader votre terrain, nous reportons les interventions en cas de fortes pluies. Une nouvelle date est fixée sans frais supplémentaires.
+                            Pour des raisons de sÃ©curitÃ© et pour ne pas dÃ©grader votre terrain, nous reportons les interventions en cas de fortes pluies. Une nouvelle date est fixÃ©e sans frais supplÃ©mentaires.
                         </p>
 </div>
 <div className="bg-white border border-slate-200 rounded-xl p-6">
 <div className="flex items-center justify-between cursor-pointer">
-<h6 className="font-bold text-slate-900">Proposez-vous le crédit d'impôt ?</h6>
+<h6 className="font-bold text-slate-900">Proposez-vous le crÃ©dit d'impÃ´t ?</h6>
 <span className="material-symbols-outlined text-slate-400">expand_more</span>
 </div>
 </div>
 <div className="bg-white border border-slate-200 rounded-xl p-6">
 <div className="flex items-center justify-between cursor-pointer">
-<h6 className="font-bold text-slate-900">Faut-il être présent lors de l'intervention ?</h6>
+<h6 className="font-bold text-slate-900">Faut-il Ãªtre prÃ©sent lors de l'intervention ?</h6>
 <span className="material-symbols-outlined text-slate-400">expand_more</span>
 </div>
 </div>
 <div className="bg-white border border-slate-200 rounded-xl p-6">
 <div className="flex items-center justify-between cursor-pointer">
-<h6 className="font-bold text-slate-900">Évacuez-vous les déchets verts ?</h6>
+<h6 className="font-bold text-slate-900">Ã‰vacuez-vous les dÃ©chets verts ?</h6>
 <span className="material-symbols-outlined text-slate-400">expand_more</span>
 </div>
 </div>
@@ -329,7 +329,7 @@ const JardinageNouveau = () => {
 <span className="text-xl font-bold">Mon Jardin Pro</span>
 </div>
 <div className="flex gap-8 text-sm text-slate-500">
-<a className="hover:text-primary transition-colors" href="#">Politique de confidentialité</a>
+<a className="hover:text-primary transition-colors" href="#">Politique de confidentialitÃ©</a>
 <a className="hover:text-primary transition-colors" href="#">CGV</a>
 <a className="hover:text-primary transition-colors" href="#">Contact</a>
 </div>
@@ -343,7 +343,7 @@ const JardinageNouveau = () => {
 </div>
 </div>
 <div className="mt-8 text-center text-slate-400 text-xs">
-                © 2024 Mon Jardin Service Professionnel. Tous droits réservés.
+                Â© 2024 Mon Jardin Service Professionnel. Tous droits rÃ©servÃ©s.
             </div>
 </footer>
 </main>
@@ -354,3 +354,4 @@ const JardinageNouveau = () => {
 };
 
 export default JardinageNouveau;
+

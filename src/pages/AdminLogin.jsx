@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import apiService from '../services/api';
 
@@ -20,7 +20,7 @@ const AdminLogin = () => {
       if (response.token) {
         navigate('/dashboard/admin');
       } else {
-        setError(response.error || 'Accès refusé. Réservé aux administrateurs.');
+        setError(response.error || 'AccÃ¨s refusÃ©. RÃ©servÃ© aux administrateurs.');
       }
     } catch (err) {
       setError(err.message || 'Une erreur est survenue lors de la connexion');
@@ -50,15 +50,15 @@ const AdminLogin = () => {
                 <span className="material-symbols-outlined text-3xl font-black">diamond</span>
               </div>
               <h1 className="text-3xl font-black tracking-tighter leading-none mb-4 uppercase">Bricolo<span className="text-secondary">Pro</span></h1>
-              <p className="text-blue-100 text-sm font-medium leading-relaxed opacity-80">Interface de gestion centralisée pour le futur de l'artisanat.</p>
+              <p className="text-blue-100 text-sm font-medium leading-relaxed opacity-80">Interface de gestion centralisÃ©e pour le futur de l'artisanat.</p>
             </div>
 
             <div className="relative z-10">
               <div className="p-4 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20">
-                <p className="text-[10px] font-black uppercase tracking-widest text-blue-200 mb-1">Status Système</p>
+                <p className="text-[10px] font-black uppercase tracking-widest text-blue-200 mb-1">Status SystÃ¨me</p>
                 <div className="flex items-center gap-2">
                    <div className="size-2 bg-emerald-400 rounded-full animate-pulse shadow-[0_0_8px_#34d399]"></div>
-                   <span className="text-xs font-bold">Systèmes opérationnels</span>
+                   <span className="text-xs font-bold">SystÃ¨mes opÃ©rationnels</span>
                 </div>
               </div>
             </div>
@@ -68,7 +68,7 @@ const AdminLogin = () => {
           <div className="flex-1 p-10 md:p-14 bg-white">
             <div className="mb-10 text-center md:text-left">
               <h2 className="text-3xl font-black text-slate-900 tracking-tight">Portail Admin</h2>
-              <p className="text-slate-400 font-medium text-sm mt-2">Accès sécurisé réservé aux administrateurs.</p>
+              <p className="text-slate-400 font-medium text-sm mt-2">AccÃ¨s sÃ©curisÃ© rÃ©servÃ© aux administrateurs.</p>
             </div>
 
             {error && (
@@ -96,7 +96,7 @@ const AdminLogin = () => {
               
               <div className="space-y-2 group">
                 <div className="flex justify-between items-center">
-                  <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1 group-focus-within:text-primary transition-colors">Clé de Sécurité</label>
+                  <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1 group-focus-within:text-primary transition-colors">ClÃ© de SÃ©curitÃ©</label>
                   <button type="button" onClick={() => setShowPass(!showPass)} className="text-[10px] font-black uppercase tracking-widest text-primary hover:underline">
                     {showPass ? 'Masquer' : 'Afficher'}
                   </button>
@@ -127,7 +127,7 @@ const AdminLogin = () => {
                     </>
                   ) : (
                     <>
-                      DÉVERROUILLER L'ACCÈS
+                      DÃ‰VERROUILLER L'ACCÃˆS
                       <span className="material-symbols-outlined text-sm">security</span>
                     </>
                   )}
@@ -146,7 +146,7 @@ const AdminLogin = () => {
         
         {/* Footer info */}
         <p className="mt-8 text-center text-slate-500 text-[9px] font-black uppercase tracking-[0.3em] opacity-50">
-          © 2026 BRICOLOPRO ADMINISTRATION • V.4.0.5 • SÉCURITÉ RENFORCÉE
+          Â© 2026 BRICOLOPRO ADMINISTRATION â€¢ V.4.0.5 â€¢ SÃ‰CURITÃ‰ RENFORCÃ‰E
         </p>
       </div>
     </div>
@@ -154,3 +154,4 @@ const AdminLogin = () => {
 };
 
 export default AdminLogin;
+

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import apiService from '../services/api';
 
@@ -38,7 +38,7 @@ const ForgotPassword = () => {
     setError('');
     try {
       await apiService.resetPassword(email, otp, newPassword);
-      setMessage('Mot de passe réinitialisé avec succès !');
+      setMessage('Mot de passe rÃ©initialisÃ© avec succÃ¨s !');
       setTimeout(() => navigate('/login/client'), 2000);
     } catch (err) {
       setError(err.message);
@@ -52,11 +52,11 @@ const ForgotPassword = () => {
       <div className="w-full max-w-xl">
         <div className="bg-white p-8 md:p-12 rounded-2xl shadow-xl border border-slate-100">
           <header className="mb-10 text-center">
-            <h2 className="text-3xl font-bold text-slate-900">Mot de passe oublié</h2>
+            <h2 className="text-3xl font-bold text-slate-900">Mot de passe oubliÃ©</h2>
             <p className="text-slate-500 mt-3">
               {step === 1 
-                ? "Entrez votre email pour recevoir un code de réinitialisation" 
-                : "Entrez le code reçu et votre nouveau mot de passe"}
+                ? "Entrez votre email pour recevoir un code de rÃ©initialisation" 
+                : "Entrez le code reÃ§u et votre nouveau mot de passe"}
             </p>
           </header>
 
@@ -101,7 +101,7 @@ const ForgotPassword = () => {
           ) : (
             <form onSubmit={handleResetPassword} className="space-y-6">
               <div className="space-y-2">
-                <label className="text-sm font-bold uppercase tracking-widest text-slate-500">Code de vérification (6 chiffres)</label>
+                <label className="text-sm font-bold uppercase tracking-widest text-slate-500">Code de vÃ©rification (6 chiffres)</label>
                 <input 
                   type="text" 
                   value={otp}
@@ -120,7 +120,7 @@ const ForgotPassword = () => {
                   onChange={(e) => setNewPassword(e.target.value)}
                   required
                   className="w-full bg-slate-100 border-2 border-transparent rounded-xl py-4 px-4 focus:bg-white focus:border-blue-500 transition-all outline-none"
-                  placeholder="••••••••"
+                  placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢"
                 />
               </div>
               <div className="space-y-2">
@@ -131,7 +131,7 @@ const ForgotPassword = () => {
                   onChange={(e) => setConfirmPassword(e.target.value)}
                   required
                   className="w-full bg-slate-100 border-2 border-transparent rounded-xl py-4 px-4 focus:bg-white focus:border-blue-500 transition-all outline-none"
-                  placeholder="••••••••"
+                  placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢"
                 />
               </div>
               <button 
@@ -139,14 +139,14 @@ const ForgotPassword = () => {
                 disabled={loading}
                 className="w-full bg-blue-600 text-white font-bold py-4 rounded-xl shadow-lg hover:bg-blue-700 transition-all"
               >
-                {loading ? 'Réinitialisation...' : 'Changer le mot de passe'}
+                {loading ? 'RÃ©initialisation...' : 'Changer le mot de passe'}
               </button>
             </form>
           )}
 
           <div className="mt-8 text-center">
             <Link to="/login/client" className="text-blue-600 font-bold hover:underline">
-              Retour à la connexion
+              Retour Ã  la connexion
             </Link>
           </div>
         </div>
@@ -156,3 +156,4 @@ const ForgotPassword = () => {
 };
 
 export default ForgotPassword;
+

@@ -54,13 +54,6 @@ const ArtisanLayout = ({ children, title = "Mihnati PRO", subtitle = "Premium Pl
               <div className="flex flex-col">
                 <h1 className="text-lg lg:text-xl font-black tracking-tighter flex items-center gap-1 uppercase truncate overflow-hidden text-slate-900">
                   {title}
-                  {Number(currentUser?.is_verified) === 1 ? (
-                    <span className="material-symbols-outlined text-secondary text-base" style={{ fontVariationSettings: "'FILL' 1" }}>verified</span>
-                  ) : Number(currentUser?.is_verified) === -1 ? (
-                    <span className="material-symbols-outlined text-red-500 text-base">error</span>
-                  ) : (
-                    <span className="material-symbols-outlined text-slate-300 text-base" title="En attente de vérification">hourglass_top</span>
-                  )}
                 </h1>
                 <p className={`${Number(currentUser?.is_verified) === 1 ? 'text-secondary' : Number(currentUser?.is_verified) === -1 ? 'text-red-500' : 'text-slate-400'} text-[10px] font-black uppercase tracking-widest truncate overflow-hidden`}>
                   {Number(currentUser?.is_verified) === 1 ? subtitle : Number(currentUser?.is_verified) === -1 ? 'Dossier Refusé' : 'En attente de vérification'}

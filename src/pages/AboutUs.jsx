@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import CtaSection from '../components/CtaSection';
 import logo from '../assets/logo.png';
 
@@ -22,7 +22,7 @@ const AboutUs = () => {
             </span>
           </h1>
           <p className="text-lg md:text-xl text-slate-500 max-w-3xl mx-auto leading-relaxed font-medium">
-            Mihnati est née d'une idée simple : trouver un artisan de confiance ne devrait pas être un parcours du combattant. Nous construisons le futur des services à domicile en Algérie.
+            Mihnati est nÃ©e d'une idÃ©e simple : trouver un artisan de confiance ne devrait pas Ãªtre un parcours du combattant. Nous construisons le futur des services Ã  domicile en AlgÃ©rie.
           </p>
         </div>
       </section>
@@ -52,9 +52,9 @@ const AboutUs = () => {
             <h2 className="text-3xl md:text-5xl font-black text-slate-900 tracking-tight uppercase">Une histoire de <br /><span className="text-primary italic">confiance</span></h2>
             <div className="space-y-6">
               {[
-                { icon: 'verified_user', title: 'Qualité Garantie', desc: "Nous vérifions rigoureusement chaque artisan avant qu'il ne rejoigne notre plateforme.", bg: 'bg-orange-50', color: 'text-orange-600' },
-                { icon: 'security', title: 'Paiement Sécurisé', desc: "Les fonds sont bloqués et ne sont libérés qu'après validation de la fin des travaux.", bg: 'bg-blue-50', color: 'text-blue-600' },
-                { icon: 'support_agent', title: 'Support 24/7', desc: "Notre équipe de support est là pour vous accompagner à chaque étape de votre projet.", bg: 'bg-indigo-50', color: 'text-indigo-600' }
+                { icon: 'verified_user', title: 'QualitÃ© Garantie', desc: "Nous vÃ©rifions rigoureusement chaque artisan avant qu'il ne rejoigne notre plateforme.", bg: 'bg-orange-50', color: 'text-orange-600' },
+                { icon: 'security', title: 'Paiement SÃ©curisÃ©', desc: "Les fonds sont bloquÃ©s et ne sont libÃ©rÃ©s qu'aprÃ¨s validation de la fin des travaux.", bg: 'bg-blue-50', color: 'text-blue-600' },
+                { icon: 'support_agent', title: 'Support 24/7', desc: "Notre Ã©quipe de support est lÃ  pour vous accompagner Ã  chaque Ã©tape de votre projet.", bg: 'bg-indigo-50', color: 'text-indigo-600' }
               ].map((item, i) => (
                 <div key={i} className="flex gap-6 p-6 rounded-[32px] bg-white border border-slate-100 hover:border-primary/20 hover:shadow-xl transition-all group">
                   <div className={`size-14 shrink-0 rounded-2xl ${item.bg} ${item.color} flex items-center justify-center group-hover:rotate-6 transition-transform shadow-sm`}>
@@ -74,18 +74,18 @@ const AboutUs = () => {
       {/* Developers Section */}
       <section className="py-24 px-6 md:px-20 bg-slate-50 transition-colors">
         <div className="max-w-7xl mx-auto text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-black text-slate-900 mb-6 uppercase">L'équipe de développement</h2>
-          <p className="text-slate-500 max-w-2xl mx-auto font-bold">Les esprits créatifs derrière la plateforme Mihnati.</p>
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 mb-6 uppercase">L'Ã©quipe de dÃ©veloppement</h2>
+          <p className="text-slate-500 max-w-2xl mx-auto font-bold">Les esprits crÃ©atifs derriÃ¨re la plateforme Mihnati.</p>
         </div>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto font-['Outfit',sans-serif]">
           {[
-            { name: "Abderrahmane Bachani", email: "abderrahmanebachani@gmail.com", role: "Développeur" },
-            { name: "Mohammed Mokhtari", email: "mokhtari555mohammed@gmail.com", role: "Développeur" },
-            { name: "Mustapha Fassih", email: "mustaphafassih17@gmail.com", role: "Développeur" },
-            { name: "Wanis Riahi", email: "wanisriahi@gmail.com", role: "Développeur" },
-            { name: "Mounaim Saidi", email: "mounaimsaidi40@gmail.com", role: "Développeur" },
-            { name: "Abdelatif Sahnouni", email: "sahnouniabdelatif5@gmail.com", role: "Développeur" }
+            { name: "Abderrahmane Bachani", email: "abderrahmanebachani@gmail.com", role: "DÃ©veloppeur" },
+            { name: "Mohammed Mokhtari", email: "mokhtari555mohammed@gmail.com", role: "DÃ©veloppeur" },
+            { name: "Mustapha Fassih", email: "mustaphafassih17@gmail.com", role: "DÃ©veloppeur" },
+            { name: "Wanis Riahi", email: "wanisriahi@gmail.com", role: "DÃ©veloppeur" },
+            { name: "Mounaim Saidi", email: "mounaimsaidi40@gmail.com", role: "DÃ©veloppeur" },
+            { name: "Abdelatif Sahnouni", email: "sahnouniabdelatif5@gmail.com", role: "DÃ©veloppeur" }
           ].map((dev, i) => (
             <div key={i} className="group flex flex-col items-center p-8 rounded-[40px] bg-white border border-slate-100 hover:border-primary/20 hover:shadow-2xl transition-all duration-300">
               <div className="size-20 rounded-2xl bg-slate-50 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform shadow-sm">
@@ -105,14 +105,14 @@ const AboutUs = () => {
       <section className="py-24 px-6 md:px-20 bg-white transition-colors">
         <div className="max-w-7xl mx-auto text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-black text-slate-900 mb-6 uppercase">Nos Valeurs</h2>
-          <p className="text-slate-500 max-w-2xl mx-auto font-bold uppercase tracking-tight text-sm">Ce qui nous guide au quotidien pour vous offrir la meilleure expérience possible.</p>
+          <p className="text-slate-500 max-w-2xl mx-auto font-bold uppercase tracking-tight text-sm">Ce qui nous guide au quotidien pour vous offrir la meilleure expÃ©rience possible.</p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {[
-            { title: "Transparence", desc: "Pas de frais cachés, des prix clairs et des avis honnêtes pour chaque artisan.", icon: "visibility", color: "text-indigo-600" },
+            { title: "Transparence", desc: "Pas de frais cachÃ©s, des prix clairs et des avis honnÃªtes pour chaque artisan.", icon: "visibility", color: "text-indigo-600" },
             { title: "Excellence", desc: "Nous visons l'excellence dans chaque interaction, du clic sur le site au coup de marteau.", icon: "star_rate", color: "text-amber-500" },
-            { title: "Proximité", desc: "Nous favorisons l'économie locale en mettant en avant les artisans de votre quartier.", icon: "location_home", color: "text-emerald-600" }
+            { title: "ProximitÃ©", desc: "Nous favorisons l'Ã©conomie locale en mettant en avant les artisans de votre quartier.", icon: "location_home", color: "text-emerald-600" }
           ].map((val, i) => (
             <div key={i} className="p-12 rounded-[50px] bg-slate-50 border border-slate-100 hover:bg-white hover:shadow-2xl hover:shadow-slate-200/50 transition-all group">
               <div className={`size-20 rounded-3xl bg-white shadow-xl flex items-center justify-center ${val.color} mb-8 group-hover:scale-110 transition-transform`}>
@@ -131,3 +131,4 @@ const AboutUs = () => {
 };
 
 export default AboutUs;
+

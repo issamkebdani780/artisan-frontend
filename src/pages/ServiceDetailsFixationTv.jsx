@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 
 const ServiceDetailsFixationTv = () => {
   return (
@@ -47,7 +47,7 @@ const ServiceDetailsFixationTv = () => {
 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent"></div>
 <div className="relative p-8 w-full max-w-2xl">
 <h2 className="text-white text-4xl md:text-5xl font-black leading-tight mb-3">Fixation TV &amp; Montage</h2>
-<p className="text-slate-200 text-lg">Safe, secure, and perfectly leveled TV mounting starting from 35€/h.</p>
+<p className="text-slate-200 text-lg">Safe, secure, and perfectly leveled TV mounting starting from 35â‚¬/h.</p>
 </div>
 <div className="absolute bottom-8 right-8 hidden lg:block">
 <button className="bg-white text-slate-900 px-8 py-3 rounded-lg font-bold shadow-xl hover:bg-primary hover:text-white transition-all">Book Service Now</button>
@@ -61,7 +61,7 @@ const ServiceDetailsFixationTv = () => {
 </div>
 <div>
 <p className="text-sm text-slate-500">Starting Price</p>
-<p className="text-2xl font-bold">~35€/h</p>
+<p className="text-2xl font-bold">~35â‚¬/h</p>
 </div>
 </div>
 <div className="bg-white p-6 rounded-xl border border-slate-200 flex items-center gap-4">
@@ -143,7 +143,7 @@ const ServiceDetailsFixationTv = () => {
 <p className="text-sm text-slate-500">Drilling &amp; Mounting Specialist</p>
 </div>
 <div className="text-right">
-<p className="text-lg font-black text-primary">38€/h</p>
+<p className="text-lg font-black text-primary">38â‚¬/h</p>
 </div>
 </div>
 <p className="text-sm text-slate-600 mb-4 italic">"Expert in all types of walls (drywall, stone, brick). I bring my own high-powered drills and a level for a perfect finish."</p>
@@ -177,7 +177,7 @@ const ServiceDetailsFixationTv = () => {
 <p className="text-sm text-slate-500">TV &amp; Home Audio Setup</p>
 </div>
 <div className="text-right">
-<p className="text-lg font-black text-primary">35€/h</p>
+<p className="text-lg font-black text-primary">35â‚¬/h</p>
 </div>
 </div>
 <p className="text-sm text-slate-600 mb-4 italic">"I specialize in clean, minimal setups. Whether it's a 32" or 85" screen, I ensure total safety and a professional look."</p>
@@ -206,7 +206,7 @@ const ServiceDetailsFixationTv = () => {
 <span className="material-symbols-outlined text-primary text-sm mt-1">shield_with_heart</span>
 <div className="text-sm">
 <p className="font-bold">Insurance Included</p>
-<p className="text-slate-500">Every job is covered by our 1M€ safety guarantee.</p>
+<p className="text-slate-500">Every job is covered by our 1Mâ‚¬ safety guarantee.</p>
 </div>
 </li>
 <li className="flex items-start gap-3">
@@ -282,7 +282,7 @@ const ServiceDetailsFixationTv = () => {
 </div>
 </div>
 <div className="pt-8 border-t border-slate-100 flex flex-col md:flex-row justify-between gap-4">
-<p className="text-slate-400 text-xs">© 2024 TaskIndigo Services. All rights reserved.</p>
+<p className="text-slate-400 text-xs">Â© 2024 TaskIndigo Services. All rights reserved.</p>
 <div className="flex gap-4">
 <a className="text-slate-400 hover:text-primary" href="#"><span className="material-symbols-outlined text-lg">language</span></a>
 <a className="text-slate-400 hover:text-primary" href="#"><span className="material-symbols-outlined text-lg">public</span></a>
@@ -296,3 +296,4 @@ const ServiceDetailsFixationTv = () => {
 };
 
 export default ServiceDetailsFixationTv;
+

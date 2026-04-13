@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import AdminLayout from '../layouts/AdminLayout';
 import apiService from '../services/api';
 
@@ -42,12 +42,12 @@ const VerificationsAdmin = () => {
 
 
   const handleVerify = async (id) => {
-    if (!window.confirm('Voulez-vous vraiment vérifier cet artisan ?')) return;
+    if (!window.confirm('Voulez-vous vraiment vÃ©rifier cet artisan ?')) return;
     try {
       await apiService.verifyArtisan(id);
       setArtisans(artisans.filter(a => a.id !== id));
     } catch (err) {
-      alert('Erreur lors de la vérification');
+      alert('Erreur lors de la vÃ©rification');
     }
   };
 
@@ -81,8 +81,8 @@ const VerificationsAdmin = () => {
         {/* HeaderSection */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div className="space-y-1">
-            <h2 className="text-3xl font-black tracking-tight text-slate-900 font-['Outfit',sans-serif]">Vérifications</h2>
-            <p className="text-slate-500 font-medium">Gérez et examinez les demandes de certification des prestataires.</p>
+            <h2 className="text-3xl font-black tracking-tight text-slate-900 font-['Outfit',sans-serif]">VÃ©rifications</h2>
+            <p className="text-slate-500 font-medium">GÃ©rez et examinez les demandes de certification des prestataires.</p>
           </div>
           <div className="flex bg-white px-6 py-3 rounded-2xl shadow-sm border border-slate-200 items-center gap-3">
             <span className="size-3 rounded-full bg-emerald-500 animate-pulse"></span>
@@ -94,8 +94,8 @@ const VerificationsAdmin = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {[
             { label: 'Attente Action', value: artisans.length, icon: 'hourglass_empty', color: 'bg-indigo-600' },
-            { label: 'Certifiés ce mois', value: stats?.certifiedMonth || 0, icon: 'verified', color: 'bg-emerald-500' },
-            { label: 'Total Certifiés', value: stats?.totalCertified || 0, icon: 'verified_user', color: 'bg-primary' },
+            { label: 'CertifiÃ©s ce mois', value: stats?.certifiedMonth || 0, icon: 'verified', color: 'bg-emerald-500' },
+            { label: 'Total CertifiÃ©s', value: stats?.totalCertified || 0, icon: 'verified_user', color: 'bg-primary' },
           ].map((stat, i) => (
 
             <div key={i} className="bg-white p-8 rounded-[2.5rem] shadow-xl shadow-slate-200/50 border border-white/50 group hover:-translate-y-1 transition-all duration-300">
@@ -116,7 +116,7 @@ const VerificationsAdmin = () => {
         {/* Verification Table */}
         <div className="bg-white rounded-[2.5rem] shadow-xl shadow-slate-200/50 border border-white/50 overflow-hidden">
           <div className="p-10 border-b border-slate-100 flex justify-between items-center">
-            <h3 className="text-2xl font-black text-slate-900 tracking-tight">Dossiers à traiter</h3>
+            <h3 className="text-2xl font-black text-slate-900 tracking-tight">Dossiers Ã  traiter</h3>
           </div>
           
           <div className="overflow-x-auto">
@@ -124,7 +124,7 @@ const VerificationsAdmin = () => {
               <thead>
                 <tr className="text-left bg-slate-50/30">
                   <th className="px-10 py-5 text-[10px] font-black text-slate-400 uppercase tracking-widest border-b border-slate-100">Artisan</th>
-                  <th className="px-10 py-5 text-[10px] font-black text-slate-400 uppercase tracking-widest border-b border-slate-100">Spécialité</th>
+                  <th className="px-10 py-5 text-[10px] font-black text-slate-400 uppercase tracking-widest border-b border-slate-100">SpÃ©cialitÃ©</th>
                   <th className="px-10 py-5 text-[10px] font-black text-slate-400 uppercase tracking-widest border-b border-slate-100">Inscription</th>
                   <th className="px-10 py-5 text-[10px] font-black text-slate-400 uppercase tracking-widest border-b border-slate-100 text-right">Actions</th>
                 </tr>
@@ -223,3 +223,4 @@ const VerificationsAdmin = () => {
 };
 
 export default VerificationsAdmin;
+

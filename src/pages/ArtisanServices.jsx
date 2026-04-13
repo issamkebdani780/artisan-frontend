@@ -1,35 +1,35 @@
-import React, { useEffect, useState } from 'react';
+﻿import React, { useEffect, useState } from 'react';
 import ArtisanLayout from '../layouts/ArtisanLayout';
 import apiService from '../services/api';
 
 const specialtyToCategoryMap = {
   'Menuiserie': 'Menuiserie et Bois',
   'Soudure': 'Ferronnerie et Soudure',
-  'Plomberie': 'Plomberie et Réseaux',
-  'Électricité': 'Électricité et Énergie',
-  'Peinture': 'Peinture et Plâtre',
-  'Maçonnerie': 'Maçonnerie et Finitions',
-  'Mécanique': 'Mécanique et Machines',
+  'Plomberie': 'Plomberie et RÃ©seaux',
+  'Ã‰lectricitÃ©': 'Ã‰lectricitÃ© et Ã‰nergie',
+  'Peinture': 'Peinture et PlÃ¢tre',
+  'MaÃ§onnerie': 'MaÃ§onnerie et Finitions',
+  'MÃ©canique': 'MÃ©canique et Machines',
 };
 
 const specialtyOptionToGroup = {
-  'Menuisier ébéniste': 'Menuiserie', 'Menuisier de chantier': 'Menuiserie', 'Presseur de bois': 'Menuiserie', 'Décorateur bois': 'Menuiserie', 'Fabricant ouvertures bois': 'Menuiserie',
+  'Menuisier Ã©bÃ©niste': 'Menuiserie', 'Menuisier de chantier': 'Menuiserie', 'Presseur de bois': 'Menuiserie', 'DÃ©corateur bois': 'Menuiserie', 'Fabricant ouvertures bois': 'Menuiserie',
   "Ferronnier d'art": 'Soudure', 'Soudeur arc/argon': 'Soudure', 'Chaudronnier': 'Soudure', 'Soudeur carrosserie': 'Soudure',
   'Plombier sanitaire': 'Plomberie', 'Chauffage central': 'Plomberie', 'Monteur gaz': 'Plomberie', 'Tuyauterie cuivre/PER': 'Plomberie',
-  'Électricien bâtiment': 'Électricité', 'Électricien industriel': 'Électricité', 'Technicien solaire': 'Électricité', 'Tireur de câbles': 'Électricité',
-  'Peintre décorateur': 'Peinture', 'Peintre automobile': 'Peinture', 'Plâtrier staffeur': 'Peinture', 'Marbrier': 'Peinture', 'Vernisseur': 'Peinture',
-  'Maçon brique': 'Maçonnerie', 'Carreleur': 'Maçonnerie', 'Crépisseur': 'Maçonnerie', 'Étanchéité': 'Maçonnerie', 'Rénovation': 'Maçonnerie',
-  'Mécanicien auto': 'Mécanique', 'Mécanicien moto': 'Mécanique', 'Moteurs électriques': 'Mécanique', 'Mécanicien agricole': 'Mécanique',
+  'Ã‰lectricien bÃ¢timent': 'Ã‰lectricitÃ©', 'Ã‰lectricien industriel': 'Ã‰lectricitÃ©', 'Technicien solaire': 'Ã‰lectricitÃ©', 'Tireur de cÃ¢bles': 'Ã‰lectricitÃ©',
+  'Peintre dÃ©corateur': 'Peinture', 'Peintre automobile': 'Peinture', 'PlÃ¢trier staffeur': 'Peinture', 'Marbrier': 'Peinture', 'Vernisseur': 'Peinture',
+  'MaÃ§on brique': 'MaÃ§onnerie', 'Carreleur': 'MaÃ§onnerie', 'CrÃ©pisseur': 'MaÃ§onnerie', 'Ã‰tanchÃ©itÃ©': 'MaÃ§onnerie', 'RÃ©novation': 'MaÃ§onnerie',
+  'MÃ©canicien auto': 'MÃ©canique', 'MÃ©canicien moto': 'MÃ©canique', 'Moteurs Ã©lectriques': 'MÃ©canique', 'MÃ©canicien agricole': 'MÃ©canique',
 };
 
 const categoryIcons = {
   'Menuiserie et Bois': 'carpenter',
   'Ferronnerie et Soudure': 'hardware',
-  'Plomberie et Réseaux': 'plumbing',
-  'Électricité et Énergie': 'bolt',
-  'Peinture et Plâtre': 'format_paint',
-  'Maçonnerie et Finitions': 'foundation',
-  'Mécanique et Machines': 'precision_manufacturing',
+  'Plomberie et RÃ©seaux': 'plumbing',
+  'Ã‰lectricitÃ© et Ã‰nergie': 'bolt',
+  'Peinture et PlÃ¢tre': 'format_paint',
+  'MaÃ§onnerie et Finitions': 'foundation',
+  'MÃ©canique et Machines': 'precision_manufacturing',
 };
 
 const ArtisanServices = () => {
@@ -153,7 +153,7 @@ const ArtisanServices = () => {
               </div>
               <h1 className="text-3xl font-black tracking-tighter text-slate-900 uppercase transition-colors">Mes Tarifs</h1>
             </div>
-            <p className="text-slate-400 font-medium text-sm max-w-md transition-colors">Gérez vos prestations et définissez vos prix pour attirer les meilleurs clients.</p>
+            <p className="text-slate-400 font-medium text-sm max-w-md transition-colors">GÃ©rez vos prestations et dÃ©finissez vos prix pour attirer les meilleurs clients.</p>
           </div>
           <button 
             onClick={() => handleOpenModal()}
@@ -170,7 +170,7 @@ const ArtisanServices = () => {
             {[
               { label: 'Services Actifs', value: totalServices, icon: 'category', color: 'from-blue-500 to-indigo-600' },
               { label: 'Prix Moyen', value: `${avgPrice} DA`, icon: 'payments', color: 'from-emerald-500 to-teal-600' },
-              { label: 'Catégories', value: uniqueCategories, icon: 'grid_view', color: 'from-orange-500 to-amber-600' },
+              { label: 'CatÃ©gories', value: uniqueCategories, icon: 'grid_view', color: 'from-orange-500 to-amber-600' },
             ].map((stat, i) => (
               <div key={i} className="relative overflow-hidden bg-white rounded-3xl border border-slate-100 p-6 group hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300">
                 <div className={`absolute top-0 right-0 w-24 h-24 bg-gradient-to-br ${stat.color} rounded-full blur-3xl opacity-10 group-hover:opacity-20 transition-opacity`}></div>
@@ -200,14 +200,14 @@ const ArtisanServices = () => {
                 <div className="size-20 bg-slate-50 rounded-full flex items-center justify-center mx-auto mb-6 border border-dashed border-slate-200 transition-colors">
                   <span className="material-symbols-outlined text-4xl text-slate-300">inventory_2</span>
                 </div>
-                <h3 className="text-xl font-black text-slate-900 mb-2 transition-colors">Aucun service créé</h3>
-                <p className="text-slate-400 font-medium mb-8 max-w-sm mx-auto text-sm transition-colors">Créez votre premier service pour que les clients puissent voir vos offres et tarifs.</p>
+                <h3 className="text-xl font-black text-slate-900 mb-2 transition-colors">Aucun service crÃ©Ã©</h3>
+                <p className="text-slate-400 font-medium mb-8 max-w-sm mx-auto text-sm transition-colors">CrÃ©ez votre premier service pour que les clients puissent voir vos offres et tarifs.</p>
                 <button 
                   onClick={() => handleOpenModal()}
                   className="inline-flex items-center gap-2 bg-secondary text-white px-8 py-4 rounded-2xl font-black text-xs uppercase tracking-widest hover:shadow-xl hover:shadow-secondary/20 transition-all active:scale-95"
                 >
                    <span className="material-symbols-outlined text-lg">add_circle</span>
-                  Créer mon premier service
+                  CrÃ©er mon premier service
                 </button>
               </div>
             </div>
@@ -238,7 +238,7 @@ const ArtisanServices = () => {
 
                   <div className="flex items-center gap-6 shrink-0">
                     <div className="text-right">
-                      <p className="text-[9px] font-black text-slate-300 uppercase tracking-widest mb-0.5 transition-colors">À partir de</p>
+                      <p className="text-[9px] font-black text-slate-300 uppercase tracking-widest mb-0.5 transition-colors">Ã€ partir de</p>
                       <p className="text-2xl font-black text-slate-900 transition-colors">{Number(service.base_price).toLocaleString()} <span className="text-sm text-slate-400">DA</span></p>
                     </div>
                     <div className="flex gap-1.5 pl-4 border-l border-slate-100">
@@ -276,7 +276,7 @@ const ArtisanServices = () => {
                     </div>
                     <div>
                       <h2 className="text-xl font-black text-slate-900 tracking-tight uppercase transition-colors">{currentService ? 'Modifier le Service' : 'Nouveau Service'}</h2>
-                      <p className="text-xs text-slate-400 font-bold uppercase tracking-widest transition-colors">{currentService ? 'Mise à jour' : 'Ajout de prestation'}</p>
+                      <p className="text-xs text-slate-400 font-bold uppercase tracking-widest transition-colors">{currentService ? 'Mise Ã  jour' : 'Ajout de prestation'}</p>
                     </div>
                   </div>
                   <button onClick={() => setShowModal(false)} className="size-10 rounded-xl bg-white border border-slate-100 shadow-sm flex items-center justify-center text-slate-400 hover:text-red-500 hover:border-red-100 transition-all active:scale-95">
@@ -288,7 +288,7 @@ const ArtisanServices = () => {
               <form onSubmit={handleSubmit} className="p-8 pt-6 space-y-6 overflow-y-auto max-h-[70vh] custom-scrollbar">
                 <div className="grid grid-cols-5 gap-5">
                   <div className="col-span-3 flex flex-col gap-2.5">
-                    <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1 transition-colors">Catégorie</label>
+                    <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1 transition-colors">CatÃ©gorie</label>
                     <div className="relative">
                       <select 
                         name="category_id" 
@@ -322,7 +322,7 @@ const ArtisanServices = () => {
                     name="title" 
                     value={form.title} 
                     onChange={(e) => setForm({...form, title: e.target.value})}
-                    placeholder="Ex: Rénovation peinture salon"
+                    placeholder="Ex: RÃ©novation peinture salon"
                     type="text" 
                     required
                     className="w-full h-14 px-5 rounded-2xl bg-slate-50 border-2 border-slate-100 text-slate-900 focus:border-secondary focus:bg-white outline-none font-bold text-sm transition-all placeholder:text-slate-300 placeholder:font-medium"
@@ -335,7 +335,7 @@ const ArtisanServices = () => {
                     name="description" 
                     value={form.description} 
                     onChange={(e) => setForm({...form, description: e.target.value})}
-                    placeholder="Décrivez votre prestation en quelques mots..."
+                    placeholder="DÃ©crivez votre prestation en quelques mots..."
                     rows="4" 
                     required
                     className="w-full p-5 rounded-2xl bg-slate-50 border-2 border-slate-100 text-slate-900 focus:border-secondary focus:bg-white outline-none font-medium text-sm transition-all resize-none placeholder:text-slate-300"
@@ -355,7 +355,7 @@ const ArtisanServices = () => {
                     className="bg-secondary text-white px-8 py-4 rounded-2xl font-black text-[10px] uppercase tracking-[0.2em] hover:shadow-xl hover:shadow-secondary/20 hover:-translate-y-0.5 active:scale-95 transition-all shadow-lg shadow-secondary/20 flex items-center gap-2"
                   >
                     <span className="material-symbols-outlined text-sm">check_circle</span>
-                    {currentService ? 'Enregistrer' : 'Créer'}
+                    {currentService ? 'Enregistrer' : 'CrÃ©er'}
                   </button>
                 </div>
               </form>
@@ -368,3 +368,4 @@ const ArtisanServices = () => {
 };
 
 export default ArtisanServices;
+

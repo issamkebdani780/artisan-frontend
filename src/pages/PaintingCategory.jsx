@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 
 const PaintingCategory = () => {
   return (
@@ -15,7 +15,7 @@ const PaintingCategory = () => {
 </div>
 <nav className="hidden md:flex items-center gap-6">
 <a className="text-slate-600 hover:text-primary text-sm font-medium transition-colors" href="#">Services</a>
-<a className="text-slate-600 hover:text-primary text-sm font-medium transition-colors" href="#">Réalisations</a>
+<a className="text-slate-600 hover:text-primary text-sm font-medium transition-colors" href="#">RÃ©alisations</a>
 <a className="text-slate-600 hover:text-primary text-sm font-medium transition-colors" href="#">Experts</a>
 <a className="text-slate-600 hover:text-primary text-sm font-medium transition-colors" href="#">Avis</a>
 </nav>
@@ -42,18 +42,18 @@ const PaintingCategory = () => {
 <div className="flex-1 space-y-6">
 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider">
 <span className="material-symbols-outlined text-sm">verified</span>
-                            Peintres certifiés
+                            Peintres certifiÃ©s
                         </div>
 <h1 className="text-4xl lg:text-6xl font-black text-slate-900 leading-tight">
-                            Redonnez vie à vos espaces avec nos <span className="text-primary">experts</span>.
+                            Redonnez vie Ã  vos espaces avec nos <span className="text-primary">experts</span>.
                         </h1>
 <p className="text-lg text-slate-600 max-w-2xl">
-                            Des solutions de peinture professionnelles pour particuliers et entreprises. Finitions haute qualité, respect des délais et propreté garantis.
+                            Des solutions de peinture professionnelles pour particuliers et entreprises. Finitions haute qualitÃ©, respect des dÃ©lais et propretÃ© garantis.
                         </p>
 <div className="flex flex-wrap gap-4">
 <button className="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-xl font-bold shadow-lg shadow-primary/20 transition-all flex items-center gap-2">
 <span className="material-symbols-outlined">calendar_month</span>
-                                Réserver un créneau
+                                RÃ©server un crÃ©neau
                             </button>
 <button className="bg-white border-2 border-slate-200 hover:border-primary text-slate-700 px-8 py-4 rounded-xl font-bold transition-all flex items-center gap-2">
 <span className="material-symbols-outlined">play_circle</span>
@@ -66,26 +66,26 @@ const PaintingCategory = () => {
 <img className="h-8 w-8 rounded-full border-2 border-white" data-alt="Satisfied client face photo 2" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXz6sl4LsVyc_En-0BqXMeIuwAPrhMMvCbhCY153LoCDT23eVCv27Zj7lqlX3NGpIM7oxMues7afoQKqt2vwu7RWRbIarcX9575e6BwveOO7V2UnvvL7mVQcnLjtD7uGAylS-Lz8SYC2HZg5f9_llLU468xaEZWb5ZUVrprD3Admgb1U-xM7E6saE6yXEJjPDsdDfmXqAB2N2VW1nKiXtduKiysRsxoZsmXelUXUIokRphRmIXMtotr2j5kxhcmSI99Go8EfZ_EOGm"/>
 <img className="h-8 w-8 rounded-full border-2 border-white" data-alt="Satisfied client face photo 3" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDl5haXpI6SzezzOkG7tro59xhLkn5EyV-E6QPJz_e6e3vwZWLuajGU-mOtTws9PE3Y3vZzePgLIyrota5Bfz3XhxyY_EsqjrOKlDFw8yaZObIyYADw-xm9nxHQFYUfPHWsX6iW7g4SqWmapqOXbJcM-1DsYuguTxKkXauH8wayWQ16TDPUQsx1UMJc2Kf8uDaQCth3yFfyODE0stgPN32x6DX4ux05g5ECJ4q-5O-G2WygWhZlh6EKBAIs8mYhsBWLZvNE6JQLjSej"/>
 </div>
-<span>+1,200 clients satisfaits cette année</span>
+<span>+1,200 clients satisfaits cette annÃ©e</span>
 </div>
 </div>
 {/*  Sidebar: Need a Quote  */}
 <div className="w-full lg:w-[400px]">
 <div className="bg-white rounded-2xl border border-slate-200 p-6 shadow-xl shadow-slate-200/50 sticky top-24">
 <h3 className="text-xl font-bold text-slate-900 mb-2">Besoin d'un devis ?</h3>
-<p className="text-sm text-slate-500 mb-6">Recevez une estimation gratuite et personnalisée en moins de 24h.</p>
+<p className="text-sm text-slate-500 mb-6">Recevez une estimation gratuite et personnalisÃ©e en moins de 24h.</p>
 <form className="space-y-4">
 <div>
 <label className="block text-xs font-bold text-slate-400 uppercase mb-1">Type de projet</label>
 <select className="w-full rounded-lg border-slate-200 bg-slate-50 text-sm focus:ring-primary focus:border-primary">
-<option>Peinture Intérieure</option>
-<option>Peinture Extérieure</option>
+<option>Peinture IntÃ©rieure</option>
+<option>Peinture ExtÃ©rieure</option>
 <option>Papier Peint</option>
-<option>Rénovation complète</option>
+<option>RÃ©novation complÃ¨te</option>
 </select>
 </div>
 <div>
-<label className="block text-xs font-bold text-slate-400 uppercase mb-1">Surface (approx. m²)</label>
+<label className="block text-xs font-bold text-slate-400 uppercase mb-1">Surface (approx. mÂ²)</label>
 <input className="w-full rounded-lg border-slate-200 bg-slate-50 text-sm focus:ring-primary focus:border-primary" placeholder="ex: 45" type="number"/>
 </div>
 <div>
@@ -101,7 +101,7 @@ const PaintingCategory = () => {
 <span className="material-symbols-outlined text-lg">bolt</span>
 </div>
 <div>
-<p className="text-xs font-bold text-slate-900">Réponse rapide</p>
+<p className="text-xs font-bold text-slate-900">RÃ©ponse rapide</p>
 <p className="text-[10px] text-slate-500 uppercase tracking-wide">Moyenne de 4h</p>
 </div>
 </div>
@@ -113,8 +113,8 @@ const PaintingCategory = () => {
 <section className="bg-slate-50 py-16">
 <div className="max-w-7xl mx-auto px-4 lg:px-20">
 <div className="mb-12">
-<h2 className="text-3xl font-bold text-slate-900">Nos services spécialisés</h2>
-<p className="text-slate-500 mt-2">Une expertise complète pour chaque surface de votre habitat.</p>
+<h2 className="text-3xl font-bold text-slate-900">Nos services spÃ©cialisÃ©s</h2>
+<p className="text-slate-500 mt-2">Une expertise complÃ¨te pour chaque surface de votre habitat.</p>
 </div>
 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 {/*  Interior  */}
@@ -126,10 +126,10 @@ const PaintingCategory = () => {
 <div className="text-primary mb-4">
 <span className="material-symbols-outlined text-3xl">format_paint</span>
 </div>
-<h3 className="text-xl font-bold text-slate-900 mb-2">Peinture Intérieure</h3>
-<p className="text-sm text-slate-600 mb-4">Murs, boiseries et finitions décoratives pour créer l'ambiance parfaite.</p>
+<h3 className="text-xl font-bold text-slate-900 mb-2">Peinture IntÃ©rieure</h3>
+<p className="text-sm text-slate-600 mb-4">Murs, boiseries et finitions dÃ©coratives pour crÃ©er l'ambiance parfaite.</p>
 <a className="inline-flex items-center text-primary font-bold text-sm hover:gap-2 transition-all" href="#">
-                                    Découvrir le service <span className="material-symbols-outlined ml-1 text-sm">arrow_forward</span>
+                                    DÃ©couvrir le service <span className="material-symbols-outlined ml-1 text-sm">arrow_forward</span>
 </a>
 </div>
 </div>
@@ -143,9 +143,9 @@ const PaintingCategory = () => {
 <span className="material-symbols-outlined text-3xl">layers</span>
 </div>
 <h3 className="text-xl font-bold text-slate-900 mb-2">Plafonds &amp; Ravalement</h3>
-<p className="text-sm text-slate-600 mb-4">Traitement des fissures et peinture mate haute opacité pour des plafonds impeccables.</p>
+<p className="text-sm text-slate-600 mb-4">Traitement des fissures et peinture mate haute opacitÃ© pour des plafonds impeccables.</p>
 <a className="inline-flex items-center text-primary font-bold text-sm hover:gap-2 transition-all" href="#">
-                                    Découvrir le service <span className="material-symbols-outlined ml-1 text-sm">arrow_forward</span>
+                                    DÃ©couvrir le service <span className="material-symbols-outlined ml-1 text-sm">arrow_forward</span>
 </a>
 </div>
 </div>
@@ -158,10 +158,10 @@ const PaintingCategory = () => {
 <div className="text-primary mb-4">
 <span className="material-symbols-outlined text-3xl">texture</span>
 </div>
-<h3 className="text-xl font-bold text-slate-900 mb-2">Papier Peint &amp; Revêtements</h3>
-<p className="text-sm text-slate-600 mb-4">Pose précise de papiers peints, panoramiques et toiles de verre.</p>
+<h3 className="text-xl font-bold text-slate-900 mb-2">Papier Peint &amp; RevÃªtements</h3>
+<p className="text-sm text-slate-600 mb-4">Pose prÃ©cise de papiers peints, panoramiques et toiles de verre.</p>
 <a className="inline-flex items-center text-primary font-bold text-sm hover:gap-2 transition-all" href="#">
-                                    Découvrir le service <span className="material-symbols-outlined ml-1 text-sm">arrow_forward</span>
+                                    DÃ©couvrir le service <span className="material-symbols-outlined ml-1 text-sm">arrow_forward</span>
 </a>
 </div>
 </div>
@@ -172,36 +172,36 @@ const PaintingCategory = () => {
 <section className="py-20 max-w-7xl mx-auto px-4 lg:px-20">
 <div className="text-center mb-16">
 <h2 className="text-3xl font-bold text-slate-900">Pourquoi nous choisir ?</h2>
-<p className="text-slate-500 mt-4 max-w-2xl mx-auto">Nous nous engageons à fournir une expérience sans stress et un résultat qui dépasse vos attentes.</p>
+<p className="text-slate-500 mt-4 max-w-2xl mx-auto">Nous nous engageons Ã  fournir une expÃ©rience sans stress et un rÃ©sultat qui dÃ©passe vos attentes.</p>
 </div>
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 <div className="text-center space-y-4">
 <div className="w-16 h-16 bg-primary/10 text-primary rounded-full flex items-center justify-center mx-auto">
 <span className="material-symbols-outlined text-3xl">verified_user</span>
 </div>
-<h4 className="font-bold text-slate-900">Garantie Décennale</h4>
+<h4 className="font-bold text-slate-900">Garantie DÃ©cennale</h4>
 <p className="text-sm text-slate-500">Tous nos travaux sont couverts par une assurance professionnelle solide.</p>
 </div>
 <div className="text-center space-y-4">
 <div className="w-16 h-16 bg-primary/10 text-primary rounded-full flex items-center justify-center mx-auto">
 <span className="material-symbols-outlined text-3xl">handyman</span>
 </div>
-<h4 className="font-bold text-slate-900">Matériaux Premium</h4>
+<h4 className="font-bold text-slate-900">MatÃ©riaux Premium</h4>
 <p className="text-sm text-slate-500">Nous utilisons exclusivement des peintures respectueuses de l'environnement (A+).</p>
 </div>
 <div className="text-center space-y-4">
 <div className="w-16 h-16 bg-primary/10 text-primary rounded-full flex items-center justify-center mx-auto">
 <span className="material-symbols-outlined text-3xl">timer</span>
 </div>
-<h4 className="font-bold text-slate-900">Respect des Délais</h4>
-<p className="text-sm text-slate-500">Un calendrier précis établi avant le début et strictement respecté.</p>
+<h4 className="font-bold text-slate-900">Respect des DÃ©lais</h4>
+<p className="text-sm text-slate-500">Un calendrier prÃ©cis Ã©tabli avant le dÃ©but et strictement respectÃ©.</p>
 </div>
 <div className="text-center space-y-4">
 <div className="w-16 h-16 bg-primary/10 text-primary rounded-full flex items-center justify-center mx-auto">
 <span className="material-symbols-outlined text-3xl">cleaning_services</span>
 </div>
 <h4 className="font-bold text-slate-900">Chantier Propre</h4>
-<p className="text-sm text-slate-500">Protection totale de vos sols et meubles, nettoyage complet après travaux.</p>
+<p className="text-sm text-slate-500">Protection totale de vos sols et meubles, nettoyage complet aprÃ¨s travaux.</p>
 </div>
 </div>
 </section>
@@ -211,7 +211,7 @@ const PaintingCategory = () => {
 <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
 <div className="text-white">
 <h2 className="text-3xl font-bold">Nos meilleurs experts</h2>
-<p className="text-primary/20 opacity-80 mt-2 text-white/80">Des artisans passionnés, triés sur le volet pour leur savoir-faire.</p>
+<p className="text-primary/20 opacity-80 mt-2 text-white/80">Des artisans passionnÃ©s, triÃ©s sur le volet pour leur savoir-faire.</p>
 </div>
 <button className="bg-white text-primary px-6 py-3 rounded-xl font-bold hover:bg-slate-50 transition-colors">
                             Voir tous les experts
@@ -243,7 +243,7 @@ const PaintingCategory = () => {
 </div>
 <div className="flex-1">
 <h4 className="font-bold text-slate-900">Sarah B.</h4>
-<p className="text-xs text-slate-500">Spécialiste Papier Peint</p>
+<p className="text-xs text-slate-500">SpÃ©cialiste Papier Peint</p>
 <div className="flex items-center gap-1 mt-1">
 <span className="material-symbols-outlined text-yellow-400 text-sm">star</span>
 <span className="text-xs font-bold text-slate-700">5.0</span>
@@ -285,10 +285,10 @@ const PaintingCategory = () => {
 </div>
 <div className="flex gap-8 text-sm text-slate-500 font-medium">
 <a className="hover:text-primary" href="#">Conditions</a>
-<a className="hover:text-primary" href="#">Confidentialité</a>
+<a className="hover:text-primary" href="#">ConfidentialitÃ©</a>
 <a className="hover:text-primary" href="#">Contact</a>
 </div>
-<p className="text-sm text-slate-400">© 2024 PeinturePro SAS. Tous droits réservés.</p>
+<p className="text-sm text-slate-400">Â© 2024 PeinturePro SAS. Tous droits rÃ©servÃ©s.</p>
 </div>
 </footer>
 </div>
@@ -298,3 +298,4 @@ const PaintingCategory = () => {
 };
 
 export default PaintingCategory;
+

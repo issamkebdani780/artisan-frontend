@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 
 const ProArtisan = () => {
   return (
@@ -176,7 +176,7 @@ const ProArtisan = () => {
 </main>
 {/*  Footer Space  */}
 <footer className="mt-auto py-10 px-4 lg:px-20 text-center text-slate-400 text-sm border-t border-slate-100">
-<p>© 2024 Pro Artisan Global. The Premium Professional Network.</p>
+<p>Â© 2024 Pro Artisan Global. The Premium Professional Network.</p>
 </footer>
 </div>
 
@@ -185,3 +185,4 @@ const ProArtisan = () => {
 };
 
 export default ProArtisan;
+

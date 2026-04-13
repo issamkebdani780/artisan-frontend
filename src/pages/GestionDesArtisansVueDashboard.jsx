@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 
 const GestionDesArtisansVueDashboard = () => {
   return (
@@ -44,7 +44,7 @@ const GestionDesArtisansVueDashboard = () => {
 <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
 <div>
 <h2 className="text-3xl font-black text-slate-900 tracking-tight">Total Artisans</h2>
-<p className="text-slate-500 mt-1">Gérez et modifiez les profils des artisans inscrits sur la plateforme.</p>
+<p className="text-slate-500 mt-1">GÃ©rez et modifiez les profils des artisans inscrits sur la plateforme.</p>
 </div>
 <div className="flex gap-2 flex-col">
 <button className="px-4 py-2 bg-white border border-slate-200 rounded-xl text-sm font-semibold flex items-center gap-2 hover:bg-slate-50 transition-colors">
@@ -53,18 +53,18 @@ const GestionDesArtisansVueDashboard = () => {
                             </button>
 <button className="px-4 py-2 bg-white border border-slate-200 rounded-xl text-sm font-semibold flex items-center gap-2 hover:bg-slate-50 transition-colors">
 <span className="material-symbols-outlined">filter_list</span>
-                                Filtres Avancés
+                                Filtres AvancÃ©s
                             </button>
 </div>
 </div>
 {/*  Filters Bar  */}
 <div className="bg-white p-4 rounded-xl shadow-sm border border-slate-200 flex flex-wrap gap-3 flex-col">
 <div className="flex items-center gap-2 px-3 py-1.5 bg-slate-100 rounded-lg flex-col">
-<span className="text-xs font-bold text-slate-500 uppercase tracking-wider">Spécialité</span>
+<span className="text-xs font-bold text-slate-500 uppercase tracking-wider">SpÃ©cialitÃ©</span>
 <select className="bg-transparent border-none text-sm font-medium focus:ring-0 p-0 pr-6">
 <option>Toutes</option>
 <option>Plomberie</option>
-<option>Électricité</option>
+<option>Ã‰lectricitÃ©</option>
 <option>Menuiserie</option>
 <option>Peinture</option>
 </select>
@@ -73,7 +73,7 @@ const GestionDesArtisansVueDashboard = () => {
 <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">Statut</span>
 <select className="bg-transparent border-none text-sm font-medium focus:ring-0 p-0 pr-6">
 <option>Tous</option>
-<option>Vérifié</option>
+<option>VÃ©rifiÃ©</option>
 <option>En attente</option>
 <option>Suspendu</option>
 </select>
@@ -87,7 +87,7 @@ const GestionDesArtisansVueDashboard = () => {
 <option>Marseille</option>
 </select>
 </div>
-<button className="ml-auto text-sm text-purple-brand font-bold hover:underline">Réinitialiser</button>
+<button className="ml-auto text-sm text-purple-brand font-bold hover:underline">RÃ©initialiser</button>
 </div>
 {/*  Data Table  */}
 <div className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
@@ -96,10 +96,10 @@ const GestionDesArtisansVueDashboard = () => {
 <thead>
 <tr className="bg-slate-50 border-b border-slate-200">
 <th className="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">Artisan</th>
-<th className="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">Spécialité</th>
+<th className="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">SpÃ©cialitÃ©</th>
 <th className="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">Inscription</th>
 <th className="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">Statut</th>
-<th className="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">Évaluation</th>
+<th className="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">Ã‰valuation</th>
 <th className="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider text-right">Actions</th>
 </tr>
 </thead>
@@ -123,7 +123,7 @@ const GestionDesArtisansVueDashboard = () => {
 <td className="px-6 py-4">
 <div className="flex items-center gap-1.5 text-emerald-600 flex-col">
 <span className="material-symbols-outlined text-sm">verified</span>
-<span className="text-xs font-bold">Vérifié</span>
+<span className="text-xs font-bold">VÃ©rifiÃ©</span>
 </div>
 </td>
 <td className="px-6 py-4">
@@ -156,7 +156,7 @@ const GestionDesArtisansVueDashboard = () => {
 </div>
 </td>
 <td className="px-6 py-4">
-<span className="px-2 py-1 bg-blue-100 text-blue-700 text-xs font-bold rounded-lg">Électricité</span>
+<span className="px-2 py-1 bg-blue-100 text-blue-700 text-xs font-bold rounded-lg">Ã‰lectricitÃ©</span>
 </td>
 <td className="px-6 py-4 text-sm text-slate-600">15 Oct 2023</td>
 <td className="px-6 py-4">
@@ -201,7 +201,7 @@ const GestionDesArtisansVueDashboard = () => {
 <td className="px-6 py-4">
 <div className="flex items-center gap-1.5 text-emerald-600 flex-col">
 <span className="material-symbols-outlined text-sm">verified</span>
-<span className="text-xs font-bold">Vérifié</span>
+<span className="text-xs font-bold">VÃ©rifiÃ©</span>
 </div>
 </td>
 <td className="px-6 py-4">
@@ -265,7 +265,7 @@ const GestionDesArtisansVueDashboard = () => {
 </div>
 {/*  Pagination  */}
 <div className="px-6 py-4 bg-slate-50 flex items-center justify-between flex-col">
-<p className="text-xs text-slate-500 font-medium">Affichage de 1 à 4 sur 124 artisans</p>
+<p className="text-xs text-slate-500 font-medium">Affichage de 1 Ã  4 sur 124 artisans</p>
 <div className="flex gap-2 flex-col">
 <button className="size-8 flex items-center justify-center rounded-lg border border-slate-200 bg-white text-slate-400 hover:text-purple-brand transition-colors">
 <span className="material-symbols-outlined text-sm">chevron_left</span>
@@ -307,3 +307,4 @@ const GestionDesArtisansVueDashboard = () => {
 };
 
 export default GestionDesArtisansVueDashboard;
+

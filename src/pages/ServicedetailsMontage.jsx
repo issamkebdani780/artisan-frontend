@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 
 const ServicedetailsMontage = () => {
   return (
@@ -16,7 +16,7 @@ const ServicedetailsMontage = () => {
 </div>
 <nav className="hidden md:flex items-center gap-8">
 <a className="text-sm font-medium hover:text-primary transition-colors" href="#">Services</a>
-<a className="text-sm font-medium hover:text-primary transition-colors" href="#">Comment ça marche</a>
+<a className="text-sm font-medium hover:text-primary transition-colors" href="#">Comment Ã§a marche</a>
 <a className="text-sm font-medium hover:text-primary transition-colors" href="#">Tarifs</a>
 </nav>
 <div className="flex items-center gap-4">
@@ -24,7 +24,7 @@ const ServicedetailsMontage = () => {
 <span className="material-symbols-outlined">search</span>
 </button>
 <button className="hidden sm:flex items-center justify-center rounded-lg bg-primary px-4 py-2 text-sm font-bold text-white transition-opacity hover:opacity-90">
-                        Réserver un Jobber
+                        RÃ©server un Jobber
                     </button>
 </div>
 </div>
@@ -43,10 +43,10 @@ const ServicedetailsMontage = () => {
                                 Montage de meubles
                             </div>
 <h1 className="text-4xl font-black tracking-tight text-white sm:text-5xl lg:text-6xl">
-                                Montage d'étagères par des experts
+                                Montage d'Ã©tagÃ¨res par des experts
                             </h1>
 <p className="mt-6 text-lg leading-8 text-slate-300">
-                                Confiez l'installation de vos étagères IKEA, Conforama et Leroy Merlin à nos bricoleurs qualifiés. Sécurisé, rapide et garanti.
+                                Confiez l'installation de vos Ã©tagÃ¨res IKEA, Conforama et Leroy Merlin Ã  nos bricoleurs qualifiÃ©s. SÃ©curisÃ©, rapide et garanti.
                             </p>
 </div>
 </div>
@@ -63,7 +63,7 @@ const ServicedetailsMontage = () => {
 <span className="mx-2 text-slate-300">/</span>
 <a className="hover:text-primary" href="#">Montage de meubles</a>
 <span className="mx-2 text-slate-300">/</span>
-<span className="text-slate-900">Étagères</span>
+<span className="text-slate-900">Ã‰tagÃ¨res</span>
 </nav>
 {/*  Expert Badges  */}
 <div className="flex flex-wrap gap-3">
@@ -74,19 +74,19 @@ const ServicedetailsMontage = () => {
 <span className="material-symbols-outlined text-primary text-lg">verified</span> Conforama Experts
                             </span>
 <span className="inline-flex items-center gap-1.5 rounded-lg bg-slate-100 px-4 py-2 text-sm font-semibold">
-<span className="material-symbols-outlined text-primary text-lg">verified</span> Fixation Murale Sécurisée
+<span className="material-symbols-outlined text-primary text-lg">verified</span> Fixation Murale SÃ©curisÃ©e
                             </span>
 </div>
 {/*  Service Details  */}
 <div className="prose prose-slate max-w-none">
 <h2 className="text-2xl font-bold text-slate-900">Ce que nos Taskers proposent</h2>
 <p className="mt-4 text-slate-600 leading-relaxed">
-                                Monter une étagère peut sembler simple, mais assurer sa stabilité et sa sécurité, surtout lorsqu'il s'agit de fixations murales, demande un savoir-faire précis. Nos experts interviennent pour :
+                                Monter une Ã©tagÃ¨re peut sembler simple, mais assurer sa stabilitÃ© et sa sÃ©curitÃ©, surtout lorsqu'il s'agit de fixations murales, demande un savoir-faire prÃ©cis. Nos experts interviennent pour :
                             </p>
 <ul className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 list-none p-0">
 <li className="flex gap-x-3 text-slate-600">
 <span className="material-symbols-outlined text-primary">check_circle</span>
-                                    Déballage et inventaire des pièces
+                                    DÃ©ballage et inventaire des piÃ¨ces
                                 </li>
 <li className="flex gap-x-3 text-slate-600">
 <span className="material-symbols-outlined text-primary">check_circle</span>
@@ -94,7 +94,7 @@ const ServicedetailsMontage = () => {
                                 </li>
 <li className="flex gap-x-3 text-slate-600">
 <span className="material-symbols-outlined text-primary">check_circle</span>
-                                    Fixation murale sécurisée (si requis)
+                                    Fixation murale sÃ©curisÃ©e (si requis)
                                 </li>
 <li className="flex gap-x-3 text-slate-600">
 <span className="material-symbols-outlined text-primary">check_circle</span>
@@ -104,7 +104,7 @@ const ServicedetailsMontage = () => {
 </div>
 {/*  Reviews Section  */}
 <div className="pt-8 border-t border-slate-200">
-<h2 className="text-2xl font-bold text-slate-900 mb-8">Avis clients sur le montage d'étagères</h2>
+<h2 className="text-2xl font-bold text-slate-900 mb-8">Avis clients sur le montage d'Ã©tagÃ¨res</h2>
 <div className="space-y-6">
 <div className="rounded-xl bg-white p-6 shadow-sm border border-slate-100">
 <div className="flex items-center gap-4 mb-4">
@@ -120,7 +120,7 @@ const ServicedetailsMontage = () => {
 </div>
 </div>
 </div>
-<p className="text-slate-600 italic">"Parfait ! Jean a monté 3 étagères Billy en un temps record. La fixation au mur est impeccable et très solide. Je recommande vivement."</p>
+<p className="text-slate-600 italic">"Parfait ! Jean a montÃ© 3 Ã©tagÃ¨res Billy en un temps record. La fixation au mur est impeccable et trÃ¨s solide. Je recommande vivement."</p>
 </div>
 <div className="rounded-xl bg-white p-6 shadow-sm border border-slate-100">
 <div className="flex items-center gap-4 mb-4">
@@ -136,7 +136,7 @@ const ServicedetailsMontage = () => {
 </div>
 </div>
 </div>
-<p className="text-slate-600 italic">"Expert très méticuleux pour mon meuble Kallax. Service propre et courtois."</p>
+<p className="text-slate-600 italic">"Expert trÃ¨s mÃ©ticuleux pour mon meuble Kallax. Service propre et courtois."</p>
 </div>
 </div>
 </div>
@@ -148,15 +148,15 @@ const ServicedetailsMontage = () => {
 <h3 className="text-lg font-bold text-slate-900">Estimation de prix</h3>
 <div className="mt-6 space-y-4">
 <div className="flex justify-between items-center p-3 rounded-lg bg-slate-50">
-<span className="text-sm font-medium">À l'unité</span>
-<span className="text-lg font-bold text-primary">Dès 15€</span>
+<span className="text-sm font-medium">Ã€ l'unitÃ©</span>
+<span className="text-lg font-bold text-primary">DÃ¨s 15â‚¬</span>
 </div>
 <div className="flex justify-between items-center p-3 rounded-lg bg-slate-50">
 <span className="text-sm font-medium">Taux horaire</span>
-<span className="text-lg font-bold text-primary">25€ / h</span>
+<span className="text-lg font-bold text-primary">25â‚¬ / h</span>
 </div>
 </div>
-<p className="mt-4 text-xs text-slate-500 text-center italic">Le prix final dépend du nombre d'unités et de la complexité.</p>
+<p className="mt-4 text-xs text-slate-500 text-center italic">Le prix final dÃ©pend du nombre d'unitÃ©s et de la complexitÃ©.</p>
 <button className="mt-8 w-full rounded-xl bg-primary py-4 text-center text-sm font-bold text-white shadow-lg shadow-primary/25 transition-transform hover:scale-[1.02]">
                                     Trouver un expert
                                 </button>
@@ -203,20 +203,20 @@ const ServicedetailsMontage = () => {
 </div>
 <span className="text-lg font-bold">BricolagePro</span>
 </div>
-<p className="text-sm text-slate-500">Votre partenaire de confiance pour tous vos petits travaux de montage à domicile.</p>
+<p className="text-sm text-slate-500">Votre partenaire de confiance pour tous vos petits travaux de montage Ã  domicile.</p>
 </div>
 <div>
 <h4 className="font-bold mb-4">Services</h4>
 <ul className="text-sm space-y-2 text-slate-500">
 <li><a className="hover:text-primary" href="#">Montage Meubles</a></li>
 <li><a className="hover:text-primary" href="#">Fixation Murale</a></li>
-<li><a className="hover:text-primary" href="#">Déménagement</a></li>
+<li><a className="hover:text-primary" href="#">DÃ©mÃ©nagement</a></li>
 </ul>
 </div>
 <div>
-<h4 className="font-bold mb-4">Société</h4>
+<h4 className="font-bold mb-4">SociÃ©tÃ©</h4>
 <ul className="text-sm space-y-2 text-slate-500">
-<li><a className="hover:text-primary" href="#">À propos</a></li>
+<li><a className="hover:text-primary" href="#">Ã€ propos</a></li>
 <li><a className="hover:text-primary" href="#">Jobs</a></li>
 <li><a className="hover:text-primary" href="#">Presse</a></li>
 </ul>
@@ -226,12 +226,12 @@ const ServicedetailsMontage = () => {
 <ul className="text-sm space-y-2 text-slate-500">
 <li><a className="hover:text-primary" href="#">FAQ</a></li>
 <li><a className="hover:text-primary" href="#">Contact</a></li>
-<li><a className="hover:text-primary" href="#">Sécurité</a></li>
+<li><a className="hover:text-primary" href="#">SÃ©curitÃ©</a></li>
 </ul>
 </div>
 </div>
 <div className="mx-auto max-w-7xl mt-12 pt-8 border-t border-slate-100 text-center text-xs text-slate-400">
-                © 2024 BricolagePro Inc. Tous droits réservés.
+                Â© 2024 BricolagePro Inc. Tous droits rÃ©servÃ©s.
             </div>
 </footer>
 </div>
@@ -241,3 +241,4 @@ const ServicedetailsMontage = () => {
 };
 
 export default ServicedetailsMontage;
+

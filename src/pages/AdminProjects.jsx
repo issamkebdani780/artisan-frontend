@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 
 import AdminLayout from '../layouts/AdminLayout';
@@ -37,9 +37,9 @@ const AdminProjects = () => {
     
     if (filter === 'Tous') return true;
     if (filter === 'En attente') return p.status === 'en attente';
-    if (filter === 'Accepté') return p.status === 'accepté';
-    if (filter === 'Terminé') return p.status === 'terminé';
-    if (filter === 'Refusé') return p.status === 'refusé';
+    if (filter === 'AcceptÃ©') return p.status === 'acceptÃ©';
+    if (filter === 'TerminÃ©') return p.status === 'terminÃ©';
+    if (filter === 'RefusÃ©') return p.status === 'refusÃ©';
     return true;
   });
 
@@ -54,9 +54,9 @@ const AdminProjects = () => {
 
   const getStatusColor = (status) => {
     switch (status) {
-      case 'accepté': return 'bg-emerald-100 text-emerald-700';
-      case 'terminé': return 'bg-blue-100 text-blue-700';
-      case 'refusé': return 'bg-rose-100 text-rose-700';
+      case 'acceptÃ©': return 'bg-emerald-100 text-emerald-700';
+      case 'terminÃ©': return 'bg-blue-100 text-blue-700';
+      case 'refusÃ©': return 'bg-rose-100 text-rose-700';
       case 'en attente': default: return 'bg-amber-100 text-amber-700';
     }
   };
@@ -73,7 +73,7 @@ const AdminProjects = () => {
 
         {/* Tabs / Filters */}
         <div className="flex bg-white/50 p-1.5 rounded-3xl border border-slate-200 w-fit overflow-x-auto max-w-full">
-          {['Tous', 'En attente', 'Accepté', 'Terminé', 'Refusé'].map((tab) => (
+          {['Tous', 'En attente', 'AcceptÃ©', 'TerminÃ©', 'RefusÃ©'].map((tab) => (
             <button
               key={tab}
               onClick={() => { setFilter(tab); setCurrentPage(1); }}
@@ -105,7 +105,7 @@ const AdminProjects = () => {
                     </tr>
                   ))
                 ) : filteredProjects.length === 0 ? (
-                  <tr><td colSpan="5" className="text-center py-20 text-slate-400 font-bold italic font-[Outfit,sans-serif]">Aucun projet trouvé</td></tr>
+                  <tr><td colSpan="5" className="text-center py-20 text-slate-400 font-bold italic font-[Outfit,sans-serif]">Aucun projet trouvÃ©</td></tr>
                 ) : currentItems.map((project) => (
                   <tr key={project.id} className="hover:bg-slate-50/50 transition-colors group font-[Outfit,sans-serif]">
                     <td className="px-8 py-6">
@@ -138,7 +138,7 @@ const AdminProjects = () => {
           {totalPages > 1 && (
             <div className="px-8 py-6 bg-slate-50/50 border-t border-slate-100 flex items-center justify-between">
               <p className="text-xs font-bold text-slate-500 uppercase tracking-widest hidden sm:block">
-                Affichage de {indexOfFirstItem + 1} à {Math.min(indexOfLastItem, filteredProjects.length)} sur {filteredProjects.length}
+                Affichage de {indexOfFirstItem + 1} Ã  {Math.min(indexOfLastItem, filteredProjects.length)} sur {filteredProjects.length}
               </p>
               <div className="flex items-center gap-2">
                 <button
@@ -176,3 +176,4 @@ const AdminProjects = () => {
 };
 
 export default AdminProjects;
+

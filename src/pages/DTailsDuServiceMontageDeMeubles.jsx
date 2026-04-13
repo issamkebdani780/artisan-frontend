@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 
 const DTailsDuServiceMontageDeMeubles = () => {
   return (
@@ -46,17 +46,17 @@ const DTailsDuServiceMontageDeMeubles = () => {
 </div>
 <div className="flex flex-col gap-6 w-full lg:w-1/2 lg:pl-12 order-1 lg:order-2">
 <div className="flex flex-col gap-3 text-left">
-<span className="text-primary font-bold text-sm tracking-wider uppercase">Installation à domicile</span>
+<span className="text-primary font-bold text-sm tracking-wider uppercase">Installation Ã  domicile</span>
 <h1 className="text-slate-900 text-4xl md:text-5xl font-black leading-tight tracking-[-0.033em]">
                                     Montage de meubles
                                 </h1>
 <p className="text-slate-600 text-lg leading-relaxed">
-                                    Confiez le montage de vos meubles à des professionnels qualifiés. Qu'il s'agisse d'IKEA, de Conforama ou de meubles sur mesure, nous sommes là pour un résultat parfait, sans stress.
+                                    Confiez le montage de vos meubles Ã  des professionnels qualifiÃ©s. Qu'il s'agisse d'IKEA, de Conforama ou de meubles sur mesure, nous sommes lÃ  pour un rÃ©sultat parfait, sans stress.
                                 </p>
 </div>
 <div className="flex flex-wrap gap-4">
 <button className="flex-1 sm:flex-none min-w-[200px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-white text-base font-bold tracking-[0.015em] hover:bg-primary/90">
-                                    Réserver maintenant
+                                    RÃ©server maintenant
                                 </button>
 <button className="flex-1 sm:flex-none min-w-[200px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 border-2 border-primary text-primary text-base font-bold hover:bg-primary/5">
                                     Voir les tarifs
@@ -66,15 +66,15 @@ const DTailsDuServiceMontageDeMeubles = () => {
 </section>
 {/*  How it works  */}
 <section className="py-12 border-t border-slate-200">
-<h2 className="text-slate-900 text-3xl font-bold leading-tight tracking-tight mb-8">Comment ça marche</h2>
+<h2 className="text-slate-900 text-3xl font-bold leading-tight tracking-tight mb-8">Comment Ã§a marche</h2>
 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 <div className="flex flex-col gap-4 rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
 <div className="bg-primary/10 text-primary w-12 h-12 rounded-full flex items-center justify-center">
 <span className="material-symbols-outlined text-2xl">calendar_month</span>
 </div>
 <div className="flex flex-col gap-2">
-<h3 className="text-slate-900 text-xl font-bold">1. Réservez</h3>
-<p className="text-slate-600 text-sm leading-normal">Décrivez votre projet et choisissez une date qui vous convient. C'est rapide et simple.</p>
+<h3 className="text-slate-900 text-xl font-bold">1. RÃ©servez</h3>
+<p className="text-slate-600 text-sm leading-normal">DÃ©crivez votre projet et choisissez une date qui vous convient. C'est rapide et simple.</p>
 </div>
 </div>
 <div className="flex flex-col gap-4 rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
@@ -83,7 +83,7 @@ const DTailsDuServiceMontageDeMeubles = () => {
 </div>
 <div className="flex flex-col gap-2">
 <h3 className="text-slate-900 text-xl font-bold">2. Choisissez</h3>
-<p className="text-slate-600 text-sm leading-normal">Sélectionnez parmi nos experts locaux basés sur leurs avis et leurs tarifs transparents.</p>
+<p className="text-slate-600 text-sm leading-normal">SÃ©lectionnez parmi nos experts locaux basÃ©s sur leurs avis et leurs tarifs transparents.</p>
 </div>
 </div>
 <div className="flex flex-col gap-4 rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
@@ -92,7 +92,7 @@ const DTailsDuServiceMontageDeMeubles = () => {
 </div>
 <div className="flex flex-col gap-2">
 <h3 className="text-slate-900 text-xl font-bold">3. C'est fait</h3>
-<p className="text-slate-600 text-sm leading-normal">Le Taskeur arrive avec ses outils et monte vos meubles. Payez en toute sécurité via l'app.</p>
+<p className="text-slate-600 text-sm leading-normal">Le Taskeur arrive avec ses outils et monte vos meubles. Payez en toute sÃ©curitÃ© via l'app.</p>
 </div>
 </div>
 </div>
@@ -100,7 +100,7 @@ const DTailsDuServiceMontageDeMeubles = () => {
 {/*  Pricing & Details  */}
 <section className="py-12 bg-slate-50 rounded-2xl p-8 mb-12">
 <div className="max-w-3xl">
-<h2 className="text-slate-900 text-3xl font-bold leading-tight mb-4">Tarification et Détails</h2>
+<h2 className="text-slate-900 text-3xl font-bold leading-tight mb-4">Tarification et DÃ©tails</h2>
 <p className="text-slate-600 mb-8">Nous offrons une tarification transparente pour tous vos besoins de montage.</p>
 <div className="space-y-4">
 <div className="flex items-center justify-between p-4 bg-white rounded-lg shadow-sm border border-slate-100">
@@ -108,21 +108,21 @@ const DTailsDuServiceMontageDeMeubles = () => {
 <span className="material-symbols-outlined text-primary">schedule</span>
 <span className="font-medium">Taux horaire moyen</span>
 </div>
-<span className="text-primary font-bold">À partir de 35€ / h</span>
+<span className="text-primary font-bold">Ã€ partir de 35â‚¬ / h</span>
 </div>
 <div className="flex items-center justify-between p-4 bg-white rounded-lg shadow-sm border border-slate-100">
 <div className="flex items-center gap-3">
 <span className="material-symbols-outlined text-primary">package_2</span>
 <span className="font-medium">Forfait Commode / Petit Meuble</span>
 </div>
-<span className="text-primary font-bold">Dès 45€</span>
+<span className="text-primary font-bold">DÃ¨s 45â‚¬</span>
 </div>
 <div className="flex items-center justify-between p-4 bg-white rounded-lg shadow-sm border border-slate-100">
 <div className="flex items-center gap-3">
 <span className="material-symbols-outlined text-primary">dresser</span>
 <span className="font-medium">Forfait Grande Armoire (3+ portes)</span>
 </div>
-<span className="text-primary font-bold">Dès 120€</span>
+<span className="text-primary font-bold">DÃ¨s 120â‚¬</span>
 </div>
 </div>
 </div>
@@ -150,10 +150,10 @@ const DTailsDuServiceMontageDeMeubles = () => {
 </div>
 </div>
 </div>
-<p className="text-slate-600 text-sm mb-4 line-clamp-2">"Expert en montage IKEA avec plus de 5 ans d'expérience. Rapide et soigneux."</p>
+<p className="text-slate-600 text-sm mb-4 line-clamp-2">"Expert en montage IKEA avec plus de 5 ans d'expÃ©rience. Rapide et soigneux."</p>
 <div className="flex items-center justify-between pt-4 border-t border-slate-100">
-<span className="font-bold text-primary">38€ / h</span>
-<button className="bg-primary text-white px-4 py-2 rounded-lg text-sm font-bold hover:bg-primary/90">Réserver</button>
+<span className="font-bold text-primary">38â‚¬ / h</span>
+<button className="bg-primary text-white px-4 py-2 rounded-lg text-sm font-bold hover:bg-primary/90">RÃ©server</button>
 </div>
 </div>
 </div>
@@ -171,10 +171,10 @@ const DTailsDuServiceMontageDeMeubles = () => {
 </div>
 </div>
 </div>
-<p className="text-slate-600 text-sm mb-4 line-clamp-2">"Polyvalente et équipée de tous les outils nécessaires. Spécialiste dressings."</p>
+<p className="text-slate-600 text-sm mb-4 line-clamp-2">"Polyvalente et Ã©quipÃ©e de tous les outils nÃ©cessaires. SpÃ©cialiste dressings."</p>
 <div className="flex items-center justify-between pt-4 border-t border-slate-100">
-<span className="font-bold text-primary">42€ / h</span>
-<button className="bg-primary text-white px-4 py-2 rounded-lg text-sm font-bold hover:bg-primary/90">Réserver</button>
+<span className="font-bold text-primary">42â‚¬ / h</span>
+<button className="bg-primary text-white px-4 py-2 rounded-lg text-sm font-bold hover:bg-primary/90">RÃ©server</button>
 </div>
 </div>
 </div>
@@ -192,10 +192,10 @@ const DTailsDuServiceMontageDeMeubles = () => {
 </div>
 </div>
 </div>
-<p className="text-slate-600 text-sm mb-4 line-clamp-2">"Ponctuel et efficace. Je peux également fixer vos meubles au mur pour la sécurité."</p>
+<p className="text-slate-600 text-sm mb-4 line-clamp-2">"Ponctuel et efficace. Je peux Ã©galement fixer vos meubles au mur pour la sÃ©curitÃ©."</p>
 <div className="flex items-center justify-between pt-4 border-t border-slate-100">
-<span className="font-bold text-primary">35€ / h</span>
-<button className="bg-primary text-white px-4 py-2 rounded-lg text-sm font-bold hover:bg-primary/90">Réserver</button>
+<span className="font-bold text-primary">35â‚¬ / h</span>
+<button className="bg-primary text-white px-4 py-2 rounded-lg text-sm font-bold hover:bg-primary/90">RÃ©server</button>
 </div>
 </div>
 </div>
@@ -203,7 +203,7 @@ const DTailsDuServiceMontageDeMeubles = () => {
 </section>
 {/*  FAQ  */}
 <section className="py-12 border-t border-slate-200">
-<h2 className="text-slate-900 text-3xl font-bold mb-8">Questions fréquentes</h2>
+<h2 className="text-slate-900 text-3xl font-bold mb-8">Questions frÃ©quentes</h2>
 <div className="space-y-4 max-w-3xl">
 <details className="group bg-white border border-slate-200 rounded-lg">
 <summary className="flex items-center justify-between p-4 cursor-pointer font-bold">
@@ -211,7 +211,7 @@ const DTailsDuServiceMontageDeMeubles = () => {
                                     <span className="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
 </summary>
 <div className="px-4 pb-4 text-slate-600">
-                                    Nos experts peuvent monter tout type de mobilier : lits, armoires, bureaux, bibliothèques, cuisines, et meubles de jardin de toutes les marques courantes (IKEA, But, Leroy Merlin, etc.).
+                                    Nos experts peuvent monter tout type de mobilier : lits, armoires, bureaux, bibliothÃ¨ques, cuisines, et meubles de jardin de toutes les marques courantes (IKEA, But, Leroy Merlin, etc.).
                                 </div>
 </details>
 <details className="group bg-white border border-slate-200 rounded-lg">
@@ -220,16 +220,16 @@ const DTailsDuServiceMontageDeMeubles = () => {
                                     <span className="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
 </summary>
 <div className="px-4 pb-4 text-slate-600">
-                                    Oui, tous nos monteurs professionnels viennent équipés d'une boîte à outils complète comprenant visseuses, marteaux, niveaux et clés nécessaires.
+                                    Oui, tous nos monteurs professionnels viennent Ã©quipÃ©s d'une boÃ®te Ã  outils complÃ¨te comprenant visseuses, marteaux, niveaux et clÃ©s nÃ©cessaires.
                                 </div>
 </details>
 <details className="group bg-white border border-slate-200 rounded-lg">
 <summary className="flex items-center justify-between p-4 cursor-pointer font-bold">
-                                    Que faire si une pièce est manquante dans mon colis ?
+                                    Que faire si une piÃ¨ce est manquante dans mon colis ?
                                     <span className="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
 </summary>
 <div className="px-4 pb-4 text-slate-600">
-                                    Le Taskeur vous informera immédiatement. S'il s'agit d'une vis standard, il est possible qu'il en ait une de rechange. Sinon, vous devrez contacter le service client du revendeur.
+                                    Le Taskeur vous informera immÃ©diatement. S'il s'agit d'une vis standard, il est possible qu'il en ait une de rechange. Sinon, vous devrez contacter le service client du revendeur.
                                 </div>
 </details>
 </div>
@@ -247,7 +247,7 @@ const DTailsDuServiceMontageDeMeubles = () => {
 </svg>
 <span className="text-xl font-bold text-slate-900">TaskService</span>
 </div>
-<p className="text-slate-500 max-w-xs">Simplifiez votre quotidien en déléguant vos tâches ménagères et bricolage à des experts de confiance.</p>
+<p className="text-slate-500 max-w-xs">Simplifiez votre quotidien en dÃ©lÃ©guant vos tÃ¢ches mÃ©nagÃ¨res et bricolage Ã  des experts de confiance.</p>
 <div className="flex gap-4">
 <a className="text-slate-400 hover:text-primary transition-colors" href="#">
 <span className="material-symbols-outlined">social_leaderboard</span>
@@ -260,9 +260,9 @@ const DTailsDuServiceMontageDeMeubles = () => {
 <div>
 <h4 className="font-bold mb-4">Plateforme</h4>
 <ul className="space-y-2 text-slate-500 text-sm">
-<li><a className="hover:text-primary" href="#">À propos</a></li>
-<li><a className="hover:text-primary" href="#">Comment ça marche</a></li>
-<li><a className="hover:text-primary" href="#">Sécurité</a></li>
+<li><a className="hover:text-primary" href="#">Ã€ propos</a></li>
+<li><a className="hover:text-primary" href="#">Comment Ã§a marche</a></li>
+<li><a className="hover:text-primary" href="#">SÃ©curitÃ©</a></li>
 <li><a className="hover:text-primary" href="#">Avis clients</a></li>
 </ul>
 </div>
@@ -270,15 +270,15 @@ const DTailsDuServiceMontageDeMeubles = () => {
 <h4 className="font-bold mb-4">Langue</h4>
 <div className="flex flex-col gap-2">
 <select className="bg-slate-50 border border-slate-200 rounded-lg text-sm px-3 py-2 outline-none focus:ring-1 focus:ring-primary">
-<option selected="" value="fr">Français</option>
+<option selected="" value="fr">FranÃ§ais</option>
 <option value="en">English</option>
-<option value="ar">Ø§Ù„Ø¹Ø±Ø¨ÙŠØ©</option>
+<option value="ar">Ã˜Â§Ã™â€žÃ˜Â¹Ã˜Â±Ã˜Â¨Ã™Å Ã˜Â©</option>
 </select>
 </div>
 </div>
 </div>
 <div className="max-w-[1200px] mx-auto mt-12 pt-8 border-t border-slate-100 text-center text-slate-400 text-sm">
-                © 2024 TaskService. Tous droits réservés.
+                Â© 2024 TaskService. Tous droits rÃ©servÃ©s.
             </div>
 </footer>
 </div>
@@ -289,3 +289,4 @@ const DTailsDuServiceMontageDeMeubles = () => {
 };
 
 export default DTailsDuServiceMontageDeMeubles;
+

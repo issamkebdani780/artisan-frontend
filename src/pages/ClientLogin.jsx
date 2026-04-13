@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import apiService from '../services/api';
 
@@ -78,7 +78,7 @@ const ClientLogin = () => {
                   type="password" 
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  placeholder="••••••••" 
+                  placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢" 
                   required
                   className="w-full bg-slate-100 border-2 border-transparent rounded-xl py-5 pl-14 pr-6 text-lg text-slate-900 focus:ring-0 focus:border-blue-500 focus:bg-white transition-all outline-none" 
                 />
@@ -90,8 +90,8 @@ const ClientLogin = () => {
                 <input type="checkbox" className="w-5 h-5 rounded border-slate-300 text-blue-600 focus:ring-blue-600 transition-all" />
                 <span className="text-base text-slate-500 group-hover:text-slate-900 transition-colors">Se souvenir de moi</span>
               </label>
-              <Link to="/forgot-password" title="Réinitialiser mon mot de passe" className="text-base font-semibold text-blue-600 hover:text-blue-700 hover:underline underline-offset-8 transition-colors">
-                Mot de passe oublié ?
+              <Link to="/forgot-password" title="RÃ©initialiser mon mot de passe" className="text-base font-semibold text-blue-600 hover:text-blue-700 hover:underline underline-offset-8 transition-colors">
+                Mot de passe oubliÃ© ?
               </Link>
             </div>
             
@@ -115,7 +115,7 @@ const ClientLogin = () => {
             <p className="text-center text-slate-500 text-lg transition-colors">
               Pas encore de compte ?{' '}
               <Link to="/register/client" className="text-blue-600 font-bold hover:text-blue-700 hover:underline underline-offset-8 transition-colors">
-                Créer un profil client
+                CrÃ©er un profil client
               </Link>
             </p>
           </div>
@@ -141,3 +141,4 @@ const ClientLogin = () => {
 };
 
 export default ClientLogin;
+

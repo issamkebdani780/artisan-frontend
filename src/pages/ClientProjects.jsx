@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+﻿import React, { useEffect, useState } from 'react';
 import apiService from '../services/api';
 import MainLayout from '../layouts/MainLayout';
 import PaymentModal from '../components/PaymentModal';
@@ -66,7 +66,7 @@ const ClientProjects = () => {
   }, []);
 
   const handleDeleteProject = async (project) => {
-    if (!window.confirm('Supprimer cette demande définitivement ?')) return;
+    if (!window.confirm('Supprimer cette demande dÃ©finitivement ?')) return;
     try {
       if (project.type === 'devis') {
         const id = project.id.replace('d-', '');
@@ -86,11 +86,11 @@ const ClientProjects = () => {
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-end gap-4 mb-10">
             <div>
-              <h1 className="text-3xl font-black text-slate-900 tracking-tight">Mes Demandes & Réservations</h1>
-              <p className="text-slate-500 mt-2">Suivez l'état de vos interventions en temps réel.</p>
+              <h1 className="text-3xl font-black text-slate-900 tracking-tight">Mes Demandes & RÃ©servations</h1>
+              <p className="text-slate-500 mt-2">Suivez l'Ã©tat de vos interventions en temps rÃ©el.</p>
             </div>
             <a href="/search" className="bg-blue-600 text-white px-8 py-3 rounded-xl font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-600/20">
-              Réserver un autre service
+              RÃ©server un autre service
             </a>
           </div>
 
@@ -122,13 +122,13 @@ const ClientProjects = () => {
                       <td colSpan="5" className="px-8 py-20 text-center">
                         <div className="flex flex-col items-center gap-4">
                           <span className="material-symbols-outlined text-5xl text-slate-200">folder_open</span>
-                          <p className="text-slate-500 font-medium">Vous n'avez pas encore de réservations en cours.</p>
+                          <p className="text-slate-500 font-medium">Vous n'avez pas encore de rÃ©servations en cours.</p>
                         </div>
                       </td>
                     </tr>
                   ) : (
                     projects.map((project) => {
-                      const displayStatus = (!project.artisan_id && (project.status === 'accepté' || project.status === 'confirmed')) ? 'en attente' : project.status;
+                      const displayStatus = (!project.artisan_id && (project.status === 'acceptÃ©' || project.status === 'confirmed')) ? 'en attente' : project.status;
                       return (
                       <tr key={project.id} className="hover:bg-slate-50/50 transition-colors group">
                         <td className="px-8 py-6">
@@ -147,20 +147,20 @@ const ClientProjects = () => {
                         </td>
                         <td className="px-8 py-6 font-black text-slate-900">{project.total_price} DA</td>
                         <td className="px-8 py-6">
-                          <span className={`inline-flex items-center gap-1 px-4 py-1.5 rounded-full text-[10px] font-black uppercase shadow-xs whitespace-nowrap w-fit ${displayStatus === 'confirmed' || displayStatus === 'accepté' ? 'bg-blue-100 text-blue-700' :
-                                displayStatus === 'completed' || displayStatus === 'terminé' ? 'bg-emerald-100 text-emerald-700' :
-                                  displayStatus === 'cancelled' || displayStatus === 'refusé' || displayStatus === 'annulé' ? 'bg-red-100 text-red-700' :
+                          <span className={`inline-flex items-center gap-1 px-4 py-1.5 rounded-full text-[10px] font-black uppercase shadow-xs whitespace-nowrap w-fit ${displayStatus === 'confirmed' || displayStatus === 'acceptÃ©' ? 'bg-blue-100 text-blue-700' :
+                                displayStatus === 'completed' || displayStatus === 'terminÃ©' ? 'bg-emerald-100 text-emerald-700' :
+                                  displayStatus === 'cancelled' || displayStatus === 'refusÃ©' || displayStatus === 'annulÃ©' ? 'bg-red-100 text-red-700' :
                                     'bg-orange-100 text-orange-700'
                             }`}>
-                            {displayStatus === 'pending' || displayStatus === 'en attente' ? '🔍' :
-                              displayStatus === 'confirmed' || displayStatus === 'accepté' ? '✅' :
-                                displayStatus === 'completed' || displayStatus === 'terminé' ? '✅' : '❌'}
+                            {displayStatus === 'pending' || displayStatus === 'en attente' ? 'ðŸ”' :
+                              displayStatus === 'confirmed' || displayStatus === 'acceptÃ©' ? 'âœ…' :
+                                displayStatus === 'completed' || displayStatus === 'terminÃ©' ? 'âœ…' : 'âŒ'}
                             {displayStatus}
                           </span>
                         </td>
                         <td className="px-8 py-6 text-right">
                           <div className="flex items-center justify-end gap-2">
-                             {(project.status === 'accepté' || (project.status === 'confirmed' && project.type === 'booking')) && project.artisan_id && (
+                             {(project.status === 'acceptÃ©' || (project.status === 'confirmed' && project.type === 'booking')) && project.artisan_id && (
                                 <button
                                   onClick={() => {
                                     setSelectedProject(project);
@@ -172,18 +172,19 @@ const ClientProjects = () => {
                                   Payer
                                 </button>
                              )}
-                            <button
-                              onClick={() => {
-                                setChatUser({ id: project.artisan_id, name: project.artisan_name });
-                                setSelectedProject(project);
-                                setIsChatOpen(true);
-                              }}
-                              disabled={!project.artisan_id}
-                              className="flex items-center gap-1.5 px-4 py-2 bg-blue-50 text-blue-600 rounded-xl font-bold text-xs hover:bg-blue-100 active:scale-95 transition-all disabled:opacity-50"
-                            >
-                              <span className="material-symbols-outlined text-sm">message</span>
-                              Messages
-                            </button>
+                            {project.artisan_id && (
+                              <button
+                                onClick={() => {
+                                  setChatUser({ id: project.artisan_id, name: project.artisan_name });
+                                  setSelectedProject(project);
+                                  setIsChatOpen(true);
+                                }}
+                                className="flex items-center gap-1.5 px-4 py-2 bg-blue-50 text-blue-600 rounded-xl font-bold text-xs hover:bg-blue-100 active:scale-95 transition-all"
+                              >
+                                <span className="material-symbols-outlined text-sm">message</span>
+                                Messages
+                              </button>
+                            )}
                             <button
                               onClick={() => handleDeleteProject(project)}
                               title="Supprimer"
@@ -228,3 +229,4 @@ const ClientProjects = () => {
 };
 
 export default ClientProjects;
+

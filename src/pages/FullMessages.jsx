@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import apiService from '../services/api';
 import ClientLayout from '../layouts/ClientLayout';
 import ArtisanLayout from '../layouts/ArtisanLayout';
@@ -38,7 +38,7 @@ const FullMessages = () => {
       <div className="p-8 md:p-12 flex flex-col flex-1 bg-slate-50/20 font-['Outfit',sans-serif]">
         <div className="mb-12">
           <h2 className="text-4xl font-black text-slate-900 uppercase tracking-tight">Messages</h2>
-          <p className="text-slate-500 mt-2 font-bold uppercase tracking-widest text-xs">Gérez vos discussions avec vos {user?.role === 'artisan' ? 'clients' : 'artisans'}</p>
+          <p className="text-slate-500 mt-2 font-bold uppercase tracking-widest text-xs">GÃ©rez vos discussions avec vos {user?.role === 'artisan' ? 'clients' : 'artisans'}</p>
         </div>
 
         {loading ? (
@@ -53,7 +53,7 @@ const FullMessages = () => {
             </div>
             <h3 className="text-2xl font-black text-slate-900 uppercase tracking-tight mb-2">Aucune conversation</h3>
             <p className="text-slate-500 font-bold uppercase tracking-widest text-[10px] max-w-xs mx-auto mb-10 leading-relaxed text-center">
-              Vous n'avez pas encore de discussions actives. Les conversations s'afficheront ici une fois que vous aurez contacté un {user?.role === 'artisan' ? 'client' : 'artisan'}.
+              Vous n'avez pas encore de discussions actives. Les conversations s'afficheront ici une fois que vous aurez contactÃ© un {user?.role === 'artisan' ? 'client' : 'artisan'}.
             </p>
           </div>
         ) : (
@@ -85,7 +85,7 @@ const FullMessages = () => {
                       )}
                     </div>
                     <p className="text-slate-500 text-xs truncate font-medium">
-                      {convo.last_message || "Démarrer la discussion..."}
+                      {convo.last_message || "DÃ©marrer la discussion..."}
                     </p>
                   </div>
                 </div>
@@ -119,3 +119,4 @@ const FullMessages = () => {
 };
 
 export default FullMessages;
+

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+﻿import React, { useState, useEffect, useCallback } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import SearchFilters from '../components/SearchFilters';
 import ExpertCard from '../components/ExpertCard';
@@ -42,17 +42,17 @@ const FindExpert = () => {
 
       if (activeFilters.selectedCategories.length > 1) {
         const categoryMap = {
-            'Menuiserie et Bois': ['Menuisier', 'Presseur', 'Décorateur bois', 'fenêtres en bois'],
+            'Menuiserie et Bois': ['Menuisier', 'Presseur', 'DÃ©corateur bois', 'fenÃªtres en bois'],
             'Ferronnerie et Soudure': ['Ferronnier', 'Soudeur', 'Chaudronnier'],
-            'Plomberie et Réseaux': ['Plombier', 'Monteur de réseaux', 'tuyauterie'],
-            'Électricité et Énergie': ['Électricien', 'solaire', 'câbles', 'tableaux électriques'],
-            'Peinture et Plâtre': ['Peinture', 'Plâtrier', 'Marbrier', 'Vernisseur'],
-            'Maçonnerie et Finitions': ['Maçon', 'Carreleur', 'Crépisseur', 'isolation'],
-            'Mécanique et Machines': ['Mécanicien', 'moteurs', 'électrogènes'],
-            'Couture et Cuir': ['Tailleur', 'Couturière', 'Rapiéceur', 'Cordonnier', 'Maroquinier'],
+            'Plomberie et RÃ©seaux': ['Plombier', 'Monteur de rÃ©seaux', 'tuyauterie'],
+            'Ã‰lectricitÃ© et Ã‰nergie': ['Ã‰lectricien', 'solaire', 'cÃ¢bles', 'tableaux Ã©lectriques'],
+            'Peinture et PlÃ¢tre': ['Peinture', 'PlÃ¢trier', 'Marbrier', 'Vernisseur'],
+            'MaÃ§onnerie et Finitions': ['MaÃ§on', 'Carreleur', 'CrÃ©pisseur', 'isolation'],
+            'MÃ©canique et Machines': ['MÃ©canicien', 'moteurs', 'Ã©lectrogÃ¨nes'],
+            'Couture et Cuir': ['Tailleur', 'CouturiÃ¨re', 'RapiÃ©ceur', 'Cordonnier', 'Maroquinier'],
             'Verre et Miroiterie': ['verre', 'Verrier', 'Miroitier', 'Vitrier'],
-            'Métiers alimentaires artisanaux': ['Boulanger', 'Pâtissier', 'Fromager', 'Apiculteur', 'conserveur'],
-            'Jardinage et Espaces Verts': ['Jardinier', 'espaces verts', 'jardins', 'irrigation', 'Élagueur', 'palmiers']
+            'MÃ©tiers alimentaires artisanaux': ['Boulanger', 'PÃ¢tissier', 'Fromager', 'Apiculteur', 'conserveur'],
+            'Jardinage et Espaces Verts': ['Jardinier', 'espaces verts', 'jardins', 'irrigation', 'Ã‰lagueur', 'palmiers']
         };
 
         results = results.filter(e =>
@@ -101,17 +101,17 @@ const FindExpert = () => {
             <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/4 w-[400px] h-[400px] bg-primary/5 rounded-full blur-3xl"></div>
             <div className="relative z-10 max-w-4xl">
               <h2 className="text-3xl md:text-6xl font-black mb-6 text-slate-900 leading-tight tracking-tight uppercase">
-                Trouvez l'expert <br /><span className="text-primary italic">idéal</span> pour vos projets
+                Trouvez l'expert <br /><span className="text-primary italic">idÃ©al</span> pour vos projets
               </h2>
               <p className="text-slate-500 mb-10 text-xl font-bold">
-                Plus de 1000 artisans qualifiés et vérifiés à votre service.
+                Plus de 1000 artisans qualifiÃ©s et vÃ©rifiÃ©s Ã  votre service.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 bg-white p-3 rounded-3xl shadow-2xl shadow-slate-200/50 border border-slate-100 transition-colors">
                 <div className="flex-2 flex items-center px-6 gap-4 border-b sm:border-b-0 sm:border-r border-slate-50">
                   <span className="material-symbols-outlined text-slate-300">search</span>
                   <input
                     type="text"
-                    placeholder="Plomberie, Peinture, Électricité..."
+                    placeholder="Plomberie, Peinture, Ã‰lectricitÃ©..."
                     className="w-full border-none focus:ring-0 bg-transparent text-slate-900 placeholder:text-slate-300 py-4 outline-none font-bold"
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
@@ -148,14 +148,14 @@ const FindExpert = () => {
           <div className="flex-1">
             <div className="flex items-center justify-between mb-8 pb-4 border-b border-slate-50">
               <h2 className="text-sm font-black text-slate-400 uppercase tracking-[0.2em]">
-                {loading ? 'Recherche...' : `${experts.length} expert${experts.length !== 1 ? 's' : ''} trouvé${experts.length !== 1 ? 's' : ''}`}
+                {loading ? 'Recherche...' : `${experts.length} expert${experts.length !== 1 ? 's' : ''} trouvÃ©${experts.length !== 1 ? 's' : ''}`}
               </h2>
               <div className="flex items-center gap-3">
                 <span className="text-[10px] font-black text-slate-300 uppercase tracking-widest">Trier par:</span>
                 <select className="text-xs font-black text-slate-600 bg-slate-50 px-4 py-2 rounded-xl border border-slate-100 focus:ring-0 cursor-pointer outline-none uppercase tracking-tight transition-colors">
-                  <option>Les mieux notés</option>
+                  <option>Les mieux notÃ©s</option>
                   <option>Prix croissant</option>
-                  <option>Disponibilité</option>
+                  <option>DisponibilitÃ©</option>
                 </select>
               </div>
             </div>
@@ -172,14 +172,14 @@ const FindExpert = () => {
                   <span className="material-symbols-outlined text-slate-200 text-5xl">person_search</span>
                 </div>
                 <div>
-                  <h3 className="text-2xl font-black text-slate-900 uppercase tracking-tight">Aucun artisan trouvé</h3>
+                  <h3 className="text-2xl font-black text-slate-900 uppercase tracking-tight">Aucun artisan trouvÃ©</h3>
                   <p className="text-slate-400 font-bold mt-2">Essayez d'ajuster vos filtres ou votre recherche.</p>
                 </div>
                 <button
                   onClick={() => { setFilters({ selectedCategories: [], minRating: null, maxPrice: 10000, onlyFavorites: false }); setSearchTerm(''); setLocation(''); }}
                   className="px-8 py-3 bg-white text-primary font-black uppercase tracking-widest text-[10px] rounded-xl border border-slate-100 shadow-lg hover:shadow-xl transition-all"
                 >
-                  Réinitialiser
+                  RÃ©initialiser
                 </button>
               </div>
             ) : (
@@ -197,3 +197,4 @@ const FindExpert = () => {
 };
 
 export default FindExpert;
+

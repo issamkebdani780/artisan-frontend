@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 
 const DetailsDuServiceNettoyageDeVitres = () => {
   return (
@@ -17,7 +17,7 @@ const DetailsDuServiceNettoyageDeVitres = () => {
 <defs><clippath id="clip0_6_330"><rect fill="white" height="48" width="48"></rect></clippath></defs>
 </svg>
 </div>
-<h2 className="text-slate-900 text-xl font-bold leading-tight tracking-tight">Éclat Cristal</h2>
+<h2 className="text-slate-900 text-xl font-bold leading-tight tracking-tight">Ã‰clat Cristal</h2>
 </div>
 <div className="flex gap-3">
 <button className="flex items-center justify-center rounded-lg h-10 bg-teal-50 text-primary px-3 transition-colors hover:bg-teal-100">
@@ -26,7 +26,7 @@ const DetailsDuServiceNettoyageDeVitres = () => {
 <button className="flex items-center justify-center rounded-lg h-10 bg-teal-50 text-primary px-3 transition-colors hover:bg-teal-100">
 <span className="material-symbols-outlined text-xl">favorite</span>
 </button>
-<button className="hidden md:flex items-center justify-center rounded-lg h-10 bg-primary text-white px-5 font-bold">Réserver</button>
+<button className="hidden md:flex items-center justify-center rounded-lg h-10 bg-primary text-white px-5 font-bold">RÃ©server</button>
 </div>
 </header>
 <main className="flex-1 max-w-5xl mx-auto w-full px-4 lg:px-0 py-8">
@@ -38,7 +38,7 @@ const DetailsDuServiceNettoyageDeVitres = () => {
 <div className="absolute bottom-0 left-0 p-8 z-20 w-full">
 <span className="bg-primary text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-4 inline-block">Service Premium</span>
 <h1 className="text-white text-4xl md:text-5xl font-black leading-tight mb-2">Nettoyage de Vitres Professionnel</h1>
-<p className="text-teal-50 text-lg max-w-2xl">Redonnez de la clarté à votre intérieur avec nos experts certifiés et notre équipement de pointe.</p>
+<p className="text-teal-50 text-lg max-w-2xl">Redonnez de la clartÃ© Ã  votre intÃ©rieur avec nos experts certifiÃ©s et notre Ã©quipement de pointe.</p>
 </div>
 </div>
 </div>
@@ -52,21 +52,21 @@ const DetailsDuServiceNettoyageDeVitres = () => {
                         </h2>
 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
 <div className="flex flex-col gap-2 rounded-xl p-6 border-2 border-teal-100 bg-white shadow-sm">
-<p className="text-slate-500 text-sm font-medium uppercase tracking-wider">Forfait Résidentiel</p>
-<p className="text-slate-900 text-3xl font-black">À partir de 5€ <span className="text-sm font-normal text-slate-500">/ vitre</span></p>
-<p className="text-slate-600 text-sm">Idéal pour les maisons individuelles et appartements. Nettoyage intérieur et extérieur inclus.</p>
+<p className="text-slate-500 text-sm font-medium uppercase tracking-wider">Forfait RÃ©sidentiel</p>
+<p className="text-slate-900 text-3xl font-black">Ã€ partir de 5â‚¬ <span className="text-sm font-normal text-slate-500">/ vitre</span></p>
+<p className="text-slate-600 text-sm">IdÃ©al pour les maisons individuelles et appartements. Nettoyage intÃ©rieur et extÃ©rieur inclus.</p>
 </div>
 <div className="flex flex-col gap-2 rounded-xl p-6 border-2 border-teal-100 bg-white shadow-sm">
 <p className="text-slate-500 text-sm font-medium uppercase tracking-wider">Service Commercial</p>
-<p className="text-slate-900 text-3xl font-black">45€ <span className="text-sm font-normal text-slate-500">/ heure</span></p>
-<p className="text-slate-600 text-sm">Parfait pour les bureaux et commerces. Équipe de 2 experts avec matériel haute pression.</p>
+<p className="text-slate-900 text-3xl font-black">45â‚¬ <span className="text-sm font-normal text-slate-500">/ heure</span></p>
+<p className="text-slate-600 text-sm">Parfait pour les bureaux et commerces. Ã‰quipe de 2 experts avec matÃ©riel haute pression.</p>
 </div>
 </div>
 </section>
 {/*  Specialized Tools  */}
 <section>
 <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
-<span className="material-symbols-outlined text-primary">construction</span> Équipement Spécialisé
+<span className="material-symbols-outlined text-primary">construction</span> Ã‰quipement SpÃ©cialisÃ©
                         </h2>
 <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
 <div className="text-center p-4">
@@ -74,34 +74,34 @@ const DetailsDuServiceNettoyageDeVitres = () => {
 <span className="material-symbols-outlined text-3xl">water_drop</span>
 </div>
 <h3 className="font-bold text-sm">Eau Pure H2O</h3>
-<p className="text-xs text-slate-500 mt-1">Séchage sans traces minérales</p>
+<p className="text-xs text-slate-500 mt-1">SÃ©chage sans traces minÃ©rales</p>
 </div>
 <div className="text-center p-4">
 <div className="w-16 h-16 bg-teal-100 text-primary rounded-full flex items-center justify-center mx-auto mb-3">
 <span className="material-symbols-outlined text-3xl">architecture</span>
 </div>
-<h3 className="font-bold text-sm">Perches Télescopiques</h3>
-<p className="text-xs text-slate-500 mt-1">Accès jusqu'à 20 mètres</p>
+<h3 className="font-bold text-sm">Perches TÃ©lescopiques</h3>
+<p className="text-xs text-slate-500 mt-1">AccÃ¨s jusqu'Ã  20 mÃ¨tres</p>
 </div>
 <div className="text-center p-4">
 <div className="w-16 h-16 bg-teal-100 text-primary rounded-full flex items-center justify-center mx-auto mb-3">
 <span className="material-symbols-outlined text-3xl">eco</span>
 </div>
 <h3 className="font-bold text-sm">Produits Bio</h3>
-<p className="text-xs text-slate-500 mt-1">100% biodégradables</p>
+<p className="text-xs text-slate-500 mt-1">100% biodÃ©gradables</p>
 </div>
 </div>
 </section>
 {/*  Safety Guarantees  */}
 <section className="bg-primary/10 rounded-xl p-8 border border-primary/20">
 <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
-<span className="material-symbols-outlined text-primary">verified_user</span> Garanties &amp; Sécurité
+<span className="material-symbols-outlined text-primary">verified_user</span> Garanties &amp; SÃ©curitÃ©
                         </h2>
 <div className="space-y-4">
 <div className="flex items-start gap-4">
 <span className="material-symbols-outlined text-primary mt-1">check_circle</span>
 <div>
-<h4 className="font-bold">Assurance Responsabilité Civile</h4>
+<h4 className="font-bold">Assurance ResponsabilitÃ© Civile</h4>
 <p className="text-slate-600 text-sm">Couverture totale contre tout dommage accidentel lors de l'intervention.</p>
 </div>
 </div>
@@ -109,14 +109,14 @@ const DetailsDuServiceNettoyageDeVitres = () => {
 <span className="material-symbols-outlined text-primary mt-1">check_circle</span>
 <div>
 <h4 className="font-bold">Satisfaction 100% Garantie</h4>
-<p className="text-slate-600 text-sm">Une trace oubliée ? Nous repassons gratuitement sous 24h.</p>
+<p className="text-slate-600 text-sm">Une trace oubliÃ©e ? Nous repassons gratuitement sous 24h.</p>
 </div>
 </div>
 <div className="flex items-start gap-4">
 <span className="material-symbols-outlined text-primary mt-1">check_circle</span>
 <div>
-<h4 className="font-bold">Personnel Certifié IRATA</h4>
-<p className="text-slate-600 text-sm">Techniciens formés aux travaux en hauteur et aux normes de sécurité strictes.</p>
+<h4 className="font-bold">Personnel CertifiÃ© IRATA</h4>
+<p className="text-slate-600 text-sm">Techniciens formÃ©s aux travaux en hauteur et aux normes de sÃ©curitÃ© strictes.</p>
 </div>
 </div>
 </div>
@@ -141,7 +141,7 @@ const DetailsDuServiceNettoyageDeVitres = () => {
 <span className="material-symbols-outlined text-sm">star</span>
 <span className="material-symbols-outlined text-sm">star</span>
 </div>
-<p className="text-[10px] text-slate-500 uppercase font-bold tracking-wider">Expert Résidentiel</p>
+<p className="text-[10px] text-slate-500 uppercase font-bold tracking-wider">Expert RÃ©sidentiel</p>
 </div>
 <span className="material-symbols-outlined text-primary">chat_bubble</span>
 </div>
@@ -157,7 +157,7 @@ const DetailsDuServiceNettoyageDeVitres = () => {
 <span className="material-symbols-outlined text-sm">star</span>
 <span className="material-symbols-outlined text-sm">star_half</span>
 </div>
-<p className="text-[10px] text-slate-500 uppercase font-bold tracking-wider">Spécialiste Vitrines</p>
+<p className="text-[10px] text-slate-500 uppercase font-bold tracking-wider">SpÃ©cialiste Vitrines</p>
 </div>
 <span className="material-symbols-outlined text-primary">chat_bubble</span>
 </div>
@@ -179,7 +179,7 @@ const DetailsDuServiceNettoyageDeVitres = () => {
 </div>
 </div>
 <button className="w-full mt-8 py-3 bg-primary hover:bg-teal-700 text-white font-bold rounded-lg transition-all flex items-center justify-center gap-2">
-                            Réserver maintenant <span className="material-symbols-outlined">arrow_forward</span>
+                            RÃ©server maintenant <span className="material-symbols-outlined">arrow_forward</span>
 </button>
 </div>
 </aside>
@@ -190,17 +190,17 @@ const DetailsDuServiceNettoyageDeVitres = () => {
 <div className="col-span-1 md:col-span-2">
 <div className="flex items-center gap-2 text-white mb-4">
 <span className="material-symbols-outlined text-primary">diamond</span>
-<span className="text-xl font-bold">Éclat Cristal</span>
+<span className="text-xl font-bold">Ã‰clat Cristal</span>
 </div>
 <p className="text-sm">Leader du nettoyage de vitres professionnel depuis 2012. Nous intervenons partout en France pour les particuliers et les professionnels.</p>
 </div>
 <div>
 <h4 className="text-white font-bold mb-4">Services</h4>
 <ul className="text-sm space-y-2">
-<li><a className="hover:text-primary" href="#">Nettoyage Résidentiel</a></li>
+<li><a className="hover:text-primary" href="#">Nettoyage RÃ©sidentiel</a></li>
 <li><a className="hover:text-primary" href="#">Bureaux &amp; Commerces</a></li>
 <li><a className="hover:text-primary" href="#">Travaux en Hauteur</a></li>
-<li><a className="hover:text-primary" href="#">Entretien Vérandas</a></li>
+<li><a className="hover:text-primary" href="#">Entretien VÃ©randas</a></li>
 </ul>
 </div>
 <div>
@@ -213,7 +213,7 @@ const DetailsDuServiceNettoyageDeVitres = () => {
 </div>
 </div>
 <div className="max-w-5xl mx-auto border-t border-slate-800 mt-12 pt-8 text-xs text-center">
-                © 2024 Éclat Cristal. Tous droits réservés.
+                Â© 2024 Ã‰clat Cristal. Tous droits rÃ©servÃ©s.
             </div>
 </footer>
 </div>
@@ -224,3 +224,4 @@ const DetailsDuServiceNettoyageDeVitres = () => {
 };
 
 export default DetailsDuServiceNettoyageDeVitres;
+

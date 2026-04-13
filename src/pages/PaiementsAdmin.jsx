@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import AdminLayout from '../layouts/AdminLayout';
 import apiService from '../services/api';
 
@@ -78,7 +78,7 @@ const PaiementsAdmin = () => {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div className="space-y-1">
             <h2 className="text-3xl font-black tracking-tight text-slate-900">Flux Financiers</h2>
-            <p className="text-slate-500 font-medium">Surveillance globale des transactions et de la performance économique.</p>
+            <p className="text-slate-500 font-medium">Surveillance globale des transactions et de la performance Ã©conomique.</p>
           </div>
           <div className="flex gap-4">
             <button 
@@ -90,7 +90,7 @@ const PaiementsAdmin = () => {
             </button>
 
             <button 
-              onClick={() => alert('Séquence d\'audit lancée. Le rapport sera généré sous peu.')}
+              onClick={() => alert('SÃ©quence d\'audit lancÃ©e. Le rapport sera gÃ©nÃ©rÃ© sous peu.')}
               className="bg-primary text-white px-8 py-3 rounded-2xl font-black text-sm shadow-lg shadow-primary/30 hover:brightness-110 transition-all"
             >
               Audit Complet
@@ -106,7 +106,7 @@ const PaiementsAdmin = () => {
             <p className="text-[10px] font-black tracking-widest text-slate-400 uppercase mb-4">REVENU GLOBAL BRUT</p>
             <div className="flex items-baseline gap-4">
               <h3 className="text-4xl font-black tracking-tighter text-slate-900">
-                {loading ? '...' : `${stats.totalRevenue.toLocaleString()} €`}
+                {loading ? '...' : `${stats.totalRevenue.toLocaleString()} â‚¬`}
               </h3>
               <span className="flex items-center text-xs font-black text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full">
                 <span className="material-symbols-outlined text-sm mr-1">trending_up</span>
@@ -130,7 +130,7 @@ const PaiementsAdmin = () => {
               <span className="text-xs text-slate-400 font-bold uppercase tracking-widest">En attente</span>
             </div>
             <div className="mt-8 flex justify-between items-center opacity-40 group-hover:opacity-100 transition-all">
-              <p className="text-[10px] font-bold text-slate-400">PRÊT POUR AUDIT</p>
+              <p className="text-[10px] font-bold text-slate-400">PRÃŠT POUR AUDIT</p>
               <div className="size-10 rounded-xl bg-amber-50 flex items-center justify-center text-amber-600">
                 <span className="material-symbols-outlined">hourglass_empty</span>
               </div>
@@ -138,13 +138,13 @@ const PaiementsAdmin = () => {
           </div>
 
           <div className="bg-white p-8 rounded-[2.5rem] shadow-xl shadow-slate-200/50 border border-white/50 relative overflow-hidden group">
-            <p className="text-[10px] font-black tracking-widest text-slate-400 uppercase mb-4">FIABILITÉ DU RÉSEAU</p>
+            <p className="text-[10px] font-black tracking-widest text-slate-400 uppercase mb-4">FIABILITÃ‰ DU RÃ‰SEAU</p>
             <div className="flex items-baseline gap-4">
               <h3 className="text-4xl font-black tracking-tighter text-slate-900">{stats.successRate}%</h3>
               <span className="text-xs text-slate-400 font-bold uppercase tracking-widest">Global</span>
             </div>
             <div className="mt-8 flex justify-between items-center opacity-40 group-hover:opacity-100 transition-all">
-              <p className="text-[10px] font-bold text-slate-400">STABILITÉ OPÉRATIONNELLE</p>
+              <p className="text-[10px] font-bold text-slate-400">STABILITÃ‰ OPÃ‰RATIONNELLE</p>
               <div className="size-10 rounded-xl bg-emerald-50 flex items-center justify-center text-emerald-600">
                 <span className="material-symbols-outlined">verified</span>
               </div>
@@ -156,8 +156,8 @@ const PaiementsAdmin = () => {
         <div className="bg-white rounded-[2.5rem] shadow-xl shadow-slate-200/50 border border-white/50 overflow-hidden">
           <div className="p-10 border-b border-slate-100 flex justify-between items-center">
             <div>
-              <h4 className="text-2xl font-black text-slate-900 tracking-tight">Dernières Transactions</h4>
-              <p className="text-slate-400 font-medium text-sm mt-1">Historique détaillé des flux par réservation</p>
+              <h4 className="text-2xl font-black text-slate-900 tracking-tight">DerniÃ¨res Transactions</h4>
+              <p className="text-slate-400 font-medium text-sm mt-1">Historique dÃ©taillÃ© des flux par rÃ©servation</p>
             </div>
             <button className="p-3 rounded-2xl bg-slate-50 text-slate-400 hover:text-primary transition-colors">
               <span className="material-symbols-outlined">filter_list</span>
@@ -182,7 +182,7 @@ const PaiementsAdmin = () => {
                     </tr>
                   ))
                 ) : payments.length === 0 ? (
-                  <tr><td colSpan="5" className="text-center py-20 text-slate-400 font-bold italic">Aucune transaction trouvée</td></tr>
+                  <tr><td colSpan="5" className="text-center py-20 text-slate-400 font-bold italic">Aucune transaction trouvÃ©e</td></tr>
                 ) : currentItems.map((payment) => (
 
                   <tr key={payment.id} className="hover:bg-slate-50/50 transition-colors group">
@@ -202,7 +202,7 @@ const PaiementsAdmin = () => {
                       </div>
                     </td>
                     <td className="px-10 py-6 text-sm font-black text-slate-900 text-right">
-                      {Number(payment.total_price || 0).toLocaleString()} €
+                      {Number(payment.total_price || 0).toLocaleString()} â‚¬
                     </td>
                     <td className="px-10 py-6">
                       <span className={`px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-tighter ${
@@ -210,7 +210,7 @@ const PaiementsAdmin = () => {
                         payment.status === 'pending' ? 'bg-amber-100 text-amber-700' : 
                         'bg-rose-100 text-rose-700'
                       }`}>
-                         {payment.status === 'confirmed' || payment.status === 'completed' ? 'Succès' : payment.status === 'pending' ? 'En attente' : 'Annulé'}
+                         {payment.status === 'confirmed' || payment.status === 'completed' ? 'SuccÃ¨s' : payment.status === 'pending' ? 'En attente' : 'AnnulÃ©'}
                       </span>
                     </td>
                     <td className="px-10 py-6 text-right">
@@ -239,7 +239,7 @@ const PaiementsAdmin = () => {
           {totalPages > 1 && (
             <div className="px-10 py-6 bg-slate-50/50 border-t border-slate-100 flex items-center justify-between">
               <p className="text-xs font-bold text-slate-500 uppercase tracking-widest">
-                Affichage de {indexOfFirstItem + 1} à {Math.min(indexOfLastItem, payments.length)} sur {payments.length}
+                Affichage de {indexOfFirstItem + 1} Ã  {Math.min(indexOfLastItem, payments.length)} sur {payments.length}
               </p>
               <div className="flex items-center gap-2">
                 <button
@@ -283,10 +283,10 @@ const PaiementsAdmin = () => {
           <div className="flex-1">
             <h5 className="text-lg font-black tracking-tight mb-2">IA Insight</h5>
             <p className="text-sm text-blue-50 font-medium leading-relaxed opacity-90">
-              Le volume de transactions est stable. <span className="font-black text-white underline">Vérification</span> des paiements en attente recommandée.
+              Le volume de transactions est stable. <span className="font-black text-white underline">VÃ©rification</span> des paiements en attente recommandÃ©e.
             </p>
             <div className="mt-4 flex items-center gap-2 group-hover:translate-x-1 transition-transform">
-              <span className="text-xs font-black uppercase tracking-widest">Détails de l'analyse</span>
+              <span className="text-xs font-black uppercase tracking-widest">DÃ©tails de l'analyse</span>
               <span className="material-symbols-outlined text-sm">arrow_forward</span>
             </div>
           </div>
@@ -297,3 +297,4 @@ const PaiementsAdmin = () => {
 };
 
 export default PaiementsAdmin;
+

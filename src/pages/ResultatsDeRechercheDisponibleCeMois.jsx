@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 
 const ResultatsDeRechercheDisponibleCeMois = () => {
   return (
@@ -46,13 +46,13 @@ const ResultatsDeRechercheDisponibleCeMois = () => {
 <div className="bg-white rounded-xl border border-slate-200 p-6 shadow-sm">
 <div className="flex items-center justify-between mb-6">
 <h3 className="text-lg font-bold">Filtres</h3>
-<button className="text-primary text-xs font-bold hover:underline">Réinitialiser</button>
+<button className="text-primary text-xs font-bold hover:underline">RÃ©initialiser</button>
 </div>
 {/*  Availability Filter  */}
 <div className="space-y-4 mb-8">
 <div className="flex items-center gap-2 text-slate-900 font-bold mb-3">
 <span className="material-symbols-outlined text-primary">calendar_month</span>
-<span className="text-sm uppercase tracking-wider">Disponibilité</span>
+<span className="text-sm uppercase tracking-wider">DisponibilitÃ©</span>
 </div>
 <div className="space-y-2">
 <label className="flex items-center gap-3 p-3 rounded-lg border-2 border-primary bg-primary/5 cursor-pointer transition-all">
@@ -65,7 +65,7 @@ const ResultatsDeRechercheDisponibleCeMois = () => {
 </label>
 <label className="flex items-center gap-3 p-3 rounded-lg border border-slate-200 hover:bg-slate-50 cursor-pointer transition-all">
 <input className="w-4 h-4 text-primary focus:ring-primary border-slate-300" name="availability" type="radio"/>
-<span className="text-sm font-medium">Dès aujourd'hui</span>
+<span className="text-sm font-medium">DÃ¨s aujourd'hui</span>
 </label>
 </div>
 </div>
@@ -75,7 +75,7 @@ const ResultatsDeRechercheDisponibleCeMois = () => {
 <div className="flex items-center justify-between text-slate-600 cursor-pointer hover:text-primary mb-2">
 <div className="flex items-center gap-2 font-bold">
 <span className="material-symbols-outlined">category</span>
-<span className="text-sm uppercase tracking-wider">Catégorie</span>
+<span className="text-sm uppercase tracking-wider">CatÃ©gorie</span>
 </div>
 <span className="material-symbols-outlined">expand_more</span>
 </div>
@@ -93,7 +93,7 @@ const ResultatsDeRechercheDisponibleCeMois = () => {
 <div className="flex items-center justify-between text-slate-600 cursor-pointer hover:text-primary mb-2">
 <div className="flex items-center gap-2 font-bold">
 <span className="material-symbols-outlined">star</span>
-<span className="text-sm uppercase tracking-wider">Évaluations</span>
+<span className="text-sm uppercase tracking-wider">Ã‰valuations</span>
 </div>
 <span className="material-symbols-outlined">expand_more</span>
 </div>
@@ -114,13 +114,13 @@ const ResultatsDeRechercheDisponibleCeMois = () => {
 <div className="space-y-1">
 <h1 className="text-3xl font-black tracking-tight">Artisans disponibles ce mois</h1>
 <p className="text-slate-500 max-w-xl">
-                                Découvrez nos professionnels qualifiés et vérifiés, prêts à intervenir sur vos projets immédiatement.
+                                DÃ©couvrez nos professionnels qualifiÃ©s et vÃ©rifiÃ©s, prÃªts Ã  intervenir sur vos projets immÃ©diatement.
                             </p>
 </div>
 <div className="flex items-center gap-2 bg-white border border-slate-200 rounded-lg px-3 py-2 text-sm font-semibold">
 <span className="text-slate-500">Trier par :</span>
 <select className="border-none bg-transparent p-0 pr-8 focus:ring-0 text-primary">
-<option>Les mieux notés</option>
+<option>Les mieux notÃ©s</option>
 <option>Prix croissants</option>
 <option>Plus proches</option>
 </select>
@@ -148,7 +148,7 @@ const ResultatsDeRechercheDisponibleCeMois = () => {
 <div>
 <div className="flex items-center gap-1.5 mb-1">
 <h3 className="text-lg font-bold leading-tight">Jean Dupuis</h3>
-<span className="material-symbols-outlined text-primary text-xl fill-icon" title="Profil vérifié">verified</span>
+<span className="material-symbols-outlined text-primary text-xl fill-icon" title="Profil vÃ©rifiÃ©">verified</span>
 </div>
 <p className="text-slate-500 text-sm font-medium flex items-center gap-1">
 <span className="material-symbols-outlined text-sm">construction</span>
@@ -196,7 +196,7 @@ const ResultatsDeRechercheDisponibleCeMois = () => {
 </div>
 <p className="text-slate-500 text-sm font-medium flex items-center gap-1">
 <span className="material-symbols-outlined text-sm">bolt</span>
-                                        Électricité Générale
+                                        Ã‰lectricitÃ© GÃ©nÃ©rale
                                     </p>
 </div>
 <div className="text-right">
@@ -240,7 +240,7 @@ const ResultatsDeRechercheDisponibleCeMois = () => {
 </div>
 <p className="text-slate-500 text-sm font-medium flex items-center gap-1">
 <span className="material-symbols-outlined text-sm">brush</span>
-                                        Rénovation d'Intérieur
+                                        RÃ©novation d'IntÃ©rieur
                                     </p>
 </div>
 <div className="text-right">
@@ -411,7 +411,7 @@ const ResultatsDeRechercheDisponibleCeMois = () => {
 <h2 className="text-slate-900 text-xl font-black tracking-tight">ArtisanDirect</h2>
 </div>
 <p className="text-slate-500 text-sm leading-relaxed">
-                        La plateforme de référence pour connecter les particuliers aux meilleurs artisans locaux. Professionnalisme, réactivité et confiance.
+                        La plateforme de rÃ©fÃ©rence pour connecter les particuliers aux meilleurs artisans locaux. Professionnalisme, rÃ©activitÃ© et confiance.
                     </p>
 <div className="flex items-center gap-4">
 <a className="p-2 bg-slate-100 rounded-lg text-slate-600 hover:text-primary transition-colors" href="#">
@@ -428,7 +428,7 @@ const ResultatsDeRechercheDisponibleCeMois = () => {
 <div>
 <h4 className="text-sm font-black uppercase tracking-widest mb-6">Plateforme</h4>
 <ul className="space-y-4">
-<li><a className="text-slate-500 text-sm hover:text-primary transition-colors" href="#">Comment ça marche</a></li>
+<li><a className="text-slate-500 text-sm hover:text-primary transition-colors" href="#">Comment Ã§a marche</a></li>
 <li><a className="text-slate-500 text-sm hover:text-primary transition-colors" href="#">Devenir Artisan</a></li>
 <li><a className="text-slate-500 text-sm hover:text-primary transition-colors" href="#">Tarification</a></li>
 <li><a className="text-slate-500 text-sm hover:text-primary transition-colors" href="#">Garanties</a></li>
@@ -438,7 +438,7 @@ const ResultatsDeRechercheDisponibleCeMois = () => {
 <h4 className="text-sm font-black uppercase tracking-widest mb-6">Artisans</h4>
 <ul className="space-y-4">
 <li><a className="text-slate-500 text-sm hover:text-primary transition-colors" href="#">Plombiers</a></li>
-<li><a className="text-slate-500 text-sm hover:text-primary transition-colors" href="#">Électriciens</a></li>
+<li><a className="text-slate-500 text-sm hover:text-primary transition-colors" href="#">Ã‰lectriciens</a></li>
 <li><a className="text-slate-500 text-sm hover:text-primary transition-colors" href="#">Peintres</a></li>
 <li><a className="text-slate-500 text-sm hover:text-primary transition-colors" href="#">Menuisiers</a></li>
 </ul>
@@ -448,13 +448,13 @@ const ResultatsDeRechercheDisponibleCeMois = () => {
 <ul className="space-y-4">
 <li><a className="text-slate-500 text-sm hover:text-primary transition-colors" href="#">Centre d'aide</a></li>
 <li><a className="text-slate-500 text-sm hover:text-primary transition-colors" href="#">Contact</a></li>
-<li><a className="text-slate-500 text-sm hover:text-primary transition-colors" href="#">Confidentialité</a></li>
+<li><a className="text-slate-500 text-sm hover:text-primary transition-colors" href="#">ConfidentialitÃ©</a></li>
 <li><a className="text-slate-500 text-sm hover:text-primary transition-colors" href="#">CGU</a></li>
 </ul>
 </div>
 </div>
 <div className="pt-8 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-4">
-<p className="text-slate-400 text-xs">© 2024 ArtisanDirect. Tous droits réservés.</p>
+<p className="text-slate-400 text-xs">Â© 2024 ArtisanDirect. Tous droits rÃ©servÃ©s.</p>
 <div className="flex items-center gap-6">
 <img className="h-4 grayscale opacity-50" data-alt="Paypal logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOZy1E-PHlRXoG7mxvr6bCWy5oZAokUBGh9797lakjUcbvGzrtWPaTZiXqJu7qTxJ07ZVmQcQU0MANYthQWzfrUuZaYUMvfeiwfIXmTUJnjBdBcrQEVB-FoFjtshth54X-JLQfWNq_vBDobiO-TPInMjQbUWYQOT56fm6wS28G8sIqPPYhivqr5oTk7odrFB_4YEke5-zwo33XsIIN9mMS0nHFsDklNkjKtRpdo57XJUPn6Lr1JHtUzZ-RAmxIF4R1hMgQ-8I4RPxk"/>
 <img className="h-4 grayscale opacity-50" data-alt="Visa logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbbkwuj-ceSml_T-11J0uTmPH0OWmkf-UcbKdoVK5gpVBwix0e8pMHIOJj52An_hpwPhzbbYJCCOWyhHBcRD_YtJrFbR9xYE_v8R1JKqDNwnubUli-1tULySiZp4nXE9bJAs_PrPTgfNj_5W0j3qYpIp3x3enq6KmegJZaOPqzhhXaxIw_mT33Cy4yHWiEMFfexwPe9FP67D11ZWPRsE4S5BVwlS8_M44Vl4yCxB24IydIni5RkR8nOIiOVYsgTQLKXXIULcYgyxMV"/>
@@ -469,3 +469,4 @@ const ResultatsDeRechercheDisponibleCeMois = () => {
 };
 
 export default ResultatsDeRechercheDisponibleCeMois;
+

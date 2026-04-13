@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 
 const MontageDetageres = () => {
   return (
@@ -24,7 +24,7 @@ const MontageDetageres = () => {
 <div className="hidden md:flex flex-1 justify-end gap-8 items-center">
 <nav className="flex items-center gap-9">
 <a className="text-slate-600 text-sm font-medium hover:text-primary transition-colors" href="#">Services</a>
-<a className="text-slate-600 text-sm font-medium hover:text-primary transition-colors" href="#">Comment ça marche</a>
+<a className="text-slate-600 text-sm font-medium hover:text-primary transition-colors" href="#">Comment Ã§a marche</a>
 <a className="text-slate-600 text-sm font-medium hover:text-primary transition-colors" href="#">Expertise</a>
 <a className="text-slate-600 text-sm font-medium hover:text-primary transition-colors" href="#">Avis</a>
 </nav>
@@ -44,12 +44,12 @@ const MontageDetageres = () => {
 <div className="flex flex-col gap-4 bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
 <div className="flex flex-col">
 <h1 className="text-slate-900 text-xl font-bold">Devis Gratuit</h1>
-<p className="text-slate-500 text-sm font-normal">Des experts prêts à vous aider.</p>
+<p className="text-slate-500 text-sm font-normal">Des experts prÃªts Ã  vous aider.</p>
 </div>
 <nav className="flex flex-col gap-1">
 <a className="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary/10 text-primary" href="#overview">
 <span className="material-symbols-outlined text-xl">info</span>
-<p className="text-sm font-semibold">Présentation</p>
+<p className="text-sm font-semibold">PrÃ©sentation</p>
 </a>
 <a className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-50" href="#expertise">
 <span className="material-symbols-outlined text-xl">build</span>
@@ -80,7 +80,7 @@ const MontageDetageres = () => {
 </div>
 <div className="p-4 bg-white">
 <p className="text-xs text-slate-500 uppercase font-bold tracking-wider">Zone d'intervention</p>
-<p className="text-sm text-slate-700 mt-1">Services disponibles à Paris et en Île-de-France.</p>
+<p className="text-sm text-slate-700 mt-1">Services disponibles Ã  Paris et en ÃŽle-de-France.</p>
 </div>
 </div>
 </aside>
@@ -91,11 +91,11 @@ const MontageDetageres = () => {
 <div className="bg-cover bg-center flex flex-col justify-end overflow-hidden rounded-xl min-h-[320px] relative group" data-alt="Modern minimalist wooden shelves installed on a white wall" style='background-image: linear-gradient(0deg, rgba(15, 23, 42, 0.8) 0%, rgba(15, 23, 42, 0) 60%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuDrgGdMjCTbGDX1oMfuxsro-7afTEWQyKkkZhg6crptpFpz49ZLMCIB-qcxAQ1M4uYgitAWq8D0TXjdcHOOEW77X9YY_OK0QOEfNNskuVWG06VcZJoTdigRJ6BCvTksVG_xYdFpmSg7e1r-WlfTlX-0eSJjFj9RNI_5R5HXnAJQiyAEJy03M54q5qcB-KAS8YIbdKb_qY_ClTEZBZOVnPoIuZ_I6_cfi_sNJA_PEujpL1YcTWX29eQKOU_sQLoTzAXHAHRpnhpD_LrE");'>
 <div className="p-6 md:p-10">
 <div className="flex flex-wrap gap-2 mb-4">
-<span className="bg-primary px-3 py-1 rounded-full text-[10px] font-bold text-white uppercase tracking-widest">Recommandé</span>
+<span className="bg-primary px-3 py-1 rounded-full text-[10px] font-bold text-white uppercase tracking-widest">RecommandÃ©</span>
 <span className="bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold text-white uppercase tracking-widest">Garanti 1 an</span>
 </div>
-<h1 className="text-white text-3xl md:text-5xl font-extrabold leading-tight">Montage d'Étagères Professionnel</h1>
-<p className="text-slate-200 mt-4 max-w-2xl text-lg">Fixation murale sécurisée et montage de meubles en kit pour tous vos espaces de rangement.</p>
+<h1 className="text-white text-3xl md:text-5xl font-extrabold leading-tight">Montage d'Ã‰tagÃ¨res Professionnel</h1>
+<p className="text-slate-200 mt-4 max-w-2xl text-lg">Fixation murale sÃ©curisÃ©e et montage de meubles en kit pour tous vos espaces de rangement.</p>
 </div>
 </div>
 </section>
@@ -105,7 +105,7 @@ const MontageDetageres = () => {
 <span className="material-symbols-outlined text-slate-400 text-sm">chevron_right</span>
 <a className="text-slate-500 hover:text-primary transition-colors" href="#">Bricolage</a>
 <span className="material-symbols-outlined text-slate-400 text-sm">chevron_right</span>
-<span className="text-slate-900 font-semibold">Montage d'Étagères</span>
+<span className="text-slate-900 font-semibold">Montage d'Ã‰tagÃ¨res</span>
 </div>
 {/*  Expertise Section  */}
 <section className="flex flex-col gap-6" id="expertise">
@@ -118,8 +118,8 @@ const MontageDetageres = () => {
 <span className="material-symbols-outlined">kitchen</span>
 </div>
 <div>
-<h3 className="font-bold text-slate-900">Spécialiste IKEA</h3>
-<p className="text-sm text-slate-500 mt-1">Maîtrise parfaite des gammes Kallax, Billy, Pax et Bestå.</p>
+<h3 className="font-bold text-slate-900">SpÃ©cialiste IKEA</h3>
+<p className="text-sm text-slate-500 mt-1">MaÃ®trise parfaite des gammes Kallax, Billy, Pax et BestÃ¥.</p>
 </div>
 </div>
 <div className="p-5 rounded-xl border border-slate-200 bg-white flex gap-4">
@@ -128,7 +128,7 @@ const MontageDetageres = () => {
 </div>
 <div>
 <h3 className="font-bold text-slate-900">Fixation sur mesure</h3>
-<p className="text-sm text-slate-500 mt-1">Installation sur placo, brique, béton ou bois avec chevilles adaptées.</p>
+<p className="text-sm text-slate-500 mt-1">Installation sur placo, brique, bÃ©ton ou bois avec chevilles adaptÃ©es.</p>
 </div>
 </div>
 </div>
@@ -142,18 +142,18 @@ const MontageDetageres = () => {
 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 <div className="flex flex-col gap-3">
 <div className="w-10 h-10 flex items-center justify-center rounded-full bg-primary font-bold">1</div>
-<h4 className="font-bold text-lg">Préparation &amp; Mesure</h4>
-<p className="text-slate-400 text-sm">Vérification de l'emplacement, détection des câbles et mise à niveau parfaite.</p>
+<h4 className="font-bold text-lg">PrÃ©paration &amp; Mesure</h4>
+<p className="text-slate-400 text-sm">VÃ©rification de l'emplacement, dÃ©tection des cÃ¢bles et mise Ã  niveau parfaite.</p>
 </div>
 <div className="flex flex-col gap-3">
 <div className="w-10 h-10 flex items-center justify-center rounded-full bg-primary font-bold">2</div>
-<h4 className="font-bold text-lg">Perçage &amp; Fixation</h4>
-<p className="text-slate-400 text-sm">Utilisation d'outils professionnels pour un ancrage solide et sécurisé.</p>
+<h4 className="font-bold text-lg">PerÃ§age &amp; Fixation</h4>
+<p className="text-slate-400 text-sm">Utilisation d'outils professionnels pour un ancrage solide et sÃ©curisÃ©.</p>
 </div>
 <div className="flex flex-col gap-3">
 <div className="w-10 h-10 flex items-center justify-center rounded-full bg-primary font-bold">3</div>
 <h4 className="font-bold text-lg">Finitions</h4>
-<p className="text-slate-400 text-sm">Nettoyage du chantier et test de charge pour votre tranquillité d'esprit.</p>
+<p className="text-slate-400 text-sm">Nettoyage du chantier et test de charge pour votre tranquillitÃ© d'esprit.</p>
 </div>
 </div>
 </section>
@@ -176,7 +176,7 @@ const MontageDetageres = () => {
 <span className="material-symbols-outlined fill-1 text-sm">star</span>
 <span className="material-symbols-outlined fill-1 text-sm">star</span>
 </div>
-<p className="italic text-slate-600">"Travail impeccable pour mes étagères de bibliothèque. Très professionnel et outillé."</p>
+<p className="italic text-slate-600">"Travail impeccable pour mes Ã©tagÃ¨res de bibliothÃ¨que. TrÃ¨s professionnel et outillÃ©."</p>
 <div className="mt-4 flex items-center gap-3">
 <div className="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center text-slate-500 font-bold">M</div>
 <div>
@@ -206,7 +206,7 @@ const MontageDetageres = () => {
 </section>
 {/*  FAQ Section  */}
 <section className="flex flex-col gap-6 mb-10" id="faq">
-<h2 className="text-2xl font-bold tracking-tight">Questions Fréquentes</h2>
+<h2 className="text-2xl font-bold tracking-tight">Questions FrÃ©quentes</h2>
 <div className="space-y-4">
 <details className="group p-4 rounded-xl border border-slate-200 bg-white cursor-pointer transition-all hover:bg-slate-50">
 <summary className="flex justify-between items-center font-bold text-slate-900 list-none">
@@ -214,25 +214,25 @@ const MontageDetageres = () => {
                                     <span className="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
 </summary>
 <p className="mt-3 text-sm text-slate-600 leading-relaxed">
-                                    Oui, nos taskeurs disposent généralement d'un kit de base. Cependant, pour des murs spécifiques (placo, béton cellulaire), il est préférable de le préciser lors de la commande pour qu'ils apportent le matériel adapté.
+                                    Oui, nos taskeurs disposent gÃ©nÃ©ralement d'un kit de base. Cependant, pour des murs spÃ©cifiques (placo, bÃ©ton cellulaire), il est prÃ©fÃ©rable de le prÃ©ciser lors de la commande pour qu'ils apportent le matÃ©riel adaptÃ©.
                                 </p>
 </details>
 <details className="group p-4 rounded-xl border border-slate-200 bg-white cursor-pointer transition-all hover:bg-slate-50">
 <summary className="flex justify-between items-center font-bold text-slate-900 list-none">
-                                    Combien de temps faut-il pour une étagère ?
+                                    Combien de temps faut-il pour une Ã©tagÃ¨re ?
                                     <span className="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
 </summary>
 <p className="mt-3 text-sm text-slate-600 leading-relaxed">
-                                    Comptez environ 30 à 45 minutes par étagère murale simple, incluant la mise à niveau et la fixation. Pour un meuble type bibliothèque Billy, prévoyez environ 1 heure.
+                                    Comptez environ 30 Ã  45 minutes par Ã©tagÃ¨re murale simple, incluant la mise Ã  niveau et la fixation. Pour un meuble type bibliothÃ¨que Billy, prÃ©voyez environ 1 heure.
                                 </p>
 </details>
 <details className="group p-4 rounded-xl border border-slate-200 bg-white cursor-pointer transition-all hover:bg-slate-50">
 <summary className="flex justify-between items-center font-bold text-slate-900 list-none">
-                                    Le service est-il assuré ?
+                                    Le service est-il assurÃ© ?
                                     <span className="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
 </summary>
 <p className="mt-3 text-sm text-slate-600 leading-relaxed">
-                                    Absolument. Toutes nos interventions sont couvertes par une assurance responsabilité civile professionnelle pour votre tranquillité.
+                                    Absolument. Toutes nos interventions sont couvertes par une assurance responsabilitÃ© civile professionnelle pour votre tranquillitÃ©.
                                 </p>
 </details>
 </div>
@@ -247,13 +247,13 @@ const MontageDetageres = () => {
 <span className="material-symbols-outlined">shelves</span>
 <span className="font-bold text-xl text-slate-900">ShelfMaster</span>
 </div>
-<p className="text-sm text-slate-500">Solution n°1 pour le montage et la fixation de vos rangements à domicile.</p>
+<p className="text-sm text-slate-500">Solution nÂ°1 pour le montage et la fixation de vos rangements Ã  domicile.</p>
 </div>
 <div>
 <h5 className="font-bold mb-4 text-slate-900">Services</h5>
 <ul className="text-sm space-y-2 text-slate-500">
 <li><a className="hover:text-primary" href="#">Montage IKEA</a></li>
-<li><a className="hover:text-primary" href="#">Étagères Murales</a></li>
+<li><a className="hover:text-primary" href="#">Ã‰tagÃ¨res Murales</a></li>
 <li><a className="hover:text-primary" href="#">Dressings</a></li>
 <li><a className="hover:text-primary" href="#">Cuisine</a></li>
 </ul>
@@ -267,16 +267,16 @@ const MontageDetageres = () => {
 </ul>
 </div>
 <div>
-<h5 className="font-bold mb-4 text-slate-900">Légal</h5>
+<h5 className="font-bold mb-4 text-slate-900">LÃ©gal</h5>
 <ul className="text-sm space-y-2 text-slate-500">
 <li><a className="hover:text-primary" href="#">CGU</a></li>
-<li><a className="hover:text-primary" href="#">Confidentialité</a></li>
-<li><a className="hover:text-primary" href="#">Mentions légales</a></li>
+<li><a className="hover:text-primary" href="#">ConfidentialitÃ©</a></li>
+<li><a className="hover:text-primary" href="#">Mentions lÃ©gales</a></li>
 </ul>
 </div>
 </div>
 <div className="mx-auto max-w-[1280px] mt-10 pt-8 border-t border-slate-100 text-center text-xs text-slate-400">
-                    © 2024 ShelfMaster Services. Tous droits réservés.
+                    Â© 2024 ShelfMaster Services. Tous droits rÃ©servÃ©s.
                 </div>
 </footer>
 </div>
@@ -287,3 +287,4 @@ const MontageDetageres = () => {
 };
 
 export default MontageDetageres;
+

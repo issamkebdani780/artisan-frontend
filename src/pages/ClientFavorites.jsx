@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import ExpertCard from '../components/ExpertCard';
 import apiService from '../services/api';
 
@@ -29,7 +29,7 @@ const ClientFavorites = () => {
             Mes Artisans <span className="text-primary italic">Favoris</span>
           </h1>
           <p className="text-slate-500 font-bold text-lg">
-            Retrouvez ici tous les professionnels que vous avez enregistrés.
+            Retrouvez ici tous les professionnels que vous avez enregistrÃ©s.
           </p>
         </div>
 
@@ -46,13 +46,13 @@ const ClientFavorites = () => {
             </div>
             <div>
               <h3 className="text-2xl font-black text-slate-900 uppercase tracking-tight">Aucun favori pour le moment</h3>
-              <p className="text-slate-400 font-bold mt-2">Parcourez nos experts et cliquez sur le cœur pour les enregistrer.</p>
+              <p className="text-slate-400 font-bold mt-2">Parcourez nos experts et cliquez sur le cÅ“ur pour les enregistrer.</p>
             </div>
             <a 
               href="/search"
               className="px-10 py-4 bg-primary text-white font-black uppercase tracking-widest text-sm rounded-2xl shadow-xl shadow-primary/20 hover:bg-primary/90 transition-all hover:-translate-y-1 active:scale-95"
             >
-              Découvrir nos artisans
+              DÃ©couvrir nos artisans
             </a>
           </div>
         ) : (
@@ -68,3 +68,4 @@ const ClientFavorites = () => {
 };
 
 export default ClientFavorites;
+

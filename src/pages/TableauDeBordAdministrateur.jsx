@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 
 const TableauDeBordAdministrateur = () => {
   return (
@@ -37,7 +37,7 @@ const TableauDeBordAdministrateur = () => {
 <div className="pt-4 mt-4 border-t border-white/10">
 <a className="flex items-center gap-3 px-4 py-3 rounded-xl text-indigo-100 hover:bg-white/5 transition-colors" href="#">
 <span className="material-symbols-outlined">settings</span>
-<span>Paramètres</span>
+<span>ParamÃ¨tres</span>
 </a>
 </div>
 </nav>
@@ -51,7 +51,7 @@ const TableauDeBordAdministrateur = () => {
 <p className="text-xs text-indigo-300 truncate">Super Admin</p>
 </div>
 </div>
-<button className="w-full py-2 bg-white/10 hover:bg-white/20 rounded-lg text-xs font-semibold transition-colors">Déconnexion</button>
+<button className="w-full py-2 bg-white/10 hover:bg-white/20 rounded-lg text-xs font-semibold transition-colors">DÃ©connexion</button>
 </div>
 </aside>
 {/*  Main Content  */}
@@ -84,10 +84,10 @@ const TableauDeBordAdministrateur = () => {
 <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
 <div>
 <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight">Tableau de bord</h2>
-<p className="text-slate-500 mt-1">Bienvenue, voici un aperçu de l'activité de votre plateforme.</p>
+<p className="text-slate-500 mt-1">Bienvenue, voici un aperÃ§u de l'activitÃ© de votre plateforme.</p>
 </div>
 <div className="flex gap-3">
-<button className="px-4 py-2 rounded-xl border border-slate-200 font-semibold text-sm hover:bg-slate-50 transition-colors">Télécharger Rapport</button>
+<button className="px-4 py-2 rounded-xl border border-slate-200 font-semibold text-sm hover:bg-slate-50 transition-colors">TÃ©lÃ©charger Rapport</button>
 <button className="px-4 py-2 rounded-xl bg-primary text-white font-semibold text-sm shadow-lg shadow-primary/20 hover:bg-secondary transition-all">Nouvelle Campagne</button>
 </div>
 </div>
@@ -103,7 +103,7 @@ const TableauDeBordAdministrateur = () => {
                             </span>
 </div>
 <p className="text-slate-500 text-sm font-medium">Revenu Total</p>
-<p className="text-2xl font-bold mt-1 text-slate-900">12,840.00 €</p>
+<p className="text-2xl font-bold mt-1 text-slate-900">12,840.00 â‚¬</p>
 </div>
 <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
 <div className="flex justify-between items-start mb-4">
@@ -152,8 +152,8 @@ const TableauDeBordAdministrateur = () => {
 <p className="text-sm text-slate-500">Volume des transactions mensuelles</p>
 </div>
 <select className="bg-slate-50 border-none rounded-lg text-sm font-medium px-4 py-2 outline-none">
-<option>Année 2024</option>
-<option>Année 2023</option>
+<option>AnnÃ©e 2024</option>
+<option>AnnÃ©e 2023</option>
 </select>
 </div>
 <div className="flex-1 flex items-end justify-between gap-4 h-64 mt-4">
@@ -190,20 +190,20 @@ const TableauDeBordAdministrateur = () => {
 {/*  Side Activity  */}
 <div className="bg-indigo-900 text-white p-8 rounded-3xl shadow-xl overflow-hidden relative">
 <div className="absolute -right-10 -top-10 size-40 bg-white/10 rounded-full blur-3xl"></div>
-<h3 className="text-xl font-bold mb-6 relative z-10">Activités Récentes</h3>
+<h3 className="text-xl font-bold mb-6 relative z-10">ActivitÃ©s RÃ©centes</h3>
 <div className="space-y-6 relative z-10">
 <div className="flex gap-4">
 <div className="size-2 mt-2 bg-emerald-400 rounded-full shrink-0"></div>
 <div>
-<p className="text-sm font-semibold">Nouvel Artisan Validé</p>
-<p className="text-xs text-indigo-300 mt-1">Atelier Dubois - Ébénisterie</p>
+<p className="text-sm font-semibold">Nouvel Artisan ValidÃ©</p>
+<p className="text-xs text-indigo-300 mt-1">Atelier Dubois - Ã‰bÃ©nisterie</p>
 <p className="text-[10px] text-indigo-400 mt-1 uppercase font-bold">Il y a 12 min</p>
 </div>
 </div>
 <div className="flex gap-4">
 <div className="size-2 mt-2 bg-amber-400 rounded-full shrink-0"></div>
 <div>
-<p className="text-sm font-semibold">Litige Signalé</p>
+<p className="text-sm font-semibold">Litige SignalÃ©</p>
 <p className="text-xs text-indigo-300 mt-1">Commande #8421 - Retard de livraison</p>
 <p className="text-[10px] text-indigo-400 mt-1 uppercase font-bold">Il y a 45 min</p>
 </div>
@@ -211,8 +211,8 @@ const TableauDeBordAdministrateur = () => {
 <div className="flex gap-4">
 <div className="size-2 mt-2 bg-indigo-400 rounded-full shrink-0"></div>
 <div>
-<p className="text-sm font-semibold">Mise à jour Système</p>
-<p className="text-xs text-indigo-300 mt-1">Version 2.4.0 déployée avec succès</p>
+<p className="text-sm font-semibold">Mise Ã  jour SystÃ¨me</p>
+<p className="text-xs text-indigo-300 mt-1">Version 2.4.0 dÃ©ployÃ©e avec succÃ¨s</p>
 <p className="text-[10px] text-indigo-400 mt-1 uppercase font-bold">Il y a 2h</p>
 </div>
 </div>
@@ -239,7 +239,7 @@ const TableauDeBordAdministrateur = () => {
 <thead>
 <tr className="text-slate-400 text-xs font-bold uppercase tracking-wider">
 <th className="px-8 py-5">Artisan</th>
-<th className="px-8 py-5">Catégorie</th>
+<th className="px-8 py-5">CatÃ©gorie</th>
 <th className="px-8 py-5">Localisation</th>
 <th className="px-8 py-5">Inscrit le</th>
 <th className="px-8 py-5">Statut</th>
@@ -279,7 +279,7 @@ const TableauDeBordAdministrateur = () => {
 </div>
 </div>
 </td>
-<td className="px-8 py-5 text-sm text-slate-600">Céramique</td>
+<td className="px-8 py-5 text-sm text-slate-600">CÃ©ramique</td>
 <td className="px-8 py-5 text-sm text-slate-600">Lyon, FR</td>
 <td className="px-8 py-5 text-sm text-slate-600">14 Mai 2024</td>
 <td className="px-8 py-5">
@@ -304,3 +304,4 @@ const TableauDeBordAdministrateur = () => {
 };
 
 export default TableauDeBordAdministrateur;
+

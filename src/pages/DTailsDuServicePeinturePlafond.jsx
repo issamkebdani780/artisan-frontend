@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 
 const DTailsDuServicePeinturePlafond = () => {
   return (
@@ -16,7 +16,7 @@ const DTailsDuServicePeinturePlafond = () => {
 </div>
 <div className="hidden md:flex flex-1 justify-end gap-8">
 <nav className="flex items-center gap-9">
-<a className="text-slate-600 text-sm font-medium hover:text-primary transition-colors" href="#">Détails techniques</a>
+<a className="text-slate-600 text-sm font-medium hover:text-primary transition-colors" href="#">DÃ©tails techniques</a>
 <a className="text-slate-600 text-sm font-medium hover:text-primary transition-colors" href="#">Tarification</a>
 <a className="text-slate-600 text-sm font-medium hover:text-primary transition-colors" href="#">Nos Experts</a>
 </nav>
@@ -37,9 +37,9 @@ const DTailsDuServicePeinturePlafond = () => {
 <div className="absolute inset-0 bg-cover bg-center" data-alt="Professional painter applying white paint to a ceiling" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDTqNjA_S2JL8froXuxavQGuXsoIVbsEKY7A45y1eAlHoMy4-3teVhmXJ6egK9QrZ_5DPGvtYvKzvkoAftVox9f7xNROmzN5kHRjpT4K7te2PJ1s9AFgvPCU_mBIUBNlc3KdXqvrMtgeYaVkU6SakGcNqP2IEtfT5iFpUezMjtem6D4lmXAKkMMfO6NPCOBzZJlkLtrZPCr5lgFdk14pQmoP6njLvBAwpmZj1ZbALi89PD1JwQUTEy0KzT-XH4k118Qjt3rah30ni21");'></div>
 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
 <div className="relative p-8 md:p-12 w-full">
-<span className="inline-block px-3 py-1 rounded-full bg-primary text-white text-xs font-bold mb-4 uppercase tracking-wider">Expertise Certifiée</span>
-<h1 className="text-white text-4xl md:text-5xl font-black leading-tight tracking-tight max-w-2xl">Rénovation &amp; Peinture de Plafond Haute Performance</h1>
-<p className="text-slate-200 text-lg mt-4 max-w-xl">Finition sans trace, traitement anti-humidité et application mécanisée pour un résultat parfait.</p>
+<span className="inline-block px-3 py-1 rounded-full bg-primary text-white text-xs font-bold mb-4 uppercase tracking-wider">Expertise CertifiÃ©e</span>
+<h1 className="text-white text-4xl md:text-5xl font-black leading-tight tracking-tight max-w-2xl">RÃ©novation &amp; Peinture de Plafond Haute Performance</h1>
+<p className="text-slate-200 text-lg mt-4 max-w-xl">Finition sans trace, traitement anti-humiditÃ© et application mÃ©canisÃ©e pour un rÃ©sultat parfait.</p>
 </div>
 </div>
 </div>
@@ -50,18 +50,18 @@ const DTailsDuServicePeinturePlafond = () => {
 <span className="material-symbols-outlined">payments</span>
 <p className="text-slate-500 text-sm font-semibold uppercase tracking-wide">Tarif Indicatif</p>
 </div>
-<p className="text-slate-900 tracking-tight text-3xl font-black leading-tight">Dès 22€ / m²</p>
+<p className="text-slate-900 tracking-tight text-3xl font-black leading-tight">DÃ¨s 22â‚¬ / mÂ²</p>
 <p className="text-emerald-500 text-sm font-medium flex items-center gap-1">
-<span className="material-symbols-outlined text-sm">trending_down</span> -5% sur surfaces &gt; 50m²
+<span className="material-symbols-outlined text-sm">trending_down</span> -5% sur surfaces &gt; 50mÂ²
                     </p>
 </div>
 <div className="flex flex-col gap-2 rounded-xl p-8 bg-white border border-slate-200 shadow-sm">
 <div className="flex items-center gap-3 text-primary mb-2">
 <span className="material-symbols-outlined">speed</span>
-<p className="text-slate-500 text-sm font-semibold uppercase tracking-wide">Délai d'exécution</p>
+<p className="text-slate-500 text-sm font-semibold uppercase tracking-wide">DÃ©lai d'exÃ©cution</p>
 </div>
 <p className="text-slate-900 tracking-tight text-3xl font-black leading-tight">24h - 48h</p>
-<p className="text-primary text-sm font-medium">Séchage rapide inclus</p>
+<p className="text-primary text-sm font-medium">SÃ©chage rapide inclus</p>
 </div>
 <div className="flex flex-col gap-2 rounded-xl p-8 bg-white border border-slate-200 shadow-sm">
 <div className="flex items-center gap-3 text-primary mb-2">
@@ -69,7 +69,7 @@ const DTailsDuServicePeinturePlafond = () => {
 <p className="text-slate-500 text-sm font-semibold uppercase tracking-wide">Garantie Travaux</p>
 </div>
 <p className="text-slate-900 tracking-tight text-3xl font-black leading-tight">10 Ans</p>
-<p className="text-primary text-sm font-medium">Assurance décennale incluse</p>
+<p className="text-primary text-sm font-medium">Assurance dÃ©cennale incluse</p>
 </div>
 </div>
 <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
@@ -79,21 +79,21 @@ const DTailsDuServicePeinturePlafond = () => {
 <section>
 <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
 <span className="material-symbols-outlined text-primary">construction</span>
-                            Équipements Spécialisés
+                            Ã‰quipements SpÃ©cialisÃ©s
                         </h3>
 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
 <div className="p-4 rounded-lg bg-primary/5 border border-primary/10 flex gap-4">
 <span className="material-symbols-outlined text-primary text-3xl">air_purifier</span>
 <div>
 <h4 className="font-bold text-slate-900">Pistolet Airless</h4>
-<p className="text-sm text-slate-600">Application uniforme sans traces de rouleau, idéale pour les grandes surfaces.</p>
+<p className="text-sm text-slate-600">Application uniforme sans traces de rouleau, idÃ©ale pour les grandes surfaces.</p>
 </div>
 </div>
 <div className="p-4 rounded-lg bg-primary/5 border border-primary/10 flex gap-4">
 <span className="material-symbols-outlined text-primary text-3xl">architecture</span>
 <div>
 <h4 className="font-bold text-slate-900">Ponceuse Girafe</h4>
-<p className="text-sm text-slate-600">Préparation optimale des supports avec aspiration intégrée pour zéro poussière.</p>
+<p className="text-sm text-slate-600">PrÃ©paration optimale des supports avec aspiration intÃ©grÃ©e pour zÃ©ro poussiÃ¨re.</p>
 </div>
 </div>
 </div>
@@ -108,26 +108,26 @@ const DTailsDuServicePeinturePlafond = () => {
 <table className="w-full text-left">
 <thead className="bg-slate-50">
 <tr>
-<th className="px-6 py-4 text-sm font-bold text-slate-700">Type de problème</th>
+<th className="px-6 py-4 text-sm font-bold text-slate-700">Type de problÃ¨me</th>
 <th className="px-6 py-4 text-sm font-bold text-slate-700">Solution Technique</th>
-<th className="px-6 py-4 text-sm font-bold text-slate-700 text-right">Supplément</th>
+<th className="px-6 py-4 text-sm font-bold text-slate-700 text-right">SupplÃ©ment</th>
 </tr>
 </thead>
 <tbody className="divide-y divide-slate-200">
 <tr>
-<td className="px-6 py-4 text-sm font-medium">Auréoles d'eau</td>
-<td className="px-6 py-4 text-sm text-slate-600">Primaire isolant à base de solvant</td>
-<td className="px-6 py-4 text-sm font-bold text-right text-primary">+4€/m²</td>
+<td className="px-6 py-4 text-sm font-medium">AurÃ©oles d'eau</td>
+<td className="px-6 py-4 text-sm text-slate-600">Primaire isolant Ã  base de solvant</td>
+<td className="px-6 py-4 text-sm font-bold text-right text-primary">+4â‚¬/mÂ²</td>
 </tr>
 <tr>
 <td className="px-6 py-4 text-sm font-medium">Fissures actives</td>
-<td className="px-6 py-4 text-sm text-slate-600">Entoilage localisé et enduit fibré</td>
-<td className="px-6 py-4 text-sm font-bold text-right text-primary">+7€/m²</td>
+<td className="px-6 py-4 text-sm text-slate-600">Entoilage localisÃ© et enduit fibrÃ©</td>
+<td className="px-6 py-4 text-sm font-bold text-right text-primary">+7â‚¬/mÂ²</td>
 </tr>
 <tr>
-<td className="px-6 py-4 text-sm font-medium">Traces de fumée</td>
-<td className="px-6 py-4 text-sm text-slate-600">Lessivage sodé et peinture bloquante</td>
-<td className="px-6 py-4 text-sm font-bold text-right text-primary">+5€/m²</td>
+<td className="px-6 py-4 text-sm font-medium">Traces de fumÃ©e</td>
+<td className="px-6 py-4 text-sm text-slate-600">Lessivage sodÃ© et peinture bloquante</td>
+<td className="px-6 py-4 text-sm font-bold text-right text-primary">+5â‚¬/mÂ²</td>
 </tr>
 </tbody>
 </table>
@@ -150,7 +150,7 @@ const DTailsDuServicePeinturePlafond = () => {
 </div>
 <div className="flex-1">
 <h4 className="font-bold text-sm">Marc L.</h4>
-<p className="text-xs text-slate-500">Spécialiste Airless - 12 ans d'exp.</p>
+<p className="text-xs text-slate-500">SpÃ©cialiste Airless - 12 ans d'exp.</p>
 <div className="flex items-center mt-1 text-amber-500">
 <span className="material-symbols-outlined text-sm">star</span>
 <span className="material-symbols-outlined text-sm">star</span>
@@ -172,7 +172,7 @@ const DTailsDuServicePeinturePlafond = () => {
 </div>
 <div className="flex-1">
 <h4 className="font-bold text-sm">Sophie R.</h4>
-<p className="text-xs text-slate-500">Décoration &amp; Staff - 8 ans d'exp.</p>
+<p className="text-xs text-slate-500">DÃ©coration &amp; Staff - 8 ans d'exp.</p>
 <div className="flex items-center mt-1 text-amber-500">
 <span className="material-symbols-outlined text-sm">star</span>
 <span className="material-symbols-outlined text-sm">star</span>
@@ -194,7 +194,7 @@ const DTailsDuServicePeinturePlafond = () => {
 </div>
 <div className="flex-1">
 <h4 className="font-bold text-sm">Thomas D.</h4>
-<p className="text-xs text-slate-500">Réparation sinistres - 15 ans d'exp.</p>
+<p className="text-xs text-slate-500">RÃ©paration sinistres - 15 ans d'exp.</p>
 <div className="flex items-center mt-1 text-amber-500">
 <span className="material-symbols-outlined text-sm">star</span>
 <span className="material-symbols-outlined text-sm">star</span>
@@ -212,7 +212,7 @@ const DTailsDuServicePeinturePlafond = () => {
 <div className="mt-8 pt-6 border-t border-slate-100">
 <button className="w-full bg-primary text-white py-3 rounded-lg font-bold text-sm hover:bg-primary/90 transition-all flex items-center justify-center gap-2">
 <span className="material-symbols-outlined text-sm">calendar_month</span>
-                                Réserver une visite
+                                RÃ©server une visite
                             </button>
 </div>
 </div>
@@ -223,8 +223,8 @@ const DTailsDuServicePeinturePlafond = () => {
 <footer className="bg-slate-900 text-white py-12 mt-12 px-6">
 <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 <div>
-<h3 className="text-3xl font-black mb-4">Prêt à transformer vos plafonds ?</h3>
-<p className="text-slate-400 text-lg">Nos experts sont disponibles 6j/7 pour vos projets de rénovation. Bénéficiez d'une estimation précise en moins de 24h.</p>
+<h3 className="text-3xl font-black mb-4">PrÃªt Ã  transformer vos plafonds ?</h3>
+<p className="text-slate-400 text-lg">Nos experts sont disponibles 6j/7 pour vos projets de rÃ©novation. BÃ©nÃ©ficiez d'une estimation prÃ©cise en moins de 24h.</p>
 </div>
 <div className="flex flex-col sm:flex-row gap-4 justify-end">
 <div className="flex items-center gap-4 bg-white/10 p-4 rounded-xl">
@@ -237,11 +237,11 @@ const DTailsDuServicePeinturePlafond = () => {
 </div>
 </div>
 <div className="max-w-[1200px] mx-auto mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between gap-6 text-sm text-slate-500">
-<p>© 2024 PlafondPro France - Peinture &amp; Rénovation.</p>
+<p>Â© 2024 PlafondPro France - Peinture &amp; RÃ©novation.</p>
 <div className="flex gap-8">
-<a className="hover:text-primary" href="#">Conditions générales</a>
-<a className="hover:text-primary" href="#">Confidentialité</a>
-<a className="hover:text-primary" href="#">Mentions légales</a>
+<a className="hover:text-primary" href="#">Conditions gÃ©nÃ©rales</a>
+<a className="hover:text-primary" href="#">ConfidentialitÃ©</a>
+<a className="hover:text-primary" href="#">Mentions lÃ©gales</a>
 </div>
 </div>
 </footer>
@@ -253,3 +253,4 @@ const DTailsDuServicePeinturePlafond = () => {
 };
 
 export default DTailsDuServicePeinturePlafond;
+

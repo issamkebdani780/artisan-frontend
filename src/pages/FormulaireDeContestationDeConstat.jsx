@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 
 const FormulaireDeContestationDeConstat = () => {
   return (
@@ -43,11 +43,11 @@ const FormulaireDeContestationDeConstat = () => {
 <div>
 <h1 className="text-3xl font-black tracking-tight mb-2">Contester le constat</h1>
 <div className="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-bold border border-primary/20">
-                    Référence : #AV-2023-0891
+                    RÃ©fÃ©rence : #AV-2023-0891
                 </div>
 </div>
 <button className="px-6 py-2.5 rounded-xl border border-slate-300 font-bold text-sm hover:bg-slate-50 transition-all">
-                Annuler la procédure
+                Annuler la procÃ©dure
             </button>
 </div>
 {/*  Main Form Container  */}
@@ -57,23 +57,23 @@ const FormulaireDeContestationDeConstat = () => {
 <section>
 <div className="flex items-center gap-2 mb-4">
 <span className="material-symbols-outlined text-primary">checklist</span>
-<h3 className="text-lg font-bold">Éléments à contester</h3>
+<h3 className="text-lg font-bold">Ã‰lÃ©ments Ã  contester</h3>
 </div>
-<p className="text-sm text-slate-500 mb-4">Sélectionnez les preuves administratives avec lesquelles vous n'êtes pas d'accord :</p>
+<p className="text-sm text-slate-500 mb-4">SÃ©lectionnez les preuves administratives avec lesquelles vous n'Ãªtes pas d'accord :</p>
 <div className="grid grid-cols-1 gap-3">
 <label className="flex items-center gap-4 p-4 rounded-xl border border-slate-200 hover:bg-slate-50 cursor-pointer transition-colors group">
 <input className="size-5 rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/>
 <div className="flex-1">
-<p className="font-semibold text-sm">Preuve photo n°1 : Retard de livraison constaté</p>
-<p className="text-xs text-slate-400">Ajouté le 12/10/2023 par Admin-42</p>
+<p className="font-semibold text-sm">Preuve photo nÂ°1 : Retard de livraison constatÃ©</p>
+<p className="text-xs text-slate-400">AjoutÃ© le 12/10/2023 par Admin-42</p>
 </div>
 <span className="material-symbols-outlined text-slate-300 group-hover:text-primary">image</span>
 </label>
 <label className="flex items-center gap-4 p-4 rounded-xl border border-slate-200 hover:bg-slate-50 cursor-pointer transition-colors group">
 <input className="size-5 rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/>
 <div className="flex-1">
-<p className="font-semibold text-sm">Preuve photo n°2 : Qualité des matériaux non-conforme</p>
-<p className="text-xs text-slate-400">Ajouté le 12/10/2023 par Admin-42</p>
+<p className="font-semibold text-sm">Preuve photo nÂ°2 : QualitÃ© des matÃ©riaux non-conforme</p>
+<p className="text-xs text-slate-400">AjoutÃ© le 12/10/2023 par Admin-42</p>
 </div>
 <span className="material-symbols-outlined text-slate-300 group-hover:text-primary">image</span>
 </label>
@@ -92,13 +92,13 @@ const FormulaireDeContestationDeConstat = () => {
 <section>
 <div className="flex items-center gap-2 mb-4">
 <span className="material-symbols-outlined text-primary">edit_note</span>
-<h3 className="text-lg font-bold">Justification détaillée</h3>
+<h3 className="text-lg font-bold">Justification dÃ©taillÃ©e</h3>
 </div>
 <div className="space-y-2">
 <label className="block text-sm font-medium text-slate-700" htmlFor="justification">
-                            Expliquez en détail les raisons de votre contestation (obligatoire)
+                            Expliquez en dÃ©tail les raisons de votre contestation (obligatoire)
                         </label>
-<textarea className="w-full rounded-xl border-slate-300 bg-white focus:border-primary focus:ring-primary text-sm" id="justification" placeholder="Décrivez les faits, les circonstances et apportez des précisions sur les éléments contestés..." rows="6"></textarea>
+<textarea className="w-full rounded-xl border-slate-300 bg-white focus:border-primary focus:ring-primary text-sm" id="justification" placeholder="DÃ©crivez les faits, les circonstances et apportez des prÃ©cisions sur les Ã©lÃ©ments contestÃ©s..." rows="6"></textarea>
 </div>
 </section>
 <hr className="border-slate-100"/>
@@ -113,8 +113,8 @@ const FormulaireDeContestationDeConstat = () => {
 <div className="size-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-3 group-hover:scale-110 transition-transform">
 <span className="material-symbols-outlined">cloud_upload</span>
 </div>
-<p className="text-sm font-semibold mb-1">Cliquez pour téléverser ou glissez-déposez</p>
-<p className="text-xs text-slate-400">PNG, JPG ou PDF jusqu'à 10Mo</p>
+<p className="text-sm font-semibold mb-1">Cliquez pour tÃ©lÃ©verser ou glissez-dÃ©posez</p>
+<p className="text-xs text-slate-400">PNG, JPG ou PDF jusqu'Ã  10Mo</p>
 <input className="hidden" multiple="" type="file"/>
 </div>
 </section>
@@ -122,8 +122,8 @@ const FormulaireDeContestationDeConstat = () => {
 <div className="bg-amber-50 border border-amber-200 p-4 rounded-xl flex gap-3">
 <span className="material-symbols-outlined text-amber-600 shrink-0">warning</span>
 <div className="text-sm text-amber-800">
-<p className="font-bold mb-1">Attention aux fausses déclarations</p>
-<p>Toute fausse déclaration ou falsification de document peut entraîner des sanctions plus sévères, incluant la suspension définitive de votre compte ArtisanDirect.</p>
+<p className="font-bold mb-1">Attention aux fausses dÃ©clarations</p>
+<p>Toute fausse dÃ©claration ou falsification de document peut entraÃ®ner des sanctions plus sÃ©vÃ¨res, incluant la suspension dÃ©finitive de votre compte ArtisanDirect.</p>
 </div>
 </div>
 {/*  Submit Section  */}
@@ -147,7 +147,7 @@ const FormulaireDeContestationDeConstat = () => {
 <span className="text-lg font-bold">ArtisanDirect</span>
 </div>
 <p className="text-xs text-slate-500 leading-relaxed">
-                    La plateforme de référence pour les artisans qualifiés. Connectez-vous aux meilleurs projets et développez votre activité en toute confiance.
+                    La plateforme de rÃ©fÃ©rence pour les artisans qualifiÃ©s. Connectez-vous aux meilleurs projets et dÃ©veloppez votre activitÃ© en toute confiance.
                 </p>
 </div>
 <div>
@@ -159,11 +159,11 @@ const FormulaireDeContestationDeConstat = () => {
 </ul>
 </div>
 <div>
-<h4 className="font-bold text-sm mb-4 uppercase tracking-widest text-slate-400">Légal</h4>
+<h4 className="font-bold text-sm mb-4 uppercase tracking-widest text-slate-400">LÃ©gal</h4>
 <ul className="space-y-2 text-sm">
-<li><a className="hover:text-primary transition-colors" href="#">Conditions Générales</a></li>
-<li><a className="hover:text-primary transition-colors" href="#">Politique de confidentialité</a></li>
-<li><a className="hover:text-primary transition-colors" href="#">Règlement des litiges</a></li>
+<li><a className="hover:text-primary transition-colors" href="#">Conditions GÃ©nÃ©rales</a></li>
+<li><a className="hover:text-primary transition-colors" href="#">Politique de confidentialitÃ©</a></li>
+<li><a className="hover:text-primary transition-colors" href="#">RÃ¨glement des litiges</a></li>
 </ul>
 </div>
 <div>
@@ -178,7 +178,7 @@ const FormulaireDeContestationDeConstat = () => {
 </div>
 </div>
 <div className="max-w-7xl mx-auto px-4 mt-12 pt-8 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-4">
-<p className="text-xs text-slate-400">© 2023 ArtisanDirect SAS. Tous droits réservés.</p>
+<p className="text-xs text-slate-400">Â© 2023 ArtisanDirect SAS. Tous droits rÃ©servÃ©s.</p>
 <div className="flex gap-4">
 <span className="size-8 rounded-full bg-slate-100 flex items-center justify-center cursor-pointer hover:bg-primary hover:text-white transition-all">
 <span className="material-symbols-outlined text-sm">public</span>
@@ -195,3 +195,4 @@ const FormulaireDeContestationDeConstat = () => {
 };
 
 export default FormulaireDeContestationDeConstat;
+

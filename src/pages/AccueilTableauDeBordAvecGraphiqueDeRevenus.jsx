@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 
 const AccueilTableauDeBordAvecGraphiqueDeRevenus = () => {
   return (
@@ -32,7 +32,7 @@ const AccueilTableauDeBordAvecGraphiqueDeRevenus = () => {
 </a>
 <a className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-600 hover:bg-slate-100 transition-colors" href="#">
 <span className="material-symbols-outlined text-slate-400">verified_user</span>
-<span className="text-sm">Vérification et documents</span>
+<span className="text-sm">VÃ©rification et documents</span>
 </a>
 <a className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-600 hover:bg-slate-100 transition-colors" href="#">
 <span className="material-symbols-outlined text-slate-400">business_center</span>
@@ -44,7 +44,7 @@ const AccueilTableauDeBordAvecGraphiqueDeRevenus = () => {
 </a>
 <a className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-600 hover:bg-slate-100 transition-colors" href="#">
 <span className="material-symbols-outlined text-slate-400">settings</span>
-<span className="text-sm">Paramètres</span>
+<span className="text-sm">ParamÃ¨tres</span>
 </a>
 </nav>
 <div className="p-6 border-t border-slate-200">
@@ -84,17 +84,17 @@ const AccueilTableauDeBordAvecGraphiqueDeRevenus = () => {
 {/*  Welcome Section  */}
 <div>
 <h2 className="text-3xl font-black tracking-tight text-slate-900">Bonjour, Ahmed Mohamed</h2>
-<p className="text-slate-500 mt-1">Voici un aperçu de votre activité aujourd'hui.</p>
+<p className="text-slate-500 mt-1">Voici un aperÃ§u de votre activitÃ© aujourd'hui.</p>
 </div><div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm mb-8">
 <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
 <div>
-<h3 className="text-lg font-bold text-slate-900">Évolution des revenus</h3>
+<h3 className="text-lg font-bold text-slate-900">Ã‰volution des revenus</h3>
 <p className="text-sm text-slate-500">Revenus mensuels sur les 6 derniers mois</p>
 </div>
 <div className="flex items-center gap-4">
 <div className="flex items-center gap-2">
 <span className="size-3 rounded-full bg-blue-500"></span>
-<span className="text-xs font-medium text-slate-600">Revenus (€)</span>
+<span className="text-xs font-medium text-slate-600">Revenus (â‚¬)</span>
 </div>
 </div>
 </div>
@@ -121,7 +121,7 @@ const AccueilTableauDeBordAvecGraphiqueDeRevenus = () => {
 </div>
 <div className="flex-1 flex flex-col items-center gap-2 h-full justify-end group">
 <div className="w-full bg-blue-400 rounded-t-lg transition-all duration-300 group-hover:bg-blue-500/40" ></div>
-<span className="text-[10px] font-bold text-slate-400 uppercase">Août</span>
+<span className="text-[10px] font-bold text-slate-400 uppercase">AoÃ»t</span>
 </div>
 <div className="flex-1 flex flex-col items-center gap-2 h-full justify-end group">
 <div className="w-full bg-blue-500 rounded-t-lg transition-all duration-300 group-hover:brightness-110" ></div>
@@ -143,7 +143,7 @@ const AccueilTableauDeBordAvecGraphiqueDeRevenus = () => {
 <span className="text-xs font-bold text-green-500 bg-green-500/10 px-2 py-1 rounded-full">+12%</span>
 </div>
 <p className="text-sm font-medium text-slate-500">Revenus ce mois</p>
-<p className="text-2xl font-black text-slate-900 mt-1">2,450 €</p>
+<p className="text-2xl font-black text-slate-900 mt-1">2,450 â‚¬</p>
 </div>
 <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
 <div className="flex justify-between items-start mb-4">
@@ -181,7 +181,7 @@ const AccueilTableauDeBordAvecGraphiqueDeRevenus = () => {
 {/*  Recent Missions (List)  */}
 <div className="xl:col-span-2 bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
 <div className="p-6 border-b border-slate-100 flex justify-between items-center">
-<h3 className="text-lg font-bold text-slate-900">Missions récentes</h3>
+<h3 className="text-lg font-bold text-slate-900">Missions rÃ©centes</h3>
 <button className="text-primary text-sm font-bold hover:underline">Tout voir</button>
 </div>
 <div className="divide-y divide-slate-100">
@@ -191,12 +191,12 @@ const AccueilTableauDeBordAvecGraphiqueDeRevenus = () => {
 <img alt="Mission" className="w-full h-full object-cover" data-alt="Renovation site photo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7cOgj9gXN0jcOF3nEYF-w97S1wj03cQqqag0Tcx120lFrzQ_J2ESC1c-Gad7dimunyRsMwC8eERH06tCk8oXSLgdpUls0pbAN3CZ5e4RFX24JG1PI8lmLEXZ3chZZ5y3ZJ5hud_PQQAKfmFIvUc38LKctxE7HxzndlsuYp0gMgu8Q6DQczVeIge4AmH0K7thx0__qv289R57Zplb5zRE_Np3FNsOqq6yaZwBNpkf3d4f-naWs4J3zfUNi2aV5HZCIgwKyJFfIKlaa"/>
 </div>
 <div className="flex-1">
-<h4 className="font-bold text-slate-900">Rénovation Cuisine - Villa Arras</h4>
-<p className="text-sm text-slate-500">Client: Jean Dupont • 12 Oct 2023</p>
+<h4 className="font-bold text-slate-900">RÃ©novation Cuisine - Villa Arras</h4>
+<p className="text-sm text-slate-500">Client: Jean Dupont â€¢ 12 Oct 2023</p>
 </div>
 <div className="text-right">
 <span className="px-3 py-1 rounded-full text-xs font-bold bg-blue-100 text-blue-600">En cours</span>
-<p className="text-sm font-bold text-slate-900 mt-1">1,200 €</p>
+<p className="text-sm font-bold text-slate-900 mt-1">1,200 â‚¬</p>
 </div>
 </div>
 {/*  Mission 2  */}
@@ -205,12 +205,12 @@ const AccueilTableauDeBordAvecGraphiqueDeRevenus = () => {
 <img alt="Mission" className="w-full h-full object-cover" data-alt="Electrical wiring maintenance" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHyJmuHXj1suDm4lF9QUdZzfGj9nkb7YOYyopISV11l21Z_HmQY6fm3n1NqcwmBB3LVmofsv3pDymbpXU6k1b-0_Wp8tnhH6CMBroiEW2TTohF8JRGeCwjtWWmJIjIvA8X4-V0vdrRi6YS_ovoisbhSqkzBffjTke4BGb6ts-3IK5rSOJZcLVR8W2tXnKSmNX2BoDeCZEw9eA4ysST7jiaftQOMYHJLgqZoylCb4f5YRHFx25qSSojAfvWQH8mQpq2gg4PqSckwaIm"/>
 </div>
 <div className="flex-1">
-<h4 className="font-bold text-slate-900">Installation Électrique Bureau</h4>
-<p className="text-sm text-slate-500">Client: SARL Tech • 09 Oct 2023</p>
+<h4 className="font-bold text-slate-900">Installation Ã‰lectrique Bureau</h4>
+<p className="text-sm text-slate-500">Client: SARL Tech â€¢ 09 Oct 2023</p>
 </div>
 <div className="text-right">
-<span className="px-3 py-1 rounded-full text-xs font-bold bg-green-100 text-green-600">Terminé</span>
-<p className="text-sm font-bold text-slate-900 mt-1">850 €</p>
+<span className="px-3 py-1 rounded-full text-xs font-bold bg-green-100 text-green-600">TerminÃ©</span>
+<p className="text-sm font-bold text-slate-900 mt-1">850 â‚¬</p>
 </div>
 </div>
 {/*  Mission 3  */}
@@ -219,12 +219,12 @@ const AccueilTableauDeBordAvecGraphiqueDeRevenus = () => {
 <img alt="Mission" className="w-full h-full object-cover" data-alt="Plumbing work pipes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCF3-PZ64pkbPNOOFTV0UBMkV8PLCkVRns4L-XGFQjQMPdxolYjTgfhqdypg05PbC6m50d8U3Acrrxsv12WqCOPojNTOvktodw2dShZGDuLXYYZTPz2eMlK39rACK_JRv__lUmVL9mHXFiDIO72EuCbe8ZHK30K8rcRDo7MxVZnFQa21mbHi8P8wpr49M0yqxGTnzzMZN1nXQuIMk6-FxADURaEIUnAlnpq_gP5NM88JTIvtG1SXdFwPQ4mLJB7SlX0KvUpZCYMt4kH"/>
 </div>
 <div className="flex-1">
-<h4 className="font-bold text-slate-900">Réparation Fuite Canalisation</h4>
-<p className="text-sm text-slate-500">Client: Marie Curie • 05 Oct 2023</p>
+<h4 className="font-bold text-slate-900">RÃ©paration Fuite Canalisation</h4>
+<p className="text-sm text-slate-500">Client: Marie Curie â€¢ 05 Oct 2023</p>
 </div>
 <div className="text-right">
 <span className="px-3 py-1 rounded-full text-xs font-bold bg-orange-100 text-orange-600">En attente</span>
-<p className="text-sm font-bold text-slate-900 mt-1">320 €</p>
+<p className="text-sm font-bold text-slate-900 mt-1">320 â‚¬</p>
 </div>
 </div>
 </div>
@@ -244,7 +244,7 @@ const AccueilTableauDeBordAvecGraphiqueDeRevenus = () => {
 </div>
 <div className="flex-1 min-w-0">
 <p className="text-sm font-bold text-slate-900 truncate">Visite technique - Loft Paris</p>
-<p className="text-xs text-slate-500 mt-0.5">09:00 - 10:30 • 2.5km</p>
+<p className="text-xs text-slate-500 mt-0.5">09:00 - 10:30 â€¢ 2.5km</p>
 </div>
 <button className="size-8 flex items-center justify-center rounded-lg bg-white text-slate-400 hover:text-primary border border-slate-200">
 <span className="material-symbols-outlined text-sm">navigation</span>
@@ -258,7 +258,7 @@ const AccueilTableauDeBordAvecGraphiqueDeRevenus = () => {
 </div>
 <div className="flex-1 min-w-0">
 <p className="text-sm font-bold text-slate-900 truncate">Signature Contrat - Agence Immo</p>
-<p className="text-xs text-slate-500 mt-0.5">14:00 - 15:00 • Zoom</p>
+<p className="text-xs text-slate-500 mt-0.5">14:00 - 15:00 â€¢ Zoom</p>
 </div>
 <button className="size-8 flex items-center justify-center rounded-lg bg-white text-slate-400 hover:text-primary border border-slate-200">
 <span className="material-symbols-outlined text-sm">videocam</span>
@@ -272,7 +272,7 @@ const AccueilTableauDeBordAvecGraphiqueDeRevenus = () => {
 </div>
 <div className="flex-1 min-w-0">
 <p className="text-sm font-bold text-slate-900 truncate">Maintenance Climatisation</p>
-<p className="text-xs text-slate-500 mt-0.5">10:30 - 12:00 • 5.0km</p>
+<p className="text-xs text-slate-500 mt-0.5">10:30 - 12:00 â€¢ 5.0km</p>
 </div>
 <button className="size-8 flex items-center justify-center rounded-lg bg-white text-slate-400 hover:text-primary border border-slate-200">
 <span className="material-symbols-outlined text-sm">navigation</span>
@@ -290,3 +290,4 @@ const AccueilTableauDeBordAvecGraphiqueDeRevenus = () => {
 };
 
 export default AccueilTableauDeBordAvecGraphiqueDeRevenus;
+

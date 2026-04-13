@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 
 const ConfirmationDeSoumissionAdministration = () => {
   return (
@@ -43,18 +43,18 @@ const ConfirmationDeSoumissionAdministration = () => {
 </div>
 <div className="p-8 text-center">
 <h1 className="text-3xl font-bold text-slate-900 mb-2">Confirmation de soumission</h1>
-<p className="text-slate-600 text-lg">Votre réponse a été soumise avec succès</p>
+<p className="text-slate-600 text-lg">Votre rÃ©ponse a Ã©tÃ© soumise avec succÃ¨s</p>
 {/*  Reference Box  */}
 <div className="mt-8 mb-8 p-6 bg-slate-50 rounded-xl border border-dashed border-slate-300 inline-block w-full">
-<p className="text-xs uppercase tracking-widest text-slate-500 font-bold mb-1">Numéro de référence</p>
+<p className="text-xs uppercase tracking-widest text-slate-500 font-bold mb-1">NumÃ©ro de rÃ©fÃ©rence</p>
 <p className="text-3xl font-mono font-bold text-primary tracking-wider">AD-784920X</p>
 </div>
 <div className="space-y-4 mb-10 max-w-md mx-auto">
 <div className="flex items-start gap-3 text-left">
 <span className="material-symbols-outlined text-primary mt-0.5">info</span>
 <p className="text-sm text-slate-600">
-                                L'administration examinera vos documents et votre réponse dans un délai de <strong>48 heures ouvrées</strong>. 
-                                Vous recevrez une notification dès que votre dossier sera mis à jour.
+                                L'administration examinera vos documents et votre rÃ©ponse dans un dÃ©lai de <strong>48 heures ouvrÃ©es</strong>. 
+                                Vous recevrez une notification dÃ¨s que votre dossier sera mis Ã  jour.
                             </p>
 </div>
 </div>
@@ -84,11 +84,11 @@ const ConfirmationDeSoumissionAdministration = () => {
 <span className="material-symbols-outlined text-primary">handyman</span>
 <span className="font-bold text-slate-900">ArtisanDirect</span>
 <span className="text-slate-400 mx-2">|</span>
-<p className="text-sm text-slate-500">© 2024 Plateforme Administrative des Artisans</p>
+<p className="text-sm text-slate-500">Â© 2024 Plateforme Administrative des Artisans</p>
 </div>
 <div className="flex gap-6">
-<a className="text-sm text-slate-500 hover:text-primary transition-colors" href="#">Mentions légales</a>
-<a className="text-sm text-slate-500 hover:text-primary transition-colors" href="#">Politique de confidentialité</a>
+<a className="text-sm text-slate-500 hover:text-primary transition-colors" href="#">Mentions lÃ©gales</a>
+<a className="text-sm text-slate-500 hover:text-primary transition-colors" href="#">Politique de confidentialitÃ©</a>
 <a className="text-sm text-slate-500 hover:text-primary transition-colors" href="#">Aide</a>
 </div>
 </div>
@@ -99,3 +99,4 @@ const ConfirmationDeSoumissionAdministration = () => {
 };
 
 export default ConfirmationDeSoumissionAdministration;
+

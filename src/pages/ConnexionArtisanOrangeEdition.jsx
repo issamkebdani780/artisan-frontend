@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 
 const ConnexionArtisanOrangeEdition = () => {
   return (
@@ -55,7 +55,7 @@ const ConnexionArtisanOrangeEdition = () => {
 </div>
 <div className="relative">
 <span className="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant/50">lock</span>
-<input className="w-full pl-12 pr-4 py-4 bg-surface-container-high border-none rounded-lg focus:ring-2 focus:ring-orange-500/40 focus:bg-white transition-all outline-none text-on-surface font-medium" placeholder="••••••••" type="password"/>
+<input className="w-full pl-12 pr-4 py-4 bg-surface-container-high border-none rounded-lg focus:ring-2 focus:ring-orange-500/40 focus:bg-white transition-all outline-none text-on-surface font-medium" placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢" type="password"/>
 </div>
 </div>
 <div className="flex items-center gap-3 py-2">
@@ -110,7 +110,7 @@ const ConnexionArtisanOrangeEdition = () => {
 <span className="material-symbols-outlined text-sm">send</span>
 </button>
 </div>
-<p className="text-[10px] text-slate-400 uppercase tracking-widest font-bold">© 2024 ArtisanHub. Crafted for Excellence.</p>
+<p className="text-[10px] text-slate-400 uppercase tracking-widest font-bold">Â© 2024 ArtisanHub. Crafted for Excellence.</p>
 </div>
 </div>
 </footer>
@@ -120,3 +120,4 @@ const ConnexionArtisanOrangeEdition = () => {
 };
 
 export default ConnexionArtisanOrangeEdition;
+

@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 
 const NettoyageProfond = () => {
   return (
@@ -51,7 +51,7 @@ const NettoyageProfond = () => {
 </a>
 <a className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-700 hover:bg-teal-50 transition-colors" href="#">
 <span className="material-symbols-outlined text-primary">calendar_month</span>
-<p className="text-sm font-medium">Mes Réservations</p>
+<p className="text-sm font-medium">Mes RÃ©servations</p>
 </a>
 <a className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-700 hover:bg-teal-50 transition-colors" href="#">
 <span className="material-symbols-outlined text-primary">chat_bubble</span>
@@ -60,7 +60,7 @@ const NettoyageProfond = () => {
 <div className="my-4 border-t border-teal-50"></div>
 <a className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-700 hover:bg-teal-50 transition-colors" href="#">
 <span className="material-symbols-outlined text-primary">settings</span>
-<p className="text-sm font-medium">Paramètres</p>
+<p className="text-sm font-medium">ParamÃ¨tres</p>
 </a>
 </nav>
 </aside>
@@ -71,7 +71,7 @@ const NettoyageProfond = () => {
 <div className="absolute bottom-0 left-0 p-8">
 <span className="inline-block px-3 py-1 rounded-full bg-teal-400 text-teal-950 text-xs font-bold uppercase tracking-wider mb-3">Service Premium</span>
 <h2 className="text-white text-4xl font-extrabold leading-tight">Nettoyage Profond</h2>
-<p className="text-teal-50 text-lg mt-2 max-w-xl">Une désinfection complète et un nettoyage minutieux de chaque recoin de votre domicile.</p>
+<p className="text-teal-50 text-lg mt-2 max-w-xl">Une dÃ©sinfection complÃ¨te et un nettoyage minutieux de chaque recoin de votre domicile.</p>
 </div>
 </div>
 </section>
@@ -85,32 +85,32 @@ const NettoyageProfond = () => {
 <div className="flex flex-col gap-1">
 <h3 className="text-slate-900 text-lg font-bold">Studio / T1</h3>
 <p className="flex items-baseline gap-1">
-<span className="text-primary text-4xl font-black">120€</span>
+<span className="text-primary text-4xl font-black">120â‚¬</span>
 <span className="text-slate-500 text-sm font-medium">forfait</span>
 </p>
 </div>
 <div className="flex flex-col gap-4">
 <div className="flex gap-3 items-start text-sm text-slate-600">
 <span className="material-symbols-outlined text-primary scale-90">check_circle</span>
-                                    Cuisine complète (four inclus)
+                                    Cuisine complÃ¨te (four inclus)
                                 </div>
 <div className="flex gap-3 items-start text-sm text-slate-600">
 <span className="material-symbols-outlined text-primary scale-90">check_circle</span>
-                                    Désinfection sanitaires
+                                    DÃ©sinfection sanitaires
                                 </div>
 <div className="flex gap-3 items-start text-sm text-slate-600">
 <span className="material-symbols-outlined text-primary scale-90">check_circle</span>
-                                    Lavage des sols à la vapeur
+                                    Lavage des sols Ã  la vapeur
                                 </div>
 </div>
-<button className="mt-auto w-full py-3 rounded-lg border-2 border-primary text-primary font-bold hover:bg-primary hover:text-white transition-colors">Réserver</button>
+<button className="mt-auto w-full py-3 rounded-lg border-2 border-primary text-primary font-bold hover:bg-primary hover:text-white transition-colors">RÃ©server</button>
 </div>
 <div className="flex flex-1 flex-col gap-6 rounded-xl border-2 border-primary bg-teal-50 p-8 relative shadow-xl shadow-primary/10">
 <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-white px-4 py-1 rounded-full text-xs font-bold uppercase">Plus populaire</div>
 <div className="flex flex-col gap-1">
 <h3 className="text-slate-900 text-lg font-bold">Appartement T3/T4</h3>
 <p className="flex items-baseline gap-1">
-<span className="text-primary text-4xl font-black">250€</span>
+<span className="text-primary text-4xl font-black">250â‚¬</span>
 <span className="text-slate-500 text-sm font-medium">forfait</span>
 </p>
 </div>
@@ -121,21 +121,21 @@ const NettoyageProfond = () => {
                                 </div>
 <div className="flex gap-3 items-start text-sm text-slate-600">
 <span className="material-symbols-outlined text-primary scale-90">check_circle</span>
-                                    Nettoyage intérieur placards
+                                    Nettoyage intÃ©rieur placards
                                 </div>
 <div className="flex gap-3 items-start text-sm text-slate-600">
 <span className="material-symbols-outlined text-primary scale-90">check_circle</span>
-                                    Rails de fenêtres &amp; plinthes
+                                    Rails de fenÃªtres &amp; plinthes
                                 </div>
 </div>
-<button className="mt-auto w-full py-3 rounded-lg bg-primary text-white font-bold hover:opacity-90 transition-opacity">Réserver</button>
+<button className="mt-auto w-full py-3 rounded-lg bg-primary text-white font-bold hover:opacity-90 transition-opacity">RÃ©server</button>
 </div>
 <div className="flex flex-col gap-6 rounded-xl border border-teal-100 bg-white p-8 transition-all hover:shadow-lg">
 <div className="flex flex-col gap-1">
 <h3 className="text-slate-900 text-lg font-bold">Grande Villa</h3>
 <p className="flex items-baseline gap-1">
-<span className="text-primary text-4xl font-black">450€</span>
-<span className="text-slate-500 text-sm font-medium">à partir de</span>
+<span className="text-primary text-4xl font-black">450â‚¬</span>
+<span className="text-slate-500 text-sm font-medium">Ã  partir de</span>
 </p>
 </div>
 <div className="flex flex-col gap-4">
@@ -152,39 +152,39 @@ const NettoyageProfond = () => {
                                     Nettoyage fin de chantier
                                 </div>
 </div>
-<button className="mt-auto w-full py-3 rounded-lg border-2 border-primary text-primary font-bold hover:bg-primary hover:text-white transition-colors">Réserver</button>
+<button className="mt-auto w-full py-3 rounded-lg border-2 border-primary text-primary font-bold hover:bg-primary hover:text-white transition-colors">RÃ©server</button>
 </div>
 </div>
 </section>
 <section className="px-6 py-8 bg-white">
-<h2 className="text-2xl font-extrabold tracking-tight mb-8">Tâches Incluses</h2>
+<h2 className="text-2xl font-extrabold tracking-tight mb-8">TÃ¢ches Incluses</h2>
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 <div className="flex flex-col gap-3">
 <div className="bg-primary/10 text-primary size-12 rounded-xl flex items-center justify-center">
 <span className="material-symbols-outlined">kitchen</span>
 </div>
 <h4 className="font-bold text-slate-900">Cuisine</h4>
-<p className="text-sm text-slate-500">Dégraissage hotte, four, intérieur frigo et nettoyage approfondi des surfaces.</p>
+<p className="text-sm text-slate-500">DÃ©graissage hotte, four, intÃ©rieur frigo et nettoyage approfondi des surfaces.</p>
 </div>
 <div className="flex flex-col gap-3">
 <div className="bg-primary/10 text-primary size-12 rounded-xl flex items-center justify-center">
 <span className="material-symbols-outlined">bathtub</span>
 </div>
 <h4 className="font-bold text-slate-900">Salle de Bain</h4>
-<p className="text-sm text-slate-500">Détartrage robinetterie, désinfection parois de douche et joints.</p>
+<p className="text-sm text-slate-500">DÃ©tartrage robinetterie, dÃ©sinfection parois de douche et joints.</p>
 </div>
 <div className="flex flex-col gap-3">
 <div className="bg-primary/10 text-primary size-12 rounded-xl flex items-center justify-center">
 <span className="material-symbols-outlined">bed</span>
 </div>
 <h4 className="font-bold text-slate-900">Chambres</h4>
-<p className="text-sm text-slate-500">Dépoussiérage des grilles d'aération, plinthes et derrière les meubles.</p>
+<p className="text-sm text-slate-500">DÃ©poussiÃ©rage des grilles d'aÃ©ration, plinthes et derriÃ¨re les meubles.</p>
 </div>
 <div className="flex flex-col gap-3">
 <div className="bg-primary/10 text-primary size-12 rounded-xl flex items-center justify-center">
 <span className="material-symbols-outlined">window</span>
 </div>
-<h4 className="font-bold text-slate-900">Fenêtres</h4>
+<h4 className="font-bold text-slate-900">FenÃªtres</h4>
 <p className="text-sm text-slate-500">Nettoyage des vitres recto/verso et des encadrements PVC/Alu.</p>
 </div>
 </div>
@@ -204,7 +204,7 @@ const NettoyageProfond = () => {
 <span className="text-xs font-bold">4.9</span>
 <span className="text-slate-400 font-normal ml-1">(124)</span>
 </div>
-<p className="text-[10px] text-primary font-bold mt-1 uppercase">Spécialiste Cuisine</p>
+<p className="text-[10px] text-primary font-bold mt-1 uppercase">SpÃ©cialiste Cuisine</p>
 </div>
 </div>
 <div className="bg-white rounded-xl p-4 border border-teal-50 flex items-center gap-4">
@@ -216,7 +216,7 @@ const NettoyageProfond = () => {
 <span className="text-xs font-bold">4.8</span>
 <span className="text-slate-400 font-normal ml-1">(89)</span>
 </div>
-<p className="text-[10px] text-primary font-bold mt-1 uppercase">Expert Désinfection</p>
+<p className="text-[10px] text-primary font-bold mt-1 uppercase">Expert DÃ©sinfection</p>
 </div>
 </div>
 <div className="bg-white rounded-xl p-4 border border-teal-50 flex items-center gap-4">
@@ -260,15 +260,15 @@ const NettoyageProfond = () => {
 <div className="size-16 rounded-full bg-white/20 flex items-center justify-center backdrop-blur-sm">
 <span className="material-symbols-outlined text-3xl">eco</span>
 </div>
-<h4 className="font-bold text-xl">Produits Éco</h4>
-<p className="text-teal-100 text-sm">Utilisation exclusive de produits certifiés non-toxiques.</p>
+<h4 className="font-bold text-xl">Produits Ã‰co</h4>
+<p className="text-teal-100 text-sm">Utilisation exclusive de produits certifiÃ©s non-toxiques.</p>
 </div>
 <div className="flex flex-col items-center gap-4">
 <div className="size-16 rounded-full bg-white/20 flex items-center justify-center backdrop-blur-sm">
 <span className="material-symbols-outlined text-3xl">security</span>
 </div>
 <h4 className="font-bold text-xl">Assurance AXA</h4>
-<p className="text-teal-100 text-sm">Chaque prestation est assurée contre tout dommage.</p>
+<p className="text-teal-100 text-sm">Chaque prestation est assurÃ©e contre tout dommage.</p>
 </div>
 </div>
 </div>
@@ -277,7 +277,7 @@ const NettoyageProfond = () => {
 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 <div className="flex flex-col gap-6">
 <h2 className="text-3xl font-black text-slate-900 leading-tight">Zone de Couverture</h2>
-<p className="text-slate-600">Nous intervenons dans toute la métropole et les communes environnantes. Entrez votre code postal pour vérifier la disponibilité immédiate.</p>
+<p className="text-slate-600">Nous intervenons dans toute la mÃ©tropole et les communes environnantes. Entrez votre code postal pour vÃ©rifier la disponibilitÃ© immÃ©diate.</p>
 <div className="flex gap-2">
 <div className="relative flex-1">
 <span className="absolute inset-y-0 left-3 flex items-center text-slate-400">
@@ -285,11 +285,11 @@ const NettoyageProfond = () => {
 </span>
 <input className="w-full pl-10 pr-4 py-3 rounded-lg border border-teal-100 bg-background-light focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all" placeholder="Entrez votre code postal" type="text"/>
 </div>
-<button className="px-6 py-3 bg-primary text-white font-bold rounded-lg hover:opacity-90">Vérifier</button>
+<button className="px-6 py-3 bg-primary text-white font-bold rounded-lg hover:opacity-90">VÃ©rifier</button>
 </div>
 <div className="flex flex-wrap gap-3 mt-4">
 <span className="px-3 py-1 rounded-full bg-teal-100 text-primary text-xs font-semibold">Paris &amp; IDF</span>
-<span className="px-3 py-1 rounded-full bg-teal-100 text-primary text-xs font-semibold">Lyon Métropole</span>
+<span className="px-3 py-1 rounded-full bg-teal-100 text-primary text-xs font-semibold">Lyon MÃ©tropole</span>
 <span className="px-3 py-1 rounded-full bg-teal-100 text-primary text-xs font-semibold">Bordeaux</span>
 <span className="px-3 py-1 rounded-full bg-teal-100 text-primary text-xs font-semibold">Lille</span>
 </div>
@@ -306,9 +306,9 @@ const NettoyageProfond = () => {
 </div>
 </section>
 <footer className="p-8 border-t border-teal-100 flex flex-col md:flex-row justify-between items-center gap-4 text-slate-500 text-sm">
-<p>© 2024 EcoClean Services. Tous droits réservés.</p>
+<p>Â© 2024 EcoClean Services. Tous droits rÃ©servÃ©s.</p>
 <div className="flex gap-6">
-<a className="hover:text-primary transition-colors" href="#">Confidentialité</a>
+<a className="hover:text-primary transition-colors" href="#">ConfidentialitÃ©</a>
 <a className="hover:text-primary transition-colors" href="#">CGV</a>
 <a className="hover:text-primary transition-colors" href="#">Contact</a>
 </div>
@@ -322,3 +322,4 @@ const NettoyageProfond = () => {
 };
 
 export default NettoyageProfond;
+
