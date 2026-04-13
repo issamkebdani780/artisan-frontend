@@ -12,7 +12,7 @@ const DetailsDuServiceDemenagement = () => {
 <div className="size-6">
 <span className="material-symbols-outlined text-3xl">local_shipping</span>
 </div>
-<h2 className="text-slate-900 text-lg font-bold leading-tight tracking-[-0.015em]">DÃ©mÃ©nagement Pro</h2>
+<h2 className="text-slate-900 text-lg font-bold leading-tight tracking-[-0.015em]">Déménagement Pro</h2>
 </div>
 <div className="hidden md:flex items-center gap-6">
 <a className="text-slate-600 text-sm font-medium hover:text-primary transition-colors" href="#">FR</a>
@@ -44,8 +44,8 @@ const DetailsDuServiceDemenagement = () => {
 <div className="relative h-[400px] w-full overflow-hidden rounded-xl bg-slate-900">
 <img alt="Moving Service" className="absolute inset-0 h-full w-full object-cover opacity-70" data-alt="Professional movers carrying boxes in a bright apartment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5QFQCsHN0b30H2Ub0wMT9Qrzm6_rSkBVpK0QDhEoQbeeVqdLE4weEgGgrDJm_gMrr49Sl_JkfRhVjKrunBXmBi5HG39LbAbB9yhD6HdEjheA_4dK_PJgT89kemRPlhrLhj7LN0iWgsEFZJfq6jZIu_Mn_8MvY-0JZvZ8SQuwZT0cLnaqWsyMUNSBMPY-vmE4MDUAUw7jnZs2z0kotZQgP7IRJ5Vf_-vRnF171btk3bsasjgLFMOju2weteoAYiQbmVpve9rCIwOJw"/>
 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent flex flex-col justify-end p-8 md:p-12">
-<h1 className="text-white text-4xl md:text-5xl font-bold leading-tight max-w-2xl">Service de DÃ©mÃ©nagement Professionnel &amp; SÃ©curisÃ©</h1>
-<p className="text-slate-200 mt-4 text-lg max-w-xl">LibÃ©rez-vous du stress. Nos experts s'occupent de tout, de l'emballage Ã  l'installation dans votre nouveau foyer.</p>
+<h1 className="text-white text-4xl md:text-5xl font-bold leading-tight max-w-2xl">Service de Déménagement Professionnel &amp; Sécurisé</h1>
+<p className="text-slate-200 mt-4 text-lg max-w-xl">Libérez-vous du stress. Nos experts s'occupent de tout, de l'emballage à l'installation dans votre nouveau foyer.</p>
 <div className="mt-8">
 <button className="bg-primary hover:bg-primary/90 text-white font-bold py-3 px-8 rounded-lg transition-colors">Obtenir un devis gratuit</button>
 </div>
@@ -53,48 +53,48 @@ const DetailsDuServiceDemenagement = () => {
 </div>
 </section>
 <section className="px-4 md:px-20 py-12">
-<h2 className="text-slate-900 text-3xl font-bold leading-tight mb-8">Comment Ã§a marche</h2>
+<h2 className="text-slate-900 text-3xl font-bold leading-tight mb-8">Comment ça marche</h2>
 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 <div className="flex flex-col gap-4 p-6 rounded-xl border border-slate-200 bg-white shadow-sm">
 <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
 <span className="material-symbols-outlined text-2xl">calendar_month</span>
 </div>
-<h3 className="text-xl font-bold">1. RÃ©servation en ligne</h3>
-<p className="text-slate-600">Choisissez votre formule et votre date en quelques clics. Recevez une confirmation immÃ©diate.</p>
+<h3 className="text-xl font-bold">1. Réservation en ligne</h3>
+<p className="text-slate-600">Choisissez votre formule et votre date en quelques clics. Recevez une confirmation immédiate.</p>
 </div>
 <div className="flex flex-col gap-4 p-6 rounded-xl border border-slate-200 bg-white shadow-sm">
 <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
 <span className="material-symbols-outlined text-2xl">inventory_2</span>
 </div>
 <h3 className="text-xl font-bold">2. Emballage &amp; Chargement</h3>
-<p className="text-slate-600">Nos experts protÃ¨gent vos biens avec du matÃ©riel professionnel et chargent le camion avec soin.</p>
+<p className="text-slate-600">Nos experts protègent vos biens avec du matériel professionnel et chargent le camion avec soin.</p>
 </div>
 <div className="flex flex-col gap-4 p-6 rounded-xl border border-slate-200 bg-white shadow-sm">
 <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
 <span className="material-symbols-outlined text-2xl">home_pin</span>
 </div>
 <h3 className="text-xl font-bold">3. Installation</h3>
-<p className="text-slate-600">Transport sÃ©curisÃ© et dÃ©chargement. Nous plaÃ§ons vos meubles exactement lÃ  oÃ¹ vous le souhaitez.</p>
+<p className="text-slate-600">Transport sécurisé et déchargement. Nous plaçons vos meubles exactement là où vous le souhaitez.</p>
 </div>
 </div>
 </section>
 <section className="px-4 md:px-20 py-12 bg-slate-50">
 <div className="flex flex-col items-center text-center mb-12">
-<h2 className="text-slate-900 text-3xl font-bold leading-tight">Tarification et DÃ©tails</h2>
-<p className="text-slate-600 mt-2">Des tarifs transparents adaptÃ©s Ã  tous vos besoins de mobilitÃ©.</p>
+<h2 className="text-slate-900 text-3xl font-bold leading-tight">Tarification et Détails</h2>
+<p className="text-slate-600 mt-2">Des tarifs transparents adaptés à tous vos besoins de mobilité.</p>
 </div>
 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
 <div className="flex flex-col p-8 rounded-xl bg-white border border-slate-200">
-<h3 className="text-xl font-bold mb-2">Petit DÃ©mÃ©nagement</h3>
-<p className="text-slate-500 text-sm mb-6">IdÃ©al pour Studio ou T1</p>
+<h3 className="text-xl font-bold mb-2">Petit Déménagement</h3>
+<p className="text-slate-500 text-sm mb-6">Idéal pour Studio ou T1</p>
 <div className="flex items-baseline gap-1 mb-6">
 <span className="text-3xl font-bold">150â‚¬</span>
-<span className="text-slate-500">Ã  partir de</span>
+<span className="text-slate-500">à partir de</span>
 </div>
 <ul className="space-y-4 mb-8 flex-1">
 <li className="flex items-center gap-3">
 <span className="material-symbols-outlined text-green-500">check_circle</span>
-<span>2 dÃ©mÃ©nageurs (2h)</span>
+<span>2 déménageurs (2h)</span>
 </li>
 <li className="flex items-center gap-3">
 <span className="material-symbols-outlined text-green-500">check_circle</span>
@@ -109,16 +109,16 @@ const DetailsDuServiceDemenagement = () => {
 </div>
 <div className="flex flex-col p-8 rounded-xl bg-white border-2 border-primary relative shadow-xl transform scale-105">
 <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Populaire</div>
-<h3 className="text-xl font-bold mb-2">DÃ©mÃ©nagement Complet</h3>
+<h3 className="text-xl font-bold mb-2">Déménagement Complet</h3>
 <p className="text-slate-500 text-sm mb-6">Appartement familial ou Maison</p>
 <div className="flex items-baseline gap-1 mb-6">
 <span className="text-3xl font-bold">450â‚¬</span>
-<span className="text-slate-500">Ã  partir de</span>
+<span className="text-slate-500">à partir de</span>
 </div>
 <ul className="space-y-4 mb-8 flex-1">
 <li className="flex items-center gap-3">
 <span className="material-symbols-outlined text-green-500">check_circle</span>
-<span>3-4 dÃ©mÃ©nageurs</span>
+<span>3-4 déménageurs</span>
 </li>
 <li className="flex items-center gap-3">
 <span className="material-symbols-outlined text-green-500">check_circle</span>
@@ -140,12 +140,12 @@ const DetailsDuServiceDemenagement = () => {
 <p className="text-slate-500 text-sm mb-6">Piano, Coffre-fort, Billard</p>
 <div className="flex items-baseline gap-1 mb-6">
 <span className="text-3xl font-bold">200â‚¬</span>
-<span className="text-slate-500">Ã  partir de</span>
+<span className="text-slate-500">à partir de</span>
 </div>
 <ul className="space-y-4 mb-8 flex-1">
 <li className="flex items-center gap-3">
 <span className="material-symbols-outlined text-green-500">check_circle</span>
-<span>Ã‰quipe spÃ©cialisÃ©e</span>
+<span>Ã‰quipe spécialisée</span>
 </li>
 <li className="flex items-center gap-3">
 <span className="material-symbols-outlined text-green-500">check_circle</span>
@@ -153,7 +153,7 @@ const DetailsDuServiceDemenagement = () => {
 </li>
 <li className="flex items-center gap-3">
 <span className="material-symbols-outlined text-green-500">check_circle</span>
-<span>Protection spÃ©cifique</span>
+<span>Protection spécifique</span>
 </li>
 </ul>
 <button className="w-full py-3 px-4 rounded-lg border-2 border-primary text-primary font-bold hover:bg-primary/5 transition-colors">Choisir cette offre</button>
@@ -161,7 +161,7 @@ const DetailsDuServiceDemenagement = () => {
 </div>
 </section>
 <section className="px-4 md:px-20 py-12">
-<h2 className="text-slate-900 text-3xl font-bold mb-8">Nos meilleurs dÃ©mÃ©nageurs</h2>
+<h2 className="text-slate-900 text-3xl font-bold mb-8">Nos meilleurs déménageurs</h2>
 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 <div className="bg-white p-6 rounded-xl border border-slate-200 flex flex-col items-center text-center">
 <div className="size-24 rounded-full overflow-hidden mb-4 border-4 border-primary/20">
@@ -175,7 +175,7 @@ const DetailsDuServiceDemenagement = () => {
 <span className="material-symbols-outlined">star</span>
 <span className="material-symbols-outlined">star</span>
 </div>
-<p className="text-sm text-slate-600 italic">"12 ans d'expÃ©rience. SpÃ©cialiste des objets fragiles et du montage de meubles complexes."</p>
+<p className="text-sm text-slate-600 italic">"12 ans d'expérience. Spécialiste des objets fragiles et du montage de meubles complexes."</p>
 </div>
 <div className="bg-white p-6 rounded-xl border border-slate-200 flex flex-col items-center text-center">
 <div className="size-24 rounded-full overflow-hidden mb-4 border-4 border-primary/20">
@@ -203,33 +203,33 @@ const DetailsDuServiceDemenagement = () => {
 <span className="material-symbols-outlined">star</span>
 <span className="material-symbols-outlined">star</span>
 </div>
-<p className="text-sm text-slate-600 italic">"Expert en transport d'objets lourds. Maniaque de la protection et de la sÃ©curitÃ© du matÃ©riel."</p>
+<p className="text-sm text-slate-600 italic">"Expert en transport d'objets lourds. Maniaque de la protection et de la sécurité du matériel."</p>
 </div>
 </div>
 </section>
 <section className="px-4 md:px-20 py-16 bg-slate-50">
-<h2 className="text-slate-900 text-3xl font-bold mb-8 text-center">Questions frÃ©quentes</h2>
+<h2 className="text-slate-900 text-3xl font-bold mb-8 text-center">Questions fréquentes</h2>
 <div className="max-w-3xl mx-auto space-y-4">
 <div className="bg-white rounded-lg border border-slate-200 p-6">
 <h4 className="font-bold mb-2 flex justify-between items-center">
-                                Proposez-vous des cartons de dÃ©mÃ©nagement ?
+                                Proposez-vous des cartons de déménagement ?
                                 <span className="material-symbols-outlined text-primary">expand_more</span>
 </h4>
-<p className="text-slate-600">Oui, selon la formule choisie, nous pouvons vous fournir tout le matÃ©riel nÃ©cessaire (cartons, ruban adhÃ©sif, papier bulle) ou mÃªme nous occuper de l'emballage complet.</p>
+<p className="text-slate-600">Oui, selon la formule choisie, nous pouvons vous fournir tout le matériel nécessaire (cartons, ruban adhésif, papier bulle) ou mÃªme nous occuper de l'emballage complet.</p>
 </div>
 <div className="bg-white rounded-lg border border-slate-200 p-6">
 <h4 className="font-bold mb-2 flex justify-between items-center">
-                                Mes biens sont-ils assurÃ©s pendant le transport ?
+                                Mes biens sont-ils assurés pendant le transport ?
                                 <span className="material-symbols-outlined text-primary">expand_more</span>
 </h4>
-<p className="text-slate-600">Absolument. Tous nos dÃ©mÃ©nagements incluent une assurance responsabilitÃ© civile professionnelle. Pour les objets de grande valeur, nous proposons des extensions d'assurance ad valorem.</p>
+<p className="text-slate-600">Absolument. Tous nos déménagements incluent une assurance responsabilité civile professionnelle. Pour les objets de grande valeur, nous proposons des extensions d'assurance ad valorem.</p>
 </div>
 <div className="bg-white rounded-lg border border-slate-200 p-6">
 <h4 className="font-bold mb-2 flex justify-between items-center">
-                                Combien de temps Ã  l'avance dois-je rÃ©server ?
+                                Combien de temps à l'avance dois-je réserver ?
                                 <span className="material-symbols-outlined text-primary">expand_more</span>
 </h4>
-<p className="text-slate-600">Nous recommandons de rÃ©server au moins 2 Ã  3 semaines Ã  l'avance, surtout pour les dÃ©mÃ©nagements en fin de mois ou pendant le week-end, qui sont des pÃ©riodes trÃ¨s demandÃ©es.</p>
+<p className="text-slate-600">Nous recommandons de réserver au moins 2 à 3 semaines à l'avance, surtout pour les déménagements en fin de mois ou pendant le week-end, qui sont des périodes très demandées.</p>
 </div>
 </div>
 </section>
@@ -239,9 +239,9 @@ const DetailsDuServiceDemenagement = () => {
 <div className="flex flex-col gap-4">
 <div className="flex items-center gap-2 text-primary">
 <span className="material-symbols-outlined">local_shipping</span>
-<span className="font-bold text-xl text-slate-900">DÃ©mÃ©nagement Pro</span>
+<span className="font-bold text-xl text-slate-900">Déménagement Pro</span>
 </div>
-<p className="text-sm text-slate-500">Service professionnel de dÃ©mÃ©nagement partout en France. QualitÃ©, sÃ©curitÃ© et sÃ©rÃ©nitÃ© garanties.</p>
+<p className="text-sm text-slate-500">Service professionnel de déménagement partout en France. Qualité, sécurité et sérénité garanties.</p>
 <div className="flex gap-4 mt-2">
 <a className="text-slate-400 hover:text-primary" href="#"><span className="material-symbols-outlined">public</span></a>
 <a className="text-slate-400 hover:text-primary" href="#"><span className="material-symbols-outlined">thumb_up</span></a>
@@ -251,7 +251,7 @@ const DetailsDuServiceDemenagement = () => {
 <div>
 <h5 className="font-bold mb-4">Services</h5>
 <ul className="space-y-2 text-sm text-slate-600">
-<li><a className="hover:text-primary" href="#">DÃ©mÃ©nagement particulier</a></li>
+<li><a className="hover:text-primary" href="#">Déménagement particulier</a></li>
 <li><a className="hover:text-primary" href="#">Transfert de bureau</a></li>
 <li><a className="hover:text-primary" href="#">Garde-meuble</a></li>
 <li><a className="hover:text-primary" href="#">Location de monte-meuble</a></li>
@@ -263,12 +263,12 @@ const DetailsDuServiceDemenagement = () => {
 <li><a className="hover:text-primary" href="#">Centre d'aide</a></li>
 <li><a className="hover:text-primary" href="#">Contactez-nous</a></li>
 <li><a className="hover:text-primary" href="#">Suivi de prestation</a></li>
-<li><a className="hover:text-primary" href="#">RÃ©clamations</a></li>
+<li><a className="hover:text-primary" href="#">Réclamations</a></li>
 </ul>
 </div>
 <div>
 <h5 className="font-bold mb-4">Newsletter</h5>
-<p className="text-sm text-slate-600 mb-4">Recevez nos conseils pour un dÃ©mÃ©nagement rÃ©ussi.</p>
+<p className="text-sm text-slate-600 mb-4">Recevez nos conseils pour un déménagement réussi.</p>
 <div className="flex gap-2">
 <input className="form-input flex-1 rounded-lg border-slate-300 text-sm focus:border-primary focus:ring-primary" placeholder="Email" type="email"/>
 <button className="bg-primary text-white px-4 py-2 rounded-lg text-sm font-bold">OK</button>
@@ -276,7 +276,7 @@ const DetailsDuServiceDemenagement = () => {
 </div>
 </div>
 <div className="mt-12 pt-8 border-t border-slate-100 text-center text-xs text-slate-500">
-<p>Â© 2024 DÃ©mÃ©nagement Pro. Tous droits rÃ©servÃ©s. Mentions lÃ©gales | ConfidentialitÃ©</p>
+<p>Â© 2024 Déménagement Pro. Tous droits réservés. Mentions légales | Confidentialité</p>
 </div>
 </footer>
 </div>

@@ -15,8 +15,8 @@ const VerificationsEnAttenteVue = () => {
 <span className="material-symbols-outlined">verified_user</span>
 </div>
 <div>
-<h2 className="text-xl font-bold text-slate-900">VÃ©rifications en attente</h2>
-<p className="text-xs text-slate-500 font-medium">Admin Dashboard / Ã‰dition VÃ©rification</p>
+<h2 className="text-xl font-bold text-slate-900">Vérifications en attente</h2>
+<p className="text-xs text-slate-500 font-medium">Admin Dashboard / Ã‰dition Vérification</p>
 </div>
 </div>
 <div className="flex items-center gap-6">
@@ -47,7 +47,7 @@ const VerificationsEnAttenteVue = () => {
 </div>
 <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
 <div>
-<p className="text-sm font-medium text-slate-500 uppercase tracking-wider mb-1">ApprouvÃ©s aujourd'hui</p>
+<p className="text-sm font-medium text-slate-500 uppercase tracking-wider mb-1">Approuvés aujourd'hui</p>
 <h3 className="text-3xl font-bold">12</h3>
 </div>
 <div className="w-12 h-12 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600">
@@ -56,7 +56,7 @@ const VerificationsEnAttenteVue = () => {
 </div>
 <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
 <div>
-<p className="text-sm font-medium text-slate-500 uppercase tracking-wider mb-1">RefusÃ©s aujourd'hui</p>
+<p className="text-sm font-medium text-slate-500 uppercase tracking-wider mb-1">Refusés aujourd'hui</p>
 <h3 className="text-3xl font-bold">03</h3>
 </div>
 <div className="w-12 h-12 rounded-full bg-rose-100 flex items-center justify-center text-rose-600">
@@ -67,7 +67,7 @@ const VerificationsEnAttenteVue = () => {
 {/*  Main Table Section  */}
 <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
 <div className="px-6 py-4 border-b border-slate-200 flex items-center justify-between">
-<h3 className="font-bold text-lg">Liste des artisans Ã  approuver</h3>
+<h3 className="font-bold text-lg">Liste des artisans à approuver</h3>
 <div className="flex gap-2">
 <button className="text-xs font-bold px-3 py-1.5 rounded-lg border border-slate-200 hover:bg-slate-50 transition-colors flex items-center gap-1">
 <span className="material-symbols-outlined text-sm">filter_list</span> Filtrer
@@ -116,7 +116,7 @@ const VerificationsEnAttenteVue = () => {
 </td>
 <td className="px-6 py-4 text-right">
 <div className="flex justify-end gap-2">
-<button className="px-3 py-1.5 rounded-lg bg-primary text-white text-xs font-bold hover:bg-primary/90 transition-colors shadow-md shadow-primary/20">VÃ©rifier</button>
+<button className="px-3 py-1.5 rounded-lg bg-primary text-white text-xs font-bold hover:bg-primary/90 transition-colors shadow-md shadow-primary/20">Vérifier</button>
 <button className="px-3 py-1.5 rounded-lg border border-slate-200 text-rose-600 text-xs font-bold hover:bg-rose-50 transition-colors">Rejeter</button>
 </div>
 </td>
@@ -136,7 +136,7 @@ const VerificationsEnAttenteVue = () => {
 <td className="px-6 py-4">
 <div className="flex flex-wrap gap-2">
 <span className="px-2 py-1 rounded-md bg-slate-100 text-[10px] font-bold text-slate-600 border border-slate-200 flex items-center gap-1">
-<span className="material-symbols-outlined text-sm">school</span> DiplÃ´me
+<span className="material-symbols-outlined text-sm">school</span> Diplôme
                                             </span>
 <span className="px-2 py-1 rounded-md bg-slate-100 text-[10px] font-bold text-slate-600 border border-slate-200 flex items-center gap-1">
 <span className="material-symbols-outlined text-sm">badge</span> ID
@@ -148,7 +148,7 @@ const VerificationsEnAttenteVue = () => {
 </td>
 <td className="px-6 py-4 text-right">
 <div className="flex justify-end gap-2">
-<button className="px-3 py-1.5 rounded-lg bg-primary text-white text-xs font-bold hover:bg-primary/90 transition-colors shadow-md shadow-primary/20">VÃ©rifier</button>
+<button className="px-3 py-1.5 rounded-lg bg-primary text-white text-xs font-bold hover:bg-primary/90 transition-colors shadow-md shadow-primary/20">Vérifier</button>
 <button className="px-3 py-1.5 rounded-lg border border-slate-200 text-rose-600 text-xs font-bold hover:bg-rose-50 transition-colors">Rejeter</button>
 </div>
 </td>
@@ -160,7 +160,7 @@ const VerificationsEnAttenteVue = () => {
 <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary font-bold">LM</div>
 <div>
 <p className="font-bold text-sm">Lucas Martin</p>
-<p className="text-xs text-slate-500">MaÃ§onnerie GÃ©nÃ©rale</p>
+<p className="text-xs text-slate-500">Maçonnerie Générale</p>
 </div>
 </div>
 </td>
@@ -180,7 +180,7 @@ const VerificationsEnAttenteVue = () => {
 </td>
 <td className="px-6 py-4 text-right">
 <div className="flex justify-end gap-2">
-<button className="px-3 py-1.5 rounded-lg bg-primary text-white text-xs font-bold hover:bg-primary/90 transition-colors shadow-md shadow-primary/20">VÃ©rifier</button>
+<button className="px-3 py-1.5 rounded-lg bg-primary text-white text-xs font-bold hover:bg-primary/90 transition-colors shadow-md shadow-primary/20">Vérifier</button>
 <button className="px-3 py-1.5 rounded-lg border border-slate-200 text-rose-600 text-xs font-bold hover:bg-rose-50 transition-colors">Rejeter</button>
 </div>
 </td>
@@ -192,7 +192,7 @@ const VerificationsEnAttenteVue = () => {
 <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary font-bold">SB</div>
 <div>
 <p className="font-bold text-sm">Sophie Bernard</p>
-<p className="text-xs text-slate-500">Peinture &amp; DÃ©coration</p>
+<p className="text-xs text-slate-500">Peinture &amp; Décoration</p>
 </div>
 </div>
 </td>
@@ -212,7 +212,7 @@ const VerificationsEnAttenteVue = () => {
 </td>
 <td className="px-6 py-4 text-right">
 <div className="flex justify-end gap-2">
-<button className="px-3 py-1.5 rounded-lg bg-primary text-white text-xs font-bold hover:bg-primary/90 transition-colors shadow-md shadow-primary/20">VÃ©rifier</button>
+<button className="px-3 py-1.5 rounded-lg bg-primary text-white text-xs font-bold hover:bg-primary/90 transition-colors shadow-md shadow-primary/20">Vérifier</button>
 <button className="px-3 py-1.5 rounded-lg border border-slate-200 text-rose-600 text-xs font-bold hover:bg-rose-50 transition-colors">Rejeter</button>
 </div>
 </td>

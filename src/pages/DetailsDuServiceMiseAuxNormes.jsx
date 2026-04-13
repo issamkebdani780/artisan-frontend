@@ -17,7 +17,7 @@ const DetailsDuServiceMiseAuxNormes = () => {
 <div className="flex flex-1 justify-end gap-4 items-center">
 <nav className="hidden md:flex gap-6 mr-8 text-sm font-medium">
 <a className="text-slate-600 hover:text-primary transition-colors" href="#">Services</a>
-<a className="text-slate-600 hover:text-primary transition-colors" href="#">RÃ©alisations</a>
+<a className="text-slate-600 hover:text-primary transition-colors" href="#">Réalisations</a>
 <a className="text-slate-600 hover:text-primary transition-colors" href="#">Blog</a>
 <a className="text-slate-600 hover:text-primary transition-colors" href="#">Contact</a>
 </nav>
@@ -41,7 +41,7 @@ const DetailsDuServiceMiseAuxNormes = () => {
 <div className="relative z-10 space-y-4 max-w-2xl">
 <div className="inline-flex items-center px-3 py-1 rounded-full bg-primary text-white text-xs font-bold uppercase tracking-wider">Norme NF C 15-100</div>
 <h1 className="text-white text-4xl md:text-5xl font-black leading-tight">Mise aux Normes Ã‰lectriques</h1>
-<p className="text-slate-200 text-lg">ProtÃ©gez votre foyer et vos proches avec une installation Ã©lectrique certifiÃ©e, sÃ»re et performante.</p>
+<p className="text-slate-200 text-lg">Protégez votre foyer et vos proches avec une installation électrique certifiée, sûre et performante.</p>
 </div>
 </div>
 </div>
@@ -59,7 +59,7 @@ const DetailsDuServiceMiseAuxNormes = () => {
 <section>
 <h2 className="text-3xl font-black tracking-tight mb-4">Pourquoi mettre aux normes ?</h2>
 <p className="text-slate-600 text-lg leading-relaxed">
-                                Une installation vÃ©tuste est la premiÃ¨re cause d'incendies domestiques en France. La mise aux normes NF C 15-100 n'est pas seulement une obligation lÃ©gale lors d'une rÃ©novation lourde, c'est avant tout une garantie de sÃ©curitÃ© indispensable pour votre habitat.
+                                Une installation vétuste est la première cause d'incendies domestiques en France. La mise aux normes NF C 15-100 n'est pas seulement une obligation légale lors d'une rénovation lourde, c'est avant tout une garantie de sécurité indispensable pour votre habitat.
                             </p>
 </section>
 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -88,7 +88,7 @@ const DetailsDuServiceMiseAuxNormes = () => {
 </div>
 <div>
 <h4 className="font-bold text-lg">Diagnostic Complet</h4>
-<p className="text-slate-600">Analyse dÃ©taillÃ©e de votre tableau, des prises de terre et de l'Ã©tat des conducteurs pour identifier les risques potentiels.</p>
+<p className="text-slate-600">Analyse détaillée de votre tableau, des prises de terre et de l'état des conducteurs pour identifier les risques potentiels.</p>
 </div>
 </div>
 <div className="flex gap-4 p-4 rounded-xl bg-white border border-slate-100">
@@ -96,8 +96,8 @@ const DetailsDuServiceMiseAuxNormes = () => {
 <span className="material-symbols-outlined">electrical_services</span>
 </div>
 <div>
-<h4 className="font-bold text-lg">Remise Ã  neuf du Tableau</h4>
-<p className="text-slate-600">Remplacement des anciens fusibles par des disjoncteurs magnÃ©tothermiques et pose d'interrupteurs diffÃ©rentiels 30mA.</p>
+<h4 className="font-bold text-lg">Remise à neuf du Tableau</h4>
+<p className="text-slate-600">Remplacement des anciens fusibles par des disjoncteurs magnétothermiques et pose d'interrupteurs différentiels 30mA.</p>
 </div>
 </div>
 <div className="flex gap-4 p-4 rounded-xl bg-white border border-slate-100">
@@ -105,8 +105,8 @@ const DetailsDuServiceMiseAuxNormes = () => {
 <span className="material-symbols-outlined">settings_input_component</span>
 </div>
 <div>
-<h4 className="font-bold text-lg">CÃ¢blage &amp; Prises</h4>
-<p className="text-slate-600">Remplacement des fils en tissu ou plombÃ©s, installation de prises avec obturateurs de sÃ©curitÃ© et mise Ã  la terre.</p>
+<h4 className="font-bold text-lg">Câblage &amp; Prises</h4>
+<p className="text-slate-600">Remplacement des fils en tissu ou plombés, installation de prises avec obturateurs de sécurité et mise à la terre.</p>
 </div>
 </div>
 </div>
@@ -116,7 +116,7 @@ const DetailsDuServiceMiseAuxNormes = () => {
 <div className="space-y-6">
 <div className="bg-primary p-8 rounded-xl text-white shadow-xl shadow-orange-200">
 <h3 className="text-2xl font-bold mb-4">Besoin d'un devis gratuit ?</h3>
-<p className="mb-6 opacity-90">Nos experts vous rÃ©pondent sous 24h pour une Ã©tude personnalisÃ©e de votre projet.</p>
+<p className="mb-6 opacity-90">Nos experts vous répondent sous 24h pour une étude personnalisée de votre projet.</p>
 <button className="w-full bg-white text-primary font-bold py-4 rounded-lg hover:bg-orange-50 transition-colors flex items-center justify-center gap-2">
 <span className="material-symbols-outlined">description</span>
                                 Demander mon devis
@@ -128,7 +128,7 @@ const DetailsDuServiceMiseAuxNormes = () => {
 <ul className="space-y-3">
 <li className="flex items-center gap-3 text-sm">
 <span className="material-symbols-outlined text-green-500">check_circle</span>
-                                    AgrÃ©ment Qualifelec
+                                    Agrément Qualifelec
                                 </li>
 <li className="flex items-center gap-3 text-sm">
 <span className="material-symbols-outlined text-green-500">check_circle</span>
@@ -136,17 +136,17 @@ const DetailsDuServiceMiseAuxNormes = () => {
                                 </li>
 <li className="flex items-center gap-3 text-sm">
 <span className="material-symbols-outlined text-green-500">check_circle</span>
-                                    Assurance DÃ©cennale
+                                    Assurance Décennale
                                 </li>
 <li className="flex items-center gap-3 text-sm">
 <span className="material-symbols-outlined text-green-500">check_circle</span>
-                                    MatÃ©riel certifiÃ© NF
+                                    Matériel certifié NF
                                 </li>
 </ul>
 </div>
 <div className="bg-stone-100 p-6 rounded-xl">
 <h4 className="font-bold text-lg mb-2">Nous trouver</h4>
-<p className="text-sm text-slate-600 mb-4">Intervention rapide sur toute la rÃ©gion parisienne.</p>
+<p className="text-sm text-slate-600 mb-4">Intervention rapide sur toute la région parisienne.</p>
 <div className="aspect-video rounded-lg overflow-hidden grayscale bg-slate-200" data-location="Paris, France" >
 <img alt="Map area of Paris" className="w-full h-full object-cover" data-alt="Stylized map showing Paris region intervention zone" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHD9Q0N7cYl7A7SZMx63_eF57ahBSygIb_FbF2z9CBJItEaBv4dEWlra43Hu5nBPDSHjuCocA2V1bZW3yOgX9EJAGFyjCowIjonL352QaA0RcurUIJ1hAjAG0pPinttVwJdSgvx1wMlGnJMLlHWlg981QLOURfAoe92cWEYbMpIKXna74g2PqY6wzgkmNTVvki6UGbwsF8RflIhGsBy5zju5_WCRhmnygusb8n1s3NpMmW5EhXqv6yLy8eYWhTE1bJxemYqWVPc2m6"/>
 </div>
@@ -159,23 +159,23 @@ const DetailsDuServiceMiseAuxNormes = () => {
 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 <div className="bg-white p-8 rounded-2xl shadow-sm italic relative">
 <span className="material-symbols-outlined text-primary/20 text-6xl absolute top-4 left-4">format_quote</span>
-<p className="relative z-10 text-slate-600 mb-6">"Ã‰quipe trÃ¨s professionnelle. Le diagnostic a Ã©tÃ© clair et les travaux de mise aux normes de mon appartement ancien ont Ã©tÃ© rÃ©alisÃ©s proprement et dans les dÃ©lais. Je recommande VoltExpert sans hÃ©siter."</p>
+<p className="relative z-10 text-slate-600 mb-6">"Ã‰quipe très professionnelle. Le diagnostic a été clair et les travaux de mise aux normes de mon appartement ancien ont été réalisés proprement et dans les délais. Je recommande VoltExpert sans hésiter."</p>
 <div className="flex items-center gap-4">
 <div className="size-12 rounded-full bg-slate-200 bg-cover bg-center" data-alt="Portrait of a satisfied customer" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCbO5w2xHXuSNubH8HOlN4roEaVZxa9P0SFvJdkkLWMKTjeVw3OIdWNVqBJ-pOBd0xZS_vQEC7FHk86_yvJdVAJaN5G_Qk31ftOAfeuR24TkDigAcjk-tw9LTMWnLn1_VCyUZmFX1ShDK0ZPCWkYpXl4fbSmfXEbr0Ti0iFuz5iek6NBGuYlA_HOyMYmRbSlSXfqKeS7HflImkk60fy5iYCi4d0XQw5i8ExYxXO_Dj2njqZUVQnb9b0hBK4tbp1pkiEwfVzEUFp00u5");'></div>
 <div>
 <p className="font-bold">Jean-Marc D.</p>
-<p className="text-xs text-slate-500">PropriÃ©taire Ã  Boulogne</p>
+<p className="text-xs text-slate-500">Propriétaire à Boulogne</p>
 </div>
 </div>
 </div>
 <div className="bg-white p-8 rounded-2xl shadow-sm italic relative">
 <span className="material-symbols-outlined text-primary/20 text-6xl absolute top-4 left-4">format_quote</span>
-<p className="relative z-10 text-slate-600 mb-6">"Une mise aux normes complÃ¨te effectuÃ©e avec soin. Le technicien a pris le temps d'expliquer chaque Ã©tape et le passage du Consuel s'est fait sans aucun problÃ¨me. Un gage de sÃ©curitÃ© pour ma famille."</p>
+<p className="relative z-10 text-slate-600 mb-6">"Une mise aux normes complète effectuée avec soin. Le technicien a pris le temps d'expliquer chaque étape et le passage du Consuel s'est fait sans aucun problème. Un gage de sécurité pour ma famille."</p>
 <div className="flex items-center gap-4">
 <div className="size-12 rounded-full bg-slate-200 bg-cover bg-center" data-alt="Portrait of a happy client" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA6I1wiQZMzQrXwxSYvCzBZTlLzplHmYBTy8bskcZJTDn_8NSKDmSDI-_S1XnZ5jfp_faIv55J0YBvE2iUh6z-A3GfegfpvfHoaoJilv29AP3v920_I0_ehfRab4b85c4EKV4z7DrObAloatzy21ZukcA7OeP_OXMJuwpi1sTuLO9OiWHZ06rpC81vx3h9GqwSfhBHZMfM2aBWY4zVKCGfChL_dyJuJGnWVSJuLwvaEcQaU_wuYEeGHjM341FYkXOJNdO2WShM18TcT");'></div>
 <div>
 <p className="font-bold">Sophie L.</p>
-<p className="text-xs text-slate-500">RÃ©novation maison, Versailles</p>
+<p className="text-xs text-slate-500">Rénovation maison, Versailles</p>
 </div>
 </div>
 </div>
@@ -191,23 +191,23 @@ const DetailsDuServiceMiseAuxNormes = () => {
 <span className="material-symbols-outlined text-3xl">bolt</span>
 <h2 className="text-xl font-bold">VoltExpert</h2>
 </div>
-<p className="text-slate-400 text-sm leading-relaxed">Expert en Ã©lectricitÃ© gÃ©nÃ©rale et mise aux normes depuis 15 ans. SÃ©curitÃ© et innovation au service de votre habitat.</p>
+<p className="text-slate-400 text-sm leading-relaxed">Expert en électricité générale et mise aux normes depuis 15 ans. Sécurité et innovation au service de votre habitat.</p>
 </div>
 <div>
 <h4 className="font-bold mb-6">Nos Services</h4>
 <ul className="space-y-3 text-slate-400 text-sm">
 <li><a className="hover:text-primary transition-colors" href="#">Mise aux normes</a></li>
-<li><a className="hover:text-primary transition-colors" href="#">DÃ©pannage 24/7</a></li>
+<li><a className="hover:text-primary transition-colors" href="#">Dépannage 24/7</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Domotique</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Ã‰clairage LED</a></li>
 </ul>
 </div>
 <div>
-<h4 className="font-bold mb-6">LÃ©gal</h4>
+<h4 className="font-bold mb-6">Légal</h4>
 <ul className="space-y-3 text-slate-400 text-sm">
-<li><a className="hover:text-primary transition-colors" href="#">Mentions lÃ©gales</a></li>
+<li><a className="hover:text-primary transition-colors" href="#">Mentions légales</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">RGPD</a></li>
-<li><a className="hover:text-primary transition-colors" href="#">Conditions gÃ©nÃ©rales</a></li>
+<li><a className="hover:text-primary transition-colors" href="#">Conditions générales</a></li>
 </ul>
 </div>
 <div>
@@ -220,7 +220,7 @@ const DetailsDuServiceMiseAuxNormes = () => {
 </div>
 </div>
 <div className="border-t border-slate-800 mt-12 pt-8 text-center text-slate-500 text-sm">
-                Â© 2024 VoltExpert. Tous droits rÃ©servÃ©s.
+                Â© 2024 VoltExpert. Tous droits réservés.
             </div>
 </footer>
 </div>

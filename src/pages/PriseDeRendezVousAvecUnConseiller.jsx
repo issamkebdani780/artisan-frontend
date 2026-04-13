@@ -35,7 +35,7 @@ const PriseDeRendezVousAvecUnConseiller = () => {
 <div className="flex flex-col gap-3">
 <h1 className="text-slate-900 text-3xl md:text-4xl font-black leading-tight tracking-[-0.033em]">Prendre rendez-vous avec un conseiller</h1>
 <p className="text-slate-600 text-base font-normal leading-normal max-w-2xl">
-                        Un entretien personnalisÃ© peut vous aider Ã  clarifier les avertissements administratifs, optimiser votre gestion ou amÃ©liorer la qualitÃ© de vos services.
+                        Un entretien personnalisé peut vous aider à clarifier les avertissements administratifs, optimiser votre gestion ou améliorer la qualité de vos services.
                     </p>
 </div>
 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -91,7 +91,7 @@ const PriseDeRendezVousAvecUnConseiller = () => {
 </div>
 <div className="border-t border-primary/10 pt-6">
 <h3 className="text-slate-900 text-lg font-bold mb-4 flex items-center gap-2">
-<span className="material-symbols-outlined text-primary">schedule</span> 2. CrÃ©neau horaire
+<span className="material-symbols-outlined text-primary">schedule</span> 2. Créneau horaire
                             </h3>
 <div className="grid grid-cols-3 gap-3">
 <button className="py-2.5 px-4 border border-primary/20 rounded-lg text-sm font-medium hover:bg-primary hover:text-white transition-all">09:00</button>
@@ -113,16 +113,16 @@ const PriseDeRendezVousAvecUnConseiller = () => {
 <label className="flex items-center gap-4 p-4 rounded-lg border-2 border-primary/10 hover:border-primary/50 cursor-pointer transition-all group">
 <input defaultChecked className="w-5 h-5 text-primary focus:ring-primary border-primary/30" name="mode" type="radio"/>
 <div className="flex flex-col">
-<span className="text-sm font-bold text-slate-900">VidÃ©oconfÃ©rence</span>
-<span className="text-xs text-slate-500">IdÃ©al pour le partage d'Ã©cran et documents</span>
+<span className="text-sm font-bold text-slate-900">Vidéoconférence</span>
+<span className="text-xs text-slate-500">Idéal pour le partage d'écran et documents</span>
 </div>
 <span className="material-symbols-outlined ml-auto text-primary group-hover:scale-110 transition-transform">videocam</span>
 </label>
 <label className="flex items-center gap-4 p-4 rounded-lg border-2 border-primary/10 hover:border-primary/50 cursor-pointer transition-all group">
 <input className="w-5 h-5 text-primary focus:ring-primary border-primary/30" name="mode" type="radio"/>
 <div className="flex flex-col">
-<span className="text-sm font-bold text-slate-900">Appel TÃ©lÃ©phonique</span>
-<span className="text-xs text-slate-500">Nous vous appellerons sur votre numÃ©ro</span>
+<span className="text-sm font-bold text-slate-900">Appel Téléphonique</span>
+<span className="text-xs text-slate-500">Nous vous appellerons sur votre numéro</span>
 </div>
 <span className="material-symbols-outlined ml-auto text-primary group-hover:scale-110 transition-transform">call</span>
 </label>
@@ -133,8 +133,8 @@ const PriseDeRendezVousAvecUnConseiller = () => {
 <span className="material-symbols-outlined text-primary">notes</span> 4. Notes additionnelles
                             </h3>
 <div className="flex flex-col gap-2">
-<label className="text-xs font-medium text-slate-500" htmlFor="topics">PrÃ©cisez les sujets que vous souhaitez aborder</label>
-<textarea className="w-full rounded-lg border-primary/20 bg-background-light focus:border-primary focus:ring-primary transition-all text-sm placeholder:text-slate-400" id="topics" placeholder="Ex: Questions sur les nouvelles normes de sÃ©curitÃ©, aide administrative pour les taxes..." rows="4"></textarea>
+<label className="text-xs font-medium text-slate-500" htmlFor="topics">Précisez les sujets que vous souhaitez aborder</label>
+<textarea className="w-full rounded-lg border-primary/20 bg-background-light focus:border-primary focus:ring-primary transition-all text-sm placeholder:text-slate-400" id="topics" placeholder="Ex: Questions sur les nouvelles normes de sécurité, aide administrative pour les taxes..." rows="4"></textarea>
 </div>
 </div>
 <div className="mt-auto pt-6 border-t border-primary/10">
@@ -142,7 +142,7 @@ const PriseDeRendezVousAvecUnConseiller = () => {
 <span className="material-symbols-outlined">check_circle</span>
                                 Confirmer le rendez-vous
                             </button>
-<p className="text-[11px] text-center mt-3 text-slate-400 uppercase tracking-wider font-semibold">Confirmation instantanÃ©e par email</p>
+<p className="text-[11px] text-center mt-3 text-slate-400 uppercase tracking-wider font-semibold">Confirmation instantanée par email</p>
 </div>
 </div>
 </div>

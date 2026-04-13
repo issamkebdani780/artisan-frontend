@@ -56,7 +56,7 @@ const ArtisanLogin = () => {
             </div>
             <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900 transition-colors">Connexion Artisan</h1>
             <p className="text-slate-500 text-lg max-w-[400px] mx-auto leading-relaxed transition-colors">
-              AccÃ©dez Ã  votre tableau de bord et gÃ©rez vos services en AlgÃ©rie.
+              Accédez à votre tableau de bord et gérez vos services en Algérie.
             </p>
           </div>
 
@@ -113,7 +113,7 @@ const ArtisanLogin = () => {
                 <input type="checkbox" className="w-5 h-5 rounded-md border-slate-200 text-orange-500 focus:ring-orange-500/20 cursor-pointer" />
                 <span className="text-slate-500 group-hover:text-slate-900 transition-colors font-medium">Se souvenir de moi</span>
               </label>
-              <Link to="/forgot-password" title="RÃ©initialiser votre mot de passe" className="text-orange-500 font-bold hover:text-orange-400 transition-colors">Mot de passe oubliÃ© ?</Link>
+              <Link to="/forgot-password" title="Réinitialiser votre mot de passe" className="text-orange-500 font-bold hover:text-orange-400 transition-colors">Mot de passe oublié ?</Link>
             </div>
 
             {/* Submit Button */}
@@ -155,9 +155,9 @@ const ArtisanLogin = () => {
             <span className="material-symbols-outlined text-orange-500 text-3xl" style={{ fontVariationSettings: "'FILL' 1" }}>verified_user</span>
           </div>
           <div>
-            <h4 className="font-bold text-slate-900 transition-colors">Plateforme CertifiÃ©e</h4>
+            <h4 className="font-bold text-slate-900 transition-colors">Plateforme Certifiée</h4>
             <p className="text-sm font-medium text-slate-500 leading-relaxed transition-colors">
-              Votre sÃ©curitÃ© est notre prioritÃ©. Rejoignez plus de 5,000 artisans dÃ©jÃ  certifiÃ©s en AlgÃ©rie.
+              Votre sécurité est notre priorité. Rejoignez plus de 5,000 artisans déjà certifiés en Algérie.
             </p>
           </div>
         </div>

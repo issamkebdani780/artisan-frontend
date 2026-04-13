@@ -55,9 +55,9 @@ const ArtisanProjects = () => {
       if (item.type === 'devis') {
         const devisId = item.id.toString().replace('d-', '');
         let statusToUpdate = newStatus;
-        if (newStatus === 'confirmed') statusToUpdate = 'acceptÃ©';
-        if (newStatus === 'completed') statusToUpdate = 'terminÃ©';
-        if (newStatus === 'cancelled') statusToUpdate = 'annulÃ©';
+        if (newStatus === 'confirmed') statusToUpdate = 'accepté';
+        if (newStatus === 'completed') statusToUpdate = 'terminé';
+        if (newStatus === 'cancelled') statusToUpdate = 'annulé';
         
         await apiService.updateDevisStatus(devisId, statusToUpdate);
         setProjects(projects.map(p => p.id === item.id ? { ...p, status: statusToUpdate } : p));
@@ -67,7 +67,7 @@ const ArtisanProjects = () => {
       }
       fetchProjects();
     } catch (err) {
-      alert('Erreur lors de la mise Ã  jour du statut');
+      alert('Erreur lors de la mise à jour du statut');
     }
   };
 
@@ -76,7 +76,7 @@ const ArtisanProjects = () => {
       await apiService.acceptDevis(devisId);
       setPendingDevis(prev => prev.filter(d => d.id !== devisId));
       fetchProjects();
-      alert('Bravo ! Vous avez acceptÃ© ce projet.');
+      alert('Bravo ! Vous avez accepté ce projet.');
     } catch (err) {
       alert('Erreur lors de l\'acceptation du devis');
     }
@@ -84,9 +84,9 @@ const ArtisanProjects = () => {
 
   const filteredProjects = projects.filter(p => {
     if (filter === 'Tous') return true;
-    if (filter === 'En cours') return p.status === 'confirmed' || p.status === 'pending' || p.status === 'en attente' || p.status === 'acceptÃ©';
-    if (filter === 'TerminÃ©s') return p.status === 'completed' || p.status === 'terminÃ©';
-    if (filter === 'AnnulÃ©s') return p.status === 'cancelled' || p.status === 'annulÃ©';
+    if (filter === 'En cours') return p.status === 'confirmed' || p.status === 'pending' || p.status === 'en attente' || p.status === 'accepté';
+    if (filter === 'Terminés') return p.status === 'completed' || p.status === 'terminé';
+    if (filter === 'Annulés') return p.status === 'cancelled' || p.status === 'annulé';
     return true;
   });
 
@@ -97,7 +97,7 @@ const ArtisanProjects = () => {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-10">
           <div>
             <h1 className="text-4xl font-black tracking-tight text-slate-900 uppercase transition-colors">Gestion des Projets</h1>
-            <p className="text-slate-500 mt-2 font-bold uppercase tracking-widest text-xs transition-colors">Suivez l'Ã©tat de vos chantiers en temps rÃ©el</p>
+            <p className="text-slate-500 mt-2 font-bold uppercase tracking-widest text-xs transition-colors">Suivez l'état de vos chantiers en temps réel</p>
           </div>
         </div>
 
@@ -106,7 +106,7 @@ const ArtisanProjects = () => {
             <div className="absolute right-0 top-0 w-96 h-96 bg-secondary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4"></div>
             <div className="flex items-center gap-4 mb-8 relative z-10">
               <div className="size-3 rounded-full bg-secondary animate-pulse shadow-[0_0_15px_rgba(255,107,0,0.5)]"></div>
-              <h2 className="text-2xl font-black text-slate-900 uppercase tracking-tight transition-colors">OpportunitÃ©s Ã  saisir ({pendingDevis.length})</h2>
+              <h2 className="text-2xl font-black text-slate-900 uppercase tracking-tight transition-colors">Opportunités à saisir ({pendingDevis.length})</h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10">
               {pendingDevis.map(devis => (
@@ -138,7 +138,7 @@ const ArtisanProjects = () => {
         )}
 
         <div className="flex gap-4 mb-8 overflow-x-auto custom-scrollbar pb-2">
-          {['Tous', 'En cours', 'TerminÃ©s', 'AnnulÃ©s'].map(t => (
+          {['Tous', 'En cours', 'Terminés', 'Annulés'].map(t => (
             <button 
               key={t}
               onClick={() => setFilter(t)}
@@ -183,7 +183,7 @@ const ArtisanProjects = () => {
                           <div className="size-16 rounded-full bg-slate-50 flex items-center justify-center text-slate-300 transition-colors">
                              <span className="material-symbols-outlined text-4xl">inbox</span>
                           </div>
-                          <p className="text-xs font-black text-slate-400 uppercase tracking-widest transition-colors">Aucun projet trouvÃ© dans cette catÃ©gorie</p>
+                          <p className="text-xs font-black text-slate-400 uppercase tracking-widest transition-colors">Aucun projet trouvé dans cette catégorie</p>
                        </div>
                     </td>
                   </tr>
@@ -209,9 +209,9 @@ const ArtisanProjects = () => {
                       <td className="px-10 py-8 font-black text-lg text-slate-900 transition-colors">{project.total_price} DA</td>
                       <td className="px-10 py-8">
                         <span className={`px-4 py-1.5 text-[9px] font-black rounded-full shadow-sm uppercase tracking-widest ${
-                          project.status === 'confirmed' || project.status === 'acceptÃ©' ? 'bg-indigo-50 text-indigo-600 border border-indigo-100' :
-                          project.status === 'completed' || project.status === 'terminÃ©' ? 'bg-emerald-50 text-emerald-600 border border-emerald-100' :
-                          project.status === 'cancelled' || project.status === 'annulÃ©' || project.status === 'refusÃ©' ? 'bg-red-50 text-red-600 border border-red-100' :
+                          project.status === 'confirmed' || project.status === 'accepté' ? 'bg-indigo-50 text-indigo-600 border border-indigo-100' :
+                          project.status === 'completed' || project.status === 'terminé' ? 'bg-emerald-50 text-emerald-600 border border-emerald-100' :
+                          project.status === 'cancelled' || project.status === 'annulé' || project.status === 'refusé' ? 'bg-red-50 text-red-600 border border-red-100' :
                           'bg-slate-50 text-slate-600 border border-slate-100'
                         } transition-colors`}>
                           {project.status}
@@ -219,7 +219,7 @@ const ArtisanProjects = () => {
                       </td>
                       <td className="px-10 py-8">
                         <div className="flex items-center justify-center gap-3">
-                          {(project.status === 'pending' || project.status === 'en attente' || project.status === 'cancelled' || project.status === 'annulÃ©') && (
+                          {(project.status === 'pending' || project.status === 'en attente' || project.status === 'cancelled' || project.status === 'annulé') && (
                             <button 
                               onClick={() => updateStatus(project, 'confirmed')}
                               className="size-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center hover:bg-indigo-600 hover:text-white transition-all shadow-sm active:scale-90"
@@ -237,7 +237,7 @@ const ArtisanProjects = () => {
                               <span className="material-symbols-outlined text-sm font-black">done_all</span>
                             </button>
                           )}
-                          {project.status !== 'completed' && project.status !== 'terminÃ©' && project.status !== 'cancelled' && project.status !== 'annulÃ©' && (
+                          {project.status !== 'completed' && project.status !== 'terminé' && project.status !== 'cancelled' && project.status !== 'annulé' && (
                             <button 
                               onClick={() => updateStatus(project, 'cancelled')}
                               className="size-10 rounded-xl bg-red-50 text-red-600 flex items-center justify-center hover:bg-red-600 hover:text-white transition-all shadow-sm active:scale-90"

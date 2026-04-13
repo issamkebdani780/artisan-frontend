@@ -42,7 +42,7 @@ const ParametresAdmin = () => {
         localStorage.setItem('user', JSON.stringify(user));
       }
 
-      alert('Identifiants mis Ã  jour avec succÃ¨s! ' + (password ? 'Mot de passe modifiÃ©.' : ''));
+      alert('Identifiants mis à jour avec succès! ' + (password ? 'Mot de passe modifié.' : ''));
       setPassword('');
       setPasswordConfirm('');
     } catch (err) {
@@ -53,13 +53,13 @@ const ParametresAdmin = () => {
   };
 
   return (
-    <AdminLayout title="ParamÃ¨tres SystÃ¨me" subtitle="GÃ©rez vos identifiants">
+    <AdminLayout title="Paramètres Système" subtitle="Gérez vos identifiants">
       <div className="space-y-8 max-w-6xl mx-auto w-full">
         
         {/* Title Section */}
         <div className="mb-8">
-          <h1 className="text-3xl font-black tracking-tight text-slate-900">ParamÃ¨tres Administrateur</h1>
-          <p className="text-slate-500 mt-2">Mettez Ã  jour vos informations de connexion sÃ©curisÃ©es pour le portail d'administration.</p>
+          <h1 className="text-3xl font-black tracking-tight text-slate-900">Paramètres Administrateur</h1>
+          <p className="text-slate-500 mt-2">Mettez à jour vos informations de connexion sécurisées pour le portail d'administration.</p>
         </div>
 
         <div className="grid grid-cols-1 xl:grid-cols-3 gap-8 items-start">
@@ -137,7 +137,7 @@ const ParametresAdmin = () => {
                 ) : (
                   <span className="material-symbols-outlined text-sm">lock_reset</span>
                 )}
-                {isSaving ? 'Enregistrement...' : 'Mettre Ã  jour les accÃ¨s'}
+                {isSaving ? 'Enregistrement...' : 'Mettre à jour les accès'}
               </button>
             </div>
           </div>
@@ -148,10 +148,10 @@ const ParametresAdmin = () => {
               <div className="relative z-10">
                 <div className="flex items-center gap-2 text-indigo-100 mb-2">
                   <span className="material-symbols-outlined text-lg">security_update_good</span>
-                  <span className="text-[10px] font-bold uppercase tracking-widest">Avis SÃ©curitÃ©</span>
+                  <span className="text-[10px] font-bold uppercase tracking-widest">Avis Sécurité</span>
                 </div>
                 <p className="text-sm italic leading-relaxed text-indigo-50">
-                  "Utilisez un gestionnaire de mots de passe professionnel et modifiez ces identifiants tous les 90 jours afin de prÃ©server l'intÃ©gritÃ© de la plateforme."
+                  "Utilisez un gestionnaire de mots de passe professionnel et modifiez ces identifiants tous les 90 jours afin de préserver l'intégrité de la plateforme."
                 </p>
               </div>
               <div className="absolute -right-4 -bottom-4 opacity-10 group-hover:scale-110 transition-transform duration-700">
@@ -163,7 +163,7 @@ const ParametresAdmin = () => {
               <h4 className="font-bold text-slate-900 mb-2">Historique Compte</h4>
               <ul className="space-y-3 mt-4">
                 <li className="flex justify-between items-center text-xs text-slate-500">
-                  <span>DerniÃ¨re connexion</span>
+                  <span>Dernière connexion</span>
                   <span className="font-bold text-slate-700">Aujourd'hui, 08:30</span>
                 </li>
                 <li className="flex justify-between items-center text-xs text-slate-500">
@@ -171,7 +171,7 @@ const ParametresAdmin = () => {
                   <span className="font-mono text-slate-700">192.168.1.1</span>
                 </li>
                 <li className="flex justify-between items-center text-xs text-slate-500">
-                  <span>Mdp mis Ã  jour</span>
+                  <span>Mdp mis à jour</span>
                   <span className="font-bold text-emerald-600">Il y a 4 mois</span>
                 </li>
               </ul>

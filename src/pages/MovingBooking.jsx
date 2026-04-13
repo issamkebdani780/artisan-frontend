@@ -40,7 +40,7 @@ const MovingBooking = () => {
         
         setWilayas(wilayasList);
         
-        const demoService = servicesList.find(s => s.title.toLowerCase().includes('dÃ©mÃ©nagement')) || servicesList[0];
+        const demoService = servicesList.find(s => s.title.toLowerCase().includes('déménagement')) || servicesList[0];
         if (demoService) setServiceId(demoService.id);
 
         const user = JSON.parse(localStorage.getItem('user'));
@@ -99,18 +99,18 @@ const MovingBooking = () => {
     today.setHours(0, 0, 0, 0);
     const selectedDate = new Date(bookingDate);
     if (selectedDate < today) {
-      setError('La date du dÃ©mÃ©nagement ne peut pas Ãªtre dans le passÃ©.');
+      setError('La date du déménagement ne peut pas Ãªtre dans le passé.');
       return;
     }
     
     if (!user) {
-      setError('Veuillez vous connecter pour rÃ©server un dÃ©mÃ©nagement. Redirection vers la page de connexion...');
+      setError('Veuillez vous connecter pour réserver un déménagement. Redirection vers la page de connexion...');
       setTimeout(() => navigate('/login/client'), 2500);
       return;
     }
 
     if (!locations.departure || !locations.destination) {
-      setError('Veuillez remplir les adresses de dÃ©part et de destination.');
+      setError('Veuillez remplir les adresses de départ et de destination.');
       return;
     }
 
@@ -121,7 +121,7 @@ const MovingBooking = () => {
       let categoryId = 6; // fallback
       try {
         const categories = await apiService.getCategories();
-        const movingCat = categories.find(c => c.name.toLowerCase().includes('dÃ©mÃ©nagement'));
+        const movingCat = categories.find(c => c.name.toLowerCase().includes('déménagement'));
         if (movingCat) categoryId = movingCat.id;
       } catch (e) {
         console.error('Could not fetch categories, using fallback ID');
@@ -149,11 +149,11 @@ const MovingBooking = () => {
       if (response.devisId) {
         navigate('/message-success');
       } else {
-        throw new Error(response.error || 'Erreur lors de la crÃ©ation du devis');
+        throw new Error(response.error || 'Erreur lors de la création du devis');
       }
     } catch (err) {
       console.error('Booking failed:', err);
-      setError(err.message || 'Une erreur est survenue lors de la rÃ©servation.');
+      setError(err.message || 'Une erreur est survenue lors de la réservation.');
     } finally {
       setLoading(false);
     }
@@ -167,9 +167,9 @@ const MovingBooking = () => {
         <div className="max-w-7xl mx-auto">
           {/* Hero Section */}
           <div className="mb-16 text-center lg:text-left">
-            <h1 className="text-4xl md:text-6xl font-black text-slate-900 mb-6 uppercase tracking-tight">RÃ©servez votre <br /><span className="text-primary italic">dÃ©mÃ©nagement</span></h1>
+            <h1 className="text-4xl md:text-6xl font-black text-slate-900 mb-6 uppercase tracking-tight">Réservez votre <br /><span className="text-primary italic">déménagement</span></h1>
             <p className="text-lg md:text-xl text-slate-500 max-w-2xl leading-relaxed mx-auto lg:mx-0 font-bold">
-              Calculez instantanÃ©ment votre tarif basÃ© sur la distance, le volume et la main-d'Å“uvre nÃ©cessaire. Simple, rapide et transparent.
+              Calculez instantanément votre tarif basé sur la distance, le volume et la main-d'Å“uvre nécessaire. Simple, rapide et transparent.
             </p>
           </div>
 
@@ -187,20 +187,20 @@ const MovingBooking = () => {
                 <section className="mb-12">
                   <div className="flex items-center gap-4 mb-8 text-primary">
                     <span className="material-symbols-outlined text-3xl font-black">location_on</span>
-                    <h2 className="text-2xl font-black text-slate-900 uppercase tracking-tight">ItinÃ©raire et Date</h2>
+                    <h2 className="text-2xl font-black text-slate-900 uppercase tracking-tight">Itinéraire et Date</h2>
                   </div>
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6 mb-10">
                     {/* Departure */}
                     <div className="space-y-4">
-                      <label className="block text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">Lieu de DÃ©part</label>
+                      <label className="block text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">Lieu de Départ</label>
                       <select 
                         required
                         className="w-full px-5 py-4 bg-white border border-slate-100 rounded-2xl outline-none font-bold text-slate-900 focus:border-primary/30 transition-all shadow-sm"
                         value={locations.departure_wilaya_id}
                         onChange={(e) => handleWilayaChange('departure', e.target.value)}
                       >
-                        <option value="">Wilaya de dÃ©part</option>
+                        <option value="">Wilaya de départ</option>
                         {wilayas.map(w => <option key={w.id} value={w.id}>{w.name}</option>)}
                       </select>
                       <select 
@@ -210,12 +210,12 @@ const MovingBooking = () => {
                         value={locations.departure_commune_id}
                         onChange={(e) => setLocations({...locations, departure_commune_id: e.target.value})}
                       >
-                        <option value="">Commune de dÃ©part</option>
+                        <option value="">Commune de départ</option>
                         {departureCommunes.map(c => <option key={c.id} value={c.id}>{c.name}</option>)}
                       </select>
                       <input 
                         className="w-full px-5 py-4 bg-white border border-slate-100 rounded-2xl outline-none font-bold text-slate-900 focus:border-primary/30 transition-all shadow-sm" 
-                        placeholder="Adresse prÃ©cise (Ex: Rue 123)" 
+                        placeholder="Adresse précise (Ex: Rue 123)" 
                         type="text"
                         value={locations.departure}
                         onChange={(e) => setLocations({...locations, departure: e.target.value})}
@@ -224,14 +224,14 @@ const MovingBooking = () => {
 
                     {/* Destination */}
                     <div className="space-y-4">
-                      <label className="block text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">Lieu d'ArrivÃ©e</label>
+                      <label className="block text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">Lieu d'Arrivée</label>
                       <select 
                         required
                         className="w-full px-5 py-4 bg-white border border-slate-100 rounded-2xl outline-none font-bold text-slate-900 focus:border-primary/30 transition-all shadow-sm"
                         value={locations.destination_wilaya_id}
                         onChange={(e) => handleWilayaChange('destination', e.target.value)}
                       >
-                        <option value="">Wilaya d'arrivÃ©e</option>
+                        <option value="">Wilaya d'arrivée</option>
                         {wilayas.map(w => <option key={w.id} value={w.id}>{w.name}</option>)}
                       </select>
                       <select 
@@ -241,12 +241,12 @@ const MovingBooking = () => {
                         value={locations.destination_commune_id}
                         onChange={(e) => setLocations({...locations, destination_commune_id: e.target.value})}
                       >
-                        <option value="">Commune d'arrivÃ©e</option>
+                        <option value="">Commune d'arrivée</option>
                         {destinationCommunes.map(c => <option key={c.id} value={c.id}>{c.name}</option>)}
                       </select>
                       <input 
                         className="w-full px-5 py-4 bg-white border border-slate-100 rounded-2xl outline-none font-bold text-slate-900 focus:border-primary/30 transition-all shadow-sm" 
-                        placeholder="Adresse d'arrivÃ©e prÃ©cise" 
+                        placeholder="Adresse d'arrivée précise" 
                         type="text"
                         value={locations.destination}
                         onChange={(e) => setLocations({...locations, destination: e.target.value})}
@@ -339,7 +339,7 @@ const MovingBooking = () => {
                 <section className="mb-12 border-t border-slate-100 pt-12">
                   <div className="flex items-center gap-4 mb-8 text-primary">
                     <span className="material-symbols-outlined text-3xl font-black">inventory_2</span>
-                    <h2 className="text-2xl font-black text-slate-900 uppercase tracking-tight">DÃ©tails des objets & Poids</h2>
+                    <h2 className="text-2xl font-black text-slate-900 uppercase tracking-tight">Détails des objets & Poids</h2>
                   </div>
                   
                   <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
@@ -391,13 +391,13 @@ const MovingBooking = () => {
                 <section className="border-t border-slate-100 pt-12">
                   <div className="flex items-center gap-4 mb-8 text-primary">
                     <span className="material-symbols-outlined text-3xl font-black">payments</span>
-                    <h2 className="text-2xl font-black text-slate-900 uppercase tracking-tight">Estimation & RÃ©servation</h2>
+                    <h2 className="text-2xl font-black text-slate-900 uppercase tracking-tight">Estimation & Réservation</h2>
                   </div>
                   
                   <div className="bg-primary p-8 rounded-[40px] text-white shadow-2xl shadow-primary/20 flex flex-col md:flex-row items-center justify-between gap-8 mb-10 overflow-hidden relative">
                     <div className="absolute top-0 right-0 size-64 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
                     <div className="relative z-10">
-                      <p className="text-[10px] font-black uppercase tracking-[0.2em] opacity-80 mb-2">Tarif estimÃ© tout inclus</p>
+                      <p className="text-[10px] font-black uppercase tracking-[0.2em] opacity-80 mb-2">Tarif estimé tout inclus</p>
                       <h4 className="text-4xl md:text-5xl font-black tracking-tight">{totalPrice.toLocaleString()} DA</h4>
                     </div>
                     <div className="relative z-10 text-center md:text-right">
@@ -420,7 +420,7 @@ const MovingBooking = () => {
                         </>
                       ) : (
                         <>
-                          <span className="uppercase tracking-widest text-sm">Confirmer & RÃ©server</span>
+                          <span className="uppercase tracking-widest text-sm">Confirmer & Réserver</span>
                           <span className="material-symbols-outlined text-xl">arrow_forward</span>
                         </>
                       )}
@@ -439,9 +439,9 @@ const MovingBooking = () => {
                 <h3 className="text-xl font-black text-slate-900 mb-8 uppercase tracking-tight">Pourquoi nous ?</h3>
                 <ul className="space-y-8">
                   {[
-                    { icon: 'verified', title: 'CertifiÃ©s', desc: 'Partenaires rigoureusement vÃ©rifiÃ©s et assurÃ©s.' },
-                    { icon: 'shutter_speed', title: 'RapiditÃ©', desc: "Intervention ponctuelle et efficace." },
-                    { icon: 'support_agent', title: 'Accompagnement', desc: 'Support dÃ©diÃ© 7j/7 pour votre sÃ©rÃ©nitÃ©.' }
+                    { icon: 'verified', title: 'Certifiés', desc: 'Partenaires rigoureusement vérifiés et assurés.' },
+                    { icon: 'shutter_speed', title: 'Rapidité', desc: "Intervention ponctuelle et efficace." },
+                    { icon: 'support_agent', title: 'Accompagnement', desc: 'Support dédié 7j/7 pour votre sérénité.' }
                   ].map((feature, idx) => (
                     <li key={idx} className="flex gap-5 group">
                       <div className="shrink-0 size-12 rounded-2xl bg-white shadow-sm flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
@@ -457,7 +457,7 @@ const MovingBooking = () => {
               </div>
               
               <div className="p-1 text-center">
-                <p className="text-[10px] font-black text-slate-300 uppercase tracking-widest">SÃ©curisÃ© par Mihnati Protection</p>
+                <p className="text-[10px] font-black text-slate-300 uppercase tracking-widest">Sécurisé par Mihnati Protection</p>
               </div>
             </div>
           </div>

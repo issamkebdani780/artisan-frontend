@@ -90,8 +90,8 @@ const ClientLogin = () => {
                 <input type="checkbox" className="w-5 h-5 rounded border-slate-300 text-blue-600 focus:ring-blue-600 transition-all" />
                 <span className="text-base text-slate-500 group-hover:text-slate-900 transition-colors">Se souvenir de moi</span>
               </label>
-              <Link to="/forgot-password" title="RÃ©initialiser mon mot de passe" className="text-base font-semibold text-blue-600 hover:text-blue-700 hover:underline underline-offset-8 transition-colors">
-                Mot de passe oubliÃ© ?
+              <Link to="/forgot-password" title="Réinitialiser mon mot de passe" className="text-base font-semibold text-blue-600 hover:text-blue-700 hover:underline underline-offset-8 transition-colors">
+                Mot de passe oublié ?
               </Link>
             </div>
             
@@ -115,7 +115,7 @@ const ClientLogin = () => {
             <p className="text-center text-slate-500 text-lg transition-colors">
               Pas encore de compte ?{' '}
               <Link to="/register/client" className="text-blue-600 font-bold hover:text-blue-700 hover:underline underline-offset-8 transition-colors">
-                CrÃ©er un profil client
+                Créer un profil client
               </Link>
             </p>
           </div>

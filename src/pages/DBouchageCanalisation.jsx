@@ -9,7 +9,7 @@ const DBouchageCanalisation = () => {
 <header className="flex items-center justify-between border-b border-slate-200 bg-white px-6 md:px-20 py-4 sticky top-0 z-50">
 <div className="flex items-center gap-2 text-primary">
 <span className="material-symbols-outlined text-3xl">plumbing</span>
-<h2 className="text-slate-900 text-xl font-bold leading-tight tracking-tight">ExpertDÃ©bouchage</h2>
+<h2 className="text-slate-900 text-xl font-bold leading-tight tracking-tight">ExpertDébouchage</h2>
 </div>
 <div className="hidden lg:flex flex-1 justify-center gap-8">
 <a className="text-slate-600 text-sm font-medium hover:text-primary transition-colors" href="#">Accueil</a>
@@ -34,7 +34,7 @@ const DBouchageCanalisation = () => {
 <div className="sticky top-24 flex flex-col gap-6">
 <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
 <h3 className="text-slate-900 text-lg font-bold mb-2">Besoin d'aide ?</h3>
-<p className="text-slate-500 text-sm mb-6">RÃ©ponse en moins de 5 minutes. Devis 100% gratuit et sans engagement.</p>
+<p className="text-slate-500 text-sm mb-6">Réponse en moins de 5 minutes. Devis 100% gratuit et sans engagement.</p>
 <nav className="flex flex-col gap-2 mb-6">
 <a className="flex items-center gap-3 px-4 py-3 rounded-lg bg-primary/10 text-primary font-medium" href="#">
 <span className="material-symbols-outlined">description</span>
@@ -50,7 +50,7 @@ const DBouchageCanalisation = () => {
 </a>
 <a className="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-slate-50 text-slate-700 transition-colors" href="#">
 <span className="material-symbols-outlined">reviews</span>
-<span>TÃ©moignages</span>
+<span>Témoignages</span>
 </a>
 </nav>
 <button className="w-full py-3 bg-primary text-white font-bold rounded-lg shadow-md hover:bg-primary/90 transition-all">
@@ -60,7 +60,7 @@ const DBouchageCanalisation = () => {
 <div className="bg-primary/5 p-6 rounded-xl border border-primary/20">
 <h4 className="text-primary font-bold mb-2 flex items-center gap-2">
 <span className="material-symbols-outlined">verified</span>
-                                Service CertifiÃ©
+                                Service Certifié
                             </h4>
 <p className="text-sm text-slate-600">Intervention garantie conforme aux normes sanitaires en vigueur.</p>
 </div>
@@ -78,22 +78,22 @@ const DBouchageCanalisation = () => {
 <span>/</span>
 <a className="hover:text-white" href="#">Services</a>
 <span>/</span>
-<span className="text-white font-medium">DÃ©bouchage Canalisation</span>
+<span className="text-white font-medium">Débouchage Canalisation</span>
 </nav>
-<h1 className="text-white text-4xl font-extrabold tracking-tight">DÃ©bouchage Canalisation 24h/7j</h1>
+<h1 className="text-white text-4xl font-extrabold tracking-tight">Débouchage Canalisation 24h/7j</h1>
 </div>
 </div>
 {/*  Key Benefits  */}
 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
 <div className="bg-white p-5 rounded-xl border border-slate-200 flex flex-col gap-2">
 <span className="material-symbols-outlined text-primary">schedule</span>
-<p className="text-slate-500 text-xs font-semibold uppercase tracking-wider">ArrivÃ©e Rapide</p>
+<p className="text-slate-500 text-xs font-semibold uppercase tracking-wider">Arrivée Rapide</p>
 <p className="text-slate-900 text-xl font-bold">-30 min</p>
 </div>
 <div className="bg-white p-5 rounded-xl border border-slate-200 flex flex-col gap-2">
 <span className="material-symbols-outlined text-primary">euro</span>
 <p className="text-slate-500 text-xs font-semibold uppercase tracking-wider">Prix Fixe</p>
-<p className="text-slate-900 text-xl font-bold">DÃ¨s 75â‚¬</p>
+<p className="text-slate-900 text-xl font-bold">Dès 75â‚¬</p>
 </div>
 <div className="bg-white p-5 rounded-xl border border-slate-200 flex flex-col gap-2">
 <span className="material-symbols-outlined text-primary">verified_user</span>
@@ -102,7 +102,7 @@ const DBouchageCanalisation = () => {
 </div>
 <div className="bg-white p-5 rounded-xl border border-slate-200 flex flex-col gap-2">
 <span className="material-symbols-outlined text-primary">event_available</span>
-<p className="text-slate-500 text-xs font-semibold uppercase tracking-wider">DisponibilitÃ©</p>
+<p className="text-slate-500 text-xs font-semibold uppercase tracking-wider">Disponibilité</p>
 <p className="text-slate-900 text-xl font-bold">24h/7j</p>
 </div>
 </div>
@@ -115,17 +115,17 @@ const DBouchageCanalisation = () => {
 <div className="grid md:grid-cols-3 gap-6">
 <div className="bg-white rounded-xl border border-slate-200 overflow-hidden hover:border-primary/50 transition-colors">
 <div className="p-6 border-b border-slate-100">
-<h3 className="font-bold text-lg mb-1">DÃ©bouchage Manuel</h3>
-<p className="text-sm text-slate-500">Pour Ã©viers, lavabos et douches</p>
+<h3 className="font-bold text-lg mb-1">Débouchage Manuel</h3>
+<p className="text-sm text-slate-500">Pour éviers, lavabos et douches</p>
 <div className="mt-4 flex items-baseline gap-1">
 <span className="text-3xl font-bold">75â‚¬</span>
 <span className="text-slate-400 text-sm">TTC</span>
 </div>
 </div>
 <ul className="p-6 space-y-3 text-sm text-slate-600">
-<li className="flex items-center gap-2"><span className="material-symbols-outlined text-primary text-lg">check_circle</span> Pompe Ã  vide</li>
+<li className="flex items-center gap-2"><span className="material-symbols-outlined text-primary text-lg">check_circle</span> Pompe à vide</li>
 <li className="flex items-center gap-2"><span className="material-symbols-outlined text-primary text-lg">check_circle</span> Furet professionnel</li>
-<li className="flex items-center gap-2"><span className="material-symbols-outlined text-primary text-lg">check_circle</span> DÃ©placement inclus</li>
+<li className="flex items-center gap-2"><span className="material-symbols-outlined text-primary text-lg">check_circle</span> Déplacement inclus</li>
 </ul>
 </div>
 <div className="bg-slate-900 text-white rounded-xl border border-primary overflow-hidden shadow-xl scale-105 relative">
@@ -146,17 +146,17 @@ const DBouchageCanalisation = () => {
 </div>
 <div className="bg-white rounded-xl border border-slate-200 overflow-hidden hover:border-primary/50 transition-colors">
 <div className="p-6 border-b border-slate-100">
-<h3 className="font-bold text-lg mb-1">Inspection VidÃ©o</h3>
-<p className="text-sm text-slate-500">Diagnostic prÃ©cis et rapport</p>
+<h3 className="font-bold text-lg mb-1">Inspection Vidéo</h3>
+<p className="text-sm text-slate-500">Diagnostic précis et rapport</p>
 <div className="mt-4 flex items-baseline gap-1">
 <span className="text-3xl font-bold">95â‚¬</span>
 <span className="text-slate-400 text-sm">TTC</span>
 </div>
 </div>
 <ul className="p-6 space-y-3 text-sm text-slate-600">
-<li className="flex items-center gap-2"><span className="material-symbols-outlined text-primary text-lg">check_circle</span> CamÃ©ra endoscopique</li>
-<li className="flex items-center gap-2"><span className="material-symbols-outlined text-primary text-lg">check_circle</span> DÃ©tection de cassure</li>
-<li className="flex items-center gap-2"><span className="material-symbols-outlined text-primary text-lg">check_circle</span> Rapport numÃ©rique</li>
+<li className="flex items-center gap-2"><span className="material-symbols-outlined text-primary text-lg">check_circle</span> Caméra endoscopique</li>
+<li className="flex items-center gap-2"><span className="material-symbols-outlined text-primary text-lg">check_circle</span> Détection de cassure</li>
+<li className="flex items-center gap-2"><span className="material-symbols-outlined text-primary text-lg">check_circle</span> Rapport numérique</li>
 </ul>
 </div>
 </div>
@@ -167,7 +167,7 @@ const DBouchageCanalisation = () => {
 <div className="flex-1">
 <h2 className="text-2xl font-bold mb-4">Ã‰quipement de Pointe</h2>
 <p className="text-slate-600 mb-6 leading-relaxed">
-                                    Nous utilisons les derniÃ¨res technologies pour garantir un dÃ©bouchage durable sans endommager vos installations. Nos camions sont Ã©quipÃ©s de pompes haute pression et de camÃ©ras HD.
+                                    Nous utilisons les dernières technologies pour garantir un débouchage durable sans endommager vos installations. Nos camions sont équipés de pompes haute pression et de caméras HD.
                                 </p>
 <div className="grid grid-cols-2 gap-4">
 <div className="flex items-start gap-3">
@@ -181,7 +181,7 @@ const DBouchageCanalisation = () => {
 <div className="p-2 bg-primary/10 rounded-lg text-primary"><span className="material-symbols-outlined">waves</span></div>
 <div>
 <p className="font-bold text-sm">Curage HP</p>
-<p className="text-xs text-slate-500">Nettoyage Ã  400 bars</p>
+<p className="text-xs text-slate-500">Nettoyage à 400 bars</p>
 </div>
 </div>
 </div>
@@ -193,7 +193,7 @@ const DBouchageCanalisation = () => {
 </section>
 {/*  Experts Section  */}
 <section className="mb-16">
-<h2 className="text-2xl font-bold mb-8">Nos Experts de ProximitÃ©</h2>
+<h2 className="text-2xl font-bold mb-8">Nos Experts de Proximité</h2>
 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 <div className="flex items-center gap-4 p-4 rounded-xl border border-slate-200 bg-white">
 <div className="size-16 rounded-full overflow-hidden flex-shrink-0">
@@ -217,7 +217,7 @@ const DBouchageCanalisation = () => {
 </div>
 <div>
 <p className="font-bold">Thomas L.</p>
-<p className="text-sm text-slate-500">SpÃ©cialiste Inspection (8 ans exp.)</p>
+<p className="text-sm text-slate-500">Spécialiste Inspection (8 ans exp.)</p>
 <div className="flex text-yellow-500 mt-1">
 <span className="material-symbols-outlined text-sm">star</span>
 <span className="material-symbols-outlined text-sm">star</span>
@@ -231,28 +231,28 @@ const DBouchageCanalisation = () => {
 </section>
 {/*  FAQ Section  */}
 <section className="mb-16">
-<h2 className="text-2xl font-bold mb-8">Questions FrÃ©quentes</h2>
+<h2 className="text-2xl font-bold mb-8">Questions Fréquentes</h2>
 <div className="space-y-4">
 <div className="p-6 bg-white rounded-xl border border-slate-200">
 <h4 className="font-bold mb-2 flex justify-between items-center cursor-pointer">
-<span>Quel est le dÃ©lai d'intervention moyen ?</span>
+<span>Quel est le délai d'intervention moyen ?</span>
 <span className="material-symbols-outlined">expand_more</span>
 </h4>
 <p className="text-sm text-slate-600">En cas d'urgence, nous intervenons en moins de 30 minutes sur l'ensemble de notre zone de couverture.</p>
 </div>
 <div className="p-6 bg-white rounded-xl border border-slate-200">
 <h4 className="font-bold mb-2 flex justify-between items-center cursor-pointer">
-<span>Vos tarifs incluent-ils le dÃ©placement ?</span>
+<span>Vos tarifs incluent-ils le déplacement ?</span>
 <span className="material-symbols-outlined">expand_more</span>
 </h4>
-<p className="text-sm text-slate-600">Oui, tous nos prix affichÃ©s sont transparents et incluent dÃ©jÃ  les frais de dÃ©placement et de main-d'Å“uvre de base.</p>
+<p className="text-sm text-slate-600">Oui, tous nos prix affichés sont transparents et incluent déjà les frais de déplacement et de main-d'Å“uvre de base.</p>
 </div>
 <div className="p-6 bg-white rounded-xl border border-slate-200">
 <h4 className="font-bold mb-2 flex justify-between items-center cursor-pointer">
 <span>Comment savoir si j'ai besoin d'un hydrocurage ?</span>
 <span className="material-symbols-outlined">expand_more</span>
 </h4>
-<p className="text-sm text-slate-600">Si plusieurs Ã©vacuations sont bouchÃ©es ou si les odeurs persistent aprÃ¨s un dÃ©bouchage classique, un curage haute pression est souvent nÃ©cessaire.</p>
+<p className="text-sm text-slate-600">Si plusieurs évacuations sont bouchées ou si les odeurs persistent après un débouchage classique, un curage haute pression est souvent nécessaire.</p>
 </div>
 </div>
 </section>
@@ -265,30 +265,30 @@ const DBouchageCanalisation = () => {
 <div className="col-span-1 md:col-span-2">
 <div className="flex items-center gap-2 text-white mb-6">
 <span className="material-symbols-outlined">plumbing</span>
-<h2 className="text-xl font-bold">ExpertDÃ©bouchage</h2>
+<h2 className="text-xl font-bold">ExpertDébouchage</h2>
 </div>
-<p className="max-w-md">Solutions professionnelles de dÃ©bouchage et d'assainissement. Interventions rapides 24/7 pour particuliers et professionnels.</p>
+<p className="max-w-md">Solutions professionnelles de débouchage et d'assainissement. Interventions rapides 24/7 pour particuliers et professionnels.</p>
 </div>
 <div>
 <h5 className="text-white font-bold mb-6">Services</h5>
 <ul className="space-y-4 text-sm">
-<li><a className="hover:text-primary transition-colors" href="#">DÃ©bouchage WC</a></li>
+<li><a className="hover:text-primary transition-colors" href="#">Débouchage WC</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Curage Canalisation</a></li>
-<li><a className="hover:text-primary transition-colors" href="#">Inspection CamÃ©ra</a></li>
+<li><a className="hover:text-primary transition-colors" href="#">Inspection Caméra</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Pompage Fosse Septique</a></li>
 </ul>
 </div>
 <div>
-<h5 className="text-white font-bold mb-6">LÃ©gal</h5>
+<h5 className="text-white font-bold mb-6">Légal</h5>
 <ul className="space-y-4 text-sm">
-<li><a className="hover:text-primary transition-colors" href="#">Mentions LÃ©gales</a></li>
+<li><a className="hover:text-primary transition-colors" href="#">Mentions Légales</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">CGV</a></li>
-<li><a className="hover:text-primary transition-colors" href="#">Protection des donnÃ©es</a></li>
+<li><a className="hover:text-primary transition-colors" href="#">Protection des données</a></li>
 </ul>
 </div>
 </div>
 <div className="max-w-[1280px] mx-auto mt-12 pt-8 border-t border-slate-800 text-xs text-center">
-                Â© 2024 ExpertDÃ©bouchage. Tous droits rÃ©servÃ©s.
+                Â© 2024 ExpertDébouchage. Tous droits réservés.
             </div>
 </footer>
 </div>

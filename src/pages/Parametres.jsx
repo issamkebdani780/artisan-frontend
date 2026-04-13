@@ -31,7 +31,7 @@ const Parametres = () => {
 </a>
 <a className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-600 hover:bg-primary/10 hover:text-primary transition-colors" href="#">
 <span className="material-symbols-outlined">verified_user</span>
-<span className="text-sm font-semibold">VÃ©rifications</span>
+<span className="text-sm font-semibold">Vérifications</span>
 </a>
 <a className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-600 hover:bg-primary/10 hover:text-primary transition-colors" href="#">
 <span className="material-symbols-outlined">payments</span>
@@ -39,7 +39,7 @@ const Parametres = () => {
 </a>
 <a className="flex items-center gap-3 px-3 py-2.5 rounded-xl bg-primary text-white shadow-lg shadow-primary/30" href="#">
 <span className="material-symbols-outlined">settings</span>
-<span className="text-sm font-semibold">ParamÃ¨tres</span>
+<span className="text-sm font-semibold">Paramètres</span>
 </a>
 </nav>
 <div className="p-4 mt-auto border-t border-slate-200">
@@ -57,7 +57,7 @@ const Parametres = () => {
 {/*  Header  */}
 <header className="h-16 border-b border-slate-200 bg-white/80 backdrop-blur-md sticky top-0 z-10 px-8 flex items-center justify-between">
 <div className="flex items-center gap-4">
-<h2 className="text-lg font-bold text-slate-800">Configuration SystÃ¨me</h2>
+<h2 className="text-lg font-bold text-slate-800">Configuration Système</h2>
 </div>
 <div className="flex items-center gap-4">
 <div className="relative">
@@ -76,15 +76,15 @@ const Parametres = () => {
 {/*  Page Content  */}
 <div className="p-8 max-w-5xl mx-auto w-full">
 <div className="mb-8">
-<h1 className="text-3xl font-black tracking-tight text-slate-900 mb-2">ParamÃ¨tres</h1>
-<p className="text-slate-500">GÃ©rez la configuration de votre plateforme, la sÃ©curitÃ© et les notifications.</p>
+<h1 className="text-3xl font-black tracking-tight text-slate-900 mb-2">Paramètres</h1>
+<p className="text-slate-500">Gérez la configuration de votre plateforme, la sécurité et les notifications.</p>
 </div>
 {/*  Tabs  */}
 <div className="flex gap-8 border-b border-slate-200 mb-8">
-<button className="pb-4 text-sm font-bold border-b-2 border-primary text-primary">GÃ©nÃ©ral</button>
-<button className="pb-4 text-sm font-bold text-slate-500 border-b-2 border-transparent hover:text-slate-800 transition-all">SÃ©curitÃ©</button>
+<button className="pb-4 text-sm font-bold border-b-2 border-primary text-primary">Général</button>
+<button className="pb-4 text-sm font-bold text-slate-500 border-b-2 border-transparent hover:text-slate-800 transition-all">Sécurité</button>
 <button className="pb-4 text-sm font-bold text-slate-500 border-b-2 border-transparent hover:text-slate-800 transition-all">Notifications</button>
-<button className="pb-4 text-sm font-bold text-slate-500 border-b-2 border-transparent hover:text-slate-800 transition-all">IntÃ©grations</button>
+<button className="pb-4 text-sm font-bold text-slate-500 border-b-2 border-transparent hover:text-slate-800 transition-all">Intégrations</button>
 </div>
 <div className="grid gap-8">
 {/*  Section: Platform Config  */}
@@ -117,14 +117,14 @@ const Parametres = () => {
 <div className="p-6 border-b border-slate-100">
 <h3 className="text-lg font-bold flex items-center gap-2">
 <span className="material-symbols-outlined text-primary">security</span>
-                            SÃ©curitÃ©
+                            Sécurité
                         </h3>
 </div>
 <div className="p-6 space-y-4">
 <div className="flex items-center justify-between py-2">
 <div className="space-y-0.5">
-<p className="text-sm font-bold">Authentification Ã  deux facteurs</p>
-<p className="text-xs text-slate-500">Ajoutez une couche de sÃ©curitÃ© supplÃ©mentaire Ã  votre compte.</p>
+<p className="text-sm font-bold">Authentification à deux facteurs</p>
+<p className="text-xs text-slate-500">Ajoutez une couche de sécurité supplémentaire à votre compte.</p>
 </div>
 <button className="relative inline-flex h-6 w-11 items-center rounded-full bg-primary">
 <span className="inline-block h-4 w-4 transform rounded-full bg-white transition translate-x-6"></span>
@@ -133,9 +133,9 @@ const Parametres = () => {
 <div className="border-t border-slate-100 pt-4 flex items-center justify-between py-2">
 <div className="space-y-0.5">
 <p className="text-sm font-bold">Sessions actives</p>
-<p className="text-xs text-slate-500">Se dÃ©connecter de tous les autres appareils connectÃ©s.</p>
+<p className="text-xs text-slate-500">Se déconnecter de tous les autres appareils connectés.</p>
 </div>
-<button className="text-sm font-bold text-primary hover:underline">GÃ©rer les sessions</button>
+<button className="text-sm font-bold text-primary hover:underline">Gérer les sessions</button>
 </div>
 </div>
 </section>
@@ -164,7 +164,7 @@ const Parametres = () => {
 </div>
 <div className="space-y-0.5">
 <p className="text-sm font-bold">Rapports hebdomadaires</p>
-<p className="text-xs text-slate-500">SynthÃ¨se des transactions et activitÃ©s de la semaine.</p>
+<p className="text-xs text-slate-500">Synthèse des transactions et activités de la semaine.</p>
 </div>
 </label>
 </div>
@@ -181,7 +181,7 @@ const Parametres = () => {
 <p>Â© 2024 Purple Edition - Plateforme d'Administration</p>
 <div className="flex gap-6">
 <a className="hover:text-primary" href="#">Conditions d'utilisation</a>
-<a className="hover:text-primary" href="#">ConfidentialitÃ©</a>
+<a className="hover:text-primary" href="#">Confidentialité</a>
 <a className="hover:text-primary" href="#">Support</a>
 </div>
 </footer>

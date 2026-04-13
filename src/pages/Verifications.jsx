@@ -32,7 +32,7 @@ const Verifications = () => {
 </a>
 <a className="flex items-center gap-3 px-4 py-3 rounded-xl bg-purple-900 text-white border-l-4 border-primary" href="#">
 <span className="material-symbols-outlined text-primary">verified_user</span>
-<span className="text-sm font-medium">VÃ©rifications</span>
+<span className="text-sm font-medium">Vérifications</span>
 </a>
 <a className="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-purple-900 transition-colors" href="#">
 <span className="material-symbols-outlined text-purple-300">payments</span>
@@ -40,7 +40,7 @@ const Verifications = () => {
 </a>
 <a className="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-purple-900 transition-colors mt-4" href="#">
 <span className="material-symbols-outlined text-purple-300">settings</span>
-<span className="text-sm font-medium">ParamÃ¨tres</span>
+<span className="text-sm font-medium">Paramètres</span>
 </a>
 </nav>
 </div>
@@ -60,7 +60,7 @@ const Verifications = () => {
 <header className="h-16 border-b border-slate-200 bg-white flex items-center justify-between px-8 sticky top-0 z-40">
 <div className="flex items-center gap-2">
 <span className="material-symbols-outlined text-purple-600">verified</span>
-<h2 className="text-lg font-bold">Gestion des VÃ©rifications</h2>
+<h2 className="text-lg font-bold">Gestion des Vérifications</h2>
 </div>
 <div className="flex items-center gap-6">
 <div className="relative w-64">
@@ -81,14 +81,14 @@ const Verifications = () => {
 {/*  Dashboard Content  */}
 <div className="p-8">
 <div className="mb-8">
-<h1 className="text-3xl font-black tracking-tight text-slate-900">VÃ©rifications en attente</h1>
-<p className="text-slate-500 mt-2">Validez l'identitÃ© et les documents professionnels des artisans pour permettre l'accÃ¨s Ã  la plateforme.</p>
+<h1 className="text-3xl font-black tracking-tight text-slate-900">Vérifications en attente</h1>
+<p className="text-slate-500 mt-2">Validez l'identité et les documents professionnels des artisans pour permettre l'accès à la plateforme.</p>
 </div>
 {/*  Tabs  */}
 <div className="flex border-b border-slate-200 mb-6">
 <button className="px-6 py-4 text-sm font-bold border-b-2 border-primary text-primary">En attente (12)</button>
-<button className="px-6 py-4 text-sm font-medium text-slate-500 hover:text-purple-600 transition-colors">ApprouvÃ©s</button>
-<button className="px-6 py-4 text-sm font-medium text-slate-500 hover:text-purple-600 transition-colors">RejetÃ©s</button>
+<button className="px-6 py-4 text-sm font-medium text-slate-500 hover:text-purple-600 transition-colors">Approuvés</button>
+<button className="px-6 py-4 text-sm font-medium text-slate-500 hover:text-purple-600 transition-colors">Rejetés</button>
 </div>
 {/*  Filters & Stats Summary  */}
 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
@@ -97,7 +97,7 @@ const Verifications = () => {
 <span className="material-symbols-outlined">hourglass_empty</span>
 </div>
 <div>
-<p className="text-xs text-slate-500 font-medium uppercase tracking-wider">Temps de rÃ©ponse moyen</p>
+<p className="text-xs text-slate-500 font-medium uppercase tracking-wider">Temps de réponse moyen</p>
 <p className="text-xl font-bold">14 heures</p>
 </div>
 </div>
@@ -106,7 +106,7 @@ const Verifications = () => {
 <span className="material-symbols-outlined">task_alt</span>
 </div>
 <div>
-<p className="text-xs text-slate-500 font-medium uppercase tracking-wider">TraitÃ©s aujourd'hui</p>
+<p className="text-xs text-slate-500 font-medium uppercase tracking-wider">Traités aujourd'hui</p>
 <p className="text-xl font-bold">28 dossiers</p>
 </div>
 </div>
@@ -127,7 +127,7 @@ const Verifications = () => {
 <thead>
 <tr className="bg-slate-50">
 <th className="px-6 py-4 text-sm font-bold text-slate-600">Artisan</th>
-<th className="px-6 py-4 text-sm font-bold text-slate-600">SpÃ©cialitÃ©</th>
+<th className="px-6 py-4 text-sm font-bold text-slate-600">Spécialité</th>
 <th className="px-6 py-4 text-sm font-bold text-slate-600">Date d'inscription</th>
 <th className="px-6 py-4 text-sm font-bold text-slate-600">Statut Documents</th>
 <th className="px-6 py-4 text-sm font-bold text-slate-600 text-right">Actions</th>
@@ -154,7 +154,7 @@ const Verifications = () => {
                                         </span>
 </td>
 <td className="px-6 py-4 text-right">
-<button className="text-sm font-bold text-primary hover:underline">VÃ©rifier</button>
+<button className="text-sm font-bold text-primary hover:underline">Vérifier</button>
 </td>
 </tr>
 {/*  Row 2  */}
@@ -168,7 +168,7 @@ const Verifications = () => {
 </div>
 </div>
 </td>
-<td className="px-6 py-4 text-sm">Ã‰lectricitÃ©</td>
+<td className="px-6 py-4 text-sm">Ã‰lectricité</td>
 <td className="px-6 py-4 text-sm text-slate-500">11 Oct 2023</td>
 <td className="px-6 py-4">
 <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-green-100 text-green-700">
@@ -177,7 +177,7 @@ const Verifications = () => {
                                         </span>
 </td>
 <td className="px-6 py-4 text-right">
-<button className="text-sm font-bold text-primary hover:underline">VÃ©rifier</button>
+<button className="text-sm font-bold text-primary hover:underline">Vérifier</button>
 </td>
 </tr>
 {/*  Row 3  */}
@@ -223,7 +223,7 @@ const Verifications = () => {
                                         </span>
 </td>
 <td className="px-6 py-4 text-right">
-<button className="text-sm font-bold text-primary hover:underline">VÃ©rifier</button>
+<button className="text-sm font-bold text-primary hover:underline">Vérifier</button>
 </td>
 </tr>
 </tbody>
@@ -244,10 +244,10 @@ const Verifications = () => {
 </div>
 {/*  Footer  */}
 <footer className="mt-auto p-8 border-t border-slate-200 text-center text-slate-400 text-sm">
-<p>Â© 2023 Admin Panel Purple Edition. Tous droits rÃ©servÃ©s.</p>
+<p>Â© 2023 Admin Panel Purple Edition. Tous droits réservés.</p>
 <div className="mt-2 flex justify-center gap-4">
 <a className="hover:text-purple-500 transition-colors" href="#">Aide</a>
-<a className="hover:text-purple-500 transition-colors" href="#">ConfidentialitÃ©</a>
+<a className="hover:text-purple-500 transition-colors" href="#">Confidentialité</a>
 <a className="hover:text-purple-500 transition-colors" href="#">Conditions</a>
 </div>
 </footer>

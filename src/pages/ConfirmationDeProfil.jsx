@@ -19,7 +19,7 @@ const ConfirmationDeProfil = () => {
 <nav className="hidden md:flex items-center gap-9">
 <a className="text-slate-700 text-sm font-medium hover:text-primary transition-colors" href="#">Accueil</a>
 <a className="text-primary text-sm font-bold border-b-2 border-primary pb-1" href="#">Profil</a>
-<a className="text-slate-700 text-sm font-medium hover:text-primary transition-colors" href="#">ParamÃ¨tres</a>
+<a className="text-slate-700 text-sm font-medium hover:text-primary transition-colors" href="#">Paramètres</a>
 </nav>
 <div className="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 ring-2 ring-primary/20" data-alt="Portrait photo of a professional male user" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC84f2Xt9d6IQ6uoshBMAX8qypiDX1Y0Q-0ajJ1M5amkLfWxEar4gEDgiW5QrlS14YPAU1w5ZX4x36oYgyNisJrnOOlSEU4nSte1JiydY7GBPDhh-LMhec_ML-XqlqPaJfYgJmorc_fwMaWHJufMYdQxKqacJc0VqyziOpH71-eZXkShH6aDOalErUoFzklLrhmwtRVprd-txne-K7XMnKC4TkvAUaXHJMdlG4n86eoZAAT843evVdPt8MutRKrhLlb3VfkaQZIpjs2");'></div>
 </div>
@@ -30,8 +30,8 @@ const ConfirmationDeProfil = () => {
 <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
 <div className="flex flex-wrap justify-between items-end gap-4 mb-6">
 <div className="flex flex-col gap-1">
-<h1 className="text-slate-900 text-3xl font-black leading-tight tracking-tight">ComplÃ©tez votre profil</h1>
-<p className="text-slate-500 text-base">Ces informations nous aident Ã  personnaliser votre expÃ©rience sur ArtisanDirect.</p>
+<h1 className="text-slate-900 text-3xl font-black leading-tight tracking-tight">Complétez votre profil</h1>
+<p className="text-slate-500 text-base">Ces informations nous aident à personnaliser votre expérience sur ArtisanDirect.</p>
 </div>
 <div className="flex flex-col items-end gap-2 min-w-[120px]">
 <div className="flex gap-2 items-center">
@@ -69,7 +69,7 @@ const ConfirmationDeProfil = () => {
 <div className="md:col-span-2 flex flex-col gap-5">
 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
 <div className="flex flex-col gap-2">
-<label className="text-sm font-semibold text-slate-700">PrÃ©nom</label>
+<label className="text-sm font-semibold text-slate-700">Prénom</label>
 <input className="w-full rounded-lg border-slate-300 focus:ring-primary focus:border-primary" type="text" value="Jean"/>
 </div>
 <div className="flex flex-col gap-2">
@@ -78,7 +78,7 @@ const ConfirmationDeProfil = () => {
 </div>
 </div>
 <div className="flex flex-col gap-2">
-<label className="text-sm font-semibold text-slate-700">NumÃ©ro de tÃ©lÃ©phone</label>
+<label className="text-sm font-semibold text-slate-700">Numéro de téléphone</label>
 <div className="flex">
 <span className="inline-flex items-center px-3 rounded-l-lg border border-r-0 border-slate-300 bg-slate-50 text-slate-500 text-sm">+33</span>
 <input className="w-full rounded-r-lg border-slate-300 focus:ring-primary focus:border-primary" placeholder="06 12 34 56 78" type="tel"/>
@@ -116,19 +116,19 @@ const ConfirmationDeProfil = () => {
 </div>
 </div>
 </section>
-{/*  Section 3: PrÃ©fÃ©rences  */}
+{/*  Section 3: Préférences  */}
 <section className="bg-white p-6 md:p-8 rounded-xl shadow-sm border border-slate-200">
 <div className="flex items-center gap-3 mb-6">
 <span className="material-symbols-outlined text-primary">settings</span>
-<h2 className="text-slate-900 text-xl font-bold">PrÃ©fÃ©rences</h2>
+<h2 className="text-slate-900 text-xl font-bold">Préférences</h2>
 </div>
 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 <div className="flex flex-col gap-4">
-<label className="text-sm font-semibold text-slate-700">Langue prÃ©fÃ©rÃ©e</label>
+<label className="text-sm font-semibold text-slate-700">Langue préférée</label>
 <select className="w-full rounded-lg border-slate-300 focus:ring-primary focus:border-primary">
-<option value="fr">FranÃ§ais</option>
+<option value="fr">Français</option>
 <option value="en">English</option>
-<option value="es">EspaÃ±ol</option>
+<option value="es">Español</option>
 </select>
 </div>
 <div className="flex flex-col gap-4">
@@ -140,7 +140,7 @@ const ConfirmationDeProfil = () => {
 </label>
 <label className="flex items-center gap-3 cursor-pointer group">
 <input defaultChecked className="rounded text-primary focus:ring-primary size-5 border-slate-300" type="checkbox"/>
-<span className="text-sm text-slate-600 group-hover:text-slate-900 transition-colors">Mises Ã  jour des projets</span>
+<span className="text-sm text-slate-600 group-hover:text-slate-900 transition-colors">Mises à jour des projets</span>
 </label>
 <label className="flex items-center gap-3 cursor-pointer group">
 <input className="rounded text-primary focus:ring-primary size-5 border-slate-300" type="checkbox"/>
@@ -156,7 +156,7 @@ const ConfirmationDeProfil = () => {
                             Annuler
                         </button>
 <button className="px-8 py-3 rounded-lg font-bold text-white shadow-md shadow-primary/20 transition-all flex items-center justify-center gap-2 bg-green-600 cursor-default" disabled="true" type="submit"><span className="material-symbols-outlined text-base">check</span>
-EnregistrÃ©</button>
+Enregistré</button>
 </div>
 </form>
 </div>
@@ -175,7 +175,7 @@ EnregistrÃ©</button>
 </div>
 <div className="flex gap-8">
 <a className="text-sm text-slate-500 hover:text-primary" href="#">Conditions d'utilisation</a>
-<a className="text-sm text-slate-500 hover:text-primary" href="#">ConfidentialitÃ©</a>
+<a className="text-sm text-slate-500 hover:text-primary" href="#">Confidentialité</a>
 <a className="text-sm text-slate-500 hover:text-primary" href="#">Support</a>
 </div>
 <p className="text-sm text-slate-500">Â© 2024 ArtisanDirect Inc.</p>
@@ -191,8 +191,8 @@ EnregistrÃ©</button>
 <span className="material-symbols-outlined font-bold">check_circle</span>
 </div>
 <div className="flex flex-col">
-<p className="text-slate-900 font-bold">Profil mis Ã  jour</p>
-<p className="text-slate-500 text-sm">Profil enregistrÃ© avec succÃ¨s !</p>
+<p className="text-slate-900 font-bold">Profil mis à jour</p>
+<p className="text-slate-500 text-sm">Profil enregistré avec succès !</p>
 </div>
 <button className="ml-4 text-slate-400 hover:text-slate-600 transition-colors" onclick="this.parentElement.parentElement.remove()">
 <span className="material-symbols-outlined text-lg">close</span>

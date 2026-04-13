@@ -39,11 +39,11 @@ const FixationTv = () => {
 </div>
 <div>
 <h3 className="font-bold text-slate-900 text-base">Devis Rapide</h3>
-<p className="text-xs text-slate-500">RÃ©ponse sous 24h</p>
+<p className="text-xs text-slate-500">Réponse sous 24h</p>
 </div>
 </div>
 <p className="text-sm text-slate-600 mb-6 leading-relaxed">
-                            Besoin d'un devis gratuit pour votre installation TV ? Nos experts vous rÃ©pondent immÃ©diatement.
+                            Besoin d'un devis gratuit pour votre installation TV ? Nos experts vous répondent immédiatement.
                         </p>
 <button className="w-full py-3 bg-primary text-white rounded-lg font-bold text-sm flex items-center justify-center gap-2 hover:bg-primary/90 transition-all">
 <span className="material-symbols-outlined text-sm">send</span>
@@ -70,7 +70,7 @@ const FixationTv = () => {
                                 Service de Fixation TV Professionnel
                             </h1>
 <p className="mt-4 text-slate-200 max-w-md hidden md:block">
-                                SÃ©curisez votre Ã©quipement avec une installation sur mesure, propre et garantie.
+                                Sécurisez votre équipement avec une installation sur mesure, propre et garantie.
                             </p>
 </div>
 </section>
@@ -83,45 +83,45 @@ const FixationTv = () => {
 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
 <div className="bg-white p-5 rounded-xl border border-primary/5 shadow-sm">
 <span className="material-symbols-outlined text-primary text-3xl mb-3">shield</span>
-<h3 className="font-bold text-slate-900 mb-2">SÃ©curitÃ© Garantie</h3>
-<p className="text-sm text-slate-600">Support robuste certifiÃ© pour tous types de murs et poids d'Ã©crans.</p>
+<h3 className="font-bold text-slate-900 mb-2">Sécurité Garantie</h3>
+<p className="text-sm text-slate-600">Support robuste certifié pour tous types de murs et poids d'écrans.</p>
 </div>
 <div className="bg-white p-5 rounded-xl border border-primary/5 shadow-sm">
 <span className="material-symbols-outlined text-primary text-3xl mb-3">cable</span>
 <h3 className="font-bold text-slate-900 mb-2">Installation Propre</h3>
-<p className="text-sm text-slate-600">CÃ¢bles dissimulÃ©s et finitions soignÃ©es pour un salon Ã©purÃ©.</p>
+<p className="text-sm text-slate-600">Câbles dissimulés et finitions soignées pour un salon épuré.</p>
 </div>
 <div className="bg-white p-5 rounded-xl border border-primary/5 shadow-sm">
 <span className="material-symbols-outlined text-primary text-3xl mb-3">straighten</span>
 <h3 className="font-bold text-slate-900 mb-2">Niveau Parfait</h3>
-<p className="text-sm text-slate-600">Alignement au laser millimÃ©trÃ© pour un confort visuel optimal.</p>
+<p className="text-sm text-slate-600">Alignement au laser millimétré pour un confort visuel optimal.</p>
 </div>
 </div>
 </section>
 {/*  Service Details  */}
 <section className="grid grid-cols-1 md:grid-cols-2 gap-6 bg-white p-6 md:p-8 rounded-xl border border-primary/10 shadow-sm">
 <div className="flex flex-col gap-6">
-<h2 className="text-2xl font-bold text-slate-900">DÃ©tails de l'intervention</h2>
+<h2 className="text-2xl font-bold text-slate-900">Détails de l'intervention</h2>
 <div className="flex flex-col gap-4">
 <div className="flex gap-4">
 <div className="bg-primary/10 text-primary w-8 h-8 rounded-full flex items-center justify-center shrink-0">1</div>
 <div>
 <h4 className="font-bold text-sm">Conseil sur le support (VESA)</h4>
-<p className="text-sm text-slate-600">Nous vous aidons Ã  choisir entre fixe, inclinable ou articulÃ©.</p>
+<p className="text-sm text-slate-600">Nous vous aidons à choisir entre fixe, inclinable ou articulé.</p>
 </div>
 </div>
 <div className="flex gap-4">
 <div className="bg-primary/10 text-primary w-8 h-8 rounded-full flex items-center justify-center shrink-0">2</div>
 <div>
-<h4 className="font-bold text-sm">PerÃ§age de prÃ©cision</h4>
-<p className="text-sm text-slate-600">AdaptÃ© Ã  la nature de votre mur (placo, brique, bÃ©ton).</p>
+<h4 className="font-bold text-sm">Perçage de précision</h4>
+<p className="text-sm text-slate-600">Adapté à la nature de votre mur (placo, brique, béton).</p>
 </div>
 </div>
 <div className="flex gap-4">
 <div className="bg-primary/10 text-primary w-8 h-8 rounded-full flex items-center justify-center shrink-0">3</div>
 <div>
 <h4 className="font-bold text-sm">Mise en service</h4>
-<p className="text-sm text-slate-600">Branchement des pÃ©riphÃ©riques et test de fonctionnement.</p>
+<p className="text-sm text-slate-600">Branchement des périphériques et test de fonctionnement.</p>
 </div>
 </div>
 </div>
@@ -139,22 +139,22 @@ const FixationTv = () => {
 <div>
 <p className="font-bold text-slate-900">Marc L.</p>
 <p className="text-xs text-primary font-medium">Expert Fixation Murales</p>
-<p className="text-xs text-slate-500 mt-1">12 ans d'expÃ©rience</p>
+<p className="text-xs text-slate-500 mt-1">12 ans d'expérience</p>
 </div>
 </div>
 <div className="flex items-center gap-4 p-4 bg-white rounded-xl shadow-sm">
 <img alt="Expert face" className="size-16 rounded-full object-cover" data-alt="Portrait of a professional service woman" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2h3eFXf0XXRZerBOYxF6oNJK0yp4orKmRrkuhqMSIwKrNEzRlVkcsxHQwA5F4dLG7jrD2PAk03H6dhRef-fIiF2lc-hwM0gab59YkzOqxJ52hhfjz5Ceu7pjoE09rf5ORaLH8WdQGULZCCfwDy2PXCioUmIa_Bew07Twx3O6n2nHoOToiZ5rvqFMUqvotOOnqJLAjfUmQsNRM1ljqWzhF3FQMRTBh6cFJrYY1wr084uEc5jsIxs8VGXOX3i_XXnxCTY3_GMPMVgA_"/>
 <div>
 <p className="font-bold text-slate-900">Sarah B.</p>
-<p className="text-xs text-primary font-medium">SpÃ©cialiste Home CinÃ©ma</p>
-<p className="text-xs text-slate-500 mt-1">8 ans d'expÃ©rience</p>
+<p className="text-xs text-primary font-medium">Spécialiste Home Cinéma</p>
+<p className="text-xs text-slate-500 mt-1">8 ans d'expérience</p>
 </div>
 </div>
 </div>
 </section>
 {/*  FAQ  */}
 <section>
-<h2 className="text-2xl font-bold text-slate-900 mb-6">Questions FrÃ©quentes</h2>
+<h2 className="text-2xl font-bold text-slate-900 mb-6">Questions Fréquentes</h2>
 <div className="flex flex-col gap-3">
 <details className="group bg-white rounded-xl border border-primary/10 transition-all">
 <summary className="flex justify-between items-center p-5 cursor-pointer font-bold text-sm list-none">
@@ -162,7 +162,7 @@ const FixationTv = () => {
 <span className="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
 </summary>
 <div className="px-5 pb-5 text-sm text-slate-600">
-                                    Oui, nous pouvons fournir une gamme complÃ¨te de supports certifiÃ©s ou installer celui que vous avez dÃ©jÃ  achetÃ©.
+                                    Oui, nous pouvons fournir une gamme complète de supports certifiés ou installer celui que vous avez déjà acheté.
                                 </div>
 </details>
 <details className="group bg-white rounded-xl border border-primary/10 transition-all">
@@ -171,7 +171,7 @@ const FixationTv = () => {
 <span className="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
 </summary>
 <div className="px-5 pb-5 text-sm text-slate-600">
-                                    Une installation standard dure entre 1h et 1h30, incluant le rÃ©glage et le nettoyage du chantier.
+                                    Une installation standard dure entre 1h et 1h30, incluant le réglage et le nettoyage du chantier.
                                 </div>
 </details>
 </div>
@@ -188,28 +188,28 @@ const FixationTv = () => {
 <h2 className="text-slate-900 text-xl font-bold">Fixation TV Pro</h2>
 </div>
 <p className="text-sm text-slate-500 max-w-sm">
-                        L'expert de l'installation audiovisuelle Ã  domicile. SÃ©curitÃ©, esthÃ©tique et professionnalisme au service de votre divertissement.
+                        L'expert de l'installation audiovisuelle à domicile. Sécurité, esthétique et professionnalisme au service de votre divertissement.
                     </p>
 </div>
 <div>
 <h3 className="font-bold text-slate-900 mb-4">Liens Utiles</h3>
 <ul className="flex flex-col gap-2 text-sm text-slate-500">
 <li><a className="hover:text-primary transition-colors" href="#">Nos Tarifs</a></li>
-<li><a className="hover:text-primary transition-colors" href="#">TÃ©moignages</a></li>
+<li><a className="hover:text-primary transition-colors" href="#">Témoignages</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Contact</a></li>
 </ul>
 </div>
 <div>
-<h3 className="font-bold text-slate-900 mb-4">LÃ©gal</h3>
+<h3 className="font-bold text-slate-900 mb-4">Légal</h3>
 <ul className="flex flex-col gap-2 text-sm text-slate-500">
-<li><a className="hover:text-primary transition-colors" href="#">Mentions LÃ©gales</a></li>
-<li><a className="hover:text-primary transition-colors" href="#">ConfidentialitÃ©</a></li>
+<li><a className="hover:text-primary transition-colors" href="#">Mentions Légales</a></li>
+<li><a className="hover:text-primary transition-colors" href="#">Confidentialité</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">CGV</a></li>
 </ul>
 </div>
 </div>
 <div className="max-w-[1280px] mx-auto px-6 md:px-10 mt-12 pt-8 border-t border-primary/5 text-center text-xs text-slate-400">
-                Â© 2024 Fixation TV Pro. Tous droits rÃ©servÃ©s.
+                Â© 2024 Fixation TV Pro. Tous droits réservés.
             </div>
 </footer>
 </div>

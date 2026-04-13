@@ -32,7 +32,7 @@ const AccueilTableauDeBordArtisan = () => {
 </a>
 <a className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-600 hover:bg-slate-100 transition-colors" href="#">
 <span className="material-symbols-outlined text-slate-400">verified_user</span>
-<span className="text-sm">VÃ©rification et documents</span>
+<span className="text-sm">Vérification et documents</span>
 </a>
 <a className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-600 hover:bg-slate-100 transition-colors" href="#">
 <span className="material-symbols-outlined text-slate-400">business_center</span>
@@ -44,7 +44,7 @@ const AccueilTableauDeBordArtisan = () => {
 </a>
 <a className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-600 hover:bg-slate-100 transition-colors" href="#">
 <span className="material-symbols-outlined text-slate-400">settings</span>
-<span className="text-sm">ParamÃ¨tres</span>
+<span className="text-sm">Paramètres</span>
 </a>
 </nav>
 <div className="p-6 border-t border-slate-200">
@@ -84,7 +84,7 @@ const AccueilTableauDeBordArtisan = () => {
 {/*  Welcome Section  */}
 <div>
 <h2 className="text-3xl font-black tracking-tight text-slate-900">Bonjour, Ahmed Mohamed</h2>
-<p className="text-slate-500 mt-1">Voici un aperÃ§u de votre activitÃ© aujourd'hui.</p>
+<p className="text-slate-500 mt-1">Voici un aperçu de votre activité aujourd'hui.</p>
 </div>
 {/*  Stats Grid  */}
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -134,7 +134,7 @@ const AccueilTableauDeBordArtisan = () => {
 {/*  Recent Missions (List)  */}
 <div className="xl:col-span-2 bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
 <div className="p-6 border-b border-slate-100 flex justify-between items-center">
-<h3 className="text-lg font-bold text-slate-900">Missions rÃ©centes</h3>
+<h3 className="text-lg font-bold text-slate-900">Missions récentes</h3>
 <button className="text-primary text-sm font-bold hover:underline">Tout voir</button>
 </div>
 <div className="divide-y divide-slate-100">
@@ -144,7 +144,7 @@ const AccueilTableauDeBordArtisan = () => {
 <img alt="Mission" className="w-full h-full object-cover" data-alt="Renovation site photo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7cOgj9gXN0jcOF3nEYF-w97S1wj03cQqqag0Tcx120lFrzQ_J2ESC1c-Gad7dimunyRsMwC8eERH06tCk8oXSLgdpUls0pbAN3CZ5e4RFX24JG1PI8lmLEXZ3chZZ5y3ZJ5hud_PQQAKfmFIvUc38LKctxE7HxzndlsuYp0gMgu8Q6DQczVeIge4AmH0K7thx0__qv289R57Zplb5zRE_Np3FNsOqq6yaZwBNpkf3d4f-naWs4J3zfUNi2aV5HZCIgwKyJFfIKlaa"/>
 </div>
 <div className="flex-1">
-<h4 className="font-bold text-slate-900">RÃ©novation Cuisine - Villa Arras</h4>
+<h4 className="font-bold text-slate-900">Rénovation Cuisine - Villa Arras</h4>
 <p className="text-sm text-slate-500">Client: Jean Dupont â€¢ 12 Oct 2023</p>
 </div>
 <div className="text-right">
@@ -162,7 +162,7 @@ const AccueilTableauDeBordArtisan = () => {
 <p className="text-sm text-slate-500">Client: SARL Tech â€¢ 09 Oct 2023</p>
 </div>
 <div className="text-right">
-<span className="px-3 py-1 rounded-full text-xs font-bold bg-green-100 text-green-600">TerminÃ©</span>
+<span className="px-3 py-1 rounded-full text-xs font-bold bg-green-100 text-green-600">Terminé</span>
 <p className="text-sm font-bold text-slate-900 mt-1">850 â‚¬</p>
 </div>
 </div>
@@ -172,7 +172,7 @@ const AccueilTableauDeBordArtisan = () => {
 <img alt="Mission" className="w-full h-full object-cover" data-alt="Plumbing work pipes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCF3-PZ64pkbPNOOFTV0UBMkV8PLCkVRns4L-XGFQjQMPdxolYjTgfhqdypg05PbC6m50d8U3Acrrxsv12WqCOPojNTOvktodw2dShZGDuLXYYZTPz2eMlK39rACK_JRv__lUmVL9mHXFiDIO72EuCbe8ZHK30K8rcRDo7MxVZnFQa21mbHi8P8wpr49M0yqxGTnzzMZN1nXQuIMk6-FxADURaEIUnAlnpq_gP5NM88JTIvtG1SXdFwPQ4mLJB7SlX0KvUpZCYMt4kH"/>
 </div>
 <div className="flex-1">
-<h4 className="font-bold text-slate-900">RÃ©paration Fuite Canalisation</h4>
+<h4 className="font-bold text-slate-900">Réparation Fuite Canalisation</h4>
 <p className="text-sm text-slate-500">Client: Marie Curie â€¢ 05 Oct 2023</p>
 </div>
 <div className="text-right">

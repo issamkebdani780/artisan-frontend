@@ -43,14 +43,14 @@ const VerificationEtDocuments = () => {
               <div className="flex items-center gap-3">
                  <span className={`size-3 rounded-full ${Number(currentUser?.is_verified) === 1 ? 'bg-emerald-500 animate-pulse' : Number(currentUser?.is_verified) === -1 ? 'bg-red-500 animate-pulse' : 'bg-amber-500 animate-bounce'}`}></span>
                  <h2 className="text-3xl font-black tracking-tight text-slate-900 uppercase">
-                   {Number(currentUser?.is_verified) === 1 ? 'Profil CertifiÃ©' : Number(currentUser?.is_verified) === -1 ? 'Dossier RefusÃ©' : 'VÃ©rification en cours'}
+                   {Number(currentUser?.is_verified) === 1 ? 'Profil Certifié' : Number(currentUser?.is_verified) === -1 ? 'Dossier Refusé' : 'Vérification en cours'}
                  </h2>
               </div>
               <p className="text-slate-500 font-bold uppercase tracking-widest text-[10px] max-w-md leading-loose">
                 {Number(currentUser?.is_verified) === 1 
-                  ? "Votre identitÃ© et vos compÃ©tences ont Ã©tÃ© validÃ©es par nos experts. Vous bÃ©nÃ©ficiez d'une visibilitÃ© prioritaire."
-                  : Number(currentUser?.is_verified) === -1 ? "Votre dossier a Ã©tÃ© refusÃ© car certains documents sont invalides ou illisibles. Veuillez rectifier votre profil."
-                  : "Nos administrateurs examinent actuellement les piÃ¨ces justificatives fournies lors de votre inscription."
+                  ? "Votre identité et vos compétences ont été validées par nos experts. Vous bénéficiez d'une visibilité prioritaire."
+                  : Number(currentUser?.is_verified) === -1 ? "Votre dossier a été refusé car certains documents sont invalides ou illisibles. Veuillez rectifier votre profil."
+                  : "Nos administrateurs examinent actuellement les pièces justificatives fournies lors de votre inscription."
                 }
               </p>
             </div>
@@ -58,9 +58,9 @@ const VerificationEtDocuments = () => {
             <div className={`flex items-center gap-6 p-8 rounded-[32px] border backdrop-blur-sm ${Number(currentUser?.is_verified) === -1 ? 'bg-red-50/50 border-red-100' : 'bg-slate-50/50 border-slate-100'}`}>
                <div className="text-right">
                   <p className={`text-sm font-black uppercase ${Number(currentUser?.is_verified) === 1 ? 'text-emerald-600' : Number(currentUser?.is_verified) === -1 ? 'text-red-600' : 'text-amber-600'}`}>
-                    Statut : {Number(currentUser?.is_verified) === 1 ? 'ApprouvÃ©' : Number(currentUser?.is_verified) === -1 ? 'RefusÃ©' : 'Attente'}
+                    Statut : {Number(currentUser?.is_verified) === 1 ? 'Approuvé' : Number(currentUser?.is_verified) === -1 ? 'Refusé' : 'Attente'}
                   </p>
-                  <p className="text-[10px] font-bold text-slate-400 uppercase mt-1">DerniÃ¨re mise Ã  jour: Aujourd'hui</p>
+                  <p className="text-[10px] font-bold text-slate-400 uppercase mt-1">Dernière mise à jour: Aujourd'hui</p>
                </div>
                <div className={`size-16 rounded-2xl ${Number(currentUser?.is_verified) === 1 ? 'bg-emerald-500 shadow-emerald-200' : Number(currentUser?.is_verified) === -1 ? 'bg-red-500 shadow-red-200' : 'bg-amber-500 shadow-amber-200'} shadow-2xl flex items-center justify-center text-white ring-4 ring-white`}>
                   <span className="material-symbols-outlined text-4xl font-black">
@@ -75,7 +75,7 @@ const VerificationEtDocuments = () => {
         <div className="space-y-6">
           <div className="flex items-center gap-4 px-2">
             <div className="h-8 w-1.5 bg-secondary rounded-full"></div>
-            <h3 className="text-xl font-black text-slate-900 uppercase tracking-tight">PiÃ¨ces Jointes lors de l'Inscription</h3>
+            <h3 className="text-xl font-black text-slate-900 uppercase tracking-tight">Pièces Jointes lors de l'Inscription</h3>
           </div>
 
           {loading ? (
@@ -111,8 +111,8 @@ const VerificationEtDocuments = () => {
                <div className="size-24 rounded-full bg-slate-50 flex items-center justify-center text-slate-200 mb-6">
                   <span className="material-symbols-outlined text-6xl">upload_file</span>
                </div>
-               <h4 className="text-xl font-black text-slate-900 uppercase">Aucun document trouvÃ©</h4>
-               <p className="text-slate-400 font-bold uppercase tracking-widest text-[10px] mt-2 max-w-xs">Contactez le support si vous avez dÃ©jÃ  tÃ©lÃ©chargÃ© vos documents lors de l'inscription.</p>
+               <h4 className="text-xl font-black text-slate-900 uppercase">Aucun document trouvé</h4>
+               <p className="text-slate-400 font-bold uppercase tracking-widest text-[10px] mt-2 max-w-xs">Contactez le support si vous avez déjà téléchargé vos documents lors de l'inscription.</p>
             </div>
           )}
         </div>
@@ -121,7 +121,7 @@ const VerificationEtDocuments = () => {
         <div className="bg-slate-900 rounded-[40px] p-10 text-white flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl relative overflow-hidden">
           <div className="absolute left-0 bottom-0 w-64 h-64 bg-secondary/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
           <p className="text-sm font-bold uppercase tracking-widest leading-loose max-w-xl text-center md:text-left relative z-10">
-            Besoin d'ajouter de nouveaux documents ou de mettre Ã  jour votre situation ? Contactez notre service de validation via le centre de messages.
+            Besoin d'ajouter de nouveaux documents ou de mettre à jour votre situation ? Contactez notre service de validation via le centre de messages.
           </p>
           <a href="/dashboard/artisan/settings" className="relative z-10 px-10 py-5 bg-white text-slate-900 rounded-2xl font-black uppercase tracking-widest shadow-2xl hover:scale-105 active:scale-95 transition-all">
             Configuration Profil

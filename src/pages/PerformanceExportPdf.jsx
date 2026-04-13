@@ -40,12 +40,12 @@ const PerformanceExportPdf = () => {
 </a>
 <a className="flex items-center gap-3 px-3 py-2 text-slate-400 hover:text-white hover:bg-slate-800 rounded-xl transition-colors" href="#">
 <span className="material-symbols-outlined">settings</span>
-<span className="text-sm font-medium">ParamÃ¨tres</span>
+<span className="text-sm font-medium">Paramètres</span>
 </a>
 </nav>
 <button className="mt-auto flex items-center justify-center gap-2 px-4 py-2.5 bg-slate-800 text-slate-200 hover:bg-red-500/20 hover:text-red-500 rounded-xl text-sm font-bold transition-all">
 <span className="material-symbols-outlined text-sm">logout</span>
-<span>DÃ©connexion</span>
+<span>Déconnexion</span>
 </button>
 </div>
 </aside>
@@ -78,14 +78,14 @@ const PerformanceExportPdf = () => {
 {/*  Welcome Section  */}
 <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
 <div>
-<h1 className="text-3xl font-black tracking-tight text-slate-900">Performance FinanciÃ¨re</h1>
-<p className="text-slate-500 mt-1">Analyse dÃ©taillÃ©e de vos revenus pour le mois en cours.</p>
+<h1 className="text-3xl font-black tracking-tight text-slate-900">Performance Financière</h1>
+<p className="text-slate-500 mt-1">Analyse détaillée de vos revenus pour le mois en cours.</p>
 </div>
 <div className="flex items-center gap-3">
 <div className="flex bg-white rounded-xl p-1 shadow-sm border border-slate-200">
 <button className="px-4 py-1.5 text-xs font-semibold rounded-lg bg-primary text-white">7J</button>
 <button className="px-4 py-1.5 text-xs font-semibold text-slate-500 hover:text-slate-900">30J</button>
-<button className="px-4 py-1.5 text-xs font-semibold text-slate-500 hover:text-slate-900">AnnÃ©e</button>
+<button className="px-4 py-1.5 text-xs font-semibold text-slate-500 hover:text-slate-900">Année</button>
 </div>
 <button className="flex items-center gap-2 px-4 py-2 bg-white border border-slate-200 rounded-xl text-sm font-semibold shadow-sm">
 <span className="material-symbols-outlined text-sm">calendar_month</span>
@@ -163,7 +163,7 @@ const PerformanceExportPdf = () => {
 {/*  Bar Chart: Revenue by Category  */}
 <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
 <div className="flex items-center justify-between mb-6">
-<h3 className="font-bold text-slate-800">RÃ©partition par Service</h3>
+<h3 className="font-bold text-slate-800">Répartition par Service</h3>
 <button className="text-slate-400 hover:text-primary"><span className="material-symbols-outlined">more_horiz</span></button>
 </div>
 <div className="space-y-4">
@@ -198,7 +198,7 @@ const PerformanceExportPdf = () => {
 <div className="bg-primary/5 rounded-xl p-4 border border-primary/10">
 <div className="flex gap-3">
 <span className="material-symbols-outlined text-primary">info</span>
-<p className="text-xs leading-relaxed text-slate-600">Les abonnements Premium ont augmentÃ© de 12% ce mois-ci, devenant votre principale source de revenus.</p>
+<p className="text-xs leading-relaxed text-slate-600">Les abonnements Premium ont augmenté de 12% ce mois-ci, devenant votre principale source de revenus.</p>
 </div>
 </div>
 </div>
@@ -222,7 +222,7 @@ const PerformanceExportPdf = () => {
 <th className="px-6 py-4">Date</th>
 <th className="px-6 py-4">Montant</th>
 <th className="px-6 py-4">Status</th>
-<th className="px-6 py-4">MÃ©thode</th>
+<th className="px-6 py-4">Méthode</th>
 <th className="px-6 py-4 text-right">Actions</th>
 </tr>
 </thead>
@@ -237,7 +237,7 @@ const PerformanceExportPdf = () => {
 <td className="px-6 py-4 text-sm text-slate-500">12 Oct 2023</td>
 <td className="px-6 py-4 text-sm font-bold">450,00 â‚¬</td>
 <td className="px-6 py-4">
-<span className="px-2.5 py-1 rounded-full text-[10px] font-bold bg-emerald-500/10 text-emerald-500 uppercase tracking-wider">RÃ©ussi</span>
+<span className="px-2.5 py-1 rounded-full text-[10px] font-bold bg-emerald-500/10 text-emerald-500 uppercase tracking-wider">Réussi</span>
 </td>
 <td className="px-6 py-4 text-sm text-slate-500">Visa **** 4242</td>
 <td className="px-6 py-4 text-right">
@@ -254,7 +254,7 @@ const PerformanceExportPdf = () => {
 <td className="px-6 py-4 text-sm text-slate-500">11 Oct 2023</td>
 <td className="px-6 py-4 text-sm font-bold">89,90 â‚¬</td>
 <td className="px-6 py-4">
-<span className="px-2.5 py-1 rounded-full text-[10px] font-bold bg-emerald-500/10 text-emerald-500 uppercase tracking-wider">RÃ©ussi</span>
+<span className="px-2.5 py-1 rounded-full text-[10px] font-bold bg-emerald-500/10 text-emerald-500 uppercase tracking-wider">Réussi</span>
 </td>
 <td className="px-6 py-4 text-sm text-slate-500">PayPal</td>
 <td className="px-6 py-4 text-right">
@@ -288,7 +288,7 @@ const PerformanceExportPdf = () => {
 <td className="px-6 py-4 text-sm text-slate-500">09 Oct 2023</td>
 <td className="px-6 py-4 text-sm font-bold">15,00 â‚¬</td>
 <td className="px-6 py-4">
-<span className="px-2.5 py-1 rounded-full text-[10px] font-bold bg-red-500/10 text-red-500 uppercase tracking-wider">Ã‰chouÃ©</span>
+<span className="px-2.5 py-1 rounded-full text-[10px] font-bold bg-red-500/10 text-red-500 uppercase tracking-wider">Ã‰choué</span>
 </td>
 <td className="px-6 py-4 text-sm text-slate-500">Mastercard</td>
 <td className="px-6 py-4 text-right">
@@ -299,7 +299,7 @@ const PerformanceExportPdf = () => {
 </table>
 </div>
 <div className="p-6 border-t border-slate-100 flex items-center justify-between">
-<span className="text-xs text-slate-500">Affichage de 1 Ã  4 sur 256 transactions</span>
+<span className="text-xs text-slate-500">Affichage de 1 à 4 sur 256 transactions</span>
 <div className="flex gap-1">
 <button className="size-8 flex items-center justify-center rounded-lg border border-slate-200 hover:bg-slate-50"><span className="material-symbols-outlined text-sm">chevron_left</span></button>
 <button className="size-8 flex items-center justify-center rounded-lg bg-primary text-white font-bold text-xs">1</button>

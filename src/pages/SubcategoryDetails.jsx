@@ -19,12 +19,12 @@ const SubcategoryDetails = () => {
         setData({
           name: 'Montage de meubles',
           category_name: 'Menuiserie et Bois',
-          description: "Profitez d'un service de montage professionnel pour vos armoires, lits, bureaux et Ã©tagÃ¨res. Nos experts garantissent un assemblage prÃ©cis et robuste pour tout votre mobilier.",
+          description: "Profitez d'un service de montage professionnel pour vos armoires, lits, bureaux et étagères. Nos experts garantissent un assemblage précis et robuste pour tout votre mobilier.",
           image_url: 'https://images.unsplash.com/photo-1594484208280-efa00f9e990c?auto=format&fit=crop&q=80&w=1000',
           artisans: [
             { id: 1, name: 'Marc V.', specialty: 'Expert en montage de mobilier complexe', rating: 4.9, review_count: 124, profile_pic: 'https://i.pravatar.cc/150?u=marc' },
-            { id: 2, name: 'Sophie D.', specialty: 'SpÃ©cialiste dressings et amÃ©nagements', rating: 5.0, review_count: 89, profile_pic: 'https://i.pravatar.cc/150?u=sophie' },
-            { id: 3, name: 'Julien M.', specialty: 'Montage rapide et soignÃ© de mobilier de bureau', rating: 4.8, review_count: 210, profile_pic: 'https://i.pravatar.cc/150?u=julien' }
+            { id: 2, name: 'Sophie D.', specialty: 'Spécialiste dressings et aménagements', rating: 5.0, review_count: 89, profile_pic: 'https://i.pravatar.cc/150?u=sophie' },
+            { id: 3, name: 'Julien M.', specialty: 'Montage rapide et soigné de mobilier de bureau', rating: 4.8, review_count: 210, profile_pic: 'https://i.pravatar.cc/150?u=julien' }
           ]
         });
       } finally {
@@ -40,7 +40,7 @@ const SubcategoryDetails = () => {
     </div>
   );
 
-  if (!data) return <div className="p-20 text-center">Service non trouvÃ©</div>;
+  if (!data) return <div className="p-20 text-center">Service non trouvé</div>;
 
   return (
     <div className="bg-[#F8F9FA] min-h-screen font-['Outfit',sans-serif] pb-20">
@@ -83,7 +83,7 @@ const SubcategoryDetails = () => {
               onClick={() => navigate(`/request-quote?subcategory=${id}`)}
               className="group flex items-center gap-3 bg-blue-600 text-white px-10 py-5 rounded-2xl font-black text-lg shadow-2xl shadow-blue-600/30 hover:scale-[1.02] active:scale-95 transition-all w-full sm:w-auto justify-center"
             >
-              RÃ©server maintenant
+              Réserver maintenant
               <span className="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
             </button>
           </div>
@@ -127,7 +127,7 @@ const SubcategoryDetails = () => {
                               {artisan.rating} ({artisan.review_count || 0} avis)
                           </div>
                           <div className="text-slate-300">|</div>
-                          <div className="text-slate-400 font-bold uppercase tracking-wider text-[10px]">VÃ©rifiÃ©</div>
+                          <div className="text-slate-400 font-bold uppercase tracking-wider text-[10px]">Vérifié</div>
                       </div>
                     </div>
                   </div>
@@ -143,7 +143,7 @@ const SubcategoryDetails = () => {
                       onClick={() => navigate(`/request-quote?subcategory=${id}&artisanId=${artisan.id}&artisanName=${encodeURIComponent(artisan.name)}`)}
                       className="px-10 py-3 rounded-xl bg-blue-600 text-white font-black text-sm shadow-lg shadow-blue-600/20 hover:scale-105 transition-all"
                     >
-                      RÃ©server
+                      Réserver
                     </button>
                   </div>
                 </div>
@@ -152,7 +152,7 @@ const SubcategoryDetails = () => {
               <div className="py-20 text-center bg-slate-50 rounded-[32px] border-2 border-dashed border-slate-200">
                 <span className="material-symbols-outlined text-6xl text-slate-300 mb-4">person_search</span>
                 <p className="text-xl font-black text-slate-400 uppercase tracking-tight">Aucun artisan disponible pour le moment</p>
-                <p className="text-slate-400 font-medium">Revenez bientÃ´t ou essayez une autre catÃ©gorie.</p>
+                <p className="text-slate-400 font-medium">Revenez bientôt ou essayez une autre catégorie.</p>
               </div>
             )}
           </div>

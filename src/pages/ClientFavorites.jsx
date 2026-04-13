@@ -29,7 +29,7 @@ const ClientFavorites = () => {
             Mes Artisans <span className="text-primary italic">Favoris</span>
           </h1>
           <p className="text-slate-500 font-bold text-lg">
-            Retrouvez ici tous les professionnels que vous avez enregistrÃ©s.
+            Retrouvez ici tous les professionnels que vous avez enregistrés.
           </p>
         </div>
 
@@ -52,7 +52,7 @@ const ClientFavorites = () => {
               href="/search"
               className="px-10 py-4 bg-primary text-white font-black uppercase tracking-widest text-sm rounded-2xl shadow-xl shadow-primary/20 hover:bg-primary/90 transition-all hover:-translate-y-1 active:scale-95"
             >
-              DÃ©couvrir nos artisans
+              Découvrir nos artisans
             </a>
           </div>
         ) : (

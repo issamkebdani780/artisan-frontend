@@ -7,21 +7,21 @@ import ChatModal from '../components/ChatModal';
 const specialtyToCategoryMap = {
   'Menuiserie': 'Menuiserie et Bois',
   'Soudure': 'Ferronnerie et Soudure',
-  'Plomberie': 'Plomberie et RÃ©seaux',
-  'Ã‰lectricitÃ©': 'Ã‰lectricitÃ© et Ã‰nergie',
-  'Peinture': 'Peinture et PlÃ¢tre',
-  'MaÃ§onnerie': 'MaÃ§onnerie et Finitions',
-  'MÃ©canique': 'MÃ©canique et Machines',
+  'Plomberie': 'Plomberie et Réseaux',
+  'Ã‰lectricité': 'Ã‰lectricité et Ã‰nergie',
+  'Peinture': 'Peinture et Plâtre',
+  'Maçonnerie': 'Maçonnerie et Finitions',
+  'Mécanique': 'Mécanique et Machines',
 };
 
 const specialtyOptionToGroup = {
-  'Menuisier Ã©bÃ©niste': 'Menuiserie', 'Menuisier de chantier': 'Menuiserie', 'Presseur de bois': 'Menuiserie', 'DÃ©corateur bois': 'Menuiserie', 'Fabricant ouvertures bois': 'Menuiserie',
+  'Menuisier ébéniste': 'Menuiserie', 'Menuisier de chantier': 'Menuiserie', 'Presseur de bois': 'Menuiserie', 'Décorateur bois': 'Menuiserie', 'Fabricant ouvertures bois': 'Menuiserie',
   "Ferronnier d'art": 'Soudure', 'Soudeur arc/argon': 'Soudure', 'Chaudronnier': 'Soudure', 'Soudeur carrosserie': 'Soudure',
   'Plombier sanitaire': 'Plomberie', 'Chauffage central': 'Plomberie', 'Monteur gaz': 'Plomberie', 'Tuyauterie cuivre/PER': 'Plomberie',
-  'Ã‰lectricien bÃ¢timent': 'Ã‰lectricitÃ©', 'Ã‰lectricien industriel': 'Ã‰lectricitÃ©', 'Technicien solaire': 'Ã‰lectricitÃ©', 'Tireur de cÃ¢bles': 'Ã‰lectricitÃ©',
-  'Peintre dÃ©corateur': 'Peinture', 'Peintre automobile': 'Peinture', 'PlÃ¢trier staffeur': 'Peinture', 'Marbrier': 'Peinture', 'Vernisseur': 'Peinture',
-  'MaÃ§on brique': 'MaÃ§onnerie', 'Carreleur': 'MaÃ§onnerie', 'CrÃ©pisseur': 'MaÃ§onnerie', 'Ã‰tanchÃ©itÃ©': 'MaÃ§onnerie', 'RÃ©novation': 'MaÃ§onnerie',
-  'MÃ©canicien auto': 'MÃ©canique', 'MÃ©canicien moto': 'MÃ©canique', 'Moteurs Ã©lectriques': 'MÃ©canique', 'MÃ©canicien agricole': 'MÃ©canique',
+  'Ã‰lectricien bâtiment': 'Ã‰lectricité', 'Ã‰lectricien industriel': 'Ã‰lectricité', 'Technicien solaire': 'Ã‰lectricité', 'Tireur de câbles': 'Ã‰lectricité',
+  'Peintre décorateur': 'Peinture', 'Peintre automobile': 'Peinture', 'Plâtrier staffeur': 'Peinture', 'Marbrier': 'Peinture', 'Vernisseur': 'Peinture',
+  'Maçon brique': 'Maçonnerie', 'Carreleur': 'Maçonnerie', 'Crépisseur': 'Maçonnerie', 'Ã‰tanchéité': 'Maçonnerie', 'Rénovation': 'Maçonnerie',
+  'Mécanicien auto': 'Mécanique', 'Mécanicien moto': 'Mécanique', 'Moteurs électriques': 'Mécanique', 'Mécanicien agricole': 'Mécanique',
 };
 
 const ProfilArtisan = () => {
@@ -64,7 +64,7 @@ const ProfilArtisan = () => {
     </div>
   );
 
-  if (!artisan) return <div className="text-center py-20">Artisan non trouvÃ©.</div>;
+  if (!artisan) return <div className="text-center py-20">Artisan non trouvé.</div>;
 
   const displayExperience = (() => {
     try {
@@ -97,11 +97,11 @@ const ProfilArtisan = () => {
                 />
               </div>
               {Number(artisan.is_verified) === 1 ? (
-                <div className="absolute -bottom-2 -right-2 size-10 bg-emerald-500 rounded-2xl border-4 border-white z-20 flex items-center justify-center shadow-lg transition-colors" title="VÃ©rifiÃ© par la plateforme">
+                <div className="absolute -bottom-2 -right-2 size-10 bg-emerald-500 rounded-2xl border-4 border-white z-20 flex items-center justify-center shadow-lg transition-colors" title="Vérifié par la plateforme">
                   <span className="material-symbols-outlined text-white text-xl">verified</span>
                 </div>
               ) : (
-                <div className="absolute -bottom-2 -right-2 size-10 bg-amber-500 rounded-2xl border-4 border-white z-20 flex items-center justify-center shadow-lg transition-colors" title={Number(artisan.is_verified) === -1 ? "VÃ©rification refusÃ©e" : "En attente de vÃ©rification"}>
+                <div className="absolute -bottom-2 -right-2 size-10 bg-amber-500 rounded-2xl border-4 border-white z-20 flex items-center justify-center shadow-lg transition-colors" title={Number(artisan.is_verified) === -1 ? "Vérification refusée" : "En attente de vérification"}>
                   <span className="material-symbols-outlined text-white text-xl">{Number(artisan.is_verified) === -1 ? 'block' : 'hourglass_empty'}</span>
                 </div>
               )}
@@ -127,7 +127,7 @@ const ProfilArtisan = () => {
                 <span className="hidden md:block size-1 bg-slate-300 rounded-full"></span>
                 <div className="flex items-center gap-2">
                   <span className="material-symbols-outlined text-slate-400">location_on</span>
-                  <span className="font-medium text-sm md:text-base">{artisan.address || 'Alger, AlgÃ©rie'}</span>
+                  <span className="font-medium text-sm md:text-base">{artisan.address || 'Alger, Algérie'}</span>
                 </div>
               </div>
             </div>
@@ -141,9 +141,9 @@ const ProfilArtisan = () => {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {[
                 { label: 'Projets', value: artisan.review_count || '0', icon: 'auto_awesome' },
-                { label: 'ExpÃ©rience', value: `${displayExperience} Ans`, icon: 'history_edu' },
+                { label: 'Expérience', value: `${displayExperience} Ans`, icon: 'history_edu' },
                 { label: 'Note Globale', value: artisan.rating || '5.0', icon: 'star', color: 'text-yellow-400' },
-                { label: 'RÃ©ponse', value: '< 24h', icon: 'bolt', color: 'text-blue-500' }
+                { label: 'Réponse', value: '< 24h', icon: 'bolt', color: 'text-blue-500' }
               ].map((stat, i) => (
                 <div key={i} className="bg-white p-6 rounded-[32px] border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                   <div className={`size-10 rounded-2xl bg-slate-50 flex items-center justify-center mb-4 ${stat.color || 'text-slate-400'}`}>
@@ -191,7 +191,7 @@ const ProfilArtisan = () => {
                               {categoryExp > 0 && (
                                 <>
                                   <span className="size-1 bg-slate-300 rounded-full"></span>
-                                  <p className="text-[10px] text-primary font-black uppercase tracking-widest">{categoryExp} ans d'expÃ©rience</p>
+                                  <p className="text-[10px] text-primary font-black uppercase tracking-widest">{categoryExp} ans d'expérience</p>
                                 </>
                               )}
                             </div>
@@ -208,7 +208,7 @@ const ProfilArtisan = () => {
                       <div className="size-20 bg-slate-50 rounded-full flex items-center justify-center mx-auto mb-4 border border-dashed border-slate-200 transition-colors">
                         <span className="material-symbols-outlined text-slate-300 text-3xl">inbox_customize</span>
                       </div>
-                      <p className="text-slate-400 font-bold max-w-xs mx-auto">Aucun service standard n'est listÃ©. Contactez l'artisan pour un devis sur mesure.</p>
+                      <p className="text-slate-400 font-bold max-w-xs mx-auto">Aucun service standard n'est listé. Contactez l'artisan pour un devis sur mesure.</p>
                     </div>
                   )}
                 </div>
@@ -221,14 +221,14 @@ const ProfilArtisan = () => {
                   <div className="size-8 rounded-xl bg-yellow-100 text-yellow-600 flex items-center justify-center">
                     <span className="material-symbols-outlined text-lg">star</span>
                   </div>
-                  Retours d'ExpÃ©rience ({reviews.length})
+                  Retours d'Expérience ({reviews.length})
                 </h3>
               </div>
 
               {reviews.length === 0 ? (
                 <div className="bg-slate-100/50 p-12 rounded-[40px] border border-dashed border-slate-200 text-center transition-colors">
                   <span className="material-symbols-outlined text-slate-300 text-4xl mb-4">forum</span>
-                  <p className="text-slate-500 font-bold">L'artisan n'a pas encore reÃ§u d'avis.</p>
+                  <p className="text-slate-500 font-bold">L'artisan n'a pas encore reçu d'avis.</p>
                 </div>
               ) : (
                 <div className="grid gap-4">
@@ -271,7 +271,7 @@ const ProfilArtisan = () => {
                     <h4 className="text-xl font-black mb-6 uppercase transition-colors">Demander un service</h4>
                     <div className="space-y-6">
                       <p className="text-sm text-slate-500 leading-relaxed font-bold transition-colors">
-                        Votre projet mÃ©rite un expert. Contactez <span className="text-primary">{artisan.name}</span> pour une estimation prÃ©cise et rapide.
+                        Votre projet mérite un expert. Contactez <span className="text-primary">{artisan.name}</span> pour une estimation précise et rapide.
                       </p>
                       
                       <div className="space-y-3">
@@ -285,7 +285,7 @@ const ProfilArtisan = () => {
                         <button 
                           onClick={() => {
                             if (!currentUser) {
-                              if (window.confirm("Vous devez Ãªtre connectÃ© pour envoyer un message. Se connecter ?")) {
+                              if (window.confirm("Vous devez Ãªtre connecté pour envoyer un message. Se connecter ?")) {
                                 navigate('/login/client');
                               }
                               return;
@@ -314,7 +314,7 @@ const ProfilArtisan = () => {
                     </div>
                     <h4 className="text-2xl font-black mb-3 tracking-tight text-slate-900 italic uppercase transition-colors">Profil Public</h4>
                     <p className="text-slate-500 font-bold mb-8 leading-relaxed transition-colors">
-                      Voici le visuel de votre profil pour vos futurs clients. Gardez-le Ã  jour pour plus de visibilitÃ©.
+                      Voici le visuel de votre profil pour vos futurs clients. Gardez-le à jour pour plus de visibilité.
                     </p>
                     <Link 
                       to="/dashboard/artisan/settings" 
@@ -328,12 +328,12 @@ const ProfilArtisan = () => {
               )}
 
               <div className="bg-slate-50 p-8 rounded-[40px] border border-slate-100 space-y-6 transition-colors">
-                <h4 className="text-[10px] font-black text-slate-400 uppercase tracking-widest transition-colors">Confiance & SÃ©curitÃ©</h4>
+                <h4 className="text-[10px] font-black text-slate-400 uppercase tracking-widest transition-colors">Confiance & Sécurité</h4>
                 <div className="space-y-4">
                   {[
-                    { label: 'IdentitÃ© VÃ©rifiÃ©e', icon: 'verified', active: Number(artisan.is_verified) === 1 },
+                    { label: 'Identité Vérifiée', icon: 'verified', active: Number(artisan.is_verified) === 1 },
                     { label: 'Docs Professionnels', icon: 'article', active: Number(artisan.is_verified) === 1 },
-                    { label: 'RÃ©ponse Rapide', icon: 'shutter_speed', active: true }
+                    { label: 'Réponse Rapide', icon: 'shutter_speed', active: true }
                   ].map((v, i) => (
                     <div key={i} className={`flex items-center gap-3 text-sm font-black transition-colors ${v.active ? 'text-slate-700' : 'text-slate-300 opacity-50'}`}>
                       <div className={`size-8 rounded-full flex items-center justify-center shadow-sm transition-colors ${v.active ? 'bg-white text-emerald-500' : 'bg-slate-100 text-slate-300'}`}>
@@ -355,10 +355,10 @@ const ProfilArtisan = () => {
             <div className="flex items-center gap-4">
               <img src={logo} alt="Mihnati" className="h-10 w-auto object-contain bg-white rounded-xl p-1" />
               <div className="h-8 w-px bg-slate-100 hidden md:block"></div>
-              <p className="text-slate-400 text-xs font-bold tracking-tight transition-colors">Le rÃ©seau des experts de confiance. Â© 2026 Mihnati.</p>
+              <p className="text-slate-400 text-xs font-bold tracking-tight transition-colors">Le réseau des experts de confiance. Â© 2026 Mihnati.</p>
             </div>
             <div className="flex gap-6">
-              {['Accueil', 'Expertise', 'Aide', 'ConfidentialitÃ©'].map((link) => (
+              {['Accueil', 'Expertise', 'Aide', 'Confidentialité'].map((link) => (
                 <a key={link} href="#" className="text-xs font-black text-slate-400 hover:text-primary transition-colors tracking-tight uppercase">{link}</a>
               ))}
             </div>

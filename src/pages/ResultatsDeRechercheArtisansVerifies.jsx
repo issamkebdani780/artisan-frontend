@@ -58,7 +58,7 @@ const ResultatsDeRechercheArtisansVerifies = () => {
 </a>
 <a className="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/10 text-primary transition-colors" href="#">
 <span className="material-symbols-outlined text-xl" >verified_user</span>
-<span className="text-sm font-bold">Artisans VÃ©rifiÃ©s</span>
+<span className="text-sm font-bold">Artisans Vérifiés</span>
 </a>
 <a className="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-50 transition-colors" href="#">
 <span className="material-symbols-outlined text-xl">favorite</span>
@@ -70,15 +70,15 @@ const ResultatsDeRechercheArtisansVerifies = () => {
 </a>
 </nav>
 <div className="mt-8 pt-8 border-t border-slate-100">
-<h3 className="text-sm font-bold mb-4">CatÃ©gories</h3>
+<h3 className="text-sm font-bold mb-4">Catégories</h3>
 <div className="flex flex-col gap-2">
 <label className="flex items-center gap-2 cursor-pointer">
 <input defaultChecked className="rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/>
-<span className="text-sm">RÃ©novation</span>
+<span className="text-sm">Rénovation</span>
 </label>
 <label className="flex items-center gap-2 cursor-pointer">
 <input className="rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/>
-<span className="text-sm">Ã‰lectricitÃ©</span>
+<span className="text-sm">Ã‰lectricité</span>
 </label>
 <label className="flex items-center gap-2 cursor-pointer">
 <input className="rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/>
@@ -94,13 +94,13 @@ const ResultatsDeRechercheArtisansVerifies = () => {
 <nav className="flex items-center gap-2 text-sm">
 <a className="text-slate-500 hover:text-primary transition-colors" href="#">Accueil</a>
 <span className="material-symbols-outlined text-slate-400 text-xs">chevron_right</span>
-<span className="font-medium text-slate-900">Artisans VÃ©rifiÃ©s</span>
+<span className="font-medium text-slate-900">Artisans Vérifiés</span>
 </nav>
 {/*  Hero Header  */}
 <div className="flex flex-col gap-4">
-<h2 className="text-3xl font-black tracking-tight text-slate-900 sm:text-4xl">Artisans VÃ©rifiÃ©s par notre communautÃ©</h2>
+<h2 className="text-3xl font-black tracking-tight text-slate-900 sm:text-4xl">Artisans Vérifiés par notre communauté</h2>
 <p className="text-lg text-slate-600 max-w-2xl leading-relaxed">
-                        DÃ©couvrez des professionnels rigoureusement sÃ©lectionnÃ©s pour la qualitÃ© de leur travail et leur fiabilitÃ© absolue.
+                        Découvrez des professionnels rigoureusement sélectionnés pour la qualité de leur travail et leur fiabilité absolue.
                     </p>
 </div>
 {/*  Trust Banner  */}
@@ -108,14 +108,14 @@ const ResultatsDeRechercheArtisansVerifies = () => {
 <div className="flex-1 flex flex-col gap-2">
 <h3 className="text-lg font-bold text-slate-900 flex items-center gap-2">
 <span className="material-symbols-outlined text-primary">security</span>
-                            Pourquoi choisir un artisan vÃ©rifiÃ© ?
+                            Pourquoi choisir un artisan vérifié ?
                         </h3>
 <p className="text-sm text-slate-600">
-                            Chaque professionnel est soumis Ã  une vÃ©rification d'identitÃ©, un contrÃ´le des assurances dÃ©cennales et une vÃ©rification de casier judiciaire pour votre sÃ©curitÃ© totale.
+                            Chaque professionnel est soumis à une vérification d'identité, un contrôle des assurances décennales et une vérification de casier judiciaire pour votre sécurité totale.
                         </p>
 </div>
 <a className="flex items-center gap-2 text-sm font-bold text-primary group" href="#">
-                        En savoir plus sur la vÃ©rification
+                        En savoir plus sur la vérification
                         <span className="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
 </a>
 </section>
@@ -127,7 +127,7 @@ const ResultatsDeRechercheArtisansVerifies = () => {
 <img alt="Plombier au travail" className="w-full h-full object-cover" data-alt="Professional plumber working on pipes in kitchen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfciciXwt-OQew6ebB8ZeKXx_XNsw1a1QhxTOFFlTEGOZyJk6vGN47lRRoyhaSNG0NrETtdKt3XkkHixKiAUzWmMHLdaWcmbZwAPfDsK49wOgE0MLtWroVwD2chX9Kwdtv-LKC3cgJ788qEMbj1-h-n_j8wTd4DUE6jZyULION7PmiBgCrmLEW7hiqmyV-5OPRWAoZ8vw_JSkf1Ctr_BqdLfMQdgkI2ciMGLiaDyEmwi2Bn2wv0vcdZuEYXAF_86fo4J6_ZOdtLda-"/>
 <div className="absolute top-4 left-4 bg-primary text-white text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded flex items-center gap-1">
 <span className="material-symbols-outlined text-xs">verified</span>
-                                VÃ©rifiÃ©
+                                Vérifié
                             </div>
 <button className="absolute top-4 right-4 bg-white/80 p-1.5 rounded-full backdrop-blur-sm">
 <span className="material-symbols-outlined text-slate-700">favorite</span>
@@ -147,7 +147,7 @@ const ResultatsDeRechercheArtisansVerifies = () => {
 <div className="flex items-center gap-4 text-xs text-slate-500 mb-6">
 <div className="flex items-center gap-1">
 <span className="material-symbols-outlined text-sm">reviews</span>
-                                    124 avis vÃ©rifiÃ©s
+                                    124 avis vérifiés
                                 </div>
 <div className="flex items-center gap-1">
 <span className="material-symbols-outlined text-sm">location_on</span>
@@ -168,7 +168,7 @@ const ResultatsDeRechercheArtisansVerifies = () => {
 <img alt="Electricien professionnel" className="w-full h-full object-cover" data-alt="Electrician testing fuse box panel in house" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUfCCNpMqYzxJYnnQpl_0kazMyWdt2SRxYcg_zBSzjPWWH6ez2nQkGhnxQ1gDY9soDnalqB7SRUpdkz5cleSJT55Y4KNfE6AeC378Z7Dkx7me1qQv3uNe75ChGH6boe_9aJYtGhx5TuFR7qbu3UHmOo1wwFk-C0VAPLT8aQcccBDnN2s_ZQvujpnXGFt-OEaTVHk1OyB9q7_QZ5vkm2p34pqe5ELrVRSMbWmgEt8hMybmUeSBib0UtIj1PsBd6-GcBwvBGDnbrbceb"/>
 <div className="absolute top-4 left-4 bg-primary text-white text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded flex items-center gap-1">
 <span className="material-symbols-outlined text-xs">verified</span>
-                                VÃ©rifiÃ©
+                                Vérifié
                             </div>
 <button className="absolute top-4 right-4 bg-white/80 p-1.5 rounded-full backdrop-blur-sm">
 <span className="material-symbols-outlined text-slate-700">favorite</span>
@@ -188,7 +188,7 @@ const ResultatsDeRechercheArtisansVerifies = () => {
 <div className="flex items-center gap-4 text-xs text-slate-500 mb-6">
 <div className="flex items-center gap-1">
 <span className="material-symbols-outlined text-sm">reviews</span>
-                                    86 avis vÃ©rifiÃ©s
+                                    86 avis vérifiés
                                 </div>
 <div className="flex items-center gap-1">
 <span className="material-symbols-outlined text-sm">location_on</span>
@@ -209,7 +209,7 @@ const ResultatsDeRechercheArtisansVerifies = () => {
 <img alt="Menuisier au travail" className="w-full h-full object-cover" data-alt="Carpenter working with wood tools in workshop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2fU3ql4AUlFx7R6uo81NRe2_9FWyTzWfxgs81GSMJ_uLYaTK6fpcKNWegA3O7-rncv6qi8IHJWXB2PCunCJwqIdP-swfymj0n9jqnGAg7337yoRzUthxIx2ABNYAmEbcJannVDeWd9T5NkhOw913x-XvJVUj8PnS6UeN3YIOicqMvcbtTIxk2_JsDDnZIdfdeqH_I8Obk6zTzobu00ko-oMyuSLStStBS-Mj6Hk-MYvViRgAaNgcuWS0iv1VXaUEeEN4yVfnYt2sg"/>
 <div className="absolute top-4 left-4 bg-primary text-white text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded flex items-center gap-1">
 <span className="material-symbols-outlined text-xs">verified</span>
-                                VÃ©rifiÃ©
+                                Vérifié
                             </div>
 <button className="absolute top-4 right-4 bg-white/80 p-1.5 rounded-full backdrop-blur-sm">
 <span className="material-symbols-outlined text-slate-700">favorite</span>
@@ -229,7 +229,7 @@ const ResultatsDeRechercheArtisansVerifies = () => {
 <div className="flex items-center gap-4 text-xs text-slate-500 mb-6">
 <div className="flex items-center gap-1">
 <span className="material-symbols-outlined text-sm">reviews</span>
-                                    210 avis vÃ©rifiÃ©s
+                                    210 avis vérifiés
                                 </div>
 <div className="flex items-center gap-1">
 <span className="material-symbols-outlined text-sm">location_on</span>
@@ -247,10 +247,10 @@ const ResultatsDeRechercheArtisansVerifies = () => {
 {/*  Artisan Card 4  */}
 <div className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-shadow">
 <div className="relative h-48 w-full">
-<img alt="Peintre en bÃ¢timent" className="w-full h-full object-cover" data-alt="House painter applying blue paint to white wall" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQ3py1IPms2bVtHP918Jnc-yBa3K4L3RP_OM9M-y4yxo2LVHeLWzjsB1fMIzHd_uZKOeWQVpj9lzxJJZbnQZLIDz606dKwdomVnCP4j-VdafPQ7hIrG0UtJvx-Ii3MBHuMwDO1fv1jQqT7Oo9l2HzePg6NIjZZd3Z-lG-1ZALrxk-EnWuWGfl1mkkc46556uUfWcJy60H7jTxJgmXsy2_0-z2CdSr7KIA2SItKeElKhMz1SHORBEoq4bhF_3qVVxWPWQ8l8z9CJZAw"/>
+<img alt="Peintre en bâtiment" className="w-full h-full object-cover" data-alt="House painter applying blue paint to white wall" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQ3py1IPms2bVtHP918Jnc-yBa3K4L3RP_OM9M-y4yxo2LVHeLWzjsB1fMIzHd_uZKOeWQVpj9lzxJJZbnQZLIDz606dKwdomVnCP4j-VdafPQ7hIrG0UtJvx-Ii3MBHuMwDO1fv1jQqT7Oo9l2HzePg6NIjZZd3Z-lG-1ZALrxk-EnWuWGfl1mkkc46556uUfWcJy60H7jTxJgmXsy2_0-z2CdSr7KIA2SItKeElKhMz1SHORBEoq4bhF_3qVVxWPWQ8l8z9CJZAw"/>
 <div className="absolute top-4 left-4 bg-primary text-white text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded flex items-center gap-1">
 <span className="material-symbols-outlined text-xs">verified</span>
-                                VÃ©rifiÃ©
+                                Vérifié
                             </div>
 <button className="absolute top-4 right-4 bg-white/80 p-1.5 rounded-full backdrop-blur-sm">
 <span className="material-symbols-outlined text-slate-700">favorite</span>
@@ -260,7 +260,7 @@ const ResultatsDeRechercheArtisansVerifies = () => {
 <div className="flex justify-between items-start mb-4">
 <div className="flex flex-col gap-1">
 <h3 className="text-xl font-bold">Thomas Morel</h3>
-<p className="text-sm text-slate-500">Peinture &amp; DÃ©coration</p>
+<p className="text-sm text-slate-500">Peinture &amp; Décoration</p>
 </div>
 <div className="flex items-center gap-1 bg-amber-50 text-amber-600 px-2 py-1 rounded-lg text-sm font-bold">
 <span className="material-symbols-outlined text-sm" >star</span>
@@ -270,7 +270,7 @@ const ResultatsDeRechercheArtisansVerifies = () => {
 <div className="flex items-center gap-4 text-xs text-slate-500 mb-6">
 <div className="flex items-center gap-1">
 <span className="material-symbols-outlined text-sm">reviews</span>
-                                    54 avis vÃ©rifiÃ©s
+                                    54 avis vérifiés
                                 </div>
 <div className="flex items-center gap-1">
 <span className="material-symbols-outlined text-sm">location_on</span>
@@ -310,11 +310,11 @@ const ResultatsDeRechercheArtisansVerifies = () => {
 <span className="font-bold text-slate-900">Artisans Pro</span>
 </div>
 <div className="flex gap-6">
-<a className="hover:text-primary transition-colors" href="#">Conditions GÃ©nÃ©rales</a>
-<a className="hover:text-primary transition-colors" href="#">Politique de ConfidentialitÃ©</a>
+<a className="hover:text-primary transition-colors" href="#">Conditions Générales</a>
+<a className="hover:text-primary transition-colors" href="#">Politique de Confidentialité</a>
 <a className="hover:text-primary transition-colors" href="#">Support</a>
 </div>
-<div>Â© 2024 Artisans Pro. Tous droits rÃ©servÃ©s.</div>
+<div>Â© 2024 Artisans Pro. Tous droits réservés.</div>
 </div>
 </footer>
 </div>

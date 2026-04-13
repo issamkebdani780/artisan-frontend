@@ -42,7 +42,7 @@ const LitigesEtAvertissementsDashboardArtisan = () => {
 </a>
 <a className="flex items-center gap-3 px-3 py-2 text-slate-600 hover:bg-slate-100 rounded-lg transition-colors" href="#">
 <span className="material-symbols-outlined">settings</span>
-<span className="text-sm font-medium">ParamÃ¨tres</span>
+<span className="text-sm font-medium">Paramètres</span>
 </a>
 </nav>
 </div>
@@ -78,7 +78,7 @@ const LitigesEtAvertissementsDashboardArtisan = () => {
 <main className="p-8 space-y-8">
 <div className="flex flex-col gap-2">
 <h1 className="text-3xl font-black tracking-tight text-slate-900">Litiges et Avertissements</h1>
-<p className="text-slate-500 max-w-2xl">GÃ©rez les rÃ©clamations clients, suivez l'Ã©tat de vos dossiers et rÃ©pondez aux avertissements pour maintenir votre note de service.</p>
+<p className="text-slate-500 max-w-2xl">Gérez les réclamations clients, suivez l'état de vos dossiers et répondez aux avertissements pour maintenir votre note de service.</p>
 </div>
 {/*  Stats Overview  */}
 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -96,12 +96,12 @@ const LitigesEtAvertissementsDashboardArtisan = () => {
 <span className="text-xs font-bold text-orange-600 uppercase tracking-wider">En cours</span>
 </div>
 <div className="text-3xl font-bold">05</div>
-<p className="text-slate-500 text-sm mt-1">RÃ©clamations actives</p>
+<p className="text-slate-500 text-sm mt-1">Réclamations actives</p>
 </div>
 <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
 <div className="flex items-center justify-between mb-4">
 <span className="p-2 bg-green-100 text-green-600 rounded-lg material-symbols-outlined">check_circle</span>
-<span className="text-xs font-bold text-green-600 uppercase tracking-wider">RÃ©solus</span>
+<span className="text-xs font-bold text-green-600 uppercase tracking-wider">Résolus</span>
 </div>
 <div className="text-3xl font-bold">14</div>
 <p className="text-slate-500 text-sm mt-1">Derniers 30 jours</p>
@@ -114,9 +114,9 @@ const LitigesEtAvertissementsDashboardArtisan = () => {
 <thead>
 <tr className="bg-slate-50 border-b border-slate-200">
 <th className="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-500">Client &amp; Projet</th>
-<th className="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-500">RÃ©sumÃ© du litige</th>
+<th className="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-500">Résumé du litige</th>
 <th className="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-500">Date</th>
-<th className="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-500 text-center">SÃ©vÃ©ritÃ©</th>
+<th className="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-500 text-center">Sévérité</th>
 <th className="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-500 text-center">Statut</th>
 <th className="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-500 text-right">Action</th>
 </tr>
@@ -131,7 +131,7 @@ const LitigesEtAvertissementsDashboardArtisan = () => {
 </div>
 </td>
 <td className="px-6 py-5">
-<p className="text-sm text-slate-600 line-clamp-1">Retard de livraison de plus de 15 jours sans notification prÃ©alable.</p>
+<p className="text-sm text-slate-600 line-clamp-1">Retard de livraison de plus de 15 jours sans notification préalable.</p>
 </td>
 <td className="px-6 py-5">
 <span className="text-sm text-slate-500">12/10/2023</span>
@@ -147,7 +147,7 @@ const LitigesEtAvertissementsDashboardArtisan = () => {
                                         </span>
 </td>
 <td className="px-6 py-5 text-right">
-<button className="text-sm font-bold text-primary hover:underline transition-all">Voir les dÃ©tails</button>
+<button className="text-sm font-bold text-primary hover:underline transition-all">Voir les détails</button>
 </td>
 </tr>
 {/*  Row 2  */}
@@ -159,7 +159,7 @@ const LitigesEtAvertissementsDashboardArtisan = () => {
 </div>
 </td>
 <td className="px-6 py-5">
-<p className="text-sm text-slate-600 line-clamp-1">Finition non conforme aux spÃ©cifications (teinte trop foncÃ©e).</p>
+<p className="text-sm text-slate-600 line-clamp-1">Finition non conforme aux spécifications (teinte trop foncée).</p>
 </td>
 <td className="px-6 py-5">
 <span className="text-sm text-slate-500">05/10/2023</span>
@@ -175,7 +175,7 @@ const LitigesEtAvertissementsDashboardArtisan = () => {
                                         </span>
 </td>
 <td className="px-6 py-5 text-right">
-<button className="px-4 py-1.5 bg-primary text-white rounded-lg text-xs font-bold hover:bg-primary/90 transition-all">RÃ©pondre</button>
+<button className="px-4 py-1.5 bg-primary text-white rounded-lg text-xs font-bold hover:bg-primary/90 transition-all">Répondre</button>
 </td>
 </tr>
 {/*  Row 3  */}
@@ -183,11 +183,11 @@ const LitigesEtAvertissementsDashboardArtisan = () => {
 <td className="px-6 py-5">
 <div className="flex flex-col">
 <span className="font-semibold text-slate-900">Lucas Martin</span>
-<span className="text-xs text-primary font-medium italic">Ã‰tagÃ¨res sur mesure</span>
+<span className="text-xs text-primary font-medium italic">Ã‰tagères sur mesure</span>
 </div>
 </td>
 <td className="px-6 py-5">
-<p className="text-sm text-slate-600 line-clamp-1">ProblÃ¨me de visserie lors du montage Ã  domicile.</p>
+<p className="text-sm text-slate-600 line-clamp-1">Problème de visserie lors du montage à domicile.</p>
 </td>
 <td className="px-6 py-5">
 <span className="text-sm text-slate-500">28/09/2023</span>
@@ -199,11 +199,11 @@ const LitigesEtAvertissementsDashboardArtisan = () => {
 </td>
 <td className="px-6 py-5 text-center">
 <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-green-100 text-green-700">
-                                            RÃ©solu
+                                            Résolu
                                         </span>
 </td>
 <td className="px-6 py-5 text-right">
-<button className="text-sm font-bold text-slate-400 cursor-not-allowed">Voir les dÃ©tails</button>
+<button className="text-sm font-bold text-slate-400 cursor-not-allowed">Voir les détails</button>
 </td>
 </tr>
 {/*  Row 4  */}
@@ -211,7 +211,7 @@ const LitigesEtAvertissementsDashboardArtisan = () => {
 <td className="px-6 py-5">
 <div className="flex flex-col">
 <span className="font-semibold text-slate-900">Sophie Morel</span>
-<span className="text-xs text-primary font-medium italic">Cadre dorÃ© ancien</span>
+<span className="text-xs text-primary font-medium italic">Cadre doré ancien</span>
 </div>
 </td>
 <td className="px-6 py-5">
@@ -231,7 +231,7 @@ const LitigesEtAvertissementsDashboardArtisan = () => {
                                         </span>
 </td>
 <td className="px-6 py-5 text-right">
-<button className="px-4 py-1.5 bg-primary text-white rounded-lg text-xs font-bold hover:bg-primary/90 transition-all">RÃ©pondre</button>
+<button className="px-4 py-1.5 bg-primary text-white rounded-lg text-xs font-bold hover:bg-primary/90 transition-all">Répondre</button>
 </td>
 </tr>
 </tbody>
@@ -239,7 +239,7 @@ const LitigesEtAvertissementsDashboardArtisan = () => {
 </div>
 {/*  Pagination (Simplified)  */}
 <div className="px-6 py-4 border-t border-slate-200 flex items-center justify-between">
-<span className="text-xs text-slate-500">Affichage de 1 Ã  4 sur 21 rÃ©sultats</span>
+<span className="text-xs text-slate-500">Affichage de 1 à 4 sur 21 résultats</span>
 <div className="flex gap-2">
 <button className="p-2 border border-slate-200 rounded-lg hover:bg-slate-100 disabled:opacity-50 transition-colors" disabled>
 <span className="material-symbols-outlined text-sm">chevron_left</span>
@@ -252,27 +252,27 @@ const LitigesEtAvertissementsDashboardArtisan = () => {
 </div>
 {/*  Recent History Section  */}
 <div>
-<h2 className="text-xl font-bold mb-4">Historique rÃ©cent des rÃ©solutions</h2>
+<h2 className="text-xl font-bold mb-4">Historique récent des résolutions</h2>
 <div className="bg-white rounded-xl border border-slate-200 p-6">
 <div className="flex flex-col gap-6">
 <div className="flex gap-4">
 <div className="size-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
 <div className="flex-1">
 <div className="flex justify-between items-start mb-1">
-<h4 className="text-sm font-bold">Litige RÃ©solu : Marc Andreoli</h4>
+<h4 className="text-sm font-bold">Litige Résolu : Marc Andreoli</h4>
 <span className="text-[10px] text-slate-400 uppercase font-bold tracking-widest">Il y a 2 jours</span>
 </div>
-<p className="text-sm text-slate-500">Le remboursement partiel a Ã©tÃ© acceptÃ© par le client. Dossier clÃ´turÃ© avec succÃ¨s.</p>
+<p className="text-sm text-slate-500">Le remboursement partiel a été accepté par le client. Dossier clôturé avec succès.</p>
 </div>
 </div>
 <div className="flex gap-4">
 <div className="size-2 bg-slate-300 rounded-full mt-2 flex-shrink-0"></div>
 <div className="flex-1">
 <div className="flex justify-between items-start mb-1">
-<h4 className="text-sm font-bold">Mise Ã  jour : Dossier Marie Curie</h4>
+<h4 className="text-sm font-bold">Mise à jour : Dossier Marie Curie</h4>
 <span className="text-[10px] text-slate-400 uppercase font-bold tracking-widest">Hier</span>
 </div>
-<p className="text-sm text-slate-500">Nouvelles photos ajoutÃ©es par le client pour vÃ©rification de la teinte.</p>
+<p className="text-sm text-slate-500">Nouvelles photos ajoutées par le client pour vérification de la teinte.</p>
 </div>
 </div>
 </div>

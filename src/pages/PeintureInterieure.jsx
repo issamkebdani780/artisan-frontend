@@ -43,15 +43,15 @@ const PeintureInterieure = () => {
 </a>
 <a className="flex items-center gap-3 px-3 py-2.5 rounded-xl bg-primary text-white shadow-lg shadow-primary/25" href="#">
 <span className="material-symbols-outlined">format_paint</span>
-<span className="text-sm font-medium">Peinture IntÃ©rieure</span>
+<span className="text-sm font-medium">Peinture Intérieure</span>
 </a>
 <a className="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-primary/5 transition-all text-slate-600" href="#">
 <span className="material-symbols-outlined">deck</span>
-<span className="text-sm font-medium">Peinture ExtÃ©rieure</span>
+<span className="text-sm font-medium">Peinture Extérieure</span>
 </a>
 <a className="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-primary/5 transition-all text-slate-600" href="#">
 <span className="material-symbols-outlined">palette</span>
-<span className="text-sm font-medium">DÃ©coration &amp; Design</span>
+<span className="text-sm font-medium">Décoration &amp; Design</span>
 </a>
 </nav>
 </div>
@@ -64,7 +64,7 @@ const PeintureInterieure = () => {
 </a>
 <a className="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-primary/5 transition-all text-slate-600" href="#">
 <span className="material-symbols-outlined">settings</span>
-<span className="text-sm font-medium">ParamÃ¨tres</span>
+<span className="text-sm font-medium">Paramètres</span>
 </a>
 </nav>
 </div>
@@ -80,11 +80,11 @@ const PeintureInterieure = () => {
 <div className="absolute inset-0 bg-gradient-to-r from-background-dark/90 via-background-dark/50 to-transparent"></div>
 <div className="relative max-w-lg">
 <span className="inline-block px-3 py-1 bg-primary text-white text-[10px] font-bold uppercase tracking-widest rounded-full mb-4">Service Premium</span>
-<h1 className="text-4xl md:text-5xl font-black text-white leading-tight mb-6">Redonnez vie Ã  votre intÃ©rieur</h1>
-<p className="text-slate-200 text-lg mb-8 leading-relaxed">Une finition impeccable et durable, rÃ©alisÃ©e par les meilleurs artisans de votre rÃ©gion. Transformez chaque piÃ¨ce selon vos envies.</p>
+<h1 className="text-4xl md:text-5xl font-black text-white leading-tight mb-6">Redonnez vie à votre intérieur</h1>
+<p className="text-slate-200 text-lg mb-8 leading-relaxed">Une finition impeccable et durable, réalisée par les meilleurs artisans de votre région. Transformez chaque pièce selon vos envies.</p>
 <div className="flex flex-wrap gap-4">
 <button className="px-8 py-3 bg-primary text-white font-bold rounded-xl hover:shadow-xl hover:shadow-primary/40 transition-all">Demander un devis</button>
-<button className="px-8 py-3 bg-white/10 backdrop-blur-md text-white font-bold rounded-xl border border-white/20 hover:bg-white/20 transition-all">Voir nos rÃ©alisations</button>
+<button className="px-8 py-3 bg-white/10 backdrop-blur-md text-white font-bold rounded-xl border border-white/20 hover:bg-white/20 transition-all">Voir nos réalisations</button>
 </div>
 </div>
 </section>
@@ -98,32 +98,32 @@ const PeintureInterieure = () => {
 <div className="w-14 h-14 bg-primary/10 text-primary rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-all duration-300">
 <span className="material-symbols-outlined text-3xl">wallpaper</span>
 </div>
-<h3 className="text-xl font-bold mb-3">1. PrÃ©paration des surfaces</h3>
-<p className="text-slate-600 text-sm leading-relaxed">PonÃ§age minutieux, rebouchage des fissures et lissage des imperfections. Nous crÃ©ons la toile parfaite pour une finition lisse comme du velours.</p>
+<h3 className="text-xl font-bold mb-3">1. Préparation des surfaces</h3>
+<p className="text-slate-600 text-sm leading-relaxed">Ponçage minutieux, rebouchage des fissures et lissage des imperfections. Nous créons la toile parfaite pour une finition lisse comme du velours.</p>
 </div>
 <div className="bg-white p-8 rounded-2xl border border-primary/10 shadow-sm hover:shadow-md transition-shadow group">
 <div className="w-14 h-14 bg-primary/10 text-primary rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-all duration-300">
 <span className="material-symbols-outlined text-3xl">layers</span>
 </div>
 <h3 className="text-xl font-bold mb-3">2. Double Couche de Finition</h3>
-<p className="text-slate-600 text-sm leading-relaxed">Application experte de deux couches croisÃ©es utilisant des peintures professionnelles haut de gamme. IntensitÃ© de couleur et durabilitÃ© garanties.</p>
+<p className="text-slate-600 text-sm leading-relaxed">Application experte de deux couches croisées utilisant des peintures professionnelles haut de gamme. Intensité de couleur et durabilité garanties.</p>
 </div>
 <div className="bg-white p-8 rounded-2xl border border-primary/10 shadow-sm hover:shadow-md transition-shadow group">
 <div className="w-14 h-14 bg-primary/10 text-primary rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-all duration-300">
 <span className="material-symbols-outlined text-3xl">shield</span>
 </div>
 <h3 className="text-xl font-bold mb-3">3. Protection Totale</h3>
-<p className="text-slate-600 text-sm leading-relaxed">BÃ¢chage hermÃ©tique des sols et du mobilier. Nous traitons votre domicile avec respect et le laissons impeccable aprÃ¨s notre passage.</p>
+<p className="text-slate-600 text-sm leading-relaxed">Bâchage hermétique des sols et du mobilier. Nous traitons votre domicile avec respect et le laissons impeccable après notre passage.</p>
 </div>
 </div>
 </div>
 <div className="mb-16">
 <div className="flex items-center justify-between mb-8">
 <div>
-<h2 className="text-2xl font-black text-slate-900 tracking-tight">Nos Experts CertifiÃ©s</h2>
-<p className="text-slate-500 text-sm mt-1">SÃ©lectionnÃ©s pour leur savoir-faire et leur minutie.</p>
+<h2 className="text-2xl font-black text-slate-900 tracking-tight">Nos Experts Certifiés</h2>
+<p className="text-slate-500 text-sm mt-1">Sélectionnés pour leur savoir-faire et leur minutie.</p>
 </div>
-<a className="text-primary font-bold text-sm flex items-center gap-1 hover:underline" href="#">Voir tout le rÃ©seau <span className="material-symbols-outlined text-base">arrow_forward</span></a>
+<a className="text-primary font-bold text-sm flex items-center gap-1 hover:underline" href="#">Voir tout le réseau <span className="material-symbols-outlined text-base">arrow_forward</span></a>
 </div>
 <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
 <div className="bg-white rounded-2xl overflow-hidden border border-primary/5 shadow-sm group">
@@ -136,7 +136,7 @@ const PeintureInterieure = () => {
 </div>
 <div className="p-4">
 <h4 className="font-bold text-slate-900">Marc Dupont</h4>
-<p className="text-xs text-slate-500 mb-4">12 ans d'expÃ©rience</p>
+<p className="text-xs text-slate-500 mb-4">12 ans d'expérience</p>
 <button className="w-full py-2 border border-primary text-primary text-xs font-bold rounded-lg hover:bg-primary hover:text-white transition-all">Choisir ce pro</button>
 </div>
 </div>
@@ -150,7 +150,7 @@ const PeintureInterieure = () => {
 </div>
 <div className="p-4">
 <h4 className="font-bold text-slate-900">Sarah Lefevre</h4>
-<p className="text-xs text-slate-500 mb-4">SpÃ©cialiste dÃ©coration</p>
+<p className="text-xs text-slate-500 mb-4">Spécialiste décoration</p>
 <button className="w-full py-2 border border-primary text-primary text-xs font-bold rounded-lg hover:bg-primary hover:text-white transition-all">Choisir ce pro</button>
 </div>
 </div>
@@ -188,8 +188,8 @@ const PeintureInterieure = () => {
 <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -mr-32 -mt-32 blur-3xl"></div>
 <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/10 rounded-full -ml-32 -mb-32 blur-3xl"></div>
 <div className="relative z-10 max-w-2xl mx-auto">
-<h2 className="text-3xl md:text-4xl font-black mb-6">PrÃªt Ã  transformer votre intÃ©rieur ?</h2>
-<p className="text-slate-100 mb-10 text-lg opacity-90">Obtenez un devis gratuit et personnalisÃ© en moins de 2 minutes. Nos experts vous rÃ©pondent sous 24h.</p>
+<h2 className="text-3xl md:text-4xl font-black mb-6">PrÃªt à transformer votre intérieur ?</h2>
+<p className="text-slate-100 mb-10 text-lg opacity-90">Obtenez un devis gratuit et personnalisé en moins de 2 minutes. Nos experts vous répondent sous 24h.</p>
 <div className="flex flex-col sm:flex-row justify-center gap-4">
 <button className="bg-white text-primary hover:bg-slate-100 font-black py-4 px-10 rounded-xl transition-all shadow-xl shadow-primary/20">Demander mon devis gratuit</button>
 <button className="bg-transparent border-2 border-white/40 hover:border-white text-white font-bold py-4 px-10 rounded-xl transition-all">Appeler un conseiller</button>
@@ -207,10 +207,10 @@ const PeintureInterieure = () => {
 </div>
 </section>
 <footer className="mt-20 py-8 border-t border-primary/10 flex flex-col md:flex-row items-center justify-between gap-4 text-slate-400 text-sm">
-<p>Â© 2024 Services Pro Peinture. Tous droits rÃ©servÃ©s.</p>
+<p>Â© 2024 Services Pro Peinture. Tous droits réservés.</p>
 <div className="flex gap-6">
-<a className="hover:text-primary transition-colors" href="#">Mentions lÃ©gales</a>
-<a className="hover:text-primary transition-colors" href="#">ConfidentialitÃ©</a>
+<a className="hover:text-primary transition-colors" href="#">Mentions légales</a>
+<a className="hover:text-primary transition-colors" href="#">Confidentialité</a>
 <a className="hover:text-primary transition-colors" href="#">CGV</a>
 </div>
 </footer>

@@ -12,7 +12,7 @@ const PoseDePapierPeint = () => {
 <div className="size-8 flex items-center justify-center bg-primary/10 rounded-lg">
 <span className="material-symbols-outlined text-primary">wallpaper</span>
 </div>
-<h2 className="text-slate-900 text-xl font-bold leading-tight tracking-tight">DÃ©coExpert</h2>
+<h2 className="text-slate-900 text-xl font-bold leading-tight tracking-tight">DécoExpert</h2>
 </div>
 <div className="flex flex-1 justify-end gap-4 md:gap-8">
 <nav className="hidden md:flex items-center gap-8">
@@ -53,7 +53,7 @@ const PoseDePapierPeint = () => {
 </a>
 <a className="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-600 hover:bg-slate-50 transition-colors" href="#">
 <span className="material-symbols-outlined text-sm">settings</span>
-<span className="text-sm">ParamÃ¨tres</span>
+<span className="text-sm">Paramètres</span>
 </a>
 </nav>
 </div>
@@ -63,7 +63,7 @@ const PoseDePapierPeint = () => {
 <span className="material-symbols-outlined text-9xl">brush</span>
 </div>
 <h4 className="text-lg font-bold relative z-10">Besoin d'un devis gratuit?</h4>
-<p className="text-white/80 text-xs leading-relaxed relative z-10">Recevez une estimation personnalisÃ©e en moins de 24h pour vos travaux de dÃ©coration.</p>
+<p className="text-white/80 text-xs leading-relaxed relative z-10">Recevez une estimation personnalisée en moins de 24h pour vos travaux de décoration.</p>
 <button className="w-full bg-white text-primary font-bold py-3 rounded-xl hover:bg-slate-50 transition-colors text-sm relative z-10">
                             Demander un devis
                         </button>
@@ -77,7 +77,7 @@ const PoseDePapierPeint = () => {
 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 to-transparent flex flex-col justify-end p-8">
 <span className="bg-primary text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full w-fit mb-3">Service Professionnel</span>
 <h1 className="text-white text-3xl md:text-4xl font-bold mb-2">Service de Pose de Papier Peint</h1>
-<p className="text-slate-300 max-w-lg">Transformez votre intÃ©rieur avec une pose mÃ©ticuleuse et des finitions invisibles.</p>
+<p className="text-slate-300 max-w-lg">Transformez votre intérieur avec une pose méticuleuse et des finitions invisibles.</p>
 </div>
 </section>
 {/*  Why Us Section  */}
@@ -90,7 +90,7 @@ const PoseDePapierPeint = () => {
 </div>
 <div>
 <h3 className="font-bold text-slate-900 mb-2">Expertise reconnue</h3>
-<p className="text-sm text-slate-600">Plus de 10 ans d'expÃ©rience dans la haute dÃ©coration murale.</p>
+<p className="text-sm text-slate-600">Plus de 10 ans d'expérience dans la haute décoration murale.</p>
 </div>
 </div>
 <div className="p-6 rounded-2xl border border-slate-100 bg-white flex flex-col gap-4">
@@ -99,7 +99,7 @@ const PoseDePapierPeint = () => {
 </div>
 <div>
 <h3 className="font-bold text-slate-900 mb-2">Finition parfaite</h3>
-<p className="text-sm text-slate-600">Une pose millimÃ©trÃ©e sans bulles ni raccords visibles garantis.</p>
+<p className="text-sm text-slate-600">Une pose millimétrée sans bulles ni raccords visibles garantis.</p>
 </div>
 </div>
 <div className="p-6 rounded-2xl border border-slate-100 bg-white flex flex-col gap-4">
@@ -107,8 +107,8 @@ const PoseDePapierPeint = () => {
 <span className="material-symbols-outlined">inventory_2</span>
 </div>
 <div>
-<h3 className="font-bold text-slate-900 mb-2">MatÃ©riaux premium</h3>
-<p className="text-sm text-slate-600">Utilisation de colles Ã©cologiques et papiers de haute qualitÃ©.</p>
+<h3 className="font-bold text-slate-900 mb-2">Matériaux premium</h3>
+<p className="text-sm text-slate-600">Utilisation de colles écologiques et papiers de haute qualité.</p>
 </div>
 </div>
 </div>
@@ -131,11 +131,11 @@ const PoseDePapierPeint = () => {
 <span className="text-primary font-bold">22â‚¬ / mÂ²</span>
 </div>
 <div className="flex items-center justify-between p-4 bg-slate-50 rounded-xl">
-<span className="text-slate-700">DÃ©pose ancien revÃªtement</span>
+<span className="text-slate-700">Dépose ancien revÃªtement</span>
 <span className="text-primary font-bold">8â‚¬ / mÂ²</span>
 </div>
 </div>
-<p className="text-xs text-slate-500 mt-6 italic">* MatÃ©riaux non inclus. Devis final aprÃ¨s visite technique.</p>
+<p className="text-xs text-slate-500 mt-6 italic">* Matériaux non inclus. Devis final après visite technique.</p>
 </section>
 {/*  Experts  */}
 <section className="bg-white p-8 rounded-2xl border border-slate-100">
@@ -148,14 +148,14 @@ const PoseDePapierPeint = () => {
 <img alt="Portrait Marc Lefebvre" className="size-14 rounded-full object-cover" data-alt="Professional painter Marc Lefebvre smiling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdw3oJ3UPRMV_EnYEdkuuwTwS-cKN4K5axM7CtJAbkplxdySXYJzB4CPIXWZ5Jhgnzhey61JCjkJd7nUiSNYVbISoTNYpMcFSwZC2-GvxeyXHekzfhw_suvWVKj0QJVDzmrRoH3b2NMsz7gPsrWuV_B9W6LPyL0_DfGbzgexEVA1gtWMA8nmlKHVqyIol3_APFl7--HJZB0ndcn-PiEwaqBQR59wmtGuJdBGNMVPa5KxxbshT-9ohNE9XqWaF9ceDhJwEl4ikxlusw"/>
 <div>
 <h4 className="font-bold text-slate-900">Marc Lefebvre</h4>
-<p className="text-sm text-primary">MaÃ®tre Artisan - 15 ans d'exp.</p>
+<p className="text-sm text-primary">Maître Artisan - 15 ans d'exp.</p>
 </div>
 </div>
 <div className="flex items-center gap-4 p-3 rounded-xl border border-slate-50">
 <img alt="Portrait Sophie Martin" className="size-14 rounded-full object-cover" data-alt="Professional designer Sophie Martin smiling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDp2c1TZR2BO2K1WhYxPNc5VM-Qg7MqfGWHP-OumdKlN2jaN3yR3Yl5bOLrS1H__6cmLBlwm9u59-J4MnC92_YDquuq7962Qqlu_C-ufHE_IArIl--HsrHTfn2_81QPnbzkC3NFUNwlP9sI6h-79TepVTvNOqlOyxbWYmDgF_klA-Cv5MmDueIJW87EbBoVDSxGESKluLR_SCODsn-JzL9Y95_Ieti813bSSGee53KoTs7Qrsq48kyKyr8QwfvOluz2cUXVi_SOWO-F"/>
 <div>
 <h4 className="font-bold text-slate-900">Sophie Martin</h4>
-<p className="text-sm text-primary">SpÃ©cialiste Pose Panoramique</p>
+<p className="text-sm text-primary">Spécialiste Pose Panoramique</p>
 </div>
 </div>
 </div>
@@ -173,8 +173,8 @@ const PoseDePapierPeint = () => {
 <span className="material-symbols-outlined text-sm">star</span>
 <span className="material-symbols-outlined text-sm">star</span>
 </div>
-<p className="text-slate-700 italic mb-4">"Travail remarquable. Marc a posÃ© un papier peint panoramique trÃ¨s complexe et le rÃ©sultat est bluffant. Aucune bulle, raccords invisibles."</p>
-<div className="text-sm font-bold text-slate-900">Ã¢DAâ€ Jean-Pierre D.</div>
+<p className="text-slate-700 italic mb-4">"Travail remarquable. Marc a posé un papier peint panoramique très complexe et le résultat est bluffant. Aucune bulle, raccords invisibles."</p>
+<div className="text-sm font-bold text-slate-900">âDAâ€ Jean-Pierre D.</div>
 </div>
 <div className="bg-primary/5 p-6 rounded-2xl border-l-4 border-primary">
 <div className="flex gap-1 mb-3 text-primary">
@@ -184,8 +184,8 @@ const PoseDePapierPeint = () => {
 <span className="material-symbols-outlined text-sm">star</span>
 <span className="material-symbols-outlined text-sm">star</span>
 </div>
-<p className="text-slate-700 italic mb-4">"Service trÃ¨s professionnel et ponctuel. Sophie est une vÃ©ritable artiste. Mon salon est mÃ©tamorphosÃ©. Je recommande vivement !"</p>
-<div className="text-sm font-bold text-slate-900">Ã¢DAâ€ Claire M.</div>
+<p className="text-slate-700 italic mb-4">"Service très professionnel et ponctuel. Sophie est une véritable artiste. Mon salon est métamorphosé. Je recommande vivement !"</p>
+<div className="text-sm font-bold text-slate-900">âDAâ€ Claire M.</div>
 </div>
 </div>
 </section>
@@ -193,7 +193,7 @@ const PoseDePapierPeint = () => {
 </main>
 {/*  Footer Small  */}
 <footer className="mt-auto border-t border-slate-200 px-6 py-6 text-center text-slate-500 text-sm">
-<p>Â© 2024 DÃ©coExpert - Service de pose de papier peint professionnel.</p>
+<p>Â© 2024 DécoExpert - Service de pose de papier peint professionnel.</p>
 </footer>
 </div>
 </div>

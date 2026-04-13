@@ -34,7 +34,7 @@ const TarifsDesServicesArtisan = () => {
 <div className="text-center mb-16">
 <h1 className="text-4xl lg:text-6xl font-black mb-6 tracking-tight text-slate-900">Tarifs des Services</h1>
 <p className="text-lg lg:text-xl text-slate-600 max-w-2xl mx-auto">
-                        DÃ©couvrez les tarifs moyens pour vos travaux Ã  domicile. Nous prÃ´nons la transparence et des prix justes pour chaque intervention.
+                        Découvrez les tarifs moyens pour vos travaux à domicile. Nous prônons la transparence et des prix justes pour chaque intervention.
                     </p>
 </div>
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -48,36 +48,36 @@ const TarifsDesServicesArtisan = () => {
 <div className="mb-8">
 <div className="flex items-baseline gap-1">
 <span className="text-4xl font-black">45â‚¬</span>
-<span className="text-slate-500 font-medium">Ã  partir de</span>
+<span className="text-slate-500 font-medium">à partir de</span>
 </div>
 </div>
 <ul className="flex-grow space-y-4 mb-8">
 <li className="flex items-center gap-3 text-slate-600">
 <span className="material-symbols-outlined text-primary text-xl">check_circle</span>
-<span>RÃ©paration de fuite</span>
+<span>Réparation de fuite</span>
 </li>
 <li className="flex items-center gap-3 text-slate-600">
 <span className="material-symbols-outlined text-primary text-xl">check_circle</span>
-<span>DÃ©bouchage canalisation</span>
+<span>Débouchage canalisation</span>
 </li>
 <li className="flex items-center gap-3 text-slate-600">
 <span className="material-symbols-outlined text-primary text-xl">check_circle</span>
 <span>Installation de robinet</span>
 </li>
 </ul>
-<button className="w-full rounded-xl bg-slate-900 text-white py-3 font-bold transition-all group-hover:bg-primary group-hover:text-white">RÃ©server un plombier</button>
+<button className="w-full rounded-xl bg-slate-900 text-white py-3 font-bold transition-all group-hover:bg-primary group-hover:text-white">Réserver un plombier</button>
 </div>
 <div className="group flex flex-col rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition-all hover:shadow-xl hover:border-primary/50">
 <div className="mb-6 flex items-center justify-between">
 <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10 text-primary">
 <span className="material-symbols-outlined text-3xl">bolt</span>
 </div>
-<span className="text-sm font-bold uppercase tracking-wider text-slate-400">Ã‰lectricitÃ©</span>
+<span className="text-sm font-bold uppercase tracking-wider text-slate-400">Ã‰lectricité</span>
 </div>
 <div className="mb-8">
 <div className="flex items-baseline gap-1">
 <span className="text-4xl font-black">50â‚¬</span>
-<span className="text-slate-500 font-medium">Ã  partir de</span>
+<span className="text-slate-500 font-medium">à partir de</span>
 </div>
 </div>
 <ul className="flex-grow space-y-4 mb-8">
@@ -87,14 +87,14 @@ const TarifsDesServicesArtisan = () => {
 </li>
 <li className="flex items-center gap-3 text-slate-600">
 <span className="material-symbols-outlined text-primary text-xl">check_circle</span>
-<span>Tableau Ã©lectrique</span>
+<span>Tableau électrique</span>
 </li>
 <li className="flex items-center gap-3 text-slate-600">
 <span className="material-symbols-outlined text-primary text-xl">check_circle</span>
 <span>Diagnostic de panne</span>
 </li>
 </ul>
-<button className="w-full rounded-xl bg-slate-900 text-white py-3 font-bold transition-all group-hover:bg-primary group-hover:text-white">RÃ©server un Ã©lectricien</button>
+<button className="w-full rounded-xl bg-slate-900 text-white py-3 font-bold transition-all group-hover:bg-primary group-hover:text-white">Réserver un électricien</button>
 </div>
 <div className="group flex flex-col rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition-all hover:shadow-xl hover:border-primary/50">
 <div className="mb-6 flex items-center justify-between">
@@ -123,14 +123,14 @@ const TarifsDesServicesArtisan = () => {
 <span>Enduit de lissage</span>
 </li>
 </ul>
-<button className="w-full rounded-xl bg-slate-900 text-white py-3 font-bold transition-all group-hover:bg-primary group-hover:text-white">RÃ©server un peintre</button>
+<button className="w-full rounded-xl bg-slate-900 text-white py-3 font-bold transition-all group-hover:bg-primary group-hover:text-white">Réserver un peintre</button>
 </div>
 <div className="group flex flex-col rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition-all hover:shadow-xl hover:border-primary/50">
 <div className="mb-6 flex items-center justify-between">
 <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10 text-primary">
 <span className="material-symbols-outlined text-3xl">cleaning_services</span>
 </div>
-<span className="text-sm font-bold uppercase tracking-wider text-slate-400">MÃ©nage</span>
+<span className="text-sm font-bold uppercase tracking-wider text-slate-400">Ménage</span>
 </div>
 <div className="mb-8">
 <div className="flex items-baseline gap-1">
@@ -149,10 +149,10 @@ const TarifsDesServicesArtisan = () => {
 </li>
 <li className="flex items-center gap-3 text-slate-600">
 <span className="material-symbols-outlined text-primary text-xl">check_circle</span>
-<span>Repassage Ã  domicile</span>
+<span>Repassage à domicile</span>
 </li>
 </ul>
-<button className="w-full rounded-xl bg-slate-900 text-white py-3 font-bold transition-all group-hover:bg-primary group-hover:text-white">RÃ©server mÃ©nage</button>
+<button className="w-full rounded-xl bg-slate-900 text-white py-3 font-bold transition-all group-hover:bg-primary group-hover:text-white">Réserver ménage</button>
 </div>
 <div className="group flex flex-col rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition-all hover:shadow-xl hover:border-primary/50">
 <div className="mb-6 flex items-center justify-between">
@@ -164,7 +164,7 @@ const TarifsDesServicesArtisan = () => {
 <div className="mb-8">
 <div className="flex items-baseline gap-1">
 <span className="text-4xl font-black">40â‚¬</span>
-<span className="text-slate-500 font-medium">Ã  partir de</span>
+<span className="text-slate-500 font-medium">à partir de</span>
 </div>
 </div>
 <ul className="flex-grow space-y-4 mb-8">
@@ -181,12 +181,12 @@ const TarifsDesServicesArtisan = () => {
 <span>Installation cuisine</span>
 </li>
 </ul>
-<button className="w-full rounded-xl bg-slate-900 text-white py-3 font-bold transition-all group-hover:bg-primary group-hover:text-white">RÃ©server montage</button>
+<button className="w-full rounded-xl bg-slate-900 text-white py-3 font-bold transition-all group-hover:bg-primary group-hover:text-white">Réserver montage</button>
 </div>
 <div className="flex flex-col items-center justify-center rounded-3xl border-2 border-dashed border-slate-300 p-8 text-center bg-transparent">
 <span className="material-symbols-outlined text-5xl text-slate-400 mb-4">more_horiz</span>
 <h3 className="text-xl font-bold mb-2">Autre besoin ?</h3>
-<p className="text-slate-500 mb-6">Jardinage, serrurerie, maÃ§onnerie... nous avons l'artisan qu'il vous faut.</p>
+<p className="text-slate-500 mb-6">Jardinage, serrurerie, maçonnerie... nous avons l'artisan qu'il vous faut.</p>
 <a className="text-primary font-bold hover:underline flex items-center gap-2" href="#">
                             Voir tous les services
                             <span className="material-symbols-outlined text-sm">arrow_forward</span>
@@ -197,7 +197,7 @@ const TarifsDesServicesArtisan = () => {
 <section className="bg-slate-100 py-20">
 <div className="max-w-4xl mx-auto px-4">
 <div className="text-center mb-12">
-<h2 className="text-3xl font-bold mb-4">Comment sont calculÃ©s nos prix ?</h2>
+<h2 className="text-3xl font-bold mb-4">Comment sont calculés nos prix ?</h2>
 <div className="h-1 w-20 bg-primary mx-auto rounded-full"></div>
 </div>
 <div className="grid md:grid-cols-3 gap-8 text-center">
@@ -213,14 +213,14 @@ const TarifsDesServicesArtisan = () => {
 <span className="material-symbols-outlined text-primary text-3xl">inventory_2</span>
 </div>
 <h4 className="font-bold mb-2">Fournitures</h4>
-<p className="text-sm text-slate-600">Le coÃ»t des piÃ¨ces et matÃ©riaux nÃ©cessaires Ã  la rÃ©paration ou installation.</p>
+<p className="text-sm text-slate-600">Le coût des pièces et matériaux nécessaires à la réparation ou installation.</p>
 </div>
 <div className="flex flex-col items-center">
 <div className="size-16 rounded-2xl bg-white flex items-center justify-center shadow-md mb-4">
 <span className="material-symbols-outlined text-primary text-3xl">account_tree</span>
 </div>
-<h4 className="font-bold mb-2">ComplexitÃ©</h4>
-<p className="text-sm text-slate-600">La difficultÃ© technique et le temps estimÃ© pour rÃ©aliser la prestation.</p>
+<h4 className="font-bold mb-2">Complexité</h4>
+<p className="text-sm text-slate-600">La difficulté technique et le temps estimé pour réaliser la prestation.</p>
 </div>
 </div>
 </div>
@@ -229,8 +229,8 @@ const TarifsDesServicesArtisan = () => {
 <div className="max-w-3xl mx-auto bg-primary rounded-[2.5rem] p-12 lg:p-20 text-white relative overflow-hidden shadow-2xl">
 <div className="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
 <div className="absolute bottom-0 left-0 -ml-16 -mb-16 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
-<h2 className="text-3xl lg:text-5xl font-black mb-6 leading-tight relative z-10">Un projet spÃ©cifique en tÃªte ?</h2>
-<p className="text-xl text-white/80 mb-10 relative z-10">Obtenez une estimation prÃ©cise et gratuite pour vos travaux en moins de 24h.</p>
+<h2 className="text-3xl lg:text-5xl font-black mb-6 leading-tight relative z-10">Un projet spécifique en tÃªte ?</h2>
+<p className="text-xl text-white/80 mb-10 relative z-10">Obtenez une estimation précise et gratuite pour vos travaux en moins de 24h.</p>
 <button className="bg-white text-primary px-10 py-5 rounded-2xl text-xl font-bold shadow-xl transition-all hover:scale-105 active:scale-95 relative z-10">
                         Demander un devis gratuit
                     </button>
@@ -247,7 +247,7 @@ const TarifsDesServicesArtisan = () => {
 <h2 className="text-lg font-bold">ArtisanDirect</h2>
 </div>
 <p className="text-sm leading-relaxed mb-6">
-                        La plateforme de mise en relation de confiance entre particuliers et artisans locaux qualifiÃ©s.
+                        La plateforme de mise en relation de confiance entre particuliers et artisans locaux qualifiés.
                     </p>
 <div className="flex gap-4">
 <a className="size-10 rounded-lg bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-colors" href="#">
@@ -264,7 +264,7 @@ const TarifsDesServicesArtisan = () => {
 <div>
 <h4 className="text-white font-bold mb-6">Plateforme</h4>
 <ul className="space-y-4 text-sm">
-<li><a className="hover:text-primary transition-colors" href="#">Comment Ã§a marche</a></li>
+<li><a className="hover:text-primary transition-colors" href="#">Comment ça marche</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Nos Artisans</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Tarifs</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Avis clients</a></li>
@@ -276,7 +276,7 @@ const TarifsDesServicesArtisan = () => {
 <li><a className="hover:text-primary transition-colors" href="#">Centre d'aide</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Contactez-nous</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Devenir Artisan</a></li>
-<li><a className="hover:text-primary transition-colors" href="#">Garantie QualitÃ©</a></li>
+<li><a className="hover:text-primary transition-colors" href="#">Garantie Qualité</a></li>
 </ul>
 </div>
 <div>
@@ -291,11 +291,11 @@ const TarifsDesServicesArtisan = () => {
 </div>
 </div>
 <div className="max-w-7xl mx-auto border-t border-slate-800 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
-<p>Â© 2024 ArtisanDirect. Tous droits rÃ©servÃ©s.</p>
+<p>Â© 2024 ArtisanDirect. Tous droits réservés.</p>
 <div className="flex gap-6">
 <a className="hover:text-primary" href="#">CGU</a>
-<a className="hover:text-primary" href="#">ConfidentialitÃ©</a>
-<a className="hover:text-primary" href="#">Mentions lÃ©gales</a>
+<a className="hover:text-primary" href="#">Confidentialité</a>
+<a className="hover:text-primary" href="#">Mentions légales</a>
 </div>
 </div>
 </footer>

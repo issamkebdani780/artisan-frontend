@@ -59,19 +59,19 @@ const ConfigurationPlateforme = () => {
 <div className="flex flex-col gap-2 mb-8">
 <h1 className="text-slate-900 text-3xl md:text-4xl font-black leading-tight tracking-[-0.033em]">Configuration Plateforme</h1>
 <p className="text-slate-600 text-base font-normal leading-normal">
-                        GÃ©rez les paramÃ¨tres globaux, financiers et de sÃ©curitÃ© de votre instance administrative.
+                        Gérez les paramètres globaux, financiers et de sécurité de votre instance administrative.
                     </p>
 </div>
 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-{/*  Section: ParamÃ¨tres Financiers  */}
+{/*  Section: Paramètres Financiers  */}
 <section className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
 <div className="flex items-center gap-3 mb-6">
 <span className="material-symbols-outlined text-primary bg-primary/10 p-2 rounded-lg">payments</span>
-<h2 className="text-slate-900 text-xl font-bold">ParamÃ¨tres Financiers</h2>
+<h2 className="text-slate-900 text-xl font-bold">Paramètres Financiers</h2>
 </div>
 <div className="space-y-4">
 <div className="flex items-center justify-between p-3 rounded-lg bg-slate-50">
-<span className="text-slate-600 text-sm">Devise par dÃ©faut</span>
+<span className="text-slate-600 text-sm">Devise par défaut</span>
 <div className="flex items-center gap-2">
 <span className="text-slate-900 font-medium">Euro (EUR)</span>
 <button className="material-symbols-outlined text-slate-400 hover:text-primary text-sm">edit</button>
@@ -104,7 +104,7 @@ const ConfigurationPlateforme = () => {
 <div className="flex items-center justify-between p-3 rounded-lg bg-slate-50">
 <span className="text-slate-600 text-sm">Langue principale</span>
 <select className="bg-transparent border-none text-slate-900 text-sm font-medium focus:ring-0">
-<option>FranÃ§ais (FR)</option>
+<option>Français (FR)</option>
 <option>Anglais (EN)</option>
 <option>Espagnol (ES)</option>
 </select>
@@ -125,27 +125,27 @@ const ConfigurationPlateforme = () => {
 </div>
 </div>
 <div className="mt-6 flex items-center justify-between px-2">
-<span className="text-sm text-slate-500">Auto-dÃ©tection de la rÃ©gion</span>
+<span className="text-sm text-slate-500">Auto-détection de la région</span>
 <div className="relative inline-block w-10 align-middle select-none transition duration-200 ease-in">
 <input defaultChecked className="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 border-slate-300 appearance-none cursor-pointer checked:right-0 checked:border-primary" id="toggle_region" name="toggle" type="checkbox"/>
 <label className="toggle-label block overflow-hidden h-6 rounded-full bg-slate-300 cursor-pointer" htmlFor="toggle_region"></label>
 </div>
 </div>
 </section>
-{/*  Section: SÃ©curitÃ© de la Plateforme  */}
+{/*  Section: Sécurité de la Plateforme  */}
 <section className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm lg:col-span-2">
 <div className="flex items-center justify-between mb-8">
 <div className="flex items-center gap-3">
 <span className="material-symbols-outlined text-primary bg-primary/10 p-2 rounded-lg">security</span>
-<h2 className="text-slate-900 text-xl font-bold">SÃ©curitÃ© de la Plateforme</h2>
+<h2 className="text-slate-900 text-xl font-bold">Sécurité de la Plateforme</h2>
 </div>
-<span className="px-3 py-1 bg-green-100 text-green-600 rounded-full text-xs font-bold uppercase tracking-wider">Ã‰tat : SÃ©curisÃ©</span>
+<span className="px-3 py-1 bg-green-100 text-green-600 rounded-full text-xs font-bold uppercase tracking-wider">Ã‰tat : Sécurisé</span>
 </div>
 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 <div className="flex flex-col gap-3 p-4 border border-slate-100 rounded-xl hover:border-primary/30 transition-all group">
 <div className="flex items-center justify-between">
 <span className="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">lock_open</span>
-<span className="text-[10px] font-bold text-slate-400 uppercase">ParamÃ¨tre</span>
+<span className="text-[10px] font-bold text-slate-400 uppercase">Paramètre</span>
 </div>
 <h3 className="text-slate-900 font-bold text-sm">Double Authentification (2FA)</h3>
 <p className="text-slate-500 text-xs">Exiger le 2FA pour tous les administrateurs.</p>
@@ -156,10 +156,10 @@ const ConfigurationPlateforme = () => {
 <div className="flex flex-col gap-3 p-4 border border-slate-100 rounded-xl hover:border-primary/30 transition-all group">
 <div className="flex items-center justify-between">
 <span className="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">password</span>
-<span className="text-[10px] font-bold text-slate-400 uppercase">ParamÃ¨tre</span>
+<span className="text-[10px] font-bold text-slate-400 uppercase">Paramètre</span>
 </div>
-<h3 className="text-slate-900 font-bold text-sm">ComplexitÃ© de Mot de Passe</h3>
-<p className="text-slate-500 text-xs">Niveau minimum : Fort (12+ caractÃ¨res).</p>
+<h3 className="text-slate-900 font-bold text-sm">Complexité de Mot de Passe</h3>
+<p className="text-slate-500 text-xs">Niveau minimum : Fort (12+ caractères).</p>
 <div className="mt-2 flex items-center gap-2">
 <button className="bg-slate-200 px-3 py-1 text-slate-700 text-[10px] font-bold rounded">CONFIGURER</button>
 </div>
@@ -167,10 +167,10 @@ const ConfigurationPlateforme = () => {
 <div className="flex flex-col gap-3 p-4 border border-slate-100 rounded-xl hover:border-primary/30 transition-all group">
 <div className="flex items-center justify-between">
 <span className="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">timer</span>
-<span className="text-[10px] font-bold text-slate-400 uppercase">ParamÃ¨tre</span>
+<span className="text-[10px] font-bold text-slate-400 uppercase">Paramètre</span>
 </div>
 <h3 className="text-slate-900 font-bold text-sm">Expiration de Session</h3>
-<p className="text-slate-500 text-xs">DÃ©connexion automatique aprÃ¨s 30 minutes.</p>
+<p className="text-slate-500 text-xs">Déconnexion automatique après 30 minutes.</p>
 <div className="mt-2 flex items-center gap-2">
 <button className="bg-slate-200 px-3 py-1 text-slate-700 text-[10px] font-bold rounded">MODIFIER</button>
 </div>
@@ -182,9 +182,9 @@ const ConfigurationPlateforme = () => {
 <div className="mt-12 pt-8 border-t border-slate-200 flex flex-col md:flex-row items-center justify-between gap-4">
 <div className="flex items-center gap-4">
 <button className="px-6 py-2.5 bg-primary text-white font-bold rounded-xl hover:shadow-lg hover:shadow-primary/20 transition-all">Sauvegarder tout</button>
-<button className="px-6 py-2.5 bg-slate-200 text-slate-700 font-bold rounded-xl hover:bg-slate-300 transition-all">RÃ©initialiser</button>
+<button className="px-6 py-2.5 bg-slate-200 text-slate-700 font-bold rounded-xl hover:bg-slate-300 transition-all">Réinitialiser</button>
 </div>
-<p className="text-xs text-slate-500 italic">DerniÃ¨re mise Ã  jour : il y a 2 heures par Admin (ID: 4492)</p>
+<p className="text-xs text-slate-500 italic">Dernière mise à jour : il y a 2 heures par Admin (ID: 4492)</p>
 </div>
 </main>
 </div>

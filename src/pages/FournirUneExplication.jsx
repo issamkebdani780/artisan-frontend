@@ -38,7 +38,7 @@ const FournirUneExplication = () => {
 <h2 className="text-3xl font-bold text-slate-900 mb-2">Fournir une explication</h2>
 <div className="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 text-primary rounded-lg border border-primary/20">
 <span className="material-symbols-outlined text-base">info</span>
-<span className="text-sm font-semibold">RÃ©fÃ©rence du dossier: AD-2024-0812</span>
+<span className="text-sm font-semibold">Référence du dossier: AD-2024-0812</span>
 </div>
 </div>
 {/*  Form Card  */}
@@ -48,12 +48,12 @@ const FournirUneExplication = () => {
 <section>
 <div className="flex items-center gap-2 mb-4">
 <span className="material-symbols-outlined text-primary">description</span>
-<h3 className="text-lg font-bold text-slate-900">DÃ©tails de la justification</h3>
+<h3 className="text-lg font-bold text-slate-900">Détails de la justification</h3>
 </div>
 <div className="space-y-2">
-<label className="text-sm font-medium text-slate-700" htmlFor="explanation">Votre explication dÃ©taillÃ©e</label>
-<textarea className="w-full rounded-xl border-slate-300 bg-slate-50 text-slate-900 focus:border-primary focus:ring-primary/20 transition-all placeholder:text-slate-400" id="explanation" placeholder="Veuillez saisir ici les dÃ©tails concernant l'avertissement reÃ§u. Expliquez les circonstances et les mesures correctives prises..." rows="8"></textarea>
-<p className="text-xs text-slate-500 italic">Minimum 100 caractÃ¨res requis pour la validation du dossier.</p>
+<label className="text-sm font-medium text-slate-700" htmlFor="explanation">Votre explication détaillée</label>
+<textarea className="w-full rounded-xl border-slate-300 bg-slate-50 text-slate-900 focus:border-primary focus:ring-primary/20 transition-all placeholder:text-slate-400" id="explanation" placeholder="Veuillez saisir ici les détails concernant l'avertissement reçu. Expliquez les circonstances et les mesures correctives prises..." rows="8"></textarea>
+<p className="text-xs text-slate-500 italic">Minimum 100 caractères requis pour la validation du dossier.</p>
 </div>
 </section>
 <hr className="border-slate-100"/>
@@ -78,7 +78,7 @@ const FournirUneExplication = () => {
 <ul className="text-sm text-slate-600 space-y-2">
 <li className="flex gap-2">
 <span className="material-symbols-outlined text-xs text-primary">check_circle</span>
-<span>Photos des travaux rÃ©alisÃ©s ou corrigÃ©s.</span>
+<span>Photos des travaux réalisés ou corrigés.</span>
 </li>
 <li className="flex gap-2">
 <span className="material-symbols-outlined text-xs text-primary">check_circle</span>
@@ -96,7 +96,7 @@ const FournirUneExplication = () => {
 <div className="flex items-start gap-3 p-4 bg-slate-100 rounded-lg border border-slate-200">
 <span className="material-symbols-outlined text-slate-500">lock</span>
 <p className="text-xs text-slate-600 leading-relaxed">
-                                Les informations fournies dans ce formulaire sont strictement confidentielles et traitÃ©es uniquement par le service administratif d'ArtisanDirect pour l'examen de votre dossier.
+                                Les informations fournies dans ce formulaire sont strictement confidentielles et traitées uniquement par le service administratif d'ArtisanDirect pour l'examen de votre dossier.
                             </p>
 </div>
 </div>

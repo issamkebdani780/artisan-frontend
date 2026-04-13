@@ -75,9 +75,9 @@ const ArtisanDashboard = () => {
       if (item.type === 'devis') {
         const devisId = item.id.toString().replace('d-', '');
         let statusToUpdate = newStatus;
-        if (newStatus === 'confirmed') statusToUpdate = 'acceptÃ©';
-        if (newStatus === 'completed') statusToUpdate = 'terminÃ©';
-        if (newStatus === 'cancelled') statusToUpdate = 'annulÃ©';
+        if (newStatus === 'confirmed') statusToUpdate = 'accepté';
+        if (newStatus === 'completed') statusToUpdate = 'terminé';
+        if (newStatus === 'cancelled') statusToUpdate = 'annulé';
         
         await apiService.updateDevisStatus(devisId, statusToUpdate);
         setBookings(prev => 
@@ -91,7 +91,7 @@ const ArtisanDashboard = () => {
       }
       fetchDashboardData(); // Refresh stats mostly
     } catch (err) {
-      alert('Erreur lors de la mise Ã  jour du statut');
+      alert('Erreur lors de la mise à jour du statut');
     }
   };
 
@@ -100,7 +100,7 @@ const ArtisanDashboard = () => {
       await apiService.acceptDevis(devisId);
       setPendingDevis(prev => prev.filter(d => d.id !== devisId));
       fetchDashboardData(); // Refresh bookings and stats
-      alert('Bravo ! Vous avez acceptÃ© ce projet.');
+      alert('Bravo ! Vous avez accepté ce projet.');
     } catch (err) {
       alert("Erreur lors de l'acceptation du devis");
     }
@@ -122,18 +122,18 @@ const ArtisanDashboard = () => {
               </div>
               <div className="space-y-1 text-center md:text-left">
                 <h4 className={`text-xl font-black tracking-tight uppercase ${Number(currentUser?.is_verified) === -1 ? 'text-red-900' : 'text-amber-900'}`}>
-                  {Number(currentUser?.is_verified) === -1 ? 'Votre dossier a Ã©tÃ© refusÃ©' : 'Votre profil est en cours de vÃ©rification'}
+                  {Number(currentUser?.is_verified) === -1 ? 'Votre dossier a été refusé' : 'Votre profil est en cours de vérification'}
                 </h4>
                 <p className={`${Number(currentUser?.is_verified) === -1 ? 'text-red-700/70' : 'text-amber-700/70'} text-[10px] font-bold uppercase tracking-widest leading-relaxed`}>
                   {Number(currentUser?.is_verified) === -1 
-                    ? "Certains documents ne sont pas conformes. Veuillez consulter vos messages pour plus de dÃ©tails et mettre Ã  jour votre profil."
-                    : "Nos administrateurs examinent vos documents. Vous recevrez une notification une fois validÃ©."
+                    ? "Certains documents ne sont pas conformes. Veuillez consulter vos messages pour plus de détails et mettre à jour votre profil."
+                    : "Nos administrateurs examinent vos documents. Vous recevrez une notification une fois validé."
                   }
                 </p>
               </div>
             </div>
             <a href="/dashboard/artisan/settings" className={`px-8 py-4 ${Number(currentUser?.is_verified) === -1 ? 'bg-red-900 shadow-red-900/20' : 'bg-amber-900 shadow-amber-900/20'} text-white rounded-2xl font-black text-[10px] uppercase tracking-widest shadow-xl hover:scale-[1.02] active:scale-95 transition-all`}>
-              {Number(currentUser?.is_verified) === -1 ? 'Rectifier mon dossier' : 'VÃ©rifier mes documents'}
+              {Number(currentUser?.is_verified) === -1 ? 'Rectifier mon dossier' : 'Vérifier mes documents'}
             </a>
           </div>
         )}
@@ -142,7 +142,7 @@ const ArtisanDashboard = () => {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
           <div>
             <h2 className="text-4xl font-black tracking-tight text-slate-900 uppercase transition-colors">Bonjour, {currentUser?.name || 'Artisan'} ðŸ‘‹</h2>
-            <p className="text-slate-500 mt-2 font-bold uppercase tracking-widest text-xs">Vous avez <span className="text-secondary">{activeProjects}</span> projets actifs Ã  traiter</p>
+            <p className="text-slate-500 mt-2 font-bold uppercase tracking-widest text-xs">Vous avez <span className="text-secondary">{activeProjects}</span> projets actifs à traiter</p>
           </div>
           <div className="flex gap-4">
             <a 
@@ -161,7 +161,7 @@ const ArtisanDashboard = () => {
             <div className="absolute right-0 top-0 w-96 h-96 bg-secondary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4"></div>
             <div className="flex items-center gap-4 mb-8 relative z-10">
               <div className="size-3 rounded-full bg-secondary animate-pulse shadow-[0_0_15px_rgba(255,107,0,0.5)]"></div>
-              <h3 className="text-2xl font-black text-slate-900 uppercase tracking-tight">OpportunitÃ©s Ã  saisir ({pendingDevis.length})</h3>
+              <h3 className="text-2xl font-black text-slate-900 uppercase tracking-tight">Opportunités à saisir ({pendingDevis.length})</h3>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 relative z-10">
               {pendingDevis.map(devis => (
@@ -173,7 +173,7 @@ const ArtisanDashboard = () => {
                     </div>
                     <div className="text-right">
                       <span className="text-xl font-black text-secondary">{devis.budget} DA</span>
-                      <p className="text-[10px] font-bold text-slate-400 uppercase mt-1">Budget estimÃ©</p>
+                      <p className="text-[10px] font-bold text-slate-400 uppercase mt-1">Budget estimé</p>
                     </div>
                   </div>
                   <p className="text-sm text-slate-500 font-medium leading-relaxed italic border-l-2 border-secondary/30 pl-4">"{devis.description}"</p>
@@ -198,10 +198,10 @@ const ArtisanDashboard = () => {
         {/* Stats Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {[
-            { label: 'Revenus Totaux', value: `${(stats.totalRevenue || 0).toLocaleString()} DA`, icon: 'payments', trend: 'Paiements cumulÃ©s', color: 'bg-emerald-50 text-emerald-600' },
+            { label: 'Revenus Totaux', value: `${(stats.totalRevenue || 0).toLocaleString()} DA`, icon: 'payments', trend: 'Paiements cumulés', color: 'bg-emerald-50 text-emerald-600' },
             { label: 'Projets Actifs', value: (stats.activeBookings || 0) + (stats.pendingDevis || 0), icon: 'pending_actions', trend: 'Ã€ traiter', color: 'bg-orange-50 text-orange-600' },
             { label: 'Avis Clients', value: `${stats.rating || '0.0'}/5`, icon: 'star', trend: `${stats.reviewCount || 0} avis`, color: 'bg-yellow-50 text-yellow-600' },
-            { label: 'Total Projets', value: (stats.completedBookings || 0) + (stats.totalDevis || 0), icon: 'assignment', trend: 'ExpÃ©rience globale', color: 'bg-secondary text-white', highlight: true }
+            { label: 'Total Projets', value: (stats.completedBookings || 0) + (stats.totalDevis || 0), icon: 'assignment', trend: 'Expérience globale', color: 'bg-secondary text-white', highlight: true }
           ].map((stat, i) => (
             <div key={i} className={`p-8 rounded-[32px] border border-slate-100 shadow-xl shadow-slate-200/40 relative overflow-hidden group transition-all hover:translate-y-[-4px] ${stat.highlight ? 'bg-secondary text-white' : 'bg-white'}`}>
               {!stat.highlight && <div className="absolute -right-6 -top-6 size-24 bg-slate-50 rounded-full group-hover:scale-150 transition-transform duration-700"></div>}
@@ -224,7 +224,7 @@ const ArtisanDashboard = () => {
         <div className="bg-white rounded-[40px] border border-slate-100 shadow-xl shadow-slate-200/40 overflow-hidden mb-12 transition-colors">
           <div className="p-8 md:p-10 border-b border-slate-50 flex justify-between items-center bg-white">
             <div>
-              <h4 className="text-2xl font-black text-slate-900 uppercase tracking-tight">RÃ©servations RÃ©centes</h4>
+              <h4 className="text-2xl font-black text-slate-900 uppercase tracking-tight">Réservations Récentes</h4>
               <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mt-1">Historique des 30 derniers jours</p>
             </div>
             <button className="size-12 rounded-2xl bg-slate-50 flex items-center justify-center text-secondary hover:bg-secondary hover:text-white transition-all shadow-sm active:scale-90" onClick={() => window.location.reload()}>
@@ -255,7 +255,7 @@ const ArtisanDashboard = () => {
                 ) : bookings.length === 0 ? (
                   <tr>
                     <td colSpan="5" className="px-10 py-20 text-center">
-                      <p className="text-xs font-black text-slate-400 uppercase tracking-widest">Aucune donnÃ©e disponible</p>
+                      <p className="text-xs font-black text-slate-400 uppercase tracking-widest">Aucune donnée disponible</p>
                     </td>
                   </tr>
                 ) : (
@@ -279,9 +279,9 @@ const ArtisanDashboard = () => {
                       </td>
                       <td className="px-10 py-8">
                         <span className={`px-4 py-1.5 text-[9px] font-black rounded-full shadow-sm uppercase tracking-widest ${
-                          booking.status === 'confirmed' || booking.status === 'acceptÃ©' ? 'bg-indigo-50 text-indigo-600 border border-indigo-100' :
-                          booking.status === 'completed' || booking.status === 'terminÃ©' ? 'bg-emerald-50 text-emerald-600 border border-emerald-100' :
-                          booking.status === 'cancelled' || booking.status === 'refusÃ©' || booking.status === 'annulÃ©' ? 'bg-red-50 text-red-600 border border-red-100' :
+                          booking.status === 'confirmed' || booking.status === 'accepté' ? 'bg-indigo-50 text-indigo-600 border border-indigo-100' :
+                          booking.status === 'completed' || booking.status === 'terminé' ? 'bg-emerald-50 text-emerald-600 border border-emerald-100' :
+                          booking.status === 'cancelled' || booking.status === 'refusé' || booking.status === 'annulé' ? 'bg-red-50 text-red-600 border border-red-100' :
                           'bg-slate-50 text-slate-600 border border-slate-100'
                         }`}>
                           {booking.status}
@@ -292,7 +292,7 @@ const ArtisanDashboard = () => {
                       </td>
                       <td className="px-10 py-8 text-center">
                         <div className="flex items-center justify-center gap-3">
-                          {(booking.status === 'pending' || booking.status === 'en attente' || booking.status === 'cancelled' || booking.status === 'annulÃ©') && (
+                          {(booking.status === 'pending' || booking.status === 'en attente' || booking.status === 'cancelled' || booking.status === 'annulé') && (
                             <button onClick={() => updateStatus(booking, 'confirmed')} className="size-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center hover:bg-indigo-600 hover:text-white transition-all shadow-sm active:scale-90" title="Confirmer">
                               <span className="material-symbols-outlined text-sm font-black">check</span>
                             </button>
@@ -302,7 +302,7 @@ const ArtisanDashboard = () => {
                               <span className="material-symbols-outlined text-sm font-black">done_all</span>
                             </button>
                           )}
-                          {booking.status !== 'completed' && booking.status !== 'terminÃ©' && booking.status !== 'cancelled' && booking.status !== 'annulÃ©' && (
+                          {booking.status !== 'completed' && booking.status !== 'terminé' && booking.status !== 'cancelled' && booking.status !== 'annulé' && (
                             <button onClick={() => updateStatus(booking, 'cancelled')} className="size-10 rounded-xl bg-red-50 text-red-600 flex items-center justify-center hover:bg-red-600 hover:text-white transition-all shadow-sm active:scale-90" title="Annuler">
                               <span className="material-symbols-outlined text-sm font-black">close</span>
                             </button>

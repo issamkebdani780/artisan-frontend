@@ -49,7 +49,7 @@ const ContacterLArtisanInterfaceDeMessage = () => {
 <div className="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
 <div className="p-6 border-b border-slate-100 bg-slate-50/50">
 <h1 className="text-xl font-bold text-slate-900">Nouveau Message</h1>
-<p className="text-sm text-slate-500 mt-1">Expliquez votre projet Ã  Ahmed pour obtenir un devis ou des informations.</p>
+<p className="text-sm text-slate-500 mt-1">Expliquez votre projet à Ahmed pour obtenir un devis ou des informations.</p>
 </div>
 <div className="p-6 space-y-6">
 {/*  Message Area  */}
@@ -59,7 +59,7 @@ const ContacterLArtisanInterfaceDeMessage = () => {
 </div>
 {/*  Attachments  */}
 <div className="flex flex-col gap-3">
-<p className="text-sm font-semibold text-slate-700">PiÃ¨ces jointes (optionnel)</p>
+<p className="text-sm font-semibold text-slate-700">Pièces jointes (optionnel)</p>
 <div className="flex flex-wrap gap-3">
 <button className="flex items-center gap-2 px-4 py-2 rounded-lg border-2 border-dashed border-slate-200 hover:border-primary hover:bg-primary/5 transition-all group">
 <span className="material-symbols-outlined text-slate-400 group-hover:text-primary">photo_camera</span>
@@ -74,7 +74,7 @@ const ContacterLArtisanInterfaceDeMessage = () => {
 <span className="text-sm font-medium text-slate-600 group-hover:text-primary">Localisation</span>
 </button>
 </div>
-<p className="text-xs text-slate-400">Ajoutez des photos de l'espace ou des croquis pour aider Ahmed Ã  mieux comprendre vos besoins.</p>
+<p className="text-xs text-slate-400">Ajoutez des photos de l'espace ou des croquis pour aider Ahmed à mieux comprendre vos besoins.</p>
 </div>
 </div>
 <div className="p-6 bg-slate-50/50 border-t border-slate-100 flex justify-between items-center">
@@ -101,7 +101,7 @@ const ContacterLArtisanInterfaceDeMessage = () => {
 <div className="flex flex-col">
 <div className="flex items-center gap-1">
 <h3 className="font-bold text-slate-900">Ahmed Mansouri</h3>
-<span className="material-symbols-outlined text-primary text-lg" title="Artisan VÃ©rifiÃ©">verified</span>
+<span className="material-symbols-outlined text-primary text-lg" title="Artisan Vérifié">verified</span>
 </div>
 <p className="text-sm text-slate-500">Expert Menuisier</p>
 <span className="text-[10px] uppercase font-bold tracking-wider text-green-600 mt-1 flex items-center gap-1">
@@ -128,7 +128,7 @@ const ContacterLArtisanInterfaceDeMessage = () => {
 <span className="material-symbols-outlined text-lg">schedule</span>
 </div>
 <div>
-<p className="text-sm font-bold">RÃ©ponse rapide</p>
+<p className="text-sm font-bold">Réponse rapide</p>
 <p className="text-xs text-slate-500">Habituellement en moins d'une heure</p>
 </div>
 </div>
@@ -144,32 +144,32 @@ const ContacterLArtisanInterfaceDeMessage = () => {
 <div className="flex gap-3">
 <span className="material-symbols-outlined text-primary">security</span>
 <div className="flex flex-col gap-1">
-<p className="text-sm font-bold text-slate-900">Paiement SÃ©curisÃ©</p>
+<p className="text-sm font-bold text-slate-900">Paiement Sécurisé</p>
 <p className="text-xs text-slate-600 leading-relaxed">
-                                    Vos fonds sont conservÃ©s en toute sÃ©curitÃ© jusqu'Ã  ce que vous validiez la fin des travaux.
+                                    Vos fonds sont conservés en toute sécurité jusqu'à ce que vous validiez la fin des travaux.
                                 </p>
 </div>
 </div>
 </div>
 <div className="px-2">
-<p className="text-[11px] text-slate-400 uppercase font-bold tracking-widest mb-4">Missions rÃ©centes</p>
+<p className="text-[11px] text-slate-400 uppercase font-bold tracking-widest mb-4">Missions récentes</p>
 <div className="space-y-3">
 <div className="flex gap-3">
 <div className="h-10 w-10 rounded-lg bg-slate-200 overflow-hidden flex-shrink-0">
-<img className="h-full w-full object-cover" data-alt="Photo d'une bibliothÃ¨que en bois" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwRSyJDzTnqjOqIG8z8h2b4dSw6rlmjTNW4ypwAHZKs88KLMJQd6gR6YRTg3FtEyHggahZA4uI68VIHrq8-PxHyTXkvc38VfcoCILc_o8AEhXRyY1DNqeKB_dn50y7SaAC_Z0mVUF9fwCiUmVpgxYgIlf5M9WnEqN_FqHvG1aSh7GIv9QLPYQ0_RwQkqAdAapMtcJ0nIEDFT8G32iBxll04kHHarg5RQKkF4WtvGFjI4AAkNFPybNXbvxODH2fRK6KRsi3-kgeUG1g"/>
+<img className="h-full w-full object-cover" data-alt="Photo d'une bibliothèque en bois" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwRSyJDzTnqjOqIG8z8h2b4dSw6rlmjTNW4ypwAHZKs88KLMJQd6gR6YRTg3FtEyHggahZA4uI68VIHrq8-PxHyTXkvc38VfcoCILc_o8AEhXRyY1DNqeKB_dn50y7SaAC_Z0mVUF9fwCiUmVpgxYgIlf5M9WnEqN_FqHvG1aSh7GIv9QLPYQ0_RwQkqAdAapMtcJ0nIEDFT8G32iBxll04kHHarg5RQKkF4WtvGFjI4AAkNFPybNXbvxODH2fRK6KRsi3-kgeUG1g"/>
 </div>
 <div className="flex flex-col">
-<p className="text-xs font-bold truncate">BibliothÃ¨que sur mesure</p>
-<p className="text-[10px] text-slate-500">TerminÃ© il y a 2 jours</p>
+<p className="text-xs font-bold truncate">Bibliothèque sur mesure</p>
+<p className="text-[10px] text-slate-500">Terminé il y a 2 jours</p>
 </div>
 </div>
 <div className="flex gap-3">
 <div className="h-10 w-10 rounded-lg bg-slate-200 overflow-hidden flex-shrink-0">
-<img className="h-full w-full object-cover" data-alt="Photo de parquet posÃ© par un artisan" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkDdYR_16ZgMBBjkcrqbfkHynn35x1uDSapkHLUL0GLTE16q5Vi1vjZA7_hSSX4P4O3--eprI8-BkAubz0MFrTPexGv-hQyD7nUx8zlMzykRkrgG4f5Tmhv9ZaMDCFV8THxYJGk1Yxidhs29ZzfDJ4u9f06awlmZvEdcGfcjrF9j9n9TD47M3uCsXHraik5qiV4ffwFX5gG1xdjb76GT4F3dHcpFC-UWsNMXi4K-C3IiUGXb0IVde7li7k0B3ndoIlJLq10HAomNYy"/>
+<img className="h-full w-full object-cover" data-alt="Photo de parquet posé par un artisan" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkDdYR_16ZgMBBjkcrqbfkHynn35x1uDSapkHLUL0GLTE16q5Vi1vjZA7_hSSX4P4O3--eprI8-BkAubz0MFrTPexGv-hQyD7nUx8zlMzykRkrgG4f5Tmhv9ZaMDCFV8THxYJGk1Yxidhs29ZzfDJ4u9f06awlmZvEdcGfcjrF9j9n9TD47M3uCsXHraik5qiV4ffwFX5gG1xdjb76GT4F3dHcpFC-UWsNMXi4K-C3IiUGXb0IVde7li7k0B3ndoIlJLq10HAomNYy"/>
 </div>
 <div className="flex flex-col">
-<p className="text-xs font-bold truncate">RÃ©novation Parquet ChÃªne</p>
-<p className="text-[10px] text-slate-500">TerminÃ© il y a 1 semaine</p>
+<p className="text-xs font-bold truncate">Rénovation Parquet ChÃªne</p>
+<p className="text-[10px] text-slate-500">Terminé il y a 1 semaine</p>
 </div>
 </div>
 </div>
@@ -185,11 +185,11 @@ const ContacterLArtisanInterfaceDeMessage = () => {
 <span className="material-symbols-outlined text-primary">construction</span>
 <span className="font-bold text-lg">Artisanat</span>
 </div>
-<p className="text-xs text-slate-500">Â© 2024 Artisanat Platform. Tous droits rÃ©servÃ©s.</p>
+<p className="text-xs text-slate-500">Â© 2024 Artisanat Platform. Tous droits réservés.</p>
 </div>
 <div className="flex gap-8">
 <a className="text-xs font-medium text-slate-500 hover:text-primary" href="#">Conditions d'utilisation</a>
-<a className="text-xs font-medium text-slate-500 hover:text-primary" href="#">Politique de confidentialitÃ©</a>
+<a className="text-xs font-medium text-slate-500 hover:text-primary" href="#">Politique de confidentialité</a>
 <a className="text-xs font-medium text-slate-500 hover:text-primary" href="#">Aide &amp; Support</a>
 </div>
 </div>

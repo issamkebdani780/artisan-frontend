@@ -18,7 +18,7 @@ const ServiceDetailsPlomberie = () => {
 <nav className="hidden lg:flex items-center gap-9">
 <a className="text-slate-700 hover:text-primary transition-colors text-sm font-semibold" href="#">Accueil</a>
 <a className="text-primary text-sm font-semibold" href="#">Services</a>
-<a className="text-slate-700 hover:text-primary transition-colors text-sm font-semibold" href="#">RÃ©alisations</a>
+<a className="text-slate-700 hover:text-primary transition-colors text-sm font-semibold" href="#">Réalisations</a>
 <a className="text-slate-700 hover:text-primary transition-colors text-sm font-semibold" href="#">Blog</a>
 <a className="text-slate-700 hover:text-primary transition-colors text-sm font-semibold" href="#">Contact</a>
 </nav>
@@ -39,10 +39,10 @@ const ServiceDetailsPlomberie = () => {
 <div className="relative flex min-h-[400px] flex-col gap-6 bg-cover bg-center bg-no-repeat rounded-2xl items-start justify-end px-8 pb-12 overflow-hidden" data-alt="Professional plumber working on pipes under kitchen sink" style='background-image: linear-gradient(to top, rgba(16, 25, 34, 0.9), rgba(19, 127, 236, 0.2)), url("https://lh3.googleusercontent.com/aida-public/AB6AXuB9KEq-_8wjyWZbntT_SlDnWkH1VMz1eBW89K4_2uSAH-eQcbJXdJrOmtRE-1xaLlEiaPJmmPcPhSTBGnEH2b0lEPWS0bo97NQFA_mmFnR7w60p6njdIh3C11H63-7GBCky6wkHjaXQwaKFbLLefu-F-ELWi3vYyXGYOcMpDunftKRx-qTw5UzKYyDgTgAHxMEeXGmQnoor-rDE_NOpABt1IR4TC4pknkgS2LYOOpISgyc-4xMiwMVam_8FUsPgv2KNBTP3TPRhTZY0");'>
 <div className="flex flex-col gap-4 max-w-2xl">
 <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-black leading-tight tracking-tight">
-                                DÃ©pannage et Installation de Plomberie
+                                Dépannage et Installation de Plomberie
                             </h1>
 <p className="text-slate-200 text-lg md:text-xl font-medium leading-relaxed">
-                                Experts plombiers certifiÃ©s Ã  votre service 24h/24 et 7j/7 pour tous vos besoins urgents et installations durables.
+                                Experts plombiers certifiés à votre service 24h/24 et 7j/7 pour tous vos besoins urgents et installations durables.
                             </p>
 </div>
 <div className="flex flex-wrap gap-4 mt-4">
@@ -96,8 +96,8 @@ const ServiceDetailsPlomberie = () => {
 <span className="material-symbols-outlined text-3xl">water_drop</span>
 </div>
 <div>
-<h3 className="text-slate-900 text-xl font-bold mb-2">RÃ©paration de fuite</h3>
-<p className="text-slate-600 text-base leading-relaxed">DÃ©tection de fuites non destructives et colmatage ultra-rapide pour Ã©viter les dÃ©gÃ¢ts des eaux.</p>
+<h3 className="text-slate-900 text-xl font-bold mb-2">Réparation de fuite</h3>
+<p className="text-slate-600 text-base leading-relaxed">Détection de fuites non destructives et colmatage ultra-rapide pour éviter les dégâts des eaux.</p>
 </div>
 </div>
 <div className="group flex flex-col gap-4 rounded-2xl border border-primary/10 bg-white p-6 hover:border-primary/40 transition-all hover:shadow-xl">
@@ -106,7 +106,7 @@ const ServiceDetailsPlomberie = () => {
 </div>
 <div>
 <h3 className="text-slate-900 text-xl font-bold mb-2">Installation robinetterie</h3>
-<p className="text-slate-600 text-base leading-relaxed">Pose de mitigeurs haute performance, Ã©viers design et systÃ¨mes de filtration d'eau.</p>
+<p className="text-slate-600 text-base leading-relaxed">Pose de mitigeurs haute performance, éviers design et systèmes de filtration d'eau.</p>
 </div>
 </div>
 <div className="group flex flex-col gap-4 rounded-2xl border border-primary/10 bg-white p-6 hover:border-primary/40 transition-all hover:shadow-xl">
@@ -114,8 +114,8 @@ const ServiceDetailsPlomberie = () => {
 <span className="material-symbols-outlined text-3xl">sanitizer</span>
 </div>
 <div>
-<h3 className="text-slate-900 text-xl font-bold mb-2">DÃ©bouchage complet</h3>
-<p className="text-slate-600 text-base leading-relaxed">Curage et dÃ©bouchage de toutes vos canalisations obstruÃ©es avec Ã©quipement haute pression.</p>
+<h3 className="text-slate-900 text-xl font-bold mb-2">Débouchage complet</h3>
+<p className="text-slate-600 text-base leading-relaxed">Curage et débouchage de toutes vos canalisations obstruées avec équipement haute pression.</p>
 </div>
 </div>
 <div className="group flex flex-col gap-4 rounded-2xl border border-primary/10 bg-white p-6 hover:border-primary/40 transition-all hover:shadow-xl">
@@ -123,8 +123,8 @@ const ServiceDetailsPlomberie = () => {
 <span className="material-symbols-outlined text-3xl">health_and_safety</span>
 </div>
 <div>
-<h3 className="text-slate-900 text-xl font-bold mb-2">Entretien prÃ©ventif</h3>
-<p className="text-slate-600 text-base leading-relaxed">Contrats de maintenance pour assurer la pÃ©rennitÃ© de vos installations et rÃ©duire vos factures.</p>
+<h3 className="text-slate-900 text-xl font-bold mb-2">Entretien préventif</h3>
+<p className="text-slate-600 text-base leading-relaxed">Contrats de maintenance pour assurer la pérennité de vos installations et réduire vos factures.</p>
 </div>
 </div>
 </div>
@@ -137,7 +137,7 @@ const ServiceDetailsPlomberie = () => {
 <div className="flex gap-4">
 <span className="material-symbols-outlined text-primary font-bold">check_circle</span>
 <div>
-<h4 className="font-bold text-slate-900">DisponibilitÃ© Totale</h4>
+<h4 className="font-bold text-slate-900">Disponibilité Totale</h4>
 <p className="text-slate-600 text-sm">Intervention en moins de 30 minutes pour les urgences majeures.</p>
 </div>
 </div>
@@ -145,21 +145,21 @@ const ServiceDetailsPlomberie = () => {
 <span className="material-symbols-outlined text-primary font-bold">check_circle</span>
 <div>
 <h4 className="font-bold text-slate-900">Transparence des Prix</h4>
-<p className="text-slate-600 text-sm">Devis dÃ©taillÃ© avant chaque intervention, sans frais cachÃ©s.</p>
+<p className="text-slate-600 text-sm">Devis détaillé avant chaque intervention, sans frais cachés.</p>
 </div>
 </div>
 <div className="flex gap-4">
 <span className="material-symbols-outlined text-primary font-bold">check_circle</span>
 <div>
 <h4 className="font-bold text-slate-900">Certifications RGE</h4>
-<p className="text-slate-600 text-sm">Nos artisans sont qualifiÃ©s et rÃ©guliÃ¨rement formÃ©s aux nouvelles normes.</p>
+<p className="text-slate-600 text-sm">Nos artisans sont qualifiés et régulièrement formés aux nouvelles normes.</p>
 </div>
 </div>
 <div className="flex gap-4">
 <span className="material-symbols-outlined text-primary font-bold">check_circle</span>
 <div>
-<h4 className="font-bold text-slate-900">MatÃ©riel de QualitÃ©</h4>
-<p className="text-slate-600 text-sm">Nous n'utilisons que des piÃ¨ces certifiÃ©es des plus grandes marques.</p>
+<h4 className="font-bold text-slate-900">Matériel de Qualité</h4>
+<p className="text-slate-600 text-sm">Nous n'utilisons que des pièces certifiées des plus grandes marques.</p>
 </div>
 </div>
 </div>
@@ -171,7 +171,7 @@ const ServiceDetailsPlomberie = () => {
 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 <div className="p-8 rounded-2xl bg-white border border-primary/5 shadow-sm italic text-slate-700 relative">
 <span className="material-symbols-outlined text-primary/20 text-6xl absolute top-4 right-4">format_quote</span>
-                                "Intervention rapide pour une fuite dans ma salle de bain. Le plombier Ã©tait trÃ¨s pro et a tout nettoyÃ© aprÃ¨s son passage. Je recommande vivement !"
+                                "Intervention rapide pour une fuite dans ma salle de bain. Le plombier était très pro et a tout nettoyé après son passage. Je recommande vivement !"
                                 <div className="mt-6 flex items-center gap-3 not-italic">
 <div className="w-10 h-10 rounded-full bg-primary/20"></div>
 <div>
@@ -182,7 +182,7 @@ const ServiceDetailsPlomberie = () => {
 </div>
 <div className="p-8 rounded-2xl bg-white border border-primary/5 shadow-sm italic text-slate-700 relative">
 <span className="material-symbols-outlined text-primary/20 text-6xl absolute top-4 right-4">format_quote</span>
-                                "Prix conforme au devis annoncÃ©. Installation d'un nouveau chauffe-eau en un temps record. Ã‰quipe sÃ©rieuse et ponctuelle."
+                                "Prix conforme au devis annoncé. Installation d'un nouveau chauffe-eau en un temps record. Ã‰quipe sérieuse et ponctuelle."
                                 <div className="mt-6 flex items-center gap-3 not-italic">
 <div className="w-10 h-10 rounded-full bg-primary/20"></div>
 <div>
@@ -201,7 +201,7 @@ const ServiceDetailsPlomberie = () => {
 <div className="rounded-3xl bg-slate-900 p-8 text-white shadow-2xl relative overflow-hidden">
 <div className="absolute -top-12 -right-12 w-32 h-32 bg-primary/20 rounded-full blur-3xl"></div>
 <h3 className="text-2xl font-bold mb-4 relative z-10">Besoin d'un devis gratuit ?</h3>
-<p className="text-slate-300 mb-8 relative z-10 leading-relaxed">Nos techniciens analysent votre projet et vous rÃ©pondent en moins de 24h avec une estimation prÃ©cise.</p>
+<p className="text-slate-300 mb-8 relative z-10 leading-relaxed">Nos techniciens analysent votre projet et vous répondent en moins de 24h avec une estimation précise.</p>
 <button className="w-full bg-primary text-white rounded-xl py-4 font-bold text-lg hover:bg-primary/90 transition-all shadow-lg shadow-primary/40 flex items-center justify-center gap-3">
 <span className="material-symbols-outlined">edit_document</span>
                                 Demander mon devis
@@ -227,7 +227,7 @@ const ServiceDetailsPlomberie = () => {
 </div>
 <div className="p-6">
 <h4 className="font-bold mb-2">Secteur d'intervention</h4>
-<p className="text-slate-600 text-sm">Nous intervenons dans toute l'ÃŽle-de-France et les grandes mÃ©tropoles.</p>
+<p className="text-slate-600 text-sm">Nous intervenons dans toute l'ÃŽle-de-France et les grandes métropoles.</p>
 </div>
 </div>
 </div>
@@ -278,7 +278,7 @@ const ServiceDetailsPlomberie = () => {
 </div>
 </div>
 <div className="mt-16 pt-8 border-t border-white/5 text-center text-xs">
-                Â© 2024 Plomberie Pro. Tous droits rÃ©servÃ©s.
+                Â© 2024 Plomberie Pro. Tous droits réservés.
             </div>
 </footer>
 </div>

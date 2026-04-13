@@ -62,15 +62,15 @@ const PlumbingCategory = () => {
 <h3 className="text-xl font-bold">Besoin d'un devis ?</h3>
 </div>
 <p className="text-slate-600 text-sm leading-relaxed">
-                            Obtenez une estimation gratuite en moins de 24h pour vos travaux d'installation ou de rÃ©novation.
+                            Obtenez une estimation gratuite en moins de 24h pour vos travaux d'installation ou de rénovation.
                         </p>
 <form className="space-y-4">
 <div>
 <label className="text-xs font-bold uppercase tracking-wider text-slate-500">Type de service</label>
 <select className="w-full mt-1 rounded-lg border-slate-200 bg-slate-50 text-sm focus:ring-primary">
-<option>RÃ©paration de fuite</option>
+<option>Réparation de fuite</option>
 <option>Installation Sanitaire</option>
-<option>DÃ©bouchage</option>
+<option>Débouchage</option>
 <option>Chauffe-eau</option>
 </select>
 </div>
@@ -98,8 +98,8 @@ const PlumbingCategory = () => {
 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div className="flex items-end justify-between mb-10">
 <div>
-<h2 className="text-3xl font-bold tracking-tight">Nos SpÃ©cialitÃ©s</h2>
-<p className="text-slate-600 mt-2">Des solutions adaptÃ©es Ã  chaque problÃ¨me de plomberie.</p>
+<h2 className="text-3xl font-bold tracking-tight">Nos Spécialités</h2>
+<p className="text-slate-600 mt-2">Des solutions adaptées à chaque problème de plomberie.</p>
 </div>
 <a className="text-primary font-bold flex items-center gap-1 hover:underline" href="#">
                             Tout voir
@@ -112,9 +112,9 @@ const PlumbingCategory = () => {
 <div className="h-14 w-14 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
 <span className="material-symbols-outlined text-3xl">water_drop</span>
 </div>
-<h3 className="text-xl font-bold mb-3">RÃ©paration de Fuite</h3>
+<h3 className="text-xl font-bold mb-3">Réparation de Fuite</h3>
 <p className="text-slate-600 text-sm leading-relaxed mb-6">
-                                DÃ©tection non-destructive et colmatage immÃ©diat de vos tuyauteries et robinetteries.
+                                Détection non-destructive et colmatage immédiat de vos tuyauteries et robinetteries.
                             </p>
 <span className="text-sm font-bold text-primary group-hover:gap-2 flex items-center gap-1 transition-all">
                                 Ã€ partir de 89â‚¬ <span className="material-symbols-outlined text-sm">chevron_right</span>
@@ -127,7 +127,7 @@ const PlumbingCategory = () => {
 </div>
 <h3 className="text-xl font-bold mb-3">Installation Sanitaire</h3>
 <p className="text-slate-600 text-sm leading-relaxed mb-6">
-                                Pose de douches, WC suspendus, vasques et rÃ©novation complÃ¨te de votre salle d'eau.
+                                Pose de douches, WC suspendus, vasques et rénovation complète de votre salle d'eau.
                             </p>
 <span className="text-sm font-bold text-primary group-hover:gap-2 flex items-center gap-1 transition-all">
                                 Sur devis <span className="material-symbols-outlined text-sm">chevron_right</span>
@@ -138,9 +138,9 @@ const PlumbingCategory = () => {
 <div className="h-14 w-14 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
 <span className="material-symbols-outlined text-3xl">settings_input_hdmi</span>
 </div>
-<h3 className="text-xl font-bold mb-3">DÃ©bouchage Urgent</h3>
+<h3 className="text-xl font-bold mb-3">Débouchage Urgent</h3>
 <p className="text-slate-600 text-sm leading-relaxed mb-6">
-                                Canalisations obstruÃ©es, Ã©vacuations lentes : intervention haute pression disponible.
+                                Canalisations obstruées, évacuations lentes : intervention haute pression disponible.
                             </p>
 <span className="text-sm font-bold text-primary group-hover:gap-2 flex items-center gap-1 transition-all">
                                 Ã€ partir de 120â‚¬ <span className="material-symbols-outlined text-sm">chevron_right</span>
@@ -159,19 +159,19 @@ const PlumbingCategory = () => {
 </div>
 <div className="absolute -bottom-6 -right-6 bg-primary p-8 rounded-xl shadow-xl text-white">
 <div className="text-4xl font-black">15+</div>
-<div className="text-sm font-medium opacity-90 uppercase tracking-widest">Ans d'expÃ©rience</div>
+<div className="text-sm font-medium opacity-90 uppercase tracking-widest">Ans d'expérience</div>
 </div>
 </div>
 <div className="space-y-8">
-<h2 className="text-4xl font-black tracking-tight leading-tight">Pourquoi faire confiance Ã  <span className="text-primary">Plomberie Pro</span> ?</h2>
+<h2 className="text-4xl font-black tracking-tight leading-tight">Pourquoi faire confiance à <span className="text-primary">Plomberie Pro</span> ?</h2>
 <div className="space-y-6">
 <div className="flex gap-4">
 <div className="flex-shrink-0 h-10 w-10 rounded-full bg-green-100 text-green-600 flex items-center justify-center">
 <span className="material-symbols-outlined">verified</span>
 </div>
 <div>
-<h4 className="font-bold text-lg">Experts CertifiÃ©s Qualibat</h4>
-<p className="text-slate-600">Tous nos artisans sont formÃ©s aux derniÃ¨res normes europÃ©ennes.</p>
+<h4 className="font-bold text-lg">Experts Certifiés Qualibat</h4>
+<p className="text-slate-600">Tous nos artisans sont formés aux dernières normes européennes.</p>
 </div>
 </div>
 <div className="flex gap-4">
@@ -179,7 +179,7 @@ const PlumbingCategory = () => {
 <span className="material-symbols-outlined">schedule</span>
 </div>
 <div>
-<h4 className="font-bold text-lg">DisponibilitÃ© Totale</h4>
+<h4 className="font-bold text-lg">Disponibilité Totale</h4>
 <p className="text-slate-600">Nous intervenons 24h/24 et 7j/7 pour toutes vos urgences critiques.</p>
 </div>
 </div>
@@ -189,7 +189,7 @@ const PlumbingCategory = () => {
 </div>
 <div>
 <h4 className="font-bold text-lg">Transparence Tarifaire</h4>
-<p className="text-slate-600">Aucune surprise sur la facture. Nos tarifs sont annoncÃ©s avant intervention.</p>
+<p className="text-slate-600">Aucune surprise sur la facture. Nos tarifs sont annoncés avant intervention.</p>
 </div>
 </div>
 </div>
@@ -202,7 +202,7 @@ const PlumbingCategory = () => {
 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div className="text-center mb-12">
 <h2 className="text-3xl font-bold mb-4">Rencontrez nos meilleurs experts</h2>
-<p className="text-slate-400 max-w-2xl mx-auto">Une Ã©quipe de passionnÃ©s Ã  votre service dans toute la rÃ©gion.</p>
+<p className="text-slate-400 max-w-2xl mx-auto">Une équipe de passionnés à votre service dans toute la région.</p>
 </div>
 <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
 <div className="bg-white/5 p-6 rounded-xl border border-white/10 text-center hover:bg-white/10 transition-colors">
@@ -221,7 +221,7 @@ const PlumbingCategory = () => {
 <div className="w-full h-full bg-cover bg-center" data-alt="Portrait of an experienced plumber technician" ></div>
 </div>
 <h4 className="font-bold">Sofiane B.</h4>
-<p className="text-xs text-primary font-bold uppercase tracking-wider mb-2">Expert DÃ©bouchage</p>
+<p className="text-xs text-primary font-bold uppercase tracking-wider mb-2">Expert Débouchage</p>
 <div className="flex items-center justify-center gap-1 text-yellow-400">
 <span className="material-symbols-outlined text-sm fill-1">star</span>
 <span className="text-xs font-bold text-white">5.0</span>
@@ -267,7 +267,7 @@ const PlumbingCategory = () => {
 <div>
 <h5 className="font-bold mb-6">Services</h5>
 <ul className="space-y-4 text-sm text-slate-500">
-<li><a className="hover:text-primary" href="#">DÃ©pannage Rapide</a></li>
+<li><a className="hover:text-primary" href="#">Dépannage Rapide</a></li>
 <li><a className="hover:text-primary" href="#">Salle de Bains</a></li>
 <li><a className="hover:text-primary" href="#">Chauffage Central</a></li>
 <li><a className="hover:text-primary" href="#">Traitement d'eau</a></li>
@@ -277,7 +277,7 @@ const PlumbingCategory = () => {
 <h5 className="font-bold mb-6">Compagnie</h5>
 <ul className="space-y-4 text-sm text-slate-500">
 <li><a className="hover:text-primary" href="#">Ã€ propos</a></li>
-<li><a className="hover:text-primary" href="#">Nos RÃ©alisations</a></li>
+<li><a className="hover:text-primary" href="#">Nos Réalisations</a></li>
 <li><a className="hover:text-primary" href="#">Recrutement</a></li>
 <li><a className="hover:text-primary" href="#">Contact</a></li>
 </ul>
@@ -305,7 +305,7 @@ const PlumbingCategory = () => {
 </div>
 </div>
 <div className="mt-12 pt-8 border-t border-slate-200 text-center text-xs text-slate-500">
-                    Â© 2024 Plomberie Pro. Tous droits rÃ©servÃ©s. Mentions LÃ©gales | Cookies
+                    Â© 2024 Plomberie Pro. Tous droits réservés. Mentions Légales | Cookies
                 </div>
 </div>
 </footer>

@@ -34,10 +34,10 @@ const ConfirmationDeCreationDeCompte = () => {
 {/*  Content  */}
 <div className="space-y-4">
 <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-                    FÃ©licitations ! Votre compte a Ã©tÃ© crÃ©Ã© avec succÃ¨s.
+                    Félicitations ! Votre compte a été créé avec succès.
                 </h2>
 <p className="text-lg text-slate-600 leading-relaxed max-w-md mx-auto">
-                    Un e-mail de confirmation a Ã©tÃ© envoyÃ© Ã  votre adresse. Veuillez cliquer sur le lien pour activer votre compte.
+                    Un e-mail de confirmation a été envoyé à votre adresse. Veuillez cliquer sur le lien pour activer votre compte.
                 </p>
 </div>
 {/*  Image/Banner Decoration  */}
@@ -50,7 +50,7 @@ const ConfirmationDeCreationDeCompte = () => {
 <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
 <button className="flex-1 min-w-[200px] h-14 bg-primary hover:bg-primary/90 text-white font-bold rounded-xl transition-all shadow-lg shadow-primary/20 flex items-center justify-center gap-2">
 <span className="material-symbols-outlined">person_edit</span>
-                    ComplÃ©ter mon profil
+                    Compléter mon profil
                 </button>
 <button className="flex-1 min-w-[200px] h-14 bg-white border-2 border-primary/20 hover:border-primary text-primary font-bold rounded-xl transition-all flex items-center justify-center gap-2">
 <span className="material-symbols-outlined">search</span>
@@ -60,7 +60,7 @@ const ConfirmationDeCreationDeCompte = () => {
 {/*  Secondary Link  */}
 <div className="pt-2">
 <a className="text-slate-500 hover:text-primary text-sm font-medium underline underline-offset-4 transition-colors" href="#">
-                    Retour Ã  l'accueil
+                    Retour à l'accueil
                 </a>
 </div>
 </div>
@@ -71,15 +71,15 @@ const ConfirmationDeCreationDeCompte = () => {
 <div className="flex flex-col md:flex-row justify-between items-center gap-4">
 <div className="flex items-center gap-2 text-slate-400">
 <span className="material-symbols-outlined">shield</span>
-<span className="text-sm">Plateforme sÃ©curisÃ©e et vÃ©rifiÃ©e</span>
+<span className="text-sm">Plateforme sécurisée et vérifiée</span>
 </div>
 <div className="flex gap-6 text-sm text-slate-500">
 <a className="hover:text-primary transition-colors" href="#">Aide</a>
 <a className="hover:text-primary transition-colors" href="#">Conditions d'utilisation</a>
-<a className="hover:text-primary transition-colors" href="#">ConfidentialitÃ©</a>
+<a className="hover:text-primary transition-colors" href="#">Confidentialité</a>
 </div>
 <p className="text-sm text-slate-400">
-                    Â© 2024 ArtisanDirect. Tous droits rÃ©servÃ©s.
+                    Â© 2024 ArtisanDirect. Tous droits réservés.
                 </p>
 </div>
 </div>

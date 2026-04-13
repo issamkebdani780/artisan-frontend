@@ -58,7 +58,7 @@ const AdminDashboard = () => {
       const newStats = await apiService.getDetailedStats();
       setStats(newStats);
     } catch (err) {
-      alert('Ã‰chec de la vÃ©rification');
+      alert('Ã‰chec de la vérification');
     }
   };
   const handleRefuse = async (id) => {
@@ -81,7 +81,7 @@ const AdminDashboard = () => {
         <div className="flex justify-between items-center">
           <div>
             <h2 className="text-3xl font-black text-slate-900 tracking-tight">Tableau de bord</h2>
-            <p className="text-slate-500 mt-1 font-medium">Bienvenue, voici un aperÃ§u de l'activitÃ© de votre plateforme.</p>
+            <p className="text-slate-500 mt-1 font-medium">Bienvenue, voici un aperçu de l'activité de votre plateforme.</p>
           </div>
           <div className="flex gap-4">
             {/* Download/Campaign buttons removed */}
@@ -183,7 +183,7 @@ const AdminDashboard = () => {
                   <span className="material-symbols-outlined text-sm font-black">group</span>
                 </div>
                 <div>
-                  <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">RÃ©tention Client</p>
+                  <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Rétention Client</p>
                   <p className="text-lg font-black text-slate-900">82%</p>
                 </div>
               </div>
@@ -200,7 +200,7 @@ const AdminDashboard = () => {
           </div>
 
           <div className="bg-[#1E1B4B] p-10 rounded-[3rem] shadow-2xl text-white relative overflow-hidden h-full">
-            <h3 className="text-2xl font-black tracking-tight mb-8 relative z-10">ActivitÃ©s RÃ©centes</h3>
+            <h3 className="text-2xl font-black tracking-tight mb-8 relative z-10">Activités Récentes</h3>
 
             <div className="space-y-8 relative z-10">
               {loading ? (
@@ -217,14 +217,14 @@ const AdminDashboard = () => {
                     <div className="flex-1 pb-2">
                       <p className="font-bold text-sm tracking-tight">{act.name || act.type}</p>
                       <p className="text-[11px] text-blue-200 font-medium uppercase tracking-tighter mt-1 opacity-80">
-                        {act.type === 'Nouvel Artisan' ? 'Inscrit il y a ' : 'CrÃ©Ã© il y a '}
+                        {act.type === 'Nouvel Artisan' ? 'Inscrit il y a ' : 'Créé il y a '}
                         {Math.floor((new Date() - new Date(act.time)) / (1000 * 60 * 60))}h
                       </p>
                     </div>
                   </div>
                 ))
               ) : (
-                <p className="text-slate-400 text-sm italic">Aucune activitÃ© rÃ©cente</p>
+                <p className="text-slate-400 text-sm italic">Aucune activité récente</p>
               )}
             </div>
 
@@ -269,7 +269,7 @@ const AdminDashboard = () => {
             <div className="flex justify-between items-center mb-10">
               <div>
                 <h3 className="text-2xl font-black text-slate-900 tracking-tight">Artisans en attente</h3>
-                <p className="text-slate-400 font-medium mt-1">Nouveaux dossiers Ã  vÃ©rifier</p>
+                <p className="text-slate-400 font-medium mt-1">Nouveaux dossiers à vérifier</p>
               </div>
               <Link to="/dashboard/admin/verifications" className="text-primary font-black text-sm hover:underline">Voir tout</Link>
             </div>
@@ -286,7 +286,7 @@ const AdminDashboard = () => {
                   {loading ? (
                     <tr><td colSpan="2" className="text-center py-10 text-slate-400 animate-pulse font-bold">Chargement...</td></tr>
                   ) : unverified.length === 0 ? (
-                    <tr><td colSpan="2" className="text-center py-10 text-slate-400 italic">Tout est Ã  jour !</td></tr>
+                    <tr><td colSpan="2" className="text-center py-10 text-slate-400 italic">Tout est à jour !</td></tr>
                   ) : currentItems.map((artisan) => (
                     <tr key={artisan.id}>
                       <td className="bg-slate-50 px-6 py-4 rounded-l-3xl border-y border-l border-slate-100">
@@ -305,7 +305,7 @@ const AdminDashboard = () => {
                           <button
                             onClick={() => handleVerify(artisan.id)}
                             className="p-2 text-emerald-600 hover:bg-emerald-50 rounded-xl transition-colors"
-                            title="VÃ©rifier"
+                            title="Vérifier"
                           >
                             <span className="material-symbols-outlined font-bold">check_circle</span>
                           </button>

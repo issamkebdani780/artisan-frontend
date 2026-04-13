@@ -16,7 +16,7 @@ const DetailsDuServiceLectricit = () => {
 </a>
 <nav className="hidden md:flex items-center gap-6">
 <a className="text-sm font-medium hover:text-primary transition-colors" href="#">Services</a>
-<a className="text-sm font-medium hover:text-primary transition-colors" href="#">Comment Ã§a marche</a>
+<a className="text-sm font-medium hover:text-primary transition-colors" href="#">Comment ça marche</a>
 <a className="text-sm font-medium hover:text-primary transition-colors" href="#">Ã‰lectriciens</a>
 <a className="text-sm font-medium hover:text-primary transition-colors" href="#">FAQ</a>
 </nav>
@@ -41,10 +41,10 @@ const DetailsDuServiceLectricit = () => {
 <div className="absolute inset-0 z-20 flex items-center">
 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
 <div className="max-w-2xl bg-white/10 backdrop-blur-md p-8 rounded-xl border border-white/20">
-<h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Travaux d'Ã‰lectricitÃ©</h1>
-<p className="text-lg text-slate-100 mb-8">Installation, dÃ©pannage et mise aux normes par des experts certifiÃ©s. Un service rapide, transparent et garanti pour tous vos besoins Ã©lectriques.</p>
+<h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Travaux d'Ã‰lectricité</h1>
+<p className="text-lg text-slate-100 mb-8">Installation, dépannage et mise aux normes par des experts certifiés. Un service rapide, transparent et garanti pour tous vos besoins électriques.</p>
 <div className="flex gap-4">
-<button className="rounded-lg bg-primary px-8 py-3 font-bold text-white hover:bg-primary/90 shadow-lg transition-transform active:scale-95">RÃ©server maintenant</button>
+<button className="rounded-lg bg-primary px-8 py-3 font-bold text-white hover:bg-primary/90 shadow-lg transition-transform active:scale-95">Réserver maintenant</button>
 <button className="rounded-lg bg-white/20 px-8 py-3 font-bold text-white hover:bg-white/30 backdrop-blur shadow-lg transition-transform active:scale-95">Voir les tarifs</button>
 </div>
 </div>
@@ -55,30 +55,30 @@ const DetailsDuServiceLectricit = () => {
 <section className="py-16 bg-white">
 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div className="text-center mb-12">
-<h2 className="text-3xl font-bold text-slate-900">Comment Ã§a marche</h2>
-<p className="text-slate-500 mt-2">Votre projet Ã©lectrique en 3 Ã©tapes simples</p>
+<h2 className="text-3xl font-bold text-slate-900">Comment ça marche</h2>
+<p className="text-slate-500 mt-2">Votre projet électrique en 3 étapes simples</p>
 </div>
 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 <div className="group relative p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:border-primary/50 transition-all">
 <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
 <span className="material-symbols-outlined text-3xl">event_available</span>
 </div>
-<h3 className="text-xl font-bold mb-3">1. RÃ©servez</h3>
-<p className="text-slate-600">DÃ©crivez votre besoin et choisissez un crÃ©neau horaire en quelques clics sur notre plateforme.</p>
+<h3 className="text-xl font-bold mb-3">1. Réservez</h3>
+<p className="text-slate-600">Décrivez votre besoin et choisissez un créneau horaire en quelques clics sur notre plateforme.</p>
 </div>
 <div className="group relative p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:border-primary/50 transition-all">
 <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
 <span className="material-symbols-outlined text-3xl">badge</span>
 </div>
 <h3 className="text-xl font-bold mb-3">2. Choisissez</h3>
-<p className="text-slate-600">SÃ©lectionnez l'artisan qualifiÃ© parmi nos profils vÃ©rifiÃ©s selon leurs avis et tarifs.</p>
+<p className="text-slate-600">Sélectionnez l'artisan qualifié parmi nos profils vérifiés selon leurs avis et tarifs.</p>
 </div>
 <div className="group relative p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:border-primary/50 transition-all">
 <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
 <span className="material-symbols-outlined text-3xl">verified</span>
 </div>
 <h3 className="text-xl font-bold mb-3">3. C'est fait</h3>
-<p className="text-slate-600">L'Ã©lectricien intervient Ã  la date prÃ©vue. Payez en toute sÃ©curitÃ© une fois les travaux terminÃ©s.</p>
+<p className="text-slate-600">L'électricien intervient à la date prévue. Payez en toute sécurité une fois les travaux terminés.</p>
 </div>
 </div>
 </div>
@@ -101,9 +101,9 @@ const DetailsDuServiceLectricit = () => {
 <span className="material-symbols-outlined text-primary text-4xl">build_circle</span>
 <span className="text-sm font-bold text-primary bg-primary/10 px-3 py-1 rounded-full">Ã€ partir de 50â‚¬</span>
 </div>
-<h3 className="text-lg font-bold mb-2">Diagnostic &amp; RÃ©paration</h3>
-<p className="text-slate-600 text-sm mb-6">Recherche de panne, remplacement de fusibles ou rÃ©paration de tableau Ã©lectrique.</p>
-<button className="w-full py-2 rounded-lg border border-primary text-primary font-bold hover:bg-primary hover:text-white transition-colors">SÃ©lectionner</button>
+<h3 className="text-lg font-bold mb-2">Diagnostic &amp; Réparation</h3>
+<p className="text-slate-600 text-sm mb-6">Recherche de panne, remplacement de fusibles ou réparation de tableau électrique.</p>
+<button className="w-full py-2 rounded-lg border border-primary text-primary font-bold hover:bg-primary hover:text-white transition-colors">Sélectionner</button>
 </div>
 <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
 <div className="flex justify-between items-start mb-4">
@@ -112,7 +112,7 @@ const DetailsDuServiceLectricit = () => {
 </div>
 <h3 className="text-lg font-bold mb-2">Installation Luminaires</h3>
 <p className="text-slate-600 text-sm mb-6">Pose de lustres, spots LED, appliques murales ou remplacement d'interrupteurs.</p>
-<button className="w-full py-2 rounded-lg border border-primary text-primary font-bold hover:bg-primary hover:text-white transition-colors">SÃ©lectionner</button>
+<button className="w-full py-2 rounded-lg border border-primary text-primary font-bold hover:bg-primary hover:text-white transition-colors">Sélectionner</button>
 </div>
 <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
 <div className="flex justify-between items-start mb-4">
@@ -120,7 +120,7 @@ const DetailsDuServiceLectricit = () => {
 <span className="text-sm font-bold text-slate-500 bg-slate-100 px-3 py-1 rounded-full">Sur devis</span>
 </div>
 <h3 className="text-lg font-bold mb-2">Mise aux Normes</h3>
-<p className="text-slate-600 text-sm mb-6">Mise en conformitÃ© totale NF C 15-100 de votre installation Ã©lectrique.</p>
+<p className="text-slate-600 text-sm mb-6">Mise en conformité totale NF C 15-100 de votre installation électrique.</p>
 <button className="w-full py-2 rounded-lg bg-primary text-white font-bold hover:bg-primary/90 transition-colors">Demander un devis</button>
 </div>
 </div>
@@ -130,8 +130,8 @@ const DetailsDuServiceLectricit = () => {
 <section className="py-16 bg-slate-50">
 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div className="text-center mb-12">
-<h2 className="text-3xl font-bold text-slate-900">Nos Experts Ã  ProximitÃ©</h2>
-<p className="text-slate-500 mt-2">Des professionnels qualifiÃ©s et notÃ©s par la communautÃ©</p>
+<h2 className="text-3xl font-bold text-slate-900">Nos Experts à Proximité</h2>
+<p className="text-slate-500 mt-2">Des professionnels qualifiés et notés par la communauté</p>
 </div>
 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 {/*  Expert 1  */}
@@ -145,10 +145,10 @@ const DetailsDuServiceLectricit = () => {
 </div>
 <div className="p-6">
 <h3 className="text-xl font-bold mb-1 text-slate-900">Jean-Pierre Durand</h3>
-<p className="text-primary text-sm font-medium mb-4">Ã‰lectricien certifiÃ© - 15 ans d'exp.</p>
-<p className="text-slate-600 text-sm mb-6 line-clamp-2">SpÃ©cialiste en domotique et rÃ©novation complÃ¨te. Travail soignÃ© et respect des dÃ©lais garanti.</p>
+<p className="text-primary text-sm font-medium mb-4">Ã‰lectricien certifié - 15 ans d'exp.</p>
+<p className="text-slate-600 text-sm mb-6 line-clamp-2">Spécialiste en domotique et rénovation complète. Travail soigné et respect des délais garanti.</p>
 <button className="w-full py-3 rounded-xl bg-primary text-white font-bold hover:bg-primary/90 transition-all flex items-center justify-center gap-2">
-<span className="material-symbols-outlined">calendar_today</span> RÃ©server
+<span className="material-symbols-outlined">calendar_today</span> Réserver
                                 </button>
 </div>
 </div>
@@ -163,10 +163,10 @@ const DetailsDuServiceLectricit = () => {
 </div>
 <div className="p-6">
 <h3 className="text-xl font-bold mb-1 text-slate-900">Marc Lefebvre</h3>
-<p className="text-primary text-sm font-medium mb-4">Expert DÃ©pannage Urgent</p>
+<p className="text-primary text-sm font-medium mb-4">Expert Dépannage Urgent</p>
 <p className="text-slate-600 text-sm mb-6 line-clamp-2">Intervention rapide pour pannes de courant et courts-circuits. Disponible 7j/7 pour les urgences.</p>
 <button className="w-full py-3 rounded-xl bg-primary text-white font-bold hover:bg-primary/90 transition-all flex items-center justify-center gap-2">
-<span className="material-symbols-outlined">calendar_today</span> RÃ©server
+<span className="material-symbols-outlined">calendar_today</span> Réserver
                                 </button>
 </div>
 </div>
@@ -181,10 +181,10 @@ const DetailsDuServiceLectricit = () => {
 </div>
 <div className="p-6">
 <h3 className="text-xl font-bold mb-1 text-slate-900">Sofiane Amari</h3>
-<p className="text-primary text-sm font-medium mb-4">SpÃ©cialiste Installation Neuve</p>
-<p className="text-slate-600 text-sm mb-6 line-clamp-2">Expert en pose de tableaux Ã©lectriques et bornes de recharge pour vÃ©hicules Ã©lectriques.</p>
+<p className="text-primary text-sm font-medium mb-4">Spécialiste Installation Neuve</p>
+<p className="text-slate-600 text-sm mb-6 line-clamp-2">Expert en pose de tableaux électriques et bornes de recharge pour véhicules électriques.</p>
 <button className="w-full py-3 rounded-xl bg-primary text-white font-bold hover:bg-primary/90 transition-all flex items-center justify-center gap-2">
-<span className="material-symbols-outlined">calendar_today</span> RÃ©server
+<span className="material-symbols-outlined">calendar_today</span> Réserver
                                 </button>
 </div>
 </div>
@@ -194,24 +194,24 @@ const DetailsDuServiceLectricit = () => {
 {/*  FAQ Section  */}
 <section className="py-16 bg-white">
 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-<h2 className="text-3xl font-bold text-slate-900 text-center mb-10">Questions FrÃ©quentes</h2>
+<h2 className="text-3xl font-bold text-slate-900 text-center mb-10">Questions Fréquentes</h2>
 <div className="space-y-4">
 <details className="group bg-slate-50 rounded-xl border border-slate-200 p-4" open="">
 <summary className="flex cursor-pointer items-center justify-between font-bold text-slate-900 list-none">
-<span>Quel est le dÃ©lai d'intervention moyen ?</span>
+<span>Quel est le délai d'intervention moyen ?</span>
 <span className="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
 </summary>
 <div className="mt-4 text-slate-600 text-sm leading-relaxed">
-                                Pour les urgences (panne totale), nous intervenons gÃ©nÃ©ralement en moins de 2 heures. Pour les installations classiques, vous pouvez choisir un crÃ©neau sous 24h Ã  48h.
+                                Pour les urgences (panne totale), nous intervenons généralement en moins de 2 heures. Pour les installations classiques, vous pouvez choisir un créneau sous 24h à 48h.
                             </div>
 </details>
 <details className="group bg-slate-50 rounded-xl border border-slate-200 p-4">
 <summary className="flex cursor-pointer items-center justify-between font-bold text-slate-900 list-none">
-<span>Les piÃ¨ces de rechange sont-elles incluses ?</span>
+<span>Les pièces de rechange sont-elles incluses ?</span>
 <span className="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
 </summary>
 <div className="mt-4 text-slate-600 text-sm leading-relaxed">
-                                Les prix affichÃ©s "Ã€ partir de" incluent le diagnostic et la main-d'Ã…â€œuvre de base. Le coÃ»t des piÃ¨ces spÃ©cifiques (interrupteurs, disjoncteurs, cÃ¢bles) est facturÃ© en sus aprÃ¨s validation du devis sur place.
+                                Les prix affichés "Ã€ partir de" incluent le diagnostic et la main-d'Ã…â€œuvre de base. Le coût des pièces spécifiques (interrupteurs, disjoncteurs, câbles) est facturé en sus après validation du devis sur place.
                             </div>
 </details>
 <details className="group bg-slate-50 rounded-xl border border-slate-200 p-4">
@@ -220,7 +220,7 @@ const DetailsDuServiceLectricit = () => {
 <span className="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
 </summary>
 <div className="mt-4 text-slate-600 text-sm leading-relaxed">
-                                Le paiement s'effectue directement en ligne de maniÃ¨re sÃ©curisÃ©e ou via l'application une fois l'intervention terminÃ©e et validÃ©e par vos soins. Nous acceptons les cartes bancaires et les virements.
+                                Le paiement s'effectue directement en ligne de manière sécurisée ou via l'application une fois l'intervention terminée et validée par vos soins. Nous acceptons les cartes bancaires et les virements.
                             </div>
 </details>
 </div>
@@ -236,7 +236,7 @@ const DetailsDuServiceLectricit = () => {
 <span className="material-symbols-outlined text-3xl">bolt</span>
 <span className="text-xl font-bold text-slate-900">ArtisanPro</span>
 </a>
-<p className="text-slate-500 max-w-xs mb-6">La plateforme de confiance pour tous vos travaux et dÃ©pannages Ã  domicile. Des experts vÃ©rifiÃ©s, des tarifs justes.</p>
+<p className="text-slate-500 max-w-xs mb-6">La plateforme de confiance pour tous vos travaux et dépannages à domicile. Des experts vérifiés, des tarifs justes.</p>
 <div className="flex gap-4">
 <a className="h-10 w-10 flex items-center justify-center rounded-full bg-slate-100 text-slate-600 hover:bg-primary hover:text-white transition-colors" href="#">
 <span className="material-symbols-outlined text-xl">language</span>
@@ -249,7 +249,7 @@ const DetailsDuServiceLectricit = () => {
 <div>
 <h4 className="font-bold mb-6 text-slate-900">Services</h4>
 <ul className="space-y-4 text-sm text-slate-500">
-<li><a className="hover:text-primary transition-colors" href="#">Ã‰lectricitÃ©</a></li>
+<li><a className="hover:text-primary transition-colors" href="#">Ã‰lectricité</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Plomberie</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Chauffage</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Peinture</a></li>
@@ -269,16 +269,16 @@ const DetailsDuServiceLectricit = () => {
 <ul className="space-y-4 text-sm text-slate-500">
 <li><a className="hover:text-primary transition-colors" href="#">Centre d'aide</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Contact</a></li>
-<li><a className="hover:text-primary transition-colors" href="#">SÃ©curitÃ©</a></li>
+<li><a className="hover:text-primary transition-colors" href="#">Sécurité</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Conditions</a></li>
 </ul>
 </div>
 </div>
 <div className="border-t border-slate-100 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-400">
-<p>Â© 2024 ArtisanPro. Tous droits rÃ©servÃ©s.</p>
+<p>Â© 2024 ArtisanPro. Tous droits réservés.</p>
 <div className="flex gap-6">
-<a className="hover:text-primary" href="#">ConfidentialitÃ©</a>
-<a className="hover:text-primary" href="#">Mentions lÃ©gales</a>
+<a className="hover:text-primary" href="#">Confidentialité</a>
+<a className="hover:text-primary" href="#">Mentions légales</a>
 <a className="hover:text-primary" href="#">Cookies</a>
 </div>
 </div>

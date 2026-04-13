@@ -26,7 +26,7 @@ const AdminDisputes = () => {
       await apiService.updateDisputeStatus(id, status);
       setDisputes(disputes.map(d => d.id === id ? { ...d, status } : d));
     } catch (err) {
-      alert('Erreur lors de la mise Ã  jour : ' + err.message);
+      alert('Erreur lors de la mise à jour : ' + err.message);
     }
   };
 
@@ -43,7 +43,7 @@ const AdminDisputes = () => {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div className="space-y-1">
             <h2 className="text-3xl font-black tracking-tight text-slate-900 font-[Outfit,sans-serif]">Gestion des Litiges</h2>
-            <p className="text-slate-500 font-medium">MÃ©diation et rÃ©solution des conflits entre clients et artisans.</p>
+            <p className="text-slate-500 font-medium">Médiation et résolution des conflits entre clients et artisans.</p>
           </div>
           <div className="flex gap-4">
             <button className="flex items-center gap-2 bg-white border border-slate-200 px-6 py-3 rounded-2xl font-bold text-sm shadow-sm hover:shadow-md transition-all">
@@ -62,7 +62,7 @@ const AdminDisputes = () => {
             { label: 'Total Litiges', value: disputes.length, icon: 'folder_open', color: 'bg-primary' },
             { label: 'En attente', value: disputes.filter(d => d.status === 'pending').length, icon: 'hourglass_empty', color: 'bg-amber-500' },
             { label: 'En cours', value: disputes.filter(d => d.status === 'in_progress').length, icon: 'sync', color: 'bg-blue-500' },
-            { label: 'RÃ©solus', value: disputes.filter(d => d.status === 'resolved').length, icon: 'task_alt', color: 'bg-emerald-500' },
+            { label: 'Résolus', value: disputes.filter(d => d.status === 'resolved').length, icon: 'task_alt', color: 'bg-emerald-500' },
           ].map((stat, i) => (
             <div key={i} className="bg-white p-6 rounded-4xl shadow-xl shadow-slate-200/50 border border-white/50 group hover:-translate-y-1 transition-all duration-300">
               <div className="flex justify-between items-start">
@@ -86,7 +86,7 @@ const AdminDisputes = () => {
               onClick={() => setFilter(tab)}
               className={`px-6 py-2.5 rounded-2xl text-sm font-black transition-all ${filter === tab ? 'bg-primary text-white shadow-lg shadow-primary/20' : 'text-slate-500 hover:text-slate-700'}`}
             >
-              {tab === 'Tous' ? 'Tous' : tab === 'pending' ? 'En attente' : tab === 'in_progress' ? 'En cours' : 'RÃ©solus'}
+              {tab === 'Tous' ? 'Tous' : tab === 'pending' ? 'En attente' : tab === 'in_progress' ? 'En cours' : 'Résolus'}
             </button>
           ))}
         </div>
@@ -98,7 +98,7 @@ const AdminDisputes = () => {
               <thead>
                 <tr className="text-left bg-slate-50/50">
                   <th className="px-8 py-5 text-[10px] font-black text-slate-400 uppercase tracking-widest border-b border-slate-100">Dossier</th>
-                  <th className="px-8 py-5 text-[10px] font-black text-slate-400 uppercase tracking-widest border-b border-slate-100">Parties ImpliquÃ©es</th>
+                  <th className="px-8 py-5 text-[10px] font-black text-slate-400 uppercase tracking-widest border-b border-slate-100">Parties Impliquées</th>
                   <th className="px-8 py-5 text-[10px] font-black text-slate-400 uppercase tracking-widest border-b border-slate-100">Motif</th>
                   <th className="px-8 py-5 text-[10px] font-black text-slate-400 uppercase tracking-widest border-b border-slate-100">Statut</th>
                   <th className="px-8 py-5 text-[10px] font-black text-slate-400 uppercase tracking-widest border-b border-slate-100 text-right">Actions</th>
@@ -112,7 +112,7 @@ const AdminDisputes = () => {
                     </tr>
                   ))
                 ) : filteredDisputes.length === 0 ? (
-                  <tr><td colSpan="5" className="text-center py-20 text-slate-400 font-bold italic font-[Outfit,sans-serif]">Aucun litige trouvÃ©</td></tr>
+                  <tr><td colSpan="5" className="text-center py-20 text-slate-400 font-bold italic font-[Outfit,sans-serif]">Aucun litige trouvé</td></tr>
                 ) : filteredDisputes.map((dispute) => (
                   <tr key={dispute.id} className="hover:bg-slate-50/50 transition-colors group text-[Outfit,sans-serif]">
                     <td className="px-8 py-6">
@@ -132,7 +132,7 @@ const AdminDisputes = () => {
                       </div>
                     </td>
                     <td className="px-8 py-6">
-                       <p className="text-sm font-bold text-slate-600 line-clamp-1">{dispute.reason || 'Non spÃ©cifiÃ©'}</p>
+                       <p className="text-sm font-bold text-slate-600 line-clamp-1">{dispute.reason || 'Non spécifié'}</p>
                     </td>
                     <td className="px-8 py-6">
                       <span className={`px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-tighter ${
@@ -140,7 +140,7 @@ const AdminDisputes = () => {
                         dispute.status === 'in_progress' ? 'bg-blue-100 text-blue-700' : 
                         'bg-amber-100 text-amber-700'
                       }`}>
-                         {dispute.status === 'resolved' ? 'RÃ©solu' : dispute.status === 'in_progress' ? 'En cours' : 'En attente'}
+                         {dispute.status === 'resolved' ? 'Résolu' : dispute.status === 'in_progress' ? 'En cours' : 'En attente'}
                       </span>
                     </td>
                     <td className="px-8 py-6 text-right">
@@ -149,7 +149,7 @@ const AdminDisputes = () => {
                            <button 
                             onClick={() => handleUpdateStatus(dispute.id, 'resolved')}
                             className="p-2 text-emerald-600 hover:bg-emerald-50 rounded-xl transition-all"
-                            title="RÃ©soudre"
+                            title="Résoudre"
                            >
                               <span className="material-symbols-outlined font-bold">check_circle</span>
                            </button>

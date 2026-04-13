@@ -28,7 +28,7 @@ const GestionDesArtisans = () => {
 </a>
 <a className="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-100 rounded-xl transition-colors" href="#">
 <span className="material-symbols-outlined">verified_user</span>
-<span className="text-sm font-medium">VÃ©rifications</span>
+<span className="text-sm font-medium">Vérifications</span>
 </a>
 <a className="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-100 rounded-xl transition-colors" href="#">
 <span className="material-symbols-outlined">payments</span>
@@ -36,14 +36,14 @@ const GestionDesArtisans = () => {
 </a>
 <a className="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-100 rounded-xl transition-colors" href="#">
 <span className="material-symbols-outlined">settings</span>
-<span className="text-sm font-medium">ParamÃ¨tres</span>
+<span className="text-sm font-medium">Paramètres</span>
 </a>
 </nav>
 </div>
 <div className="p-6 border-t border-slate-200">
 <button className="flex w-full items-center gap-3 px-4 py-3 text-rose-500 hover:bg-rose-50 rounded-xl transition-colors mb-4">
 <span className="material-symbols-outlined">logout</span>
-<span className="text-sm font-medium">DÃ©connexion</span>
+<span className="text-sm font-medium">Déconnexion</span>
 </button>
 <button className="w-full bg-primary hover:bg-primary/90 text-white rounded-xl py-3 text-sm font-bold shadow-lg shadow-primary/30 transition-all flex items-center justify-center gap-2">
 <span className="material-symbols-outlined text-sm">person_add</span>
@@ -59,7 +59,7 @@ const GestionDesArtisans = () => {
 <h2 className="text-xl font-bold">Gestion des Artisans</h2>
 <div className="relative max-w-md w-full">
 <span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
-<input className="w-full pl-10 pr-4 py-2 bg-slate-100 border-none rounded-xl text-sm focus:ring-2 focus:ring-primary/20 placeholder:text-slate-500" placeholder="Rechercher un artisan, un mÃ©tier..." type="text"/>
+<input className="w-full pl-10 pr-4 py-2 bg-slate-100 border-none rounded-xl text-sm focus:ring-2 focus:ring-primary/20 placeholder:text-slate-500" placeholder="Rechercher un artisan, un métier..." type="text"/>
 </div>
 </div>
 <div className="flex items-center gap-4">
@@ -71,10 +71,10 @@ const GestionDesArtisans = () => {
 <div className="flex items-center gap-3">
 <div className="text-right hidden sm:block">
 <p className="text-sm font-bold leading-none">Admin Royal</p>
-<p className="text-xs text-slate-500 mt-1">Directeur GÃ©nÃ©ral</p>
+<p className="text-xs text-slate-500 mt-1">Directeur Général</p>
 </div>
 <div className="size-10 rounded-full bg-slate-200 overflow-hidden border-2 border-primary/20">
-<img alt="" className="w-full h-full object-cover" data-alt="Avatar de l'administrateur systÃ¨me" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlbwjPg-MCr7ofFHwmRHZiP4b1VPS62f5m8cdvsIvW2r6jb36kEGIiXnbBiswkDa-xG4q9pjxcQd9CQHDLRE3Bc9tRKVa6gnAj7oNHGGB8fJdTq221_AMN8vNZywEe8RrzelHNlkQy_EyHyeHmD190BdNRDxJkRFFN7ucj8iK6BKE030_YJoocsg11lp9ne1Smc1cVlDjw7Vb7hYhNPeTZuBa-SNapxrN9hqkeZ3nuMTXIQNyks6bQ8zHDRcIwJ_ODTqd2E7tiyX8L"/>
+<img alt="" className="w-full h-full object-cover" data-alt="Avatar de l'administrateur système" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlbwjPg-MCr7ofFHwmRHZiP4b1VPS62f5m8cdvsIvW2r6jb36kEGIiXnbBiswkDa-xG4q9pjxcQd9CQHDLRE3Bc9tRKVa6gnAj7oNHGGB8fJdTq221_AMN8vNZywEe8RrzelHNlkQy_EyHyeHmD190BdNRDxJkRFFN7ucj8iK6BKE030_YJoocsg11lp9ne1Smc1cVlDjw7Vb7hYhNPeTZuBa-SNapxrN9hqkeZ3nuMTXIQNyks6bQ8zHDRcIwJ_ODTqd2E7tiyX8L"/>
 </div>
 </div>
 </div>
@@ -85,7 +85,7 @@ const GestionDesArtisans = () => {
 <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
 <div>
 <h3 className="text-3xl font-black text-slate-900 tracking-tight">Annuaire des Artisans</h3>
-<p className="text-slate-500 mt-1">GÃ©rez et vÃ©rifiez les professionnels inscrits sur votre plateforme.</p>
+<p className="text-slate-500 mt-1">Gérez et vérifiez les professionnels inscrits sur votre plateforme.</p>
 </div>
 <div className="flex gap-3">
 <button className="px-5 py-2.5 bg-white border border-slate-200 text-slate-700 rounded-xl text-sm font-semibold hover:bg-slate-50 transition-colors flex items-center gap-2">
@@ -99,7 +99,7 @@ const GestionDesArtisans = () => {
 <div className="flex flex-wrap gap-2">
 <button className="px-6 py-2.5 rounded-xl text-sm font-bold bg-primary text-white shadow-md shadow-primary/20">Tous</button>
 <button className="px-6 py-2.5 rounded-xl text-sm font-semibold text-slate-600 hover:bg-slate-100 transition-colors">En attente (12)</button>
-<button className="px-6 py-2.5 rounded-xl text-sm font-semibold text-slate-600 hover:bg-slate-100 transition-colors">VÃ©rifiÃ©s (148)</button>
+<button className="px-6 py-2.5 rounded-xl text-sm font-semibold text-slate-600 hover:bg-slate-100 transition-colors">Vérifiés (148)</button>
 <button className="px-6 py-2.5 rounded-xl text-sm font-semibold text-slate-600 hover:bg-slate-100 transition-colors">Suspendus (5)</button>
 </div>
 </div>
@@ -110,7 +110,7 @@ const GestionDesArtisans = () => {
 <thead>
 <tr className="bg-slate-50">
 <th className="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">Artisan</th>
-<th className="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">MÃ©tier</th>
+<th className="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">Métier</th>
 <th className="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">Statut</th>
 <th className="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">Date Inscription</th>
 <th className="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider text-right">Actions</th>
@@ -134,7 +134,7 @@ const GestionDesArtisans = () => {
 <td className="px-6 py-5">
 <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-emerald-100 text-emerald-700">
 <span className="size-1.5 rounded-full bg-emerald-500"></span>
-                                            VÃ©rifiÃ©
+                                            Vérifié
                                         </span>
 </td>
 <td className="px-6 py-5">
@@ -176,7 +176,7 @@ const GestionDesArtisans = () => {
 </td>
 <td className="px-6 py-5">
 <div className="flex justify-end gap-2">
-<button className="px-3 py-1.5 bg-primary/10 text-primary text-xs font-bold rounded-lg hover:bg-primary/20 transition-colors">VÃ©rifier</button>
+<button className="px-3 py-1.5 bg-primary/10 text-primary text-xs font-bold rounded-lg hover:bg-primary/20 transition-colors">Vérifier</button>
 <button className="p-2 text-slate-400 hover:bg-slate-100 rounded-lg transition-colors">
 <span className="material-symbols-outlined text-lg">more_vert</span>
 </button>
@@ -200,7 +200,7 @@ const GestionDesArtisans = () => {
 <td className="px-6 py-5">
 <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-rose-100 text-rose-700">
 <span className="size-1.5 rounded-full bg-rose-500"></span>
-                                            RejetÃ©
+                                            Rejeté
                                         </span>
 </td>
 <td className="px-6 py-5">
@@ -208,7 +208,7 @@ const GestionDesArtisans = () => {
 </td>
 <td className="px-6 py-5">
 <div className="flex justify-end gap-2">
-<button className="px-3 py-1.5 bg-slate-100 text-slate-600 text-xs font-bold rounded-lg hover:bg-slate-200 transition-colors">RÃ©viser</button>
+<button className="px-3 py-1.5 bg-slate-100 text-slate-600 text-xs font-bold rounded-lg hover:bg-slate-200 transition-colors">Réviser</button>
 <button className="p-2 text-rose-500 hover:bg-rose-50 rounded-lg transition-colors">
 <span className="material-symbols-outlined text-lg">delete</span>
 </button>
@@ -232,7 +232,7 @@ const GestionDesArtisans = () => {
 <td className="px-6 py-5">
 <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-emerald-100 text-emerald-700">
 <span className="size-1.5 rounded-full bg-emerald-500"></span>
-                                            VÃ©rifiÃ©
+                                            Vérifié
                                         </span>
 </td>
 <td className="px-6 py-5">
@@ -254,7 +254,7 @@ const GestionDesArtisans = () => {
 </div>
 {/*  Pagination  */}
 <div className="px-6 py-4 bg-slate-50 border-t border-slate-100 flex items-center justify-between">
-<p className="text-xs font-medium text-slate-500 tracking-wide uppercase">Affichage de 1 Ã  4 sur 172 artisans</p>
+<p className="text-xs font-medium text-slate-500 tracking-wide uppercase">Affichage de 1 à 4 sur 172 artisans</p>
 <div className="flex gap-2">
 <button className="p-2 rounded-lg bg-white border border-slate-200 text-slate-500 disabled:opacity-50" disabled>
 <span className="material-symbols-outlined text-sm">chevron_left</span>

@@ -70,7 +70,7 @@ const AdminClients = () => {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div className="space-y-1">
             <h2 className="text-3xl font-black tracking-tight text-slate-900">Clients Inscrits</h2>
-            <p className="text-slate-500 font-medium">GÃ©rez et suivez les inscriptions sur votre plateforme.</p>
+            <p className="text-slate-500 font-medium">Gérez et suivez les inscriptions sur votre plateforme.</p>
           </div>
           <div className="flex gap-4">
             {/* Exporter CSV and Audit buttons removed */}
@@ -115,7 +115,7 @@ const AdminClients = () => {
                     </tr>
                   ))
                 ) : filteredClients.length === 0 ? (
-                  <tr><td colSpan="5" className="text-center py-20 text-slate-400 font-bold italic">Aucun client trouvÃ©</td></tr>
+                  <tr><td colSpan="5" className="text-center py-20 text-slate-400 font-bold italic">Aucun client trouvé</td></tr>
                 ) : currentItems.map((client) => (
 
                   <tr key={client.id} className="hover:bg-slate-50/50 transition-all group">
@@ -132,14 +132,14 @@ const AdminClients = () => {
                     </td>
                     <td className="px-8 py-6">
                       <div className="flex flex-col gap-1">
-                        <p className="text-sm font-bold text-slate-700">{client.phone || 'Non renseignÃ©'}</p>
+                        <p className="text-sm font-bold text-slate-700">{client.phone || 'Non renseigné'}</p>
                       </div>
                     </td>
                     <td className="px-8 py-6 text-sm font-bold text-slate-500">
                       {new Date(client.created_at).toLocaleDateString('fr-FR', { day: '2-digit', month: 'short', year: 'numeric' })}
                     </td>
                     <td className="px-8 py-6 text-sm font-bold text-slate-500">
-                      {client.address || 'AlgÃ©rie'}
+                      {client.address || 'Algérie'}
                     </td>
                     <td className="px-8 py-6 text-right">
                       <button 
@@ -160,7 +160,7 @@ const AdminClients = () => {
           {totalPages > 1 && (
             <div className="px-8 py-6 bg-slate-50/50 border-t border-slate-100 flex items-center justify-between">
               <p className="text-xs font-bold text-slate-500 uppercase tracking-widest">
-                Affichage de {indexOfFirstItem + 1} Ã  {Math.min(indexOfLastItem, filteredClients.length)} sur {filteredClients.length}
+                Affichage de {indexOfFirstItem + 1} à {Math.min(indexOfLastItem, filteredClients.length)} sur {filteredClients.length}
               </p>
               <div className="flex items-center gap-2">
                 <button

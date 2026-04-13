@@ -17,7 +17,7 @@ const ServiceDetailsPeinture = () => {
 <nav className="hidden md:flex items-center gap-8">
 <a className="text-sm font-semibold hover:text-primary transition-colors" href="#">Accueil</a>
 <a className="text-sm font-semibold text-primary" href="#">Services</a>
-<a className="text-sm font-semibold hover:text-primary transition-colors" href="#">RÃ©alisations</a>
+<a className="text-sm font-semibold hover:text-primary transition-colors" href="#">Réalisations</a>
 <a className="text-sm font-semibold hover:text-primary transition-colors" href="#">Blog</a>
 <a className="text-sm font-semibold hover:text-primary transition-colors" href="#">Contact</a>
 </nav>
@@ -42,10 +42,10 @@ const ServiceDetailsPeinture = () => {
 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
 <div className="absolute bottom-0 left-0 p-6 sm:p-10">
 <h1 className="text-3xl font-black leading-tight text-white sm:text-5xl">
-                                    Peinture IntÃ©rieure et DÃ©coration
+                                    Peinture Intérieure et Décoration
                                 </h1>
 <p className="mt-4 max-w-xl text-lg text-slate-200">
-                                    Transformez votre espace avec nos experts en dÃ©coration et peinture de haute qualitÃ©.
+                                    Transformez votre espace avec nos experts en décoration et peinture de haute qualité.
                                 </p>
 </div>
 </div>
@@ -83,21 +83,21 @@ const ServiceDetailsPeinture = () => {
 <div className="aspect-video w-full bg-cover bg-center transition-transform group-hover:scale-105" data-alt="Professional painting a white ceiling" ></div>
 <div className="p-4">
 <h3 className="font-bold text-lg">Plafonds</h3>
-<p className="text-sm text-slate-500 mt-1">Redonnez de la luminositÃ© Ã  vos piÃ¨ces.</p>
+<p className="text-sm text-slate-500 mt-1">Redonnez de la luminosité à vos pièces.</p>
 </div>
 </div>
 <div className="group relative overflow-hidden rounded-xl bg-white shadow-sm border border-primary/5 transition-all hover:shadow-md">
 <div className="aspect-video w-full bg-cover bg-center transition-transform group-hover:scale-105" data-alt="Elegant floral wallpaper being applied" ></div>
 <div className="p-4">
 <h3 className="font-bold text-lg">Papier peint</h3>
-<p className="text-sm text-slate-500 mt-1">Pose soignÃ©e de revÃªtements muraux.</p>
+<p className="text-sm text-slate-500 mt-1">Pose soignée de revÃªtements muraux.</p>
 </div>
 </div>
 <div className="group relative overflow-hidden rounded-xl bg-white shadow-sm border border-primary/5 transition-all hover:shadow-md">
 <div className="aspect-video w-full bg-cover bg-center transition-transform group-hover:scale-105" data-alt="Modern house exterior facade painting" ></div>
 <div className="p-4">
-<h3 className="font-bold text-lg">FaÃ§ade</h3>
-<p className="text-sm text-slate-500 mt-1">Protection et esthÃ©tique extÃ©rieure.</p>
+<h3 className="font-bold text-lg">Façade</h3>
+<p className="text-sm text-slate-500 mt-1">Protection et esthétique extérieure.</p>
 </div>
 </div>
 </div>
@@ -111,8 +111,8 @@ const ServiceDetailsPeinture = () => {
 <span className="material-symbols-outlined text-xl">verified</span>
 </div>
 <div>
-<h4 className="font-bold">Expertise CertifiÃ©e</h4>
-<p className="text-sm text-slate-600">Plus de 15 ans d'expÃ©rience dans le domaine de la rÃ©novation haut de gamme.</p>
+<h4 className="font-bold">Expertise Certifiée</h4>
+<p className="text-sm text-slate-600">Plus de 15 ans d'expérience dans le domaine de la rénovation haut de gamme.</p>
 </div>
 </div>
 <div className="flex items-start gap-4 p-4 rounded-xl bg-primary/5 border border-primary/10">
@@ -138,7 +138,7 @@ const ServiceDetailsPeinture = () => {
 <span className="material-symbols-outlined fill-1">star</span>
 <span className="material-symbols-outlined fill-1">star</span>
 </div>
-<p className="text-sm italic text-slate-600">"Un travail d'une prÃ©cision incroyable. L'Ã©quipe a Ã©tÃ© discrÃ¨te et trÃ¨s propre. Mon salon est mÃ©tamorphosÃ© !"</p>
+<p className="text-sm italic text-slate-600">"Un travail d'une précision incroyable. L'équipe a été discrète et très propre. Mon salon est métamorphosé !"</p>
 <div className="mt-4 flex items-center gap-3">
 <div className="h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold">JD</div>
 <span className="text-sm font-bold">Jean-Dupont</span>
@@ -152,7 +152,7 @@ const ServiceDetailsPeinture = () => {
 <span className="material-symbols-outlined fill-1">star</span>
 <span className="material-symbols-outlined fill-1">star</span>
 </div>
-<p className="text-sm italic text-slate-600">"Le devis a Ã©tÃ© respectÃ© Ã  la lettre et le dÃ©lai aussi. Je recommande vivement pour vos travaux de peinture."</p>
+<p className="text-sm italic text-slate-600">"Le devis a été respecté à la lettre et le délai aussi. Je recommande vivement pour vos travaux de peinture."</p>
 <div className="mt-4 flex items-center gap-3">
 <div className="h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold">SM</div>
 <span className="text-sm font-bold">Sophie Martin</span>
@@ -168,18 +168,18 @@ const ServiceDetailsPeinture = () => {
 <div className="rounded-xl border border-primary/20 bg-primary/5 p-6 shadow-sm">
 <h3 className="text-xl font-bold text-slate-900">Besoin d'un devis gratuit?</h3>
 <p className="mt-2 text-sm text-slate-600">
-                                Obtenez une estimation prÃ©cise pour vos travaux de peinture en moins de 24h.
+                                Obtenez une estimation précise pour vos travaux de peinture en moins de 24h.
                             </p>
 <button className="mt-6 w-full rounded-lg bg-primary py-3 text-sm font-bold text-white shadow-md hover:bg-primary/90 transition-all">
                                 Demander mon devis
                             </button>
 <p className="mt-4 text-center text-xs text-slate-500">
-<span className="material-symbols-outlined text-xs align-middle">schedule</span> RÃ©ponse garantie sous 24h
+<span className="material-symbols-outlined text-xs align-middle">schedule</span> Réponse garantie sous 24h
                             </p>
 </div>
 {/*  Mini Project Showcase  */}
 <div className="rounded-xl bg-white border border-primary/10 p-4 shadow-sm">
-<h4 className="font-bold mb-4">RÃ©alisations rÃ©centes</h4>
+<h4 className="font-bold mb-4">Réalisations récentes</h4>
 <div className="grid grid-cols-2 gap-2">
 <div className="aspect-square rounded-lg bg-cover bg-center" data-alt="Modern living room showcase" ></div>
 <div className="aspect-square rounded-lg bg-cover bg-center" data-alt="Dark blue accent wall decoration" ></div>
@@ -216,7 +216,7 @@ const ServiceDetailsPeinture = () => {
 <span className="material-symbols-outlined text-primary">format_paint</span>
 <span className="font-bold text-lg">Peinture</span>
 </div>
-<p className="text-sm text-slate-500">Â© 2024 Peinture &amp; DÃ©coration. Tous droits rÃ©servÃ©s.</p>
+<p className="text-sm text-slate-500">Â© 2024 Peinture &amp; Décoration. Tous droits réservés.</p>
 </div>
 </footer>
 </div>

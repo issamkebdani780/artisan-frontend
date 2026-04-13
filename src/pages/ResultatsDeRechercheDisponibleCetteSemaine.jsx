@@ -108,7 +108,7 @@ const ResultatsDeRechercheDisponibleCetteSemaine = () => {
 <div className="flex-1">
 <div className="mb-8">
 <h1 className="text-3xl font-bold text-slate-900">Artisans disponibles cette semaine</h1>
-<p className="text-slate-500 mt-2">Trouvez l'expert idÃ©al pour vos travaux urgents parmis nos professionnels certifiÃ©s.</p>
+<p className="text-slate-500 mt-2">Trouvez l'expert idéal pour vos travaux urgents parmis nos professionnels certifiés.</p>
 </div>
 {/*  Results Grid  */}
 <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
@@ -123,7 +123,7 @@ const ResultatsDeRechercheDisponibleCetteSemaine = () => {
 <div>
 <div className="flex items-center gap-1.5">
 <h3 className="font-bold text-lg text-slate-900">Jean Dupuis</h3>
-<span className="material-symbols-outlined text-primary text-lg" title="VÃ©rifiÃ©">verified</span>
+<span className="material-symbols-outlined text-primary text-lg" title="Vérifié">verified</span>
 </div>
 <p className="text-sm font-medium text-primary">Plomberie &amp; Chauffage</p>
 </div>
@@ -159,7 +159,7 @@ const ResultatsDeRechercheDisponibleCetteSemaine = () => {
 <h3 className="font-bold text-lg text-slate-900">Marc Lefebvre</h3>
 <span className="material-symbols-outlined text-primary text-lg">verified</span>
 </div>
-<p className="text-sm font-medium text-primary">Ã‰lectricitÃ© gÃ©nÃ©rale</p>
+<p className="text-sm font-medium text-primary">Ã‰lectricité générale</p>
 </div>
 </div>
 <div className="flex items-center gap-1 mb-4">
@@ -193,7 +193,7 @@ const ResultatsDeRechercheDisponibleCetteSemaine = () => {
 <h3 className="font-bold text-lg text-slate-900">Sophie Martin</h3>
 <span className="material-symbols-outlined text-primary text-lg">verified</span>
 </div>
-<p className="text-sm font-medium text-primary">Peinture &amp; DÃ©coration</p>
+<p className="text-sm font-medium text-primary">Peinture &amp; Décoration</p>
 </div>
 </div>
 <div className="flex items-center gap-1 mb-4">
@@ -341,9 +341,9 @@ const ResultatsDeRechercheDisponibleCetteSemaine = () => {
 <div>
 <h4 className="font-bold text-slate-900 mb-4">Plateforme</h4>
 <ul className="space-y-2 text-sm text-slate-600">
-<li><a className="hover:text-primary" href="#">Comment Ã§a marche</a></li>
-<li><a className="hover:text-primary" href="#">Garantie QualitÃ©</a></li>
-<li><a className="hover:text-primary" href="#">SÃ©curitÃ©</a></li>
+<li><a className="hover:text-primary" href="#">Comment ça marche</a></li>
+<li><a className="hover:text-primary" href="#">Garantie Qualité</a></li>
+<li><a className="hover:text-primary" href="#">Sécurité</a></li>
 <li><a className="hover:text-primary" href="#">Tarification</a></li>
 </ul>
 </div>
@@ -366,10 +366,10 @@ const ResultatsDeRechercheDisponibleCetteSemaine = () => {
 </ul>
 </div>
 <div>
-<h4 className="font-bold text-slate-900 mb-4">LÃ©gal</h4>
+<h4 className="font-bold text-slate-900 mb-4">Légal</h4>
 <ul className="space-y-2 text-sm text-slate-600">
-<li><a className="hover:text-primary" href="#">Mentions lÃ©gales</a></li>
-<li><a className="hover:text-primary" href="#">ConfidentialitÃ©</a></li>
+<li><a className="hover:text-primary" href="#">Mentions légales</a></li>
+<li><a className="hover:text-primary" href="#">Confidentialité</a></li>
 <li><a className="hover:text-primary" href="#">Cookies</a></li>
 <li><a className="hover:text-primary" href="#">CGU</a></li>
 </ul>
@@ -382,7 +382,7 @@ const ResultatsDeRechercheDisponibleCetteSemaine = () => {
 <path d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z"></path>
 </svg>
 </div>
-<p className="text-sm text-slate-500">Â© 2024 ArtisanDirect. Tous droits rÃ©servÃ©s.</p>
+<p className="text-sm text-slate-500">Â© 2024 ArtisanDirect. Tous droits réservés.</p>
 </div>
 <div className="flex gap-4">
 <a className="w-10 h-10 flex items-center justify-center rounded-full bg-slate-100 text-slate-600 hover:bg-primary hover:text-white transition-all" href="#">

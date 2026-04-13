@@ -17,7 +17,7 @@ const InstallationRobinetterie = () => {
 <nav className="hidden md:flex items-center gap-8">
 <a className="text-slate-600 text-sm font-medium hover:text-primary transition-colors" href="#">Services</a>
 <a className="text-slate-600 text-sm font-medium hover:text-primary transition-colors" href="#">Tarifs</a>
-<a className="text-slate-600 text-sm font-medium hover:text-primary transition-colors" href="#">RÃ©alisations</a>
+<a className="text-slate-600 text-sm font-medium hover:text-primary transition-colors" href="#">Réalisations</a>
 <a className="text-slate-600 text-sm font-medium hover:text-primary transition-colors" href="#">Blog</a>
 </nav>
 </div>
@@ -47,7 +47,7 @@ const InstallationRobinetterie = () => {
 </div>
 <div>
 <h3 className="text-slate-900 font-bold">Devis Gratuit</h3>
-<p className="text-slate-500 text-xs">RÃ©ponse en moins de 2h</p>
+<p className="text-slate-500 text-xs">Réponse en moins de 2h</p>
 </div>
 </div>
 <nav className="flex flex-col gap-1">
@@ -71,7 +71,7 @@ const InstallationRobinetterie = () => {
 <div className="bg-slate-900 rounded-xl p-6 text-white overflow-hidden relative">
 <div className="relative z-10">
 <h4 className="font-bold text-lg mb-2">Urgence ?</h4>
-<p className="text-slate-300 text-sm mb-4">Intervention immÃ©diate 24/7 pour vos fuites.</p>
+<p className="text-slate-300 text-sm mb-4">Intervention immédiate 24/7 pour vos fuites.</p>
 <a className="inline-flex items-center gap-2 text-primary font-bold" href="tel:0123456789">
 <span className="material-symbols-outlined">call</span> 01 23 45 67 89
                             </a>
@@ -90,11 +90,11 @@ const InstallationRobinetterie = () => {
 <span className="text-slate-900 font-medium">Installation Robinetterie</span>
 </nav>
 <div className="relative h-[320px] rounded-2xl overflow-hidden mb-10 group">
-<img className="w-full h-full object-cover" data-alt="Robinet moderne chromÃ© installÃ© sur un Ã©vier" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6fzNIPNRL_d8YszpT-5_LFm9eaXMzUN0-MxNw_EKGCQt95tPg36Dq9BB2aYjP5KhFWILR4b6-_4ouJEaKgsfQWXDPl-x8iuU9JMwDPfbWQg1yTS1YS29F2YtmxNfs2EVWYQfoNcwJNFPF9cv0XNb1TkU8p2IRlDVaPnwLvNJewJJVSZqQZAtk8HzmyieuvYpFYkkMduX52U_ztwEavVp38NWleqRbfYW0hvSKOjhZbDgM5__aooZOqMlKjJNq8qCV4X7su0g7DbzG"/>
+<img className="w-full h-full object-cover" data-alt="Robinet moderne chromé installé sur un évier" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6fzNIPNRL_d8YszpT-5_LFm9eaXMzUN0-MxNw_EKGCQt95tPg36Dq9BB2aYjP5KhFWILR4b6-_4ouJEaKgsfQWXDPl-x8iuU9JMwDPfbWQg1yTS1YS29F2YtmxNfs2EVWYQfoNcwJNFPF9cv0XNb1TkU8p2IRlDVaPnwLvNJewJJVSZqQZAtk8HzmyieuvYpFYkkMduX52U_ztwEavVp38NWleqRbfYW0hvSKOjhZbDgM5__aooZOqMlKjJNq8qCV4X7su0g7DbzG"/>
 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent flex flex-col justify-end p-8">
 <span className="bg-primary text-white text-xs font-bold px-3 py-1 rounded-full w-fit mb-3">SERVICE PREMIUM</span>
 <h1 className="text-white text-4xl font-extrabold tracking-tight">Installation de Robinetterie</h1>
-<p className="text-slate-200 mt-2 max-w-xl">AmÃ©liorez votre confort avec une installation professionnelle de mitigeurs, mÃ©langeurs et colonnes de douche.</p>
+<p className="text-slate-200 mt-2 max-w-xl">Améliorez votre confort avec une installation professionnelle de mitigeurs, mélangeurs et colonnes de douche.</p>
 </div>
 </div>
 <section className="mb-12" id="types">
@@ -105,7 +105,7 @@ const InstallationRobinetterie = () => {
 <span className="material-symbols-outlined text-primary">faucet</span>
 </div>
 <h3 className="font-bold mb-2">Standard</h3>
-<p className="text-sm text-slate-500 mb-4">Mitigeurs classiques pour Ã©vier ou lavabo. SimplicitÃ© et efficacitÃ©.</p>
+<p className="text-sm text-slate-500 mb-4">Mitigeurs classiques pour évier ou lavabo. Simplicité et efficacité.</p>
 <p className="text-primary font-bold">Ã€ partir de 89â‚¬</p>
 </div>
 <div className="bg-white p-6 rounded-xl border border-slate-200 hover:border-primary transition-colors">
@@ -113,14 +113,14 @@ const InstallationRobinetterie = () => {
 <span className="material-symbols-outlined text-primary">inventory_2</span>
 </div>
 <h3 className="font-bold mb-2">Pack Installation</h3>
-<p className="text-sm text-slate-500 mb-4">MatÃ©riel inclus + pose. La solution clÃ© en main pour votre cuisine ou bain.</p>
+<p className="text-sm text-slate-500 mb-4">Matériel inclus + pose. La solution clé en main pour votre cuisine ou bain.</p>
 <p className="text-primary font-bold">Ã€ partir de 159â‚¬</p>
 </div>
 <div className="bg-white p-6 rounded-xl border border-slate-200 hover:border-primary transition-colors">
 <div className="size-12 rounded-lg bg-slate-100 flex items-center justify-center mb-4">
 <span className="material-symbols-outlined text-primary">water_drop</span>
 </div>
-<h3 className="font-bold mb-2">SpÃ©cialitÃ©</h3>
+<h3 className="font-bold mb-2">Spécialité</h3>
 <p className="text-sm text-slate-500 mb-4">Robinets thermostatiques, colonnes de douche hydromassantes, designs haut de gamme.</p>
 <p className="text-primary font-bold">Sur devis</p>
 </div>
@@ -136,7 +136,7 @@ const InstallationRobinetterie = () => {
 <tr className="bg-slate-50">
 <th className="p-4 text-sm font-bold text-slate-600">Prestation</th>
 <th className="p-4 text-sm font-bold text-slate-600">Main d'Ã…â€œuvre</th>
-<th className="p-4 text-sm font-bold text-slate-600">DurÃ©e estimÃ©e</th>
+<th className="p-4 text-sm font-bold text-slate-600">Durée estimée</th>
 </tr>
 </thead>
 <tbody className="divide-y divide-slate-200">
@@ -146,7 +146,7 @@ const InstallationRobinetterie = () => {
 <td className="p-4 text-sm text-slate-500">1h00</td>
 </tr>
 <tr>
-<td className="p-4 text-sm">Pose mÃ©langeur baignoire</td>
+<td className="p-4 text-sm">Pose mélangeur baignoire</td>
 <td className="p-4 text-sm font-semibold">119â‚¬ TTC</td>
 <td className="p-4 text-sm text-slate-500">1h30</td>
 </tr>
@@ -159,12 +159,12 @@ const InstallationRobinetterie = () => {
 </table>
 <div className="p-4 bg-slate-50 flex items-center gap-2">
 <span className="material-symbols-outlined text-slate-500 text-sm">info</span>
-<p className="text-[10px] text-slate-500">Les tarifs incluent le dÃ©placement en zone urbaine. Hors fourniture du matÃ©riel si non prÃ©cisÃ©.</p>
+<p className="text-[10px] text-slate-500">Les tarifs incluent le déplacement en zone urbaine. Hors fourniture du matériel si non précisé.</p>
 </div>
 </div>
 </section>
 <section className="mb-12" id="experts">
-<h2 className="text-2xl font-bold mb-6 text-slate-900">Nos experts Ã  proximitÃ©</h2>
+<h2 className="text-2xl font-bold mb-6 text-slate-900">Nos experts à proximité</h2>
 <div className="flex flex-col gap-4">
 <div className="flex items-center gap-4 bg-white p-4 rounded-xl border border-slate-200">
 <img className="size-16 rounded-full object-cover" data-alt="Portrait de Jean-Michel, plombier expert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaO-i_uyPEzFj7WVifpLFeOJ_ejrtHuJQQZLpqMsBnNl-ntzzbu4uyyJIIeZS3TEiSsmCa9YodWpwu50maKKc5qN0TVHGTYvL4oK2KdPxMyAJfIbgfQyOCS6Qj6KdowKku6goTFmiYq_SUt_N5KQffxm0T1mg3ciuOWLT1dMowlo3AxnOwFjMXmeA05hNwmoQDb6Sg8lRtT3W3hQ6CzKHgsBtwXVaPBGTXsKJl-TVfolyXi6dKa4kokbMt5VYbD4jWt5uM_mE_zP24"/>
@@ -179,12 +179,12 @@ const InstallationRobinetterie = () => {
 <p className="text-xs text-slate-500">Expert Robinetterie &amp; Sanitaire â€¢ Disponible aujourd'hui</p>
 <div className="flex items-center gap-2 mt-2">
 <span className="text-[10px] bg-slate-100 px-2 py-0.5 rounded">RGE</span>
-<span className="text-[10px] bg-slate-100 px-2 py-0.5 rounded">Garantie DÃ©cennale</span>
+<span className="text-[10px] bg-slate-100 px-2 py-0.5 rounded">Garantie Décennale</span>
 </div>
 </div>
 </div>
 <div className="flex items-center gap-4 bg-white p-4 rounded-xl border border-slate-200">
-<img className="size-16 rounded-full object-cover" data-alt="Portrait de Marc L., plombier qualifiÃ©" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeqmkeWH6bsIJiSMOCesw4cSQVWF7Yxa-wAhUjllg3gQ5d3xnf7I_P9no1c7a1Q2GIxcYLs_ksA7EPqKNh5wV25d8o-v8Y55V0T3MIqSV1ijyQ2CFXYZV45O9NpjGu4y1A5RtGyb7LASnkvEKTekPyTQhDBJl71s1quxYir854PAa4KUigkBhnpIeWG72uu_0xY7WXpcT8MJrQz8NyMZIlbuQbmPidVmDEHsWeOWSP8_SrIjzvS2awqBvNhzym66dOnz3-ZZcP5gRV"/>
+<img className="size-16 rounded-full object-cover" data-alt="Portrait de Marc L., plombier qualifié" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeqmkeWH6bsIJiSMOCesw4cSQVWF7Yxa-wAhUjllg3gQ5d3xnf7I_P9no1c7a1Q2GIxcYLs_ksA7EPqKNh5wV25d8o-v8Y55V0T3MIqSV1ijyQ2CFXYZV45O9NpjGu4y1A5RtGyb7LASnkvEKTekPyTQhDBJl71s1quxYir854PAa4KUigkBhnpIeWG72uu_0xY7WXpcT8MJrQz8NyMZIlbuQbmPidVmDEHsWeOWSP8_SrIjzvS2awqBvNhzym66dOnz3-ZZcP5gRV"/>
 <div className="flex-1">
 <div className="flex items-center justify-between">
 <h4 className="font-bold">Marc L.</h4>
@@ -193,7 +193,7 @@ const InstallationRobinetterie = () => {
 <span className="text-xs font-bold ml-1">4.8 (89 avis)</span>
 </div>
 </div>
-<p className="text-xs text-slate-500">SpÃ©cialiste installation cuisine â€¢ Prochain RDV demain</p>
+<p className="text-xs text-slate-500">Spécialiste installation cuisine â€¢ Prochain RDV demain</p>
 <div className="flex items-center gap-2 mt-2">
 <span className="text-[10px] bg-slate-100 px-2 py-0.5 rounded">Qualibat</span>
 </div>
@@ -202,7 +202,7 @@ const InstallationRobinetterie = () => {
 </div>
 </section>
 <section className="mb-12" id="faq">
-<h2 className="text-2xl font-bold mb-6 text-slate-900">Questions FrÃ©quentes</h2>
+<h2 className="text-2xl font-bold mb-6 text-slate-900">Questions Fréquentes</h2>
 <div className="space-y-4">
 <details className="group bg-white border border-slate-200 rounded-xl overflow-hidden" open="">
 <summary className="flex items-center justify-between p-4 cursor-pointer font-bold text-sm select-none">
@@ -210,16 +210,16 @@ const InstallationRobinetterie = () => {
                                     <span className="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
 </summary>
 <div className="p-4 pt-0 text-sm text-slate-500 leading-relaxed border-t border-slate-50">
-                                    En moyenne, une installation standard prend entre 45 minutes et 1h30. Cela inclut la dÃ©pose de l'ancien matÃ©riel, le nettoyage de la portÃ©e de joint, et la mise en service du nouveau robinet avec test d'Ã©tanchÃ©itÃ©.
+                                    En moyenne, une installation standard prend entre 45 minutes et 1h30. Cela inclut la dépose de l'ancien matériel, le nettoyage de la portée de joint, et la mise en service du nouveau robinet avec test d'étanchéité.
                                 </div>
 </details>
 <details className="group bg-white border border-slate-200 rounded-xl overflow-hidden">
 <summary className="flex items-center justify-between p-4 cursor-pointer font-bold text-sm select-none">
-                                    Fournissez-vous le matÃ©riel ou dois-je l'acheter ?
+                                    Fournissez-vous le matériel ou dois-je l'acheter ?
                                     <span className="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
 </summary>
 <div className="p-4 pt-0 text-sm text-slate-500 leading-relaxed border-t border-slate-50">
-                                    Nous proposons les deux options. Nous pouvons installer le modÃ¨le que vous avez dÃ©jÃ  achetÃ©, ou vous proposer une sÃ©lection de mitigeurs professionnels de haute qualitÃ© avec garantie fabricant.
+                                    Nous proposons les deux options. Nous pouvons installer le modèle que vous avez déjà acheté, ou vous proposer une sélection de mitigeurs professionnels de haute qualité avec garantie fabricant.
                                 </div>
 </details>
 <details className="group bg-white border border-slate-200 rounded-xl overflow-hidden">
@@ -228,7 +228,7 @@ const InstallationRobinetterie = () => {
                                     <span className="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
 </summary>
 <div className="p-4 pt-0 text-sm text-slate-500 leading-relaxed border-t border-slate-50">
-                                    Oui, toutes nos installations sont couvertes par notre garantie de parfait achÃ¨vement et notre assurance responsabilitÃ© civile professionnelle. En cas de fuite sur les raccords effectuÃ©s, nous intervenons gratuitement.
+                                    Oui, toutes nos installations sont couvertes par notre garantie de parfait achèvement et notre assurance responsabilité civile professionnelle. En cas de fuite sur les raccords effectués, nous intervenons gratuitement.
                                 </div>
 </details>
 </div>
@@ -247,10 +247,10 @@ const InstallationRobinetterie = () => {
 <div>
 <h5 className="text-white font-bold mb-6">Services</h5>
 <ul className="space-y-4 text-sm">
-<li><a className="hover:text-primary transition-colors" href="#">DÃ©pannage Urgence</a></li>
+<li><a className="hover:text-primary transition-colors" href="#">Dépannage Urgence</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Installation Robinetterie</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Chauffe-eau</a></li>
-<li><a className="hover:text-primary transition-colors" href="#">DÃ©bouchage</a></li>
+<li><a className="hover:text-primary transition-colors" href="#">Débouchage</a></li>
 </ul>
 </div>
 <div>
@@ -258,7 +258,7 @@ const InstallationRobinetterie = () => {
 <ul className="space-y-4 text-sm">
 <li><a className="hover:text-primary transition-colors" href="#">Ã€ Propos</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Recrutement</a></li>
-<li><a className="hover:text-primary transition-colors" href="#">Mentions LÃ©gales</a></li>
+<li><a className="hover:text-primary transition-colors" href="#">Mentions Légales</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Contact</a></li>
 </ul>
 </div>
@@ -271,10 +271,10 @@ const InstallationRobinetterie = () => {
 </div>
 </div>
 <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
-<p>Â© 2024 PlumbPro France. Tous droits rÃ©servÃ©s.</p>
+<p>Â© 2024 PlumbPro France. Tous droits réservés.</p>
 <div className="flex gap-6">
 <a href="#">Cookies</a>
-<a href="#">ConfidentialitÃ©</a>
+<a href="#">Confidentialité</a>
 </div>
 </div>
 </footer>

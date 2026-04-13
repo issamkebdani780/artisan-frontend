@@ -9,7 +9,7 @@ const AdminConfigurationPlateforme = () => {
         {/* Header Section */}
         <div className="mb-12">
           <h2 className="text-3xl font-bold tracking-tight text-slate-900 mb-2">Configuration de la Plateforme</h2>
-          <p className="text-slate-500 max-w-2xl">GÃ©rez l'identitÃ© visuelle, les prÃ©fÃ©rences linguistiques et les paramÃ¨tres opÃ©rationnels de votre instance Violet Protocol.</p>
+          <p className="text-slate-500 max-w-2xl">Gérez l'identité visuelle, les préférences linguistiques et les paramètres opérationnels de votre instance Violet Protocol.</p>
         </div>
 
         {/* Tabbed Navigation */}
@@ -33,14 +33,14 @@ const AdminConfigurationPlateforme = () => {
                   <span className="material-symbols-outlined text-2xl">language</span>
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold">Langue & RÃ©gion</h3>
-                  <p className="text-xs text-slate-500">DÃ©finissez la langue par dÃ©faut de l'interface</p>
+                  <h3 className="text-lg font-bold">Langue & Région</h3>
+                  <p className="text-xs text-slate-500">Définissez la langue par défaut de l'interface</p>
                 </div>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <button className="flex flex-col items-center justify-center p-4 rounded-lg border-2 border-indigo-600 bg-indigo-50 transition-all">
                   <span className="text-2xl mb-2">ðŸ‡«ðŸ‡·</span>
-                  <span className="text-sm font-semibold">FranÃ§ais</span>
+                  <span className="text-sm font-semibold">Français</span>
                   <span className="text-[10px] text-indigo-600 uppercase font-bold mt-1">Actif</span>
                 </button>
                 <button className="flex flex-col items-center justify-center p-4 rounded-lg border-2 border-transparent bg-slate-50 hover:bg-slate-100 transition-all">
@@ -62,8 +62,8 @@ const AdminConfigurationPlateforme = () => {
                     <span className="material-symbols-outlined text-2xl">category</span>
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold">CatÃ©gories de Services</h3>
-                    <p className="text-xs text-slate-500">GÃ©rer les types de services opÃ©rationnels</p>
+                    <h3 className="text-lg font-bold">Catégories de Services</h3>
+                    <p className="text-xs text-slate-500">Gérer les types de services opérationnels</p>
                   </div>
                 </div>
                 <button className="text-indigo-600 text-sm font-bold flex items-center hover:opacity-80">
@@ -72,7 +72,7 @@ const AdminConfigurationPlateforme = () => {
                 </button>
               </div>
               <div className="space-y-3">
-                {['Curation Digitale', 'Audit de DonnÃ©es', 'Support Client'].map((cat, i) => (
+                {['Curation Digitale', 'Audit de Données', 'Support Client'].map((cat, i) => (
                   <div key={i} className="flex items-center justify-between p-4 bg-slate-50 rounded-lg group hover:bg-slate-100 transition-colors">
                     <div className="flex items-center space-x-3">
                       <div className={`w-2 h-2 rounded-full ${i === 0 ? 'bg-indigo-600' : i === 1 ? 'bg-orange-500' : 'bg-slate-400'}`}></div>
@@ -101,7 +101,7 @@ const AdminConfigurationPlateforme = () => {
                     <div className="w-11 h-6 bg-white/20 rounded-full peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-white/40"></div>
                   </div>
                 </div>
-                <p className="text-white/80 text-sm leading-relaxed mb-6">Activez ce mode pour suspendre l'accÃ¨s public. Les administrateurs gardent un accÃ¨s complet.</p>
+                <p className="text-white/80 text-sm leading-relaxed mb-6">Activez ce mode pour suspendre l'accès public. Les administrateurs gardent un accès complet.</p>
                 <div className="flex items-center space-x-2 text-xs font-bold uppercase tracking-widest bg-white/10 w-fit px-3 py-1 rounded-full">
                   <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
                   <span>Plateforme en ligne</span>
@@ -149,7 +149,7 @@ const AdminConfigurationPlateforme = () => {
                 <span className="material-symbols-outlined text-indigo-600 mt-1">lightbulb</span>
                 <div>
                   <p className="text-sm font-bold mb-1 text-slate-900">Conseil d'optimisation</p>
-                  <p className="text-xs text-slate-500 leading-relaxed">Changer la couleur primaire mettra Ã  jour instantanÃ©ment tous les composants pour maintenir la cohÃ©rence de la marque.</p>
+                  <p className="text-xs text-slate-500 leading-relaxed">Changer la couleur primaire mettra à jour instantanément tous les composants pour maintenir la cohérence de la marque.</p>
                 </div>
               </div>
             </div>

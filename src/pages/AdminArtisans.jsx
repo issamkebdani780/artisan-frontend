@@ -41,7 +41,7 @@ const AdminArtisans = () => {
       await apiService.verifyArtisan(id);
       setArtisans(artisans.map(a => a.id === id ? { ...a, is_verified: 1 } : a));
     } catch (err) {
-      alert('Ã‰chec de la vÃ©rification');
+      alert('Ã‰chec de la vérification');
     }
   };
 
@@ -56,7 +56,7 @@ const AdminArtisans = () => {
   };
 
   const handleDelete = async (id) => {
-    if (!window.confirm('Voulez-vous vraiment supprimer ce compte artisan ? Cette action est irrÃ©versible.')) return;
+    if (!window.confirm('Voulez-vous vraiment supprimer ce compte artisan ? Cette action est irréversible.')) return;
     try {
       await apiService.deleteUser(id);
       setArtisans(artisans.filter(a => a.id !== id));
@@ -75,8 +75,8 @@ const AdminArtisans = () => {
     
     if (filter === 'Tous') return true;
     if (filter === 'En attente') return a.is_verified === 0;
-    if (filter === 'VÃ©rifiÃ©s') return a.is_verified === 1;
-    if (filter === 'RefusÃ©s') return a.is_verified === -1;
+    if (filter === 'Vérifiés') return a.is_verified === 1;
+    if (filter === 'Refusés') return a.is_verified === -1;
     return true;
   });
 
@@ -97,7 +97,7 @@ const AdminArtisans = () => {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
           <div>
             <h2 className="text-3xl font-black text-slate-900 tracking-tight font-[Outfit,sans-serif]">Annuaire des Artisans</h2>
-            <p className="text-slate-500 mt-1 font-medium">GÃ©rez et vÃ©rifiez les professionnels inscrits sur votre plateforme.</p>
+            <p className="text-slate-500 mt-1 font-medium">Gérez et vérifiez les professionnels inscrits sur votre plateforme.</p>
           </div>
           {/* Exporter CSV button removed */}
 
@@ -105,7 +105,7 @@ const AdminArtisans = () => {
 
         {/* Tabs / Filters */}
         <div className="flex bg-white/50 p-1.5 rounded-3xl border border-slate-200 w-fit">
-          {['Tous', 'En attente', 'VÃ©rifiÃ©s', 'RefusÃ©s'].map((tab) => (
+          {['Tous', 'En attente', 'Vérifiés', 'Refusés'].map((tab) => (
             <button
               key={tab}
               onClick={() => setFilter(tab)}
@@ -128,7 +128,7 @@ const AdminArtisans = () => {
               <thead>
                 <tr className="text-left bg-slate-50/50">
                   <th className="px-8 py-5 text-[10px] font-black text-slate-400 uppercase tracking-widest border-b border-slate-100">Artisan</th>
-                  <th className="px-8 py-5 text-[10px] font-black text-slate-400 uppercase tracking-widest border-b border-slate-100">SpÃ©cialitÃ©</th>
+                  <th className="px-8 py-5 text-[10px] font-black text-slate-400 uppercase tracking-widest border-b border-slate-100">Spécialité</th>
                   <th className="px-8 py-5 text-[10px] font-black text-slate-400 uppercase tracking-widest border-b border-slate-100">Statut</th>
                   <th className="px-8 py-5 text-[10px] font-black text-slate-400 uppercase tracking-widest border-b border-slate-100">Ã‰valuation</th>
                   <th className="px-8 py-5 text-[10px] font-black text-slate-400 uppercase tracking-widest border-b border-slate-100">Inscrit le</th>
@@ -143,7 +143,7 @@ const AdminArtisans = () => {
                     </tr>
                   ))
                 ) : filteredArtisans.length === 0 ? (
-                  <tr><td colSpan="6" className="text-center py-20 text-slate-400 font-bold italic font-[Outfit,sans-serif]">Aucun artisan trouvÃ©</td></tr>
+                  <tr><td colSpan="6" className="text-center py-20 text-slate-400 font-bold italic font-[Outfit,sans-serif]">Aucun artisan trouvé</td></tr>
                 ) : currentItems.map((artisan) => (
 
                   <tr key={artisan.id} className="hover:bg-slate-50/50 transition-colors group font-[Outfit,sans-serif]">
@@ -159,11 +159,11 @@ const AdminArtisans = () => {
                       </div>
                     </td>
                     <td className="px-8 py-6 font-bold text-sm text-slate-600">
-                      {(artisan.specialty || 'GÃ©nÃ©ral').replace(/Ã©/g, 'E').replace(/Ã¨/g, 'E').replace(/Ã /g, 'A').replace(/Ãƒ/g, 'E')}
+                      {(artisan.specialty || 'Général').replace(/é/g, 'E').replace(/è/g, 'E').replace(/à/g, 'A').replace(/Ãƒ/g, 'E')}
                     </td>
                     <td className="px-8 py-6">
                       <span className={`px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-tighter ${artisan.is_verified === 1 ? 'bg-emerald-100 text-emerald-700' : artisan.is_verified === -1 ? 'bg-rose-100 text-rose-700' : 'bg-amber-100 text-amber-700'}`}>
-                        {artisan.is_verified === 1 ? 'VÃ©rifiÃ©' : artisan.is_verified === -1 ? 'RefusÃ©' : 'En attente'}
+                        {artisan.is_verified === 1 ? 'Vérifié' : artisan.is_verified === -1 ? 'Refusé' : 'En attente'}
                       </span>
                     </td>
                     <td className="px-8 py-6">
@@ -194,7 +194,7 @@ const AdminArtisans = () => {
                             <button 
                               onClick={() => handleVerify(artisan.id)}
                               className="p-2 text-emerald-600 hover:bg-emerald-50 rounded-xl transition-colors"
-                              title="VÃ©rifier"
+                              title="Vérifier"
                             >
                               <span className="material-symbols-outlined font-bold">check_circle</span>
                             </button>
@@ -226,7 +226,7 @@ const AdminArtisans = () => {
           {totalPages > 1 && (
             <div className="px-8 py-6 bg-slate-50/50 border-t border-slate-100 flex items-center justify-between">
               <p className="text-xs font-bold text-slate-500 uppercase tracking-widest">
-                Affichage de {indexOfFirstItem + 1} Ã  {Math.min(indexOfLastItem, filteredArtisans.length)} sur {filteredArtisans.length}
+                Affichage de {indexOfFirstItem + 1} à {Math.min(indexOfLastItem, filteredArtisans.length)} sur {filteredArtisans.length}
               </p>
               <div className="flex items-center gap-2">
                 <button

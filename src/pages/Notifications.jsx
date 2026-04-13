@@ -47,7 +47,7 @@ const Notifications = () => {
 </a>
 <a className="flex items-center gap-3 px-3 py-2.5 text-slate-600 hover:bg-slate-50 rounded-lg transition-colors" href="#">
 <span className="material-symbols-outlined">assignment</span>
-<span className="text-sm font-medium">Gestion des tÃ¢ches</span>
+<span className="text-sm font-medium">Gestion des tâches</span>
 </a>
 <a className="flex items-center gap-3 px-3 py-2.5 text-slate-600 hover:bg-slate-50 rounded-lg transition-colors" href="#">
 <span className="material-symbols-outlined">inventory_2</span>
@@ -63,7 +63,7 @@ const Notifications = () => {
 </a>
 <a className="flex items-center gap-3 px-3 py-2.5 text-slate-600 hover:bg-slate-50 rounded-lg transition-colors" href="#">
 <span className="material-symbols-outlined">settings</span>
-<span className="text-sm font-medium">ParamÃ¨tres</span>
+<span className="text-sm font-medium">Paramètres</span>
 </a>
 </div>
 <div className="mt-auto p-4 bg-slate-50 rounded-xl border border-slate-100">
@@ -78,7 +78,7 @@ const Notifications = () => {
 <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
 <div>
 <h1 className="text-3xl font-black text-slate-900 tracking-tight">Centre de Notifications</h1>
-<p className="text-slate-500 mt-1">GÃ©rez vos alertes et l'historique de votre activitÃ©.</p>
+<p className="text-slate-500 mt-1">Gérez vos alertes et l'historique de votre activité.</p>
 </div>
 <div className="flex items-center gap-3">
 <button className="flex items-center gap-2 px-4 py-2 text-sm font-bold text-slate-600 bg-white border border-slate-200 rounded-lg hover:bg-slate-50 transition-colors">
@@ -107,7 +107,7 @@ const Notifications = () => {
     Messages
   </button>
 <button className="whitespace-nowrap px-4 py-2 rounded-full text-sm font-medium bg-white border border-slate-200 text-slate-600 hover:border-primary/50 hover:bg-primary/5 transition-colors">
-    SystÃ¨me
+    Système
   </button>
 </div>
 {/*  Notifications List  */}
@@ -129,7 +129,7 @@ const Notifications = () => {
 <h4 className="text-base font-bold text-slate-900">Nouvel avis client</h4>
 <span className="text-xs text-slate-500">Il y a 2 heures</span>
 </div>
-<p className="text-sm text-slate-600">Vous avez reÃ§u une note de <span className="font-bold">5 Ã©toiles</span> pour "<span className="italic">BibliothÃ¨que en noyer sur mesure</span>" de <span className="text-primary font-medium">Jane Doe</span>.</p>
+<p className="text-sm text-slate-600">Vous avez reçu une note de <span className="font-bold">5 étoiles</span> pour "<span className="italic">Bibliothèque en noyer sur mesure</span>" de <span className="text-primary font-medium">Jane Doe</span>.</p>
 </div>
 <div className="flex flex-col items-center gap-2">
 <div className="size-2.5 bg-primary rounded-full"></div>
@@ -148,15 +148,15 @@ const Notifications = () => {
 <h4 className="text-base font-bold text-slate-900">Nouveau message</h4>
 <span className="text-xs text-slate-500">Il y a 5 heures</span>
 </div>
-<p className="text-sm text-slate-600">Le client <span className="text-primary font-medium">Michael Smith</span> vous a envoyÃ© un message concernant "<span className="italic">RÃ©novation de faÃ§ades de cuisine</span>".</p>
+<p className="text-sm text-slate-600">Le client <span className="text-primary font-medium">Michael Smith</span> vous a envoyé un message concernant "<span className="italic">Rénovation de façades de cuisine</span>".</p>
 <div className="mt-3 flex flex-col gap-3">
 <button className="w-fit px-4 py-1.5 text-xs font-bold text-primary bg-primary/10 rounded-lg hover:bg-primary/20 transition-colors" onclick="this.parentElement.nextElementSibling.classList.toggle('max-h-0'); this.parentElement.nextElementSibling.classList.toggle('mt-3');">
-    RÃ©pondre
+    Répondre
   </button>
 </div>
 <div className="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
 <div className="flex gap-2 p-1">
-<input className="flex-1 h-9 px-3 text-xs border border-slate-200 bg-white rounded-lg focus:ring-1 focus:ring-primary focus:border-primary transition-all" placeholder="Ã‰crire une rÃ©ponse rapide..." type="text"/>
+<input className="flex-1 h-9 px-3 text-xs border border-slate-200 bg-white rounded-lg focus:ring-1 focus:ring-primary focus:border-primary transition-all" placeholder="Ã‰crire une réponse rapide..." type="text"/>
 <button className="flex items-center justify-center size-9 rounded-lg border border-slate-200 text-slate-500 hover:text-primary hover:bg-primary/5 transition-all" title="Joindre une image">
 <span className="material-symbols-outlined text-xl">photo_camera</span>
 </button>
@@ -188,10 +188,10 @@ const Notifications = () => {
 </div>
 <div className="flex-1 min-w-0">
 <div className="flex items-center justify-between mb-1">
-<h4 className="text-base font-bold text-slate-900">Projet terminÃ©</h4>
+<h4 className="text-base font-bold text-slate-900">Projet terminé</h4>
 <span className="text-xs text-slate-500">Hier, 14:20</span>
 </div>
-<p className="text-sm text-slate-600">Le projet "<span className="italic text-slate-900">Restauration de chaise ancienne</span>" a Ã©tÃ© marquÃ© comme terminÃ©.</p>
+<p className="text-sm text-slate-600">Le projet "<span className="italic text-slate-900">Restauration de chaise ancienne</span>" a été marqué comme terminé.</p>
 </div>
 <button className="opacity-0 group-hover:opacity-100 transition-opacity text-slate-400 hover:text-slate-600">
 <span className="material-symbols-outlined text-lg">close</span>
@@ -204,10 +204,10 @@ const Notifications = () => {
 </div>
 <div className="flex-1 min-w-0">
 <div className="flex items-center justify-between mb-1">
-<h4 className="text-base font-bold text-slate-900">Mise Ã  jour du systÃ¨me</h4>
+<h4 className="text-base font-bold text-slate-900">Mise à jour du système</h4>
 <span className="text-xs text-slate-500">Hier, 09:05</span>
 </div>
-<p className="text-sm text-slate-600">Votre profil a Ã©tÃ© vÃ©rifiÃ© avec succÃ¨s. Vous pouvez dÃ©sormais rÃ©pondre Ã  plus d'appels d'offres.</p>
+<p className="text-sm text-slate-600">Votre profil a été vérifié avec succès. Vous pouvez désormais répondre à plus d'appels d'offres.</p>
 </div>
 <button className="opacity-0 group-hover:opacity-100 transition-opacity text-slate-400 hover:text-slate-600">
 <span className="material-symbols-outlined text-lg">close</span>
@@ -218,7 +218,7 @@ const Notifications = () => {
 {/*  Last Week Section  */}
 <section>
 <div className="flex items-center gap-4 mb-4">
-<h3 className="text-sm font-bold text-slate-400 uppercase tracking-widest">La semaine derniÃ¨re</h3>
+<h3 className="text-sm font-bold text-slate-400 uppercase tracking-widest">La semaine dernière</h3>
 <div className="h-px flex-1 bg-slate-200"></div>
 </div>
 <div className="space-y-3">
@@ -229,10 +229,10 @@ const Notifications = () => {
 </div>
 <div className="flex-1 min-w-0">
 <div className="flex items-center justify-between mb-1">
-<h4 className="text-base font-bold text-slate-900">Paiement reÃ§u</h4>
+<h4 className="text-base font-bold text-slate-900">Paiement reçu</h4>
 <span className="text-xs text-slate-500">3 oct. 2023</span>
 </div>
-<p className="text-sm text-slate-600">Un virement de <span className="font-bold text-slate-900">450,00 â‚¬</span> a Ã©tÃ© crÃ©ditÃ© sur votre compte.</p>
+<p className="text-sm text-slate-600">Un virement de <span className="font-bold text-slate-900">450,00 â‚¬</span> a été crédité sur votre compte.</p>
 </div>
 <button className="opacity-0 group-hover:opacity-100 transition-opacity text-slate-400 hover:text-slate-600">
 <span className="material-symbols-outlined text-lg">close</span>
@@ -243,7 +243,7 @@ const Notifications = () => {
 </div>
 {/*  Footer / Empty State placeholder  */}
 <div className="mt-12 text-center pb-12">
-<p className="text-sm text-slate-400">Vous avez vu toutes les notifications rÃ©centes.</p>
+<p className="text-sm text-slate-400">Vous avez vu toutes les notifications récentes.</p>
 <button className="mt-4 text-primary font-bold hover:underline">Voir l'historique complet</button>
 </div>
 </div>

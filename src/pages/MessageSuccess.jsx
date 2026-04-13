@@ -18,11 +18,11 @@ const MessageSuccess = () => {
 
         {/* Confirmation Message */}
         <div className="text-center mb-10">
-          <h1 className="text-slate-900 text-3xl md:text-4xl font-black leading-tight mb-4">Demande EnvoyÃ©e !</h1>
+          <h1 className="text-slate-900 text-3xl md:text-4xl font-black leading-tight mb-4">Demande Envoyée !</h1>
           <p className="text-slate-600 text-lg max-w-xl mx-auto leading-relaxed">
             {artisanName 
-              ? `${decodeURIComponent(artisanName)} a bien reÃ§u votre demande. Il vous rÃ©pondra gÃ©nÃ©ralement sous peu.` 
-              : "Votre demande de devis a Ã©tÃ© transmise aux artisans disponibles dans votre secteur. Vous recevrez une rÃ©ponse prochainement."
+              ? `${decodeURIComponent(artisanName)} a bien reçu votre demande. Il vous répondra généralement sous peu.` 
+              : "Votre demande de devis a été transmise aux artisans disponibles dans votre secteur. Vous recevrez une réponse prochainement."
             }
           </p>
         </div>
@@ -46,7 +46,7 @@ const MessageSuccess = () => {
               </div>
               <div className="bg-slate-50 px-6 py-4 border-t border-slate-100 flex items-center gap-3">
                 <span className="material-symbols-outlined text-indigo-600 text-[20px]">verified</span>
-                <span className="text-xs font-bold text-indigo-600 uppercase tracking-wider">Demande SÃ©curisÃ©e par BricoloPro</span>
+                <span className="text-xs font-bold text-indigo-600 uppercase tracking-wider">Demande Sécurisée par BricoloPro</span>
               </div>
             </div>
           </div>
@@ -56,7 +56,7 @@ const MessageSuccess = () => {
            <div className="w-full max-w-md mb-12 bg-white p-8 rounded-3xl border-2 border-dashed border-slate-200 text-center">
               <span className="material-symbols-outlined text-4xl text-slate-300 mb-4">broadcast_on_home</span>
               <p className="text-slate-500 font-medium leading-relaxed">
-                Plusieurs artisans de votre rÃ©gion peuvent dÃ©sormais consulter votre besoin et vous envoyer une proposition.
+                Plusieurs artisans de votre région peuvent désormais consulter votre besoin et vous envoyer une proposition.
               </p>
            </div>
         )}
@@ -75,7 +75,7 @@ const MessageSuccess = () => {
             className="flex-1 flex items-center justify-center gap-2 h-14 bg-white border-2 border-slate-100 hover:bg-slate-50 text-slate-700 rounded-xl font-bold transition-all"
           >
             <span className="material-symbols-outlined">home</span>
-            Retour Ã  l'accueil
+            Retour à l'accueil
           </Link>
         </div>
 
