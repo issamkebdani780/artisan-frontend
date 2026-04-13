@@ -228,7 +228,7 @@ const ArtisanProjects = () => {
                               <span className="material-symbols-outlined text-sm font-black">check</span>
                             </button>
                           )}
-                          {(project.status === 'confirmed' || project.status === 'accepté') && (
+                          {project.status === 'confirmed' && (
                             <button 
                               onClick={() => updateStatus(project, 'completed')}
                               className="size-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center hover:bg-emerald-600 hover:text-white transition-all shadow-sm active:scale-90"
