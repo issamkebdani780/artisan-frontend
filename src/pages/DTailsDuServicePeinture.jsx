@@ -89,7 +89,7 @@ const DTailsDuServicePeinture = () => {
 <div className="flex justify-between items-end mb-8">
 <div>
 <h2 className="text-slate-900 dark:text-slate-100 text-3xl font-bold leading-tight">Nos Tarifs et Prestations</h2>
-<p className="text-slate-600 dark:text-slate-400 mt-2">Prix estimés par mÂ² incluant la main d'Å“uvre et le matériel de base.</p>
+<p className="text-slate-600 dark:text-slate-400 mt-2">Prix estimés par m² incluant la main d'Å“uvre et le matériel de base.</p>
 </div>
 <a className="text-primary font-bold hover:underline hidden md:block" href="#">Voir tout le catalogue</a>
 </div>
@@ -102,12 +102,12 @@ const DTailsDuServicePeinture = () => {
 <span className="material-symbols-outlined text-primary">wall_art</span>
 <span className="text-xs font-bold uppercase tracking-wider text-slate-500">Murs Intérieurs</span>
 </div>
-<h3 className="text-xl font-bold mb-2">Peinture Intérieure (mÂ²)</h3>
+<h3 className="text-xl font-bold mb-2">Peinture Intérieure (m²)</h3>
 <p className="text-slate-600 dark:text-slate-400 text-sm mb-4">Application de deux couches de peinture acrylique haute qualité.</p>
 <div className="flex items-baseline gap-1 border-t border-slate-100 dark:border-slate-800 pt-4">
 <span className="text-sm text-slate-500">à partir de</span>
 <span className="text-2xl font-black text-primary">15€</span>
-<span className="text-sm text-slate-500">/ mÂ²</span>
+<span className="text-sm text-slate-500">/ m²</span>
 </div>
 </div>
 </div>
@@ -124,7 +124,7 @@ const DTailsDuServicePeinture = () => {
 <div className="flex items-baseline gap-1 border-t border-slate-100 dark:border-slate-800 pt-4">
 <span className="text-sm text-slate-500">à partir de</span>
 <span className="text-2xl font-black text-primary">20€</span>
-<span className="text-sm text-slate-500">/ mÂ²</span>
+<span className="text-sm text-slate-500">/ m²</span>
 </div>
 </div>
 </div>
@@ -141,7 +141,7 @@ const DTailsDuServicePeinture = () => {
 <div className="flex items-baseline gap-1 border-t border-slate-100 dark:border-slate-800 pt-4">
 <span className="text-sm text-slate-500">à partir de</span>
 <span className="text-2xl font-black text-primary">25€</span>
-<span className="text-sm text-slate-500">/ mÂ²</span>
+<span className="text-sm text-slate-500">/ m²</span>
 </div>
 </div>
 </div>
@@ -218,7 +218,7 @@ const DTailsDuServicePeinture = () => {
 <span className="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
 </summary>
 <div className="p-6 pt-0 text-slate-600 dark:text-slate-400 border-t border-slate-100 dark:border-slate-800">
-                                Le tarif par mÂ² inclut la peinture blanche standard pour les sous-couches. Pour les couleurs spécifiques, vous pouvez soit les fournir vous-même, soit demander à l'expert de les acheter pour vous (un supplément s'appliquera alors selon le prix de la peinture choisie).
+                                Le tarif par m² inclut la peinture blanche standard pour les sous-couches. Pour les couleurs spécifiques, vous pouvez soit les fournir vous-même, soit demander à l'expert de les acheter pour vous (un supplément s'appliquera alors selon le prix de la peinture choisie).
                             </div>
 </details>
 <details className="group border border-slate-200 dark:border-slate-800 rounded-xl bg-white dark:bg-slate-900 overflow-hidden">
@@ -227,7 +227,7 @@ const DTailsDuServicePeinture = () => {
 <span className="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
 </summary>
 <div className="p-6 pt-0 text-slate-600 dark:text-slate-400 border-t border-slate-100 dark:border-slate-800">
-                                En moyenne, pour une pièce de 12-15mÂ² comprenant les murs et le plafond, il faut compter entre 1 et 2 jours de travail, incluant la protection des meubles, la préparation des surfaces et le temps de séchage entre les couches.
+                                En moyenne, pour une pièce de 12-15m² comprenant les murs et le plafond, il faut compter entre 1 et 2 jours de travail, incluant la protection des meubles, la préparation des surfaces et le temps de séchage entre les couches.
                             </div>
 </details>
 </div>

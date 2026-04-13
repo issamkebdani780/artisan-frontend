@@ -287,7 +287,7 @@ const ResultatsDeRechercheExperts = () => {
                                 </div>
                                 <span className="font-bold text-lg text-slate-900 dark:text-white">ArtisanDirect</span>
                             </div>
-                            <p className="text-sm text-slate-500 dark:text-slate-400">La plateforme nÂ°1 pour trouver des artisans qualifiés près de chez vous.</p>
+                            <p className="text-sm text-slate-500 dark:text-slate-400">La plateforme n°1 pour trouver des artisans qualifiés près de chez vous.</p>
                         </div>
                         <div>
                             <h4 className="font-bold text-slate-900 dark:text-white mb-4">Plateforme</h4>

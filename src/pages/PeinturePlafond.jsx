@@ -169,7 +169,7 @@ const PeinturePlafond = () => {
 <div className="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-lg border-b-4 border-primary">
 <h4 className="font-black text-lg mb-2">Rafraîchissement</h4>
 <p className="text-slate-500 text-sm mb-4">Pour plafonds sains sans dégâts majeurs.</p>
-<div className="text-3xl font-black text-primary mb-4">18€ <span className="text-sm text-slate-400">/ mÂ²</span></div>
+<div className="text-3xl font-black text-primary mb-4">18€ <span className="text-sm text-slate-400">/ m²</span></div>
 <ul className="text-xs space-y-2 text-slate-600 dark:text-slate-400">
 <li>• Lessivage léger</li>
 <li>• 2 couches mat</li>
@@ -179,7 +179,7 @@ const PeinturePlafond = () => {
 <div className="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-lg border-b-4 border-orange-500">
 <h4 className="font-black text-lg mb-2">Traitement Fumée</h4>
 <p className="text-slate-500 text-sm mb-4">Isolation des traces de nicotine et suie.</p>
-<div className="text-3xl font-black text-orange-500 mb-4">26€ <span className="text-sm text-slate-400">/ mÂ²</span></div>
+<div className="text-3xl font-black text-orange-500 mb-4">26€ <span className="text-sm text-slate-400">/ m²</span></div>
 <ul className="text-xs space-y-2 text-slate-600 dark:text-slate-400">
 <li>• Impression isolante solvantée</li>
 <li>• Neutralisation des odeurs</li>
@@ -189,7 +189,7 @@ const PeinturePlafond = () => {
 <div className="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-lg border-b-4 border-red-500">
 <h4 className="font-black text-lg mb-2">Sinistre / Humidité</h4>
 <p className="text-slate-500 text-sm mb-4">Après dégâts des eaux ou taches rebelles.</p>
-<div className="text-3xl font-black text-red-500 mb-4">32€ <span className="text-sm text-slate-400">/ mÂ²</span></div>
+<div className="text-3xl font-black text-red-500 mb-4">32€ <span className="text-sm text-slate-400">/ m²</span></div>
 <ul className="text-xs space-y-2 text-slate-600 dark:text-slate-400">
 <li>• Traitement anti-salpêtre</li>
 <li>• Durcisseur de fonds</li>

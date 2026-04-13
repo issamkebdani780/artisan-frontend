@@ -130,7 +130,7 @@ const CreationDeCompteClient3 = () => {
 {/*  Address  */}
 <div className="flex flex-col gap-1.5">
 <label className="text-[10px] font-bold uppercase tracking-widest text-slate-500 ml-1">Adresse Détaillée</label>
-<input className="w-full h-11 px-4 rounded-lg bg-surface-container-high border-none focus:ring-2 focus:ring-primary/40 text-on-surface transition-all placeholder:text-slate-400 text-sm" placeholder="NÂ° 45, Rue des Frères, Quartier Central" type="text"/>
+<input className="w-full h-11 px-4 rounded-lg bg-surface-container-high border-none focus:ring-2 focus:ring-primary/40 text-on-surface transition-all placeholder:text-slate-400 text-sm" placeholder="N° 45, Rue des Frères, Quartier Central" type="text"/>
 </div>
 {/*  Password Group  */}
 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">

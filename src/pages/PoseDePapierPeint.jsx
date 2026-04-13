@@ -124,15 +124,15 @@ const PoseDePapierPeint = () => {
 <div className="space-y-4">
 <div className="flex items-center justify-between p-4 bg-slate-50 dark:bg-slate-800 rounded-xl">
 <span className="text-slate-700 dark:text-slate-300">Pose papier peint classique</span>
-<span className="text-primary font-bold">15€ / mÂ²</span>
+<span className="text-primary font-bold">15€ / m²</span>
 </div>
 <div className="flex items-center justify-between p-4 bg-slate-50 dark:bg-slate-800 rounded-xl">
 <span className="text-slate-700 dark:text-slate-300">Papier peint panoramique</span>
-<span className="text-primary font-bold">22€ / mÂ²</span>
+<span className="text-primary font-bold">22€ / m²</span>
 </div>
 <div className="flex items-center justify-between p-4 bg-slate-50 dark:bg-slate-800 rounded-xl">
 <span className="text-slate-700 dark:text-slate-300">Dépose ancien revêtement</span>
-<span className="text-primary font-bold">8€ / mÂ²</span>
+<span className="text-primary font-bold">8€ / m²</span>
 </div>
 </div>
 <p className="text-xs text-slate-500 mt-6 italic">* Matériaux non inclus. Devis final après visite technique.</p>

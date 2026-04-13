@@ -98,11 +98,7 @@ const ArtisanRegister = () => {
     }
     if (form.password !== form.confirm) { setError('Les mots de passe ne correspondent pas'); return; }
     if (!passwordChecks.length) { setError('Mot de passe trop court (8 caractères minimum)'); return; }
-<<<<<<< HEAD
     if (!terms) { setError("Vous devez accepter les conditions d'utilisation"); return; }
-=======
-    if (!terms) { setError('Vous devez accepter les conditions d\'utilisation'); return; }
->>>>>>> 7cf8506 (spec charc)
     if (!files.profilePic) { setError('La photo de profil est requise'); return; }
     if (files.documents.length === 0) { setError('Au moins un document est requis'); return; }
 
@@ -162,12 +158,6 @@ const ArtisanRegister = () => {
               <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-500/20 text-orange-500 border border-orange-500/30 text-xs font-bold tracking-widest uppercase">REJOIGNEZ L'ÉLITE</span>
               <h1 className="text-5xl font-black text-white leading-tight tracking-tighter">
                 Rejoignez l'élite des <span className="text-orange-500">services professionnels.</span>
-<<<<<<< HEAD
-              </h1>
-              <h1 className="text-5xl font-black text-white leading-tight tracking-tighter">
-                Rejoignez l'élite des <span className="text-orange-500">services professionnels.</span>
-=======
->>>>>>> 7cf8506 (spec charc)
               </h1>
               <p className="text-lg text-slate-300 leading-relaxed font-light">
                 Accédez à un réseau exclusif de professionnels vérifiés et gérez vos projets en toute sérénité.

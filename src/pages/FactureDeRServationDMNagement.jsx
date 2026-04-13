@@ -100,7 +100,7 @@ const FactureDeRServationDMNagement = () => {
 <span className="material-symbols-outlined text-primary">local_shipping</span>
 <div>
 <p className="text-sm font-bold text-slate-900 dark:text-white">Service</p>
-<p className="text-slate-500 dark:text-slate-400 text-sm">Déménagement Complet T3 (45mÂ²)</p>
+<p className="text-slate-500 dark:text-slate-400 text-sm">Déménagement Complet T3 (45m²)</p>
 </div>
 </div>
 <div className="flex items-start gap-3">
@@ -147,7 +147,7 @@ const FactureDeRServationDMNagement = () => {
 <tr>
 <td className="px-6 py-4">
 <p className="text-slate-900 dark:text-white font-semibold">Forfait Déménagement de base</p>
-<p className="text-xs text-slate-500">Main d'Å“uvre (2 pers.) + Camion 20mÂ³</p>
+<p className="text-xs text-slate-500">Main d'Å“uvre (2 pers.) + Camion 20m³</p>
 </td>
 <td className="px-6 py-4 text-center text-slate-700 dark:text-slate-300">1</td>
 <td className="px-6 py-4 text-right text-slate-700 dark:text-slate-300">450,00 €</td>

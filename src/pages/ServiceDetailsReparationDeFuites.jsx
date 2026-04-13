@@ -204,7 +204,7 @@ const ServiceDetailsReparationDeFuites = () => {
 <span className="material-symbols-outlined text-2xl">plumbing</span>
 <h2 className="text-slate-900 dark:text-white text-lg font-bold tracking-tight">PlumbPro</h2>
 </div>
-<p className="text-sm text-slate-500 leading-relaxed">Le réseau nÂ°1 de plombiers certifiés pour vos interventions d'urgence et rénovations.</p>
+<p className="text-sm text-slate-500 leading-relaxed">Le réseau n°1 de plombiers certifiés pour vos interventions d'urgence et rénovations.</p>
 </div>
 <div>
 <h4 className="font-bold mb-4">Services</h4>
