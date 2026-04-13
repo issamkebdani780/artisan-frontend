@@ -7,20 +7,20 @@ const ServiceDetailsPlomberie = () => {
 <div className="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
 <div className="layout-container flex h-full grow flex-col">
 {/*  Navigation Bar  */}
-<header className="flex items-center justify-between whitespace-nowrap border-b border-solid border-primary/10 bg-white dark:bg-background-dark px-6 md:px-20 lg:px-40 py-4 sticky top-0 z-50">
+<header className="flex items-center justify-between whitespace-nowrap border-b border-solid border-primary/10 bg-white px-6 md:px-20 lg:px-40 py-4 sticky top-0 z-50">
 <div className="flex items-center gap-4 text-primary">
 <div className="size-8">
 <span className="material-symbols-outlined text-4xl">plumbing</span>
 </div>
-<h2 className="text-slate-900 dark:text-slate-100 text-xl font-black leading-tight tracking-tight">Plomberie Pro</h2>
+<h2 className="text-slate-900 text-xl font-black leading-tight tracking-tight">Plomberie Pro</h2>
 </div>
 <div className="flex flex-1 justify-end gap-8 items-center">
 <nav className="hidden lg:flex items-center gap-9">
-<a className="text-slate-700 dark:text-slate-300 hover:text-primary transition-colors text-sm font-semibold" href="#">Accueil</a>
+<a className="text-slate-700 hover:text-primary transition-colors text-sm font-semibold" href="#">Accueil</a>
 <a className="text-primary text-sm font-semibold" href="#">Services</a>
-<a className="text-slate-700 dark:text-slate-300 hover:text-primary transition-colors text-sm font-semibold" href="#">Réalisations</a>
-<a className="text-slate-700 dark:text-slate-300 hover:text-primary transition-colors text-sm font-semibold" href="#">Blog</a>
-<a className="text-slate-700 dark:text-slate-300 hover:text-primary transition-colors text-sm font-semibold" href="#">Contact</a>
+<a className="text-slate-700 hover:text-primary transition-colors text-sm font-semibold" href="#">Réalisations</a>
+<a className="text-slate-700 hover:text-primary transition-colors text-sm font-semibold" href="#">Blog</a>
+<a className="text-slate-700 hover:text-primary transition-colors text-sm font-semibold" href="#">Contact</a>
 </nav>
 <div className="flex gap-3">
 <button className="flex items-center justify-center rounded-lg h-10 w-10 bg-primary/10 text-primary hover:bg-primary/20 transition-colors">
@@ -62,69 +62,69 @@ const ServiceDetailsPlomberie = () => {
 <div className="lg:col-span-8 space-y-12">
 {/*  Statistics  */}
 <section className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-<div className="flex flex-col gap-3 rounded-2xl p-8 bg-white dark:bg-slate-800 border border-primary/10 shadow-sm">
+<div className="flex flex-col gap-3 rounded-2xl p-8 bg-white border border-primary/10 shadow-sm">
 <span className="material-symbols-outlined text-primary text-4xl">handshake</span>
 <div>
-<p className="text-slate-500 dark:text-slate-400 text-sm font-bold uppercase tracking-widest">Interventions</p>
-<p className="text-slate-900 dark:text-slate-100 text-3xl font-black">5000+</p>
+<p className="text-slate-500 text-sm font-bold uppercase tracking-widest">Interventions</p>
+<p className="text-slate-900 text-3xl font-black">5000+</p>
 </div>
 </div>
-<div className="flex flex-col gap-3 rounded-2xl p-8 bg-white dark:bg-slate-800 border border-primary/10 shadow-sm">
+<div className="flex flex-col gap-3 rounded-2xl p-8 bg-white border border-primary/10 shadow-sm">
 <span className="material-symbols-outlined text-primary text-4xl">verified</span>
 <div>
-<p className="text-slate-500 dark:text-slate-400 text-sm font-bold uppercase tracking-widest">Satisfaction</p>
-<p className="text-slate-900 dark:text-slate-100 text-3xl font-black">98%</p>
+<p className="text-slate-500 text-sm font-bold uppercase tracking-widest">Satisfaction</p>
+<p className="text-slate-900 text-3xl font-black">98%</p>
 </div>
 </div>
-<div className="flex flex-col gap-3 rounded-2xl p-8 bg-white dark:bg-slate-800 border border-primary/10 shadow-sm">
+<div className="flex flex-col gap-3 rounded-2xl p-8 bg-white border border-primary/10 shadow-sm">
 <span className="material-symbols-outlined text-primary text-4xl">workspace_premium</span>
 <div>
-<p className="text-slate-500 dark:text-slate-400 text-sm font-bold uppercase tracking-widest">Garantie</p>
-<p className="text-slate-900 dark:text-slate-100 text-3xl font-black">1 an</p>
+<p className="text-slate-500 text-sm font-bold uppercase tracking-widest">Garantie</p>
+<p className="text-slate-900 text-3xl font-black">1 an</p>
 </div>
 </div>
 </section>
 {/*  Our Services Grid  */}
 <section>
 <div className="flex flex-col gap-2 mb-8">
-<h2 className="text-slate-900 dark:text-slate-100 text-3xl font-black tracking-tight">Nos Services Experts</h2>
+<h2 className="text-slate-900 text-3xl font-black tracking-tight">Nos Services Experts</h2>
 <div className="h-1.5 w-20 bg-primary rounded-full"></div>
 </div>
 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-<div className="group flex flex-col gap-4 rounded-2xl border border-primary/10 bg-white dark:bg-slate-800 p-6 hover:border-primary/40 transition-all hover:shadow-xl">
+<div className="group flex flex-col gap-4 rounded-2xl border border-primary/10 bg-white p-6 hover:border-primary/40 transition-all hover:shadow-xl">
 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
 <span className="material-symbols-outlined text-3xl">water_drop</span>
 </div>
 <div>
-<h3 className="text-slate-900 dark:text-slate-100 text-xl font-bold mb-2">Réparation de fuite</h3>
-<p className="text-slate-600 dark:text-slate-400 text-base leading-relaxed">Détection de fuites non destructives et colmatage ultra-rapide pour éviter les dégâts des eaux.</p>
+<h3 className="text-slate-900 text-xl font-bold mb-2">Réparation de fuite</h3>
+<p className="text-slate-600 text-base leading-relaxed">Détection de fuites non destructives et colmatage ultra-rapide pour éviter les dégâts des eaux.</p>
 </div>
 </div>
-<div className="group flex flex-col gap-4 rounded-2xl border border-primary/10 bg-white dark:bg-slate-800 p-6 hover:border-primary/40 transition-all hover:shadow-xl">
+<div className="group flex flex-col gap-4 rounded-2xl border border-primary/10 bg-white p-6 hover:border-primary/40 transition-all hover:shadow-xl">
 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
 <span className="material-symbols-outlined text-3xl">construction</span>
 </div>
 <div>
-<h3 className="text-slate-900 dark:text-slate-100 text-xl font-bold mb-2">Installation robinetterie</h3>
-<p className="text-slate-600 dark:text-slate-400 text-base leading-relaxed">Pose de mitigeurs haute performance, éviers design et systèmes de filtration d'eau.</p>
+<h3 className="text-slate-900 text-xl font-bold mb-2">Installation robinetterie</h3>
+<p className="text-slate-600 text-base leading-relaxed">Pose de mitigeurs haute performance, éviers design et systèmes de filtration d'eau.</p>
 </div>
 </div>
-<div className="group flex flex-col gap-4 rounded-2xl border border-primary/10 bg-white dark:bg-slate-800 p-6 hover:border-primary/40 transition-all hover:shadow-xl">
+<div className="group flex flex-col gap-4 rounded-2xl border border-primary/10 bg-white p-6 hover:border-primary/40 transition-all hover:shadow-xl">
 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
 <span className="material-symbols-outlined text-3xl">sanitizer</span>
 </div>
 <div>
-<h3 className="text-slate-900 dark:text-slate-100 text-xl font-bold mb-2">Débouchage complet</h3>
-<p className="text-slate-600 dark:text-slate-400 text-base leading-relaxed">Curage et débouchage de toutes vos canalisations obstruées avec équipement haute pression.</p>
+<h3 className="text-slate-900 text-xl font-bold mb-2">Débouchage complet</h3>
+<p className="text-slate-600 text-base leading-relaxed">Curage et débouchage de toutes vos canalisations obstruées avec équipement haute pression.</p>
 </div>
 </div>
-<div className="group flex flex-col gap-4 rounded-2xl border border-primary/10 bg-white dark:bg-slate-800 p-6 hover:border-primary/40 transition-all hover:shadow-xl">
+<div className="group flex flex-col gap-4 rounded-2xl border border-primary/10 bg-white p-6 hover:border-primary/40 transition-all hover:shadow-xl">
 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
 <span className="material-symbols-outlined text-3xl">health_and_safety</span>
 </div>
 <div>
-<h3 className="text-slate-900 dark:text-slate-100 text-xl font-bold mb-2">Entretien préventif</h3>
-<p className="text-slate-600 dark:text-slate-400 text-base leading-relaxed">Contrats de maintenance pour assurer la pérennité de vos installations et réduire vos factures.</p>
+<h3 className="text-slate-900 text-xl font-bold mb-2">Entretien préventif</h3>
+<p className="text-slate-600 text-base leading-relaxed">Contrats de maintenance pour assurer la pérennité de vos installations et réduire vos factures.</p>
 </div>
 </div>
 </div>
@@ -132,34 +132,34 @@ const ServiceDetailsPlomberie = () => {
 {/*  Why Choose Us  */}
 <section className="bg-primary/5 rounded-3xl p-10 border border-primary/10">
 <div className="flex flex-col gap-6">
-<h2 className="text-slate-900 dark:text-slate-100 text-3xl font-black tracking-tight">Pourquoi nous choisir ?</h2>
+<h2 className="text-slate-900 text-3xl font-black tracking-tight">Pourquoi nous choisir ?</h2>
 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 <div className="flex gap-4">
 <span className="material-symbols-outlined text-primary font-bold">check_circle</span>
 <div>
-<h4 className="font-bold text-slate-900 dark:text-slate-100">Disponibilité Totale</h4>
-<p className="text-slate-600 dark:text-slate-400 text-sm">Intervention en moins de 30 minutes pour les urgences majeures.</p>
+<h4 className="font-bold text-slate-900">Disponibilité Totale</h4>
+<p className="text-slate-600 text-sm">Intervention en moins de 30 minutes pour les urgences majeures.</p>
 </div>
 </div>
 <div className="flex gap-4">
 <span className="material-symbols-outlined text-primary font-bold">check_circle</span>
 <div>
-<h4 className="font-bold text-slate-900 dark:text-slate-100">Transparence des Prix</h4>
-<p className="text-slate-600 dark:text-slate-400 text-sm">Devis détaillé avant chaque intervention, sans frais cachés.</p>
+<h4 className="font-bold text-slate-900">Transparence des Prix</h4>
+<p className="text-slate-600 text-sm">Devis détaillé avant chaque intervention, sans frais cachés.</p>
 </div>
 </div>
 <div className="flex gap-4">
 <span className="material-symbols-outlined text-primary font-bold">check_circle</span>
 <div>
-<h4 className="font-bold text-slate-900 dark:text-slate-100">Certifications RGE</h4>
-<p className="text-slate-600 dark:text-slate-400 text-sm">Nos artisans sont qualifiés et régulièrement formés aux nouvelles normes.</p>
+<h4 className="font-bold text-slate-900">Certifications RGE</h4>
+<p className="text-slate-600 text-sm">Nos artisans sont qualifiés et régulièrement formés aux nouvelles normes.</p>
 </div>
 </div>
 <div className="flex gap-4">
 <span className="material-symbols-outlined text-primary font-bold">check_circle</span>
 <div>
-<h4 className="font-bold text-slate-900 dark:text-slate-100">Matériel de Qualité</h4>
-<p className="text-slate-600 dark:text-slate-400 text-sm">Nous n'utilisons que des pièces certifiées des plus grandes marques.</p>
+<h4 className="font-bold text-slate-900">Matériel de Qualité</h4>
+<p className="text-slate-600 text-sm">Nous n'utilisons que des pièces certifiées des plus grandes marques.</p>
 </div>
 </div>
 </div>
@@ -167,26 +167,26 @@ const ServiceDetailsPlomberie = () => {
 </section>
 {/*  Testimonials  */}
 <section>
-<h2 className="text-slate-900 dark:text-slate-100 text-3xl font-black tracking-tight mb-8">Ce que disent nos clients</h2>
+<h2 className="text-slate-900 text-3xl font-black tracking-tight mb-8">Ce que disent nos clients</h2>
 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-<div className="p-8 rounded-2xl bg-white dark:bg-slate-800 border border-primary/5 shadow-sm italic text-slate-700 dark:text-slate-300 relative">
+<div className="p-8 rounded-2xl bg-white border border-primary/5 shadow-sm italic text-slate-700 relative">
 <span className="material-symbols-outlined text-primary/20 text-6xl absolute top-4 right-4">format_quote</span>
                                 "Intervention rapide pour une fuite dans ma salle de bain. Le plombier était très pro et a tout nettoyé après son passage. Je recommande vivement !"
                                 <div className="mt-6 flex items-center gap-3 not-italic">
 <div className="w-10 h-10 rounded-full bg-primary/20"></div>
 <div>
-<p className="font-bold text-slate-900 dark:text-slate-100">Jean Dupont</p>
+<p className="font-bold text-slate-900">Jean Dupont</p>
 <p className="text-xs text-slate-500">Paris, 75015</p>
 </div>
 </div>
 </div>
-<div className="p-8 rounded-2xl bg-white dark:bg-slate-800 border border-primary/5 shadow-sm italic text-slate-700 dark:text-slate-300 relative">
+<div className="p-8 rounded-2xl bg-white border border-primary/5 shadow-sm italic text-slate-700 relative">
 <span className="material-symbols-outlined text-primary/20 text-6xl absolute top-4 right-4">format_quote</span>
                                 "Prix conforme au devis annoncé. Installation d'un nouveau chauffe-eau en un temps record. Équipe sérieuse et ponctuelle."
                                 <div className="mt-6 flex items-center gap-3 not-italic">
 <div className="w-10 h-10 rounded-full bg-primary/20"></div>
 <div>
-<p className="font-bold text-slate-900 dark:text-slate-100">Marie Leblanc</p>
+<p className="font-bold text-slate-900">Marie Leblanc</p>
 <p className="text-xs text-slate-500">Lyon, 69002</p>
 </div>
 </div>
@@ -218,16 +218,16 @@ const ServiceDetailsPlomberie = () => {
 </div>
 </div>
 {/*  Location Map (Placeholder)  */}
-<div className="rounded-3xl bg-white dark:bg-slate-800 border border-primary/10 overflow-hidden shadow-sm">
-<div className="h-48 bg-slate-200 dark:bg-slate-700 flex items-center justify-center bg-cover bg-center" data-alt="Map showing our service area coverage in Paris" data-location="Paris, France" >
-<div className="bg-white/90 dark:bg-slate-900/90 p-4 rounded-xl shadow-xl flex flex-col items-center">
+<div className="rounded-3xl bg-white border border-primary/10 overflow-hidden shadow-sm">
+<div className="h-48 bg-slate-200 flex items-center justify-center bg-cover bg-center" data-alt="Map showing our service area coverage in Paris" data-location="Paris, France" >
+<div className="bg-white/90 p-4 rounded-xl shadow-xl flex flex-col items-center">
 <span className="material-symbols-outlined text-primary text-3xl">location_on</span>
 <p className="text-xs font-bold uppercase mt-1">Zone de service</p>
 </div>
 </div>
 <div className="p-6">
 <h4 className="font-bold mb-2">Secteur d'intervention</h4>
-<p className="text-slate-600 dark:text-slate-400 text-sm">Nous intervenons dans toute l'Île-de-France et les grandes métropoles.</p>
+<p className="text-slate-600 text-sm">Nous intervenons dans toute l'Île-de-France et les grandes métropoles.</p>
 </div>
 </div>
 </div>

@@ -6,13 +6,13 @@ const ServicedetailsMontage = () => {
       
 <div className="relative flex min-h-screen flex-col">
 {/*  Top Navigation  */}
-<header className="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md">
+<header className="sticky top-0 z-50 w-full border-b border-slate-200 bg-white/80 backdrop-blur-md">
 <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
 <div className="flex items-center gap-3">
 <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-white">
 <span className="material-symbols-outlined">shelves</span>
 </div>
-<span className="text-xl font-bold tracking-tight text-slate-900 dark:text-white">BricolagePro</span>
+<span className="text-xl font-bold tracking-tight text-slate-900">BricolagePro</span>
 </div>
 <nav className="hidden md:flex items-center gap-8">
 <a className="text-sm font-medium hover:text-primary transition-colors" href="#">Services</a>
@@ -20,7 +20,7 @@ const ServicedetailsMontage = () => {
 <a className="text-sm font-medium hover:text-primary transition-colors" href="#">Tarifs</a>
 </nav>
 <div className="flex items-center gap-4">
-<button className="flex items-center justify-center rounded-lg p-2 text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800">
+<button className="flex items-center justify-center rounded-lg p-2 text-slate-500 hover:bg-slate-100">
 <span className="material-symbols-outlined">search</span>
 </button>
 <button className="hidden sm:flex items-center justify-center rounded-lg bg-primary px-4 py-2 text-sm font-bold text-white transition-opacity hover:opacity-90">
@@ -58,55 +58,55 @@ const ServicedetailsMontage = () => {
 {/*  Main Content  */}
 <div className="lg:col-span-2 space-y-12">
 {/*  Breadcrumbs  */}
-<nav className="flex text-sm font-medium text-slate-500 dark:text-slate-400">
+<nav className="flex text-sm font-medium text-slate-500">
 <a className="hover:text-primary" href="#">Accueil</a>
 <span className="mx-2 text-slate-300">/</span>
 <a className="hover:text-primary" href="#">Montage de meubles</a>
 <span className="mx-2 text-slate-300">/</span>
-<span className="text-slate-900 dark:text-white">Étagères</span>
+<span className="text-slate-900">Étagères</span>
 </nav>
 {/*  Expert Badges  */}
 <div className="flex flex-wrap gap-3">
-<span className="inline-flex items-center gap-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 px-4 py-2 text-sm font-semibold">
+<span className="inline-flex items-center gap-1.5 rounded-lg bg-slate-100 px-4 py-2 text-sm font-semibold">
 <span className="material-symbols-outlined text-primary text-lg">verified</span> IKEA Kallax &amp; Billy
                             </span>
-<span className="inline-flex items-center gap-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 px-4 py-2 text-sm font-semibold">
+<span className="inline-flex items-center gap-1.5 rounded-lg bg-slate-100 px-4 py-2 text-sm font-semibold">
 <span className="material-symbols-outlined text-primary text-lg">verified</span> Conforama Experts
                             </span>
-<span className="inline-flex items-center gap-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 px-4 py-2 text-sm font-semibold">
+<span className="inline-flex items-center gap-1.5 rounded-lg bg-slate-100 px-4 py-2 text-sm font-semibold">
 <span className="material-symbols-outlined text-primary text-lg">verified</span> Fixation Murale Sécurisée
                             </span>
 </div>
 {/*  Service Details  */}
-<div className="prose prose-slate dark:prose-invert max-w-none">
-<h2 className="text-2xl font-bold text-slate-900 dark:text-white">Ce que nos Taskers proposent</h2>
-<p className="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">
+<div className="prose prose-slate max-w-none">
+<h2 className="text-2xl font-bold text-slate-900">Ce que nos Taskers proposent</h2>
+<p className="mt-4 text-slate-600 leading-relaxed">
                                 Monter une étagère peut sembler simple, mais assurer sa stabilité et sa sécurité, surtout lorsqu'il s'agit de fixations murales, demande un savoir-faire précis. Nos experts interviennent pour :
                             </p>
 <ul className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 list-none p-0">
-<li className="flex gap-x-3 text-slate-600 dark:text-slate-400">
+<li className="flex gap-x-3 text-slate-600">
 <span className="material-symbols-outlined text-primary">check_circle</span>
                                     Déballage et inventaire des pièces
                                 </li>
-<li className="flex gap-x-3 text-slate-600 dark:text-slate-400">
+<li className="flex gap-x-3 text-slate-600">
 <span className="material-symbols-outlined text-primary">check_circle</span>
                                     Assemblage structurel complet
                                 </li>
-<li className="flex gap-x-3 text-slate-600 dark:text-slate-400">
+<li className="flex gap-x-3 text-slate-600">
 <span className="material-symbols-outlined text-primary">check_circle</span>
                                     Fixation murale sécurisée (si requis)
                                 </li>
-<li className="flex gap-x-3 text-slate-600 dark:text-slate-400">
+<li className="flex gap-x-3 text-slate-600">
 <span className="material-symbols-outlined text-primary">check_circle</span>
                                     Nettoyage de la zone d'intervention
                                 </li>
 </ul>
 </div>
 {/*  Reviews Section  */}
-<div className="pt-8 border-t border-slate-200 dark:border-slate-800">
-<h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-8">Avis clients sur le montage d'étagères</h2>
+<div className="pt-8 border-t border-slate-200">
+<h2 className="text-2xl font-bold text-slate-900 mb-8">Avis clients sur le montage d'étagères</h2>
 <div className="space-y-6">
-<div className="rounded-xl bg-white dark:bg-slate-800/50 p-6 shadow-sm border border-slate-100 dark:border-slate-800">
+<div className="rounded-xl bg-white p-6 shadow-sm border border-slate-100">
 <div className="flex items-center gap-4 mb-4">
 <div className="h-10 w-10 rounded-full bg-slate-200" data-alt="Client profile picture" ></div>
 <div>
@@ -120,9 +120,9 @@ const ServicedetailsMontage = () => {
 </div>
 </div>
 </div>
-<p className="text-slate-600 dark:text-slate-400 italic">"Parfait ! Jean a monté 3 étagères Billy en un temps record. La fixation au mur est impeccable et très solide. Je recommande vivement."</p>
+<p className="text-slate-600 italic">"Parfait ! Jean a monté 3 étagères Billy en un temps record. La fixation au mur est impeccable et très solide. Je recommande vivement."</p>
 </div>
-<div className="rounded-xl bg-white dark:bg-slate-800/50 p-6 shadow-sm border border-slate-100 dark:border-slate-800">
+<div className="rounded-xl bg-white p-6 shadow-sm border border-slate-100">
 <div className="flex items-center gap-4 mb-4">
 <div className="h-10 w-10 rounded-full bg-slate-200" data-alt="Client profile picture" ></div>
 <div>
@@ -136,7 +136,7 @@ const ServicedetailsMontage = () => {
 </div>
 </div>
 </div>
-<p className="text-slate-600 dark:text-slate-400 italic">"Expert très méticuleux pour mon meuble Kallax. Service propre et courtois."</p>
+<p className="text-slate-600 italic">"Expert très méticuleux pour mon meuble Kallax. Service propre et courtois."</p>
 </div>
 </div>
 </div>
@@ -144,14 +144,14 @@ const ServicedetailsMontage = () => {
 {/*  Sidebar: Pricing & Booking  */}
 <div className="lg:col-span-1">
 <div className="sticky top-24 space-y-6">
-<div className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 shadow-xl">
-<h3 className="text-lg font-bold text-slate-900 dark:text-white">Estimation de prix</h3>
+<div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-xl">
+<h3 className="text-lg font-bold text-slate-900">Estimation de prix</h3>
 <div className="mt-6 space-y-4">
-<div className="flex justify-between items-center p-3 rounded-lg bg-slate-50 dark:bg-slate-800/50">
+<div className="flex justify-between items-center p-3 rounded-lg bg-slate-50">
 <span className="text-sm font-medium">À l'unité</span>
 <span className="text-lg font-bold text-primary">Dès 15€</span>
 </div>
-<div className="flex justify-between items-center p-3 rounded-lg bg-slate-50 dark:bg-slate-800/50">
+<div className="flex justify-between items-center p-3 rounded-lg bg-slate-50">
 <span className="text-sm font-medium">Taux horaire</span>
 <span className="text-lg font-bold text-primary">25€ / h</span>
 </div>
@@ -161,18 +161,18 @@ const ServicedetailsMontage = () => {
                                     Trouver un expert
                                 </button>
 <div className="mt-6 space-y-3">
-<div className="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-400">
+<div className="flex items-center gap-3 text-sm text-slate-600">
 <span className="material-symbols-outlined text-green-500">verified_user</span>
                                         Assurance casse incluse
                                     </div>
-<div className="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-400">
+<div className="flex items-center gap-3 text-sm text-slate-600">
 <span className="material-symbols-outlined text-green-500">schedule</span>
                                         Intervention sous 24/48h
                                     </div>
 </div>
 </div>
 {/*  Trust Pilot Placeholder  */}
-<div className="rounded-xl border border-slate-200 dark:border-slate-800 p-4 flex items-center justify-between">
+<div className="rounded-xl border border-slate-200 p-4 flex items-center justify-between">
 <div>
 <p className="text-xs font-bold uppercase tracking-widest text-slate-400">Excellent</p>
 <div className="flex text-green-500">
@@ -194,7 +194,7 @@ const ServicedetailsMontage = () => {
 </section>
 </main>
 {/*  Footer  */}
-<footer className="mt-20 border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark py-12 px-4">
+<footer className="mt-20 border-t border-slate-200 bg-white py-12 px-4">
 <div className="mx-auto max-w-7xl grid grid-cols-2 md:grid-cols-4 gap-8">
 <div className="col-span-2 md:col-span-1">
 <div className="flex items-center gap-2 mb-4">
@@ -230,7 +230,7 @@ const ServicedetailsMontage = () => {
 </ul>
 </div>
 </div>
-<div className="mx-auto max-w-7xl mt-12 pt-8 border-t border-slate-100 dark:border-slate-800 text-center text-xs text-slate-400">
+<div className="mx-auto max-w-7xl mt-12 pt-8 border-t border-slate-100 text-center text-xs text-slate-400">
                 © 2024 BricolagePro Inc. Tous droits réservés.
             </div>
 </footer>

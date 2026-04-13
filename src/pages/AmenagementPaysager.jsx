@@ -7,18 +7,18 @@ const AmenagementPaysager = () => {
 <div className="relative flex min-h-screen w-full flex-col overflow-x-hidden">
 <div className="layout-container flex h-full grow flex-col">
 {/*  Header Section  */}
-<header className="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-6 md:px-20 py-4 sticky top-0 z-50">
+<header className="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 bg-white px-6 md:px-20 py-4 sticky top-0 z-50">
 <div className="flex items-center gap-3">
 <div className="text-primary">
 <span className="material-symbols-outlined text-4xl">park</span>
 </div>
-<h2 className="text-slate-900 dark:text-white text-xl font-bold leading-tight tracking-tight">EcoPaysage</h2>
+<h2 className="text-slate-900 text-xl font-bold leading-tight tracking-tight">EcoPaysage</h2>
 </div>
 <div className="flex flex-1 justify-end gap-8 items-center">
 <nav className="hidden md:flex items-center gap-8">
-<a className="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">Accueil</a>
+<a className="text-slate-600 text-sm font-medium hover:text-primary transition-colors" href="#">Accueil</a>
 <a className="text-primary text-sm font-bold leading-normal" href="#">Services</a>
-<a className="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">Notifications</a>
+<a className="text-slate-600 text-sm font-medium hover:text-primary transition-colors" href="#">Notifications</a>
 </nav>
 <button className="flex min-w-[100px] cursor-pointer items-center justify-center rounded-xl h-10 px-5 bg-primary text-white text-sm font-bold transition-transform hover:scale-105 active:scale-95">
 <span>Connexion</span>
@@ -30,7 +30,7 @@ const AmenagementPaysager = () => {
 <div className="flex flex-col md:flex-row gap-8">
 {/*  Sidebar / Left Navigation & CTA  */}
 <aside className="w-full md:w-72 flex flex-col gap-6">
-<div className="bg-white dark:bg-slate-900 rounded-xl p-6 shadow-sm border border-slate-100 dark:border-slate-800">
+<div className="bg-white rounded-xl p-6 shadow-sm border border-slate-100">
 <div className="flex items-center gap-3 mb-6">
 <div className="bg-primary/10 p-2 rounded-full text-primary">
 <span className="material-symbols-outlined">dashboard</span>
@@ -45,15 +45,15 @@ const AmenagementPaysager = () => {
 <span className="material-symbols-outlined text-xl">verified</span>
                                         Pourquoi nous ?
                                     </a>
-<a className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 text-sm" href="#experts">
+<a className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-50 text-sm" href="#experts">
 <span className="material-symbols-outlined text-xl">groups</span>
                                         Nos Experts
                                     </a>
-<a className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 text-sm" href="#tarifs">
+<a className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-50 text-sm" href="#tarifs">
 <span className="material-symbols-outlined text-xl">payments</span>
                                         Tarification
                                     </a>
-<a className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 text-sm" href="#portfolio">
+<a className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-50 text-sm" href="#portfolio">
 <span className="material-symbols-outlined text-xl">imagesmode</span>
                                         Réalisations
                                     </a>
@@ -87,17 +87,17 @@ const AmenagementPaysager = () => {
 <span className="material-symbols-outlined text-primary">eco</span> Pourquoi nous choisir ?
                                 </h2>
 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-<div className="p-5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 hover:border-primary transition-colors">
+<div className="p-5 rounded-xl border border-slate-200 bg-white hover:border-primary transition-colors">
 <span className="material-symbols-outlined text-primary text-3xl mb-3">history_edu</span>
 <h3 className="font-bold mb-2">15 ans d'expertise</h3>
 <p className="text-sm text-slate-500 leading-relaxed">Une maîtrise parfaite des végétaux et des structures minérales.</p>
 </div>
-<div className="p-5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 hover:border-primary transition-colors">
+<div className="p-5 rounded-xl border border-slate-200 bg-white hover:border-primary transition-colors">
 <span className="material-symbols-outlined text-primary text-3xl mb-3">psychology_alt</span>
 <h3 className="font-bold mb-2">Design sur-mesure</h3>
 <p className="text-sm text-slate-500 leading-relaxed">Chaque jardin est unique et reflète votre personnalité et vos besoins.</p>
 </div>
-<div className="p-5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 hover:border-primary transition-colors">
+<div className="p-5 rounded-xl border border-slate-200 bg-white hover:border-primary transition-colors">
 <span className="material-symbols-outlined text-primary text-3xl mb-3">nature_people</span>
 <h3 className="font-bold mb-2">Approche Écologique</h3>
 <p className="text-sm text-slate-500 leading-relaxed">Utilisation de méthodes respectueuses de la biodiversité locale.</p>
@@ -110,7 +110,7 @@ const AmenagementPaysager = () => {
 <span className="material-symbols-outlined text-primary">psychology</span> Nos Experts Paysagistes
                                 </h2>
 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-<div className="flex items-center gap-4 p-4 rounded-xl bg-slate-50 dark:bg-slate-900/50">
+<div className="flex items-center gap-4 p-4 rounded-xl bg-slate-50">
 <div className="w-20 h-20 rounded-full bg-cover bg-center" data-alt="Portrait de Jean-Marc Dupont paysagiste" ></div>
 <div>
 <h4 className="font-bold text-lg">Jean-Marc Dupont</h4>
@@ -118,7 +118,7 @@ const AmenagementPaysager = () => {
 <p className="text-xs text-slate-500 mt-1">Spécialiste en jardins zen et structures japonaises.</p>
 </div>
 </div>
-<div className="flex items-center gap-4 p-4 rounded-xl bg-slate-50 dark:bg-slate-900/50">
+<div className="flex items-center gap-4 p-4 rounded-xl bg-slate-50">
 <div className="w-20 h-20 rounded-full bg-cover bg-center" data-alt="Portrait de Sarah Lambert paysagiste" ></div>
 <div>
 <h4 className="font-bold text-lg">Sarah Lambert</h4>
@@ -134,7 +134,7 @@ const AmenagementPaysager = () => {
 <span className="material-symbols-outlined text-primary">sell</span> Nos Forfaits Design
                                 </h2>
 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-<div className="flex flex-col p-6 rounded-xl border-2 border-slate-100 dark:border-slate-800 relative overflow-hidden">
+<div className="flex flex-col p-6 rounded-xl border-2 border-slate-100 relative overflow-hidden">
 <h3 className="text-lg font-bold mb-1">Étude &amp; Plan</h3>
 <p className="text-3xl font-black text-primary mb-4">450€ <span className="text-sm font-normal text-slate-500">/ projet</span></p>
 <ul className="space-y-3 mb-6 flex-1">
@@ -184,7 +184,7 @@ const AmenagementPaysager = () => {
 </div>
 </main>
 {/*  Footer Small  */}
-<footer className="bg-slate-100 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-8 px-6 text-center">
+<footer className="bg-slate-100 border-t border-slate-200 py-8 px-6 text-center">
 <p className="text-slate-500 text-sm">© 2024 EcoPaysage. Tous droits réservés. Design pour un aménagement durable.</p>
 </footer>
 </div>

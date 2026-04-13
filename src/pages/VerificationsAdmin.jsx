@@ -81,12 +81,12 @@ const VerificationsAdmin = () => {
         {/* HeaderSection */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div className="space-y-1">
-            <h2 className="text-3xl font-black tracking-tight text-slate-900 dark:text-white font-['Outfit',sans-serif]">Vérifications</h2>
-            <p className="text-slate-500 dark:text-slate-400 font-medium">Gérez et examinez les demandes de certification des prestataires.</p>
+            <h2 className="text-3xl font-black tracking-tight text-slate-900 font-['Outfit',sans-serif]">Vérifications</h2>
+            <p className="text-slate-500 font-medium">Gérez et examinez les demandes de certification des prestataires.</p>
           </div>
-          <div className="flex bg-white dark:bg-slate-800 px-6 py-3 rounded-2xl shadow-sm border border-slate-200 dark:border-white/5 items-center gap-3">
+          <div className="flex bg-white px-6 py-3 rounded-2xl shadow-sm border border-slate-200 items-center gap-3">
             <span className="size-3 rounded-full bg-emerald-500 animate-pulse"></span>
-            <span className="text-sm font-black text-slate-700 dark:text-slate-300 font-['Outfit',sans-serif] uppercase tracking-widest">{loading ? '...' : artisans.length} Dossiers en attente</span>
+            <span className="text-sm font-black text-slate-700 font-['Outfit',sans-serif] uppercase tracking-widest">{loading ? '...' : artisans.length} Dossiers en attente</span>
           </div>
         </div>
 
@@ -98,15 +98,15 @@ const VerificationsAdmin = () => {
             { label: 'Total Certifiés', value: stats?.totalCertified || 0, icon: 'verified_user', color: 'bg-primary' },
           ].map((stat, i) => (
 
-            <div key={i} className="bg-white dark:bg-slate-800 p-8 rounded-[2.5rem] shadow-xl shadow-slate-200/50 dark:shadow-none border border-white/50 dark:border-white/5 group hover:-translate-y-1 transition-all duration-300">
+            <div key={i} className="bg-white p-8 rounded-[2.5rem] shadow-xl shadow-slate-200/50 border border-white/50 group hover:-translate-y-1 transition-all duration-300">
               <div className="flex justify-between items-start mb-6">
                  <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest font-['Outfit',sans-serif]">{stat.label}</p>
                  <div className={`${stat.color} p-3 rounded-2xl text-white shadow-lg`}>
                    <span className="material-symbols-outlined">{stat.icon}</span>
                  </div>
               </div>
-              <p className="text-4xl font-black text-slate-900 dark:text-white tracking-tighter">{loading && i === 0 ? '...' : stat.value}</p>
-              <div className="w-full h-1.5 bg-slate-100 dark:bg-white/5 rounded-full overflow-hidden mt-6">
+              <p className="text-4xl font-black text-slate-900 tracking-tighter">{loading && i === 0 ? '...' : stat.value}</p>
+              <div className="w-full h-1.5 bg-slate-100 rounded-full overflow-hidden mt-6">
                 <div className={`h-full ${stat.color} transition-all duration-1000`} style={{ width: i === 0 ? '65%' : i === 1 ? '100%' : '10%' }}></div>
               </div>
             </div>
@@ -114,46 +114,46 @@ const VerificationsAdmin = () => {
         </div>
 
         {/* Verification Table */}
-        <div className="bg-white dark:bg-slate-800 rounded-[2.5rem] shadow-xl shadow-slate-200/50 dark:shadow-none border border-white/50 dark:border-white/5 overflow-hidden">
-          <div className="p-10 border-b border-slate-100 dark:border-white/5 flex justify-between items-center">
-            <h3 className="text-2xl font-black text-slate-900 dark:text-white tracking-tight">Dossiers à traiter</h3>
+        <div className="bg-white rounded-[2.5rem] shadow-xl shadow-slate-200/50 border border-white/50 overflow-hidden">
+          <div className="p-10 border-b border-slate-100 flex justify-between items-center">
+            <h3 className="text-2xl font-black text-slate-900 tracking-tight">Dossiers à traiter</h3>
           </div>
           
           <div className="overflow-x-auto">
             <table className="w-full border-separate border-spacing-0">
               <thead>
-                <tr className="text-left bg-slate-50/30 dark:bg-slate-900/30">
-                  <th className="px-10 py-5 text-[10px] font-black text-slate-400 uppercase tracking-widest border-b border-slate-100 dark:border-white/5">Artisan</th>
-                  <th className="px-10 py-5 text-[10px] font-black text-slate-400 uppercase tracking-widest border-b border-slate-100 dark:border-white/5">Spécialité</th>
-                  <th className="px-10 py-5 text-[10px] font-black text-slate-400 uppercase tracking-widest border-b border-slate-100 dark:border-white/5">Inscription</th>
-                  <th className="px-10 py-5 text-[10px] font-black text-slate-400 uppercase tracking-widest border-b border-slate-100 dark:border-white/5 text-right">Actions</th>
+                <tr className="text-left bg-slate-50/30">
+                  <th className="px-10 py-5 text-[10px] font-black text-slate-400 uppercase tracking-widest border-b border-slate-100">Artisan</th>
+                  <th className="px-10 py-5 text-[10px] font-black text-slate-400 uppercase tracking-widest border-b border-slate-100">Spécialité</th>
+                  <th className="px-10 py-5 text-[10px] font-black text-slate-400 uppercase tracking-widest border-b border-slate-100">Inscription</th>
+                  <th className="px-10 py-5 text-[10px] font-black text-slate-400 uppercase tracking-widest border-b border-slate-100 text-right">Actions</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-slate-100 dark:divide-white/5">
+              <tbody className="divide-y divide-slate-100">
                 {loading ? (
                   [1, 2, 3].map(i => (
                     <tr key={i} className="animate-pulse">
-                      <td colSpan="4" className="px-10 py-6"><div className="h-10 bg-slate-100 dark:bg-slate-700 rounded-2xl w-full"></div></td>
+                      <td colSpan="4" className="px-10 py-6"><div className="h-10 bg-slate-100 rounded-2xl w-full"></div></td>
                     </tr>
                   ))
                 ) : artisans.length === 0 ? (
                   <tr><td colSpan="4" className="text-center py-24 text-slate-400 font-bold italic">Aucune demande en attente</td></tr>
                 ) : currentItems.map(artisan => (
 
-                  <tr key={artisan.id} className="hover:bg-slate-50/50 dark:hover:bg-white/5 transition-all group">
+                  <tr key={artisan.id} className="hover:bg-slate-50/50 transition-all group">
                     <td className="px-10 py-6">
                       <div className="flex items-center gap-5">
-                        <div className="size-14 bg-indigo-50 dark:bg-indigo-900/40 text-indigo-600 dark:text-indigo-400 rounded-[1.25rem] flex items-center justify-center font-black text-xl shadow-inner group-hover:scale-110 transition-transform">
+                        <div className="size-14 bg-indigo-50 text-indigo-600 rounded-[1.25rem] flex items-center justify-center font-black text-xl shadow-inner group-hover:scale-110 transition-transform">
                           {artisan.name.charAt(0)}
                         </div>
                         <div>
-                          <p className="text-base font-black text-slate-900 dark:text-white tracking-tight">{artisan.name}</p>
-                          <p className="text-[11px] text-slate-500 dark:text-slate-400 font-bold uppercase mt-1">{artisan.email}</p>
+                          <p className="text-base font-black text-slate-900 tracking-tight">{artisan.name}</p>
+                          <p className="text-[11px] text-slate-500 font-bold uppercase mt-1">{artisan.email}</p>
                         </div>
                       </div>
                     </td>
                     <td className="px-10 py-6">
-                      <span className="px-4 py-1.5 rounded-full bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-300 text-[10px] font-black uppercase tracking-widest border border-slate-100 dark:border-white/5">{artisan.specialty || 'N/A'}</span>
+                      <span className="px-4 py-1.5 rounded-full bg-slate-100 text-slate-700 text-[10px] font-black uppercase tracking-widest border border-slate-100">{artisan.specialty || 'N/A'}</span>
                     </td>
                     <td className="px-10 py-6">
                       <p className="text-sm font-black text-slate-500 whitespace-nowrap">{new Date(artisan.created_at).toLocaleDateString('fr-FR', { day: '2-digit', month: 'short', year: 'numeric' })}</p>
@@ -182,7 +182,7 @@ const VerificationsAdmin = () => {
 
           {/* Pagination Controls */}
           {totalPages > 1 && (
-            <div className="px-10 py-6 bg-slate-50/50 dark:bg-slate-900/50 border-t border-slate-100 dark:border-white/5 flex items-center justify-between">
+            <div className="px-10 py-6 bg-slate-50/50 border-t border-slate-100 flex items-center justify-between">
               <p className="text-xs font-bold text-slate-500 uppercase tracking-widest">
                 Dossiers {indexOfFirstItem + 1} - {Math.min(indexOfLastItem, artisans.length)} sur {artisans.length}
               </p>
@@ -190,7 +190,7 @@ const VerificationsAdmin = () => {
                 <button
                   onClick={() => handlePageChange(currentPage - 1)}
                   disabled={currentPage === 1}
-                  className="p-2 rounded-xl border border-slate-200 dark:border-white/10 hover:bg-white dark:hover:bg-slate-800 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
+                  className="p-2 rounded-xl border border-slate-200 hover:bg-white disabled:opacity-30 disabled:cursor-not-allowed transition-all"
                 >
                   <span className="material-symbols-outlined text-xl">chevron_left</span>
                 </button>
@@ -199,7 +199,7 @@ const VerificationsAdmin = () => {
                   <button
                     key={i + 1}
                     onClick={() => handlePageChange(i + 1)}
-                    className={`size-10 rounded-xl text-sm font-black transition-all ${currentPage === i + 1 ? 'bg-primary text-white shadow-lg shadow-primary/20' : 'text-slate-500 hover:bg-white dark:hover:bg-slate-800 border border-transparent hover:border-slate-200'}`}
+                    className={`size-10 rounded-xl text-sm font-black transition-all ${currentPage === i + 1 ? 'bg-primary text-white shadow-lg shadow-primary/20' : 'text-slate-500 hover:bg-white border border-transparent hover:border-slate-200'}`}
                   >
                     {i + 1}
                   </button>
@@ -208,7 +208,7 @@ const VerificationsAdmin = () => {
                 <button
                   onClick={() => handlePageChange(currentPage + 1)}
                   disabled={currentPage === totalPages}
-                  className="p-2 rounded-xl border border-slate-200 dark:border-white/10 hover:bg-white dark:hover:bg-slate-800 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
+                  className="p-2 rounded-xl border border-slate-200 hover:bg-white disabled:opacity-30 disabled:cursor-not-allowed transition-all"
                 >
                   <span className="material-symbols-outlined text-xl">chevron_right</span>
                 </button>

@@ -7,32 +7,32 @@ const ReparationWc = () => {
 <div className="relative flex h-auto min-screen w-full flex-col overflow-x-hidden">
 <div className="layout-container flex h-full grow flex-col">
 {/*  Header  */}
-<header className="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-6 md:px-20 py-4 sticky top-0 z-50">
+<header className="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 bg-white px-6 md:px-20 py-4 sticky top-0 z-50">
 <div className="flex items-center gap-4 text-primary">
 <span className="material-symbols-outlined text-4xl">plumbing</span>
-<h2 className="text-slate-900 dark:text-white text-xl font-bold leading-tight tracking-[-0.015em]">PlombierExpert</h2>
+<h2 className="text-slate-900 text-xl font-bold leading-tight tracking-[-0.015em]">PlombierExpert</h2>
 </div>
 <div className="flex flex-1 justify-end gap-8 items-center">
 <nav className="hidden md:flex items-center gap-8">
-<a className="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">Accueil</a>
+<a className="text-slate-600 text-sm font-medium hover:text-primary transition-colors" href="#">Accueil</a>
 <a className="text-primary text-sm font-bold border-b-2 border-primary" href="#">Services</a>
-<a className="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">Notifications</a>
-<a className="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">Connexion</a>
+<a className="text-slate-600 text-sm font-medium hover:text-primary transition-colors" href="#">Notifications</a>
+<a className="text-slate-600 text-sm font-medium hover:text-primary transition-colors" href="#">Connexion</a>
 </nav>
-<div className="bg-slate-200 dark:bg-slate-700 bg-cover bg-center aspect-square rounded-full size-10 border-2 border-primary/20" data-alt="Avatar de l'utilisateur" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBvFoLg5rwZXWmV6_bj9HGnzHJH51G0KSEUljDTLJEMLHvkLfMdopSaoxRnRnI73ZcnXlINg21pU8FqOC7lTsEbtxg1DjyXs26mJNiFHICCsvYIsR4uTSb2biG2ZhznqCAKODbFZi3_DugdCsRyoKhhXISrcKoN2UCOZAY5ugE20ncjY81_H7kaggxFAG_jVrzbSnx5N5o9OL_Xta963hpO10lLEvfrAsvNb--LFXhHjIp8lmc_2FwaKEjda_wBYS2OkqaHNMbUtRFL");'></div>
+<div className="bg-slate-200 bg-cover bg-center aspect-square rounded-full size-10 border-2 border-primary/20" data-alt="Avatar de l'utilisateur" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBvFoLg5rwZXWmV6_bj9HGnzHJH51G0KSEUljDTLJEMLHvkLfMdopSaoxRnRnI73ZcnXlINg21pU8FqOC7lTsEbtxg1DjyXs26mJNiFHICCsvYIsR4uTSb2biG2ZhznqCAKODbFZi3_DugdCsRyoKhhXISrcKoN2UCOZAY5ugE20ncjY81_H7kaggxFAG_jVrzbSnx5N5o9OL_Xta963hpO10lLEvfrAsvNb--LFXhHjIp8lmc_2FwaKEjda_wBYS2OkqaHNMbUtRFL");'></div>
 </div>
 </header>
 <main className="flex flex-1 justify-center py-8">
 <div className="layout-content-container flex flex-col md:flex-row max-w-[1200px] flex-1 gap-8 px-4">
 {/*  Sidebar Navigation  */}
 <aside className="w-full md:w-64 flex flex-col gap-6">
-<div className="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+<div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
 <div className="flex flex-col mb-6">
-<h1 className="text-slate-900 dark:text-white text-lg font-bold">Réparation WC</h1>
-<p className="text-slate-500 dark:text-slate-400 text-sm">Services Professionnels</p>
+<h1 className="text-slate-900 text-lg font-bold">Réparation WC</h1>
+<p className="text-slate-500 text-sm">Services Professionnels</p>
 </div>
 <nav className="flex flex-col gap-2">
-<a className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<a className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-100 transition-colors" href="#">
 <span className="material-symbols-outlined text-slate-500">home</span>
 <span className="text-sm font-medium">Accueil</span>
 </a>
@@ -40,11 +40,11 @@ const ReparationWc = () => {
 <span className="material-symbols-outlined">construction</span>
 <span className="text-sm font-bold">Services de Plomberie</span>
 </a>
-<a className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<a className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-100 transition-colors" href="#">
 <span className="material-symbols-outlined text-slate-500">notifications</span>
 <span className="text-sm font-medium">Notifications</span>
 </a>
-<a className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<a className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-100 transition-colors" href="#">
 <span className="material-symbols-outlined text-slate-500">account_circle</span>
 <span className="text-sm font-medium">Mon Compte</span>
 </a>
@@ -69,21 +69,21 @@ const ReparationWc = () => {
 </section>
 {/*  Features Grid  */}
 <section className="grid grid-cols-1 md:grid-cols-3 gap-4">
-<div className="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col gap-3">
+<div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex flex-col gap-3">
 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
 <span className="material-symbols-outlined">schedule</span>
 </div>
 <h3 className="font-bold text-lg">Intervention Rapide</h3>
 <p className="text-slate-500 text-sm">Moins de 2h pour vos urgences sanitaires à domicile.</p>
 </div>
-<div className="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col gap-3">
+<div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex flex-col gap-3">
 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
 <span className="material-symbols-outlined">verified</span>
 </div>
 <h3 className="font-bold text-lg">Experts Certifiés</h3>
 <p className="text-slate-500 text-sm">Plombiers qualifiés RGE avec plus de 10 ans d'expérience.</p>
 </div>
-<div className="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col gap-3">
+<div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex flex-col gap-3">
 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
 <span className="material-symbols-outlined">payments</span>
 </div>
@@ -98,7 +98,7 @@ const ReparationWc = () => {
 <span className="text-primary font-medium text-sm">Devis personnalisé disponible</span>
 </div>
 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-<div className="bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-800 rounded-2xl p-8 flex flex-col transition-all hover:border-primary/50">
+<div className="bg-white border-2 border-slate-200 rounded-2xl p-8 flex flex-col transition-all hover:border-primary/50">
 <h3 className="text-xl font-bold">Forfait Standard</h3>
 <p className="text-slate-500 text-sm mt-1">Débouchage et petites réparations</p>
 <div className="my-6">
@@ -112,7 +112,7 @@ const ReparationWc = () => {
 </ul>
 <button className="w-full py-3 rounded-lg border-2 border-primary text-primary font-bold hover:bg-primary/5 transition-colors">Choisir ce forfait</button>
 </div>
-<div className="bg-white dark:bg-slate-900 border-2 border-primary rounded-2xl p-8 flex flex-col relative shadow-xl shadow-primary/5">
+<div className="bg-white border-2 border-primary rounded-2xl p-8 flex flex-col relative shadow-xl shadow-primary/5">
 <div className="absolute -top-4 right-8 bg-primary text-white text-[10px] font-black uppercase px-3 py-1 rounded-full">Recommandé</div>
 <h3 className="text-xl font-bold">Pack Complet</h3>
 <p className="text-slate-500 text-sm mt-1">Réparation majeure &amp; remplacement</p>
@@ -134,7 +134,7 @@ const ReparationWc = () => {
 <section className="flex flex-col gap-6">
 <h2 className="text-2xl font-bold tracking-tight">Nos Experts</h2>
 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-<div className="flex items-center gap-4 bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-800">
+<div className="flex items-center gap-4 bg-white p-4 rounded-xl border border-slate-200">
 <div className="w-16 h-16 rounded-full bg-cover bg-center" data-alt="Portrait de Sarah L., experte plombier" ></div>
 <div>
 <h4 className="font-bold text-lg">Sarah L.</h4>
@@ -149,7 +149,7 @@ const ReparationWc = () => {
 </div>
 </div>
 </div>
-<div className="flex items-center gap-4 bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-800">
+<div className="flex items-center gap-4 bg-white p-4 rounded-xl border border-slate-200">
 <div className="w-16 h-16 rounded-full bg-cover bg-center" data-alt="Portrait de Marc D., expert plombier" ></div>
 <div>
 <h4 className="font-bold text-lg">Marc D.</h4>
@@ -170,8 +170,8 @@ const ReparationWc = () => {
 <section className="flex flex-col gap-4">
 <h2 className="text-2xl font-bold tracking-tight">Zone d'intervention</h2>
 <p className="text-slate-500 text-sm">Nous intervenons dans toute la métropole lilloise et ses environs 7j/7.</p>
-<div className="w-full h-64 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 relative">
-<div className="absolute inset-0 bg-slate-300 dark:bg-slate-800 bg-cover bg-center grayscale opacity-80" data-alt="Carte de la zone d'intervention à Lille" data-location="Lille, France" ></div>
+<div className="w-full h-64 rounded-2xl overflow-hidden border border-slate-200 relative">
+<div className="absolute inset-0 bg-slate-300 bg-cover bg-center grayscale opacity-80" data-alt="Carte de la zone d'intervention à Lille" data-location="Lille, France" ></div>
 <div className="absolute inset-0 flex items-center justify-center">
 <div className="bg-primary/20 p-20 rounded-full animate-pulse">
 <div className="bg-primary p-4 rounded-full text-white shadow-xl">
@@ -179,7 +179,7 @@ const ReparationWc = () => {
 </div>
 </div>
 </div>
-<div className="absolute bottom-4 left-4 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md p-3 rounded-lg border border-slate-200 dark:border-slate-800 text-xs font-bold shadow-sm">
+<div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-md p-3 rounded-lg border border-slate-200 text-xs font-bold shadow-sm">
                                     Disponibilité : <span className="text-green-500">Immédiate</span>
 </div>
 </div>

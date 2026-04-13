@@ -5,7 +5,7 @@ const FormulaireDeContestationDeConstat = () => {
     <>
       
 {/*  Top Navigation Bar  */}
-<header className="border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark/50 sticky top-0 z-50">
+<header className="border-b border-slate-200 bg-white sticky top-0 z-50">
 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div className="flex justify-between h-16 items-center">
 <div className="flex items-center gap-2 text-primary">
@@ -22,7 +22,7 @@ const FormulaireDeContestationDeConstat = () => {
 <p className="text-xs font-bold">Jean Dupont</p>
 <p className="text-[10px] text-slate-500 uppercase tracking-wider">Menuisier Expert</p>
 </div>
-<div className="size-10 rounded-full bg-slate-200 dark:bg-slate-700 flex items-center justify-center overflow-hidden border-2 border-primary/20">
+<div className="size-10 rounded-full bg-slate-200 flex items-center justify-center overflow-hidden border-2 border-primary/20">
 <img className="w-full h-full object-cover" data-alt="Portrait of a professional artisan" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbYjDz9ukx2bJ9GCf4ytBMwHbyS8DUPLTIvrEuOt9hkBR7BpmLj4Ii6_jlNeKIKbOZ5d490FmGnr8yReSENmvfLUubXXYpcwJLnge74xURRQuU2gLRAc_r8ZG2jIT2knS-OPRsnCvogcHMBdx9fD8d2Dl0sSh9bSPvIQDaBHc5mOdG1mec_N0HvOcqBQO41dPvy4SoT6ym3_g05IsVrMuvYKBw-pRMPmwLqAsnONpyPUSCXI_LcyGRrUz8iGaXgo55AjGJds4tX1cp"/>
 </div>
 </div>
@@ -31,12 +31,12 @@ const FormulaireDeContestationDeConstat = () => {
 </header>
 <main className="max-w-4xl mx-auto px-4 py-8">
 {/*  Breadcrumbs  */}
-<nav className="flex mb-6 text-sm text-slate-500 dark:text-slate-400 gap-2 items-center">
+<nav className="flex mb-6 text-sm text-slate-500 gap-2 items-center">
 <a className="hover:text-primary" href="#">Missions</a>
 <span className="material-symbols-outlined text-xs">chevron_right</span>
 <a className="hover:text-primary" href="#">Avertissements</a>
 <span className="material-symbols-outlined text-xs">chevron_right</span>
-<span className="text-slate-900 dark:text-slate-100 font-medium">Contester le constat</span>
+<span className="text-slate-900 font-medium">Contester le constat</span>
 </nav>
 {/*  Header Section  */}
 <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 mb-8">
@@ -46,12 +46,12 @@ const FormulaireDeContestationDeConstat = () => {
                     Référence : #AV-2023-0891
                 </div>
 </div>
-<button className="px-6 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 font-bold text-sm hover:bg-slate-50 dark:hover:bg-slate-800 transition-all">
+<button className="px-6 py-2.5 rounded-xl border border-slate-300 font-bold text-sm hover:bg-slate-50 transition-all">
                 Annuler la procédure
             </button>
 </div>
 {/*  Main Form Container  */}
-<div className="bg-white dark:bg-slate-900/50 rounded-xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm">
+<div className="bg-white rounded-xl border border-slate-200 p-6 shadow-sm">
 <form className="space-y-8">
 {/*  Section 1: Evidence Selection  */}
 <section>
@@ -61,24 +61,24 @@ const FormulaireDeContestationDeConstat = () => {
 </div>
 <p className="text-sm text-slate-500 mb-4">Sélectionnez les preuves administratives avec lesquelles vous n'êtes pas d'accord :</p>
 <div className="grid grid-cols-1 gap-3">
-<label className="flex items-center gap-4 p-4 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800 cursor-pointer transition-colors group">
-<input className="size-5 rounded border-slate-300 dark:border-slate-700 text-primary focus:ring-primary" type="checkbox"/>
+<label className="flex items-center gap-4 p-4 rounded-xl border border-slate-200 hover:bg-slate-50 cursor-pointer transition-colors group">
+<input className="size-5 rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/>
 <div className="flex-1">
 <p className="font-semibold text-sm">Preuve photo n°1 : Retard de livraison constaté</p>
 <p className="text-xs text-slate-400">Ajouté le 12/10/2023 par Admin-42</p>
 </div>
 <span className="material-symbols-outlined text-slate-300 group-hover:text-primary">image</span>
 </label>
-<label className="flex items-center gap-4 p-4 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800 cursor-pointer transition-colors group">
-<input className="size-5 rounded border-slate-300 dark:border-slate-700 text-primary focus:ring-primary" type="checkbox"/>
+<label className="flex items-center gap-4 p-4 rounded-xl border border-slate-200 hover:bg-slate-50 cursor-pointer transition-colors group">
+<input className="size-5 rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/>
 <div className="flex-1">
 <p className="font-semibold text-sm">Preuve photo n°2 : Qualité des matériaux non-conforme</p>
 <p className="text-xs text-slate-400">Ajouté le 12/10/2023 par Admin-42</p>
 </div>
 <span className="material-symbols-outlined text-slate-300 group-hover:text-primary">image</span>
 </label>
-<label className="flex items-center gap-4 p-4 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800 cursor-pointer transition-colors group">
-<input className="size-5 rounded border-slate-300 dark:border-slate-700 text-primary focus:ring-primary" type="checkbox"/>
+<label className="flex items-center gap-4 p-4 rounded-xl border border-slate-200 hover:bg-slate-50 cursor-pointer transition-colors group">
+<input className="size-5 rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/>
 <div className="flex-1">
 <p className="font-semibold text-sm">Rapport de constatation technique - Expert BTP</p>
 <p className="text-xs text-slate-400">PDF Document - 2.4 Mo</p>
@@ -87,7 +87,7 @@ const FormulaireDeContestationDeConstat = () => {
 </label>
 </div>
 </section>
-<hr className="border-slate-100 dark:border-slate-800"/>
+<hr className="border-slate-100"/>
 {/*  Section 2: Detailed Justification  */}
 <section>
 <div className="flex items-center gap-2 mb-4">
@@ -95,13 +95,13 @@ const FormulaireDeContestationDeConstat = () => {
 <h3 className="text-lg font-bold">Justification détaillée</h3>
 </div>
 <div className="space-y-2">
-<label className="block text-sm font-medium text-slate-700 dark:text-slate-300" htmlFor="justification">
+<label className="block text-sm font-medium text-slate-700" htmlFor="justification">
                             Expliquez en détail les raisons de votre contestation (obligatoire)
                         </label>
-<textarea className="w-full rounded-xl border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 focus:border-primary focus:ring-primary text-sm" id="justification" placeholder="Décrivez les faits, les circonstances et apportez des précisions sur les éléments contestés..." rows="6"></textarea>
+<textarea className="w-full rounded-xl border-slate-300 bg-white focus:border-primary focus:ring-primary text-sm" id="justification" placeholder="Décrivez les faits, les circonstances et apportez des précisions sur les éléments contestés..." rows="6"></textarea>
 </div>
 </section>
-<hr className="border-slate-100 dark:border-slate-800"/>
+<hr className="border-slate-100"/>
 {/*  Section 3: File Upload  */}
 <section>
 <div className="flex items-center gap-2 mb-4">
@@ -109,7 +109,7 @@ const FormulaireDeContestationDeConstat = () => {
 <h3 className="text-lg font-bold">Preuves contradictoires</h3>
 </div>
 <p className="text-sm text-slate-500 mb-4">Ajoutez des photos de chantier, factures d'achats ou tout document justifiant votre version des faits.</p>
-<div className="border-2 border-dashed border-slate-200 dark:border-slate-700 rounded-xl p-8 flex flex-col items-center justify-center bg-slate-50/50 dark:bg-slate-800/30 hover:border-primary transition-colors group cursor-pointer">
+<div className="border-2 border-dashed border-slate-200 rounded-xl p-8 flex flex-col items-center justify-center bg-slate-50/50 hover:border-primary transition-colors group cursor-pointer">
 <div className="size-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-3 group-hover:scale-110 transition-transform">
 <span className="material-symbols-outlined">cloud_upload</span>
 </div>
@@ -119,9 +119,9 @@ const FormulaireDeContestationDeConstat = () => {
 </div>
 </section>
 {/*  Warning Message  */}
-<div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800/50 p-4 rounded-xl flex gap-3">
-<span className="material-symbols-outlined text-amber-600 dark:text-amber-400 shrink-0">warning</span>
-<div className="text-sm text-amber-800 dark:text-amber-200">
+<div className="bg-amber-50 border border-amber-200 p-4 rounded-xl flex gap-3">
+<span className="material-symbols-outlined text-amber-600 shrink-0">warning</span>
+<div className="text-sm text-amber-800">
 <p className="font-bold mb-1">Attention aux fausses déclarations</p>
 <p>Toute fausse déclaration ou falsification de document peut entraîner des sanctions plus sévères, incluant la suspension définitive de votre compte ArtisanDirect.</p>
 </div>
@@ -132,14 +132,14 @@ const FormulaireDeContestationDeConstat = () => {
 <span className="material-symbols-outlined">send</span>
                         Envoyer ma contestation
                     </button>
-<button className="px-8 py-4 rounded-xl border border-slate-200 dark:border-slate-800 font-bold hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors" type="button">
+<button className="px-8 py-4 rounded-xl border border-slate-200 font-bold hover:bg-slate-50 transition-colors" type="button">
                         Sauvegarder en brouillon
                     </button>
 </div>
 </form>
 </div>
 </main>
-<footer className="mt-20 border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark/50 py-12">
+<footer className="mt-20 border-t border-slate-200 bg-white py-12">
 <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
 <div className="col-span-1 md:col-span-1">
 <div className="flex items-center gap-2 text-primary mb-4">
@@ -177,13 +177,13 @@ const FormulaireDeContestationDeConstat = () => {
 </div>
 </div>
 </div>
-<div className="max-w-7xl mx-auto px-4 mt-12 pt-8 border-t border-slate-100 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
+<div className="max-w-7xl mx-auto px-4 mt-12 pt-8 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-4">
 <p className="text-xs text-slate-400">© 2023 ArtisanDirect SAS. Tous droits réservés.</p>
 <div className="flex gap-4">
-<span className="size-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center cursor-pointer hover:bg-primary hover:text-white transition-all">
+<span className="size-8 rounded-full bg-slate-100 flex items-center justify-center cursor-pointer hover:bg-primary hover:text-white transition-all">
 <span className="material-symbols-outlined text-sm">public</span>
 </span>
-<span className="size-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center cursor-pointer hover:bg-primary hover:text-white transition-all">
+<span className="size-8 rounded-full bg-slate-100 flex items-center justify-center cursor-pointer hover:bg-primary hover:text-white transition-all">
 <span className="material-symbols-outlined text-sm">shield</span>
 </span>
 </div>

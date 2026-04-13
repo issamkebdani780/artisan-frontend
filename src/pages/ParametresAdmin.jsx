@@ -58,8 +58,8 @@ const ParametresAdmin = () => {
         
         {/* Title Section */}
         <div className="mb-8">
-          <h1 className="text-3xl font-black tracking-tight text-slate-900 dark:text-white">Paramètres Administrateur</h1>
-          <p className="text-slate-500 dark:text-slate-400 mt-2">Mettez à jour vos informations de connexion sécurisées pour le portail d'administration.</p>
+          <h1 className="text-3xl font-black tracking-tight text-slate-900">Paramètres Administrateur</h1>
+          <p className="text-slate-500 mt-2">Mettez à jour vos informations de connexion sécurisées pour le portail d'administration.</p>
         </div>
 
         <div className="grid grid-cols-1 xl:grid-cols-3 gap-8 items-start">
@@ -67,7 +67,7 @@ const ParametresAdmin = () => {
           {/* Left Column: Dynamic Content */}
           <div className="xl:col-span-2 space-y-8">
             
-            <section className="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 p-8 shadow-sm">
+            <section className="bg-white rounded-xl border border-slate-200 p-8 shadow-sm">
               <div className="flex items-center gap-3 mb-8">
                 <span className="material-symbols-outlined text-indigo-600">manage_accounts</span>
                 <h2 className="text-xl font-bold">Identifiants de Connexion</h2>
@@ -87,7 +87,7 @@ const ParametresAdmin = () => {
                     <input 
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      className="w-full bg-slate-50 dark:bg-slate-800 border-none rounded-xl p-3 text-sm focus:ring-2 focus:ring-indigo-500 transition-all outline-none" 
+                      className="w-full bg-slate-50 border-none rounded-xl p-3 text-sm focus:ring-2 focus:ring-indigo-500 transition-all outline-none" 
                       id="admin-email" 
                       type="email" 
                       placeholder="admin@gmail.com" 
@@ -101,7 +101,7 @@ const ParametresAdmin = () => {
                     <input 
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
-                      className="w-full bg-slate-50 dark:bg-slate-800 border-none rounded-xl p-3 text-sm focus:ring-2 focus:ring-indigo-500 transition-all outline-none" 
+                      className="w-full bg-slate-50 border-none rounded-xl p-3 text-sm focus:ring-2 focus:ring-indigo-500 transition-all outline-none" 
                       id="admin-pass" 
                       type="password" 
                       placeholder="Laissez vide pour conserver l'actuel" 
@@ -115,7 +115,7 @@ const ParametresAdmin = () => {
                     <input 
                       value={passwordConfirm}
                       onChange={(e) => setPasswordConfirm(e.target.value)}
-                      className="w-full bg-slate-50 dark:bg-slate-800 border-none rounded-xl p-3 text-sm focus:ring-2 focus:ring-indigo-500 transition-all outline-none" 
+                      className="w-full bg-slate-50 border-none rounded-xl p-3 text-sm focus:ring-2 focus:ring-indigo-500 transition-all outline-none" 
                       id="admin-pass-confirm" 
                       type="password" 
                       placeholder="••••••••" 
@@ -159,8 +159,8 @@ const ParametresAdmin = () => {
               </div>
             </div>
 
-            <div className="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm">
-              <h4 className="font-bold text-slate-900 dark:text-white mb-2">Historique Compte</h4>
+            <div className="bg-white rounded-xl border border-slate-200 p-6 shadow-sm">
+              <h4 className="font-bold text-slate-900 mb-2">Historique Compte</h4>
               <ul className="space-y-3 mt-4">
                 <li className="flex justify-between items-center text-xs text-slate-500">
                   <span>Dernière connexion</span>

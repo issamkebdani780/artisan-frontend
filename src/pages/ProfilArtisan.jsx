@@ -56,15 +56,15 @@ const ProfilArtisan = () => {
   }, [id]);
 
   if (loading) return (
-    <div className="min-h-screen flex items-center justify-center bg-slate-50 dark:bg-slate-900 transition-colors">
+    <div className="min-h-screen flex items-center justify-center bg-slate-50 transition-colors">
       <div className="flex flex-col items-center gap-4">
         <span className="animate-spin h-12 w-12 border-4 border-blue-600/30 border-t-blue-600 rounded-full"></span>
-        <p className="text-slate-500 dark:text-slate-400 font-bold">Chargement du profil...</p>
+        <p className="text-slate-500 font-bold">Chargement du profil...</p>
       </div>
     </div>
   );
 
-  if (!artisan) return <div className="text-center py-20 dark:text-white">Artisan non trouvé.</div>;
+  if (!artisan) return <div className="text-center py-20">Artisan non trouvé.</div>;
 
   const displayExperience = (() => {
     try {
@@ -81,15 +81,15 @@ const ProfilArtisan = () => {
   })();
 
   return (
-    <div className="min-h-screen bg-white dark:bg-slate-900 font-['Public_Sans',sans-serif] text-slate-900 dark:text-slate-100 transition-colors">
+    <div className="min-h-screen bg-white font-['Public_Sans',sans-serif] text-slate-900 transition-colors">
       {/* Hero Header */}
-      <div className="relative h-[300px] md:h-[400px] w-full bg-slate-50 dark:bg-slate-800/20 overflow-hidden border-b border-slate-100 dark:border-white/5">
-        <div className="absolute inset-0 w-full h-full bg-linear-to-br from-indigo-50/50 dark:from-indigo-900/10 to-white dark:to-slate-900"></div>
+      <div className="relative h-[300px] md:h-[400px] w-full bg-slate-50 overflow-hidden border-b border-slate-100">
+        <div className="absolute inset-0 w-full h-full bg-linear-to-br from-indigo-50/50 to-white"></div>
         
         <div className="relative h-full max-w-7xl mx-auto px-6 md:px-20 flex flex-col justify-end pb-12">
           <div className="flex flex-col md:flex-row items-start md:items-end gap-8">
             <div className="relative group">
-              <div className="size-32 md:size-44 rounded-[40px] border-4 border-white dark:border-slate-800 overflow-hidden bg-white dark:bg-slate-800 shadow-2xl relative z-10 transition-colors">
+              <div className="size-32 md:size-44 rounded-[40px] border-4 border-white overflow-hidden bg-white shadow-2xl relative z-10 transition-colors">
                 <img 
                   src={artisan.profile_pic || 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop'} 
                   alt={artisan.name} 
@@ -97,11 +97,11 @@ const ProfilArtisan = () => {
                 />
               </div>
               {Number(artisan.is_verified) === 1 ? (
-                <div className="absolute -bottom-2 -right-2 size-10 bg-emerald-500 rounded-2xl border-4 border-white dark:border-slate-800 z-20 flex items-center justify-center shadow-lg transition-colors" title="Vérifié par la plateforme">
+                <div className="absolute -bottom-2 -right-2 size-10 bg-emerald-500 rounded-2xl border-4 border-white z-20 flex items-center justify-center shadow-lg transition-colors" title="Vérifié par la plateforme">
                   <span className="material-symbols-outlined text-white text-xl">verified</span>
                 </div>
               ) : (
-                <div className="absolute -bottom-2 -right-2 size-10 bg-amber-500 rounded-2xl border-4 border-white dark:border-slate-800 z-20 flex items-center justify-center shadow-lg transition-colors" title={Number(artisan.is_verified) === -1 ? "Vérification refusée" : "En attente de vérification"}>
+                <div className="absolute -bottom-2 -right-2 size-10 bg-amber-500 rounded-2xl border-4 border-white z-20 flex items-center justify-center shadow-lg transition-colors" title={Number(artisan.is_verified) === -1 ? "Vérification refusée" : "En attente de vérification"}>
                   <span className="material-symbols-outlined text-white text-xl">{Number(artisan.is_verified) === -1 ? 'block' : 'hourglass_empty'}</span>
                 </div>
               )}
@@ -110,23 +110,23 @@ const ProfilArtisan = () => {
             <div className="flex-1 pb-2">
               <div className="flex flex-wrap items-center gap-4 mb-3">
                 <div className="flex items-center gap-3">
-                  <h1 className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white tracking-tight uppercase">{artisan.name}</h1>
+                  <h1 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tight uppercase">{artisan.name}</h1>
                   {Number(artisan.is_verified) === 1 && (
                     <span className="material-symbols-outlined text-blue-500 text-3xl" style={{ fontVariationSettings: "'FILL' 1" }}>verified</span>
                   )}
                 </div>
-                <span className="px-4 py-1.5 rounded-full bg-emerald-50 dark:bg-emerald-900/20 border border-emerald-100 dark:border-emerald-800 text-emerald-700 dark:text-emerald-400 text-[10px] font-black uppercase tracking-widest flex items-center justify-center">
+                <span className="px-4 py-1.5 rounded-full bg-emerald-50 border border-emerald-100 text-emerald-700 text-[10px] font-black uppercase tracking-widest flex items-center justify-center">
                   Disponible
                 </span>
               </div>
-              <div className="flex flex-wrap items-center gap-4 text-slate-500 dark:text-slate-400">
+              <div className="flex flex-wrap items-center gap-4 text-slate-500">
                 <div className="flex items-center gap-2">
                   <span className="material-symbols-outlined text-primary">engineering</span>
                   <span className="font-bold text-sm md:text-base">{artisan.specialty}</span>
                 </div>
-                <span className="hidden md:block size-1 bg-slate-300 dark:bg-slate-700 rounded-full"></span>
+                <span className="hidden md:block size-1 bg-slate-300 rounded-full"></span>
                 <div className="flex items-center gap-2">
-                  <span className="material-symbols-outlined text-slate-400 dark:text-slate-500">location_on</span>
+                  <span className="material-symbols-outlined text-slate-400">location_on</span>
                   <span className="font-medium text-sm md:text-base">{artisan.address || 'Alger, Algérie'}</span>
                 </div>
               </div>
@@ -145,19 +145,19 @@ const ProfilArtisan = () => {
                 { label: 'Note Globale', value: artisan.rating || '5.0', icon: 'star', color: 'text-yellow-400' },
                 { label: 'Réponse', value: '< 24h', icon: 'bolt', color: 'text-blue-500' }
               ].map((stat, i) => (
-                <div key={i} className="bg-white dark:bg-slate-800 p-6 rounded-[32px] border border-slate-100 dark:border-white/5 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                  <div className={`size-10 rounded-2xl bg-slate-50 dark:bg-slate-900/60 flex items-center justify-center mb-4 ${stat.color || 'text-slate-400 dark:text-slate-500'}`}>
+                <div key={i} className="bg-white p-6 rounded-[32px] border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                  <div className={`size-10 rounded-2xl bg-slate-50 flex items-center justify-center mb-4 ${stat.color || 'text-slate-400'}`}>
                     <span className="material-symbols-outlined text-xl">{stat.icon}</span>
                   </div>
-                  <p className="text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-1">{stat.label}</p>
-                  <p className="text-xl font-black text-slate-900 dark:text-white uppercase transition-colors">{stat.value}</p>
+                  <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">{stat.label}</p>
+                  <p className="text-xl font-black text-slate-900 uppercase transition-colors">{stat.value}</p>
                 </div>
               ))}
             </div>
 
-            <section className="bg-white dark:bg-slate-800 rounded-[40px] border border-slate-100 dark:border-white/5 shadow-sm overflow-hidden transition-colors">
-              <div className="px-8 py-6 border-b border-slate-50 dark:border-white/5 flex items-center justify-between">
-                <h3 className="text-xl font-black flex items-center gap-3 dark:text-white uppercase">
+            <section className="bg-white rounded-[40px] border border-slate-100 shadow-sm overflow-hidden transition-colors">
+              <div className="px-8 py-6 border-b border-slate-50 flex items-center justify-between">
+                <h3 className="text-xl font-black flex items-center gap-3 uppercase">
                   <div className="size-8 rounded-xl bg-primary/10 text-primary flex items-center justify-center">
                     <span className="material-symbols-outlined text-lg">category</span>
                   </div>
@@ -179,36 +179,36 @@ const ProfilArtisan = () => {
                     } catch (e) {}
 
                     return (
-                      <div key={service.id} className="group p-5 rounded-2xl bg-slate-50 dark:bg-slate-900/40 border border-slate-100 dark:border-white/5 flex flex-col md:flex-row md:items-center justify-between gap-4 hover:bg-white dark:hover:bg-slate-800 hover:border-primary/30 dark:hover:border-primary/50 hover:shadow-lg transition-all">
+                      <div key={service.id} className="group p-5 rounded-2xl bg-slate-50 border border-slate-100 flex flex-col md:flex-row md:items-center justify-between gap-4 hover:bg-white hover:border-primary/30 hover:shadow-lg transition-all">
                         <div className="flex items-center gap-4 flex-1">
-                          <div className="size-12 rounded-xl bg-white dark:bg-slate-800 flex items-center justify-center text-slate-400 dark:text-slate-600 group-hover:bg-primary group-hover:text-white transition-colors shadow-sm shrink-0">
+                          <div className="size-12 rounded-xl bg-white flex items-center justify-center text-slate-400 group-hover:bg-primary group-hover:text-white transition-colors shadow-sm shrink-0">
                             <span className="material-symbols-outlined">settings</span>
                           </div>
                           <div className="min-w-0">
-                            <p className="font-black text-slate-900 dark:text-white truncate uppercase transition-colors">{service.title}</p>
+                            <p className="font-black text-slate-900 truncate uppercase transition-colors">{service.title}</p>
                             <div className="flex items-center gap-2">
-                              <p className="text-[10px] text-slate-400 dark:text-slate-500 font-bold uppercase tracking-wider">{service.category_name}</p>
+                              <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">{service.category_name}</p>
                               {categoryExp > 0 && (
                                 <>
-                                  <span className="size-1 bg-slate-300 dark:bg-slate-700 rounded-full"></span>
+                                  <span className="size-1 bg-slate-300 rounded-full"></span>
                                   <p className="text-[10px] text-primary font-black uppercase tracking-widest">{categoryExp} ans d'expérience</p>
                                 </>
                               )}
                             </div>
                           </div>
                         </div>
-                        <div className="flex items-center justify-between md:justify-end gap-8 px-4 py-2 bg-white dark:bg-slate-800 rounded-xl md:bg-transparent shrink-0 border border-slate-100 dark:border-white/5 md:border-0 transition-colors">
-                          <p className="text-slate-400 dark:text-slate-500 text-[10px] font-black uppercase md:hidden tracking-widest">A partir de</p>
+                        <div className="flex items-center justify-between md:justify-end gap-8 px-4 py-2 bg-white rounded-xl md:bg-transparent shrink-0 border border-slate-100 md:border-0 transition-colors">
+                          <p className="text-slate-400 text-[10px] font-black uppercase md:hidden tracking-widest">A partir de</p>
                           <p className="text-xl font-black text-primary">{Number(service.base_price).toLocaleString()} DA</p>
                         </div>
                       </div>
                     );
                   }) : (
                     <div className="py-12 text-center">
-                      <div className="size-20 bg-slate-50 dark:bg-slate-900/60 rounded-full flex items-center justify-center mx-auto mb-4 border border-dashed border-slate-200 dark:border-white/10 transition-colors">
-                        <span className="material-symbols-outlined text-slate-300 dark:text-slate-600 text-3xl">inbox_customize</span>
+                      <div className="size-20 bg-slate-50 rounded-full flex items-center justify-center mx-auto mb-4 border border-dashed border-slate-200 transition-colors">
+                        <span className="material-symbols-outlined text-slate-300 text-3xl">inbox_customize</span>
                       </div>
-                      <p className="text-slate-400 dark:text-slate-500 font-bold max-w-xs mx-auto">Aucun service standard n'est listé. Contactez l'artisan pour un devis sur mesure.</p>
+                      <p className="text-slate-400 font-bold max-w-xs mx-auto">Aucun service standard n'est listé. Contactez l'artisan pour un devis sur mesure.</p>
                     </div>
                   )}
                 </div>
@@ -217,8 +217,8 @@ const ProfilArtisan = () => {
 
             <section>
               <div className="flex items-center justify-between mb-8">
-                <h3 className="text-xl font-black flex items-center gap-3 dark:text-white uppercase">
-                  <div className="size-8 rounded-xl bg-yellow-100 dark:bg-yellow-900/30 text-yellow-600 dark:text-yellow-400 flex items-center justify-center">
+                <h3 className="text-xl font-black flex items-center gap-3 uppercase">
+                  <div className="size-8 rounded-xl bg-yellow-100 text-yellow-600 flex items-center justify-center">
                     <span className="material-symbols-outlined text-lg">star</span>
                   </div>
                   Retours d'Expérience ({reviews.length})
@@ -226,15 +226,15 @@ const ProfilArtisan = () => {
               </div>
 
               {reviews.length === 0 ? (
-                <div className="bg-slate-100/50 dark:bg-slate-800/50 p-12 rounded-[40px] border border-dashed border-slate-200 dark:border-white/10 text-center transition-colors">
-                  <span className="material-symbols-outlined text-slate-300 dark:text-slate-600 text-4xl mb-4">forum</span>
-                  <p className="text-slate-500 dark:text-slate-400 font-bold">L'artisan n'a pas encore reçu d'avis.</p>
+                <div className="bg-slate-100/50 p-12 rounded-[40px] border border-dashed border-slate-200 text-center transition-colors">
+                  <span className="material-symbols-outlined text-slate-300 text-4xl mb-4">forum</span>
+                  <p className="text-slate-500 font-bold">L'artisan n'a pas encore reçu d'avis.</p>
                 </div>
               ) : (
                 <div className="grid gap-4">
                   {reviews.map(review => (
-                    <div key={review.id} className="bg-white dark:bg-slate-800 p-8 rounded-3xl border border-slate-100 dark:border-white/5 shadow-sm relative overflow-hidden group transition-colors">
-                      <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:scale-110 transition-transform dark:text-white">
+                    <div key={review.id} className="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm relative overflow-hidden group transition-colors">
+                      <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:scale-110 transition-transform">
                         <span className="material-symbols-outlined text-8xl">format_quote</span>
                       </div>
                       <div className="flex items-start gap-4 mb-6 relative">
@@ -244,16 +244,16 @@ const ProfilArtisan = () => {
                           className="size-14 rounded-2xl object-cover shadow-md" 
                         />
                         <div className="flex-1">
-                          <p className="font-black text-slate-900 dark:text-white transition-colors">{review.client_name}</p>
-                          <p className="text-xs text-slate-400 dark:text-slate-500 font-bold mb-2 transition-colors">{new Date(review.created_at).toLocaleDateString('fr-FR', { month: 'long', year: 'numeric' })}</p>
+                          <p className="font-black text-slate-900 transition-colors">{review.client_name}</p>
+                          <p className="text-xs text-slate-400 font-bold mb-2 transition-colors">{new Date(review.created_at).toLocaleDateString('fr-FR', { month: 'long', year: 'numeric' })}</p>
                           <div className="flex items-center gap-1">
                             {[1, 2, 3, 4, 5].map(s => (
-                              <span key={s} className={`material-symbols-outlined text-sm ${s <= review.rating ? 'text-yellow-400' : 'text-slate-200 dark:text-slate-700'}`} style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
+                              <span key={s} className={`material-symbols-outlined text-sm ${s <= review.rating ? 'text-yellow-400' : 'text-slate-200'}`} style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
                             ))}
                           </div>
                         </div>
                       </div>
-                      <p className="text-slate-600 dark:text-slate-300 font-medium leading-relaxed italic relative transition-colors">
+                      <p className="text-slate-600 font-medium leading-relaxed italic relative transition-colors">
                         "{review.comment}"
                       </p>
                     </div>
@@ -266,11 +266,11 @@ const ProfilArtisan = () => {
           <div className="lg:col-span-4">
             <div className="sticky top-24 space-y-6">
               {currentUser?.id?.toString() !== id?.toString() ? (
-                <div className="bg-white dark:bg-slate-800 rounded-[40px] border border-slate-100 dark:border-white/5 shadow-2xl dark:shadow-none overflow-hidden transition-colors">
+                <div className="bg-white rounded-[40px] border border-slate-100 shadow-2xl overflow-hidden transition-colors">
                   <div className="p-8">
-                    <h4 className="text-xl font-black mb-6 dark:text-white uppercase transition-colors">Demander un service</h4>
+                    <h4 className="text-xl font-black mb-6 uppercase transition-colors">Demander un service</h4>
                     <div className="space-y-6">
-                      <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed font-bold transition-colors">
+                      <p className="text-sm text-slate-500 leading-relaxed font-bold transition-colors">
                         Votre projet mérite un expert. Contactez <span className="text-primary">{artisan.name}</span> pour une estimation précise et rapide.
                       </p>
                       
@@ -292,7 +292,7 @@ const ProfilArtisan = () => {
                             }
                             setIsChatOpen(true);
                           }}
-                          className="w-full bg-slate-900 dark:bg-primary border-2 border-slate-900 dark:border-primary text-white font-black h-16 rounded-2xl flex items-center justify-center gap-3 hover:bg-slate-800 dark:hover:bg-primary/90 transition-all active:scale-95 transition-colors"
+                          className="w-full bg-slate-900 border-2 border-slate-900 text-white font-black h-16 rounded-2xl flex items-center justify-center gap-3 hover:bg-slate-800 transition-all active:scale-95 transition-colors"
                         >
                           <span className="material-symbols-outlined">mark_chat_unread</span>
                           Envoyer un Message
@@ -300,20 +300,20 @@ const ProfilArtisan = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="px-8 py-4 bg-slate-50 dark:bg-slate-900/50 flex items-center justify-center gap-2 border-t border-slate-100 dark:border-white/5 transition-colors">
+                  <div className="px-8 py-4 bg-slate-50 flex items-center justify-center gap-2 border-t border-slate-100 transition-colors">
                     <span className="material-symbols-outlined text-primary text-lg">verified_user</span>
-                    <p className="text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-widest leading-none pt-1 transition-colors">Garantie Mihnati Incluse</p>
+                    <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest leading-none pt-1 transition-colors">Garantie Mihnati Incluse</p>
                   </div>
                 </div>
               ) : (
-                <div className="bg-white dark:bg-slate-800 p-8 rounded-[40px] shadow-2xl dark:shadow-none border border-primary/10 dark:border-white/5 relative overflow-hidden group transition-colors">
+                <div className="bg-white p-8 rounded-[40px] shadow-2xl border border-primary/10 relative overflow-hidden group transition-colors">
                   <div className="absolute -bottom-12 -right-12 size-48 bg-primary/5 rounded-full blur-3xl group-hover:scale-125 transition-transform duration-700"></div>
                   <div className="relative">
                     <div className="size-16 rounded-3xl bg-primary flex items-center justify-center mb-6 shadow-xl shadow-primary/20">
                       <span className="material-symbols-outlined text-white text-4xl">visibility</span>
                     </div>
-                    <h4 className="text-2xl font-black mb-3 tracking-tight text-slate-900 dark:text-white italic uppercase transition-colors">Profil Public</h4>
-                    <p className="text-slate-500 dark:text-slate-400 font-bold mb-8 leading-relaxed transition-colors">
+                    <h4 className="text-2xl font-black mb-3 tracking-tight text-slate-900 italic uppercase transition-colors">Profil Public</h4>
+                    <p className="text-slate-500 font-bold mb-8 leading-relaxed transition-colors">
                       Voici le visuel de votre profil pour vos futurs clients. Gardez-le à jour pour plus de visibilité.
                     </p>
                     <Link 
@@ -327,16 +327,16 @@ const ProfilArtisan = () => {
                 </div>
               )}
 
-              <div className="bg-slate-50 dark:bg-slate-800/40 p-8 rounded-[40px] border border-slate-100 dark:border-white/5 space-y-6 transition-colors">
-                <h4 className="text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-widest transition-colors">Confiance & Sécurité</h4>
+              <div className="bg-slate-50 p-8 rounded-[40px] border border-slate-100 space-y-6 transition-colors">
+                <h4 className="text-[10px] font-black text-slate-400 uppercase tracking-widest transition-colors">Confiance & Sécurité</h4>
                 <div className="space-y-4">
                   {[
                     { label: 'Identité Vérifiée', icon: 'verified', active: Number(artisan.is_verified) === 1 },
                     { label: 'Docs Professionnels', icon: 'article', active: Number(artisan.is_verified) === 1 },
                     { label: 'Réponse Rapide', icon: 'shutter_speed', active: true }
                   ].map((v, i) => (
-                    <div key={i} className={`flex items-center gap-3 text-sm font-black transition-colors ${v.active ? 'text-slate-700 dark:text-slate-200' : 'text-slate-300 dark:text-slate-700 opacity-50'}`}>
-                      <div className={`size-8 rounded-full flex items-center justify-center shadow-sm transition-colors ${v.active ? 'bg-white dark:bg-slate-900 text-emerald-500' : 'bg-slate-100 dark:bg-slate-800 text-slate-300 dark:text-slate-700'}`}>
+                    <div key={i} className={`flex items-center gap-3 text-sm font-black transition-colors ${v.active ? 'text-slate-700' : 'text-slate-300 opacity-50'}`}>
+                      <div className={`size-8 rounded-full flex items-center justify-center shadow-sm transition-colors ${v.active ? 'bg-white text-emerald-500' : 'bg-slate-100 text-slate-300'}`}>
                         <span className="material-symbols-outlined text-lg">{v.active ? 'check' : 'close'}</span>
                       </div>
                       {v.label}
@@ -349,13 +349,13 @@ const ProfilArtisan = () => {
         </div>
       </div>
 
-      <footer className="mt-24 border-t border-slate-100 dark:border-white/5 bg-white dark:bg-slate-900 py-16 transition-colors">
+      <footer className="mt-24 border-t border-slate-100 bg-white py-16 transition-colors">
         <div className="max-w-7xl mx-auto px-6 md:px-20">
           <div className="flex flex-col md:flex-row justify-between items-center gap-10">
             <div className="flex items-center gap-4">
               <img src={logo} alt="Mihnati" className="h-10 w-auto object-contain bg-white rounded-xl p-1" />
-              <div className="h-8 w-px bg-slate-100 dark:bg-white/5 hidden md:block"></div>
-              <p className="text-slate-400 dark:text-slate-500 text-xs font-bold tracking-tight transition-colors">Le réseau des experts de confiance. © 2026 Mihnati.</p>
+              <div className="h-8 w-px bg-slate-100 hidden md:block"></div>
+              <p className="text-slate-400 text-xs font-bold tracking-tight transition-colors">Le réseau des experts de confiance. © 2026 Mihnati.</p>
             </div>
             <div className="flex gap-6">
               {['Accueil', 'Expertise', 'Aide', 'Confidentialité'].map((link) => (

@@ -80,8 +80,8 @@ const AdminDashboard = () => {
         {/* Welcome Header */}
         <div className="flex justify-between items-center">
           <div>
-            <h2 className="text-3xl font-black text-slate-900 dark:text-white tracking-tight">Tableau de bord</h2>
-            <p className="text-slate-500 dark:text-slate-400 mt-1 font-medium">Bienvenue, voici un aperçu de l'activité de votre plateforme.</p>
+            <h2 className="text-3xl font-black text-slate-900 tracking-tight">Tableau de bord</h2>
+            <p className="text-slate-500 mt-1 font-medium">Bienvenue, voici un aperçu de l'activité de votre plateforme.</p>
           </div>
           <div className="flex gap-4">
             {/* Download/Campaign buttons removed */}
@@ -97,7 +97,7 @@ const AdminDashboard = () => {
             { label: 'Nouveaux Clients', value: stats.totalClients, change: stats.changes?.clients || '0%', icon: 'person_add', color: 'bg-primary', trend: 'up' },
           ].map((card, i) => (
 
-            <div key={i} className="bg-white dark:bg-slate-800 p-8 rounded-[2.5rem] shadow-xl shadow-slate-200/50 dark:shadow-none border border-white/50 dark:border-white/5 flex flex-col gap-6 group hover:-translate-y-1 transition-all duration-500">
+            <div key={i} className="bg-white p-8 rounded-[2.5rem] shadow-xl shadow-slate-200/50 border border-white/50 flex flex-col gap-6 group hover:-translate-y-1 transition-all duration-500">
               <div className="flex justify-between items-start">
                 <div className={`${card.color} size-14 rounded-2xl flex items-center justify-center text-white shadow-lg group-hover:rotate-6 transition-transform duration-500`}>
                   <span className="material-symbols-outlined text-2xl font-bold">{card.icon}</span>
@@ -105,7 +105,7 @@ const AdminDashboard = () => {
               </div>
               <div>
                 <p className="text-slate-400 font-bold text-xs uppercase tracking-widest leading-loose">{card.label}</p>
-                <p className="text-3xl font-black text-slate-900 dark:text-white tracking-tighter mt-1">
+                <p className="text-3xl font-black text-slate-900 tracking-tighter mt-1">
                   {loading ? '...' : card.value}
                 </p>
               </div>
@@ -117,14 +117,14 @@ const AdminDashboard = () => {
         <div className="grid grid-cols-1 xl:grid-cols-3 gap-10">
 
           {/* Performance Chart Card */}
-          <div className="xl:col-span-2 bg-white dark:bg-slate-800 p-10 rounded-[3rem] shadow-xl shadow-slate-200/50 dark:shadow-none border border-white/50 dark:border-white/5">
+          <div className="xl:col-span-2 bg-white p-10 rounded-[3rem] shadow-xl shadow-slate-200/50 border border-white/50">
             <div className="flex justify-between items-center mb-10">
               <div>
-                <h3 className="text-2xl font-black text-slate-900 dark:text-white tracking-tight">Analyse de Performance</h3>
+                <h3 className="text-2xl font-black text-slate-900 tracking-tight">Analyse de Performance</h3>
                 <p className="text-slate-400 font-medium mt-1">Évolution des revenus sur les 6 derniers mois</p>
               </div>
               <div className="hidden sm:flex gap-2">
-                <span className="px-4 py-2 bg-slate-50 dark:bg-slate-900/40 rounded-xl text-[10px] font-black text-slate-400 uppercase tracking-widest border border-slate-100 dark:border-white/5 transition-all cursor-default">
+                <span className="px-4 py-2 bg-slate-50 rounded-xl text-[10px] font-black text-slate-400 uppercase tracking-widest border border-slate-100 transition-all cursor-default">
                   Derniers 180 Jours
                 </span>
               </div>
@@ -134,7 +134,7 @@ const AdminDashboard = () => {
             <div className="h-64 w-full relative">
               {/* Grid Lines */}
               {[0, 1, 2, 3].map(i => (
-                <div key={i} className="absolute w-full h-px bg-slate-100 dark:bg-white/5" style={{ bottom: `${i * 33}%` }}></div>
+                <div key={i} className="absolute w-full h-px bg-slate-100" style={{ bottom: `${i * 33}%` }}></div>
               ))}
 
               <svg className="w-full h-full relative z-10" viewBox="0 0 100 40" preserveAspectRatio="none">
@@ -168,23 +168,23 @@ const AdminDashboard = () => {
             </div>
 
             {/* Sub Stats Row */}
-            <div className="mt-12 pt-8 border-t border-slate-100 dark:border-white/5 grid grid-cols-1 sm:grid-cols-3 gap-8">
+            <div className="mt-12 pt-8 border-t border-slate-100 grid grid-cols-1 sm:grid-cols-3 gap-8">
               <div className="flex items-center gap-4">
-                <div className="size-10 rounded-xl bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 flex items-center justify-center">
+                <div className="size-10 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center">
                   <span className="material-symbols-outlined text-sm font-black">trending_up</span>
                 </div>
                 <div>
                   <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Taux Croissance</p>
-                  <p className="text-lg font-black text-slate-900 dark:text-white">+24.8%</p>
+                  <p className="text-lg font-black text-slate-900">+24.8%</p>
                 </div>
               </div>
               <div className="flex items-center gap-4">
-                <div className="size-10 rounded-xl bg-blue-100 dark:bg-blue-900/30 text-blue-600 flex items-center justify-center">
+                <div className="size-10 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center">
                   <span className="material-symbols-outlined text-sm font-black">group</span>
                 </div>
                 <div>
                   <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Rétention Client</p>
-                  <p className="text-lg font-black text-slate-900 dark:text-white">82%</p>
+                  <p className="text-lg font-black text-slate-900">82%</p>
                 </div>
               </div>
               <div className="flex items-center gap-4">
@@ -193,13 +193,13 @@ const AdminDashboard = () => {
                 </div>
                 <div>
                   <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Intervention Moyenne</p>
-                  <p className="text-lg font-black text-slate-900 dark:text-white">4.2h</p>
+                  <p className="text-lg font-black text-slate-900">4.2h</p>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="bg-[#1E1B4B] dark:bg-slate-950 p-10 rounded-[3rem] shadow-2xl text-white relative overflow-hidden h-full">
+          <div className="bg-[#1E1B4B] p-10 rounded-[3rem] shadow-2xl text-white relative overflow-hidden h-full">
             <h3 className="text-2xl font-black tracking-tight mb-8 relative z-10">Activités Récentes</h3>
 
             <div className="space-y-8 relative z-10">
@@ -237,12 +237,12 @@ const AdminDashboard = () => {
           </div>
 
           {/* Circular Category Distribution */}
-          <div className="bg-white dark:bg-slate-800 p-10 rounded-[3rem] shadow-xl shadow-slate-200/50 dark:shadow-none border border-white/50 dark:border-white/5">
-            <h3 className="text-xl font-black text-slate-900 dark:text-white tracking-tight mb-8">Demandes par Secteur</h3>
+          <div className="bg-white p-10 rounded-[3rem] shadow-xl shadow-slate-200/50 border border-white/50">
+            <h3 className="text-xl font-black text-slate-900 tracking-tight mb-8">Demandes par Secteur</h3>
             <div className="flex flex-col items-center gap-8">
               <div className="size-48 rounded-full relative flex items-center justify-center transition-transform hover:rotate-6 duration-700" style={{ background: 'conic-gradient(#4f46e5 0% 45%, #f28b2c 45% 75%, #10b981 75% 100%)' }}>
-                <div className="absolute inset-4 bg-white dark:bg-slate-800 rounded-full shadow-inner flex flex-col items-center justify-center">
-                  <span className="text-2xl font-black text-slate-900 dark:text-white">100%</span>
+                <div className="absolute inset-4 bg-white rounded-full shadow-inner flex flex-col items-center justify-center">
+                  <span className="text-2xl font-black text-slate-900">100%</span>
                   <span className="text-[10px] text-slate-400 font-black uppercase tracking-widest">Global</span>
                 </div>
               </div>
@@ -255,9 +255,9 @@ const AdminDashboard = () => {
                   <div key={i} className="flex items-center justify-between group">
                     <div className="flex items-center gap-3">
                       <div className={`size-2 rounded-full ${item.color}`}></div>
-                      <span className="text-xs font-bold text-slate-500 dark:text-slate-400 group-hover:text-slate-900 dark:group-hover:text-white transition-colors">{item.name}</span>
+                      <span className="text-xs font-bold text-slate-500 group-hover:text-slate-900 transition-colors">{item.name}</span>
                     </div>
-                    <span className="text-xs font-black text-slate-900 dark:text-white">{item.val}</span>
+                    <span className="text-xs font-black text-slate-900">{item.val}</span>
                   </div>
                 ))}
               </div>
@@ -265,10 +265,10 @@ const AdminDashboard = () => {
           </div>
 
           {/* Bottom Section: Artisans awaiting validation - Now beside Activity */}
-          <div className="xl:col-span-2 bg-white dark:bg-slate-800 p-10 rounded-[3rem] shadow-xl shadow-slate-200/50 dark:shadow-none border border-white/50 dark:border-white/5">
+          <div className="xl:col-span-2 bg-white p-10 rounded-[3rem] shadow-xl shadow-slate-200/50 border border-white/50">
             <div className="flex justify-between items-center mb-10">
               <div>
-                <h3 className="text-2xl font-black text-slate-900 dark:text-white tracking-tight">Artisans en attente</h3>
+                <h3 className="text-2xl font-black text-slate-900 tracking-tight">Artisans en attente</h3>
                 <p className="text-slate-400 font-medium mt-1">Nouveaux dossiers à vérifier</p>
               </div>
               <Link to="/dashboard/admin/verifications" className="text-primary font-black text-sm hover:underline">Voir tout</Link>
@@ -289,18 +289,18 @@ const AdminDashboard = () => {
                     <tr><td colSpan="2" className="text-center py-10 text-slate-400 italic">Tout est à jour !</td></tr>
                   ) : currentItems.map((artisan) => (
                     <tr key={artisan.id}>
-                      <td className="bg-slate-50 dark:bg-slate-900/40 px-6 py-4 rounded-l-3xl border-y border-l border-slate-100 dark:border-white/5">
+                      <td className="bg-slate-50 px-6 py-4 rounded-l-3xl border-y border-l border-slate-100">
                         <div className="flex items-center gap-4">
-                          <div className="size-10 rounded-xl bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center font-black text-primary dark:text-blue-400 text-xs">
+                          <div className="size-10 rounded-xl bg-blue-100 flex items-center justify-center font-black text-primary text-xs">
                             {artisan.name.split(' ').map(n => n[0]).join('')}
                           </div>
                           <div>
-                            <p className="font-black text-slate-900 dark:text-white text-xs tracking-tight">{artisan.name}</p>
+                            <p className="font-black text-slate-900 text-xs tracking-tight">{artisan.name}</p>
                             <p className="text-[10px] text-slate-500 font-medium">{artisan.email}</p>
                           </div>
                         </div>
                       </td>
-                      <td className="bg-slate-50 dark:bg-slate-900/40 px-6 py-4 rounded-r-3xl border-y border-r border-slate-100 dark:border-white/5 text-right">
+                      <td className="bg-slate-50 px-6 py-4 rounded-r-3xl border-y border-r border-slate-100 text-right">
                         <div className="flex items-center justify-end gap-1">
                           <button
                             onClick={() => handleVerify(artisan.id)}
@@ -325,7 +325,7 @@ const AdminDashboard = () => {
             </div>
 
             {unverified.length > itemsPerPage && (
-              <div className="flex justify-between items-center mt-6 pt-6 border-t border-slate-100 dark:border-white/5">
+              <div className="flex justify-between items-center mt-6 pt-6 border-t border-slate-100">
                 <p className="text-xs font-bold text-slate-400">
                   Artisans {indexOfFirstItem + 1} - {Math.min(indexOfLastItem, unverified.length)} sur {unverified.length}
                 </p>
@@ -333,7 +333,7 @@ const AdminDashboard = () => {
                   <button
                     onClick={() => handlePageChange(currentPage - 1)}
                     disabled={currentPage === 1}
-                    className="p-2 rounded-xl border border-slate-200 dark:border-white/10 hover:bg-white dark:hover:bg-slate-800 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
+                    className="p-2 rounded-xl border border-slate-200 hover:bg-white disabled:opacity-30 disabled:cursor-not-allowed transition-all"
                   >
                     <span className="material-symbols-outlined text-xl">chevron_left</span>
                   </button>
@@ -342,7 +342,7 @@ const AdminDashboard = () => {
                     <button
                       key={i + 1}
                       onClick={() => handlePageChange(i + 1)}
-                      className={`size-10 rounded-xl text-sm font-black transition-all ${currentPage === i + 1 ? 'bg-primary text-white shadow-lg shadow-primary/20' : 'text-slate-500 hover:bg-white dark:hover:bg-slate-800 border border-transparent hover:border-slate-200'}`}
+                      className={`size-10 rounded-xl text-sm font-black transition-all ${currentPage === i + 1 ? 'bg-primary text-white shadow-lg shadow-primary/20' : 'text-slate-500 hover:bg-white border border-transparent hover:border-slate-200'}`}
                     >
                       {i + 1}
                     </button>
@@ -351,7 +351,7 @@ const AdminDashboard = () => {
                   <button
                     onClick={() => handlePageChange(currentPage + 1)}
                     disabled={currentPage === totalPages}
-                    className="p-2 rounded-xl border border-slate-200 dark:border-white/10 hover:bg-white dark:hover:bg-slate-800 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
+                    className="p-2 rounded-xl border border-slate-200 hover:bg-white disabled:opacity-30 disabled:cursor-not-allowed transition-all"
                   >
                     <span className="material-symbols-outlined text-xl">chevron_right</span>
                   </button>

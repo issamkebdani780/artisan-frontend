@@ -6,16 +6,16 @@ const FixationTv = () => {
       
 <div className="layout-container flex h-full grow flex-col">
 {/*  Header  */}
-<header className="flex items-center justify-between whitespace-nowrap border-b border-solid border-primary/10 bg-white dark:bg-background-dark px-6 md:px-10 py-3 sticky top-0 z-50">
+<header className="flex items-center justify-between whitespace-nowrap border-b border-solid border-primary/10 bg-white px-6 md:px-10 py-3 sticky top-0 z-50">
 <div className="flex items-center gap-4 text-primary">
 <div className="size-8 flex items-center justify-center bg-primary/10 rounded-lg">
 <span className="material-symbols-outlined text-primary text-2xl">tv</span>
 </div>
-<h2 className="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Fixation TV Pro</h2>
+<h2 className="text-slate-900 text-lg font-bold leading-tight tracking-[-0.015em]">Fixation TV Pro</h2>
 </div>
 <div className="flex flex-1 justify-end gap-8 items-center">
 <nav className="hidden md:flex items-center gap-9">
-<a className="text-slate-700 dark:text-slate-200 text-sm font-medium hover:text-primary transition-colors" href="#">Accueil</a>
+<a className="text-slate-700 text-sm font-medium hover:text-primary transition-colors" href="#">Accueil</a>
 <a className="text-primary text-sm font-bold border-b-2 border-primary" href="#">Services</a>
 </nav>
 <div className="flex gap-2">
@@ -32,17 +32,17 @@ const FixationTv = () => {
 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
 {/*  Sidebar (Desktop Left)  */}
 <aside className="lg:col-span-3 order-2 lg:order-1 flex flex-col gap-6">
-<div className="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-sm border border-primary/10">
+<div className="bg-white p-6 rounded-xl shadow-sm border border-primary/10">
 <div className="flex items-center gap-3 mb-4">
 <div className="bg-primary/10 p-2 rounded-full">
 <span className="material-symbols-outlined text-primary">description</span>
 </div>
 <div>
-<h3 className="font-bold text-slate-900 dark:text-white text-base">Devis Rapide</h3>
+<h3 className="font-bold text-slate-900 text-base">Devis Rapide</h3>
 <p className="text-xs text-slate-500">Réponse sous 24h</p>
 </div>
 </div>
-<p className="text-sm text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
+<p className="text-sm text-slate-600 mb-6 leading-relaxed">
                             Besoin d'un devis gratuit pour votre installation TV ? Nos experts vous répondent immédiatement.
                         </p>
 <button className="w-full py-3 bg-primary text-white rounded-lg font-bold text-sm flex items-center justify-center gap-2 hover:bg-primary/90 transition-all">
@@ -50,9 +50,9 @@ const FixationTv = () => {
                             Commencer
                         </button>
 </div>
-<div className="bg-primary/5 dark:bg-primary/10 p-6 rounded-xl border border-primary/20">
-<h4 className="font-bold text-slate-900 dark:text-white text-sm mb-3">Besoin d'aide ?</h4>
-<div className="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-400">
+<div className="bg-primary/5 p-6 rounded-xl border border-primary/20">
+<h4 className="font-bold text-slate-900 text-sm mb-3">Besoin d'aide ?</h4>
+<div className="flex items-center gap-3 text-sm text-slate-600">
 <span className="material-symbols-outlined text-primary">call</span>
 <span>01 23 45 67 89</span>
 </div>
@@ -76,52 +76,52 @@ const FixationTv = () => {
 </section>
 {/*  Why Choose Us  */}
 <section>
-<h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2">
+<h2 className="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-2">
 <span className="material-symbols-outlined text-primary">verified_user</span>
                             Pourquoi nous choisir ?
                         </h2>
 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-<div className="bg-white dark:bg-slate-800 p-5 rounded-xl border border-primary/5 shadow-sm">
+<div className="bg-white p-5 rounded-xl border border-primary/5 shadow-sm">
 <span className="material-symbols-outlined text-primary text-3xl mb-3">shield</span>
-<h3 className="font-bold text-slate-900 dark:text-white mb-2">Sécurité Garantie</h3>
-<p className="text-sm text-slate-600 dark:text-slate-400">Support robuste certifié pour tous types de murs et poids d'écrans.</p>
+<h3 className="font-bold text-slate-900 mb-2">Sécurité Garantie</h3>
+<p className="text-sm text-slate-600">Support robuste certifié pour tous types de murs et poids d'écrans.</p>
 </div>
-<div className="bg-white dark:bg-slate-800 p-5 rounded-xl border border-primary/5 shadow-sm">
+<div className="bg-white p-5 rounded-xl border border-primary/5 shadow-sm">
 <span className="material-symbols-outlined text-primary text-3xl mb-3">cable</span>
-<h3 className="font-bold text-slate-900 dark:text-white mb-2">Installation Propre</h3>
-<p className="text-sm text-slate-600 dark:text-slate-400">Câbles dissimulés et finitions soignées pour un salon épuré.</p>
+<h3 className="font-bold text-slate-900 mb-2">Installation Propre</h3>
+<p className="text-sm text-slate-600">Câbles dissimulés et finitions soignées pour un salon épuré.</p>
 </div>
-<div className="bg-white dark:bg-slate-800 p-5 rounded-xl border border-primary/5 shadow-sm">
+<div className="bg-white p-5 rounded-xl border border-primary/5 shadow-sm">
 <span className="material-symbols-outlined text-primary text-3xl mb-3">straighten</span>
-<h3 className="font-bold text-slate-900 dark:text-white mb-2">Niveau Parfait</h3>
-<p className="text-sm text-slate-600 dark:text-slate-400">Alignement au laser millimétré pour un confort visuel optimal.</p>
+<h3 className="font-bold text-slate-900 mb-2">Niveau Parfait</h3>
+<p className="text-sm text-slate-600">Alignement au laser millimétré pour un confort visuel optimal.</p>
 </div>
 </div>
 </section>
 {/*  Service Details  */}
-<section className="grid grid-cols-1 md:grid-cols-2 gap-6 bg-white dark:bg-slate-800 p-6 md:p-8 rounded-xl border border-primary/10 shadow-sm">
+<section className="grid grid-cols-1 md:grid-cols-2 gap-6 bg-white p-6 md:p-8 rounded-xl border border-primary/10 shadow-sm">
 <div className="flex flex-col gap-6">
-<h2 className="text-2xl font-bold text-slate-900 dark:text-white">Détails de l'intervention</h2>
+<h2 className="text-2xl font-bold text-slate-900">Détails de l'intervention</h2>
 <div className="flex flex-col gap-4">
 <div className="flex gap-4">
 <div className="bg-primary/10 text-primary w-8 h-8 rounded-full flex items-center justify-center shrink-0">1</div>
 <div>
 <h4 className="font-bold text-sm">Conseil sur le support (VESA)</h4>
-<p className="text-sm text-slate-600 dark:text-slate-400">Nous vous aidons à choisir entre fixe, inclinable ou articulé.</p>
+<p className="text-sm text-slate-600">Nous vous aidons à choisir entre fixe, inclinable ou articulé.</p>
 </div>
 </div>
 <div className="flex gap-4">
 <div className="bg-primary/10 text-primary w-8 h-8 rounded-full flex items-center justify-center shrink-0">2</div>
 <div>
 <h4 className="font-bold text-sm">Perçage de précision</h4>
-<p className="text-sm text-slate-600 dark:text-slate-400">Adapté à la nature de votre mur (placo, brique, béton).</p>
+<p className="text-sm text-slate-600">Adapté à la nature de votre mur (placo, brique, béton).</p>
 </div>
 </div>
 <div className="flex gap-4">
 <div className="bg-primary/10 text-primary w-8 h-8 rounded-full flex items-center justify-center shrink-0">3</div>
 <div>
 <h4 className="font-bold text-sm">Mise en service</h4>
-<p className="text-sm text-slate-600 dark:text-slate-400">Branchement des périphériques et test de fonctionnement.</p>
+<p className="text-sm text-slate-600">Branchement des périphériques et test de fonctionnement.</p>
 </div>
 </div>
 </div>
@@ -132,20 +132,20 @@ const FixationTv = () => {
 </section>
 {/*  Our Experts  */}
 <section>
-<h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">Nos Experts Installateurs</h2>
+<h2 className="text-2xl font-bold text-slate-900 mb-6">Nos Experts Installateurs</h2>
 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-<div className="flex items-center gap-4 p-4 bg-white dark:bg-slate-800 rounded-xl shadow-sm">
+<div className="flex items-center gap-4 p-4 bg-white rounded-xl shadow-sm">
 <img alt="Expert face" className="size-16 rounded-full object-cover" data-alt="Portrait of a smiling professional technician" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJ-C0PiqZ1HXcRT33nNeLlHikTs5msiLuGdR_czU0GeHStbUGtUZXyXVZNIcGOKSFu4gp3mewaHfk9qKos5nW8Uawv1ogsmN6dVudQ12jfXxLiCTVXSitlUO5R4xXIpWnorRCl16Vab7cMdCzE8C0p5Ym1nwJiIMk56Kn0uSJn4ohS0SDvQiUH7_-Fy0W9hrlPl4D-h2yYZTI8tb23u1hH1KeIfgElHuVEhaYmamlyUFbr7MO291w54nLGdLf1nrr0wYfzGMlPJQaF"/>
 <div>
-<p className="font-bold text-slate-900 dark:text-white">Marc L.</p>
+<p className="font-bold text-slate-900">Marc L.</p>
 <p className="text-xs text-primary font-medium">Expert Fixation Murales</p>
 <p className="text-xs text-slate-500 mt-1">12 ans d'expérience</p>
 </div>
 </div>
-<div className="flex items-center gap-4 p-4 bg-white dark:bg-slate-800 rounded-xl shadow-sm">
+<div className="flex items-center gap-4 p-4 bg-white rounded-xl shadow-sm">
 <img alt="Expert face" className="size-16 rounded-full object-cover" data-alt="Portrait of a professional service woman" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2h3eFXf0XXRZerBOYxF6oNJK0yp4orKmRrkuhqMSIwKrNEzRlVkcsxHQwA5F4dLG7jrD2PAk03H6dhRef-fIiF2lc-hwM0gab59YkzOqxJ52hhfjz5Ceu7pjoE09rf5ORaLH8WdQGULZCCfwDy2PXCioUmIa_Bew07Twx3O6n2nHoOToiZ5rvqFMUqvotOOnqJLAjfUmQsNRM1ljqWzhF3FQMRTBh6cFJrYY1wr084uEc5jsIxs8VGXOX3i_XXnxCTY3_GMPMVgA_"/>
 <div>
-<p className="font-bold text-slate-900 dark:text-white">Sarah B.</p>
+<p className="font-bold text-slate-900">Sarah B.</p>
 <p className="text-xs text-primary font-medium">Spécialiste Home Cinéma</p>
 <p className="text-xs text-slate-500 mt-1">8 ans d'expérience</p>
 </div>
@@ -154,23 +154,23 @@ const FixationTv = () => {
 </section>
 {/*  FAQ  */}
 <section>
-<h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">Questions Fréquentes</h2>
+<h2 className="text-2xl font-bold text-slate-900 mb-6">Questions Fréquentes</h2>
 <div className="flex flex-col gap-3">
-<details className="group bg-white dark:bg-slate-800 rounded-xl border border-primary/10 transition-all">
+<details className="group bg-white rounded-xl border border-primary/10 transition-all">
 <summary className="flex justify-between items-center p-5 cursor-pointer font-bold text-sm list-none">
 <span>Fournissez-vous le support mural ?</span>
 <span className="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
 </summary>
-<div className="px-5 pb-5 text-sm text-slate-600 dark:text-slate-400">
+<div className="px-5 pb-5 text-sm text-slate-600">
                                     Oui, nous pouvons fournir une gamme complète de supports certifiés ou installer celui que vous avez déjà acheté.
                                 </div>
 </details>
-<details className="group bg-white dark:bg-slate-800 rounded-xl border border-primary/10 transition-all">
+<details className="group bg-white rounded-xl border border-primary/10 transition-all">
 <summary className="flex justify-between items-center p-5 cursor-pointer font-bold text-sm list-none">
 <span>Combien de temps dure une installation ?</span>
 <span className="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
 </summary>
-<div className="px-5 pb-5 text-sm text-slate-600 dark:text-slate-400">
+<div className="px-5 pb-5 text-sm text-slate-600">
                                     Une installation standard dure entre 1h et 1h30, incluant le réglage et le nettoyage du chantier.
                                 </div>
 </details>
@@ -180,28 +180,28 @@ const FixationTv = () => {
 </div>
 </main>
 {/*  Footer  */}
-<footer className="bg-white dark:bg-background-dark border-t border-primary/10 mt-12 py-12">
+<footer className="bg-white border-t border-primary/10 mt-12 py-12">
 <div className="max-w-[1280px] mx-auto px-6 md:px-10 grid grid-cols-1 md:grid-cols-4 gap-8">
 <div className="col-span-1 md:col-span-2">
 <div className="flex items-center gap-3 text-primary mb-4">
 <span className="material-symbols-outlined">tv</span>
-<h2 className="text-slate-900 dark:text-white text-xl font-bold">Fixation TV Pro</h2>
+<h2 className="text-slate-900 text-xl font-bold">Fixation TV Pro</h2>
 </div>
-<p className="text-sm text-slate-500 dark:text-slate-400 max-w-sm">
+<p className="text-sm text-slate-500 max-w-sm">
                         L'expert de l'installation audiovisuelle à domicile. Sécurité, esthétique et professionnalisme au service de votre divertissement.
                     </p>
 </div>
 <div>
-<h3 className="font-bold text-slate-900 dark:text-white mb-4">Liens Utiles</h3>
-<ul className="flex flex-col gap-2 text-sm text-slate-500 dark:text-slate-400">
+<h3 className="font-bold text-slate-900 mb-4">Liens Utiles</h3>
+<ul className="flex flex-col gap-2 text-sm text-slate-500">
 <li><a className="hover:text-primary transition-colors" href="#">Nos Tarifs</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Témoignages</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Contact</a></li>
 </ul>
 </div>
 <div>
-<h3 className="font-bold text-slate-900 dark:text-white mb-4">Légal</h3>
-<ul className="flex flex-col gap-2 text-sm text-slate-500 dark:text-slate-400">
+<h3 className="font-bold text-slate-900 mb-4">Légal</h3>
+<ul className="flex flex-col gap-2 text-sm text-slate-500">
 <li><a className="hover:text-primary transition-colors" href="#">Mentions Légales</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Confidentialité</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">CGV</a></li>

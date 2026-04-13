@@ -22,19 +22,19 @@ const FeaturedCraftsmen = () => {
   }, []);
 
   if (loading) return (
-    <section className="px-6 md:px-20 py-20 text-center dark:bg-slate-900 transition-colors">
+    <section className="px-6 md:px-20 py-20 text-center transition-colors">
       <div className="animate-spin inline-block size-12 border-4 border-primary border-t-transparent rounded-full mb-4"></div>
-      <p className="text-slate-500 dark:text-slate-400 font-bold uppercase tracking-widest text-xs">Recherche des meilleurs experts...</p>
+      <p className="text-slate-500 font-bold uppercase tracking-widest text-xs">Recherche des meilleurs experts...</p>
     </section>
   );
 
   return (
-    <section className="px-6 md:px-20 py-24 bg-white dark:bg-slate-900 transition-colors">
+    <section className="px-6 md:px-20 py-24 bg-white transition-colors">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row items-end justify-between mb-16 gap-6">
           <div className="max-w-xl">
-            <h2 className="text-slate-900 dark:text-white text-3xl md:text-5xl font-black tracking-tight mb-4 uppercase">Artisans à la une</h2>
-            <p className="text-slate-500 dark:text-slate-400 text-lg font-bold leading-relaxed">Découvrez les professionnels les mieux notés et vérifiés par notre communauté.</p>
+            <h2 className="text-slate-900 text-3xl md:text-5xl font-black tracking-tight mb-4 uppercase">Artisans à la une</h2>
+            <p className="text-slate-500 text-lg font-bold leading-relaxed">Découvrez les professionnels les mieux notés et vérifiés par notre communauté.</p>
           </div>
           <Link 
             to="/search" 

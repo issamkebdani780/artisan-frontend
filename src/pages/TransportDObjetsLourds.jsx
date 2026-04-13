@@ -6,7 +6,7 @@ const TransportDObjetsLourds = () => {
       
 <div className="relative flex min-h-screen w-full flex-col overflow-x-hidden">
 <div className="layout-container flex h-full grow flex-col">
-<header className="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-800 px-6 lg:px-20 py-4 bg-white dark:bg-background-dark sticky top-0 z-50">
+<header className="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 px-6 lg:px-20 py-4 bg-white sticky top-0 z-50">
 <div className="flex items-center gap-4">
 <div className="text-primary">
 <span className="material-symbols-outlined text-4xl">precision_manufacturing</span>
@@ -26,8 +26,8 @@ const TransportDObjetsLourds = () => {
 </header>
 <main className="flex-1 flex flex-col lg:flex-row px-4 lg:px-20 py-8 gap-8">
 <aside className="w-full lg:w-64 flex flex-col gap-6 shrink-0">
-<div className="flex flex-col gap-2 p-2 bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-slate-200 dark:border-slate-700">
-<div className="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 cursor-pointer text-slate-600 dark:text-slate-300">
+<div className="flex flex-col gap-2 p-2 bg-white rounded-xl shadow-sm border border-slate-200">
+<div className="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-slate-100 cursor-pointer text-slate-600">
 <span className="material-symbols-outlined">home</span>
 <p className="text-sm font-medium">Accueil</p>
 </div>
@@ -35,11 +35,11 @@ const TransportDObjetsLourds = () => {
 <span className="material-symbols-outlined">delivery_truck_speed</span>
 <p className="text-sm font-bold">Services</p>
 </div>
-<div className="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 cursor-pointer text-slate-600 dark:text-slate-300">
+<div className="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-slate-100 cursor-pointer text-slate-600">
 <span className="material-symbols-outlined">notifications</span>
 <p className="text-sm font-medium">Notifications</p>
 </div>
-<div className="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 cursor-pointer text-slate-600 dark:text-slate-300">
+<div className="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-slate-100 cursor-pointer text-slate-600">
 <span className="material-symbols-outlined">description</span>
 <p className="text-sm font-medium">Mes Devis</p>
 </div>
@@ -69,35 +69,35 @@ const TransportDObjetsLourds = () => {
                             Pourquoi nous choisir ?
                         </h2>
 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-<div className="flex flex-col gap-4 p-6 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 transition-all hover:shadow-md">
+<div className="flex flex-col gap-4 p-6 rounded-xl border border-slate-200 bg-white transition-all hover:shadow-md">
 <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
 <span className="material-symbols-outlined text-3xl">construction</span>
 </div>
 <div>
 <h3 className="font-bold text-lg mb-2">Équipement spécialisé</h3>
-<p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+<p className="text-slate-600 text-sm leading-relaxed">
                                         Nous utilisons des chariots élévateurs haute performance, des sangles de levage professionnelles et des grues de fenêtre si nécessaire.
                                     </p>
 </div>
 </div>
-<div className="flex flex-col gap-4 p-6 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 transition-all hover:shadow-md">
+<div className="flex flex-col gap-4 p-6 rounded-xl border border-slate-200 bg-white transition-all hover:shadow-md">
 <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
 <span className="material-symbols-outlined text-3xl">shield</span>
 </div>
 <div>
 <h3 className="font-bold text-lg mb-2">Sécurité maximale</h3>
-<p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+<p className="text-slate-600 text-sm leading-relaxed">
                                         Protection multicouche pour vos sols et murs. Protocoles de sécurité rigoureux pour garantir l'intégrité de vos objets de valeur.
                                     </p>
 </div>
 </div>
 </div>
 </section>
-<section className="bg-slate-100 dark:bg-slate-800/50 p-8 rounded-xl border border-slate-200 dark:border-slate-700">
+<section className="bg-slate-100 p-8 rounded-xl border border-slate-200">
 <h2 className="text-2xl font-bold mb-8">Nos Experts en Manutention</h2>
 <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
 <div className="flex items-center gap-4">
-<img alt="Jean Dupont" className="w-20 h-20 rounded-full object-cover border-4 border-white dark:border-slate-700 shadow-sm" data-alt="Portrait d'un expert déménageur souriant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVErJYB1JoAVZ6LzlUHZqnsEm3gQodvM_7c2ehaEdcw4V-b19reUUoEpmjsqzAdZak-bbnhuMQe6ly29UuHDxorDRUcJMKbnlNsbkkuuHqKlCDPlGNzVmH5MX8S_t-scuFZ2wZZYMfbLx18SX0PmT3v01AEK_HfaIjT9ZK8SX1iqUcNrRxjx3zcuG8Uv9lbqe1V_x_nBJkCcImcObZMjXAjp54rAQ8P0-mD0ROhireuIFyPgT6Z9KtRed81FMjNtuAfF7V_WdGXXYp"/>
+<img alt="Jean Dupont" className="w-20 h-20 rounded-full object-cover border-4 border-white shadow-sm" data-alt="Portrait d'un expert déménageur souriant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVErJYB1JoAVZ6LzlUHZqnsEm3gQodvM_7c2ehaEdcw4V-b19reUUoEpmjsqzAdZak-bbnhuMQe6ly29UuHDxorDRUcJMKbnlNsbkkuuHqKlCDPlGNzVmH5MX8S_t-scuFZ2wZZYMfbLx18SX0PmT3v01AEK_HfaIjT9ZK8SX1iqUcNrRxjx3zcuG8Uv9lbqe1V_x_nBJkCcImcObZMjXAjp54rAQ8P0-mD0ROhireuIFyPgT6Z9KtRed81FMjNtuAfF7V_WdGXXYp"/>
 <div>
 <h4 className="font-bold text-lg">Jean Dupont</h4>
 <p className="text-primary text-sm font-semibold uppercase">Chef d'équipe Levage</p>
@@ -105,7 +105,7 @@ const TransportDObjetsLourds = () => {
 </div>
 </div>
 <div className="flex items-center gap-4">
-<img alt="Marie Laurent" className="w-20 h-20 rounded-full object-cover border-4 border-white dark:border-slate-700 shadow-sm" data-alt="Portrait d'une experte logistique professionnelle" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-01UR7uK-wQONueD-Be8JD_UxIn5_-5XMwsmIN-q2ofNNgD-fjkBkgSgBlgZsq_CO99te9Nsp02mQyNhUjvIrAiRoCARx5aC5yYw603JCj4jSstnkAEX8ZIR2XjNc_-KA-jpi5qg0KlA9ibCeXzeMwFzb1EOyqPHCPLmvF52pWAqwKjU4FPfayLBTsWKTcAPVohP43EGGOQvkrldLcMxifFujw_a0q9ISS_Yi4Jfh95Rxle19v8f1ICKAfRTnnbdNkngDNd3y-XdU"/>
+<img alt="Marie Laurent" className="w-20 h-20 rounded-full object-cover border-4 border-white shadow-sm" data-alt="Portrait d'une experte logistique professionnelle" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-01UR7uK-wQONueD-Be8JD_UxIn5_-5XMwsmIN-q2ofNNgD-fjkBkgSgBlgZsq_CO99te9Nsp02mQyNhUjvIrAiRoCARx5aC5yYw603JCj4jSstnkAEX8ZIR2XjNc_-KA-jpi5qg0KlA9ibCeXzeMwFzb1EOyqPHCPLmvF52pWAqwKjU4FPfayLBTsWKTcAPVohP43EGGOQvkrldLcMxifFujw_a0q9ISS_Yi4Jfh95Rxle19v8f1ICKAfRTnnbdNkngDNd3y-XdU"/>
 <div>
 <h4 className="font-bold text-lg">Marie Laurent</h4>
 <p className="text-primary text-sm font-semibold uppercase">Logistique Spécialisée</p>
@@ -116,16 +116,16 @@ const TransportDObjetsLourds = () => {
 </section>
 <section>
 <h2 className="text-2xl font-bold mb-6">Tarification &amp; Assurance</h2>
-<div className="overflow-hidden rounded-xl border border-slate-200 dark:border-slate-700">
-<table className="w-full text-left bg-white dark:bg-slate-800">
-<thead className="bg-slate-50 dark:bg-slate-700/50">
+<div className="overflow-hidden rounded-xl border border-slate-200">
+<table className="w-full text-left bg-white">
+<thead className="bg-slate-50">
 <tr>
 <th className="px-6 py-4 text-sm font-bold uppercase tracking-wider">Type d'Objet</th>
 <th className="px-6 py-4 text-sm font-bold uppercase tracking-wider">Prix de Base</th>
 <th className="px-6 py-4 text-sm font-bold uppercase tracking-wider">Spécificités</th>
 </tr>
 </thead>
-<tbody className="divide-y divide-slate-200 dark:divide-slate-700">
+<tbody className="divide-y divide-slate-200">
 <tr>
 <td className="px-6 py-4 font-medium">Piano Droit</td>
 <td className="px-6 py-4 text-primary font-bold">À partir de 150€</td>
@@ -146,19 +146,19 @@ const TransportDObjetsLourds = () => {
 </div>
 <div className="mt-4 p-4 bg-primary/5 rounded-lg border-l-4 border-primary flex gap-4">
 <span className="material-symbols-outlined text-primary">info</span>
-<p className="text-sm text-slate-700 dark:text-slate-300">
+<p className="text-sm text-slate-700">
 <strong>Garantie Assurance :</strong> Tous nos transports sont couverts par une assurance "Ad Valorem" jusqu'à 50 000€ par objet. Une extension est possible pour les objets de collection.
                             </p>
 </div>
 </section>
 </div>
 </main>
-<footer className="bg-white dark:bg-background-dark border-t border-slate-200 dark:border-slate-800 px-6 lg:px-20 py-10 mt-auto">
+<footer className="bg-white border-t border-slate-200 px-6 lg:px-20 py-10 mt-auto">
 <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
 <div>
 <div className="flex items-center gap-2 mb-4 text-primary">
 <span className="material-symbols-outlined">precision_manufacturing</span>
-<span className="font-bold text-lg text-slate-900 dark:text-white">TransportLourd</span>
+<span className="font-bold text-lg text-slate-900">TransportLourd</span>
 </div>
 <p className="text-slate-500 text-sm leading-relaxed">Leader européen du transport d'objets lourds et fragiles. Expertise, sécurité et ponctualité à votre service.</p>
 </div>
@@ -175,14 +175,14 @@ const TransportDObjetsLourds = () => {
 <h4 className="font-bold mb-4">Newsletter</h4>
 <p className="text-sm text-slate-500 mb-4">Recevez nos conseils pour votre déménagement.</p>
 <div className="flex gap-2">
-<input className="flex-1 rounded-lg border-slate-300 dark:border-slate-700 dark:bg-slate-800 text-sm focus:ring-primary focus:border-primary" placeholder="Votre email" type="email"/>
+<input className="flex-1 rounded-lg border-slate-300 text-sm focus:ring-primary focus:border-primary" placeholder="Votre email" type="email"/>
 <button className="bg-primary text-white p-2 rounded-lg hover:opacity-90 transition-opacity">
 <span className="material-symbols-outlined">send</span>
 </button>
 </div>
 </div>
 </div>
-<div className="border-t border-slate-200 dark:border-slate-800 mt-10 pt-6 text-center text-xs text-slate-400">
+<div className="border-t border-slate-200 mt-10 pt-6 text-center text-xs text-slate-400">
                     © 2024 TransportLourd SAS. Tous droits réservés. Mentions Légales | Politique de Confidentialité
                 </div>
 </footer>

@@ -57,24 +57,24 @@ const TableauDeBordAdministrateur = () => {
 {/*  Main Content  */}
 <main className="flex-1 flex flex-col overflow-y-auto">
 {/*  Top Nav  */}
-<header className="h-16 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between px-8 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md sticky top-0 z-10">
+<header className="h-16 border-b border-slate-200 flex items-center justify-between px-8 bg-white/80 backdrop-blur-md sticky top-0 z-10">
 <div className="flex items-center gap-4 flex-1">
 <div className="relative w-full max-w-md">
 <span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm">search</span>
-<input className="w-full pl-10 pr-4 py-2 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 text-sm focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all" placeholder="Rechercher une commande, un artisan..." type="text"/>
+<input className="w-full pl-10 pr-4 py-2 rounded-xl border border-slate-200 bg-slate-50 text-sm focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all" placeholder="Rechercher une commande, un artisan..." type="text"/>
 </div>
 </div>
 <div className="flex items-center gap-4">
-<button className="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 relative">
-<span className="material-symbols-outlined text-slate-600 dark:text-slate-400">notifications</span>
-<span className="absolute top-2 right-2 size-2 bg-red-500 rounded-full border-2 border-white dark:border-slate-900"></span>
+<button className="p-2 rounded-full hover:bg-slate-100 relative">
+<span className="material-symbols-outlined text-slate-600">notifications</span>
+<span className="absolute top-2 right-2 size-2 bg-red-500 rounded-full border-2 border-white"></span>
 </button>
-<button className="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800">
-<span className="material-symbols-outlined text-slate-600 dark:text-slate-400">chat_bubble</span>
+<button className="p-2 rounded-full hover:bg-slate-100">
+<span className="material-symbols-outlined text-slate-600">chat_bubble</span>
 </button>
-<div className="h-8 w-[1px] bg-slate-200 dark:border-slate-800 mx-2"></div>
+<div className="h-8 w-[1px] bg-slate-200 mx-2"></div>
 <div className="flex items-center gap-2">
-<span className="text-sm font-medium text-slate-700 dark:text-slate-300">FR</span>
+<span className="text-sm font-medium text-slate-700">FR</span>
 <span className="material-symbols-outlined text-sm">expand_more</span>
 </div>
 </div>
@@ -83,75 +83,75 @@ const TableauDeBordAdministrateur = () => {
 {/*  Header Section  */}
 <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
 <div>
-<h2 className="text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">Tableau de bord</h2>
-<p className="text-slate-500 dark:text-slate-400 mt-1">Bienvenue, voici un aperçu de l'activité de votre plateforme.</p>
+<h2 className="text-3xl font-extrabold text-slate-900 tracking-tight">Tableau de bord</h2>
+<p className="text-slate-500 mt-1">Bienvenue, voici un aperçu de l'activité de votre plateforme.</p>
 </div>
 <div className="flex gap-3">
-<button className="px-4 py-2 rounded-xl border border-slate-200 dark:border-slate-800 font-semibold text-sm hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">Télécharger Rapport</button>
+<button className="px-4 py-2 rounded-xl border border-slate-200 font-semibold text-sm hover:bg-slate-50 transition-colors">Télécharger Rapport</button>
 <button className="px-4 py-2 rounded-xl bg-primary text-white font-semibold text-sm shadow-lg shadow-primary/20 hover:bg-secondary transition-all">Nouvelle Campagne</button>
 </div>
 </div>
 {/*  Stats Cards  */}
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-<div className="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800">
+<div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
 <div className="flex justify-between items-start mb-4">
-<div className="p-3 bg-indigo-50 dark:bg-indigo-900/30 rounded-xl text-primary">
+<div className="p-3 bg-indigo-50 rounded-xl text-primary">
 <span className="material-symbols-outlined">payments</span>
 </div>
-<span className="text-xs font-bold text-emerald-500 bg-emerald-50 dark:bg-emerald-900/30 px-2 py-1 rounded-lg flex items-center gap-1">
+<span className="text-xs font-bold text-emerald-500 bg-emerald-50 px-2 py-1 rounded-lg flex items-center gap-1">
 <span className="material-symbols-outlined text-xs">trending_up</span> +12.5%
                             </span>
 </div>
-<p className="text-slate-500 dark:text-slate-400 text-sm font-medium">Revenu Total</p>
-<p className="text-2xl font-bold mt-1 text-slate-900 dark:text-white">12,840.00 €</p>
+<p className="text-slate-500 text-sm font-medium">Revenu Total</p>
+<p className="text-2xl font-bold mt-1 text-slate-900">12,840.00 €</p>
 </div>
-<div className="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800">
+<div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
 <div className="flex justify-between items-start mb-4">
-<div className="p-3 bg-purple-50 dark:bg-purple-900/30 rounded-xl text-accent">
+<div className="p-3 bg-purple-50 rounded-xl text-accent">
 <span className="material-symbols-outlined">badge</span>
 </div>
-<span className="text-xs font-bold text-emerald-500 bg-emerald-50 dark:bg-emerald-900/30 px-2 py-1 rounded-lg flex items-center gap-1">
+<span className="text-xs font-bold text-emerald-500 bg-emerald-50 px-2 py-1 rounded-lg flex items-center gap-1">
 <span className="material-symbols-outlined text-xs">trending_up</span> +3.2%
                             </span>
 </div>
-<p className="text-slate-500 dark:text-slate-400 text-sm font-medium">Artisans Actifs</p>
-<p className="text-2xl font-bold mt-1 text-slate-900 dark:text-white">842</p>
+<p className="text-slate-500 text-sm font-medium">Artisans Actifs</p>
+<p className="text-2xl font-bold mt-1 text-slate-900">842</p>
 </div>
-<div className="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800">
+<div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
 <div className="flex justify-between items-start mb-4">
-<div className="p-3 bg-blue-50 dark:bg-blue-900/30 rounded-xl text-blue-500">
+<div className="p-3 bg-blue-50 rounded-xl text-blue-500">
 <span className="material-symbols-outlined">person_add</span>
 </div>
-<span className="text-xs font-bold text-emerald-500 bg-emerald-50 dark:bg-emerald-900/30 px-2 py-1 rounded-lg flex items-center gap-1">
+<span className="text-xs font-bold text-emerald-500 bg-emerald-50 px-2 py-1 rounded-lg flex items-center gap-1">
 <span className="material-symbols-outlined text-xs">trending_up</span> +8.4%
                             </span>
 </div>
-<p className="text-slate-500 dark:text-slate-400 text-sm font-medium">Nouveaux Clients</p>
-<p className="text-2xl font-bold mt-1 text-slate-900 dark:text-white">156</p>
+<p className="text-slate-500 text-sm font-medium">Nouveaux Clients</p>
+<p className="text-2xl font-bold mt-1 text-slate-900">156</p>
 </div>
-<div className="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800">
+<div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
 <div className="flex justify-between items-start mb-4">
-<div className="p-3 bg-rose-50 dark:bg-rose-900/30 rounded-xl text-rose-500">
+<div className="p-3 bg-rose-50 rounded-xl text-rose-500">
 <span className="material-symbols-outlined">warning</span>
 </div>
-<span className="text-xs font-bold text-rose-500 bg-rose-50 dark:bg-rose-900/30 px-2 py-1 rounded-lg flex items-center gap-1">
+<span className="text-xs font-bold text-rose-500 bg-rose-50 px-2 py-1 rounded-lg flex items-center gap-1">
 <span className="material-symbols-outlined text-xs">trending_down</span> -2.1%
                             </span>
 </div>
-<p className="text-slate-500 dark:text-slate-400 text-sm font-medium">Litiges en cours</p>
-<p className="text-2xl font-bold mt-1 text-slate-900 dark:text-white">12</p>
+<p className="text-slate-500 text-sm font-medium">Litiges en cours</p>
+<p className="text-2xl font-bold mt-1 text-slate-900">12</p>
 </div>
 </div>
 {/*  Main Content Area  */}
 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
 {/*  Performance Chart Mockup  */}
-<div className="lg:col-span-2 bg-white dark:bg-slate-900 p-8 rounded-3xl border border-slate-100 dark:border-slate-800 flex flex-col">
+<div className="lg:col-span-2 bg-white p-8 rounded-3xl border border-slate-100 flex flex-col">
 <div className="flex justify-between items-center mb-8">
 <div>
-<h3 className="text-xl font-bold text-slate-900 dark:text-white">Performance des ventes</h3>
+<h3 className="text-xl font-bold text-slate-900">Performance des ventes</h3>
 <p className="text-sm text-slate-500">Volume des transactions mensuelles</p>
 </div>
-<select className="bg-slate-50 dark:bg-slate-800 border-none rounded-lg text-sm font-medium px-4 py-2 outline-none">
+<select className="bg-slate-50 border-none rounded-lg text-sm font-medium px-4 py-2 outline-none">
 <option>Année 2024</option>
 <option>Année 2023</option>
 </select>
@@ -229,15 +229,15 @@ const TableauDeBordAdministrateur = () => {
 </div>
 </div>
 {/*  Artisans List  */}
-<div className="bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800 overflow-hidden">
-<div className="p-8 border-b border-slate-50 dark:border-slate-800 flex justify-between items-center">
-<h3 className="text-xl font-bold text-slate-900 dark:text-white">Artisans en attente de validation</h3>
+<div className="bg-white rounded-3xl border border-slate-100 overflow-hidden">
+<div className="p-8 border-b border-slate-50 flex justify-between items-center">
+<h3 className="text-xl font-bold text-slate-900">Artisans en attente de validation</h3>
 <button className="text-primary font-semibold text-sm hover:underline">Voir tout</button>
 </div>
 <div className="overflow-x-auto">
 <table className="w-full text-left">
 <thead>
-<tr className="text-slate-400 dark:text-slate-500 text-xs font-bold uppercase tracking-wider">
+<tr className="text-slate-400 text-xs font-bold uppercase tracking-wider">
 <th className="px-8 py-5">Artisan</th>
 <th className="px-8 py-5">Catégorie</th>
 <th className="px-8 py-5">Localisation</th>
@@ -246,47 +246,47 @@ const TableauDeBordAdministrateur = () => {
 <th className="px-8 py-5 text-right">Action</th>
 </tr>
 </thead>
-<tbody className="divide-y divide-slate-50 dark:divide-slate-800">
-<tr className="hover:bg-slate-50/50 dark:hover:bg-slate-800/50 transition-colors">
+<tbody className="divide-y divide-slate-50">
+<tr className="hover:bg-slate-50/50 transition-colors">
 <td className="px-8 py-5">
 <div className="flex items-center gap-3">
 <div className="size-10 bg-indigo-100 rounded-lg flex items-center justify-center text-primary font-bold">JD</div>
 <div>
-<p className="text-sm font-bold text-slate-900 dark:text-white">Jean Dupont</p>
+<p className="text-sm font-bold text-slate-900">Jean Dupont</p>
 <p className="text-xs text-slate-500">dupont.art@gmail.com</p>
 </div>
 </div>
 </td>
-<td className="px-8 py-5 text-sm text-slate-600 dark:text-slate-400">Menuiserie</td>
-<td className="px-8 py-5 text-sm text-slate-600 dark:text-slate-400">Bordeaux, FR</td>
-<td className="px-8 py-5 text-sm text-slate-600 dark:text-slate-400">12 Mai 2024</td>
+<td className="px-8 py-5 text-sm text-slate-600">Menuiserie</td>
+<td className="px-8 py-5 text-sm text-slate-600">Bordeaux, FR</td>
+<td className="px-8 py-5 text-sm text-slate-600">12 Mai 2024</td>
 <td className="px-8 py-5">
-<span className="px-3 py-1 bg-amber-50 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400 text-xs font-bold rounded-full">En attente</span>
+<span className="px-3 py-1 bg-amber-50 text-amber-600 text-xs font-bold rounded-full">En attente</span>
 </td>
 <td className="px-8 py-5 text-right">
-<button className="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg text-slate-400">
+<button className="p-2 hover:bg-slate-100 rounded-lg text-slate-400">
 <span className="material-symbols-outlined text-xl">more_vert</span>
 </button>
 </td>
 </tr>
-<tr className="hover:bg-slate-50/50 dark:hover:bg-slate-800/50 transition-colors">
+<tr className="hover:bg-slate-50/50 transition-colors">
 <td className="px-8 py-5">
 <div className="flex items-center gap-3">
 <div className="size-10 bg-purple-100 rounded-lg flex items-center justify-center text-accent font-bold">ML</div>
 <div>
-<p className="text-sm font-bold text-slate-900 dark:text-white">Marie Laurent</p>
+<p className="text-sm font-bold text-slate-900">Marie Laurent</p>
 <p className="text-xs text-slate-500">marie.l@design.fr</p>
 </div>
 </div>
 </td>
-<td className="px-8 py-5 text-sm text-slate-600 dark:text-slate-400">Céramique</td>
-<td className="px-8 py-5 text-sm text-slate-600 dark:text-slate-400">Lyon, FR</td>
-<td className="px-8 py-5 text-sm text-slate-600 dark:text-slate-400">14 Mai 2024</td>
+<td className="px-8 py-5 text-sm text-slate-600">Céramique</td>
+<td className="px-8 py-5 text-sm text-slate-600">Lyon, FR</td>
+<td className="px-8 py-5 text-sm text-slate-600">14 Mai 2024</td>
 <td className="px-8 py-5">
-<span className="px-3 py-1 bg-amber-50 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400 text-xs font-bold rounded-full">En attente</span>
+<span className="px-3 py-1 bg-amber-50 text-amber-600 text-xs font-bold rounded-full">En attente</span>
 </td>
 <td className="px-8 py-5 text-right">
-<button className="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg text-slate-400">
+<button className="p-2 hover:bg-slate-100 rounded-lg text-slate-400">
 <span className="material-symbols-outlined text-xl">more_vert</span>
 </button>
 </td>

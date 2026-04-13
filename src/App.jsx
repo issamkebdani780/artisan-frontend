@@ -51,12 +51,7 @@ import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   React.useEffect(() => {
-    const theme = localStorage.getItem('admin-theme') || 'dark';
-    if (theme === 'dark') {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
+    document.documentElement.classList.remove('dark');
   }, []);
 
   return (

@@ -38,7 +38,7 @@ const AdminLogin = () => {
       </div>
 
       <div className="w-full max-w-xl relative z-10">
-        <div className="bg-white dark:bg-slate-900 rounded-[3rem] shadow-2xl border border-white/10 overflow-hidden flex flex-col md:flex-row shadow-primary/5">
+        <div className="bg-white rounded-[3rem] shadow-2xl border border-white/10 overflow-hidden flex flex-col md:flex-row shadow-primary/5">
           {/* Left Side: Branding (Hidden on mobile) */}
           <div className="hidden md:flex w-2/5 bg-linear-to-br from-primary to-primary-dark p-12 flex-col justify-between text-white relative">
             <div className="absolute inset-0 opacity-10 pointer-events-none">
@@ -65,14 +65,14 @@ const AdminLogin = () => {
           </div>
 
           {/* Right Side: Login Form */}
-          <div className="flex-1 p-10 md:p-14 bg-white dark:bg-slate-900">
+          <div className="flex-1 p-10 md:p-14 bg-white">
             <div className="mb-10 text-center md:text-left">
-              <h2 className="text-3xl font-black text-slate-900 dark:text-white tracking-tight">Portail Admin</h2>
+              <h2 className="text-3xl font-black text-slate-900 tracking-tight">Portail Admin</h2>
               <p className="text-slate-400 font-medium text-sm mt-2">Accès sécurisé réservé aux administrateurs.</p>
             </div>
 
             {error && (
-              <div className="mb-8 p-4 bg-rose-50 dark:bg-rose-900/20 border-l-4 border-rose-500 text-rose-700 dark:text-rose-400 flex items-center gap-3 rounded-r-2xl text-xs font-bold animate-shake">
+              <div className="mb-8 p-4 bg-rose-50 border-l-4 border-rose-500 text-rose-700 flex items-center gap-3 rounded-r-2xl text-xs font-bold animate-shake">
                 <span className="material-symbols-outlined text-lg">warning</span>
                 <p>{error}</p>
               </div>
@@ -89,7 +89,7 @@ const AdminLogin = () => {
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="admin@gmail.com" 
                     required
-                    className="w-full bg-slate-50 dark:bg-slate-800/50 border-2 border-slate-100 dark:border-white/5 rounded-2xl py-4 pl-12 pr-6 focus:ring-4 focus:ring-primary/10 focus:border-primary/50 text-sm font-black text-slate-900 dark:text-white transition-all outline-none" 
+                    className="w-full bg-slate-50 border-2 border-slate-100 rounded-2xl py-4 pl-12 pr-6 focus:ring-4 focus:ring-primary/10 focus:border-primary/50 text-sm font-black text-slate-900 transition-all outline-none" 
                   />
                 </div>
               </div>
@@ -109,7 +109,7 @@ const AdminLogin = () => {
                     onChange={(e) => setPassword(e.target.value)}
                     placeholder="admin123" 
                     required
-                    className="w-full bg-slate-50 dark:bg-slate-800/50 border-2 border-slate-100 dark:border-white/5 rounded-2xl py-4 pl-12 pr-6 focus:ring-4 focus:ring-primary/10 focus:border-primary/50 text-sm font-black text-slate-900 dark:text-white transition-all outline-none" 
+                    className="w-full bg-slate-50 border-2 border-slate-100 rounded-2xl py-4 pl-12 pr-6 focus:ring-4 focus:ring-primary/10 focus:border-primary/50 text-sm font-black text-slate-900 transition-all outline-none" 
                   />
                 </div>
               </div>
@@ -135,7 +135,7 @@ const AdminLogin = () => {
               </div>
             </form>
             
-            <div className="mt-10 pt-10 border-t border-slate-100 dark:border-white/5 text-center">
+            <div className="mt-10 pt-10 border-t border-slate-100 text-center">
               <Link to="/" className="inline-flex items-center gap-2 text-slate-400 text-[10px] font-black uppercase tracking-widest hover:text-primary transition-colors group">
                 <span className="material-symbols-outlined text-sm group-hover:-translate-x-1 transition-transform">arrow_back</span>
                 RETOUR AU SITE PUBLIC
@@ -145,7 +145,7 @@ const AdminLogin = () => {
         </div>
         
         {/* Footer info */}
-        <p className="mt-8 text-center text-slate-500 dark:text-slate-600 text-[9px] font-black uppercase tracking-[0.3em] opacity-50">
+        <p className="mt-8 text-center text-slate-500 text-[9px] font-black uppercase tracking-[0.3em] opacity-50">
           © 2026 BRICOLOPRO ADMINISTRATION • V.4.0.5 • SÉCURITÉ RENFORCÉE
         </p>
       </div>

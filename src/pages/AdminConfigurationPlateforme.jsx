@@ -8,12 +8,12 @@ const AdminConfigurationPlateforme = () => {
         
         {/* Header Section */}
         <div className="mb-12">
-          <h2 className="text-3xl font-bold tracking-tight text-slate-900 dark:text-white mb-2">Configuration de la Plateforme</h2>
-          <p className="text-slate-500 dark:text-slate-400 max-w-2xl">Gérez l'identité visuelle, les préférences linguistiques et les paramètres opérationnels de votre instance Violet Protocol.</p>
+          <h2 className="text-3xl font-bold tracking-tight text-slate-900 mb-2">Configuration de la Plateforme</h2>
+          <p className="text-slate-500 max-w-2xl">Gérez l'identité visuelle, les préférences linguistiques et les paramètres opérationnels de votre instance Violet Protocol.</p>
         </div>
 
         {/* Tabbed Navigation */}
-        <div className="flex space-x-8 mb-10 border-b border-slate-200 dark:border-slate-800">
+        <div className="flex space-x-8 mb-10 border-b border-slate-200">
           <a className="pb-4 text-sm font-medium text-slate-500 hover:text-indigo-600 transition-colors" href="#">Mon compte</a>
           <a className="pb-4 text-sm font-bold text-indigo-600 border-b-2 border-indigo-600 transition-all" href="#">Configuration Plateforme</a>
           <a className="pb-4 text-sm font-medium text-slate-500 hover:text-indigo-600 transition-colors" href="#">Notifications</a>
@@ -27,9 +27,9 @@ const AdminConfigurationPlateforme = () => {
           <div className="col-span-12 lg:col-span-7 space-y-8">
             
             {/* Language & Region */}
-            <section className="bg-white dark:bg-slate-900 rounded-xl p-8 shadow-sm border border-slate-200 dark:border-slate-800 transition-all hover:shadow-md">
+            <section className="bg-white rounded-xl p-8 shadow-sm border border-slate-200 transition-all hover:shadow-md">
               <div className="flex items-center space-x-4 mb-8">
-                <div className="w-12 h-12 bg-indigo-50 dark:bg-indigo-900/30 rounded-xl flex items-center justify-center text-indigo-600">
+                <div className="w-12 h-12 bg-indigo-50 rounded-xl flex items-center justify-center text-indigo-600">
                   <span className="material-symbols-outlined text-2xl">language</span>
                 </div>
                 <div>
@@ -38,16 +38,16 @@ const AdminConfigurationPlateforme = () => {
                 </div>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <button className="flex flex-col items-center justify-center p-4 rounded-lg border-2 border-indigo-600 bg-indigo-50 dark:bg-indigo-900/20 transition-all">
+                <button className="flex flex-col items-center justify-center p-4 rounded-lg border-2 border-indigo-600 bg-indigo-50 transition-all">
                   <span className="text-2xl mb-2">🇫🇷</span>
                   <span className="text-sm font-semibold">Français</span>
                   <span className="text-[10px] text-indigo-600 uppercase font-bold mt-1">Actif</span>
                 </button>
-                <button className="flex flex-col items-center justify-center p-4 rounded-lg border-2 border-transparent bg-slate-50 dark:bg-slate-800 hover:bg-slate-100 transition-all">
+                <button className="flex flex-col items-center justify-center p-4 rounded-lg border-2 border-transparent bg-slate-50 hover:bg-slate-100 transition-all">
                   <span className="text-2xl mb-2">🇸🇦</span>
                   <span className="text-sm font-medium">العربية</span>
                 </button>
-                <button className="flex flex-col items-center justify-center p-4 rounded-lg border-2 border-transparent bg-slate-50 dark:bg-slate-800 hover:bg-slate-100 transition-all">
+                <button className="flex flex-col items-center justify-center p-4 rounded-lg border-2 border-transparent bg-slate-50 hover:bg-slate-100 transition-all">
                   <span className="text-2xl mb-2">🇬🇧</span>
                   <span className="text-sm font-medium">English</span>
                 </button>
@@ -55,10 +55,10 @@ const AdminConfigurationPlateforme = () => {
             </section>
 
             {/* Service Categories */}
-            <section className="bg-white dark:bg-slate-900 rounded-xl p-8 shadow-sm border border-slate-200 dark:border-slate-800">
+            <section className="bg-white rounded-xl p-8 shadow-sm border border-slate-200">
               <div className="flex items-center justify-between mb-8">
                 <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-indigo-50 dark:bg-indigo-900/30 rounded-xl flex items-center justify-center text-indigo-600">
+                  <div className="w-12 h-12 bg-indigo-50 rounded-xl flex items-center justify-center text-indigo-600">
                     <span className="material-symbols-outlined text-2xl">category</span>
                   </div>
                   <div>
@@ -73,7 +73,7 @@ const AdminConfigurationPlateforme = () => {
               </div>
               <div className="space-y-3">
                 {['Curation Digitale', 'Audit de Données', 'Support Client'].map((cat, i) => (
-                  <div key={i} className="flex items-center justify-between p-4 bg-slate-50 dark:bg-slate-800 rounded-lg group hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors">
+                  <div key={i} className="flex items-center justify-between p-4 bg-slate-50 rounded-lg group hover:bg-slate-100 transition-colors">
                     <div className="flex items-center space-x-3">
                       <div className={`w-2 h-2 rounded-full ${i === 0 ? 'bg-indigo-600' : i === 1 ? 'bg-orange-500' : 'bg-slate-400'}`}></div>
                       <span className="text-sm font-medium">{cat}</span>
@@ -113,13 +113,13 @@ const AdminConfigurationPlateforme = () => {
             </div>
 
             {/* Branding Settings */}
-            <section className="bg-white dark:bg-slate-900 rounded-xl p-8 shadow-sm border border-slate-200 dark:border-slate-800">
+            <section className="bg-white rounded-xl p-8 shadow-sm border border-slate-200">
               <h3 className="text-lg font-bold mb-8">Personnalisation (Branding)</h3>
               <div className="space-y-6">
                 <div>
                   <label className="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-3">Logo de la Plateforme</label>
-                  <div className="flex items-center space-x-6 p-4 border-2 border-dashed border-slate-200 dark:border-slate-700 rounded-xl hover:border-indigo-600/50 transition-colors cursor-pointer group">
-                    <div className="w-16 h-16 bg-slate-50 dark:bg-slate-800 flex items-center justify-center rounded-lg text-slate-400">
+                  <div className="flex items-center space-x-6 p-4 border-2 border-dashed border-slate-200 rounded-xl hover:border-indigo-600/50 transition-colors cursor-pointer group">
+                    <div className="w-16 h-16 bg-slate-50 flex items-center justify-center rounded-lg text-slate-400">
                       <span className="material-symbols-outlined text-3xl">upload_file</span>
                     </div>
                     <div>
@@ -135,7 +135,7 @@ const AdminConfigurationPlateforme = () => {
                     <button className="w-10 h-10 rounded-full bg-blue-600 hover:scale-110 transition-transform"></button>
                     <button className="w-10 h-10 rounded-full bg-emerald-600 hover:scale-110 transition-transform"></button>
                     <button className="w-10 h-10 rounded-full bg-rose-600 hover:scale-110 transition-transform"></button>
-                    <button className="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-700 border border-slate-300 flex items-center justify-center">
+                    <button className="w-10 h-10 rounded-full bg-slate-200 border border-slate-300 flex items-center justify-center">
                       <span className="material-symbols-outlined text-sm">palette</span>
                     </button>
                   </div>
@@ -144,12 +144,12 @@ const AdminConfigurationPlateforme = () => {
             </section>
 
             {/* Insight Tip */}
-            <div className="bg-white dark:bg-slate-900 rounded-xl p-6 shadow-sm border-l-4 border-indigo-600 border border-slate-200 dark:border-slate-800">
+            <div className="bg-white rounded-xl p-6 shadow-sm border-l-4 border-indigo-600 border border-slate-200">
               <div className="flex items-start space-x-4">
                 <span className="material-symbols-outlined text-indigo-600 mt-1">lightbulb</span>
                 <div>
-                  <p className="text-sm font-bold mb-1 text-slate-900 dark:text-white">Conseil d'optimisation</p>
-                  <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">Changer la couleur primaire mettra à jour instantanément tous les composants pour maintenir la cohérence de la marque.</p>
+                  <p className="text-sm font-bold mb-1 text-slate-900">Conseil d'optimisation</p>
+                  <p className="text-xs text-slate-500 leading-relaxed">Changer la couleur primaire mettra à jour instantanément tous les composants pour maintenir la cohérence de la marque.</p>
                 </div>
               </div>
             </div>
@@ -157,8 +157,8 @@ const AdminConfigurationPlateforme = () => {
         </div>
 
         {/* Footer Action Bar */}
-        <div className="mt-12 flex justify-end space-x-4 border-t border-slate-200 dark:border-slate-800 pt-8">
-          <button className="px-6 py-3 text-sm font-bold text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-all">Annuler les modifications</button>
+        <div className="mt-12 flex justify-end space-x-4 border-t border-slate-200 pt-8">
+          <button className="px-6 py-3 text-sm font-bold text-slate-500 hover:bg-slate-100 rounded-lg transition-all">Annuler les modifications</button>
           <button className="px-8 py-3 bg-linear-to-r from-indigo-600 to-indigo-700 text-white text-sm font-bold rounded-lg shadow-lg shadow-indigo-600/30 hover:shadow-xl hover:scale-[1.02] active:scale-95 transition-all">
             Enregistrer les modifications
           </button>

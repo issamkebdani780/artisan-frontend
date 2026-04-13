@@ -7,7 +7,7 @@ const DetailsDuServiceNettoyageDeVitres = () => {
 <div className="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
 <div className="layout-container flex h-full grow flex-col">
 {/*  Navigation  */}
-<header className="flex items-center justify-between whitespace-nowrap border-b border-solid border-teal-100 dark:border-teal-900 px-6 py-4 lg:px-40 bg-white dark:bg-slate-900">
+<header className="flex items-center justify-between whitespace-nowrap border-b border-solid border-teal-100 px-6 py-4 lg:px-40 bg-white">
 <div className="flex items-center gap-4 text-primary">
 <div className="size-8">
 <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
@@ -17,13 +17,13 @@ const DetailsDuServiceNettoyageDeVitres = () => {
 <defs><clippath id="clip0_6_330"><rect fill="white" height="48" width="48"></rect></clippath></defs>
 </svg>
 </div>
-<h2 className="text-slate-900 dark:text-slate-100 text-xl font-bold leading-tight tracking-tight">Éclat Cristal</h2>
+<h2 className="text-slate-900 text-xl font-bold leading-tight tracking-tight">Éclat Cristal</h2>
 </div>
 <div className="flex gap-3">
-<button className="flex items-center justify-center rounded-lg h-10 bg-teal-50 dark:bg-teal-900/30 text-primary px-3 transition-colors hover:bg-teal-100">
+<button className="flex items-center justify-center rounded-lg h-10 bg-teal-50 text-primary px-3 transition-colors hover:bg-teal-100">
 <span className="material-symbols-outlined text-xl">share</span>
 </button>
-<button className="flex items-center justify-center rounded-lg h-10 bg-teal-50 dark:bg-teal-900/30 text-primary px-3 transition-colors hover:bg-teal-100">
+<button className="flex items-center justify-center rounded-lg h-10 bg-teal-50 text-primary px-3 transition-colors hover:bg-teal-100">
 <span className="material-symbols-outlined text-xl">favorite</span>
 </button>
 <button className="hidden md:flex items-center justify-center rounded-lg h-10 bg-primary text-white px-5 font-bold">Réserver</button>
@@ -51,15 +51,15 @@ const DetailsDuServiceNettoyageDeVitres = () => {
 <span className="material-symbols-outlined text-primary">payments</span> Nos Tarifs Transparents
                         </h2>
 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-<div className="flex flex-col gap-2 rounded-xl p-6 border-2 border-teal-100 dark:border-teal-900 bg-white dark:bg-slate-900 shadow-sm">
-<p className="text-slate-500 dark:text-slate-400 text-sm font-medium uppercase tracking-wider">Forfait Résidentiel</p>
-<p className="text-slate-900 dark:text-slate-100 text-3xl font-black">À partir de 5€ <span className="text-sm font-normal text-slate-500">/ vitre</span></p>
-<p className="text-slate-600 dark:text-slate-400 text-sm">Idéal pour les maisons individuelles et appartements. Nettoyage intérieur et extérieur inclus.</p>
+<div className="flex flex-col gap-2 rounded-xl p-6 border-2 border-teal-100 bg-white shadow-sm">
+<p className="text-slate-500 text-sm font-medium uppercase tracking-wider">Forfait Résidentiel</p>
+<p className="text-slate-900 text-3xl font-black">À partir de 5€ <span className="text-sm font-normal text-slate-500">/ vitre</span></p>
+<p className="text-slate-600 text-sm">Idéal pour les maisons individuelles et appartements. Nettoyage intérieur et extérieur inclus.</p>
 </div>
-<div className="flex flex-col gap-2 rounded-xl p-6 border-2 border-teal-100 dark:border-teal-900 bg-white dark:bg-slate-900 shadow-sm">
-<p className="text-slate-500 dark:text-slate-400 text-sm font-medium uppercase tracking-wider">Service Commercial</p>
-<p className="text-slate-900 dark:text-slate-100 text-3xl font-black">45€ <span className="text-sm font-normal text-slate-500">/ heure</span></p>
-<p className="text-slate-600 dark:text-slate-400 text-sm">Parfait pour les bureaux et commerces. Équipe de 2 experts avec matériel haute pression.</p>
+<div className="flex flex-col gap-2 rounded-xl p-6 border-2 border-teal-100 bg-white shadow-sm">
+<p className="text-slate-500 text-sm font-medium uppercase tracking-wider">Service Commercial</p>
+<p className="text-slate-900 text-3xl font-black">45€ <span className="text-sm font-normal text-slate-500">/ heure</span></p>
+<p className="text-slate-600 text-sm">Parfait pour les bureaux et commerces. Équipe de 2 experts avec matériel haute pression.</p>
 </div>
 </div>
 </section>
@@ -70,21 +70,21 @@ const DetailsDuServiceNettoyageDeVitres = () => {
                         </h2>
 <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
 <div className="text-center p-4">
-<div className="w-16 h-16 bg-teal-100 dark:bg-teal-900/50 text-primary rounded-full flex items-center justify-center mx-auto mb-3">
+<div className="w-16 h-16 bg-teal-100 text-primary rounded-full flex items-center justify-center mx-auto mb-3">
 <span className="material-symbols-outlined text-3xl">water_drop</span>
 </div>
 <h3 className="font-bold text-sm">Eau Pure H2O</h3>
 <p className="text-xs text-slate-500 mt-1">Séchage sans traces minérales</p>
 </div>
 <div className="text-center p-4">
-<div className="w-16 h-16 bg-teal-100 dark:bg-teal-900/50 text-primary rounded-full flex items-center justify-center mx-auto mb-3">
+<div className="w-16 h-16 bg-teal-100 text-primary rounded-full flex items-center justify-center mx-auto mb-3">
 <span className="material-symbols-outlined text-3xl">architecture</span>
 </div>
 <h3 className="font-bold text-sm">Perches Télescopiques</h3>
 <p className="text-xs text-slate-500 mt-1">Accès jusqu'à 20 mètres</p>
 </div>
 <div className="text-center p-4">
-<div className="w-16 h-16 bg-teal-100 dark:bg-teal-900/50 text-primary rounded-full flex items-center justify-center mx-auto mb-3">
+<div className="w-16 h-16 bg-teal-100 text-primary rounded-full flex items-center justify-center mx-auto mb-3">
 <span className="material-symbols-outlined text-3xl">eco</span>
 </div>
 <h3 className="font-bold text-sm">Produits Bio</h3>
@@ -102,21 +102,21 @@ const DetailsDuServiceNettoyageDeVitres = () => {
 <span className="material-symbols-outlined text-primary mt-1">check_circle</span>
 <div>
 <h4 className="font-bold">Assurance Responsabilité Civile</h4>
-<p className="text-slate-600 dark:text-slate-400 text-sm">Couverture totale contre tout dommage accidentel lors de l'intervention.</p>
+<p className="text-slate-600 text-sm">Couverture totale contre tout dommage accidentel lors de l'intervention.</p>
 </div>
 </div>
 <div className="flex items-start gap-4">
 <span className="material-symbols-outlined text-primary mt-1">check_circle</span>
 <div>
 <h4 className="font-bold">Satisfaction 100% Garantie</h4>
-<p className="text-slate-600 dark:text-slate-400 text-sm">Une trace oubliée ? Nous repassons gratuitement sous 24h.</p>
+<p className="text-slate-600 text-sm">Une trace oubliée ? Nous repassons gratuitement sous 24h.</p>
 </div>
 </div>
 <div className="flex items-start gap-4">
 <span className="material-symbols-outlined text-primary mt-1">check_circle</span>
 <div>
 <h4 className="font-bold">Personnel Certifié IRATA</h4>
-<p className="text-slate-600 dark:text-slate-400 text-sm">Techniciens formés aux travaux en hauteur et aux normes de sécurité strictes.</p>
+<p className="text-slate-600 text-sm">Techniciens formés aux travaux en hauteur et aux normes de sécurité strictes.</p>
 </div>
 </div>
 </div>
@@ -124,7 +124,7 @@ const DetailsDuServiceNettoyageDeVitres = () => {
 </div>
 {/*  Sidebar: Top Cleaners  */}
 <aside className="space-y-6">
-<div className="rounded-xl p-6 bg-white dark:bg-slate-900 border border-teal-100 dark:border-teal-900 shadow-sm sticky top-8">
+<div className="rounded-xl p-6 bg-white border border-teal-100 shadow-sm sticky top-8">
 <h3 className="text-xl font-bold mb-6 flex items-center gap-2">
 <span className="material-symbols-outlined text-primary">star</span> Nos Meilleurs Experts
                         </h3>

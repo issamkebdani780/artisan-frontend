@@ -5,7 +5,7 @@ const ServiceDetailsInstallationRobinetterie = () => {
     <>
       
 {/*  Top Navigation  */}
-<header className="sticky top-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div className="flex items-center justify-between h-16">
 <div className="flex items-center gap-2">
@@ -24,7 +24,7 @@ const ServiceDetailsInstallationRobinetterie = () => {
 <button className="hidden sm:flex bg-primary text-white px-5 py-2 rounded-lg font-bold text-sm hover:bg-primary/90 transition-all">
                         Réserver
                     </button>
-<div className="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-700 overflow-hidden border border-slate-300 dark:border-slate-600">
+<div className="w-10 h-10 rounded-full bg-slate-200 overflow-hidden border border-slate-300">
 <img alt="Avatar utilisateur" data-alt="Portrait of a professional user profile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCii50h8gtjsqSVeFQSjfKPh6-5Gjq4yupJssnXZw7CbTcv6AyxZmxdpPEu7pQF0OoE0SY7hRqb_ADtp6COxm8sdP67V2w5qbWu7Z76FTtD8KkyJ0a1KYSPC5fPfdH9vWOzyxOJqqDSlsPJrxmeBYb8_ZXoLkGL_ktO4h-twcg1EV7cI21hFbhJWhlWPsyEDxiGo9KjBgCkihtd1QwrxYC-bw0SYjfA2_PW2lwr1zKcaFaHAHEa9uHQWmYfWv12KW7baMqpNIk91hQK"/>
 </div>
 </div>
@@ -33,26 +33,26 @@ const ServiceDetailsInstallationRobinetterie = () => {
 </header>
 <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
 {/*  Breadcrumbs  */}
-<nav className="flex items-center gap-2 text-sm text-slate-500 dark:text-slate-400 mb-8">
+<nav className="flex items-center gap-2 text-sm text-slate-500 mb-8">
 <a className="hover:text-primary" href="#">Accueil</a>
 <span className="material-symbols-outlined text-xs">chevron_right</span>
 <a className="hover:text-primary" href="#">Services</a>
 <span className="material-symbols-outlined text-xs">chevron_right</span>
-<span className="text-slate-900 dark:text-slate-100 font-medium">Installation de Robinetterie</span>
+<span className="text-slate-900 font-medium">Installation de Robinetterie</span>
 </nav>
 {/*  Hero Section  */}
 <section className="grid lg:grid-cols-2 gap-12 items-center mb-16">
 <div>
 <span className="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-bold uppercase tracking-wider mb-4">Service Premium</span>
 <h2 className="text-4xl md:text-5xl font-black mb-6 leading-tight">Installation professionnelle de robinets</h2>
-<p className="text-lg text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
+<p className="text-lg text-slate-600 mb-8 leading-relaxed">
                     Confiez la pose de vos mitigeurs, mélangeurs et colonnes de douche à nos experts certifiés. Nous assurons une installation étanche, durable et conforme aux normes en vigueur. Intervention en moins de 24h.
                 </p>
 <div className="flex flex-wrap gap-4">
 <button className="bg-primary text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg shadow-primary/20 hover:scale-[1.02] transition-transform">
                         Demander un devis gratuit
                     </button>
-<button className="flex items-center gap-2 border border-slate-300 dark:border-slate-700 px-8 py-4 rounded-xl font-bold text-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+<button className="flex items-center gap-2 border border-slate-300 px-8 py-4 rounded-xl font-bold text-lg hover:bg-slate-50 transition-colors">
 <span className="material-symbols-outlined">call</span>
                         01 23 45 67 89
                     </button>
@@ -81,10 +81,10 @@ const ServiceDetailsInstallationRobinetterie = () => {
 <h3 className="text-2xl font-bold mb-8">Nos Tarifs d'Installation</h3>
 <div className="grid md:grid-cols-3 gap-6">
 {/*  Card 1  */}
-<div className="bg-white dark:bg-slate-900 p-8 rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-primary transition-colors flex flex-col">
+<div className="bg-white p-8 rounded-2xl border border-slate-200 hover:border-primary transition-colors flex flex-col">
 <span className="material-symbols-outlined text-primary text-4xl mb-4">water_lux</span>
 <h4 className="text-xl font-bold mb-2">Robinet Standard</h4>
-<p className="text-slate-500 dark:text-slate-400 text-sm mb-6 flex-grow">Installation d'un mitigeur classique d'évier ou de lavabo.</p>
+<p className="text-slate-500 text-sm mb-6 flex-grow">Installation d'un mitigeur classique d'évier ou de lavabo.</p>
 <div className="text-3xl font-black mb-6">79€ <span className="text-sm font-normal text-slate-500">TTC</span></div>
 <ul className="space-y-3 mb-8 text-sm">
 <li className="flex items-center gap-2"><span className="material-symbols-outlined text-green-500 text-sm">check_circle</span> Dépose de l'ancien robinet</li>
@@ -94,7 +94,7 @@ const ServiceDetailsInstallationRobinetterie = () => {
 <button className="w-full py-3 rounded-lg border-2 border-primary text-primary font-bold hover:bg-primary hover:text-white transition-all">Choisir</button>
 </div>
 {/*  Card 2 (Featured)  */}
-<div className="bg-slate-900 dark:bg-primary p-8 rounded-2xl border-4 border-primary text-white transform scale-105 shadow-xl flex flex-col relative overflow-hidden">
+<div className="bg-slate-900 p-8 rounded-2xl border-4 border-primary text-white transform scale-105 shadow-xl flex flex-col relative overflow-hidden">
 <div className="absolute top-4 right-[-35px] bg-yellow-400 text-slate-900 text-[10px] font-black py-1 px-10 rotate-45 uppercase">Populaire</div>
 <span className="material-symbols-outlined text-4xl mb-4">shower</span>
 <h4 className="text-xl font-bold mb-2">Pack Douche &amp; Bain</h4>
@@ -108,10 +108,10 @@ const ServiceDetailsInstallationRobinetterie = () => {
 <button className="w-full py-3 rounded-lg bg-white text-slate-900 font-bold hover:bg-yellow-400 transition-all">Choisir</button>
 </div>
 {/*  Card 3  */}
-<div className="bg-white dark:bg-slate-900 p-8 rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-primary transition-colors flex flex-col">
+<div className="bg-white p-8 rounded-2xl border border-slate-200 hover:border-primary transition-colors flex flex-col">
 <span className="material-symbols-outlined text-primary text-4xl mb-4">construction</span>
 <h4 className="text-xl font-bold mb-2">Encastré / Spécial</h4>
-<p className="text-slate-500 dark:text-slate-400 text-sm mb-6 flex-grow">Robinets encastrés, capteurs infrarouges ou systèmes complexes.</p>
+<p className="text-slate-500 text-sm mb-6 flex-grow">Robinets encastrés, capteurs infrarouges ou systèmes complexes.</p>
 <div className="text-3xl font-black mb-2">Sur Devis</div>
 <p className="text-xs text-slate-400 mb-6">Réponse sous 2 heures</p>
 <ul className="space-y-3 mb-8 text-sm">
@@ -124,11 +124,11 @@ const ServiceDetailsInstallationRobinetterie = () => {
 </div>
 </section>
 {/*  Experts Section  */}
-<section className="mb-16 bg-white dark:bg-slate-900 rounded-3xl p-8 lg:p-12 border border-slate-200 dark:border-slate-800">
+<section className="mb-16 bg-white rounded-3xl p-8 lg:p-12 border border-slate-200">
 <div className="flex flex-col md:flex-row justify-between items-end mb-10 gap-4">
 <div className="max-w-xl">
 <h3 className="text-3xl font-bold mb-4">Nos Experts à Proximité</h3>
-<p className="text-slate-600 dark:text-slate-400">Des professionnels qualifiés, vérifiés par nos soins et notés par la communauté.</p>
+<p className="text-slate-600">Des professionnels qualifiés, vérifiés par nos soins et notés par la communauté.</p>
 </div>
 <button className="text-primary font-bold flex items-center gap-1 hover:underline">
                     Voir tous les experts
@@ -140,7 +140,7 @@ const ServiceDetailsInstallationRobinetterie = () => {
 <div className="text-center group">
 <div className="relative w-32 h-32 mx-auto mb-4">
 <div className="absolute inset-0 bg-primary/20 rounded-full scale-110 group-hover:scale-125 transition-transform"></div>
-<img alt="Jean Dupont" className="relative w-32 h-32 rounded-full object-cover border-4 border-white dark:border-slate-800 shadow-md" data-alt="Portrait of a smiling professional plumber" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARzP4LOJhOPVigaNLeSb7WiuGXo2A6Vg--wCJxT0ui1u8TqVI_XSEyyZ4Uy12Ci2-wbYyYIY8YSffNvp0XXvTK3QZ_Iejs-L0tlMp4euENiNbf03QFpXvE7WWMBZDalhdi75PbmUJPaaKqlLzLhJfshZJzBLMmACy11KYq9cuWZIVolZ681mEFuM6lw2ThBDcTeihL3vUJB7LEX2ejQ5x73sw2YmAXBUl7WFw2R1qPLnjsblVTp3r506x2Hzuh4mK2Np2XkTRZq4hN"/>
+<img alt="Jean Dupont" className="relative w-32 h-32 rounded-full object-cover border-4 border-white shadow-md" data-alt="Portrait of a smiling professional plumber" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARzP4LOJhOPVigaNLeSb7WiuGXo2A6Vg--wCJxT0ui1u8TqVI_XSEyyZ4Uy12Ci2-wbYyYIY8YSffNvp0XXvTK3QZ_Iejs-L0tlMp4euENiNbf03QFpXvE7WWMBZDalhdi75PbmUJPaaKqlLzLhJfshZJzBLMmACy11KYq9cuWZIVolZ681mEFuM6lw2ThBDcTeihL3vUJB7LEX2ejQ5x73sw2YmAXBUl7WFw2R1qPLnjsblVTp3r506x2Hzuh4mK2Np2XkTRZq4hN"/>
 </div>
 <h5 className="font-bold text-lg">Jean Dupont</h5>
 <p className="text-sm text-slate-500 mb-2">Expert Robinetterie</p>
@@ -153,7 +153,7 @@ const ServiceDetailsInstallationRobinetterie = () => {
 <div className="text-center group">
 <div className="relative w-32 h-32 mx-auto mb-4">
 <div className="absolute inset-0 bg-primary/20 rounded-full scale-110 group-hover:scale-125 transition-transform"></div>
-<img alt="Sophie Martin" className="relative w-32 h-32 rounded-full object-cover border-4 border-white dark:border-slate-800 shadow-md" data-alt="Portrait of a confident female professional plumber" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmPeqWkaijMtUP2fkrp9DhhrjWBR6Nh-T6Fw14KLEJzpwJGvxkgqNk6LCSQpWE9KwnFLJIZ1tXmFFO99K4-pgP1svzbPTdPuuK4oCNOr7ZdCWf4heTNb2_4B_q5eNzRKavQy7qvYCV-ZuaOPbfkggLjbChbnb4pMo3rcYqdoqFMnavLWNWFrK-mZcZK1kZ40zbcQolkwpUbiNDlX5xVISmatGtRlBn0eywZXyA8eCI2se6RIaII66tXmBJcro0KWHcu38XDePF_pq1"/>
+<img alt="Sophie Martin" className="relative w-32 h-32 rounded-full object-cover border-4 border-white shadow-md" data-alt="Portrait of a confident female professional plumber" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmPeqWkaijMtUP2fkrp9DhhrjWBR6Nh-T6Fw14KLEJzpwJGvxkgqNk6LCSQpWE9KwnFLJIZ1tXmFFO99K4-pgP1svzbPTdPuuK4oCNOr7ZdCWf4heTNb2_4B_q5eNzRKavQy7qvYCV-ZuaOPbfkggLjbChbnb4pMo3rcYqdoqFMnavLWNWFrK-mZcZK1kZ40zbcQolkwpUbiNDlX5xVISmatGtRlBn0eywZXyA8eCI2se6RIaII66tXmBJcro0KWHcu38XDePF_pq1"/>
 </div>
 <h5 className="font-bold text-lg">Sophie Martin</h5>
 <p className="text-sm text-slate-500 mb-2">Spécialiste Douche</p>
@@ -166,7 +166,7 @@ const ServiceDetailsInstallationRobinetterie = () => {
 <div className="text-center group">
 <div className="relative w-32 h-32 mx-auto mb-4">
 <div className="absolute inset-0 bg-primary/20 rounded-full scale-110 group-hover:scale-125 transition-transform"></div>
-<img alt="Marc Leroy" className="relative w-32 h-32 rounded-full object-cover border-4 border-white dark:border-slate-800 shadow-md" data-alt="Portrait of an experienced male plumber" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvz8xz4LJrZV7v7B9xPyMcnDbys2trNQFiln9qcMjSO1XoyxPCBKasqq2HeJXmc1viQtQvIGG0CK94foBvH0pjMFkY-7Ak6p89-WHkpupPe-ZOqXwvjvUSYLacgbxcaeGns7MKcpr6IGQ5HGk0dT8u9IYyZf4bkZjntGaXayW2O1xNj-6tXWFua_GHpP5URz2tKVF8T8ZtPUsl1u5PWkKarqF63NUWcg7DbEuvSogSOlqNN3Pyf8IuC3hzFogqR3KltKcqgy0hwQPv"/>
+<img alt="Marc Leroy" className="relative w-32 h-32 rounded-full object-cover border-4 border-white shadow-md" data-alt="Portrait of an experienced male plumber" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvz8xz4LJrZV7v7B9xPyMcnDbys2trNQFiln9qcMjSO1XoyxPCBKasqq2HeJXmc1viQtQvIGG0CK94foBvH0pjMFkY-7Ak6p89-WHkpupPe-ZOqXwvjvUSYLacgbxcaeGns7MKcpr6IGQ5HGk0dT8u9IYyZf4bkZjntGaXayW2O1xNj-6tXWFua_GHpP5URz2tKVF8T8ZtPUsl1u5PWkKarqF63NUWcg7DbEuvSogSOlqNN3Pyf8IuC3hzFogqR3KltKcqgy0hwQPv"/>
 </div>
 <h5 className="font-bold text-lg">Marc Leroy</h5>
 <p className="text-sm text-slate-500 mb-2">Maître Plombier</p>
@@ -179,7 +179,7 @@ const ServiceDetailsInstallationRobinetterie = () => {
 <div className="text-center group">
 <div className="relative w-32 h-32 mx-auto mb-4">
 <div className="absolute inset-0 bg-primary/20 rounded-full scale-110 group-hover:scale-125 transition-transform"></div>
-<img alt="Thomas Petit" className="relative w-32 h-32 rounded-full object-cover border-4 border-white dark:border-slate-800 shadow-md" data-alt="Portrait of a young energetic professional plumber" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdl69rNQ-Dkjd8WuD1kquDbpGkaHeSug_xyy_sUXhw5tm-eD2cAhmR3Lpk_9n3ZsWMh2p6vUK_CtpXmfC7fcGfuRwIZgvWcSNzhEJ-syQ4t21W1FsfHojufswzue5smb-TgoQTAs2b6PqhKQAVYf2ZzxSG8h5K7OE_cCzyHdrV5e04uJMIs5yZ-qnZgyFCJDBM3ReC7qUJ9vvQt40llHH88nr98S7WYjtGk0waDEEZk6_WQI--kUp36AA99Svk0if648KV0St9wMkG"/>
+<img alt="Thomas Petit" className="relative w-32 h-32 rounded-full object-cover border-4 border-white shadow-md" data-alt="Portrait of a young energetic professional plumber" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdl69rNQ-Dkjd8WuD1kquDbpGkaHeSug_xyy_sUXhw5tm-eD2cAhmR3Lpk_9n3ZsWMh2p6vUK_CtpXmfC7fcGfuRwIZgvWcSNzhEJ-syQ4t21W1FsfHojufswzue5smb-TgoQTAs2b6PqhKQAVYf2ZzxSG8h5K7OE_cCzyHdrV5e04uJMIs5yZ-qnZgyFCJDBM3ReC7qUJ9vvQt40llHH88nr98S7WYjtGk0waDEEZk6_WQI--kUp36AA99Svk0if648KV0St9wMkG"/>
 </div>
 <h5 className="font-bold text-lg">Thomas Petit</h5>
 <p className="text-sm text-slate-500 mb-2">Installation Rapide</p>
@@ -194,7 +194,7 @@ const ServiceDetailsInstallationRobinetterie = () => {
 <section className="mb-16">
 <h3 className="text-2xl font-bold mb-8">Avis clients</h3>
 <div className="grid md:grid-cols-2 gap-8">
-<div className="bg-background-light dark:bg-slate-900/50 p-6 rounded-2xl border border-slate-200 dark:border-slate-800">
+<div className="bg-background-light p-6 rounded-2xl border border-slate-200">
 <div className="flex items-center gap-4 mb-4">
 <img alt="Client" className="w-12 h-12 rounded-full" data-alt="Headshot of a male customer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDT5LPTTFRcrjbMjoLa-KSCzUiBKXxvqYxAbf4BmoUq4H0El-NbT7s_gzK0nitk_fnxk6IXhCuQMl39ZTgcKDpMOvYFMJq87DhzvPrfhRHc_DrelHcIzV7SmSjC0biqMz3Q2J7OEGD6_RWr1R1_lf5di306a3is7L84UmzCE0IGJEp4Q-mBKn-td8OJqVutS768AhOspAzbgTptoYaj25JK_sPIxUQ92LtRNQJH3JLxPsbRAn069R584VkRi1RJwuIzA3bwHUnLT7jW"/>
 <div>
@@ -209,9 +209,9 @@ const ServiceDetailsInstallationRobinetterie = () => {
 <span className="material-symbols-outlined text-sm fill-1">star</span>
 </div>
 </div>
-<p className="text-slate-600 dark:text-slate-400 italic">"Service impeccable. Le plombier est arrivé à l'heure, a installé mon nouveau robinet de cuisine en 45 minutes et a tout nettoyé avant de partir. Prix conforme au devis."</p>
+<p className="text-slate-600 italic">"Service impeccable. Le plombier est arrivé à l'heure, a installé mon nouveau robinet de cuisine en 45 minutes et a tout nettoyé avant de partir. Prix conforme au devis."</p>
 </div>
-<div className="bg-background-light dark:bg-slate-900/50 p-6 rounded-2xl border border-slate-200 dark:border-slate-800">
+<div className="bg-background-light p-6 rounded-2xl border border-slate-200">
 <div className="flex items-center gap-4 mb-4">
 <img alt="Client" className="w-12 h-12 rounded-full" data-alt="Headshot of a female customer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOR_DfsC_LLO9dr9hnwdRf4ABmbL98dQzLGD_PQKERaxEtULOr7H1PLTfOItVoEn6l4nThSFDOhWlhH--LBG-FkxdDTFBA6pBdTpWbrBwjgo0tI0znlbnobNbOWDZXOG-Oy74zuHWDufDDXt9gVLu_-w_Z6HTBXKqP0zojYTLdxB5Gxq7x1dul-9-Y0cJr0acef5Cw478b8ThykVzlfaXooqhA4bPXeDUNxK4M80c8fzcfKXgTpeBw6CFvjw4KDH-Vv1eDTmEs89ey"/>
 <div>
@@ -226,7 +226,7 @@ const ServiceDetailsInstallationRobinetterie = () => {
 <span className="material-symbols-outlined text-sm fill-1">star</span>
 </div>
 </div>
-<p className="text-slate-600 dark:text-slate-400 italic">"Très satisfaite de la colonne de douche installée par Sophie. Très professionnelle et de bon conseil. Je recommande vivement PlumbExpert !"</p>
+<p className="text-slate-600 italic">"Très satisfaite de la colonne de douche installée par Sophie. Très professionnelle et de bon conseil. Je recommande vivement PlumbExpert !"</p>
 </div>
 </div>
 </section>
@@ -234,30 +234,30 @@ const ServiceDetailsInstallationRobinetterie = () => {
 <section className="mb-16">
 <h3 className="text-2xl font-bold mb-8">Questions Fréquentes</h3>
 <div className="space-y-4 max-w-3xl">
-<details className="group bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden" open="">
+<details className="group bg-white border border-slate-200 rounded-xl overflow-hidden" open="">
 <summary className="flex justify-between items-center p-6 cursor-pointer font-bold list-none">
                         Quelles sont les garanties après l'installation ?
                         <span className="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
 </summary>
-<div className="px-6 pb-6 text-slate-600 dark:text-slate-400">
+<div className="px-6 pb-6 text-slate-600">
                         Toutes nos installations sont couvertes par une garantie de 2 ans sur la main d'œuvre. Si une fuite apparaît suite à notre intervention, nous revenons gratuitement dans les 24h pour corriger le problème.
                     </div>
 </details>
-<details className="group bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden">
+<details className="group bg-white border border-slate-200 rounded-xl overflow-hidden">
 <summary className="flex justify-between items-center p-6 cursor-pointer font-bold list-none">
                         Fournissez-vous le robinet ou dois-je l'acheter ?
                         <span className="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
 </summary>
-<div className="px-6 pb-6 text-slate-600 dark:text-slate-400">
+<div className="px-6 pb-6 text-slate-600">
                         Nous pouvons faire les deux ! Vous pouvez acheter votre robinet vous-même, ou nous pouvons vous proposer une sélection de modèles de haute qualité issus de nos partenaires (Grohe, Hansgrohe, Jacob Delafon) avec une remise professionnelle.
                     </div>
 </details>
-<details className="group bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden">
+<details className="group bg-white border border-slate-200 rounded-xl overflow-hidden">
 <summary className="flex justify-between items-center p-6 cursor-pointer font-bold list-none">
                         Combien de temps dure l'intervention ?
                         <span className="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
 </summary>
-<div className="px-6 pb-6 text-slate-600 dark:text-slate-400">
+<div className="px-6 pb-6 text-slate-600">
                         Pour un robinet standard, comptez environ 45 minutes à 1 heure. Pour une colonne de douche complète ou un système encastré, l'intervention peut durer entre 2 et 4 heures selon la complexité des raccordements existants.
                     </div>
 </details>

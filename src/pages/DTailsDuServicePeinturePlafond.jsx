@@ -7,21 +7,21 @@ const DTailsDuServicePeinturePlafond = () => {
 <div className="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
 <div className="layout-container flex h-full grow flex-col">
 {/*  Navigation  */}
-<header className="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-800 px-6 md:px-20 py-4 bg-white dark:bg-slate-900">
+<header className="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 px-6 md:px-20 py-4 bg-white">
 <div className="flex items-center gap-4 text-primary">
 <div className="size-8 flex items-center justify-center bg-primary/10 rounded-lg">
 <span className="material-symbols-outlined">format_paint</span>
 </div>
-<h2 className="text-slate-900 dark:text-white text-xl font-bold leading-tight tracking-tight">PlafondPro</h2>
+<h2 className="text-slate-900 text-xl font-bold leading-tight tracking-tight">PlafondPro</h2>
 </div>
 <div className="hidden md:flex flex-1 justify-end gap-8">
 <nav className="flex items-center gap-9">
-<a className="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">Détails techniques</a>
-<a className="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">Tarification</a>
-<a className="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">Nos Experts</a>
+<a className="text-slate-600 text-sm font-medium hover:text-primary transition-colors" href="#">Détails techniques</a>
+<a className="text-slate-600 text-sm font-medium hover:text-primary transition-colors" href="#">Tarification</a>
+<a className="text-slate-600 text-sm font-medium hover:text-primary transition-colors" href="#">Nos Experts</a>
 </nav>
 <div className="flex gap-3">
-<button className="flex items-center justify-center rounded-lg h-10 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 px-3 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
+<button className="flex items-center justify-center rounded-lg h-10 bg-slate-100 text-slate-700 px-3 hover:bg-slate-200 transition-colors">
 <span className="material-symbols-outlined text-[20px]">share</span>
 </button>
 <button className="flex items-center justify-center rounded-lg h-10 bg-primary text-white px-5 text-sm font-bold hover:bg-primary/90 transition-colors">
@@ -45,30 +45,30 @@ const DTailsDuServicePeinturePlafond = () => {
 </div>
 {/*  Stats & Quick Info  */}
 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-<div className="flex flex-col gap-2 rounded-xl p-8 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+<div className="flex flex-col gap-2 rounded-xl p-8 bg-white border border-slate-200 shadow-sm">
 <div className="flex items-center gap-3 text-primary mb-2">
 <span className="material-symbols-outlined">payments</span>
-<p className="text-slate-500 dark:text-slate-400 text-sm font-semibold uppercase tracking-wide">Tarif Indicatif</p>
+<p className="text-slate-500 text-sm font-semibold uppercase tracking-wide">Tarif Indicatif</p>
 </div>
-<p className="text-slate-900 dark:text-white tracking-tight text-3xl font-black leading-tight">Dès 22€ / m²</p>
+<p className="text-slate-900 tracking-tight text-3xl font-black leading-tight">Dès 22€ / m²</p>
 <p className="text-emerald-500 text-sm font-medium flex items-center gap-1">
 <span className="material-symbols-outlined text-sm">trending_down</span> -5% sur surfaces &gt; 50m²
                     </p>
 </div>
-<div className="flex flex-col gap-2 rounded-xl p-8 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+<div className="flex flex-col gap-2 rounded-xl p-8 bg-white border border-slate-200 shadow-sm">
 <div className="flex items-center gap-3 text-primary mb-2">
 <span className="material-symbols-outlined">speed</span>
-<p className="text-slate-500 dark:text-slate-400 text-sm font-semibold uppercase tracking-wide">Délai d'exécution</p>
+<p className="text-slate-500 text-sm font-semibold uppercase tracking-wide">Délai d'exécution</p>
 </div>
-<p className="text-slate-900 dark:text-white tracking-tight text-3xl font-black leading-tight">24h - 48h</p>
+<p className="text-slate-900 tracking-tight text-3xl font-black leading-tight">24h - 48h</p>
 <p className="text-primary text-sm font-medium">Séchage rapide inclus</p>
 </div>
-<div className="flex flex-col gap-2 rounded-xl p-8 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+<div className="flex flex-col gap-2 rounded-xl p-8 bg-white border border-slate-200 shadow-sm">
 <div className="flex items-center gap-3 text-primary mb-2">
 <span className="material-symbols-outlined">verified</span>
-<p className="text-slate-500 dark:text-slate-400 text-sm font-semibold uppercase tracking-wide">Garantie Travaux</p>
+<p className="text-slate-500 text-sm font-semibold uppercase tracking-wide">Garantie Travaux</p>
 </div>
-<p className="text-slate-900 dark:text-white tracking-tight text-3xl font-black leading-tight">10 Ans</p>
+<p className="text-slate-900 tracking-tight text-3xl font-black leading-tight">10 Ans</p>
 <p className="text-primary text-sm font-medium">Assurance décennale incluse</p>
 </div>
 </div>
@@ -85,15 +85,15 @@ const DTailsDuServicePeinturePlafond = () => {
 <div className="p-4 rounded-lg bg-primary/5 border border-primary/10 flex gap-4">
 <span className="material-symbols-outlined text-primary text-3xl">air_purifier</span>
 <div>
-<h4 className="font-bold text-slate-900 dark:text-white">Pistolet Airless</h4>
-<p className="text-sm text-slate-600 dark:text-slate-400">Application uniforme sans traces de rouleau, idéale pour les grandes surfaces.</p>
+<h4 className="font-bold text-slate-900">Pistolet Airless</h4>
+<p className="text-sm text-slate-600">Application uniforme sans traces de rouleau, idéale pour les grandes surfaces.</p>
 </div>
 </div>
 <div className="p-4 rounded-lg bg-primary/5 border border-primary/10 flex gap-4">
 <span className="material-symbols-outlined text-primary text-3xl">architecture</span>
 <div>
-<h4 className="font-bold text-slate-900 dark:text-white">Ponceuse Girafe</h4>
-<p className="text-sm text-slate-600 dark:text-slate-400">Préparation optimale des supports avec aspiration intégrée pour zéro poussière.</p>
+<h4 className="font-bold text-slate-900">Ponceuse Girafe</h4>
+<p className="text-sm text-slate-600">Préparation optimale des supports avec aspiration intégrée pour zéro poussière.</p>
 </div>
 </div>
 </div>
@@ -104,29 +104,29 @@ const DTailsDuServicePeinturePlafond = () => {
 <span className="material-symbols-outlined text-primary">opacity</span>
                             Traitement des Taches &amp; Sinistres
                         </h3>
-<div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden">
+<div className="bg-white border border-slate-200 rounded-xl overflow-hidden">
 <table className="w-full text-left">
-<thead className="bg-slate-50 dark:bg-slate-800/50">
+<thead className="bg-slate-50">
 <tr>
-<th className="px-6 py-4 text-sm font-bold text-slate-700 dark:text-slate-200">Type de problème</th>
-<th className="px-6 py-4 text-sm font-bold text-slate-700 dark:text-slate-200">Solution Technique</th>
-<th className="px-6 py-4 text-sm font-bold text-slate-700 dark:text-slate-200 text-right">Supplément</th>
+<th className="px-6 py-4 text-sm font-bold text-slate-700">Type de problème</th>
+<th className="px-6 py-4 text-sm font-bold text-slate-700">Solution Technique</th>
+<th className="px-6 py-4 text-sm font-bold text-slate-700 text-right">Supplément</th>
 </tr>
 </thead>
-<tbody className="divide-y divide-slate-200 dark:divide-slate-800">
+<tbody className="divide-y divide-slate-200">
 <tr>
 <td className="px-6 py-4 text-sm font-medium">Auréoles d'eau</td>
-<td className="px-6 py-4 text-sm text-slate-600 dark:text-slate-400">Primaire isolant à base de solvant</td>
+<td className="px-6 py-4 text-sm text-slate-600">Primaire isolant à base de solvant</td>
 <td className="px-6 py-4 text-sm font-bold text-right text-primary">+4€/m²</td>
 </tr>
 <tr>
 <td className="px-6 py-4 text-sm font-medium">Fissures actives</td>
-<td className="px-6 py-4 text-sm text-slate-600 dark:text-slate-400">Entoilage localisé et enduit fibré</td>
+<td className="px-6 py-4 text-sm text-slate-600">Entoilage localisé et enduit fibré</td>
 <td className="px-6 py-4 text-sm font-bold text-right text-primary">+7€/m²</td>
 </tr>
 <tr>
 <td className="px-6 py-4 text-sm font-medium">Traces de fumée</td>
-<td className="px-6 py-4 text-sm text-slate-600 dark:text-slate-400">Lessivage sodé et peinture bloquante</td>
+<td className="px-6 py-4 text-sm text-slate-600">Lessivage sodé et peinture bloquante</td>
 <td className="px-6 py-4 text-sm font-bold text-right text-primary">+5€/m²</td>
 </tr>
 </tbody>
@@ -136,7 +136,7 @@ const DTailsDuServicePeinturePlafond = () => {
 </div>
 {/*  Sidebar: Expert Painters  */}
 <div className="space-y-8">
-<div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6 sticky top-8 shadow-xl shadow-primary/5">
+<div className="bg-white border border-slate-200 rounded-xl p-6 sticky top-8 shadow-xl shadow-primary/5">
 <h3 className="text-xl font-bold mb-6 flex items-center gap-2">
 <span className="material-symbols-outlined text-primary">groups</span>
                             Nos Experts Peintres
@@ -146,11 +146,11 @@ const DTailsDuServicePeinturePlafond = () => {
 <div className="flex items-center gap-4">
 <div className="relative">
 <div className="size-14 rounded-full bg-cover bg-center border-2 border-primary/20" data-alt="Portrait of an experienced male painter" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCvWwNZMJSEGHN7jVHeV4EmtXvhhSRfKjIWV4_q0eIjesVUOmyGeTxPJM-eZ3gQK5ZF_21dq9xJNGFAf3mxKJNbZK0i-qkLZkrgIGOpUoHIoMscTYGWFZis5fTNlZZ_CygbZgUlT2IHBlauYCr-JkTTOqvq2i7s7gnSA83zpnOb1IFiFFgpQCUjYrUt7vzxrEp4sNxhb59yb87yJN4EFiZhIXI77JJZW0PN8tiEBdEDAfwv4v6WN7ZwFx3gR2cBZzLMbWxGFNumSLq_");'></div>
-<div className="absolute bottom-0 right-0 size-4 bg-emerald-500 rounded-full border-2 border-white dark:border-slate-900"></div>
+<div className="absolute bottom-0 right-0 size-4 bg-emerald-500 rounded-full border-2 border-white"></div>
 </div>
 <div className="flex-1">
 <h4 className="font-bold text-sm">Marc L.</h4>
-<p className="text-xs text-slate-500 dark:text-slate-400">Spécialiste Airless - 12 ans d'exp.</p>
+<p className="text-xs text-slate-500">Spécialiste Airless - 12 ans d'exp.</p>
 <div className="flex items-center mt-1 text-amber-500">
 <span className="material-symbols-outlined text-sm">star</span>
 <span className="material-symbols-outlined text-sm">star</span>
@@ -168,11 +168,11 @@ const DTailsDuServicePeinturePlafond = () => {
 <div className="flex items-center gap-4">
 <div className="relative">
 <div className="size-14 rounded-full bg-cover bg-center border-2 border-primary/20" data-alt="Portrait of a female professional decorator" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC8JFwnd5B06aniGvUkQq_vRLN4X0kgZXAwS51mxT7QRBTb_cD7TU2MjfvxHt0S6n4-E9NkIvSLAd4er63-osqokRG9Ejjm2164C8wMOeEpA7Gn7St9R0w-ijPd2nPJlmIwFIx6jiTn3emTGWwz0Grc2ysSvEJWAx_9OBmS87puovKp2FoRtUnmAwdo3baR0Vr7j8wOnSWbV4E_DlWpCXcl5rET3-gQyjdogj9kQjR4zNiUmVBs1O51Pwj3cPWlGoKWbYeJovh32AYL");'></div>
-<div className="absolute bottom-0 right-0 size-4 bg-emerald-500 rounded-full border-2 border-white dark:border-slate-900"></div>
+<div className="absolute bottom-0 right-0 size-4 bg-emerald-500 rounded-full border-2 border-white"></div>
 </div>
 <div className="flex-1">
 <h4 className="font-bold text-sm">Sophie R.</h4>
-<p className="text-xs text-slate-500 dark:text-slate-400">Décoration &amp; Staff - 8 ans d'exp.</p>
+<p className="text-xs text-slate-500">Décoration &amp; Staff - 8 ans d'exp.</p>
 <div className="flex items-center mt-1 text-amber-500">
 <span className="material-symbols-outlined text-sm">star</span>
 <span className="material-symbols-outlined text-sm">star</span>
@@ -190,11 +190,11 @@ const DTailsDuServicePeinturePlafond = () => {
 <div className="flex items-center gap-4">
 <div className="relative">
 <div className="size-14 rounded-full bg-cover bg-center border-2 border-primary/20" data-alt="Portrait of a professional young painter" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBmGCe9i-d55T7kGvenuh6ADCLA6H7sp32BNu2jroXwBYCngoopOG6zNFOiSvKKGQV2_RT_uObXy-MSXtoh45GQ2t1vR2Z52RHhOhgAi8hpfXY3GK4wfElICt1NxbHkRifZZ_uhMVAoSgObmyRAgprKd8MKgKnwHZhuZJApHkbGIOB3hgZzozmmuwHpT_8ykupvbOeU4ixkTeKZj0W-k7fxN_h4f4ZhZLtm22RgRwY3EENevgh40ebk9kt7mQSkK8LpXDhMH3GrDw7o");'></div>
-<div className="absolute bottom-0 right-0 size-4 bg-slate-300 rounded-full border-2 border-white dark:border-slate-900"></div>
+<div className="absolute bottom-0 right-0 size-4 bg-slate-300 rounded-full border-2 border-white"></div>
 </div>
 <div className="flex-1">
 <h4 className="font-bold text-sm">Thomas D.</h4>
-<p className="text-xs text-slate-500 dark:text-slate-400">Réparation sinistres - 15 ans d'exp.</p>
+<p className="text-xs text-slate-500">Réparation sinistres - 15 ans d'exp.</p>
 <div className="flex items-center mt-1 text-amber-500">
 <span className="material-symbols-outlined text-sm">star</span>
 <span className="material-symbols-outlined text-sm">star</span>
@@ -209,7 +209,7 @@ const DTailsDuServicePeinturePlafond = () => {
 </button>
 </div>
 </div>
-<div className="mt-8 pt-6 border-t border-slate-100 dark:border-slate-800">
+<div className="mt-8 pt-6 border-t border-slate-100">
 <button className="w-full bg-primary text-white py-3 rounded-lg font-bold text-sm hover:bg-primary/90 transition-all flex items-center justify-center gap-2">
 <span className="material-symbols-outlined text-sm">calendar_month</span>
                                 Réserver une visite

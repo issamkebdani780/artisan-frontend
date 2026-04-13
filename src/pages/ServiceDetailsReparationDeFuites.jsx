@@ -7,22 +7,22 @@ const ServiceDetailsReparationDeFuites = () => {
 <div className="relative flex min-h-screen w-full flex-col overflow-x-hidden">
 <div className="layout-container flex h-full grow flex-col">
 {/*  Header / TopNavBar  */}
-<header className="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark px-6 md:px-20 py-4 sticky top-0 z-50">
+<header className="flex items-center justify-between border-b border-slate-200 bg-white px-6 md:px-20 py-4 sticky top-0 z-50">
 <div className="flex items-center gap-4 text-primary">
 <span className="material-symbols-outlined text-3xl">plumbing</span>
-<h2 className="text-slate-900 dark:text-white text-xl font-bold tracking-tight">PlumbPro</h2>
+<h2 className="text-slate-900 text-xl font-bold tracking-tight">PlumbPro</h2>
 </div>
 <div className="flex flex-1 justify-end gap-6 items-center">
 <nav className="hidden md:flex items-center gap-8">
-<a className="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">Services</a>
-<a className="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">Plombiers</a>
-<a className="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">Avis</a>
+<a className="text-slate-600 text-sm font-medium hover:text-primary transition-colors" href="#">Services</a>
+<a className="text-slate-600 text-sm font-medium hover:text-primary transition-colors" href="#">Plombiers</a>
+<a className="text-slate-600 text-sm font-medium hover:text-primary transition-colors" href="#">Avis</a>
 </nav>
 <div className="flex gap-2">
-<button className="flex items-center justify-center rounded-lg h-10 w-10 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200">
+<button className="flex items-center justify-center rounded-lg h-10 w-10 bg-slate-100 text-slate-700">
 <span className="material-symbols-outlined text-[20px]">notifications</span>
 </button>
-<button className="flex items-center justify-center rounded-lg h-10 w-10 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200">
+<button className="flex items-center justify-center rounded-lg h-10 w-10 bg-slate-100 text-slate-700">
 <span className="material-symbols-outlined text-[20px]">account_circle</span>
 </button>
 </div>
@@ -51,7 +51,7 @@ const ServiceDetailsReparationDeFuites = () => {
 <span className="material-symbols-outlined text-xs text-slate-400">chevron_right</span>
 <a className="text-slate-500 hover:text-primary transition-colors" href="#">Plomberie</a>
 <span className="material-symbols-outlined text-xs text-slate-400">chevron_right</span>
-<span className="text-slate-900 dark:text-white font-medium">Réparation de fuites</span>
+<span className="text-slate-900 font-medium">Réparation de fuites</span>
 </div>
 <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
 {/*  Left Column: Content  */}
@@ -59,18 +59,18 @@ const ServiceDetailsReparationDeFuites = () => {
 {/*  Service Description  */}
 <section>
 <h3 className="text-2xl font-bold mb-4">À propos de ce service</h3>
-<p className="text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
+<p className="text-slate-600 leading-relaxed mb-6">
                                     Une fuite d'eau, même minime, peut causer des dommages structurels importants et alourdir considérablement votre facture. Nos experts interviennent avec un équipement de pointe pour détecter et colmater tout type de fuite : canalisations encastrées, robinetterie, chauffe-eau ou WC.
                                 </p>
 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-<div className="flex items-start gap-3 p-4 rounded-xl bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700">
+<div className="flex items-start gap-3 p-4 rounded-xl bg-white border border-slate-100">
 <span className="material-symbols-outlined text-primary">bolt</span>
 <div>
 <h4 className="font-bold">Intervention Express</h4>
 <p className="text-sm text-slate-500">Arrivée sur place en moins de 60 minutes pour les urgences.</p>
 </div>
 </div>
-<div className="flex items-start gap-3 p-4 rounded-xl bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700">
+<div className="flex items-start gap-3 p-4 rounded-xl bg-white border border-slate-100">
 <span className="material-symbols-outlined text-primary">security</span>
 <div>
 <h4 className="font-bold">Garantie 2 ans</h4>
@@ -80,11 +80,11 @@ const ServiceDetailsReparationDeFuites = () => {
 </div>
 </section>
 {/*  Pricing  */}
-<section className="bg-primary/5 dark:bg-primary/10 rounded-2xl p-8 border border-primary/20">
+<section className="bg-primary/5 rounded-2xl p-8 border border-primary/20">
 <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
 <div>
 <h3 className="text-2xl font-bold">Tarification transparente</h3>
-<p className="text-slate-600 dark:text-slate-400">Pas de frais cachés, devis gratuit avant intervention.</p>
+<p className="text-slate-600">Pas de frais cachés, devis gratuit avant intervention.</p>
 </div>
 <div className="text-right">
 <span className="text-sm text-slate-500 block uppercase tracking-wide font-bold">À partir de</span>
@@ -115,7 +115,7 @@ const ServiceDetailsReparationDeFuites = () => {
 </div>
 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 {/*  Plumber Card 1  */}
-<div className="flex flex-col bg-white dark:bg-slate-800 p-5 rounded-xl border border-slate-100 dark:border-slate-700 shadow-sm">
+<div className="flex flex-col bg-white p-5 rounded-xl border border-slate-100 shadow-sm">
 <div className="flex gap-4 items-center mb-4">
 <div className="h-14 w-14 rounded-full bg-cover bg-center" data-alt="Portrait of Marc L., a professional plumber" ></div>
 <div>
@@ -128,10 +128,10 @@ const ServiceDetailsReparationDeFuites = () => {
 </div>
 </div>
 <p className="text-sm text-slate-500 mb-4 line-clamp-2">Spécialiste en recherche de fuites non-destructive. 12 ans d'expérience.</p>
-<button className="w-full py-2 bg-slate-100 dark:bg-slate-700 hover:bg-primary hover:text-white transition-all rounded-lg text-sm font-bold">Choisir Marc</button>
+<button className="w-full py-2 bg-slate-100 hover:bg-primary hover:text-white transition-all rounded-lg text-sm font-bold">Choisir Marc</button>
 </div>
 {/*  Plumber Card 2  */}
-<div className="flex flex-col bg-white dark:bg-slate-800 p-5 rounded-xl border border-slate-100 dark:border-slate-700 shadow-sm">
+<div className="flex flex-col bg-white p-5 rounded-xl border border-slate-100 shadow-sm">
 <div className="flex gap-4 items-center mb-4">
 <div className="h-14 w-14 rounded-full bg-cover bg-center" data-alt="Portrait of Sophie G., a professional plumber" ></div>
 <div>
@@ -144,19 +144,19 @@ const ServiceDetailsReparationDeFuites = () => {
 </div>
 </div>
 <p className="text-sm text-slate-500 mb-4 line-clamp-2">Experte en rénovation de tuyauterie et urgences sanitaires. Réactive et rigoureuse.</p>
-<button className="w-full py-2 bg-slate-100 dark:bg-slate-700 hover:bg-primary hover:text-white transition-all rounded-lg text-sm font-bold">Choisir Sophie</button>
+<button className="w-full py-2 bg-slate-100 hover:bg-primary hover:text-white transition-all rounded-lg text-sm font-bold">Choisir Sophie</button>
 </div>
 </div>
 </section>
 </div>
 {/*  Right Column: Booking Card  */}
 <div className="lg:col-span-1">
-<div className="sticky top-28 bg-white dark:bg-slate-800 rounded-2xl shadow-xl border border-slate-100 dark:border-slate-700 p-6">
+<div className="sticky top-28 bg-white rounded-2xl shadow-xl border border-slate-100 p-6">
 <h3 className="text-xl font-bold mb-6">Réserver une intervention</h3>
 <form className="space-y-4">
 <div>
 <label className="block text-xs font-bold text-slate-500 uppercase mb-1">Type de fuite</label>
-<select className="w-full rounded-lg border-slate-200 dark:border-slate-700 bg-transparent text-sm focus:ring-primary focus:border-primary">
+<select className="w-full rounded-lg border-slate-200 bg-transparent text-sm focus:ring-primary focus:border-primary">
 <option>Robinet / Mitigeur</option>
 <option>Canalisation bouchée / percée</option>
 <option>WC / Chasse d'eau</option>
@@ -168,14 +168,14 @@ const ServiceDetailsReparationDeFuites = () => {
 <label className="block text-xs font-bold text-slate-500 uppercase mb-1">Votre localisation</label>
 <div className="relative">
 <span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-lg">location_on</span>
-<input className="w-full pl-10 rounded-lg border-slate-200 dark:border-slate-700 bg-transparent text-sm focus:ring-primary focus:border-primary" data-location="Paris" placeholder="Code postal ou ville" type="text"/>
+<input className="w-full pl-10 rounded-lg border-slate-200 bg-transparent text-sm focus:ring-primary focus:border-primary" data-location="Paris" placeholder="Code postal ou ville" type="text"/>
 </div>
 </div>
 <div>
 <label className="block text-xs font-bold text-slate-500 uppercase mb-1">Date souhaitée</label>
 <div className="relative">
 <span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-lg">calendar_today</span>
-<input className="w-full pl-10 rounded-lg border-slate-200 dark:border-slate-700 bg-transparent text-sm focus:ring-primary focus:border-primary" type="date"/>
+<input className="w-full pl-10 rounded-lg border-slate-200 bg-transparent text-sm focus:ring-primary focus:border-primary" type="date"/>
 </div>
 </div>
 <div className="pt-4">
@@ -197,12 +197,12 @@ const ServiceDetailsReparationDeFuites = () => {
 </div>
 </main>
 {/*  Footer  */}
-<footer className="mt-20 border-t border-slate-200 dark:border-slate-800 py-12 px-6 md:px-20 bg-white dark:bg-background-dark">
+<footer className="mt-20 border-t border-slate-200 py-12 px-6 md:px-20 bg-white">
 <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
 <div className="col-span-1 md:col-span-1">
 <div className="flex items-center gap-2 text-primary mb-6">
 <span className="material-symbols-outlined text-2xl">plumbing</span>
-<h2 className="text-slate-900 dark:text-white text-lg font-bold tracking-tight">PlumbPro</h2>
+<h2 className="text-slate-900 text-lg font-bold tracking-tight">PlumbPro</h2>
 </div>
 <p className="text-sm text-slate-500 leading-relaxed">Le réseau n°1 de plombiers certifiés pour vos interventions d'urgence et rénovations.</p>
 </div>
@@ -227,7 +227,7 @@ const ServiceDetailsReparationDeFuites = () => {
 <div>
 <h4 className="font-bold mb-4">Assistance</h4>
 <div className="flex flex-col gap-3">
-<button className="flex items-center gap-2 text-sm font-bold bg-slate-100 dark:bg-slate-800 px-4 py-2 rounded-lg">
+<button className="flex items-center gap-2 text-sm font-bold bg-slate-100 px-4 py-2 rounded-lg">
 <span className="material-symbols-outlined text-primary">phone</span>
                                 0 800 123 456
                             </button>
@@ -235,7 +235,7 @@ const ServiceDetailsReparationDeFuites = () => {
 </div>
 </div>
 </div>
-<div className="mt-12 pt-8 border-t border-slate-100 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-400">
+<div className="mt-12 pt-8 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-400">
 <p>© 2024 PlumbPro Expertise. Tous droits réservés.</p>
 <div className="flex gap-6">
 <a className="hover:underline" href="#">Mentions Légales</a>

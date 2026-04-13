@@ -55,9 +55,9 @@ const ParametresSecuriteAdmin = () => {
 </div>
 </aside>
 {/*  Main Content  */}
-<main className="flex-1 flex flex-col min-w-0 overflow-hidden ml-72 bg-background-light dark:bg-background-dark">
+<main className="flex-1 flex flex-col min-w-0 overflow-hidden ml-72 bg-background-light">
 {/*  Header (Using style from SCREEN_256)  */}
-<header className="h-16 border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 flex items-center justify-between px-8 sticky top-0 z-40">
+<header className="h-16 border-b border-slate-200 bg-white flex items-center justify-between px-8 sticky top-0 z-40">
 <div className="flex items-center gap-2">
 <span className="material-symbols-outlined text-purple-600">settings</span>
 <h2 className="text-lg font-bold">Paramètres</h2>
@@ -65,14 +65,14 @@ const ParametresSecuriteAdmin = () => {
 <div className="flex items-center gap-6">
 <div className="relative w-64">
 <span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm">search</span>
-<input className="w-full pl-10 pr-4 py-2 bg-slate-100 dark:bg-slate-800 border-none rounded-xl text-sm focus:ring-2 focus:ring-purple-500" placeholder="Rechercher des paramètres..." type="text"/>
+<input className="w-full pl-10 pr-4 py-2 bg-slate-100 border-none rounded-xl text-sm focus:ring-2 focus:ring-purple-500" placeholder="Rechercher des paramètres..." type="text"/>
 </div>
 <div className="flex items-center gap-2">
-<button className="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 relative">
+<button className="p-2 rounded-xl bg-slate-100 text-slate-600 relative">
 <span className="material-symbols-outlined">notifications</span>
 <span className="absolute top-2 right-2 size-2 bg-primary rounded-full"></span>
 </button>
-<button className="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
+<button className="p-2 rounded-xl bg-slate-100 text-slate-600">
 <span className="material-symbols-outlined">dark_mode</span>
 </button>
 </div>
@@ -82,11 +82,11 @@ const ParametresSecuriteAdmin = () => {
 <div className="flex-1 overflow-y-auto p-8">
 {/*  Title Section  */}
 <div className="mb-8">
-<h1 className="text-3xl font-black tracking-tight text-slate-900 dark:text-white">Paramètres Système</h1>
-<p className="text-slate-500 dark:text-slate-400 mt-2">Gérez la configuration globale de The Violet Protocol et ajustez les préférences système de votre environnement.</p>
+<h1 className="text-3xl font-black tracking-tight text-slate-900">Paramètres Système</h1>
+<p className="text-slate-500 mt-2">Gérez la configuration globale de The Violet Protocol et ajustez les préférences système de votre environnement.</p>
 </div>
 {/*  Tabbed Navigation  */}
-<div className="flex border-b border-slate-200 dark:border-slate-800 mb-8">
+<div className="flex border-b border-slate-200 mb-8">
 <button className="px-6 py-4 text-sm font-medium text-slate-500 hover:text-purple-600 transition-colors">Général</button>
 <button className="px-6 py-4 text-sm font-bold border-b-2 border-primary text-primary">Sécurité</button>
 <button className="px-6 py-4 text-sm font-medium text-slate-500 hover:text-purple-600 transition-colors">Notifications</button>
@@ -95,7 +95,7 @@ const ParametresSecuriteAdmin = () => {
 <div className="grid grid-cols-1 xl:grid-cols-3 gap-8 items-start">
 {/*  Left Column: Content  */}
 <div className="xl:col-span-2 space-y-8">{/*  Password Management  */}
-<section className="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 p-8 shadow-sm">
+<section className="bg-white rounded-xl border border-slate-200 p-8 shadow-sm">
 <div className="flex items-center gap-3 mb-8">
 <span className="material-symbols-outlined text-purple-600">lock</span>
 <h2 className="text-xl font-bold">Mot de passe</h2>
@@ -104,48 +104,48 @@ const ParametresSecuriteAdmin = () => {
 <div className="grid grid-cols-1 md:grid-cols-4 gap-4 items-center">
 <label className="text-sm font-bold text-slate-500 uppercase tracking-wider" htmlFor="current-password">Actuel</label>
 <div className="md:col-span-3">
-<input className="w-full bg-slate-50 dark:bg-slate-800 border-none rounded-xl p-3 text-sm focus:ring-2 focus:ring-purple-500 transition-all outline-none" id="current-password" placeholder="••••••••••••" type="password"/>
+<input className="w-full bg-slate-50 border-none rounded-xl p-3 text-sm focus:ring-2 focus:ring-purple-500 transition-all outline-none" id="current-password" placeholder="••••••••••••" type="password"/>
 </div>
 </div>
 <div className="grid grid-cols-1 md:grid-cols-4 gap-4 items-center">
 <label className="text-sm font-bold text-slate-500 uppercase tracking-wider" htmlFor="new-password">Nouveau</label>
 <div className="md:col-span-3">
-<input className="w-full bg-slate-50 dark:bg-slate-800 border-none rounded-xl p-3 text-sm focus:ring-2 focus:ring-purple-500 transition-all outline-none" id="new-password" type="password"/>
+<input className="w-full bg-slate-50 border-none rounded-xl p-3 text-sm focus:ring-2 focus:ring-purple-500 transition-all outline-none" id="new-password" type="password"/>
 </div>
 </div>
 <div className="grid grid-cols-1 md:grid-cols-4 gap-4 items-center">
 <label className="text-sm font-bold text-slate-500 uppercase tracking-wider" htmlFor="confirm-password">Confirmer</label>
 <div className="md:col-span-3">
-<input className="w-full bg-slate-50 dark:bg-slate-800 border-none rounded-xl p-3 text-sm focus:ring-2 focus:ring-purple-500 transition-all outline-none" id="confirm-password" type="password"/>
+<input className="w-full bg-slate-50 border-none rounded-xl p-3 text-sm focus:ring-2 focus:ring-purple-500 transition-all outline-none" id="confirm-password" type="password"/>
 </div>
 </div>
 </div>
 </section>
 {/*  Two-Factor Authentication  */}
-<section className="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 p-8 shadow-sm">
+<section className="bg-white rounded-xl border border-slate-200 p-8 shadow-sm">
 <div className="flex items-center justify-between">
 <div className="flex gap-4">
-<div className="h-12 w-12 rounded-xl bg-purple-50 dark:bg-purple-900/30 flex items-center justify-center text-purple-600">
+<div className="h-12 w-12 rounded-xl bg-purple-50 flex items-center justify-center text-purple-600">
 <span className="material-symbols-outlined">vibration</span>
 </div>
 <div>
 <h2 className="text-lg font-bold">Double authentification (2FA)</h2>
-<p className="text-sm text-slate-500 dark:text-slate-400 mt-1">Ajoutez une couche de sécurité supplémentaire à votre compte.</p>
+<p className="text-sm text-slate-500 mt-1">Ajoutez une couche de sécurité supplémentaire à votre compte.</p>
 </div>
 </div>
 <label className="inline-flex items-center cursor-pointer">
 <input defaultChecked className="sr-only peer" type="checkbox" value=""/>
-<div className="relative w-14 h-7 bg-slate-200 dark:bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[4px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-purple-600"></div>
+<div className="relative w-14 h-7 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[4px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-purple-600"></div>
 </label>
 </div>
 </section>
 {/*  Active Sessions  */}
-<section className="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 p-8 shadow-sm">
+<section className="bg-white rounded-xl border border-slate-200 p-8 shadow-sm">
 <div className="flex items-center gap-3 mb-6">
 <span className="material-symbols-outlined text-purple-600">devices</span>
 <h2 className="text-xl font-bold">Sessions Actives</h2>
 </div>
-<div className="divide-y divide-slate-100 dark:divide-slate-800">
+<div className="divide-y divide-slate-100">
 <div className="py-4 flex items-center justify-between">
 <div className="flex items-center gap-4">
 <span className="material-symbols-outlined text-slate-400">laptop_mac</span>
@@ -154,7 +154,7 @@ const ParametresSecuriteAdmin = () => {
 <p className="text-xs text-slate-500">Paris, France • En ce moment même</p>
 </div>
 </div>
-<span className="text-xs font-bold text-green-500 bg-green-50 dark:bg-green-500/10 px-2 py-1 rounded">Session actuelle</span>
+<span className="text-xs font-bold text-green-500 bg-green-50 px-2 py-1 rounded">Session actuelle</span>
 </div>
 <div className="py-4 flex items-center justify-between">
 <div className="flex items-center gap-4">
@@ -178,21 +178,21 @@ Enregistrer les modifications
 {/*  Right Column: Sidebar Info (Layout consistent with SCREEN_256 sidebar widget area)  */}
 <aside className="space-y-8">
 {/*  System Info Card  */}
-<div className="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm">
+<div className="bg-white rounded-xl border border-slate-200 p-6 shadow-sm">
 <div className="flex items-center justify-between mb-6">
-<h3 className="font-bold text-slate-900 dark:text-white">Informations Système</h3>
+<h3 className="font-bold text-slate-900">Informations Système</h3>
 <span className="material-symbols-outlined text-purple-600">history</span>
 </div>
 <div className="space-y-6">
 <div className="flex items-center justify-between group">
 <span className="text-xs font-bold text-slate-400 uppercase tracking-widest">Version</span>
-<span className="bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 text-[10px] font-bold px-2 py-1 rounded">v2.4.1-purple</span>
+<span className="bg-purple-100 text-purple-700 text-[10px] font-bold px-2 py-1 rounded">v2.4.1-purple</span>
 </div>
 <div className="flex items-center justify-between group">
 <span className="text-xs font-bold text-slate-400 uppercase tracking-widest">Dernier Backup</span>
-<span className="text-sm text-slate-600 dark:text-slate-300 font-medium">Il y a 2h 14min</span>
+<span className="text-sm text-slate-600 font-medium">Il y a 2h 14min</span>
 </div>
-<div className="pt-4 space-y-4 border-t border-slate-100 dark:border-slate-800">
+<div className="pt-4 space-y-4 border-t border-slate-100">
 <div className="flex items-center gap-3">
 <div className="h-2 w-2 rounded-full bg-green-500"></div>
 <span className="text-sm font-medium">Moteur de Curation : Stable</span>
@@ -224,9 +224,9 @@ Enregistrer les modifications
 </div>
 </div>
 {/*  Help Resource  */}
-<div className="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm">
-<h4 className="font-bold text-slate-900 dark:text-white mb-2">Besoin d'aide ?</h4>
-<p className="text-xs text-slate-500 dark:text-slate-400 mb-4">Consultez la documentation technique sur la configuration des protocoles.</p>
+<div className="bg-white rounded-xl border border-slate-200 p-6 shadow-sm">
+<h4 className="font-bold text-slate-900 mb-2">Besoin d'aide ?</h4>
+<p className="text-xs text-slate-500 mb-4">Consultez la documentation technique sur la configuration des protocoles.</p>
 <a className="text-sm font-bold text-purple-600 hover:text-purple-700 transition-colors inline-flex items-center gap-1" href="#">
                             Voir le guide <span className="material-symbols-outlined text-sm">arrow_forward</span>
 </a>
@@ -234,7 +234,7 @@ Enregistrer les modifications
 </aside>
 </div>
 {/*  Footer  */}
-<footer className="mt-12 py-8 border-t border-slate-200 dark:border-slate-800 text-center text-slate-400 text-sm">
+<footer className="mt-12 py-8 border-t border-slate-200 text-center text-slate-400 text-sm">
 <p>© 2023 Admin Panel Purple Edition. Tous droits réservés.</p>
 <div className="mt-2 flex justify-center gap-4">
 <a className="hover:text-purple-500 transition-colors" href="#">Aide</a>

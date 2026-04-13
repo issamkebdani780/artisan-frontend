@@ -6,23 +6,23 @@ const JardinageNouveau = () => {
       
 <div className="flex h-screen overflow-hidden">
 {/*  SideNavBar  */}
-<aside className="w-64 flex-shrink-0 border-r border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark hidden lg:flex flex-col">
+<aside className="w-64 flex-shrink-0 border-r border-slate-200 bg-white hidden lg:flex flex-col">
 <div className="p-6 flex flex-col h-full">
 <div className="flex items-center gap-3 mb-8">
 <div className="bg-primary/10 rounded-full p-2 text-primary">
 <span className="material-symbols-outlined text-3xl">park</span>
 </div>
 <div className="flex flex-col">
-<h1 className="text-slate-900 dark:text-slate-100 text-base font-bold leading-tight">Mon Jardin</h1>
+<h1 className="text-slate-900 text-base font-bold leading-tight">Mon Jardin</h1>
 <p className="text-slate-500 text-xs font-normal">Expertise Pro</p>
 </div>
 </div>
 <nav className="flex flex-col gap-1 grow">
-<a className="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<a className="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-100 transition-colors" href="#">
 <span className="material-symbols-outlined">dashboard</span>
 <span className="text-sm font-medium">Tableau de bord</span>
 </a>
-<a className="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<a className="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-100 transition-colors" href="#">
 <span className="material-symbols-outlined">grid_view</span>
 <span className="text-sm font-medium">Tous les services</span>
 </a>
@@ -30,11 +30,11 @@ const JardinageNouveau = () => {
 <span className="material-symbols-outlined" >content_cut</span>
 <span className="text-sm font-bold">Jardinage</span>
 </a>
-<a className="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<a className="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-100 transition-colors" href="#">
 <span className="material-symbols-outlined">calendar_today</span>
 <span className="text-sm font-medium">Planning</span>
 </a>
-<a className="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<a className="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-100 transition-colors" href="#">
 <span className="material-symbols-outlined">settings</span>
 <span className="text-sm font-medium">Paramètres</span>
 </a>
@@ -48,14 +48,14 @@ const JardinageNouveau = () => {
 {/*  Main Content Area  */}
 <main className="flex-1 flex flex-col overflow-y-auto">
 {/*  Header  */}
-<header className="sticky top-0 z-30 flex items-center justify-between bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 px-6 py-4">
+<header className="sticky top-0 z-30 flex items-center justify-between bg-white/80 backdrop-blur-md border-b border-slate-200 px-6 py-4">
 <div className="flex items-center gap-4 lg:hidden">
 <span className="material-symbols-outlined">menu</span>
 <span className="text-lg font-bold">Jardinage Pro</span>
 </div>
 <div className="hidden lg:flex items-center gap-8">
 <nav className="flex items-center gap-6">
-<a className="text-slate-900 dark:text-slate-100 text-sm font-semibold border-b-2 border-primary pb-1" href="#">Services</a>
+<a className="text-slate-900 text-sm font-semibold border-b-2 border-primary pb-1" href="#">Services</a>
 <a className="text-slate-500 hover:text-primary text-sm font-medium transition-colors" href="#">Tarifs</a>
 <a className="text-slate-500 hover:text-primary text-sm font-medium transition-colors" href="#">Réalisations</a>
 <a className="text-slate-500 hover:text-primary text-sm font-medium transition-colors" href="#">Aide</a>
@@ -64,12 +64,12 @@ const JardinageNouveau = () => {
 <div className="flex items-center gap-4 flex-1 justify-end">
 <div className="relative max-w-xs w-full hidden sm:block">
 <span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
-<input className="w-full pl-10 pr-4 py-2 rounded-lg bg-slate-100 dark:bg-slate-800 border-none focus:ring-2 focus:ring-primary text-sm" placeholder="Rechercher..." type="text"/>
+<input className="w-full pl-10 pr-4 py-2 rounded-lg bg-slate-100 border-none focus:ring-2 focus:ring-primary text-sm" placeholder="Rechercher..." type="text"/>
 </div>
 <div className="flex items-center gap-2">
-<button className="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 relative">
+<button className="p-2 rounded-lg bg-slate-100 text-slate-600 relative">
 <span className="material-symbols-outlined">notifications</span>
-<span className="absolute top-2 right-2.5 w-2 h-2 bg-red-500 rounded-full border-2 border-white dark:border-slate-800"></span>
+<span className="absolute top-2 right-2.5 w-2 h-2 bg-red-500 rounded-full border-2 border-white"></span>
 </button>
 <div className="h-8 w-8 rounded-full bg-primary/20 border-2 border-primary/40 overflow-hidden">
 <img alt="Avatar" className="w-full h-full object-cover" data-alt="Photo de profil utilisateur" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQFIocqufE70P3ht5pe1Y-QQGHom2KGd22wDafSetgCqLNVci3RAXOv2_1al04fjCRjtXmlR20pkLoACA6fqHCUs9Wgc_UWbCILtkMxnyYWO8rsOm5wxRR_tl1F2BK6wG9IFJU16DFK4SFn0bnfl0huce0f2vc8_r6WJcGB44kObPnVy3J_vGyr-lXvEkhp6A2iif7VIsnHqRbyiTj1dJ_7SVfx3UGhsayxqAUXEKrpHpr6u98aPZ-KW3D0f5RzDKssUQ03HibUF9Y"/>
@@ -106,32 +106,32 @@ const JardinageNouveau = () => {
 <p className="text-slate-500">Une gamme complète de services pour répondre à tous les besoins de votre jardin, quelle que soit la saison.</p>
 </div>
 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-<div className="group bg-white dark:bg-slate-800 p-8 rounded-2xl border border-slate-200 dark:border-slate-700 hover:border-primary dark:hover:border-primary transition-all shadow-sm">
+<div className="group bg-white p-8 rounded-2xl border border-slate-200 hover:border-primary transition-all shadow-sm">
 <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
 <span className="material-symbols-outlined text-4xl">energy_savings_leaf</span>
 </div>
 <h4 className="text-xl font-bold mb-3">Entretien Courant</h4>
-<p className="text-slate-500 dark:text-slate-400 mb-6 text-sm leading-relaxed">Tonte de pelouse, désherbage des massifs, nettoyage des allées et évacuation des déchets verts.</p>
+<p className="text-slate-500 mb-6 text-sm leading-relaxed">Tonte de pelouse, désherbage des massifs, nettoyage des allées et évacuation des déchets verts.</p>
 <a className="text-primary font-bold text-sm flex items-center gap-2 hover:gap-3 transition-all" href="#">
                             En savoir plus <span className="material-symbols-outlined text-sm">arrow_forward</span>
 </a>
 </div>
-<div className="group bg-white dark:bg-slate-800 p-8 rounded-2xl border border-slate-200 dark:border-slate-700 hover:border-primary dark:hover:border-primary transition-all shadow-sm">
+<div className="group bg-white p-8 rounded-2xl border border-slate-200 hover:border-primary transition-all shadow-sm">
 <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
 <span className="material-symbols-outlined text-4xl">content_cut</span>
 </div>
 <h4 className="text-xl font-bold mb-3">Taille &amp; Élague</h4>
-<p className="text-slate-500 dark:text-slate-400 mb-6 text-sm leading-relaxed">Taille de haies, d'arbustes décoratifs, d'arbres fruitiers et élagage sécurisé pour la santé de vos plantes.</p>
+<p className="text-slate-500 mb-6 text-sm leading-relaxed">Taille de haies, d'arbustes décoratifs, d'arbres fruitiers et élagage sécurisé pour la santé de vos plantes.</p>
 <a className="text-primary font-bold text-sm flex items-center gap-2 hover:gap-3 transition-all" href="#">
                             En savoir plus <span className="material-symbols-outlined text-sm">arrow_forward</span>
 </a>
 </div>
-<div className="group bg-white dark:bg-slate-800 p-8 rounded-2xl border border-slate-200 dark:border-slate-700 hover:border-primary dark:hover:border-primary transition-all shadow-sm">
+<div className="group bg-white p-8 rounded-2xl border border-slate-200 hover:border-primary transition-all shadow-sm">
 <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
 <span className="material-symbols-outlined text-4xl">landscape</span>
 </div>
 <h4 className="text-xl font-bold mb-3">Paysagisme</h4>
-<p className="text-slate-500 dark:text-slate-400 mb-6 text-sm leading-relaxed">Création de nouveaux espaces, plantation, pose de gazon en rouleau et aménagement de terrasses.</p>
+<p className="text-slate-500 mb-6 text-sm leading-relaxed">Création de nouveaux espaces, plantation, pose de gazon en rouleau et aménagement de terrasses.</p>
 <a className="text-primary font-bold text-sm flex items-center gap-2 hover:gap-3 transition-all" href="#">
                             En savoir plus <span className="material-symbols-outlined text-sm">arrow_forward</span>
 </a>
@@ -139,21 +139,21 @@ const JardinageNouveau = () => {
 </div>
 </section>
 {/*  Pricing Section  */}
-<section className="mb-16 bg-slate-100 dark:bg-slate-900 -mx-6 lg:-mx-10 px-6 lg:px-10 py-16">
+<section className="mb-16 bg-slate-100 -mx-6 lg:-mx-10 px-6 lg:px-10 py-16">
 <div className="max-w-6xl mx-auto">
 <div className="flex flex-col md:flex-row justify-between items-end mb-10 gap-4">
 <div className="max-w-lg">
 <h3 className="text-3xl font-bold mb-4">Des tarifs transparents</h3>
 <p className="text-slate-500">Choisissez la formule qui convient le mieux à vos besoins et à votre budget.</p>
 </div>
-<div className="flex bg-white dark:bg-slate-800 p-1 rounded-lg border border-slate-200 dark:border-slate-700">
+<div className="flex bg-white p-1 rounded-lg border border-slate-200">
 <button className="px-4 py-2 rounded-md bg-primary text-white text-sm font-bold">Ponctuel</button>
 <button className="px-4 py-2 rounded-md text-slate-500 text-sm font-medium">Abonnement</button>
 </div>
 </div>
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 {/*  Pack 1  */}
-<div className="bg-white dark:bg-slate-800 rounded-2xl p-8 border border-slate-200 dark:border-slate-700 flex flex-col">
+<div className="bg-white rounded-2xl p-8 border border-slate-200 flex flex-col">
 <span className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Essentiel</span>
 <div className="flex items-baseline gap-1 mb-6">
 <span className="text-4xl font-black">45€</span>
@@ -176,7 +176,7 @@ const JardinageNouveau = () => {
 <button className="w-full py-3 border border-primary text-primary font-bold rounded-xl hover:bg-primary/5 transition-colors">Choisir ce pack</button>
 </div>
 {/*  Pack 2  */}
-<div className="bg-white dark:bg-slate-800 rounded-2xl p-8 border-2 border-primary relative flex flex-col shadow-xl">
+<div className="bg-white rounded-2xl p-8 border-2 border-primary relative flex flex-col shadow-xl">
 <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-white text-xs font-bold py-1 px-4 rounded-full uppercase tracking-widest">Le plus populaire</div>
 <span className="text-xs font-bold text-primary uppercase tracking-widest mb-2">Complet</span>
 <div className="flex items-baseline gap-1 mb-6">
@@ -200,7 +200,7 @@ const JardinageNouveau = () => {
 <button className="w-full py-3 bg-primary text-white font-bold rounded-xl hover:bg-primary/90 transition-colors shadow-lg">Choisir ce pack</button>
 </div>
 {/*  Pack 3  */}
-<div className="bg-white dark:bg-slate-800 rounded-2xl p-8 border border-slate-200 dark:border-slate-700 flex flex-col">
+<div className="bg-white rounded-2xl p-8 border border-slate-200 flex flex-col">
 <span className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Expert</span>
 <div className="flex items-baseline gap-1 mb-6">
 <span className="text-4xl font-black">Sur devis</span>
@@ -219,7 +219,7 @@ const JardinageNouveau = () => {
                                     Systèmes d'arrosage auto
                                 </li>
 </ul>
-<button className="w-full py-3 border border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-300 font-bold rounded-xl hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors">Demander un devis</button>
+<button className="w-full py-3 border border-slate-300 text-slate-700 font-bold rounded-xl hover:bg-slate-50 transition-colors">Demander un devis</button>
 </div>
 </div>
 </div>
@@ -231,57 +231,57 @@ const JardinageNouveau = () => {
 <a className="text-primary font-semibold text-sm hover:underline" href="#">Voir tout (24)</a>
 </div>
 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-<div className="bg-white dark:bg-slate-800 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 p-4 flex flex-col items-center text-center group">
+<div className="bg-white rounded-xl overflow-hidden border border-slate-200 p-4 flex flex-col items-center text-center group">
 <div className="w-20 h-20 rounded-full mb-4 ring-2 ring-primary/20 p-1">
 <img alt="Expert" className="w-full h-full object-cover rounded-full" data-alt="Portrait d'un jardinier professionnel souriant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0qoo0pwlOyBl5kP2lEOVbLvo3nsgkKefes-q_5y0YDAJwAfoFQn0KFBUHzUQXjy9K6KX17Y9SSuqn6FvyyXgbkPNLX4p0UiFt-78wPznT9e5AJPEVxTsBH-sbKtC2dNIR2WZoY_WdlcOyE6fM7J394T5IUyHA2lE1AL7CC9PR1Lw2a3r7NxO8aGhpOtny9my0MO0Q_E1tQtZxv8hN6O79LpFP89gsjvo8OHmAU0NlXmHH0OXn1Zf3-EcWsK1Y_PRvrmqZ-V_6IXQT"/>
 </div>
-<h5 className="font-bold text-slate-900 dark:text-slate-100">Julien Morel</h5>
+<h5 className="font-bold text-slate-900">Julien Morel</h5>
 <p className="text-xs text-slate-500 mb-2">Paysagiste Diplômé</p>
 <div className="flex items-center gap-1 mb-4">
 <span className="material-symbols-outlined text-yellow-500 text-sm">star</span>
 <span className="text-xs font-bold">4.9</span>
 <span className="text-xs text-slate-400">(42 avis)</span>
 </div>
-<button className="w-full py-2 bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 rounded-lg text-sm font-bold group-hover:bg-primary group-hover:text-white transition-all">Consulter</button>
+<button className="w-full py-2 bg-slate-100 text-slate-700 rounded-lg text-sm font-bold group-hover:bg-primary group-hover:text-white transition-all">Consulter</button>
 </div>
-<div className="bg-white dark:bg-slate-800 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 p-4 flex flex-col items-center text-center group">
+<div className="bg-white rounded-xl overflow-hidden border border-slate-200 p-4 flex flex-col items-center text-center group">
 <div className="w-20 h-20 rounded-full mb-4 ring-2 ring-primary/20 p-1">
 <img alt="Expert" className="w-full h-full object-cover rounded-full" data-alt="Portrait d'une jardinière professionnelle experte" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCX-LEx1Z2aDbeYGjJJ0PXld6XYOyVb25xhfnU7xLIOpHvKT_GkHZjFYuDPaWas_JypIEXlVsXd0M94blp_-6LG7OwgJzir0M9eXdYQHiWTdeT7RaRxBkCXCavdqivPgmjcweSMc1zrqMO8lK5RpfoLHZxmclyeVHQnnMcllVCuOGVD7kgxzbWudOyfuvGplX5hhu06eJue-b5VzHXFvcBHtT02n-Y8bhbiZlXPMCAUuqsBb6GcO9Wbg2AqNKLqLPkfarVZ9XDii5IX"/>
 </div>
-<h5 className="font-bold text-slate-900 dark:text-slate-100">Sarah Lefebvre</h5>
+<h5 className="font-bold text-slate-900">Sarah Lefebvre</h5>
 <p className="text-xs text-slate-500 mb-2">Spécialiste Taille &amp; Haies</p>
 <div className="flex items-center gap-1 mb-4">
 <span className="material-symbols-outlined text-yellow-500 text-sm">star</span>
 <span className="text-xs font-bold">4.8</span>
 <span className="text-xs text-slate-400">(35 avis)</span>
 </div>
-<button className="w-full py-2 bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 rounded-lg text-sm font-bold group-hover:bg-primary group-hover:text-white transition-all">Consulter</button>
+<button className="w-full py-2 bg-slate-100 text-slate-700 rounded-lg text-sm font-bold group-hover:bg-primary group-hover:text-white transition-all">Consulter</button>
 </div>
-<div className="bg-white dark:bg-slate-800 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 p-4 flex flex-col items-center text-center group">
+<div className="bg-white rounded-xl overflow-hidden border border-slate-200 p-4 flex flex-col items-center text-center group">
 <div className="w-20 h-20 rounded-full mb-4 ring-2 ring-primary/20 p-1">
 <img alt="Expert" className="w-full h-full object-cover rounded-full" data-alt="Portrait d'un élagueur professionnel" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmUhJexNRy8ajaSZDLvkl42XV18scRhtaNBcpGi57RQK4bOh1rEIniUwmKF-Te9qlO75fANrYVyvMhQH-REF9zfNhxe4kz_LcgcuN3wmUnLONhEkQLfLF8Ue71tvL8PjE7G-i3eVhcwYnO0iCYEEX1yg-HGym8hWei2zBdm8jTwiby2G2AX47ud8R_VRVO4g6W3kQO742YCLf31CkHdBKGJwo0vIvbly32z2L1SoRIDmLYBFdEiMUw-okJV1AMk_CnfAYF2XHbpfi1"/>
 </div>
-<h5 className="font-bold text-slate-900 dark:text-slate-100">Marc Dubois</h5>
+<h5 className="font-bold text-slate-900">Marc Dubois</h5>
 <p className="text-xs text-slate-500 mb-2">Élagueur Certifié</p>
 <div className="flex items-center gap-1 mb-4">
 <span className="material-symbols-outlined text-yellow-500 text-sm">star</span>
 <span className="text-xs font-bold">5.0</span>
 <span className="text-xs text-slate-400">(21 avis)</span>
 </div>
-<button className="w-full py-2 bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 rounded-lg text-sm font-bold group-hover:bg-primary group-hover:text-white transition-all">Consulter</button>
+<button className="w-full py-2 bg-slate-100 text-slate-700 rounded-lg text-sm font-bold group-hover:bg-primary group-hover:text-white transition-all">Consulter</button>
 </div>
-<div className="bg-white dark:bg-slate-800 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 p-4 flex flex-col items-center text-center group">
+<div className="bg-white rounded-xl overflow-hidden border border-slate-200 p-4 flex flex-col items-center text-center group">
 <div className="w-20 h-20 rounded-full mb-4 ring-2 ring-primary/20 p-1">
 <img alt="Expert" className="w-full h-full object-cover rounded-full" data-alt="Portrait d'une architecte paysagiste" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_x9qc2tjzhTKl9XzPz3sinQ1rORzHXlDpH5BASu-22c0iVN1s8Yz03ESct2XW1dSZ6qsGucyMi8vWlLJVOW4SUnsxhKYn_jhiwD9Q4hUsv9-dODPXrWigTbiRC2cZCK5KTo1MkXoMBLLE0RI1BL_EeOIQIjAn0dg2PSUzsFp_1fOQ_RYaNV6trI-q0UlhrQ9tTVDy1AkUBqCA4bZSA2EZt4iZmhSLjUdrfLo4QDQmvdeJydeyGG9YA8zHPOfmn6sWsio7qrcF0gx5"/>
 </div>
-<h5 className="font-bold text-slate-900 dark:text-slate-100">Amélie Petit</h5>
+<h5 className="font-bold text-slate-900">Amélie Petit</h5>
 <p className="text-xs text-slate-500 mb-2">Architecte Extérieur</p>
 <div className="flex items-center gap-1 mb-4">
 <span className="material-symbols-outlined text-yellow-500 text-sm">star</span>
 <span className="text-xs font-bold">4.7</span>
 <span className="text-xs text-slate-400">(18 avis)</span>
 </div>
-<button className="w-full py-2 bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 rounded-lg text-sm font-bold group-hover:bg-primary group-hover:text-white transition-all">Consulter</button>
+<button className="w-full py-2 bg-slate-100 text-slate-700 rounded-lg text-sm font-bold group-hover:bg-primary group-hover:text-white transition-all">Consulter</button>
 </div>
 </div>
 </section>
@@ -289,30 +289,30 @@ const JardinageNouveau = () => {
 <section className="max-w-3xl mx-auto mb-16">
 <h3 className="text-2xl font-bold mb-8 text-center">Questions fréquentes</h3>
 <div className="space-y-4">
-<div className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-6">
+<div className="bg-white border border-slate-200 rounded-xl p-6">
 <div className="flex items-center justify-between cursor-pointer">
-<h6 className="font-bold text-slate-900 dark:text-slate-100">Intervenez-vous en cas de pluie ?</h6>
+<h6 className="font-bold text-slate-900">Intervenez-vous en cas de pluie ?</h6>
 <span className="material-symbols-outlined text-slate-400">expand_more</span>
 </div>
-<p className="mt-4 text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
+<p className="mt-4 text-sm text-slate-500 leading-relaxed">
                             Pour des raisons de sécurité et pour ne pas dégrader votre terrain, nous reportons les interventions en cas de fortes pluies. Une nouvelle date est fixée sans frais supplémentaires.
                         </p>
 </div>
-<div className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-6">
+<div className="bg-white border border-slate-200 rounded-xl p-6">
 <div className="flex items-center justify-between cursor-pointer">
-<h6 className="font-bold text-slate-900 dark:text-slate-100">Proposez-vous le crédit d'impôt ?</h6>
+<h6 className="font-bold text-slate-900">Proposez-vous le crédit d'impôt ?</h6>
 <span className="material-symbols-outlined text-slate-400">expand_more</span>
 </div>
 </div>
-<div className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-6">
+<div className="bg-white border border-slate-200 rounded-xl p-6">
 <div className="flex items-center justify-between cursor-pointer">
-<h6 className="font-bold text-slate-900 dark:text-slate-100">Faut-il être présent lors de l'intervention ?</h6>
+<h6 className="font-bold text-slate-900">Faut-il être présent lors de l'intervention ?</h6>
 <span className="material-symbols-outlined text-slate-400">expand_more</span>
 </div>
 </div>
-<div className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-6">
+<div className="bg-white border border-slate-200 rounded-xl p-6">
 <div className="flex items-center justify-between cursor-pointer">
-<h6 className="font-bold text-slate-900 dark:text-slate-100">Évacuez-vous les déchets verts ?</h6>
+<h6 className="font-bold text-slate-900">Évacuez-vous les déchets verts ?</h6>
 <span className="material-symbols-outlined text-slate-400">expand_more</span>
 </div>
 </div>
@@ -320,7 +320,7 @@ const JardinageNouveau = () => {
 </section>
 </div>
 {/*  Footer  */}
-<footer className="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 px-6 py-10">
+<footer className="bg-white border-t border-slate-200 px-6 py-10">
 <div className="flex flex-col md:flex-row justify-between items-center gap-6">
 <div className="flex items-center gap-3">
 <div className="bg-primary/10 rounded-full p-2 text-primary">
@@ -334,10 +334,10 @@ const JardinageNouveau = () => {
 <a className="hover:text-primary transition-colors" href="#">Contact</a>
 </div>
 <div className="flex gap-4">
-<div className="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-500 hover:text-primary cursor-pointer transition-all">
+<div className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 hover:text-primary cursor-pointer transition-all">
 <span className="material-symbols-outlined text-xl">share</span>
 </div>
-<div className="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-500 hover:text-primary cursor-pointer transition-all">
+<div className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 hover:text-primary cursor-pointer transition-all">
 <span className="material-symbols-outlined text-xl">mail</span>
 </div>
 </div>

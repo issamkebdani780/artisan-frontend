@@ -7,7 +7,7 @@ const AvertissementsAdministratifsSecrets = () => {
       
 <div className="flex min-h-screen overflow-x-hidden">
 {/*  Sidebar  */}
-<aside className="w-72 bg-slate-900 dark:bg-[#17110d] text-white flex flex-col fixed h-full z-50">
+<aside className="w-72 bg-slate-900 text-white flex flex-col fixed h-full z-50">
 <div className="p-6 flex flex-col h-full">
 <div className="flex items-center gap-3 mb-10">
 <div className="size-10 rounded-full bg-primary flex items-center justify-center text-white">
@@ -60,17 +60,17 @@ const AvertissementsAdministratifsSecrets = () => {
 {/*  Main Content  */}
 <main className="flex-1 ml-72 min-h-screen">
 {/*  Header  */}
-<header className="h-16 border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md sticky top-0 z-40 px-8 flex items-center justify-between">
+<header className="h-16 border-b border-slate-200 bg-white/80 backdrop-blur-md sticky top-0 z-40 px-8 flex items-center justify-between">
 <div className="flex items-center gap-2">
 <span className="material-symbols-outlined text-primary">gavel</span>
 <h2 className="text-lg font-bold tracking-tight">Espace Administratif</h2>
 </div>
 <div className="flex items-center gap-4">
-<button className="size-10 flex items-center justify-center rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 relative">
+<button className="size-10 flex items-center justify-center rounded-xl bg-slate-100 text-slate-600 relative">
 <span className="material-symbols-outlined">notifications</span>
 <span className="absolute top-2 right-2 size-2 bg-primary rounded-full"></span>
 </button>
-<div className="h-8 w-[1px] bg-slate-200 dark:bg-slate-800 mx-2"></div>
+<div className="h-8 w-[1px] bg-slate-200 mx-2"></div>
 <button className="bg-primary text-white px-4 py-2 rounded-lg text-sm font-bold flex items-center gap-2">
 <span className="material-symbols-outlined text-[18px]">support_agent</span>
                     Aide Support
@@ -80,8 +80,8 @@ const AvertissementsAdministratifsSecrets = () => {
 <div className="p-8 max-w-5xl mx-auto">
 {/*  Title Section  */}
 <div className="mb-10">
-<h1 className="text-4xl font-black text-slate-900 dark:text-white mb-2 tracking-tight">Avertissements Administratifs</h1>
-<p className="text-slate-600 dark:text-slate-400 text-lg">Suivi officiel de la conformité et de la qualité de vos services sur la plateforme.</p>
+<h1 className="text-4xl font-black text-slate-900 mb-2 tracking-tight">Avertissements Administratifs</h1>
+<p className="text-slate-600 text-lg">Suivi officiel de la conformité et de la qualité de vos services sur la plateforme.</p>
 </div>
 {/*  Privacy Policy Banner  */}
 <div className="bg-primary/5 border border-primary/20 rounded-2xl p-6 mb-10 flex flex-col md:flex-row items-center gap-6">
@@ -89,13 +89,13 @@ const AvertissementsAdministratifsSecrets = () => {
 <span className="material-symbols-outlined text-primary text-3xl">visibility_off</span>
 </div>
 <div className="flex-1 text-center md:text-left">
-<h3 className="text-lg font-bold text-slate-900 dark:text-white mb-1">Politique de Confidentialité &amp; Neutralité</h3>
-<p className="text-slate-600 dark:text-slate-400 leading-relaxed">
+<h3 className="text-lg font-bold text-slate-900 mb-1">Politique de Confidentialité &amp; Neutralité</h3>
+<p className="text-slate-600 leading-relaxed">
                         Pour maintenir un environnement professionnel neutre et serein, les plaintes sont traitées de manière strictement anonyme par l'administration d'ArtisanDirect. 
                         <strong>L'identité du client rapporteur n'est pas divulguée</strong> afin d'éviter tout conflit direct et de garantir l'objectivité de l'arbitrage.
                     </p>
 </div>
-<button className="whitespace-nowrap bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-6 py-2.5 rounded-xl text-sm font-bold shadow-sm">
+<button className="whitespace-nowrap bg-white border border-slate-200 px-6 py-2.5 rounded-xl text-sm font-bold shadow-sm">
                     Consulter le règlement
                 </button>
 </div>
@@ -106,7 +106,7 @@ const AvertissementsAdministratifsSecrets = () => {
                     Historique des signalements
                 </h2>
 {/*  Warning Card 1  */}
-<div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm hover:border-primary/50 transition-all duration-300">
+<div className="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:border-primary/50 transition-all duration-300">
 <div className="flex items-stretch flex-col md:flex-row">
 <div className="w-full md:w-48 bg-orange-500 flex flex-col items-center justify-center p-6 text-white text-center">
 <span className="material-symbols-outlined text-4xl mb-2">warning</span>
@@ -117,17 +117,17 @@ const AvertissementsAdministratifsSecrets = () => {
 <div className="flex justify-between items-start mb-4">
 <div>
 <div className="flex items-center gap-2 mb-1">
-<span className="bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-tighter">REF: AD-2024-0812</span>
+<span className="bg-slate-100 text-slate-600 text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-tighter">REF: AD-2024-0812</span>
 <span className="text-slate-400 text-xs">• Mis à jour le 12 Mai 2024</span>
 </div>
-<h3 className="text-xl font-bold text-slate-900 dark:text-white">Qualité de service &amp; Finitions</h3>
+<h3 className="text-xl font-bold text-slate-900">Qualité de service &amp; Finitions</h3>
 </div>
 <span className="bg-primary/10 text-primary text-xs font-bold px-3 py-1 rounded-full">En attente de réponse</span>
 </div>
-<p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6 italic">
+<p className="text-slate-600 text-sm leading-relaxed mb-6 italic">
                                 "L'administration a reçu un signalement concernant des finitions non conformes au devis initial. Après examen des photos fournies par le client anonyme, il apparaît que les standards de qualité ArtisanDirect n'ont pas été pleinement respectés sur ce chantier."
                             </p>
-<div className="flex flex-wrap gap-4 pt-4 border-t border-slate-100 dark:border-slate-800">
+<div className="flex flex-wrap gap-4 pt-4 border-t border-slate-100">
 <button className="flex items-center gap-2 text-primary font-bold text-sm">
 <span className="material-symbols-outlined text-[18px]">edit_document</span>
                                     Fournir une explication
@@ -141,7 +141,7 @@ const AvertissementsAdministratifsSecrets = () => {
 </div>
 </div>
 {/*  Warning Card 2  */}
-<div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm opacity-75 grayscale-[0.5]">
+<div className="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm opacity-75 grayscale-[0.5]">
 <div className="flex items-stretch flex-col md:flex-row">
 <div className="w-full md:w-48 bg-slate-500 flex flex-col items-center justify-center p-6 text-white text-center">
 <span className="material-symbols-outlined text-4xl mb-2">notifications_active</span>
@@ -152,17 +152,17 @@ const AvertissementsAdministratifsSecrets = () => {
 <div className="flex justify-between items-start mb-4">
 <div>
 <div className="flex items-center gap-2 mb-1">
-<span className="bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-tighter">REF: AD-2024-0345</span>
+<span className="bg-slate-100 text-slate-600 text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-tighter">REF: AD-2024-0345</span>
 <span className="text-slate-400 text-xs">• Classé le 15 Mars 2024</span>
 </div>
-<h3 className="text-xl font-bold text-slate-900 dark:text-white">Délai de réponse (Communication)</h3>
+<h3 className="text-xl font-bold text-slate-900">Délai de réponse (Communication)</h3>
 </div>
-<span className="bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400 text-xs font-bold px-3 py-1 rounded-full">Dossier clôturé</span>
+<span className="bg-emerald-100 text-emerald-700 text-xs font-bold px-3 py-1 rounded-full">Dossier clôturé</span>
 </div>
-<p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6 italic">
+<p className="text-slate-600 text-sm leading-relaxed mb-6 italic">
                                 "Un client a signalé une absence totale de réponse aux messages via la plateforme pendant plus de 72 heures ouvrées. Nous vous rappelons que la réactivité est un critère essentiel de votre référencement."
                             </p>
-<div className="flex flex-wrap gap-4 pt-4 border-t border-slate-100 dark:border-slate-800 text-slate-400 italic text-xs">
+<div className="flex flex-wrap gap-4 pt-4 border-t border-slate-100 text-slate-400 italic text-xs">
 <span>Note Admin: Réponse de l'artisan acceptée. Incident isolé lié à une urgence médicale.</span>
 </div>
 </div>
@@ -170,7 +170,7 @@ const AvertissementsAdministratifsSecrets = () => {
 </div>
 </div>
 {/*  Action Section / Appeal  */}
-<div className="mt-12 bg-slate-900 dark:bg-primary/10 rounded-3xl p-8 text-white relative overflow-hidden">
+<div className="mt-12 bg-slate-900 rounded-3xl p-8 text-white relative overflow-hidden">
 <div className="relative z-10">
 <h2 className="text-2xl font-bold mb-4">Contester ou expliquer un signalement ?</h2>
 <p className="text-slate-300 mb-8 max-w-2xl leading-relaxed">

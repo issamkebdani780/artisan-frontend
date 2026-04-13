@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLocation, Link, useNavigate } from 'react-router-dom';
 import apiService from '../services/api';
-import ThemeToggle from '../components/ThemeToggle';
+
 
 
 const AdminLayout = ({ children, title = "Admin", subtitle }) => {
@@ -33,10 +33,10 @@ const AdminLayout = ({ children, title = "Admin", subtitle }) => {
   ];
 
   return (
-    <div className="flex fixed inset-0 overflow-hidden font-sans bg-[#EEF2FF] dark:bg-[#0F172A] text-slate-900 dark:text-slate-100">
+    <div className="flex fixed inset-0 overflow-hidden font-sans bg-[#EEF2FF] text-slate-900">
 
       {/* Sidebar - Dark Premium Theme */}
-      <aside className="w-72 bg-slate-900 text-white flex flex-col shrink-0 shadow-2xl relative z-50 border-r border-white/5">
+      <aside className="w-72 bg-white text-slate-900 flex flex-col shrink-0 shadow-2xl relative z-50 border-r border-slate-100">
         <div className="p-8 flex items-center gap-4">
           <div className="bg-linear-to-tr from-primary to-secondary size-11 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-primary/20">
             <span className="material-symbols-outlined text-2xl font-bold">diamond</span>
@@ -52,12 +52,12 @@ const AdminLayout = ({ children, title = "Admin", subtitle }) => {
             <Link
               key={item.path}
               to={item.path}
-              className={`flex items-center gap-4 px-4 py-3.5 rounded-2xl transition-all duration-300 group ${path === item.path ? 'bg-primary/20 text-white font-black shadow-sm' : 'text-slate-400 hover:text-white hover:bg-white/5'}`}
+              className={`flex items-center gap-4 px-4 py-3.5 rounded-2xl transition-all duration-300 group ${path === item.path ? 'bg-primary/10 text-primary font-black shadow-sm' : 'text-slate-500 hover:text-primary hover:bg-slate-50'}`}
             >
               <span className={`material-symbols-outlined text-2xl transition-transform group-hover:scale-110 ${path === item.path ? 'text-primary' : 'text-slate-400 group-hover:text-primary'}`} style={{ fontVariationSettings: path === item.path ? "'FILL' 1" : "" }}>
                 {item.icon}
               </span>
-              <span className="text-sm tracking-wide">{item.name}</span>
+               <span className="text-sm tracking-wide font-medium">{item.name}</span>
               {path === item.path && (
                 <div className="ml-auto size-1.5 rounded-full bg-secondary shadow-[0_0_8px_rgba(242,139,44,0.8)]"></div>
               )}
@@ -67,19 +67,19 @@ const AdminLayout = ({ children, title = "Admin", subtitle }) => {
 
         {/* User Profile at Bottom of Sidebar */}
         <div className="p-6 mt-auto">
-          <div className="p-4 bg-white/5 backdrop-blur-md rounded-3xl border border-white/10 flex flex-col gap-4 shadow-xl">
+          <div className="p-4 bg-slate-50 rounded-3xl border border-slate-100 flex flex-col gap-4 shadow-sm">
             <div className="flex items-center gap-4">
               <div className="size-12 rounded-2xl bg-linear-to-br from-primary to-secondary flex items-center justify-center font-black text-white text-lg shadow-lg">
                 {user?.name?.charAt(0) || 'A'}
               </div>
               <div className="flex-1 min-w-0">
-                <p className="text-xs font-black text-white tracking-tight">{user?.name || 'Administrateur'}</p>
+                <p className="text-xs font-black text-slate-900 tracking-tight">{user?.name || 'Administrateur'}</p>
                 <p className="text-[10px] text-primary font-bold truncate">Super Admin</p>
               </div>
             </div>
             <button
               onClick={handleLogout}
-              className="w-full flex items-center justify-center gap-2 py-2.5 bg-white/10 hover:bg-rose-500 transition-all rounded-2xl text-[10px] font-black uppercase tracking-widest"
+              className="w-full flex items-center justify-center gap-2 py-2.5 bg-slate-100 hover:bg-rose-500 hover:text-white transition-all rounded-2xl text-[10px] font-black uppercase tracking-widest text-slate-600"
             >
               Déconnexion
               <span className="material-symbols-outlined text-sm">logout</span>
@@ -92,10 +92,10 @@ const AdminLayout = ({ children, title = "Admin", subtitle }) => {
       <main className="flex-1 flex flex-col min-w-0">
 
         {/* Header - Transparent & Integrated */}
-        <header className="h-24 bg-white/60 dark:bg-slate-900/60 backdrop-blur-3xl border-b border-slate-100 dark:border-white/5 flex items-center justify-between px-10 shrink-0 sticky top-0 z-40">
+        <header className="h-24 bg-white/60 backdrop-blur-3xl border-b border-slate-100 flex items-center justify-between px-10 shrink-0 sticky top-0 z-40">
           <div className="flex items-center gap-4 text-slate-400">
             <span className="material-symbols-outlined text-xl">menu_open</span>
-            <div className="w-px h-6 bg-slate-200 dark:bg-white/10"></div>
+            <div className="w-px h-6 bg-slate-200"></div>
           </div>
           <div className="flex items-center gap-6 flex-1 max-w-2xl">
             <form
@@ -114,19 +114,17 @@ const AdminLayout = ({ children, title = "Admin", subtitle }) => {
                 name="search"
                 type="text"
                 placeholder="Rechercher un artisan ou client..."
-                className="w-full pl-12 pr-6 py-3.5 bg-slate-100 dark:bg-white/5 border-transparent focus:bg-white dark:focus:bg-slate-900 border focus:border-primary/50 text-sm font-medium rounded-2xl outline-none transition-all"
+                className="w-full pl-12 pr-6 py-3.5 bg-slate-100 border-transparent focus:bg-white border focus:border-primary/50 text-sm font-medium rounded-2xl outline-none transition-all"
               />
             </form>
           </div>
 
-          <div className="flex items-center gap-4">
-            <ThemeToggle className="ml-2" />
-          </div>
+
 
         </header>
 
         {/* Dynamic Page Content */}
-        <div className="flex-1 overflow-y-auto custom-scrollbar p-10 bg-[#F4F7FE] dark:bg-slate-900/20">
+        <div className="flex-1 overflow-y-auto custom-scrollbar p-10 bg-[#F4F7FE]">
           {children}
         </div>
       </main>

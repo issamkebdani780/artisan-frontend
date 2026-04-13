@@ -5,13 +5,13 @@ const ServiceDetailsDebouchageCanalisation = () => {
     <>
       
 {/*  Top Navigation  */}
-<header className="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-800 bg-white/90 dark:bg-background-dark/90 backdrop-blur-md">
+<header className="sticky top-0 z-50 w-full border-b border-slate-200 bg-white/90 backdrop-blur-md">
 <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
 <div className="flex items-center gap-2">
 <div className="text-primary">
 <span className="material-symbols-outlined text-3xl">plumbing</span>
 </div>
-<span className="text-xl font-bold tracking-tight text-slate-900 dark:text-white">PlombierExpress</span>
+<span className="text-xl font-bold tracking-tight text-slate-900">PlombierExpress</span>
 </div>
 <nav className="hidden md:flex items-center gap-8">
 <a className="text-sm font-semibold hover:text-primary transition-colors" href="#">Urgences</a>
@@ -31,33 +31,33 @@ const ServiceDetailsDebouchageCanalisation = () => {
 {/*  Hero Section  */}
 <section className="relative py-16 md:py-24 overflow-hidden">
 <div className="absolute inset-0 z-0">
-<div className="absolute inset-0 bg-gradient-to-r from-background-light via-background-light/80 to-transparent dark:from-background-dark dark:via-background-dark/80 z-10"></div>
+<div className="absolute inset-0 bg-gradient-to-r from-background-light via-background-light/80 to-transparent z-10"></div>
 <img alt="Plombier professionnel travaillant sur une canalisation" className="w-full h-full object-cover" data-alt="Professional plumber working on a bathroom drain pipe" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGdPm8Etf9i4aGRVfgDpgKiZsiPVEIyeAfHNpcOWHStwo_-QGl-92hWKpLdhknOZJUM8r1YkrcQyEMz-BxOGVzIBTiZkfewlc_7GS0oHOixQB0dKrg_Av5WdI415FAUrP-Lf0LWw6BBxIh5oQzFQLX9rzIM-MWtuAS4UnzuIlqdIyZ9PC77Ng-Lh9B7ScjB9uFoWJ6QG3DpE_Ejsz3EvaqMl18N1-9-7VJ5hzHV74ikSNuWPeIqODWc8R3Xnx4MFSRUhidu5q7cvxK"/>
 </div>
 <div className="max-w-7xl mx-auto px-4 relative z-20">
 <div className="max-w-2xl">
-<div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 text-xs font-bold uppercase tracking-wider mb-6">
+<div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-100 text-red-600 text-xs font-bold uppercase tracking-wider mb-6">
 <span className="relative flex h-2 w-2">
 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
 <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
 </span>
                         Intervention Urgente en 30 Min
                     </div>
-<h1 className="text-4xl md:text-6xl font-extrabold text-slate-900 dark:text-white mb-6 leading-tight">
+<h1 className="text-4xl md:text-6xl font-extrabold text-slate-900 mb-6 leading-tight">
                         Débouchage WC &amp; <span className="text-primary">Canalisations</span> 24h/7j
                     </h1>
-<p className="text-lg text-slate-600 dark:text-slate-300 mb-8 leading-relaxed">
+<p className="text-lg text-slate-600 mb-8 leading-relaxed">
                         Toilettes bouchées ? Évier qui déborde ? Nos experts interviennent immédiatement avec caméra thermique et hydrocurage pour libérer vos canalisations durablement.
                     </p>
 <div className="flex flex-col sm:flex-row gap-4">
 <button className="bg-primary text-white px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-2 hover:scale-[1.02] transition-transform">
                             Demander un débouchage
                         </button>
-<div className="flex items-center gap-4 px-4 py-2 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700">
+<div className="flex items-center gap-4 px-4 py-2 bg-white rounded-xl border border-slate-200">
 <div className="flex -space-x-3">
-<img className="w-10 h-10 rounded-full border-2 border-white dark:border-slate-800" data-alt="Client avatar face" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpuWx9yaGwPg0rmoMsArlaTGsRqHSulf_X9wx0fNKCDg7m_8p5Op3Qfizx0Qs-bOADbCin7YC_Qf6f2vOb1h-1rcEV2RoI5VJXdfUCQdsYoxdUcwcPa_PK13LahdHe6S7obEc2UjNTMOO_dtkaf_vwqjH4tvz5mInmvrXwewYp4XsKxEBgiz3a-ACriYMTByAJdniccQkjObff2g8Pj5Ts3PhnqQI896Fneceb1-2aOCjQUR-DEov3fMh16I3xiHKWOYF4vydLD-Ry"/>
-<img className="w-10 h-10 rounded-full border-2 border-white dark:border-slate-800" data-alt="Client avatar face" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUVK-7H67_SQZZ8lYKKbY5S1wsMUZUVdYF31Gl9w11OVTUhdwegkPBUiOxdz8QEyf-SQ7JxH9gtHFo3rZx5dexwjYpgm629SNb0L8neuj5gfrKGdxuZ8xNV7hR5naBG5yQpq9DAbzk2HjzlpUa_xbYKS4GNhNMt9giWVEJDcrXkPcQJj1XZFpkMGtSpSlVw0Gj-vTpF-3W7MoKfSwT09fbZCediY1qO7B6wa4-MCNjrsPnPniElO0DuVnhHgI4N8284_khxolCTYsR"/>
-<img className="w-10 h-10 rounded-full border-2 border-white dark:border-slate-800" data-alt="Client avatar face" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChIZHuwpeosjyvQbmLf4b_yyM2EZ1YJpll1QosZpyqy2VVRfJa8y6JwU8KEvTiz3FbKuYkYUN4ojTOarR4l6UAkZrma7A332S7e1uYjvrtnWvDJKzNTkhyLuxaTJBvrKR-10NLXnjhW4UpwvUgdDN2352aTMCpy2Bax1EFmz9Jq8nq9XPkZdhdwFhJiBw8eYrJTbMQgt5lg93j6efzhQ9ZjqSn6zP6I8VKn0_XbbSguWVxrLHdSyKvp3-p__mJlVXUGRAwPL0tG9gg"/>
+<img className="w-10 h-10 rounded-full border-2 border-white" data-alt="Client avatar face" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpuWx9yaGwPg0rmoMsArlaTGsRqHSulf_X9wx0fNKCDg7m_8p5Op3Qfizx0Qs-bOADbCin7YC_Qf6f2vOb1h-1rcEV2RoI5VJXdfUCQdsYoxdUcwcPa_PK13LahdHe6S7obEc2UjNTMOO_dtkaf_vwqjH4tvz5mInmvrXwewYp4XsKxEBgiz3a-ACriYMTByAJdniccQkjObff2g8Pj5Ts3PhnqQI896Fneceb1-2aOCjQUR-DEov3fMh16I3xiHKWOYF4vydLD-Ry"/>
+<img className="w-10 h-10 rounded-full border-2 border-white" data-alt="Client avatar face" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUVK-7H67_SQZZ8lYKKbY5S1wsMUZUVdYF31Gl9w11OVTUhdwegkPBUiOxdz8QEyf-SQ7JxH9gtHFo3rZx5dexwjYpgm629SNb0L8neuj5gfrKGdxuZ8xNV7hR5naBG5yQpq9DAbzk2HjzlpUa_xbYKS4GNhNMt9giWVEJDcrXkPcQJj1XZFpkMGtSpSlVw0Gj-vTpF-3W7MoKfSwT09fbZCediY1qO7B6wa4-MCNjrsPnPniElO0DuVnhHgI4N8284_khxolCTYsR"/>
+<img className="w-10 h-10 rounded-full border-2 border-white" data-alt="Client avatar face" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChIZHuwpeosjyvQbmLf4b_yyM2EZ1YJpll1QosZpyqy2VVRfJa8y6JwU8KEvTiz3FbKuYkYUN4ojTOarR4l6UAkZrma7A332S7e1uYjvrtnWvDJKzNTkhyLuxaTJBvrKR-10NLXnjhW4UpwvUgdDN2352aTMCpy2Bax1EFmz9Jq8nq9XPkZdhdwFhJiBw8eYrJTbMQgt5lg93j6efzhQ9ZjqSn6zP6I8VKn0_XbbSguWVxrLHdSyKvp3-p__mJlVXUGRAwPL0tG9gg"/>
 </div>
 <div>
 <div className="flex items-center gap-1 text-yellow-500">
@@ -75,48 +75,48 @@ const ServiceDetailsDebouchageCanalisation = () => {
 </div>
 </section>
 {/*  Trust Indicators  */}
-<section className="py-12 bg-white dark:bg-slate-900 border-y border-slate-200 dark:border-slate-800">
+<section className="py-12 bg-white border-y border-slate-200">
 <div className="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8">
 <div className="flex items-center gap-4">
 <span className="material-symbols-outlined text-primary text-4xl">timer</span>
 <div>
-<h3 className="font-bold text-slate-900 dark:text-white">Arrivée rapide</h3>
+<h3 className="font-bold text-slate-900">Arrivée rapide</h3>
 <p className="text-xs text-slate-500">Moins de 30 minutes</p>
 </div>
 </div>
 <div className="flex items-center gap-4">
 <span className="material-symbols-outlined text-primary text-4xl">payments</span>
 <div>
-<h3 className="font-bold text-slate-900 dark:text-white">Prix Fixe</h3>
+<h3 className="font-bold text-slate-900">Prix Fixe</h3>
 <p className="text-xs text-slate-500">Pas de frais cachés</p>
 </div>
 </div>
 <div className="flex items-center gap-4">
 <span className="material-symbols-outlined text-primary text-4xl">verified_user</span>
 <div>
-<h3 className="font-bold text-slate-900 dark:text-white">Garantie 1 an</h3>
+<h3 className="font-bold text-slate-900">Garantie 1 an</h3>
 <p className="text-xs text-slate-500">Sur toutes interventions</p>
 </div>
 </div>
 <div className="flex items-center gap-4">
 <span className="material-symbols-outlined text-primary text-4xl">support_agent</span>
 <div>
-<h3 className="font-bold text-slate-900 dark:text-white">Dispo 24/7</h3>
+<h3 className="font-bold text-slate-900">Dispo 24/7</h3>
 <p className="text-xs text-slate-500">Même jours fériés</p>
 </div>
 </div>
 </div>
 </section>
 {/*  Pricing Section  */}
-<section className="py-20 bg-background-light dark:bg-background-dark">
+<section className="py-20 bg-background-light">
 <div className="max-w-7xl mx-auto px-4">
 <div className="text-center mb-16">
 <h2 className="text-3xl md:text-4xl font-bold mb-4">Tarifs Transparents</h2>
-<p className="text-slate-600 dark:text-slate-400">Devis gratuit par téléphone avant chaque déplacement</p>
+<p className="text-slate-600">Devis gratuit par téléphone avant chaque déplacement</p>
 </div>
 <div className="grid md:grid-cols-3 gap-8">
 {/*  Price Card 1  */}
-<div className="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-700 flex flex-col">
+<div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 flex flex-col">
 <div className="mb-6">
 <span className="text-primary font-bold text-sm uppercase tracking-widest">Standard</span>
 <h3 className="text-2xl font-bold mt-2">Débouchage Manuel</h3>
@@ -143,7 +143,7 @@ const ServiceDetailsDebouchageCanalisation = () => {
 <button className="w-full py-3 rounded-lg border-2 border-primary text-primary font-bold hover:bg-primary hover:text-white transition-colors">Choisir</button>
 </div>
 {/*  Price Card 2 (Featured)  */}
-<div className="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-xl border-2 border-primary relative flex flex-col transform scale-105 z-10">
+<div className="bg-white p-8 rounded-2xl shadow-xl border-2 border-primary relative flex flex-col transform scale-105 z-10">
 <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-white text-xs font-bold px-4 py-1 rounded-full uppercase">Le plus populaire</div>
 <div className="mb-6">
 <span className="text-primary font-bold text-sm uppercase tracking-widest">Urgent</span>
@@ -175,7 +175,7 @@ const ServiceDetailsDebouchageCanalisation = () => {
 <button className="w-full py-3 rounded-lg bg-primary text-white font-bold hover:bg-primary/90 transition-colors shadow-lg shadow-primary/30">Urgence Directe</button>
 </div>
 {/*  Price Card 3  */}
-<div className="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-700 flex flex-col">
+<div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 flex flex-col">
 <div className="mb-6">
 <span className="text-primary font-bold text-sm uppercase tracking-widest">Expert</span>
 <h3 className="text-2xl font-bold mt-2">Curage Complet</h3>
@@ -205,7 +205,7 @@ const ServiceDetailsDebouchageCanalisation = () => {
 </div>
 </section>
 {/*  Technical Expertise Section  */}
-<section className="py-20 bg-white dark:bg-slate-900">
+<section className="py-20 bg-white">
 <div className="max-w-7xl mx-auto px-4 flex flex-col lg:flex-row items-center gap-16">
 <div className="lg:w-1/2 grid grid-cols-2 gap-4">
 <div className="space-y-4">
@@ -219,7 +219,7 @@ const ServiceDetailsDebouchageCanalisation = () => {
 </div>
 <div className="lg:w-1/2">
 <h2 className="text-3xl font-bold mb-6">Matériel de Pointe pour Résultats Garantis</h2>
-<p className="text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
+<p className="text-slate-600 mb-8 leading-relaxed">
                         Nous n'utilisons pas de produits chimiques corrosifs qui endommagent vos tuyaux. Notre méthode repose sur la force mécanique et hydraulique pour un respect total de votre plomberie.
                     </p>
 <div className="space-y-6">

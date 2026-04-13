@@ -82,12 +82,12 @@ const PopularServices = () => {
   if (loading) return null;
 
   return (
-    <section className="px-6 md:px-20 py-24 bg-white dark:bg-slate-900 font-['Outfit',sans-serif] transition-colors">
+    <section className="px-6 md:px-20 py-24 bg-white font-['Outfit',sans-serif] transition-colors">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-20 space-y-4">
           <span className="text-blue-600 font-black text-sm uppercase tracking-[0.3em]">Services Qualifiés</span>
-          <h2 className="text-slate-900 dark:text-white text-4xl md:text-6xl font-black tracking-tight uppercase">Solutions Artisanales</h2>
-          <p className="text-slate-500 dark:text-slate-400 max-w-2xl mx-auto font-medium text-lg">
+          <h2 className="text-slate-900 text-4xl md:text-6xl font-black tracking-tight uppercase">Solutions Artisanales</h2>
+          <p className="text-slate-500 max-w-2xl mx-auto font-medium text-lg">
             Découvrez nos catégories de services et trouvez l'expert idéal pour transformer vos projets en réalité.
           </p>
         </div>
@@ -97,27 +97,27 @@ const PopularServices = () => {
             <div
               key={category.id}
               className={`group relative rounded-[48px] transition-all duration-500 cursor-pointer overflow-hidden border-2 ${expandedCategoryId === category.id
-                ? 'border-blue-600 bg-blue-50/30 dark:bg-blue-900/10'
-                : 'border-slate-50 dark:border-white/5 bg-white dark:bg-slate-800/50 hover:border-blue-200 dark:hover:border-blue-900/50 hover:shadow-2xl'
+                ? 'border-blue-600 bg-blue-50/30'
+                : 'border-slate-50 bg-white hover:border-blue-200 hover:shadow-2xl'
                 }`}
               onClick={() => handleCategoryClick(category.id)}
             >
               <div className="p-10 flex items-start gap-8">
                 <div className={`size-20 rounded-3xl flex items-center justify-center shrink-0 transition-all duration-500 shadow-xl ${expandedCategoryId === category.id
                   ? 'bg-blue-600 text-white rotate-12'
-                  : 'bg-slate-50 dark:bg-slate-800 text-blue-600 group-hover:bg-blue-600 group-hover:text-white'
+                  : 'bg-slate-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white'
                   }`}>
                   <span className="material-symbols-outlined text-4xl">{getIcon(category)}</span>
                 </div>
 
                 <div className="flex-1 pr-8">
-                  <h3 className="text-2xl font-black text-slate-900 dark:text-white mb-2 tracking-tight uppercase">{category.name}</h3>
-                  <p className="text-base text-slate-400 dark:text-slate-400 leading-relaxed font-medium line-clamp-2">
+                  <h3 className="text-2xl font-black text-slate-900 mb-2 tracking-tight uppercase">{category.name}</h3>
+                  <p className="text-base text-slate-400 leading-relaxed font-medium line-clamp-2">
                     {category.description || "Profitez de services d'exception avec nos meilleurs artisans locaux."}
                   </p>
                 </div>
 
-                <div className={`mt-6 transition-transform duration-500 ${expandedCategoryId === category.id ? 'rotate-180 text-blue-600' : 'text-slate-300 dark:text-slate-600'}`}>
+                <div className={`mt-6 transition-transform duration-500 ${expandedCategoryId === category.id ? 'rotate-180 text-blue-600' : 'text-slate-300'}`}>
                   <span className="material-symbols-outlined text-3xl font-black">keyboard_arrow_down</span>
                 </div>
               </div>
@@ -133,17 +133,17 @@ const PopularServices = () => {
                         e.stopPropagation();
                         navigate(`/subcategory/${sub.id}`);
                       }}
-                      className="flex items-center gap-4 p-5 rounded-[24px] bg-white dark:bg-slate-800 border border-slate-100 dark:border-white/5 hover:border-blue-600 dark:hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400 hover:shadow-xl transition-all text-left group/sub"
+                      className="flex items-center gap-4 p-5 rounded-[24px] bg-white border border-slate-100 hover:border-blue-600 hover:text-blue-600 hover:shadow-xl transition-all text-left group/sub"
                     >
-                      <div className="size-10 rounded-xl bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 flex items-center justify-center shrink-0 group-hover/sub:bg-blue-600 group-hover/sub:text-white transition-colors">
+                      <div className="size-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center shrink-0 group-hover/sub:bg-blue-600 group-hover/sub:text-white transition-colors">
                         <span className="material-symbols-outlined text-xl">verified</span>
                       </div>
 
-                      <span className="font-bold text-slate-700 dark:text-slate-200 group-hover/sub:text-blue-600 dark:group-hover/sub:text-blue-400 text-sm">{sub.name}</span>
+                      <span className="font-bold text-slate-700 group-hover/sub:text-blue-600 text-sm">{sub.name}</span>
                     </button>
                   ))}
                   {(!subcategories[category.id] || subcategories[category.id].length === 0) && (
-                    <div className="col-span-full py-8 text-center bg-white/50 dark:bg-white/5 rounded-3xl border-2 border-dashed border-slate-100 dark:border-white/10">
+                    <div className="col-span-full py-8 text-center bg-white/50 rounded-3xl border-2 border-dashed border-slate-100">
                       <p className="text-slate-400 text-sm font-bold uppercase tracking-widest italic animate-pulse">Chargement des métiers...</p>
                     </div>
                   )}

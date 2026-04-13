@@ -6,13 +6,13 @@ const DetailsDuServiceLectricit = () => {
       
 <div className="relative flex min-h-screen flex-col">
 {/*  Top Navigation  */}
-<header className="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md">
+<header className="sticky top-0 z-50 w-full border-b border-slate-200 bg-white/80 backdrop-blur-md">
 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div className="flex h-16 items-center justify-between">
 <div className="flex items-center gap-8">
 <a className="flex items-center gap-2 text-primary" href="#">
 <span className="material-symbols-outlined text-3xl">bolt</span>
-<span className="text-xl font-bold tracking-tight text-slate-900 dark:text-white">ArtisanPro</span>
+<span className="text-xl font-bold tracking-tight text-slate-900">ArtisanPro</span>
 </a>
 <nav className="hidden md:flex items-center gap-6">
 <a className="text-sm font-medium hover:text-primary transition-colors" href="#">Services</a>
@@ -26,7 +26,7 @@ const DetailsDuServiceLectricit = () => {
 <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400">
 <span className="material-symbols-outlined text-sm">search</span>
 </span>
-<input className="w-64 rounded-lg border-none bg-slate-100 dark:bg-slate-800 py-2 pl-10 pr-4 text-sm focus:ring-2 focus:ring-primary transition-all" placeholder="Rechercher un service..." type="text"/>
+<input className="w-64 rounded-lg border-none bg-slate-100 py-2 pl-10 pr-4 text-sm focus:ring-2 focus:ring-primary transition-all" placeholder="Rechercher un service..." type="text"/>
 </div>
 <button className="rounded-lg bg-primary px-5 py-2 text-sm font-bold text-white hover:bg-primary/90 transition-colors">Connexion</button>
 </div>
@@ -52,33 +52,33 @@ const DetailsDuServiceLectricit = () => {
 </div>
 </section>
 {/*  How It Works  */}
-<section className="py-16 bg-white dark:bg-slate-900">
+<section className="py-16 bg-white">
 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div className="text-center mb-12">
-<h2 className="text-3xl font-bold text-slate-900 dark:text-white">Comment ça marche</h2>
+<h2 className="text-3xl font-bold text-slate-900">Comment ça marche</h2>
 <p className="text-slate-500 mt-2">Votre projet électrique en 3 étapes simples</p>
 </div>
 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-<div className="group relative p-8 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 hover:border-primary/50 transition-all">
+<div className="group relative p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:border-primary/50 transition-all">
 <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
 <span className="material-symbols-outlined text-3xl">event_available</span>
 </div>
 <h3 className="text-xl font-bold mb-3">1. Réservez</h3>
-<p className="text-slate-600 dark:text-slate-400">Décrivez votre besoin et choisissez un créneau horaire en quelques clics sur notre plateforme.</p>
+<p className="text-slate-600">Décrivez votre besoin et choisissez un créneau horaire en quelques clics sur notre plateforme.</p>
 </div>
-<div className="group relative p-8 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 hover:border-primary/50 transition-all">
+<div className="group relative p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:border-primary/50 transition-all">
 <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
 <span className="material-symbols-outlined text-3xl">badge</span>
 </div>
 <h3 className="text-xl font-bold mb-3">2. Choisissez</h3>
-<p className="text-slate-600 dark:text-slate-400">Sélectionnez l'artisan qualifié parmi nos profils vérifiés selon leurs avis et tarifs.</p>
+<p className="text-slate-600">Sélectionnez l'artisan qualifié parmi nos profils vérifiés selon leurs avis et tarifs.</p>
 </div>
-<div className="group relative p-8 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 hover:border-primary/50 transition-all">
+<div className="group relative p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:border-primary/50 transition-all">
 <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
 <span className="material-symbols-outlined text-3xl">verified</span>
 </div>
 <h3 className="text-xl font-bold mb-3">3. C'est fait</h3>
-<p className="text-slate-600 dark:text-slate-400">L'électricien intervient à la date prévue. Payez en toute sécurité une fois les travaux terminés.</p>
+<p className="text-slate-600">L'électricien intervient à la date prévue. Payez en toute sécurité une fois les travaux terminés.</p>
 </div>
 </div>
 </div>
@@ -88,7 +88,7 @@ const DetailsDuServiceLectricit = () => {
 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div className="flex flex-col md:flex-row justify-between items-end mb-10 gap-4">
 <div>
-<h2 className="text-3xl font-bold text-slate-900 dark:text-white">Nos Tarifs et Prestations</h2>
+<h2 className="text-3xl font-bold text-slate-900">Nos Tarifs et Prestations</h2>
 <p className="text-slate-500 mt-2">Prix transparents sans surprise</p>
 </div>
 <button className="text-primary font-semibold flex items-center gap-1 hover:underline">
@@ -96,46 +96,46 @@ const DetailsDuServiceLectricit = () => {
 </button>
 </div>
 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-<div className="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-shadow">
+<div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
 <div className="flex justify-between items-start mb-4">
 <span className="material-symbols-outlined text-primary text-4xl">build_circle</span>
 <span className="text-sm font-bold text-primary bg-primary/10 px-3 py-1 rounded-full">À partir de 50€</span>
 </div>
 <h3 className="text-lg font-bold mb-2">Diagnostic &amp; Réparation</h3>
-<p className="text-slate-600 dark:text-slate-400 text-sm mb-6">Recherche de panne, remplacement de fusibles ou réparation de tableau électrique.</p>
+<p className="text-slate-600 text-sm mb-6">Recherche de panne, remplacement de fusibles ou réparation de tableau électrique.</p>
 <button className="w-full py-2 rounded-lg border border-primary text-primary font-bold hover:bg-primary hover:text-white transition-colors">Sélectionner</button>
 </div>
-<div className="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-shadow">
+<div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
 <div className="flex justify-between items-start mb-4">
 <span className="material-symbols-outlined text-primary text-4xl">light</span>
 <span className="text-sm font-bold text-primary bg-primary/10 px-3 py-1 rounded-full">À partir de 45€</span>
 </div>
 <h3 className="text-lg font-bold mb-2">Installation Luminaires</h3>
-<p className="text-slate-600 dark:text-slate-400 text-sm mb-6">Pose de lustres, spots LED, appliques murales ou remplacement d'interrupteurs.</p>
+<p className="text-slate-600 text-sm mb-6">Pose de lustres, spots LED, appliques murales ou remplacement d'interrupteurs.</p>
 <button className="w-full py-2 rounded-lg border border-primary text-primary font-bold hover:bg-primary hover:text-white transition-colors">Sélectionner</button>
 </div>
-<div className="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-shadow">
+<div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
 <div className="flex justify-between items-start mb-4">
 <span className="material-symbols-outlined text-primary text-4xl">security</span>
-<span className="text-sm font-bold text-slate-500 bg-slate-100 dark:bg-slate-800 px-3 py-1 rounded-full">Sur devis</span>
+<span className="text-sm font-bold text-slate-500 bg-slate-100 px-3 py-1 rounded-full">Sur devis</span>
 </div>
 <h3 className="text-lg font-bold mb-2">Mise aux Normes</h3>
-<p className="text-slate-600 dark:text-slate-400 text-sm mb-6">Mise en conformité totale NF C 15-100 de votre installation électrique.</p>
+<p className="text-slate-600 text-sm mb-6">Mise en conformité totale NF C 15-100 de votre installation électrique.</p>
 <button className="w-full py-2 rounded-lg bg-primary text-white font-bold hover:bg-primary/90 transition-colors">Demander un devis</button>
 </div>
 </div>
 </div>
 </section>
 {/*  Top Rated Electricians  */}
-<section className="py-16 bg-slate-50 dark:bg-slate-800/50">
+<section className="py-16 bg-slate-50">
 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div className="text-center mb-12">
-<h2 className="text-3xl font-bold text-slate-900 dark:text-white">Nos Experts à Proximité</h2>
+<h2 className="text-3xl font-bold text-slate-900">Nos Experts à Proximité</h2>
 <p className="text-slate-500 mt-2">Des professionnels qualifiés et notés par la communauté</p>
 </div>
 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 {/*  Expert 1  */}
-<div className="bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:shadow-xl transition-shadow">
+<div className="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:shadow-xl transition-shadow">
 <div className="h-48 overflow-hidden relative">
 <img alt="Artisan Portrait" className="w-full h-full object-cover" data-alt="Professional electrician smiling in work uniform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfSZNR0w0WLOTtMZ4OWM_THrt4FpQtD3MLJJY-tv1moQqOPIbB-wWFKG0qZLUDyXokdMIV0dcvLXM0gtgHMmPmpafaCIKYn1Yx_Yuya-3vqO3D2NsILYGZn7oacdzOTOEV0BiA5wLZOMa36y4zy3le3XuHhO5BfsNVxUCnpl_d9s_GCdlyna1EyQmtL4GwDYkcjVY_KSNMXMY-YbaRL2azeVchGnfcqTURvK_oBxZdXpyxaOKZhdmp-rd4Fn6CinePeTAe9qSrMY70"/>
 <div className="absolute top-4 right-4 bg-white/90 backdrop-blur px-2 py-1 rounded-lg flex items-center gap-1 shadow-sm">
@@ -144,16 +144,16 @@ const DetailsDuServiceLectricit = () => {
 </div>
 </div>
 <div className="p-6">
-<h3 className="text-xl font-bold mb-1 text-slate-900 dark:text-white">Jean-Pierre Durand</h3>
+<h3 className="text-xl font-bold mb-1 text-slate-900">Jean-Pierre Durand</h3>
 <p className="text-primary text-sm font-medium mb-4">Électricien certifié - 15 ans d'exp.</p>
-<p className="text-slate-600 dark:text-slate-400 text-sm mb-6 line-clamp-2">Spécialiste en domotique et rénovation complète. Travail soigné et respect des délais garanti.</p>
+<p className="text-slate-600 text-sm mb-6 line-clamp-2">Spécialiste en domotique et rénovation complète. Travail soigné et respect des délais garanti.</p>
 <button className="w-full py-3 rounded-xl bg-primary text-white font-bold hover:bg-primary/90 transition-all flex items-center justify-center gap-2">
 <span className="material-symbols-outlined">calendar_today</span> Réserver
                                 </button>
 </div>
 </div>
 {/*  Expert 2  */}
-<div className="bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:shadow-xl transition-shadow">
+<div className="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:shadow-xl transition-shadow">
 <div className="h-48 overflow-hidden relative">
 <img alt="Artisan Portrait" className="w-full h-full object-cover" data-alt="Experienced craftsman standing in front of tools" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVVKJ5RuknaWdDEXLkpYOzoTTtbOOOv9tg_xRVTQ0oj-PJ4iPQc2p0_dDmj_c1BCdEGoldFbk-pjpI_WqL52nNN5tYhmAw3YrqVI9Mxn2-ZuXOchNz_RU2s5kUdyi7ErnLOs6hI2EioTjw3zn186onZ6fP_sFe6xPJOPXRJ0CiOqEIvv7l4IgRHi8wwt6brI5A8xmSF7Tt-F1vvvXaYkpVDLDKMz_MIX64HMGJ3jhswfdhn-6_Enlp_PPl93gWToMBnnSoZlUPQqtP"/>
 <div className="absolute top-4 right-4 bg-white/90 backdrop-blur px-2 py-1 rounded-lg flex items-center gap-1 shadow-sm">
@@ -162,16 +162,16 @@ const DetailsDuServiceLectricit = () => {
 </div>
 </div>
 <div className="p-6">
-<h3 className="text-xl font-bold mb-1 text-slate-900 dark:text-white">Marc Lefebvre</h3>
+<h3 className="text-xl font-bold mb-1 text-slate-900">Marc Lefebvre</h3>
 <p className="text-primary text-sm font-medium mb-4">Expert Dépannage Urgent</p>
-<p className="text-slate-600 dark:text-slate-400 text-sm mb-6 line-clamp-2">Intervention rapide pour pannes de courant et courts-circuits. Disponible 7j/7 pour les urgences.</p>
+<p className="text-slate-600 text-sm mb-6 line-clamp-2">Intervention rapide pour pannes de courant et courts-circuits. Disponible 7j/7 pour les urgences.</p>
 <button className="w-full py-3 rounded-xl bg-primary text-white font-bold hover:bg-primary/90 transition-all flex items-center justify-center gap-2">
 <span className="material-symbols-outlined">calendar_today</span> Réserver
                                 </button>
 </div>
 </div>
 {/*  Expert 3  */}
-<div className="bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:shadow-xl transition-shadow">
+<div className="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:shadow-xl transition-shadow">
 <div className="h-48 overflow-hidden relative">
 <img alt="Artisan Portrait" className="w-full h-full object-cover" data-alt="Young professional technician with toolbox" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUIdNjVQNug7Uyx8ye20eYuDUxeO8lowRYCYs90sd2giUDO8ts5X4XxUwRuXZJuZ7FNxLIf3tlEP4EmhEOFWzIr6bgXLTwVJ4aGil9iuhSrBuAOVTPzO9UvuPAJHqyCC9hb0p5zH5MzT09suCVhD_Ds425tFwmurgpmQgfd7U7W2FMRxoP7wn87KztAOES95O29brCzUDFPTaoglTZjueYKHvGMbNAG5_YihedrFQ9AMtUJmDlx7bvgbcKVB0r-JjwNoxcfPBcAMBb"/>
 <div className="absolute top-4 right-4 bg-white/90 backdrop-blur px-2 py-1 rounded-lg flex items-center gap-1 shadow-sm">
@@ -180,9 +180,9 @@ const DetailsDuServiceLectricit = () => {
 </div>
 </div>
 <div className="p-6">
-<h3 className="text-xl font-bold mb-1 text-slate-900 dark:text-white">Sofiane Amari</h3>
+<h3 className="text-xl font-bold mb-1 text-slate-900">Sofiane Amari</h3>
 <p className="text-primary text-sm font-medium mb-4">Spécialiste Installation Neuve</p>
-<p className="text-slate-600 dark:text-slate-400 text-sm mb-6 line-clamp-2">Expert en pose de tableaux électriques et bornes de recharge pour véhicules électriques.</p>
+<p className="text-slate-600 text-sm mb-6 line-clamp-2">Expert en pose de tableaux électriques et bornes de recharge pour véhicules électriques.</p>
 <button className="w-full py-3 rounded-xl bg-primary text-white font-bold hover:bg-primary/90 transition-all flex items-center justify-center gap-2">
 <span className="material-symbols-outlined">calendar_today</span> Réserver
                                 </button>
@@ -192,34 +192,34 @@ const DetailsDuServiceLectricit = () => {
 </div>
 </section>
 {/*  FAQ Section  */}
-<section className="py-16 bg-white dark:bg-slate-900">
+<section className="py-16 bg-white">
 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-<h2 className="text-3xl font-bold text-slate-900 dark:text-white text-center mb-10">Questions Fréquentes</h2>
+<h2 className="text-3xl font-bold text-slate-900 text-center mb-10">Questions Fréquentes</h2>
 <div className="space-y-4">
-<details className="group bg-slate-50 dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 p-4" open="">
-<summary className="flex cursor-pointer items-center justify-between font-bold text-slate-900 dark:text-white list-none">
+<details className="group bg-slate-50 rounded-xl border border-slate-200 p-4" open="">
+<summary className="flex cursor-pointer items-center justify-between font-bold text-slate-900 list-none">
 <span>Quel est le délai d'intervention moyen ?</span>
 <span className="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
 </summary>
-<div className="mt-4 text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+<div className="mt-4 text-slate-600 text-sm leading-relaxed">
                                 Pour les urgences (panne totale), nous intervenons généralement en moins de 2 heures. Pour les installations classiques, vous pouvez choisir un créneau sous 24h à 48h.
                             </div>
 </details>
-<details className="group bg-slate-50 dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 p-4">
-<summary className="flex cursor-pointer items-center justify-between font-bold text-slate-900 dark:text-white list-none">
+<details className="group bg-slate-50 rounded-xl border border-slate-200 p-4">
+<summary className="flex cursor-pointer items-center justify-between font-bold text-slate-900 list-none">
 <span>Les pièces de rechange sont-elles incluses ?</span>
 <span className="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
 </summary>
-<div className="mt-4 text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+<div className="mt-4 text-slate-600 text-sm leading-relaxed">
                                 Les prix affichés "À partir de" incluent le diagnostic et la main-d'Å“uvre de base. Le coût des pièces spécifiques (interrupteurs, disjoncteurs, câbles) est facturé en sus après validation du devis sur place.
                             </div>
 </details>
-<details className="group bg-slate-50 dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 p-4">
-<summary className="flex cursor-pointer items-center justify-between font-bold text-slate-900 dark:text-white list-none">
+<details className="group bg-slate-50 rounded-xl border border-slate-200 p-4">
+<summary className="flex cursor-pointer items-center justify-between font-bold text-slate-900 list-none">
 <span>Comment s'effectue le paiement ?</span>
 <span className="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
 </summary>
-<div className="mt-4 text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+<div className="mt-4 text-slate-600 text-sm leading-relaxed">
                                 Le paiement s'effectue directement en ligne de manière sécurisée ou via l'application une fois l'intervention terminée et validée par vos soins. Nous acceptons les cartes bancaires et les virements.
                             </div>
 </details>
@@ -228,27 +228,27 @@ const DetailsDuServiceLectricit = () => {
 </section>
 </main>
 {/*  Footer  */}
-<footer className="bg-white dark:bg-background-dark border-t border-slate-200 dark:border-slate-800 pt-16 pb-8">
+<footer className="bg-white border-t border-slate-200 pt-16 pb-8">
 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 mb-12">
 <div className="col-span-2 lg:col-span-2">
 <a className="flex items-center gap-2 text-primary mb-6" href="#">
 <span className="material-symbols-outlined text-3xl">bolt</span>
-<span className="text-xl font-bold text-slate-900 dark:text-white">ArtisanPro</span>
+<span className="text-xl font-bold text-slate-900">ArtisanPro</span>
 </a>
-<p className="text-slate-500 dark:text-slate-400 max-w-xs mb-6">La plateforme de confiance pour tous vos travaux et dépannages à domicile. Des experts vérifiés, des tarifs justes.</p>
+<p className="text-slate-500 max-w-xs mb-6">La plateforme de confiance pour tous vos travaux et dépannages à domicile. Des experts vérifiés, des tarifs justes.</p>
 <div className="flex gap-4">
-<a className="h-10 w-10 flex items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-primary hover:text-white transition-colors" href="#">
+<a className="h-10 w-10 flex items-center justify-center rounded-full bg-slate-100 text-slate-600 hover:bg-primary hover:text-white transition-colors" href="#">
 <span className="material-symbols-outlined text-xl">language</span>
 </a>
-<a className="h-10 w-10 flex items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-primary hover:text-white transition-colors" href="#">
+<a className="h-10 w-10 flex items-center justify-center rounded-full bg-slate-100 text-slate-600 hover:bg-primary hover:text-white transition-colors" href="#">
 <span className="material-symbols-outlined text-xl">share</span>
 </a>
 </div>
 </div>
 <div>
-<h4 className="font-bold mb-6 text-slate-900 dark:text-white">Services</h4>
-<ul className="space-y-4 text-sm text-slate-500 dark:text-slate-400">
+<h4 className="font-bold mb-6 text-slate-900">Services</h4>
+<ul className="space-y-4 text-sm text-slate-500">
 <li><a className="hover:text-primary transition-colors" href="#">Électricité</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Plomberie</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Chauffage</a></li>
@@ -256,8 +256,8 @@ const DetailsDuServiceLectricit = () => {
 </ul>
 </div>
 <div>
-<h4 className="font-bold mb-6 text-slate-900 dark:text-white">Entreprise</h4>
-<ul className="space-y-4 text-sm text-slate-500 dark:text-slate-400">
+<h4 className="font-bold mb-6 text-slate-900">Entreprise</h4>
+<ul className="space-y-4 text-sm text-slate-500">
 <li><a className="hover:text-primary transition-colors" href="#">À propos</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Recrutement</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Blog</a></li>
@@ -265,8 +265,8 @@ const DetailsDuServiceLectricit = () => {
 </ul>
 </div>
 <div>
-<h4 className="font-bold mb-6 text-slate-900 dark:text-white">Support</h4>
-<ul className="space-y-4 text-sm text-slate-500 dark:text-slate-400">
+<h4 className="font-bold mb-6 text-slate-900">Support</h4>
+<ul className="space-y-4 text-sm text-slate-500">
 <li><a className="hover:text-primary transition-colors" href="#">Centre d'aide</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Contact</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Sécurité</a></li>
@@ -274,7 +274,7 @@ const DetailsDuServiceLectricit = () => {
 </ul>
 </div>
 </div>
-<div className="border-t border-slate-100 dark:border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-400">
+<div className="border-t border-slate-100 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-400">
 <p>© 2024 ArtisanPro. Tous droits réservés.</p>
 <div className="flex gap-6">
 <a className="hover:text-primary" href="#">Confidentialité</a>

@@ -7,22 +7,22 @@ const PeinturePlafond = () => {
 <div className="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
 <div className="layout-container flex h-full grow flex-col">
 {/*  Header  */}
-<header className="flex items-center justify-between whitespace-nowrap border-b border-solid border-primary/10 px-6 py-3 bg-white dark:bg-slate-900 sticky top-0 z-50">
+<header className="flex items-center justify-between whitespace-nowrap border-b border-solid border-primary/10 px-6 py-3 bg-white sticky top-0 z-50">
 <div className="flex items-center gap-8">
 <div className="flex items-center gap-3 text-primary">
 <span className="material-symbols-outlined text-3xl font-bold">format_paint</span>
-<h2 className="text-slate-900 dark:text-white text-xl font-black leading-tight tracking-tight">PlafondPro</h2>
+<h2 className="text-slate-900 text-xl font-black leading-tight tracking-tight">PlafondPro</h2>
 </div>
 <nav className="hidden md:flex items-center gap-8">
-<a className="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary" href="#">Expertise</a>
-<a className="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary" href="#">Équipement</a>
-<a className="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary" href="#">Tarifs</a>
-<a className="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary" href="#">Peintres</a>
+<a className="text-slate-600 text-sm font-medium hover:text-primary" href="#">Expertise</a>
+<a className="text-slate-600 text-sm font-medium hover:text-primary" href="#">Équipement</a>
+<a className="text-slate-600 text-sm font-medium hover:text-primary" href="#">Tarifs</a>
+<a className="text-slate-600 text-sm font-medium hover:text-primary" href="#">Peintres</a>
 </nav>
 </div>
 <div className="flex flex-1 justify-end gap-6 items-center">
 <label className="hidden lg:flex flex-col min-w-40 h-10 max-w-64">
-<div className="flex w-full flex-1 items-stretch rounded-lg h-full bg-slate-100 dark:bg-slate-800">
+<div className="flex w-full flex-1 items-stretch rounded-lg h-full bg-slate-100">
 <div className="text-slate-400 flex items-center justify-center pl-4">
 <span className="material-symbols-outlined text-xl">search</span>
 </div>
@@ -30,10 +30,10 @@ const PeinturePlafond = () => {
 </div>
 </label>
 <div className="flex gap-2">
-<button className="flex items-center justify-center rounded-lg h-10 w-10 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
+<button className="flex items-center justify-center rounded-lg h-10 w-10 bg-slate-100 text-slate-600">
 <span className="material-symbols-outlined">notifications</span>
 </button>
-<button className="flex items-center justify-center rounded-lg h-10 w-10 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
+<button className="flex items-center justify-center rounded-lg h-10 w-10 bg-slate-100 text-slate-600">
 <span className="material-symbols-outlined">account_circle</span>
 </button>
 </div>
@@ -42,19 +42,19 @@ const PeinturePlafond = () => {
 </header>
 <div className="flex flex-1">
 {/*  Sidebar  */}
-<aside className="hidden lg:flex w-72 flex-col justify-between border-r border-primary/10 bg-white dark:bg-slate-900 p-4 shrink-0">
+<aside className="hidden lg:flex w-72 flex-col justify-between border-r border-primary/10 bg-white p-4 shrink-0">
 <div className="flex flex-col gap-6">
 <div className="flex items-center gap-3 px-2">
 <div className="size-10 rounded-xl bg-primary flex items-center justify-center text-white">
 <span className="material-symbols-outlined">layers</span>
 </div>
 <div className="flex flex-col">
-<h1 className="text-slate-900 dark:text-white text-sm font-bold">Services Peinture</h1>
+<h1 className="text-slate-900 text-sm font-bold">Services Peinture</h1>
 <p className="text-slate-500 text-xs font-medium uppercase tracking-wider">Expertise Plafonds</p>
 </div>
 </div>
 <nav className="flex flex-col gap-1">
-<a className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-primary/10 hover:text-primary transition-colors" href="#">
+<a className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-primary/10 hover:text-primary transition-colors" href="#">
 <span className="material-symbols-outlined">home</span>
 <p className="text-sm font-semibold">Accueil</p>
 </a>
@@ -62,15 +62,15 @@ const PeinturePlafond = () => {
 <span className="material-symbols-outlined">brush</span>
 <p className="text-sm font-semibold">Peinture Plafond</p>
 </a>
-<a className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-primary/10 hover:text-primary transition-colors" href="#">
+<a className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-primary/10 hover:text-primary transition-colors" href="#">
 <span className="material-symbols-outlined">grid_view</span>
 <p className="text-sm font-semibold">Plâtrerie</p>
 </a>
-<a className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-primary/10 hover:text-primary transition-colors" href="#">
+<a className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-primary/10 hover:text-primary transition-colors" href="#">
 <span className="material-symbols-outlined">wallpaper</span>
 <p className="text-sm font-semibold">Revêtements</p>
 </a>
-<a className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-primary/10 hover:text-primary transition-colors mt-4" href="#">
+<a className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-primary/10 hover:text-primary transition-colors mt-4" href="#">
 <span className="material-symbols-outlined">settings</span>
 <p className="text-sm font-semibold">Paramètres</p>
 </a>
@@ -106,11 +106,11 @@ const PeinturePlafond = () => {
 <span className="material-symbols-outlined text-xs">chevron_right</span>
 <a className="hover:text-primary" href="#">Peinture</a>
 <span className="material-symbols-outlined text-xs">chevron_right</span>
-<span className="text-slate-900 dark:text-white font-semibold">Plafonds</span>
+<span className="text-slate-900 font-semibold">Plafonds</span>
 </div>
 {/*  Expertise & Equipment  */}
 <div className="p-6 grid grid-cols-1 lg:grid-cols-2 gap-8">
-<section className="bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-sm border border-primary/5">
+<section className="bg-white p-8 rounded-2xl shadow-sm border border-primary/5">
 <div className="flex items-center gap-4 mb-6">
 <div className="size-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center">
 <span className="material-symbols-outlined text-2xl font-bold">verified</span>
@@ -124,20 +124,20 @@ const PeinturePlafond = () => {
 <li className="flex items-start gap-3">
 <span className="material-symbols-outlined text-primary text-xl">check_circle</span>
 <div>
-<p className="font-bold text-slate-800 dark:text-slate-200">Préparation des supports</p>
+<p className="font-bold text-slate-800">Préparation des supports</p>
 <p className="text-sm text-slate-500">Nettoyage, rebouchage et ponçage intégral pour une surface miroir.</p>
 </div>
 </li>
 <li className="flex items-start gap-3">
 <span className="material-symbols-outlined text-primary text-xl">check_circle</span>
 <div>
-<p className="font-bold text-slate-800 dark:text-slate-200">Peinture "Sans Trace"</p>
+<p className="font-bold text-slate-800">Peinture "Sans Trace"</p>
 <p className="text-sm text-slate-500">Application croisée optimisée pour un aspect mat profond ou satiné régulier.</p>
 </div>
 </li>
 </ul>
 </section>
-<section className="bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-sm border border-primary/5">
+<section className="bg-white p-8 rounded-2xl shadow-sm border border-primary/5">
 <div className="flex items-center gap-4 mb-6">
 <div className="size-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center">
 <span className="material-symbols-outlined text-2xl font-bold">construction</span>
@@ -148,12 +148,12 @@ const PeinturePlafond = () => {
 </div>
 </div>
 <div className="grid grid-cols-2 gap-4">
-<div className="p-4 rounded-xl bg-slate-50 dark:bg-slate-800 border border-primary/5">
+<div className="p-4 rounded-xl bg-slate-50 border border-primary/5">
 <span className="material-symbols-outlined text-primary mb-2">sprinkler</span>
 <p className="font-bold text-sm">Station Airless</p>
 <p className="text-xs text-slate-500">Projection haute pression pour zéro grain.</p>
 </div>
-<div className="p-4 rounded-xl bg-slate-50 dark:bg-slate-800 border border-primary/5">
+<div className="p-4 rounded-xl bg-slate-50 border border-primary/5">
 <span className="material-symbols-outlined text-primary mb-2">precision_manufacturing</span>
 <p className="font-bold text-sm">Ponceuse Girafe</p>
 <p className="text-xs text-slate-500">Ponçage sans poussière avec aspiration.</p>
@@ -163,34 +163,34 @@ const PeinturePlafond = () => {
 </div>
 {/*  Pricing Section  */}
 <div className="px-6 pb-6">
-<section className="bg-primary/5 dark:bg-primary/10 p-8 rounded-3xl">
+<section className="bg-primary/5 p-8 rounded-3xl">
 <h3 className="text-2xl font-black mb-6 text-center">Traitements Spécifiques &amp; Tarifs</h3>
 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-<div className="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-lg border-b-4 border-primary">
+<div className="bg-white p-6 rounded-2xl shadow-lg border-b-4 border-primary">
 <h4 className="font-black text-lg mb-2">Rafraîchissement</h4>
 <p className="text-slate-500 text-sm mb-4">Pour plafonds sains sans dégâts majeurs.</p>
 <div className="text-3xl font-black text-primary mb-4">18€ <span className="text-sm text-slate-400">/ m²</span></div>
-<ul className="text-xs space-y-2 text-slate-600 dark:text-slate-400">
+<ul className="text-xs space-y-2 text-slate-600">
 <li>• Lessivage léger</li>
 <li>• 2 couches mat</li>
 <li>• Protection sol incluse</li>
 </ul>
 </div>
-<div className="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-lg border-b-4 border-orange-500">
+<div className="bg-white p-6 rounded-2xl shadow-lg border-b-4 border-orange-500">
 <h4 className="font-black text-lg mb-2">Traitement Fumée</h4>
 <p className="text-slate-500 text-sm mb-4">Isolation des traces de nicotine et suie.</p>
 <div className="text-3xl font-black text-orange-500 mb-4">26€ <span className="text-sm text-slate-400">/ m²</span></div>
-<ul className="text-xs space-y-2 text-slate-600 dark:text-slate-400">
+<ul className="text-xs space-y-2 text-slate-600">
 <li>• Impression isolante solvantée</li>
 <li>• Neutralisation des odeurs</li>
 <li>• Finition haute opacité</li>
 </ul>
 </div>
-<div className="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-lg border-b-4 border-red-500">
+<div className="bg-white p-6 rounded-2xl shadow-lg border-b-4 border-red-500">
 <h4 className="font-black text-lg mb-2">Sinistre / Humidité</h4>
 <p className="text-slate-500 text-sm mb-4">Après dégâts des eaux ou taches rebelles.</p>
 <div className="text-3xl font-black text-red-500 mb-4">32€ <span className="text-sm text-slate-400">/ m²</span></div>
-<ul className="text-xs space-y-2 text-slate-600 dark:text-slate-400">
+<ul className="text-xs space-y-2 text-slate-600">
 <li>• Traitement anti-salpêtre</li>
 <li>• Durcisseur de fonds</li>
 <li>• Peinture hydrofuge</li>
@@ -212,7 +212,7 @@ const PeinturePlafond = () => {
 </div>
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 {/*  Painter 1  */}
-<div className="group bg-white dark:bg-slate-900 rounded-2xl p-6 shadow-sm border border-primary/5 hover:border-primary transition-all">
+<div className="group bg-white rounded-2xl p-6 shadow-sm border border-primary/5 hover:border-primary transition-all">
 <div className="relative mb-4">
 <div className="size-20 rounded-full bg-slate-200 mx-auto overflow-hidden border-2 border-primary/20" data-alt="Portrait of a professional painter wearing overalls">
 <img alt="Julien" className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAetFLRtfPIXjfyeYFeWWrbRgOxeI8MIR_qgJssNmew4wJfEUVKyVYjfAh75notM3RSAe7jUjKRcIuwpNTAl__0uRc3sMYvYuAiOYq72l-x0JlPrRV-HNHXct0FI_FaZzXL9i5tSl94qx7NR_U0kMJDGF4--td7e0FZ6p8GRLS9SIolMwsjYtIUa6RsGfeWJYl96HviyEgRKdFkYHHlyPbqSdVrw3g-WpmEmQnPRAt7oTuAEmaj2jzUFJNGMy-rBsTipR9vo0dvoljC"/>
@@ -230,11 +230,11 @@ const PeinturePlafond = () => {
 <span className="material-symbols-outlined fill-1 text-sm">star</span>
 <span className="text-slate-400 text-xs ml-1">(128)</span>
 </div>
-<button className="w-full py-2 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white rounded-lg text-xs font-bold group-hover:bg-primary group-hover:text-white transition-all">Réserver Julien</button>
+<button className="w-full py-2 bg-slate-100 text-slate-900 rounded-lg text-xs font-bold group-hover:bg-primary group-hover:text-white transition-all">Réserver Julien</button>
 </div>
 </div>
 {/*  Painter 2  */}
-<div className="group bg-white dark:bg-slate-900 rounded-2xl p-6 shadow-sm border border-primary/5 hover:border-primary transition-all">
+<div className="group bg-white rounded-2xl p-6 shadow-sm border border-primary/5 hover:border-primary transition-all">
 <div className="relative mb-4">
 <div className="size-20 rounded-full bg-slate-200 mx-auto overflow-hidden border-2 border-primary/20" data-alt="Female professional painter with protective gear">
 <img alt="Sarah" className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRzn-nomhJOl7jvfo8dz2vnXHid_ELZaOTGl_7J5fwz6s4eI2AaS1DC3xn66G0pMoDammUbkECNVGZaqvNzpFcxOU_QMoC3k7R9FkimkEx19nUM3XloxnytrkKrurbDPUZX-oqRsmi0ged15cmQMaapOkEpbe4B1FmzH0E7u-nqKvQQKsNnH6eMkon9-g5X3p5WrjNeaOwSd5gUo7iVniM9-KVPFHRMw6qn1yOrKuvKmpx_59i3CNGBQoApZ8D-3Q25mqAo4lvy07V"/>
@@ -252,11 +252,11 @@ const PeinturePlafond = () => {
 <span className="material-symbols-outlined fill-1 text-sm">star</span>
 <span className="text-slate-400 text-xs ml-1">(94)</span>
 </div>
-<button className="w-full py-2 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white rounded-lg text-xs font-bold group-hover:bg-primary group-hover:text-white transition-all">Réserver Sarah</button>
+<button className="w-full py-2 bg-slate-100 text-slate-900 rounded-lg text-xs font-bold group-hover:bg-primary group-hover:text-white transition-all">Réserver Sarah</button>
 </div>
 </div>
 {/*  Painter 3  */}
-<div className="group bg-white dark:bg-slate-900 rounded-2xl p-6 shadow-sm border border-primary/5 hover:border-primary transition-all">
+<div className="group bg-white rounded-2xl p-6 shadow-sm border border-primary/5 hover:border-primary transition-all">
 <div className="relative mb-4">
 <div className="size-20 rounded-full bg-slate-200 mx-auto overflow-hidden border-2 border-primary/20" data-alt="Experienced craftsman in a workshop">
 <img alt="Marc" className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxOuT6Xye85Ge7G1EwTexUl-lTOneWfiPa5wXksJwY1dTi8AtSGWHwGKSuIOYoT9baoviObZQVLLh2tw5bMM9GbfcLqTGDtoRoqcT8cO2Oi8dJh-0oREa3RYJDa3Vo07am9oVYwArlkd0ev1D2lojLIoxaF9vsKjQWaXtI2dxyHuSANME7WN9rGa07O0wqzAyS3mJ2EcBjaPxCiTEOM_sN57OIcwZTGtkT6R5WFUhR2gcwtkS575WsYuT1wW7Htgf0hwxS3bsYZPji"/>
@@ -274,11 +274,11 @@ const PeinturePlafond = () => {
 <span className="material-symbols-outlined fill-1 text-sm">star_half</span>
 <span className="text-slate-400 text-xs ml-1">(215)</span>
 </div>
-<button className="w-full py-2 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white rounded-lg text-xs font-bold group-hover:bg-primary group-hover:text-white transition-all">Réserver Marc</button>
+<button className="w-full py-2 bg-slate-100 text-slate-900 rounded-lg text-xs font-bold group-hover:bg-primary group-hover:text-white transition-all">Réserver Marc</button>
 </div>
 </div>
 {/*  Painter 4  */}
-<div className="group bg-white dark:bg-slate-900 rounded-2xl p-6 shadow-sm border border-primary/5 hover:border-primary transition-all">
+<div className="group bg-white rounded-2xl p-6 shadow-sm border border-primary/5 hover:border-primary transition-all">
 <div className="relative mb-4">
 <div className="size-20 rounded-full bg-slate-200 mx-auto overflow-hidden border-2 border-primary/20" data-alt="Skilled young professional painter">
 <img alt="Karim" className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4D8z2IOYCUVUUwGpuhEuKgQlAkhNVrInsfxr1z70wrccfT0e6KAARjXW_2kMk3-ilDZlQoezYjokjC8sbRXmCLsAQ52Leaoq2_arswqVu8Dg59hfpszydAEK6NwdpMj8agkbcy_ms1ITvvfbpkhfI-bgCud9_FwY2y1Yuh9kMXUmwBvn5144YpvubcfvUG0rrNn2YFDwXK6rsGiciaEu3WY1mN2pGi-yHcHXeZHijA3kdaES3CTjSXdB7RLP_mJLpfgwuVeKRrtB1"/>
@@ -296,7 +296,7 @@ const PeinturePlafond = () => {
 <span className="material-symbols-outlined fill-1 text-sm">star</span>
 <span className="text-slate-400 text-xs ml-1">(67)</span>
 </div>
-<button className="w-full py-2 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white rounded-lg text-xs font-bold group-hover:bg-primary group-hover:text-white transition-all">Réserver Karim</button>
+<button className="w-full py-2 bg-slate-100 text-slate-900 rounded-lg text-xs font-bold group-hover:bg-primary group-hover:text-white transition-all">Réserver Karim</button>
 </div>
 </div>
 </div>

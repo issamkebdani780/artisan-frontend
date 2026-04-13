@@ -6,27 +6,27 @@ const PlumbingCategory = () => {
       
 <div className="relative flex min-h-screen flex-col">
 {/*  Header  */}
-<header className="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md">
+<header className="sticky top-0 z-50 w-full border-b border-slate-200 bg-white/80 backdrop-blur-md">
 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div className="flex h-16 items-center justify-between gap-8">
 <div className="flex items-center gap-2 text-primary">
 <span className="material-symbols-outlined text-3xl">plumbing</span>
-<h1 className="text-xl font-bold tracking-tight text-slate-900 dark:text-slate-100">Plomberie Pro</h1>
+<h1 className="text-xl font-bold tracking-tight text-slate-900">Plomberie Pro</h1>
 </div>
 <nav className="hidden md:flex items-center gap-8">
 <a className="text-sm font-semibold hover:text-primary transition-colors" href="#">Services</a>
 <a className="text-sm font-semibold hover:text-primary transition-colors" href="#">Nos Experts</a>
 <a className="text-sm font-semibold hover:text-primary transition-colors" href="#">Tarifs</a>
-<a className="text-sm font-semibold text-red-600 dark:text-red-400" href="#">Urgences 24/7</a>
+<a className="text-sm font-semibold text-red-600" href="#">Urgences 24/7</a>
 </nav>
 <div className="flex flex-1 items-center justify-end gap-4">
 <div className="relative hidden sm:block w-full max-w-xs">
 <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400">
 <span className="material-symbols-outlined text-sm">search</span>
 </span>
-<input className="block w-full rounded-lg border-none bg-slate-100 dark:bg-slate-800 py-2 pl-10 pr-3 text-sm focus:ring-2 focus:ring-primary" placeholder="Rechercher un service..." type="text"/>
+<input className="block w-full rounded-lg border-none bg-slate-100 py-2 pl-10 pr-3 text-sm focus:ring-2 focus:ring-primary" placeholder="Rechercher un service..." type="text"/>
 </div>
-<button className="flex items-center justify-center h-10 w-10 rounded-full bg-slate-100 dark:bg-slate-800">
+<button className="flex items-center justify-center h-10 w-10 rounded-full bg-slate-100">
 <span className="material-symbols-outlined">person</span>
 </button>
 </div>
@@ -39,7 +39,7 @@ const PlumbingCategory = () => {
 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
 {/*  Main Hero Content  */}
 <div className="lg:col-span-2 space-y-8">
-<div className="relative aspect-[16/9] overflow-hidden rounded-xl bg-slate-200 dark:bg-slate-800 shadow-xl">
+<div className="relative aspect-[16/9] overflow-hidden rounded-xl bg-slate-200 shadow-xl">
 <div className="absolute inset-0 bg-cover bg-center" data-alt="Professional plumber fixing a modern kitchen sink" ></div>
 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-8">
 <h2 className="text-3xl md:text-5xl font-black text-white leading-tight mb-4">L'excellence en plomberie, chez vous.</h2>
@@ -56,18 +56,18 @@ const PlumbingCategory = () => {
 </div>
 </div>
 {/*  Quote Sidebar  */}
-<aside className="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm space-y-6 sticky top-24">
+<aside className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-6 sticky top-24">
 <div className="flex items-center gap-3 text-primary">
 <span className="material-symbols-outlined text-3xl">request_quote</span>
 <h3 className="text-xl font-bold">Besoin d'un devis ?</h3>
 </div>
-<p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+<p className="text-slate-600 text-sm leading-relaxed">
                             Obtenez une estimation gratuite en moins de 24h pour vos travaux d'installation ou de rénovation.
                         </p>
 <form className="space-y-4">
 <div>
 <label className="text-xs font-bold uppercase tracking-wider text-slate-500">Type de service</label>
-<select className="w-full mt-1 rounded-lg border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 text-sm focus:ring-primary">
+<select className="w-full mt-1 rounded-lg border-slate-200 bg-slate-50 text-sm focus:ring-primary">
 <option>Réparation de fuite</option>
 <option>Installation Sanitaire</option>
 <option>Débouchage</option>
@@ -76,17 +76,17 @@ const PlumbingCategory = () => {
 </div>
 <div>
 <label className="text-xs font-bold uppercase tracking-wider text-slate-500">Ville / Code Postal</label>
-<input className="w-full mt-1 rounded-lg border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 text-sm focus:ring-primary" placeholder="ex: 75001" type="text"/>
+<input className="w-full mt-1 rounded-lg border-slate-200 bg-slate-50 text-sm focus:ring-primary" placeholder="ex: 75001" type="text"/>
 </div>
 <button className="w-full bg-primary py-3 text-white rounded-lg font-bold shadow-lg shadow-primary/30 hover:shadow-primary/40 transition-shadow">
                                 Simuler mon devis
                             </button>
 </form>
-<div className="pt-4 border-t border-slate-100 dark:border-slate-700 flex items-center justify-between">
+<div className="pt-4 border-t border-slate-100 flex items-center justify-between">
 <div className="flex -space-x-2">
-<div className="h-8 w-8 rounded-full border-2 border-white dark:border-slate-800 bg-slate-300" data-alt="User avatar profile 1"></div>
-<div className="h-8 w-8 rounded-full border-2 border-white dark:border-slate-800 bg-slate-400" data-alt="User avatar profile 2"></div>
-<div className="h-8 w-8 rounded-full border-2 border-white dark:border-slate-800 bg-slate-500" data-alt="User avatar profile 3"></div>
+<div className="h-8 w-8 rounded-full border-2 border-white bg-slate-300" data-alt="User avatar profile 1"></div>
+<div className="h-8 w-8 rounded-full border-2 border-white bg-slate-400" data-alt="User avatar profile 2"></div>
+<div className="h-8 w-8 rounded-full border-2 border-white bg-slate-500" data-alt="User avatar profile 3"></div>
 </div>
 <span className="text-xs font-medium text-slate-500">+1.2k clients satisfaits</span>
 </div>
@@ -94,12 +94,12 @@ const PlumbingCategory = () => {
 </div>
 </section>
 {/*  Sub-services Grid  */}
-<section className="bg-slate-50 dark:bg-slate-900/50 py-16">
+<section className="bg-slate-50 py-16">
 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div className="flex items-end justify-between mb-10">
 <div>
 <h2 className="text-3xl font-bold tracking-tight">Nos Spécialités</h2>
-<p className="text-slate-600 dark:text-slate-400 mt-2">Des solutions adaptées à chaque problème de plomberie.</p>
+<p className="text-slate-600 mt-2">Des solutions adaptées à chaque problème de plomberie.</p>
 </div>
 <a className="text-primary font-bold flex items-center gap-1 hover:underline" href="#">
                             Tout voir
@@ -108,12 +108,12 @@ const PlumbingCategory = () => {
 </div>
 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 {/*  Card 1  */}
-<div className="group bg-white dark:bg-slate-800 rounded-xl p-6 border border-slate-200 dark:border-slate-700 hover:border-primary transition-all shadow-sm hover:shadow-xl">
+<div className="group bg-white rounded-xl p-6 border border-slate-200 hover:border-primary transition-all shadow-sm hover:shadow-xl">
 <div className="h-14 w-14 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
 <span className="material-symbols-outlined text-3xl">water_drop</span>
 </div>
 <h3 className="text-xl font-bold mb-3">Réparation de Fuite</h3>
-<p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6">
+<p className="text-slate-600 text-sm leading-relaxed mb-6">
                                 Détection non-destructive et colmatage immédiat de vos tuyauteries et robinetteries.
                             </p>
 <span className="text-sm font-bold text-primary group-hover:gap-2 flex items-center gap-1 transition-all">
@@ -121,12 +121,12 @@ const PlumbingCategory = () => {
 </span>
 </div>
 {/*  Card 2  */}
-<div className="group bg-white dark:bg-slate-800 rounded-xl p-6 border border-slate-200 dark:border-slate-700 hover:border-primary transition-all shadow-sm hover:shadow-xl">
+<div className="group bg-white rounded-xl p-6 border border-slate-200 hover:border-primary transition-all shadow-sm hover:shadow-xl">
 <div className="h-14 w-14 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
 <span className="material-symbols-outlined text-3xl">shower</span>
 </div>
 <h3 className="text-xl font-bold mb-3">Installation Sanitaire</h3>
-<p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6">
+<p className="text-slate-600 text-sm leading-relaxed mb-6">
                                 Pose de douches, WC suspendus, vasques et rénovation complète de votre salle d'eau.
                             </p>
 <span className="text-sm font-bold text-primary group-hover:gap-2 flex items-center gap-1 transition-all">
@@ -134,12 +134,12 @@ const PlumbingCategory = () => {
 </span>
 </div>
 {/*  Card 3  */}
-<div className="group bg-white dark:bg-slate-800 rounded-xl p-6 border border-slate-200 dark:border-slate-700 hover:border-primary transition-all shadow-sm hover:shadow-xl">
+<div className="group bg-white rounded-xl p-6 border border-slate-200 hover:border-primary transition-all shadow-sm hover:shadow-xl">
 <div className="h-14 w-14 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
 <span className="material-symbols-outlined text-3xl">settings_input_hdmi</span>
 </div>
 <h3 className="text-xl font-bold mb-3">Débouchage Urgent</h3>
-<p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6">
+<p className="text-slate-600 text-sm leading-relaxed mb-6">
                                 Canalisations obstruées, évacuations lentes : intervention haute pression disponible.
                             </p>
 <span className="text-sm font-bold text-primary group-hover:gap-2 flex items-center gap-1 transition-all">
@@ -166,30 +166,30 @@ const PlumbingCategory = () => {
 <h2 className="text-4xl font-black tracking-tight leading-tight">Pourquoi faire confiance à <span className="text-primary">Plomberie Pro</span> ?</h2>
 <div className="space-y-6">
 <div className="flex gap-4">
-<div className="flex-shrink-0 h-10 w-10 rounded-full bg-green-100 dark:bg-green-900/30 text-green-600 flex items-center justify-center">
+<div className="flex-shrink-0 h-10 w-10 rounded-full bg-green-100 text-green-600 flex items-center justify-center">
 <span className="material-symbols-outlined">verified</span>
 </div>
 <div>
 <h4 className="font-bold text-lg">Experts Certifiés Qualibat</h4>
-<p className="text-slate-600 dark:text-slate-400">Tous nos artisans sont formés aux dernières normes européennes.</p>
+<p className="text-slate-600">Tous nos artisans sont formés aux dernières normes européennes.</p>
 </div>
 </div>
 <div className="flex gap-4">
-<div className="flex-shrink-0 h-10 w-10 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 flex items-center justify-center">
+<div className="flex-shrink-0 h-10 w-10 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center">
 <span className="material-symbols-outlined">schedule</span>
 </div>
 <div>
 <h4 className="font-bold text-lg">Disponibilité Totale</h4>
-<p className="text-slate-600 dark:text-slate-400">Nous intervenons 24h/24 et 7j/7 pour toutes vos urgences critiques.</p>
+<p className="text-slate-600">Nous intervenons 24h/24 et 7j/7 pour toutes vos urgences critiques.</p>
 </div>
 </div>
 <div className="flex gap-4">
-<div className="flex-shrink-0 h-10 w-10 rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-600 flex items-center justify-center">
+<div className="flex-shrink-0 h-10 w-10 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center">
 <span className="material-symbols-outlined">payments</span>
 </div>
 <div>
 <h4 className="font-bold text-lg">Transparence Tarifaire</h4>
-<p className="text-slate-600 dark:text-slate-400">Aucune surprise sur la facture. Nos tarifs sont annoncés avant intervention.</p>
+<p className="text-slate-600">Aucune surprise sur la facture. Nos tarifs sont annoncés avant intervention.</p>
 </div>
 </div>
 </div>
@@ -254,19 +254,19 @@ const PlumbingCategory = () => {
 </section>
 </main>
 {/*  Footer  */}
-<footer className="bg-slate-50 dark:bg-background-dark py-12 border-t border-slate-200 dark:border-slate-800">
+<footer className="bg-slate-50 py-12 border-t border-slate-200">
 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:text-left">
 <div className="grid grid-cols-1 sm:grid-cols-4 gap-8">
 <div className="col-span-1 sm:col-span-1">
 <div className="flex items-center gap-2 text-primary mb-6">
 <span className="material-symbols-outlined text-2xl">plumbing</span>
-<span className="text-lg font-bold text-slate-900 dark:text-slate-100">Plomberie Pro</span>
+<span className="text-lg font-bold text-slate-900">Plomberie Pro</span>
 </div>
-<p className="text-sm text-slate-500 dark:text-slate-400">Votre partenaire confiance pour tous vos besoins en plomberie et chauffage depuis 2009.</p>
+<p className="text-sm text-slate-500">Votre partenaire confiance pour tous vos besoins en plomberie et chauffage depuis 2009.</p>
 </div>
 <div>
 <h5 className="font-bold mb-6">Services</h5>
-<ul className="space-y-4 text-sm text-slate-500 dark:text-slate-400">
+<ul className="space-y-4 text-sm text-slate-500">
 <li><a className="hover:text-primary" href="#">Dépannage Rapide</a></li>
 <li><a className="hover:text-primary" href="#">Salle de Bains</a></li>
 <li><a className="hover:text-primary" href="#">Chauffage Central</a></li>
@@ -275,7 +275,7 @@ const PlumbingCategory = () => {
 </div>
 <div>
 <h5 className="font-bold mb-6">Compagnie</h5>
-<ul className="space-y-4 text-sm text-slate-500 dark:text-slate-400">
+<ul className="space-y-4 text-sm text-slate-500">
 <li><a className="hover:text-primary" href="#">À propos</a></li>
 <li><a className="hover:text-primary" href="#">Nos Réalisations</a></li>
 <li><a className="hover:text-primary" href="#">Recrutement</a></li>
@@ -284,7 +284,7 @@ const PlumbingCategory = () => {
 </div>
 <div>
 <h5 className="font-bold mb-6">Contact</h5>
-<div className="space-y-4 text-sm text-slate-500 dark:text-slate-400">
+<div className="space-y-4 text-sm text-slate-500">
 <p className="flex items-center gap-2">
 <span className="material-symbols-outlined text-primary text-lg">call</span>
                                 0800 123 456
@@ -294,17 +294,17 @@ const PlumbingCategory = () => {
                                 Paris &amp; Île-de-France
                             </p>
 <div className="flex gap-4 pt-2">
-<a className="h-8 w-8 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-300" href="#">
+<a className="h-8 w-8 rounded-full bg-slate-200 flex items-center justify-center text-slate-600" href="#">
 <span className="material-symbols-outlined text-lg">social_leaderboard</span>
 </a>
-<a className="h-8 w-8 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-300" href="#">
+<a className="h-8 w-8 rounded-full bg-slate-200 flex items-center justify-center text-slate-600" href="#">
 <span className="material-symbols-outlined text-lg">alternate_email</span>
 </a>
 </div>
 </div>
 </div>
 </div>
-<div className="mt-12 pt-8 border-t border-slate-200 dark:border-slate-800 text-center text-xs text-slate-500">
+<div className="mt-12 pt-8 border-t border-slate-200 text-center text-xs text-slate-500">
                     © 2024 Plomberie Pro. Tous droits réservés. Mentions Légales | Cookies
                 </div>
 </div>

@@ -5,13 +5,13 @@ const TarifsDesServicesArtisan = () => {
     <>
       
 <div className="relative flex min-h-screen flex-col overflow-x-hidden">
-<header className="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-800 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md px-4 lg:px-20 py-4">
+<header className="sticky top-0 z-50 w-full border-b border-slate-200 bg-background-light/80 backdrop-blur-md px-4 lg:px-20 py-4">
 <div className="max-w-7xl mx-auto flex items-center justify-between">
 <div className="flex items-center gap-3">
 <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary text-white">
 <span className="material-symbols-outlined text-2xl">construction</span>
 </div>
-<h2 className="text-xl font-bold tracking-tight text-slate-900 dark:text-white">ArtisanDirect</h2>
+<h2 className="text-xl font-bold tracking-tight text-slate-900">ArtisanDirect</h2>
 </div>
 <nav className="hidden md:flex items-center gap-8">
 <a className="text-sm font-semibold hover:text-primary transition-colors" href="#">Accueil</a>
@@ -20,10 +20,10 @@ const TarifsDesServicesArtisan = () => {
 <a className="text-sm font-semibold hover:text-primary transition-colors" href="#">Connexion</a>
 </nav>
 <div className="flex items-center gap-4">
-<button className="flex h-10 w-10 items-center justify-center rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-yellow-400 border border-slate-200 dark:border-slate-700 shadow-sm transition-all hover:scale-105 active:scale-95" onclick="document.documentElement.classList.toggle('dark')">
+<button className="flex h-10 w-10 items-center justify-center rounded-xl bg-slate-100 text-slate-600 border border-slate-200 shadow-sm transition-all hover:scale-105 active:scale-95" onclick="document.documentElement.classList.toggle('dark')">
 <span className="material-symbols-outlined leading-none">light_mode</span>
 </button>
-<div className="h-10 w-10 rounded-full overflow-hidden border-2 border-primary/20 bg-slate-200 dark:bg-slate-700">
+<div className="h-10 w-10 rounded-full overflow-hidden border-2 border-primary/20 bg-slate-200">
 <img className="h-full w-full object-cover" data-alt="Photo de profil utilisateur" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCky1FABmc51VoMy02tem8OEQbBmVT0zr-QtOkyLEocDNApN0fN695-w8A48ztuybfomFxgm8--6Jccyf30jlSDeDID_YqQcscWnoFYwD9tMPIVLc3YTd3QYJHTatpLQ0FRAuQX58uidUSJbAPgliv1zul79qGIUXf4PWuiGEQ2dsT-KAxkuC0g_QCfclNQPFeDVCam6n2Ay4CD6CvJngfToydmoVdkLBgvDfImYS-1hp6tS7LMxik3NUZL7_nLl63cc0NSgY2IfBgp"/>
 </div>
 </div>
@@ -32,13 +32,13 @@ const TarifsDesServicesArtisan = () => {
 <main className="flex-grow">
 <section className="max-w-7xl mx-auto px-4 py-16 lg:py-24">
 <div className="text-center mb-16">
-<h1 className="text-4xl lg:text-6xl font-black mb-6 tracking-tight text-slate-900 dark:text-white">Tarifs des Services</h1>
-<p className="text-lg lg:text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+<h1 className="text-4xl lg:text-6xl font-black mb-6 tracking-tight text-slate-900">Tarifs des Services</h1>
+<p className="text-lg lg:text-xl text-slate-600 max-w-2xl mx-auto">
                         Découvrez les tarifs moyens pour vos travaux à domicile. Nous prônons la transparence et des prix justes pour chaque intervention.
                     </p>
 </div>
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<div className="group flex flex-col rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 p-8 shadow-sm transition-all hover:shadow-xl hover:border-primary/50">
+<div className="group flex flex-col rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition-all hover:shadow-xl hover:border-primary/50">
 <div className="mb-6 flex items-center justify-between">
 <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10 text-primary">
 <span className="material-symbols-outlined text-3xl">plumbing</span>
@@ -52,22 +52,22 @@ const TarifsDesServicesArtisan = () => {
 </div>
 </div>
 <ul className="flex-grow space-y-4 mb-8">
-<li className="flex items-center gap-3 text-slate-600 dark:text-slate-300">
+<li className="flex items-center gap-3 text-slate-600">
 <span className="material-symbols-outlined text-primary text-xl">check_circle</span>
 <span>Réparation de fuite</span>
 </li>
-<li className="flex items-center gap-3 text-slate-600 dark:text-slate-300">
+<li className="flex items-center gap-3 text-slate-600">
 <span className="material-symbols-outlined text-primary text-xl">check_circle</span>
 <span>Débouchage canalisation</span>
 </li>
-<li className="flex items-center gap-3 text-slate-600 dark:text-slate-300">
+<li className="flex items-center gap-3 text-slate-600">
 <span className="material-symbols-outlined text-primary text-xl">check_circle</span>
 <span>Installation de robinet</span>
 </li>
 </ul>
-<button className="w-full rounded-xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 py-3 font-bold transition-all group-hover:bg-primary group-hover:text-white">Réserver un plombier</button>
+<button className="w-full rounded-xl bg-slate-900 text-white py-3 font-bold transition-all group-hover:bg-primary group-hover:text-white">Réserver un plombier</button>
 </div>
-<div className="group flex flex-col rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 p-8 shadow-sm transition-all hover:shadow-xl hover:border-primary/50">
+<div className="group flex flex-col rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition-all hover:shadow-xl hover:border-primary/50">
 <div className="mb-6 flex items-center justify-between">
 <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10 text-primary">
 <span className="material-symbols-outlined text-3xl">bolt</span>
@@ -81,22 +81,22 @@ const TarifsDesServicesArtisan = () => {
 </div>
 </div>
 <ul className="flex-grow space-y-4 mb-8">
-<li className="flex items-center gap-3 text-slate-600 dark:text-slate-300">
+<li className="flex items-center gap-3 text-slate-600">
 <span className="material-symbols-outlined text-primary text-xl">check_circle</span>
 <span>Installation de prise</span>
 </li>
-<li className="flex items-center gap-3 text-slate-600 dark:text-slate-300">
+<li className="flex items-center gap-3 text-slate-600">
 <span className="material-symbols-outlined text-primary text-xl">check_circle</span>
 <span>Tableau électrique</span>
 </li>
-<li className="flex items-center gap-3 text-slate-600 dark:text-slate-300">
+<li className="flex items-center gap-3 text-slate-600">
 <span className="material-symbols-outlined text-primary text-xl">check_circle</span>
 <span>Diagnostic de panne</span>
 </li>
 </ul>
-<button className="w-full rounded-xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 py-3 font-bold transition-all group-hover:bg-primary group-hover:text-white">Réserver un électricien</button>
+<button className="w-full rounded-xl bg-slate-900 text-white py-3 font-bold transition-all group-hover:bg-primary group-hover:text-white">Réserver un électricien</button>
 </div>
-<div className="group flex flex-col rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 p-8 shadow-sm transition-all hover:shadow-xl hover:border-primary/50">
+<div className="group flex flex-col rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition-all hover:shadow-xl hover:border-primary/50">
 <div className="mb-6 flex items-center justify-between">
 <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10 text-primary">
 <span className="material-symbols-outlined text-3xl">format_paint</span>
@@ -110,22 +110,22 @@ const TarifsDesServicesArtisan = () => {
 </div>
 </div>
 <ul className="flex-grow space-y-4 mb-8">
-<li className="flex items-center gap-3 text-slate-600 dark:text-slate-300">
+<li className="flex items-center gap-3 text-slate-600">
 <span className="material-symbols-outlined text-primary text-xl">check_circle</span>
 <span>Peinture murale</span>
 </li>
-<li className="flex items-center gap-3 text-slate-600 dark:text-slate-300">
+<li className="flex items-center gap-3 text-slate-600">
 <span className="material-symbols-outlined text-primary text-xl">check_circle</span>
 <span>Lessivage plafonds</span>
 </li>
-<li className="flex items-center gap-3 text-slate-600 dark:text-slate-300">
+<li className="flex items-center gap-3 text-slate-600">
 <span className="material-symbols-outlined text-primary text-xl">check_circle</span>
 <span>Enduit de lissage</span>
 </li>
 </ul>
-<button className="w-full rounded-xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 py-3 font-bold transition-all group-hover:bg-primary group-hover:text-white">Réserver un peintre</button>
+<button className="w-full rounded-xl bg-slate-900 text-white py-3 font-bold transition-all group-hover:bg-primary group-hover:text-white">Réserver un peintre</button>
 </div>
-<div className="group flex flex-col rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 p-8 shadow-sm transition-all hover:shadow-xl hover:border-primary/50">
+<div className="group flex flex-col rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition-all hover:shadow-xl hover:border-primary/50">
 <div className="mb-6 flex items-center justify-between">
 <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10 text-primary">
 <span className="material-symbols-outlined text-3xl">cleaning_services</span>
@@ -139,22 +139,22 @@ const TarifsDesServicesArtisan = () => {
 </div>
 </div>
 <ul className="flex-grow space-y-4 mb-8">
-<li className="flex items-center gap-3 text-slate-600 dark:text-slate-300">
+<li className="flex items-center gap-3 text-slate-600">
 <span className="material-symbols-outlined text-primary text-xl">check_circle</span>
 <span>Nettoyage courant</span>
 </li>
-<li className="flex items-center gap-3 text-slate-600 dark:text-slate-300">
+<li className="flex items-center gap-3 text-slate-600">
 <span className="material-symbols-outlined text-primary text-xl">check_circle</span>
 <span>Lavage de vitres</span>
 </li>
-<li className="flex items-center gap-3 text-slate-600 dark:text-slate-300">
+<li className="flex items-center gap-3 text-slate-600">
 <span className="material-symbols-outlined text-primary text-xl">check_circle</span>
 <span>Repassage à domicile</span>
 </li>
 </ul>
-<button className="w-full rounded-xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 py-3 font-bold transition-all group-hover:bg-primary group-hover:text-white">Réserver ménage</button>
+<button className="w-full rounded-xl bg-slate-900 text-white py-3 font-bold transition-all group-hover:bg-primary group-hover:text-white">Réserver ménage</button>
 </div>
-<div className="group flex flex-col rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 p-8 shadow-sm transition-all hover:shadow-xl hover:border-primary/50">
+<div className="group flex flex-col rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition-all hover:shadow-xl hover:border-primary/50">
 <div className="mb-6 flex items-center justify-between">
 <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10 text-primary">
 <span className="material-symbols-outlined text-3xl">handyman</span>
@@ -168,22 +168,22 @@ const TarifsDesServicesArtisan = () => {
 </div>
 </div>
 <ul className="flex-grow space-y-4 mb-8">
-<li className="flex items-center gap-3 text-slate-600 dark:text-slate-300">
+<li className="flex items-center gap-3 text-slate-600">
 <span className="material-symbols-outlined text-primary text-xl">check_circle</span>
 <span>Meuble en kit</span>
 </li>
-<li className="flex items-center gap-3 text-slate-600 dark:text-slate-300">
+<li className="flex items-center gap-3 text-slate-600">
 <span className="material-symbols-outlined text-primary text-xl">check_circle</span>
 <span>Fixation murale</span>
 </li>
-<li className="flex items-center gap-3 text-slate-600 dark:text-slate-300">
+<li className="flex items-center gap-3 text-slate-600">
 <span className="material-symbols-outlined text-primary text-xl">check_circle</span>
 <span>Installation cuisine</span>
 </li>
 </ul>
-<button className="w-full rounded-xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 py-3 font-bold transition-all group-hover:bg-primary group-hover:text-white">Réserver montage</button>
+<button className="w-full rounded-xl bg-slate-900 text-white py-3 font-bold transition-all group-hover:bg-primary group-hover:text-white">Réserver montage</button>
 </div>
-<div className="flex flex-col items-center justify-center rounded-3xl border-2 border-dashed border-slate-300 dark:border-slate-700 p-8 text-center bg-transparent">
+<div className="flex flex-col items-center justify-center rounded-3xl border-2 border-dashed border-slate-300 p-8 text-center bg-transparent">
 <span className="material-symbols-outlined text-5xl text-slate-400 mb-4">more_horiz</span>
 <h3 className="text-xl font-bold mb-2">Autre besoin ?</h3>
 <p className="text-slate-500 mb-6">Jardinage, serrurerie, maçonnerie... nous avons l'artisan qu'il vous faut.</p>
@@ -194,7 +194,7 @@ const TarifsDesServicesArtisan = () => {
 </div>
 </div>
 </section>
-<section className="bg-slate-100 dark:bg-slate-900/80 py-20">
+<section className="bg-slate-100 py-20">
 <div className="max-w-4xl mx-auto px-4">
 <div className="text-center mb-12">
 <h2 className="text-3xl font-bold mb-4">Comment sont calculés nos prix ?</h2>
@@ -202,25 +202,25 @@ const TarifsDesServicesArtisan = () => {
 </div>
 <div className="grid md:grid-cols-3 gap-8 text-center">
 <div className="flex flex-col items-center">
-<div className="size-16 rounded-2xl bg-white dark:bg-slate-800 flex items-center justify-center shadow-md mb-4">
+<div className="size-16 rounded-2xl bg-white flex items-center justify-center shadow-md mb-4">
 <span className="material-symbols-outlined text-primary text-3xl">priority_high</span>
 </div>
 <h4 className="font-bold mb-2">Urgence</h4>
-<p className="text-sm text-slate-600 dark:text-slate-400">Les interventions de nuit ou le week-end peuvent inclure une majoration.</p>
+<p className="text-sm text-slate-600">Les interventions de nuit ou le week-end peuvent inclure une majoration.</p>
 </div>
 <div className="flex flex-col items-center">
-<div className="size-16 rounded-2xl bg-white dark:bg-slate-800 flex items-center justify-center shadow-md mb-4">
+<div className="size-16 rounded-2xl bg-white flex items-center justify-center shadow-md mb-4">
 <span className="material-symbols-outlined text-primary text-3xl">inventory_2</span>
 </div>
 <h4 className="font-bold mb-2">Fournitures</h4>
-<p className="text-sm text-slate-600 dark:text-slate-400">Le coût des pièces et matériaux nécessaires à la réparation ou installation.</p>
+<p className="text-sm text-slate-600">Le coût des pièces et matériaux nécessaires à la réparation ou installation.</p>
 </div>
 <div className="flex flex-col items-center">
-<div className="size-16 rounded-2xl bg-white dark:bg-slate-800 flex items-center justify-center shadow-md mb-4">
+<div className="size-16 rounded-2xl bg-white flex items-center justify-center shadow-md mb-4">
 <span className="material-symbols-outlined text-primary text-3xl">account_tree</span>
 </div>
 <h4 className="font-bold mb-2">Complexité</h4>
-<p className="text-sm text-slate-600 dark:text-slate-400">La difficulté technique et le temps estimé pour réaliser la prestation.</p>
+<p className="text-sm text-slate-600">La difficulté technique et le temps estimé pour réaliser la prestation.</p>
 </div>
 </div>
 </div>

@@ -5,13 +5,13 @@ const ElectriciteCategory = () => {
     <>
       
 {/*  Unified Header  */}
-<header className="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md">
+<header className="sticky top-0 z-50 w-full border-b border-slate-200 bg-white/80 backdrop-blur-md">
 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div className="flex h-16 items-center justify-between">
 <div className="flex items-center gap-8">
 <div className="flex items-center gap-2 text-primary">
 <span className="material-symbols-outlined text-3xl font-bold">bolt</span>
-<h2 className="text-slate-900 dark:text-slate-100 text-xl font-black tracking-tight">ProServices</h2>
+<h2 className="text-slate-900 text-xl font-black tracking-tight">ProServices</h2>
 </div>
 <nav className="hidden md:flex items-center gap-6">
 <a className="text-sm font-semibold hover:text-primary transition-colors" href="#">Accueil</a>
@@ -23,9 +23,9 @@ const ElectriciteCategory = () => {
 <div className="flex items-center gap-4 flex-1 justify-end max-w-md">
 <div className="relative w-full hidden sm:block">
 <span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xl">search</span>
-<input className="w-full pl-10 pr-4 py-2 bg-slate-100 dark:bg-slate-800 border-none rounded-lg focus:ring-2 focus:ring-primary text-sm" placeholder="Rechercher un service..." type="text"/>
+<input className="w-full pl-10 pr-4 py-2 bg-slate-100 border-none rounded-lg focus:ring-2 focus:ring-primary text-sm" placeholder="Rechercher un service..." type="text"/>
 </div>
-<button className="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800">
+<button className="p-2 rounded-full hover:bg-slate-100">
 <span className="material-symbols-outlined">notifications</span>
 </button>
 <div className="h-8 w-8 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold overflow-hidden border border-primary/30">
@@ -58,7 +58,7 @@ const ElectriciteCategory = () => {
 </div>
 </div>
 {/*  Quote Sidebar  */}
-<div className="bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-200 dark:border-slate-800 shadow-xl shadow-slate-200/50 dark:shadow-none flex flex-col justify-between">
+<div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-xl shadow-slate-200/50 flex flex-col justify-between">
 <div>
 <div className="flex items-center gap-3 mb-6">
 <div className="p-3 bg-primary/10 rounded-xl">
@@ -85,9 +85,9 @@ const ElectriciteCategory = () => {
 </div>
 </div>
 <div className="space-y-4">
-<div className="p-4 bg-slate-50 dark:bg-slate-800 rounded-xl border border-dashed border-slate-300 dark:border-slate-700 text-center">
+<div className="p-4 bg-slate-50 rounded-xl border border-dashed border-slate-300 text-center">
 <p className="text-xs text-slate-500 uppercase font-bold mb-1 tracking-widest">Urgence 24/7</p>
-<p className="text-xl font-black text-slate-900 dark:text-white">01 23 45 67 89</p>
+<p className="text-xl font-black text-slate-900">01 23 45 67 89</p>
 </div>
 <button className="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-xl shadow-lg shadow-primary/20 transition-all">
                         Demander un devis gratuit
@@ -108,8 +108,8 @@ const ElectriciteCategory = () => {
 </div>
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 {/*  Service 1  */}
-<div className="group bg-white dark:bg-slate-900 p-8 rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all hover:shadow-lg">
-<div className="size-14 bg-blue-50 dark:bg-blue-900/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<div className="group bg-white p-8 rounded-2xl border border-slate-200 hover:border-primary/50 transition-all hover:shadow-lg">
+<div className="size-14 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
 <span className="material-symbols-outlined text-blue-600 text-3xl">lightbulb</span>
 </div>
 <h3 className="text-xl font-bold mb-3">Éclairage &amp; Design</h3>
@@ -117,8 +117,8 @@ const ElectriciteCategory = () => {
 <a className="text-primary font-bold text-sm flex items-center gap-2" href="#">Découvrir <span className="material-symbols-outlined text-sm">chevron_right</span></a>
 </div>
 {/*  Service 2  */}
-<div className="group bg-white dark:bg-slate-900 p-8 rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all hover:shadow-lg">
-<div className="size-14 bg-orange-50 dark:bg-orange-900/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<div className="group bg-white p-8 rounded-2xl border border-slate-200 hover:border-primary/50 transition-all hover:shadow-lg">
+<div className="size-14 bg-orange-50 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
 <span className="material-symbols-outlined text-orange-600 text-3xl">verified</span>
 </div>
 <h3 className="text-xl font-bold mb-3">Mise en Conformité</h3>
@@ -126,8 +126,8 @@ const ElectriciteCategory = () => {
 <a className="text-primary font-bold text-sm flex items-center gap-2" href="#">Découvrir <span className="material-symbols-outlined text-sm">chevron_right</span></a>
 </div>
 {/*  Service 3  */}
-<div className="group bg-white dark:bg-slate-900 p-8 rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all hover:shadow-lg">
-<div className="size-14 bg-green-50 dark:bg-green-900/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<div className="group bg-white p-8 rounded-2xl border border-slate-200 hover:border-primary/50 transition-all hover:shadow-lg">
+<div className="size-14 bg-green-50 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
 <span className="material-symbols-outlined text-green-600 text-3xl">ev_station</span>
 </div>
 <h3 className="text-xl font-bold mb-3">Bornes de Recharge</h3>
@@ -212,7 +212,7 @@ const ElectriciteCategory = () => {
 </div>
 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 {/*  Expert 1  */}
-<div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden hover:shadow-xl transition-shadow group">
+<div className="bg-white border border-slate-200 rounded-2xl overflow-hidden hover:shadow-xl transition-shadow group">
 <div className="h-48 relative overflow-hidden">
 <img className="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="Portrait de Thomas expert électricien" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9xUZ9rs_XknGa6nTkSpYfxho1BiVdSJU4jFl_RPgktmKJeS9dlGCe4Cpo1RXZpm-x8yCtntsiU5PgjQrn9RzTpu5GByDyUQNktnUEeGr9x33gVYeHcwLgCnbfyoWeo_jdT659Z6QbrGopwb0BkvrT0WxXUkR_FwiNtip1CUahUEdxTTaKYg3u3VpE2536JVBkqnkszGGWfsIc7PtCTTkL_tBBZwHwLPQMQf9AcS9JfCK8B2CYtLOmZ2haS4GTWDyQujwG1TXVbJYm"/>
 <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-lg flex items-center gap-1 text-slate-900 font-bold text-xs shadow-sm">
@@ -223,14 +223,14 @@ const ElectriciteCategory = () => {
 <h4 className="font-bold text-lg mb-1">Thomas G.</h4>
 <p className="text-slate-500 text-sm mb-4">Électricien Indépendant • 12 ans d'exp.</p>
 <div className="flex flex-wrap gap-2 mb-6">
-<span className="text-[10px] uppercase font-black bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">Dépannage</span>
-<span className="text-[10px] uppercase font-black bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">Domotique</span>
+<span className="text-[10px] uppercase font-black bg-slate-100 px-2 py-1 rounded">Dépannage</span>
+<span className="text-[10px] uppercase font-black bg-slate-100 px-2 py-1 rounded">Domotique</span>
 </div>
 <button className="w-full border-2 border-primary text-primary hover:bg-primary hover:text-white font-bold py-2 rounded-xl transition-all">Voir profil</button>
 </div>
 </div>
 {/*  Expert 2  */}
-<div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden hover:shadow-xl transition-shadow group">
+<div className="bg-white border border-slate-200 rounded-2xl overflow-hidden hover:shadow-xl transition-shadow group">
 <div className="h-48 relative overflow-hidden">
 <img className="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="Portrait de Sarah experte électricité" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCShHoAxweJBJrZ6ZVgdQ5G7neKXvwmma52yirKSmw_SVUtWufitB7x2iQpP0OllGSp4K583e-qAaFTc3JIb2ZfruMdU2d7tZ-GhewWbCn_hqYbIKFHy_Si7NyGIo-a2uQ9ZStVDg9kXfPmOLfudN8vdskysFFoqhCyMdEAc_izW-USlX0wHj5JkqDiGkcUM5h4ALUSh1k2KPNC5EYwFCq_XVnrY-Q_HCX_lY6WSi7q-CzzuUDr8EK7zbSdD7cH9WjG1pQAgLegRX23"/>
 <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-lg flex items-center gap-1 text-slate-900 font-bold text-xs shadow-sm">
@@ -241,14 +241,14 @@ const ElectriciteCategory = () => {
 <h4 className="font-bold text-lg mb-1">Sarah M.</h4>
 <p className="text-slate-500 text-sm mb-4">SARL Élec Pro • 8 ans d'exp.</p>
 <div className="flex flex-wrap gap-2 mb-6">
-<span className="text-[10px] uppercase font-black bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">Mise aux normes</span>
-<span className="text-[10px] uppercase font-black bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">Rénovation</span>
+<span className="text-[10px] uppercase font-black bg-slate-100 px-2 py-1 rounded">Mise aux normes</span>
+<span className="text-[10px] uppercase font-black bg-slate-100 px-2 py-1 rounded">Rénovation</span>
 </div>
 <button className="w-full border-2 border-primary text-primary hover:bg-primary hover:text-white font-bold py-2 rounded-xl transition-all">Voir profil</button>
 </div>
 </div>
 {/*  Expert 3  */}
-<div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden hover:shadow-xl transition-shadow group">
+<div className="bg-white border border-slate-200 rounded-2xl overflow-hidden hover:shadow-xl transition-shadow group">
 <div className="h-48 relative overflow-hidden">
 <img className="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="Portrait de Jean expert maintenance" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaXppezjkdsGUPmDYgYAh4kskHKtPq0gVF-Lm4qo0npR2n2TOlBQrDpmb29Zybf_-m0TuNSDLezB7SvM0bySz4jHOlsXcdI1pkf95ZElM65r3M35ZpFr_XEG823DKG3oaOIbidIUr7SR_QZjpFkrqiCiemiW4APbm1EdktiXWX-oJgYuWhTr0TpIOetYTyAKsNdphNRGl_WN0KbSEsB1LsO3DSw9eJp_Q9Q8rSJv1q984ou6jhOBbH-HsLu9MsgoHR0kK9US--qsYz"/>
 <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-lg flex items-center gap-1 text-slate-900 font-bold text-xs shadow-sm">
@@ -259,14 +259,14 @@ const ElectriciteCategory = () => {
 <h4 className="font-bold text-lg mb-1">Jean-Luc B.</h4>
 <p className="text-slate-500 text-sm mb-4">Expert Maintenance • 20 ans d'exp.</p>
 <div className="flex flex-wrap gap-2 mb-6">
-<span className="text-[10px] uppercase font-black bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">Industriel</span>
-<span className="text-[10px] uppercase font-black bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">Tableaux</span>
+<span className="text-[10px] uppercase font-black bg-slate-100 px-2 py-1 rounded">Industriel</span>
+<span className="text-[10px] uppercase font-black bg-slate-100 px-2 py-1 rounded">Tableaux</span>
 </div>
 <button className="w-full border-2 border-primary text-primary hover:bg-primary hover:text-white font-bold py-2 rounded-xl transition-all">Voir profil</button>
 </div>
 </div>
 {/*  Expert 4  */}
-<div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden hover:shadow-xl transition-shadow group">
+<div className="bg-white border border-slate-200 rounded-2xl overflow-hidden hover:shadow-xl transition-shadow group">
 <div className="h-48 relative overflow-hidden">
 <img className="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="Portrait de Karim spécialiste IRVE" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-gC8XEfjIPWOjRrli93wjOavheCV5pZp5jv-k04IUF7BOiX9zs4_y5r9RRdAsXvUR2YZ6LPPyA82NLr4j2EIKjBLCn0v6l9pO3UpVskwQqNM4DQvAlMePPNh7W6EOE-P0IbGE25gr22yZ4cV1Xcxe34L1icodGvUrHI9kCwEXN1dGiPoTEujJwGYxNTlFcB0qyZstpOYWqB1MDd-rOKDLCrz_y2oUS72jQmiatGXN5-KRGm6HQlV9lz-tyaM4hu_vsWe_7LkNefE_"/>
 <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-lg flex items-center gap-1 text-slate-900 font-bold text-xs shadow-sm">
@@ -277,8 +277,8 @@ const ElectriciteCategory = () => {
 <h4 className="font-bold text-lg mb-1">Karim A.</h4>
 <p className="text-slate-500 text-sm mb-4">Éco-Solution Élec • 5 ans d'exp.</p>
 <div className="flex flex-wrap gap-2 mb-6">
-<span className="text-[10px] uppercase font-black bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">Bornes IRVE</span>
-<span className="text-[10px] uppercase font-black bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">Solaire</span>
+<span className="text-[10px] uppercase font-black bg-slate-100 px-2 py-1 rounded">Bornes IRVE</span>
+<span className="text-[10px] uppercase font-black bg-slate-100 px-2 py-1 rounded">Solaire</span>
 </div>
 <button className="w-full border-2 border-primary text-primary hover:bg-primary hover:text-white font-bold py-2 rounded-xl transition-all">Voir profil</button>
 </div>
@@ -287,7 +287,7 @@ const ElectriciteCategory = () => {
 </section>
 </main>
 {/*  Footer  */}
-<footer className="bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-900 py-12">
+<footer className="bg-white border-t border-slate-200 py-12">
 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
 <div>
@@ -323,7 +323,7 @@ const ElectriciteCategory = () => {
 </ul>
 </div>
 </div>
-<div className="pt-8 border-t border-slate-200 dark:border-slate-900 flex flex-col md:flex-row justify-between items-center gap-4">
+<div className="pt-8 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-4">
 <p className="text-sm text-slate-500">© 2024 ProServices. Tous droits réservés.</p>
 <div className="flex gap-4">
 <span className="material-symbols-outlined text-slate-400 cursor-pointer hover:text-primary">social_leaderboard</span>
