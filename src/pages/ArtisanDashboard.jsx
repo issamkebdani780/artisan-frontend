@@ -292,7 +292,7 @@ const ArtisanDashboard = () => {
                       </td>
                       <td className="px-10 py-8 text-center">
                         <div className="flex items-center justify-center gap-3">
-                          {(booking.status === 'pending' || booking.status === 'en attente') && (
+                          {(booking.status === 'pending' || booking.status === 'en attente' || booking.status === 'cancelled' || booking.status === 'annulé') && (
                             <button onClick={() => updateStatus(booking, 'confirmed')} className="size-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center hover:bg-indigo-600 hover:text-white transition-all shadow-sm active:scale-90" title="Confirmer">
                               <span className="material-symbols-outlined text-sm font-black">check</span>
                             </button>
@@ -302,7 +302,7 @@ const ArtisanDashboard = () => {
                               <span className="material-symbols-outlined text-sm font-black">done_all</span>
                             </button>
                           )}
-                          {booking.status !== 'completed' && booking.status !== 'cancelled' && booking.status !== 'terminé' && (
+                          {booking.status !== 'completed' && booking.status !== 'terminé' && booking.status !== 'cancelled' && booking.status !== 'annulé' && (
                             <button onClick={() => updateStatus(booking, 'cancelled')} className="size-10 rounded-xl bg-red-50 text-red-600 flex items-center justify-center hover:bg-red-600 hover:text-white transition-all shadow-sm active:scale-90" title="Annuler">
                               <span className="material-symbols-outlined text-sm font-black">close</span>
                             </button>

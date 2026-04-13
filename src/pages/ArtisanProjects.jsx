@@ -219,7 +219,7 @@ const ArtisanProjects = () => {
                       </td>
                       <td className="px-10 py-8">
                         <div className="flex items-center justify-center gap-3">
-                          {(project.status === 'pending' || project.status === 'en attente') && (
+                          {(project.status === 'pending' || project.status === 'en attente' || project.status === 'cancelled' || project.status === 'annulé') && (
                             <button 
                               onClick={() => updateStatus(project, 'confirmed')}
                               className="size-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center hover:bg-indigo-600 hover:text-white transition-all shadow-sm active:scale-90"
