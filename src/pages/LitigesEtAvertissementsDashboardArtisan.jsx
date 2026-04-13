@@ -11,7 +11,7 @@ const LitigesEtAvertissementsDashboardArtisan = () => {
 <div className="size-8 bg-primary rounded-lg flex items-center justify-center text-white">
 <span className="material-symbols-outlined">handyman</span>
 </div>
-<h2 className="text-lg font-bold tracking-tight">Artisan Pro</h2>
+<h2 className="text-lg font-bold tracking-tight">Mihnati PRO</h2>
 </div>
 <div className="px-4 py-2">
 <div className="flex items-center gap-3 px-3 py-4 border-b border-slate-100 mb-4">

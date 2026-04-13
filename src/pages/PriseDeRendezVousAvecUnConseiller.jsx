@@ -11,7 +11,7 @@ const PriseDeRendezVousAvecUnConseiller = () => {
 <div className="text-primary">
 <span className="material-symbols-outlined text-3xl">handyman</span>
 </div>
-<h2 className="text-slate-900 text-lg font-bold leading-tight tracking-[-0.015em]">Artisan Pro</h2>
+<h2 className="text-slate-900 text-lg font-bold leading-tight tracking-[-0.015em]">Mihnati PRO</h2>
 </div>
 <div className="flex flex-1 justify-end gap-8">
 <nav className="hidden md:flex items-center gap-9">

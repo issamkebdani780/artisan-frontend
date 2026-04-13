@@ -47,7 +47,7 @@ const AvertissementsAdministratifsSecrets = () => {
 <div className="mt-auto pt-6 border-t border-slate-800">
 <div className="flex items-center gap-3 px-3">
 <div className="size-10 rounded-full bg-slate-700 overflow-hidden">
-<img className="w-full h-full object-cover" data-alt="Photo de profil de l'artisan professionnel" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmsO37M5DnDENuKVh9fxasWxG53agXq4IcGvWcQ8LASSgg6ywaXxVuD1ZqqDm6oZJIuDdLaebjXeSWZw52kMA7OJLSVUvGVi0cPisLWzfqX-EFp7tVFIJ-qtSEHOBnETN3H-emMHZj7xZOj4dsH6LYcLovS9Wie8ejCySVHZUG3s3r_QNY5kp88fIlRr4vYM69HQJR_R1d6G9P0v4LRvq2cVinAClS3O_3ca8e3EIiM0ld66x7cJoai8IVsQmOby1Sfg_dG0-hbMcy"/>
+<img className="w-full h-full object-cover" data-alt="Photo de profil de l'Mihnati PROfessionnel" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmsO37M5DnDENuKVh9fxasWxG53agXq4IcGvWcQ8LASSgg6ywaXxVuD1ZqqDm6oZJIuDdLaebjXeSWZw52kMA7OJLSVUvGVi0cPisLWzfqX-EFp7tVFIJ-qtSEHOBnETN3H-emMHZj7xZOj4dsH6LYcLovS9Wie8ejCySVHZUG3s3r_QNY5kp88fIlRr4vYM69HQJR_R1d6G9P0v4LRvq2cVinAClS3O_3ca8e3EIiM0ld66x7cJoai8IVsQmOby1Sfg_dG0-hbMcy"/>
 </div>
 <div className="flex flex-col">
 <p className="text-sm font-bold">Jean Dupont</p>

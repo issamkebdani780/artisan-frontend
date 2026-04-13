@@ -1,4 +1,4 @@
-ï»¿import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import apiService from '../services/api';
 
@@ -30,7 +30,7 @@ const ServiceDetails = () => {
 
   if (!service) return (
     <div className="min-h-screen flex items-center justify-center text-slate-500">
-      Service non trouvÃ©.
+      Service non trouvé.
     </div>
   );
 
@@ -56,10 +56,10 @@ const ServiceDetails = () => {
         {/* CTA & Quick Stats */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-8 p-8 bg-white rounded-3xl -mt-12 relative z-20 border border-slate-100 shadow-2xl shadow-slate-200/50">
           <div className="flex flex-col gap-2">
-            <p className="text-slate-900 text-3xl font-black">Ã€ partir de {service.base_price} DA</p>
+            <p className="text-slate-900 text-3xl font-black">À partir de {service.base_price} DA</p>
             <div className="flex items-center gap-2">
               <span className="material-symbols-outlined text-emerald-500 text-xl font-bold">verified_user</span>
-              <p className="text-slate-500 font-medium">Artisans certifiÃ©s et travaux garantis</p>
+              <p className="text-slate-500 font-medium">Artisans certifiés et travaux garantis</p>
             </div>
           </div>
           <div className="flex gap-4 w-full md:w-auto">
@@ -67,7 +67,7 @@ const ServiceDetails = () => {
               onClick={() => navigate(`/request-quote?serviceId=${service.id}`)}
               className="flex-1 md:flex-none flex items-center justify-center rounded-2xl h-16 px-12 bg-blue-600 text-white text-lg font-black transition-all hover:scale-[1.02] active:scale-95 shadow-xl shadow-blue-600/20"
             >
-              RÃ©server Maintenant
+              Réserver Maintenant
             </button>
             <button className="flex items-center justify-center rounded-2xl h-16 w-16 bg-slate-50 text-slate-900 border border-slate-100 hover:bg-slate-100 transition-colors">
               <span className="material-symbols-outlined">share</span>
@@ -90,7 +90,7 @@ const ServiceDetails = () => {
           <div className="flex flex-col gap-3 rounded-3xl p-8 border border-slate-100 bg-slate-50/30 text-center md:text-left">
             <span className="material-symbols-outlined text-blue-600 text-4xl">workspace_premium</span>
             <p className="text-slate-400 text-sm font-bold uppercase tracking-widest">Garantie</p>
-            <p className="text-slate-900 text-3xl font-black">CertifiÃ©e</p>
+            <p className="text-slate-900 text-3xl font-black">Certifiée</p>
           </div>
         </div>
 
@@ -105,7 +105,7 @@ const ServiceDetails = () => {
                     <span className="material-symbols-outlined">timer</span>
                   </div>
                   <h3 className="text-xl font-bold">Intervention Rapide</h3>
-                  <p className="text-slate-500 leading-relaxed">Nos artisans interviennent en moins de 24h pour les urgences Ã  travers toute l'AlgÃ©rie.</p>
+                  <p className="text-slate-500 leading-relaxed">Nos artisans interviennent en moins de 24h pour les urgences à travers toute l'Algérie.</p>
                 </div>
                 <div className="space-y-4 p-6 rounded-3xl border border-slate-50 bg-white shadow-sm">
                   <div className="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center">
@@ -121,7 +121,7 @@ const ServiceDetails = () => {
           <aside className="space-y-8">
             <div className="bg-slate-900 p-8 rounded-3xl text-white space-y-6">
               <h3 className="text-2xl font-black">Besoin d'aide ?</h3>
-              <p className="text-slate-400">Nos experts sont Ã  votre disposition pour vous conseiller sur vos travaux.</p>
+              <p className="text-slate-400">Nos experts sont à votre disposition pour vous conseiller sur vos travaux.</p>
               <button className="w-full py-4 bg-white text-slate-900 rounded-2xl font-black hover:bg-slate-100 transition-colors">
                 Contacter un expert
               </button>

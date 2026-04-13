@@ -12,7 +12,7 @@ const Notifications = () => {
 <div className="flex items-center justify-center rounded-lg bg-primary text-white p-1.5">
 <span className="material-symbols-outlined text-xl">handyman</span>
 </div>
-<h2 className="text-lg font-bold leading-tight tracking-tight">Artisan Pro</h2>
+<h2 className="text-lg font-bold leading-tight tracking-tight">Mihnati PRO</h2>
 </div>
 <div className="hidden md:flex items-center">
 <div className="relative group">

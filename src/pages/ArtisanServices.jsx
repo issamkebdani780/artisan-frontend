@@ -141,7 +141,7 @@ const ArtisanServices = () => {
   const uniqueCategories = [...new Set(services.map(s => s.category_name))].length;
 
   return (
-    <ArtisanLayout title="Artisan PRO" subtitle="Mes Services" hideHeader={true}>
+    <ArtisanLayout title="Mihnati PRO" subtitle="Mes Services" hideHeader={true}>
       <div className="p-4 md:p-8 flex-1 flex flex-col overflow-y-auto font-['Outfit',sans-serif] bg-slate-50/20 transition-colors">
         
         {/* Header */}

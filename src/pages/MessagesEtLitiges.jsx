@@ -11,7 +11,7 @@ const MessagesEtLitiges = () => {
 <div className="bg-primary rounded-lg p-2 text-white">
 <span className="material-symbols-outlined">construction</span>
 </div>
-<h1 className="font-bold text-lg tracking-tight">Artisan Pro</h1>
+<h1 className="font-bold text-lg tracking-tight">Mihnati PRO</h1>
 </div>
 <nav className="flex-1 px-4 space-y-1">
 <a className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-600 hover:bg-slate-100 transition-colors" href="#">

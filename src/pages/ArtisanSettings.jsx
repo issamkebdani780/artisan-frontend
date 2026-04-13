@@ -185,7 +185,7 @@ const ArtisanSettings = () => {
   const handleLogout = () => { apiService.logout(); navigate('/'); };
 
   return (
-    <ArtisanLayout title="Artisan PRO" subtitle="Paramètres">
+    <ArtisanLayout title="Mihnati PRO" subtitle="Paramètres">
       <div className="flex-1 font-['Outfit',sans-serif] text-left max-w-6xl py-4">
         <div className="mb-10 px-4 text-left">
           <h2 className="text-3xl font-black text-slate-900 tracking-tighter uppercase mb-2">Paramètres Expert</h2>
