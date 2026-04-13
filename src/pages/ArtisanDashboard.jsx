@@ -47,6 +47,7 @@ const ArtisanDashboard = () => {
             id: `d-${d.id}`,
             service_title: d.category_name,
             client_name: d.client_name,
+            client_id: d.client_id,
             booking_date: d.date,
             status: d.status,
             total_price: d.budget,
