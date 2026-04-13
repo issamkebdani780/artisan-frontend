@@ -273,7 +273,7 @@ const PerformanceExportPdf = () => {
 <td className="px-6 py-4">
 <span className="px-2.5 py-1 rounded-full text-[10px] font-bold bg-amber-500/10 text-amber-500 uppercase tracking-wider">En attente</span>
 </td>
-<td className="px-6 py-4 text-sm text-slate-500">Virement Bancaire</td>
+<td className="px-6 py-4 text-sm text-slate-500">Carte Bancaire</td>
 <td className="px-6 py-4 text-right">
 <button className="text-slate-400 hover:text-primary"><span className="material-symbols-outlined text-sm">visibility</span></button>
 </td>

@@ -104,24 +104,7 @@ const PaymentModal = ({ isOpen, onClose, project, onPaymentSuccess }) => {
                   </div>
                 </button>
 
-                <button 
-                  onClick={() => handlePayment('transfer')}
-                  disabled={loading}
-                  className="w-full flex items-center justify-between p-6 bg-white border border-slate-100 rounded-3xl hover:border-amber-500 hover:shadow-2xl hover:shadow-amber-500/10 transition-all group scale-100 active:scale-[0.98]"
-                >
-                  <div className="flex items-center gap-5">
-                    <div className="size-14 rounded-2xl bg-amber-50 text-amber-600 flex items-center justify-center transform group-hover:rotate-6 transition-transform">
-                      <span className="material-symbols-outlined text-2xl font-black">account_balance</span>
-                    </div>
-                    <div className="text-left">
-                      <p className="font-black text-slate-900 text-base">Virement Bancaire (CCP)</p>
-                      <p className="text-xs text-slate-500">Validation manuelle</p>
-                    </div>
-                  </div>
-                  <div className="size-8 rounded-full border border-slate-100 flex items-center justify-center group-hover:bg-amber-500 group-hover:text-white transition-all">
-                    <span className="material-symbols-outlined text-sm">chevron_right</span>
-                  </div>
-                </button>
+
               </div>
 
               <div className="flex items-center justify-center gap-2 text-[10px] font-black uppercase text-slate-400 tracking-widest bg-slate-50 py-3 rounded-2xl border border-slate-100">
