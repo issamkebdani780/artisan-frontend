@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import apiService from '../services/api';
 
@@ -113,7 +113,6 @@ const ArtisanLogin = () => {
                 <input type="checkbox" className="w-5 h-5 rounded-md border-slate-200 text-orange-500 focus:ring-orange-500/20 cursor-pointer" />
                 <span className="text-slate-500 group-hover:text-slate-900 transition-colors font-medium">Se souvenir de moi</span>
               </label>
-              <Link to="/forgot-password" title="Réinitialiser votre mot de passe" className="text-orange-500 font-bold hover:text-orange-400 transition-colors">Mot de passe oublié ?</Link>
             </div>
 
             {/* Submit Button */}

@@ -40,7 +40,7 @@ const ClientLayout = ({ children, title = "Mihnati Client", subtitle = "Tableau 
         <div className="flex flex-col gap-10 p-4 lg:p-8">
           <div className="flex items-center justify-between">
             <div className={`flex items-center gap-4 transition-all duration-300 ${isCollapsed ? 'lg:opacity-0 lg:scale-0 lg:w-0' : 'opacity-100 scale-100'}`}>
-              <img src={logo} alt="Mihnati Logo" className="h-10 lg:h-12 w-auto object-contain bg-white rounded-xl p-1" />
+              <img src={logo} alt="Mihnati Logo" className="h-14 lg:h-16 w-auto object-contain bg-white rounded-xl p-1" />
               <div className="flex flex-col">
                 <h1 className="text-lg lg:text-xl font-black tracking-tighter flex items-center gap-1 uppercase truncate overflow-hidden text-slate-900">
                   {title}
