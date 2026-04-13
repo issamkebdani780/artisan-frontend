@@ -48,8 +48,8 @@ const ClientLayout = ({ children, title = "Mihnati Client", subtitle = "Tableau 
                 <p className="text-primary text-[10px] font-black uppercase tracking-widest truncate overflow-hidden transition-colors">{subtitle}</p>
               </div>
             </div>
-            <button 
-              className="p-2 text-slate-400 hover:text-primary transition-colors" 
+            <button
+              className="p-2 text-slate-400 hover:text-primary transition-colors"
               onClick={() => {
                 const isMobile = window.innerWidth < 1024;
                 if (isMobile) setIsSidebarOpen(false);
@@ -61,7 +61,7 @@ const ClientLayout = ({ children, title = "Mihnati Client", subtitle = "Tableau 
               </span>
             </button>
           </div>
-          
+
           <nav className="flex flex-col gap-3 overflow-y-auto custom-scrollbar">
             {navItems.map((item, idx) => {
               const isActive = path === item.path;
@@ -69,6 +69,7 @@ const ClientLayout = ({ children, title = "Mihnati Client", subtitle = "Tableau 
                 <Link 
                   key={idx} 
                   to={item.path} 
+
                   className={`flex items-center gap-4 px-5 py-4 rounded-2xl transition-all ${isActive ? 'bg-primary text-white shadow-xl shadow-primary/20' : 'text-slate-500 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-white/5 hover:text-slate-900 dark:hover:text-white group'} ${isCollapsed ? 'lg:justify-center lg:px-0' : ''}`}
                   onClick={() => setIsSidebarOpen(false)}
                 >
@@ -91,6 +92,7 @@ const ClientLayout = ({ children, title = "Mihnati Client", subtitle = "Tableau 
       {/* Mobile Sidebar Overlay */}
       {isSidebarOpen && (
         <div 
+
           className="fixed inset-0 bg-slate-900/40 dark:bg-black/60 backdrop-blur-sm z-50 lg:hidden animate-in fade-in duration-300"
           onClick={() => setIsSidebarOpen(false)}
         ></div>
@@ -98,7 +100,7 @@ const ClientLayout = ({ children, title = "Mihnati Client", subtitle = "Tableau 
 
       {/* Main Content Area */}
       <main className="flex-1 flex flex-col min-w-0 min-h-screen relative transition-all duration-300">
-        
+
         {/* Header */}
         <header className={`h-24 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-50 dark:border-white/5 px-8 flex items-center justify-between fixed ${headerLeft} left-0 right-0 top-0 z-50 shrink-0 transition-all duration-300 shadow-sm`}>
           <div className="flex items-center gap-6 flex-1">
@@ -111,7 +113,7 @@ const ClientLayout = ({ children, title = "Mihnati Client", subtitle = "Tableau 
             </div>
             <ThemeToggle className="ml-2 hidden lg:flex" />
           </div>
-          
+
           <div className="flex items-center gap-2">
             <button className="size-12 rounded-2xl bg-white dark:bg-slate-800 border border-slate-100 dark:border-white/10 flex items-center justify-center text-slate-400 relative hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors shadow-sm">
               <span className="material-symbols-outlined text-xl">notifications</span>
@@ -136,7 +138,7 @@ const ClientLayout = ({ children, title = "Mihnati Client", subtitle = "Tableau 
         <div className="relative z-10 flex-1 flex flex-col p-6 lg:p-12">
           {children}
         </div>
-        
+
       </main>
     </div>
   );

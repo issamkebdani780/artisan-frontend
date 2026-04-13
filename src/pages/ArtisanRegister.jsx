@@ -253,6 +253,10 @@ const ArtisanRegister = () => {
                       {
                         group: "Mécanique",
                         options: ["Mécanicien auto", "Mécanicien moto", "Moteurs électriques", "Mécanicien agricole"]
+                      },
+                      {
+                        group: "Déménagement",
+                        options: ["Déménagement complet", "Transporteur", "Manutention", "Location utilitaire"]
                       }
                     ].map((group, idx) => (
                       <div key={idx} className="space-y-3">

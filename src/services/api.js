@@ -483,6 +483,13 @@ const apiService = {
     return handleResponse(res);
   },
 
+  getAllProjects: async () => {
+    const res = await fetch(`${BASE_URL}/admin/projects`, {
+      headers: getAuthHeaders(),
+    });
+    return handleResponse(res);
+  },
+
   getAllPayments: async () => {
     const res = await fetch(`${BASE_URL}/admin/payments`, {
       headers: getAuthHeaders(),

@@ -67,8 +67,8 @@ const ArtisanLayout = ({ children, title = "Mihnati PRO", subtitle = "Premium Pl
                 </p>
               </div>
             </div>
-            <button 
-              className="p-2 text-slate-400 hover:text-secondary transition-colors" 
+            <button
+              className="p-2 text-slate-400 hover:text-secondary transition-colors"
               onClick={() => {
                 const isMobile = window.innerWidth < 1024;
                 if (isMobile) setIsSidebarOpen(false);
@@ -80,7 +80,7 @@ const ArtisanLayout = ({ children, title = "Mihnati PRO", subtitle = "Premium Pl
               </span>
             </button>
           </div>
-          
+
           <nav className="flex flex-col gap-3 overflow-y-auto custom-scrollbar">
             {[
               { path: '/dashboard/artisan', icon: 'home', label: 'Accueil' },
@@ -129,6 +129,7 @@ const ArtisanLayout = ({ children, title = "Mihnati PRO", subtitle = "Premium Pl
       {/* Mobile Sidebar Overlay */}
       {isSidebarOpen && (
         <div 
+
           className="fixed inset-0 bg-slate-900/40 dark:bg-black/60 backdrop-blur-sm z-50 lg:hidden animate-in fade-in duration-300"
           onClick={() => setIsSidebarOpen(false)}
         ></div>
@@ -136,7 +137,7 @@ const ArtisanLayout = ({ children, title = "Mihnati PRO", subtitle = "Premium Pl
 
       {/* Main Content Area */}
       <main className="flex-1 flex flex-col min-w-0 min-h-screen relative transition-all duration-300">
-        
+
         {/* Header */}
         {!hideHeader && (
           <>
@@ -151,7 +152,7 @@ const ArtisanLayout = ({ children, title = "Mihnati PRO", subtitle = "Premium Pl
                 </div>
                 <ThemeToggle className="ml-2 hidden lg:flex" />
               </div>
-              
+
               <div className="flex items-center gap-2">
                 <div className="w-px h-8 bg-slate-100 dark:bg-white/5 mx-4"></div>
                 <div className="flex items-center gap-4 pl-2">
@@ -174,7 +175,7 @@ const ArtisanLayout = ({ children, title = "Mihnati PRO", subtitle = "Premium Pl
         <div className="relative z-10 p-6 lg:p-12">
           {children}
         </div>
-        
+
       </main>
     </div>
   );

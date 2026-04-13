@@ -27,13 +27,13 @@ const Navbar = () => {
     ...(user?.role === 'admin'
       ? [{ name: 'Tableau de Bord', to: '/dashboard/admin' }]
       : user?.role === 'artisan'
-      ? [{ name: 'Tableau de Bord', to: '/dashboard/artisan' }]
-      : [
-        { name: 'Services', to: '/search' },
-        { name: 'Déménagement', to: '/moving-booking' },
-        { name: 'Devis', to: '/request-quote' },
-        ...(user?.role === 'client' ? [{ name: 'Favoris', to: '/dashboard/client/favorites' }] : []),
-      ]
+        ? [{ name: 'Tableau de Bord', to: '/dashboard/artisan' }]
+        : [
+          { name: 'Services', to: '/search' },
+          { name: 'Déménagement', to: '/moving-booking' },
+          { name: 'Devis', to: '/request-quote' },
+          ...(user?.role === 'client' ? [{ name: 'Favoris', to: '/dashboard/client/favorites' }] : []),
+        ]
     ),
     { name: 'About Us', to: '/about-us' },
   ];
@@ -57,6 +57,7 @@ const Navbar = () => {
         ))}
       </nav>
 
+<<<<<<< HEAD
         <div className="flex items-center gap-3 z-50">
           <div className="hidden md:flex items-center gap-3">
             {user ? (
@@ -104,7 +105,56 @@ const Navbar = () => {
               {isMobileMenuOpen ? 'close' : 'menu'}
             </span>
           </button>
+=======
+      <div className="flex items-center gap-3 z-50">
+        <div className="hidden md:flex items-center gap-3">
+          {user ? (
+            <div className="flex items-center gap-4">
+              <Link
+                to={user.role === 'admin' ? '/dashboard/admin' : user.role === 'artisan' ? '/dashboard/artisan' : '/dashboard/client/inbox'}
+                className="flex items-center gap-2 hover:opacity-80 transition-opacity"
+              >
+                <div className="w-9 h-9 rounded-full bg-slate-50 dark:bg-white/5 flex items-center justify-center text-primary border border-slate-100 dark:border-white/5 shadow-sm">
+                  <span className="material-symbols-outlined text-xl">account_circle</span>
+                </div>
+                <div className="flex flex-col items-start leading-tight">
+                  <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest">{user.role}</span>
+                  <span className="text-sm font-bold text-slate-900 dark:text-white hidden lg:inline">{user.name}</span>
+                </div>
+              </Link>
+              <button
+                onClick={handleLogout}
+                className="text-slate-300 hover:text-red-500 p-2 transition-colors"
+                title="Déconnexion"
+              >
+                <span className="material-symbols-outlined text-xl leading-none">logout</span>
+              </button>
+            </div>
+          ) : (
+            <div className="flex items-center gap-3">
+              <Link to="/login/artisan" className="hidden lg:flex items-center gap-2 px-4 py-2 text-slate-500 dark:text-slate-400 hover:text-primary transition-all font-bold text-sm">
+                <span className="material-symbols-outlined text-xl">construction</span>
+                Espace Artisan
+              </Link>
+              <Link to="/login/client" className="flex min-w-[120px] bg-primary text-white rounded-xl h-11 px-6 items-center justify-center font-black text-sm shadow-xl shadow-primary/20 hover:bg-primary/90 transition-all active:scale-95">
+                Connexion
+              </Link>
+            </div>
+          )}
+>>>>>>> 47f8043 (dark mode)
         </div>
+
+
+
+        <button
+          className="md:hidden p-2 text-slate-500 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-white/5 rounded-lg transition-colors"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        >
+          <span className="material-symbols-outlined text-2xl">
+            {isMobileMenuOpen ? 'close' : 'menu'}
+          </span>
+        </button>
+      </div>
 
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
