@@ -48,24 +48,24 @@ const DetailsDuServiceJardinage = () => {
                                 Services de Jardinage Professionnels
                             </h1>
 <p className="text-white/90 text-lg md:text-xl font-medium max-w-lg">
-                                Donnez Ã  votre jardin l'expertise qu'il mÃ©rite avec nos jardiniers qualifiÃ©s et passionnÃ©s.
+                                Donnez à votre jardin l'expertise qu'il mérite avec nos jardiniers qualifiés et passionnés.
                             </p>
 </div>
 <button className="flex min-w-[180px] cursor-pointer items-center justify-center rounded-lg h-12 md:h-14 px-8 bg-primary text-white text-base font-bold shadow-lg hover:scale-105 transition-transform">
-                            RÃ©server maintenant
+                            Réserver maintenant
                         </button>
 </div>
 </section>
 <section className="px-4 md:px-40 py-10 bg-white dark:bg-background-dark/50">
-<h2 className="text-slate-900 dark:text-slate-100 text-2xl md:text-3xl font-bold mb-8">Comment Ã§a marche</h2>
+<h2 className="text-slate-900 dark:text-slate-100 text-2xl md:text-3xl font-bold mb-8">Comment ça marche</h2>
 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 <div className="flex flex-col gap-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 shadow-sm">
 <div className="bg-primary/10 text-primary w-12 h-12 rounded-lg flex items-center justify-center">
 <span className="material-symbols-outlined text-3xl">event_available</span>
 </div>
 <div>
-<h3 className="text-slate-900 dark:text-slate-100 text-lg font-bold">1. RÃ©servez</h3>
-<p className="text-slate-500 dark:text-slate-400 text-sm mt-2">Choisissez votre crÃ©neau et dÃ©crivez vos besoins en quelques clics via notre plateforme.</p>
+<h3 className="text-slate-900 dark:text-slate-100 text-lg font-bold">1. Réservez</h3>
+<p className="text-slate-500 dark:text-slate-400 text-sm mt-2">Choisissez votre créneau et décrivez vos besoins en quelques clics via notre plateforme.</p>
 </div>
 </div>
 <div className="flex flex-col gap-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 shadow-sm">
@@ -74,7 +74,7 @@ const DetailsDuServiceJardinage = () => {
 </div>
 <div>
 <h3 className="text-slate-900 dark:text-slate-100 text-lg font-bold">2. Choisissez</h3>
-<p className="text-slate-500 dark:text-slate-400 text-sm mt-2">SÃ©lectionnez le forfait adaptÃ© ou recevez un devis personnalisÃ© d'un expert local.</p>
+<p className="text-slate-500 dark:text-slate-400 text-sm mt-2">Sélectionnez le forfait adapté ou recevez un devis personnalisé d'un expert local.</p>
 </div>
 </div>
 <div className="flex flex-col gap-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 shadow-sm">
@@ -83,22 +83,22 @@ const DetailsDuServiceJardinage = () => {
 </div>
 <div>
 <h3 className="text-slate-900 dark:text-slate-100 text-lg font-bold">3. C'est fait</h3>
-<p className="text-slate-500 dark:text-slate-400 text-sm mt-2">DÃ©tendez-vous pendant que nos pros s'occupent de tout. Profitez de votre espace vert.</p>
+<p className="text-slate-500 dark:text-slate-400 text-sm mt-2">Détendez-vous pendant que nos pros s'occupent de tout. Profitez de votre espace vert.</p>
 </div>
 </div>
 </div>
 </section>
 <section className="px-4 md:px-40 py-16">
-<h2 className="text-slate-900 dark:text-slate-100 text-2xl md:text-3xl font-bold mb-8">Tarification et DÃ©tails</h2>
+<h2 className="text-slate-900 dark:text-slate-100 text-2xl md:text-3xl font-bold mb-8">Tarification et Détails</h2>
 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 <div className="flex flex-col rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden shadow-sm hover:shadow-md transition-shadow">
 <div className="p-8 border-b border-slate-200 dark:border-slate-800">
 <h3 className="text-xl font-bold mb-2">Entretien de Pelouse</h3>
 <div className="flex items-baseline gap-1 mb-4">
-<span className="text-3xl font-black text-primary">30â‚¬</span>
+<span className="text-3xl font-black text-primary">30€</span>
 <span className="text-slate-500">/ heure</span>
 </div>
-<p className="text-slate-600 dark:text-slate-400 text-sm">IdÃ©al pour un jardin toujours impeccable.</p>
+<p className="text-slate-600 dark:text-slate-400 text-sm">Idéal pour un jardin toujours impeccable.</p>
 </div>
 <div className="p-8 flex-1">
 <ul className="space-y-4">
@@ -108,11 +108,11 @@ const DetailsDuServiceJardinage = () => {
                                     </li>
 <li className="flex items-center gap-3 text-sm">
 <span className="material-symbols-outlined text-green-500 font-bold">check</span>
-                                        DÃ©sherbage manuel
+                                        Désherbage manuel
                                     </li>
 <li className="flex items-center gap-3 text-sm">
 <span className="material-symbols-outlined text-green-500 font-bold">check</span>
-                                        DÃ©coupe des bordures
+                                        Découpe des bordures
                                     </li>
 </ul>
 </div>
@@ -125,10 +125,10 @@ const DetailsDuServiceJardinage = () => {
 <div className="p-8 border-b border-slate-200 dark:border-slate-800">
 <h3 className="text-xl font-bold mb-2">Taille et Plantation</h3>
 <div className="flex items-baseline gap-1 mb-4">
-<span className="text-3xl font-black text-primary">45â‚¬</span>
+<span className="text-3xl font-black text-primary">45€</span>
 <span className="text-slate-500">/ heure</span>
 </div>
-<p className="text-slate-600 dark:text-slate-400 text-sm">Redonnez forme et vie Ã  vos massifs.</p>
+<p className="text-slate-600 dark:text-slate-400 text-sm">Redonnez forme et vie à vos massifs.</p>
 </div>
 <div className="p-8 flex-1">
 <ul className="space-y-4">
@@ -152,11 +152,11 @@ const DetailsDuServiceJardinage = () => {
 </div>
 <div className="flex flex-col rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden shadow-sm hover:shadow-md transition-shadow">
 <div className="p-8 border-b border-slate-200 dark:border-slate-800">
-<h3 className="text-xl font-bold mb-2">AmÃ©nagement</h3>
+<h3 className="text-xl font-bold mb-2">Aménagement</h3>
 <div className="flex items-baseline gap-1 mb-4">
 <span className="text-3xl font-black text-primary">Sur devis</span>
 </div>
-<p className="text-slate-600 dark:text-slate-400 text-sm">Projets complexes et crÃ©ations sur mesure.</p>
+<p className="text-slate-600 dark:text-slate-400 text-sm">Projets complexes et créations sur mesure.</p>
 </div>
 <div className="p-8 flex-1">
 <ul className="space-y-4">
@@ -166,11 +166,11 @@ const DetailsDuServiceJardinage = () => {
                                     </li>
 <li className="flex items-center gap-3 text-sm">
 <span className="material-symbols-outlined text-green-500 font-bold">check</span>
-                                        SystÃ¨mes d'irrigation automatiques
+                                        Systèmes d'irrigation automatiques
                                     </li>
 <li className="flex items-center gap-3 text-sm">
 <span className="material-symbols-outlined text-green-500 font-bold">check</span>
-                                        Terrasses et maÃ§onnerie paysagÃ¨re
+                                        Terrasses et maçonnerie paysagère
                                     </li>
 </ul>
 </div>
@@ -193,12 +193,12 @@ const DetailsDuServiceJardinage = () => {
 <span className="material-symbols-outlined fill-1">star</span>
 <span className="material-symbols-outlined fill-1">star</span>
 </div>
-<p className="text-slate-500 text-sm italic mb-4">"Expert en taille de fruitiers et entretien de grandes propriÃ©tÃ©s."</p>
-<span className="text-xs font-bold uppercase tracking-widest text-primary bg-primary/10 px-3 py-1 rounded-full">12 ans d'expÃ©rience</span>
+<p className="text-slate-500 text-sm italic mb-4">"Expert en taille de fruitiers et entretien de grandes propriétés."</p>
+<span className="text-xs font-bold uppercase tracking-widest text-primary bg-primary/10 px-3 py-1 rounded-full">12 ans d'expérience</span>
 </div>
 <div className="bg-white dark:bg-slate-900 p-6 rounded-xl shadow-sm flex flex-col items-center text-center">
-<img className="w-24 h-24 rounded-full object-cover mb-4 border-4 border-primary/20" data-alt="Portrait professionnel d'AmÃ©lie R., paysagiste" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKCrE5La5jAcyqFPKTuFajDt5pKC3nCnHV4MjJXv7EMuOVzAzPsNy5Yzpg1nOJj_bpeN8gBI9uHnIi57wHn5guW8DFmOsSIL61IsxqSUSOsMa9PZc9-6DH_wYuI1eIf9P8uzXtA5uZC7216T3P8fo1lunBRWXuzikBQsXdm-jbHNrb7VRI9sa4s_5MdkfixYmLqco0hhSCyoIrkjKGVgij1vEYOJNipjRjNjOEIReYW4xx_fB7WL0D6Oz2dKDnbjukAuKwpj8N6UPU"/>
-<h4 className="font-bold text-lg">AmÃ©lie R.</h4>
+<img className="w-24 h-24 rounded-full object-cover mb-4 border-4 border-primary/20" data-alt="Portrait professionnel d'Amélie R., paysagiste" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKCrE5La5jAcyqFPKTuFajDt5pKC3nCnHV4MjJXv7EMuOVzAzPsNy5Yzpg1nOJj_bpeN8gBI9uHnIi57wHn5guW8DFmOsSIL61IsxqSUSOsMa9PZc9-6DH_wYuI1eIf9P8uzXtA5uZC7216T3P8fo1lunBRWXuzikBQsXdm-jbHNrb7VRI9sa4s_5MdkfixYmLqco0hhSCyoIrkjKGVgij1vEYOJNipjRjNjOEIReYW4xx_fB7WL0D6Oz2dKDnbjukAuKwpj8N6UPU"/>
+<h4 className="font-bold text-lg">Amélie R.</h4>
 <div className="flex text-yellow-400 mb-2">
 <span className="material-symbols-outlined fill-1">star</span>
 <span className="material-symbols-outlined fill-1">star</span>
@@ -206,11 +206,11 @@ const DetailsDuServiceJardinage = () => {
 <span className="material-symbols-outlined fill-1">star</span>
 <span className="material-symbols-outlined fill-1">star</span>
 </div>
-<p className="text-slate-500 text-sm italic mb-4">"SpÃ©cialisÃ©e en jardins Ã©cologiques et plantes mellifÃ¨res."</p>
-<span className="text-xs font-bold uppercase tracking-widest text-primary bg-primary/10 px-3 py-1 rounded-full">8 ans d'expÃ©rience</span>
+<p className="text-slate-500 text-sm italic mb-4">"Spécialisée en jardins écologiques et plantes mellifères."</p>
+<span className="text-xs font-bold uppercase tracking-widest text-primary bg-primary/10 px-3 py-1 rounded-full">8 ans d'expérience</span>
 </div>
 <div className="bg-white dark:bg-slate-900 p-6 rounded-xl shadow-sm flex flex-col items-center text-center">
-<img className="w-24 h-24 rounded-full object-cover mb-4 border-4 border-primary/20" data-alt="Portrait professionnel de Pierre V., expert en amÃ©nagement" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBB6HUkt41USaxxnaszXEyBibjfpC06snLOxCA-Sl511lfENsWiOR7IxTYbR--nzpq9m2vTFcMRfY-LWVAt8g5yYjyuSTjHDbQG-iD3YiurWlnmSL_ZLApXJ0lmesl3gMIjNuYUe__-XSjYVx93eVzumJm_QcpVgY8kfOKO9U73pAU7o2J8hveKLunN4dTC_a9SYMtG1_Grh0AZTk0Q-6yYPqAx39Pl64lvYyRjqOW53Qn00tSDmR7nxkZ-hzGSgaBr_Xgky2hLYpdB"/>
+<img className="w-24 h-24 rounded-full object-cover mb-4 border-4 border-primary/20" data-alt="Portrait professionnel de Pierre V., expert en aménagement" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBB6HUkt41USaxxnaszXEyBibjfpC06snLOxCA-Sl511lfENsWiOR7IxTYbR--nzpq9m2vTFcMRfY-LWVAt8g5yYjyuSTjHDbQG-iD3YiurWlnmSL_ZLApXJ0lmesl3gMIjNuYUe__-XSjYVx93eVzumJm_QcpVgY8kfOKO9U73pAU7o2J8hveKLunN4dTC_a9SYMtG1_Grh0AZTk0Q-6yYPqAx39Pl64lvYyRjqOW53Qn00tSDmR7nxkZ-hzGSgaBr_Xgky2hLYpdB"/>
 <h4 className="font-bold text-lg">Pierre V.</h4>
 <div className="flex text-yellow-400 mb-2">
 <span className="material-symbols-outlined fill-1">star</span>
@@ -219,13 +219,13 @@ const DetailsDuServiceJardinage = () => {
 <span className="material-symbols-outlined fill-1">star</span>
 <span className="material-symbols-outlined fill-1">star</span>
 </div>
-<p className="text-slate-500 text-sm italic mb-4">"PassionnÃ© par l'art topiaire et la crÃ©ation de jardins Zen."</p>
-<span className="text-xs font-bold uppercase tracking-widest text-primary bg-primary/10 px-3 py-1 rounded-full">15 ans d'expÃ©rience</span>
+<p className="text-slate-500 text-sm italic mb-4">"Passionné par l'art topiaire et la création de jardins Zen."</p>
+<span className="text-xs font-bold uppercase tracking-widest text-primary bg-primary/10 px-3 py-1 rounded-full">15 ans d'expérience</span>
 </div>
 </div>
 </section>
 <section className="px-4 md:px-40 py-16">
-<h2 className="text-slate-900 dark:text-slate-100 text-2xl md:text-3xl font-bold mb-8">Questions FrÃ©quentes</h2>
+<h2 className="text-slate-900 dark:text-slate-100 text-2xl md:text-3xl font-bold mb-8">Questions Fréquentes</h2>
 <div className="space-y-4 max-w-3xl">
 <details className="group bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden">
 <summary className="flex items-center justify-between p-6 cursor-pointer font-bold list-none">
@@ -233,7 +233,7 @@ const DetailsDuServiceJardinage = () => {
                                 <span className="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
 </summary>
 <div className="px-6 pb-6 text-slate-600 dark:text-slate-400 text-sm">
-                                Oui, nos jardiniers professionnels apportent tout le matÃ©riel nÃ©cessaire (tondeuse, taille-haie, petits outils) pour rÃ©aliser les prestations courantes. Pour de trÃ¨s gros travaux d'amÃ©nagement, cela sera spÃ©cifiÃ© dans le devis.
+                                Oui, nos jardiniers professionnels apportent tout le matériel nécessaire (tondeuse, taille-haie, petits outils) pour réaliser les prestations courantes. Pour de très gros travaux d'aménagement, cela sera spécifié dans le devis.
                             </div>
 </details>
 <details className="group bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden">
@@ -242,16 +242,16 @@ const DetailsDuServiceJardinage = () => {
                                 <span className="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
 </summary>
 <div className="px-6 pb-6 text-slate-600 dark:text-slate-400 text-sm">
-                                Nous adaptons nos services : taille de printemps, tonte rÃ©guliÃ¨re en Ã©tÃ©, ramassage des feuilles en automne et protection des plantes sensibles en hiver. Vous pouvez souscrire Ã  un contrat d'entretien annuel.
+                                Nous adaptons nos services : taille de printemps, tonte régulière en été, ramassage des feuilles en automne et protection des plantes sensibles en hiver. Vous pouvez souscrire à un contrat d'entretien annuel.
                             </div>
 </details>
 <details className="group bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden">
 <summary className="flex items-center justify-between p-6 cursor-pointer font-bold list-none">
-                                Quels sont les modes de paiement acceptÃ©s ?
+                                Quels sont les modes de paiement acceptés ?
                                 <span className="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
 </summary>
 <div className="px-6 pb-6 text-slate-600 dark:text-slate-400 text-sm">
-                                Nous acceptons les paiements sÃ©curisÃ©s par carte bancaire via notre plateforme, ainsi que les CESU (ChÃ¨que Emploi Service Universel) qui vous permettent de bÃ©nÃ©ficier d'un crÃ©dit d'impÃ´t de 50%.
+                                Nous acceptons les paiements sécurisés par carte bancaire via notre plateforme, ainsi que les CESU (Chèque Emploi Service Universel) qui vous permettent de bénéficier d'un crédit d'impôt de 50%.
                             </div>
 </details>
 </div>
@@ -264,7 +264,7 @@ const DetailsDuServiceJardinage = () => {
 <span className="material-symbols-outlined text-2xl">potted_plant</span>
 <span className="font-bold text-xl text-slate-900 dark:text-slate-100">JardinagePro</span>
 </div>
-<p className="text-slate-500 text-sm">Votre partenaire de confiance pour un jardin resplendissant toute l'annÃ©e.</p>
+<p className="text-slate-500 text-sm">Votre partenaire de confiance pour un jardin resplendissant toute l'année.</p>
 <div className="flex gap-4 mt-2">
 <a className="text-slate-400 hover:text-primary transition-colors" href="#">
 <span className="material-symbols-outlined">public</span>
@@ -289,7 +289,7 @@ const DetailsDuServiceJardinage = () => {
 <div>
 <h5 className="font-bold mb-4">Entreprise</h5>
 <ul className="space-y-2 text-sm text-slate-500 dark:text-slate-400">
-<li><a className="hover:text-primary" href="#">ÃDA propos</a></li>
+<li><a className="hover:text-primary" href="#">À propos</a></li>
 <li><a className="hover:text-primary" href="#">Nos Jardiniers</a></li>
 <li><a className="hover:text-primary" href="#">Blog Jardin</a></li>
 <li><a className="hover:text-primary" href="#">Contact</a></li>
@@ -305,7 +305,7 @@ const DetailsDuServiceJardinage = () => {
 </div>
 </div>
 <div className="mt-12 pt-8 border-t border-slate-100 dark:border-slate-800 text-center text-xs text-slate-400">
-                    Â© 2024 JardinagePro. Tous droits rÃ©servÃ©s.
+                    © 2024 JardinagePro. Tous droits réservés.
                 </div>
 </footer>
 </div>

@@ -22,7 +22,7 @@ const FactureDeRServationDMNagement = () => {
 <div className="flex gap-3">
 <button className="flex items-center justify-center rounded-lg h-10 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 gap-2 text-sm font-bold px-4 hover:bg-slate-200 transition-colors">
 <span className="material-symbols-outlined text-[20px]">download</span>
-<span className="hidden sm:inline">TÃ©lÃ©charger PDF</span>
+<span className="hidden sm:inline">Télécharger PDF</span>
 </button>
 <button className="flex items-center justify-center rounded-lg h-10 bg-primary text-white gap-2 text-sm font-bold px-4 hover:bg-primary/90 transition-colors">
 <span className="material-symbols-outlined text-[20px]">print</span>
@@ -34,7 +34,7 @@ const FactureDeRServationDMNagement = () => {
 <nav className="flex flex-wrap gap-2 text-sm font-medium">
 <a className="text-slate-500 hover:text-primary transition-colors" href="#">Tableau de bord</a>
 <span className="text-slate-400">/</span>
-<a className="text-slate-500 hover:text-primary transition-colors" href="#">Mes RÃ©servations</a>
+<a className="text-slate-500 hover:text-primary transition-colors" href="#">Mes Réservations</a>
 <span className="text-slate-400">/</span>
 <span className="text-primary">Facture #INV-2024-001</span>
 </nav>
@@ -42,12 +42,12 @@ const FactureDeRServationDMNagement = () => {
 <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 py-4">
 <div className="flex flex-col gap-1">
 <h1 className="text-slate-900 dark:text-white text-3xl md:text-4xl font-black leading-tight tracking-tight">Facture #INV-2024-001</h1>
-<p className="text-slate-500 dark:text-slate-400 text-base">Date d'Ã©mission : 24 Octobre 2024</p>
+<p className="text-slate-500 dark:text-slate-400 text-base">Date d'émission : 24 Octobre 2024</p>
 </div>
 <div className="flex items-center">
 <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-bold bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400">
 <span className="size-2 rounded-full bg-green-500 mr-2"></span>
-                            PayÃ©e
+                            Payée
                         </span>
 </div>
 </div>
@@ -81,7 +81,7 @@ const FactureDeRServationDMNagement = () => {
 <div className="space-y-1">
 <p className="text-slate-900 dark:text-white font-semibold">Ahmed Mansouri</p>
 <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
-                                DÃ©mÃ©nagement Pro &amp; Transport<br/>Siret: 123 456 789 00012<br/>15 Avenue des Champs, 75008 Paris
+                                Déménagement Pro &amp; Transport<br/>Siret: 123 456 789 00012<br/>15 Avenue des Champs, 75008 Paris
                             </p>
 </div>
 <a className="text-sm font-bold text-primary flex items-center gap-1 mt-2 hover:underline" href="#">
@@ -93,38 +93,38 @@ const FactureDeRServationDMNagement = () => {
 {/*  Service Summary & Route  */}
 <div className="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 overflow-hidden shadow-sm">
 <div className="p-6 border-b border-slate-200 dark:border-slate-800">
-<h3 className="text-lg font-bold text-slate-900 dark:text-white mb-4">RÃ©capitulatif de la Prestation</h3>
+<h3 className="text-lg font-bold text-slate-900 dark:text-white mb-4">Récapitulatif de la Prestation</h3>
 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 <div className="space-y-4">
 <div className="flex items-start gap-3">
 <span className="material-symbols-outlined text-primary">local_shipping</span>
 <div>
 <p className="text-sm font-bold text-slate-900 dark:text-white">Service</p>
-<p className="text-slate-500 dark:text-slate-400 text-sm">DÃ©mÃ©nagement Complet T3 (45mÂ²)</p>
+<p className="text-slate-500 dark:text-slate-400 text-sm">Déménagement Complet T3 (45mÂ²)</p>
 </div>
 </div>
 <div className="flex items-start gap-3">
 <span className="material-symbols-outlined text-primary">calendar_today</span>
 <div>
-<p className="text-sm font-bold text-slate-900 dark:text-white">Date de rÃ©alisation</p>
+<p className="text-sm font-bold text-slate-900 dark:text-white">Date de réalisation</p>
 <p className="text-slate-500 dark:text-slate-400 text-sm">Mardi 22 Octobre 2024</p>
 </div>
 </div>
 <div className="flex items-start gap-3">
 <span className="material-symbols-outlined text-primary">location_on</span>
 <div>
-<p className="text-sm font-bold text-slate-900 dark:text-white">ItinÃ©raire</p>
+<p className="text-sm font-bold text-slate-900 dark:text-white">Itinéraire</p>
 <p className="text-slate-500 dark:text-slate-400 text-sm">Paris (75002) â†’ Boulogne-Billancourt (92100)</p>
-<p className="text-xs text-slate-400 mt-1">Distance estimÃ©e : 12.5 km</p>
+<p className="text-xs text-slate-400 mt-1">Distance estimée : 12.5 km</p>
 </div>
 </div>
 </div>
 <div className="relative h-40 md:h-full min-h-[140px] rounded-lg overflow-hidden bg-slate-100 dark:bg-slate-800">
-<div className="absolute inset-0 bg-cover bg-center" data-alt="Carte simplifiÃ©e de l'itinÃ©raire entre Paris et Boulogne" data-location="Paris" ></div>
+<div className="absolute inset-0 bg-cover bg-center" data-alt="Carte simplifiée de l'itinéraire entre Paris et Boulogne" data-location="Paris" ></div>
 <div className="absolute inset-0 bg-primary/10 flex items-center justify-center">
 <div className="bg-white/90 dark:bg-slate-900/90 px-3 py-1.5 rounded-full shadow-lg border border-primary/20">
 <p className="text-xs font-bold text-primary flex items-center gap-1">
-<span className="material-symbols-outlined text-[14px]">map</span> ItinÃ©raire validÃ©
+<span className="material-symbols-outlined text-[14px]">map</span> Itinéraire validé
                                         </p>
 </div>
 </div>
@@ -138,7 +138,7 @@ const FactureDeRServationDMNagement = () => {
 <thead>
 <tr className="bg-slate-50 dark:bg-slate-800/50 text-slate-500 dark:text-slate-400 text-xs font-bold uppercase tracking-wider">
 <th className="px-6 py-4">Description de l'article</th>
-<th className="px-6 py-4 text-center">QuantitÃ©</th>
+<th className="px-6 py-4 text-center">Quantité</th>
 <th className="px-6 py-4 text-right">Prix Unitaire</th>
 <th className="px-6 py-4 text-right">Total</th>
 </tr>
@@ -146,21 +146,21 @@ const FactureDeRServationDMNagement = () => {
 <tbody className="divide-y divide-slate-100 dark:divide-slate-800">
 <tr>
 <td className="px-6 py-4">
-<p className="text-slate-900 dark:text-white font-semibold">Forfait DÃ©mÃ©nagement de base</p>
+<p className="text-slate-900 dark:text-white font-semibold">Forfait Déménagement de base</p>
 <p className="text-xs text-slate-500">Main d'Å“uvre (2 pers.) + Camion 20mÂ³</p>
 </td>
 <td className="px-6 py-4 text-center text-slate-700 dark:text-slate-300">1</td>
-<td className="px-6 py-4 text-right text-slate-700 dark:text-slate-300">450,00 â‚¬</td>
-<td className="px-6 py-4 text-right font-semibold text-slate-900 dark:text-white">450,00 â‚¬</td>
+<td className="px-6 py-4 text-right text-slate-700 dark:text-slate-300">450,00 €</td>
+<td className="px-6 py-4 text-right font-semibold text-slate-900 dark:text-white">450,00 €</td>
 </tr>
 <tr>
 <td className="px-6 py-4">
 <p className="text-slate-900 dark:text-white font-semibold">Surcharge de Distance</p>
-<p className="text-xs text-slate-500">CalculÃ© sur 12.5 km</p>
+<p className="text-xs text-slate-500">Calculé sur 12.5 km</p>
 </td>
 <td className="px-6 py-4 text-center text-slate-700 dark:text-slate-300">1</td>
-<td className="px-6 py-4 text-right text-slate-700 dark:text-slate-300">25,00 â‚¬</td>
-<td className="px-6 py-4 text-right font-semibold text-slate-900 dark:text-white">25,00 â‚¬</td>
+<td className="px-6 py-4 text-right text-slate-700 dark:text-slate-300">25,00 €</td>
+<td className="px-6 py-4 text-right font-semibold text-slate-900 dark:text-white">25,00 €</td>
 </tr>
 <tr>
 <td className="px-6 py-4">
@@ -168,8 +168,8 @@ const FactureDeRServationDMNagement = () => {
 <p className="text-xs text-slate-500">Table en verre massif + Piano droit</p>
 </td>
 <td className="px-6 py-4 text-center text-slate-700 dark:text-slate-300">2</td>
-<td className="px-6 py-4 text-right text-slate-700 dark:text-slate-300">40,00 â‚¬</td>
-<td className="px-6 py-4 text-right font-semibold text-slate-900 dark:text-white">80,00 â‚¬</td>
+<td className="px-6 py-4 text-right text-slate-700 dark:text-slate-300">40,00 €</td>
+<td className="px-6 py-4 text-right font-semibold text-slate-900 dark:text-white">80,00 €</td>
 </tr>
 <tr>
 <td className="px-6 py-4">
@@ -177,8 +177,8 @@ const FactureDeRServationDMNagement = () => {
 <p className="text-xs text-slate-500">Armoire chambre + Lit King Size</p>
 </td>
 <td className="px-6 py-4 text-center text-slate-700 dark:text-slate-300">2</td>
-<td className="px-6 py-4 text-right text-slate-700 dark:text-slate-300">30,00 â‚¬</td>
-<td className="px-6 py-4 text-right font-semibold text-slate-900 dark:text-white">60,00 â‚¬</td>
+<td className="px-6 py-4 text-right text-slate-700 dark:text-slate-300">30,00 €</td>
+<td className="px-6 py-4 text-right font-semibold text-slate-900 dark:text-white">60,00 €</td>
 </tr>
 </tbody>
 </table>
@@ -189,7 +189,7 @@ const FactureDeRServationDMNagement = () => {
 <div className="rounded-xl bg-slate-50 dark:bg-slate-800/50 p-6 border border-slate-200 dark:border-slate-800">
 <p className="text-slate-900 dark:text-white font-bold mb-3 flex items-center gap-2">
 <span className="material-symbols-outlined text-primary">payments</span>
-                                MÃ©thode de Paiement
+                                Méthode de Paiement
                             </p>
 <div className="flex items-center gap-3 bg-white dark:bg-slate-900 p-3 rounded-lg border border-slate-100 dark:border-slate-800">
 <div className="text-slate-400">
@@ -197,7 +197,7 @@ const FactureDeRServationDMNagement = () => {
 </div>
 <div>
 <p className="text-sm font-bold text-slate-900 dark:text-white">Carte Bancaire Visa</p>
-<p className="text-xs text-slate-500">Terminant par âDA¢âDA¢âDA¢âDA¢ 1234</p>
+<p className="text-xs text-slate-500">Terminant par •••• 1234</p>
 </div>
 <div className="ml-auto">
 <span className="material-symbols-outlined text-green-500">check_circle</span>
@@ -205,22 +205,22 @@ const FactureDeRServationDMNagement = () => {
 </div>
 </div>
 <div className="px-2">
-<p className="text-xs text-slate-400 italic">Paiement sÃ©curisÃ© via ArtisanDirect Pay. Pour toute question, contactez notre support client muni de votre numÃ©ro de facture.</p>
+<p className="text-xs text-slate-400 italic">Paiement sécurisé via ArtisanDirect Pay. Pour toute question, contactez notre support client muni de votre numéro de facture.</p>
 </div>
 </div>
 <div className="flex flex-col gap-3">
 <div className="flex justify-between items-center text-slate-600 dark:text-slate-400">
 <span className="text-sm font-medium">Sous-total HT</span>
-<span className="font-semibold">615,00 â‚¬</span>
+<span className="font-semibold">615,00 €</span>
 </div>
 <div className="flex justify-between items-center text-slate-600 dark:text-slate-400">
 <span className="text-sm font-medium">TVA (20%)</span>
-<span className="font-semibold">123,00 â‚¬</span>
+<span className="font-semibold">123,00 €</span>
 </div>
 <div className="h-px bg-slate-200 dark:bg-slate-800 my-2"></div>
 <div className="flex justify-between items-center">
 <span className="text-lg font-black text-slate-900 dark:text-white uppercase tracking-wider">Total TTC</span>
-<span className="text-3xl font-black text-primary">738,00 â‚¬</span>
+<span className="text-3xl font-black text-primary">738,00 €</span>
 </div>
 </div>
 </div>
@@ -228,12 +228,12 @@ const FactureDeRServationDMNagement = () => {
 <footer className="mt-12 pt-8 border-t border-slate-200 dark:border-slate-800 text-center space-y-4">
 <div className="flex flex-wrap justify-center gap-6 text-sm text-slate-500 font-medium">
 <a className="hover:text-primary transition-colors" href="#">CGV / CGU</a>
-<a className="hover:text-primary transition-colors" href="#">Politique de ConfidentialitÃ©</a>
+<a className="hover:text-primary transition-colors" href="#">Politique de Confidentialité</a>
 <a className="hover:text-primary transition-colors" href="#">Support Client</a>
 <a className="hover:text-primary transition-colors" href="#">Aide</a>
 </div>
 <p className="text-xs text-slate-400 uppercase tracking-widest">
-                        Â© 2024 ArtisanDirect - Une plateforme au service de l'excellence artisanale
+                        © 2024 ArtisanDirect - Une plateforme au service de l'excellence artisanale
                     </p>
 </footer>
 </div>

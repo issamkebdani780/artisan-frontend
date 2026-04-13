@@ -117,6 +117,7 @@ const MovingBooking = () => {
     setLoading(true);
     setError('');
     try {
+
       let categoryId = 6; // fallback
       try {
         const categories = await apiService.getCategories();

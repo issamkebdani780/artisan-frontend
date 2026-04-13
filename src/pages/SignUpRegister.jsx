@@ -103,7 +103,7 @@ const SignUpRegister = () => {
 </div>
 </main>
 <footer className="py-10 border-t border-slate-200 dark:border-slate-800 text-center">
-<p className="text-slate-400 text-xs">Â© 2024 Platform Inc. All rights reserved. âDA¢ Privacy Policy âDA¢ Terms of Service</p>
+<p className="text-slate-400 text-xs">© 2024 Platform Inc. All rights reserved. • Privacy Policy • Terms of Service</p>
 </footer>
 </div>
 </div>

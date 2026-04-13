@@ -274,6 +274,7 @@ const ArtisanSettings = () => {
                         <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1">Téléphone</label>
                         <input name="phone" value={form.phone} onChange={handleChange} type="tel" className="w-full h-15 rounded-2xl border border-slate-100 bg-slate-50 focus:border-secondary focus:bg-white outline-none px-6 font-bold text-slate-900 shadow-sm" />
                       </div>
+
                    </div>
                 </div>
                 <div className="pt-10 border-t border-slate-50 flex justify-start">

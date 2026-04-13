@@ -159,7 +159,7 @@ const AdminArtisans = () => {
                       </div>
                     </td>
                     <td className="px-8 py-6 font-bold text-sm text-slate-600 dark:text-slate-300">
-                      {(artisan.specialty || 'Général').replace(/Ã©/g, 'E').replace(/Ã¨/g, 'E').replace(/Ã /g, 'A').replace(/Ã/g, 'E')}
+                      {(artisan.specialty || 'Général').replace(/é/g, 'E').replace(/è/g, 'E').replace(/Ã /g, 'A').replace(/Ã/g, 'E')}
                     </td>
                     <td className="px-8 py-6">
                       <span className={`px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-tighter ${artisan.is_verified === 1 ? 'bg-emerald-100 text-emerald-700' : artisan.is_verified === -1 ? 'bg-rose-100 text-rose-700' : 'bg-amber-100 text-amber-700'}`}>

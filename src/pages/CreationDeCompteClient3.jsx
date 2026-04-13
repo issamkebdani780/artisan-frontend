@@ -10,7 +10,7 @@ const CreationDeCompteClient3 = () => {
 <div className="text-2xl font-black text-slate-900 tracking-tighter">The Violet Protocol</div>
 <nav className="hidden md:flex items-center gap-8">
 <a className="text-slate-500 hover:text-slate-900 transition-colors font-medium text-sm" href="#">Trouver des Pros</a>
-<a className="text-slate-500 hover:text-slate-900 transition-colors font-medium text-sm" href="#">Comment Ã§a marche</a>
+<a className="text-slate-500 hover:text-slate-900 transition-colors font-medium text-sm" href="#">Comment ça marche</a>
 <a className="text-slate-500 hover:text-slate-900 transition-colors font-medium text-sm" href="#">Tarifs</a>
 </nav>
 <div className="flex items-center gap-4">
@@ -25,13 +25,13 @@ const CreationDeCompteClient3 = () => {
 <div className="relative z-10 flex flex-col justify-end p-20 w-full bg-gradient-to-t from-slate-950/95 via-slate-950/40 to-transparent">
 <div className="space-y-6 max-w-lg">
 <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/20 text-white border border-primary/30 text-[10px] font-bold tracking-widest uppercase">
-                        Rejoignez l'Ã©lite
+                        Rejoignez l'élite
                     </span>
 <h1 className="text-5xl font-black text-white leading-tight tracking-tighter">
-                        Rejoignez l'Ã©lite des <span className="text-primary">services professionnels.</span>
+                        Rejoignez l'élite des <span className="text-primary">services professionnels.</span>
 </h1>
 <p className="text-lg text-slate-300 leading-relaxed font-light">
-                        AccÃ©dez Ã  un rÃ©seau exclusif de professionnels vÃ©rifiÃ©s et gÃ©rez vos projets en toute sÃ©rÃ©nitÃ© avec The Violet Protocol.
+                        Accédez à un réseau exclusif de professionnels vérifiés et gérez vos projets en toute sérénité avec The Violet Protocol.
                     </p>
 {/*  Benefit Cards  */}
 <div className="grid grid-cols-1 gap-4 pt-4">
@@ -40,8 +40,8 @@ const CreationDeCompteClient3 = () => {
 <span className="material-symbols-outlined text-white text-xl">verified</span>
 </div>
 <div>
-<h3 className="font-bold text-slate-900 text-sm">Pros VÃ©rifiÃ©s</h3>
-<p className="text-xs text-slate-600 mt-0.5 leading-relaxed">Chaque membre subit un processus de vÃ©rification rigoureux en 5 Ã©tapes.</p>
+<h3 className="font-bold text-slate-900 text-sm">Pros Vérifiés</h3>
+<p className="text-xs text-slate-600 mt-0.5 leading-relaxed">Chaque membre subit un processus de vérification rigoureux en 5 étapes.</p>
 </div>
 </div>
 <div className="glass-panel p-5 rounded-xl border border-white/20 flex items-start gap-4">
@@ -49,8 +49,8 @@ const CreationDeCompteClient3 = () => {
 <span className="material-symbols-outlined text-white text-xl">payments</span>
 </div>
 <div>
-<h3 className="font-bold text-slate-900 text-sm">Paiements SÃ©curisÃ©s</h3>
-<p className="text-xs text-slate-600 mt-0.5 leading-relaxed">Infrastructure de paiement cryptÃ©e de bout en bout avec protection contre la fraude.</p>
+<h3 className="font-bold text-slate-900 text-sm">Paiements Sécurisés</h3>
+<p className="text-xs text-slate-600 mt-0.5 leading-relaxed">Infrastructure de paiement cryptée de bout en bout avec protection contre la fraude.</p>
 </div>
 </div>
 <div className="glass-panel p-5 rounded-xl border border-white/20 flex items-start gap-4">
@@ -59,18 +59,18 @@ const CreationDeCompteClient3 = () => {
 </div>
 <div>
 <h3 className="font-bold text-slate-900 text-sm">Support 24/7</h3>
-<p className="text-xs text-slate-600 mt-0.5 leading-relaxed">Une Ã©quipe de conciergerie dÃ©diÃ©e disponible Ã  tout moment pour vous assister.</p>
+<p className="text-xs text-slate-600 mt-0.5 leading-relaxed">Une équipe de conciergerie dédiée disponible à tout moment pour vous assister.</p>
 </div>
 </div>
 </div>
 {/*  Testimonial  */}
 <div className="mt-4 glass-panel p-5 rounded-xl border-l-4 border-primary shadow-2xl">
-<p className="text-on-surface-variant text-sm italic">"The Violet Protocol a transformÃ© notre gestion de prestataires. La qualitÃ© et la sÃ©curitÃ© sont sans Ã©gales."</p>
+<p className="text-on-surface-variant text-sm italic">"The Violet Protocol a transformé notre gestion de prestataires. La qualité et la sécurité sont sans égales."</p>
 <div className="mt-4 flex items-center gap-3">
 <div className="w-8 h-8 rounded-full bg-slate-300 overflow-hidden border border-white/50">
 <img alt="Professional headshot" className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKtZJeVqQIWwTV4qKjYFN_ZNX0-xFNOHX-_Wk9MQZUwFulBl-TvbEodCrm4Ff1Tlsy5i-Ahi7hVcj8h-RskvKUkJbQrCWrfNi0xHrlFH5k61WhHPWHBRbJH9o2VYyZrqxA31aVMUu6Pvaj0kunDcSgYLVwqAtSwrfnUUnThJHccsmyCLfUgCVbzwAwjN2L8Z0io2gzACIGbiy4WN_pcFYA3ZuROTKbmc9XOUl839f4kl9NJxfPoR-l2po4K_n0BNfmXa3OIXEyo__i"/>
 </div>
-<span className="text-xs font-bold text-slate-900 tracking-tight">Directeur OpÃ©rations, TechCorp</span>
+<span className="text-xs font-bold text-slate-900 tracking-tight">Directeur Opérations, TechCorp</span>
 </div>
 </div>
 </div>
@@ -85,14 +85,14 @@ const CreationDeCompteClient3 = () => {
 <button className="flex-1 py-3 px-4 rounded-lg text-sm font-bold transition-all duration-300 bg-white text-slate-900 shadow-sm">Compte Client</button>
 </div>
 <div className="mb-8">
-<h2 className="text-3xl font-black text-slate-900 tracking-tighter">CrÃ©er un compte client</h2>
-<p className="text-on-surface-variant mt-2 text-sm">Rejoignez-nous et commencez Ã  gÃ©rer vos projets aujourd'hui.</p>
+<h2 className="text-3xl font-black text-slate-900 tracking-tighter">Créer un compte client</h2>
+<p className="text-on-surface-variant mt-2 text-sm">Rejoignez-nous et commencez à gérer vos projets aujourd'hui.</p>
 </div>
 <form className="space-y-5">
 {/*  Name Group  */}
 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
 <div className="flex flex-col gap-1.5">
-<label className="text-[10px] font-bold uppercase tracking-widest text-slate-500 ml-1">PrÃ©nom</label>
+<label className="text-[10px] font-bold uppercase tracking-widest text-slate-500 ml-1">Prénom</label>
 <input className="w-full h-11 px-4 rounded-lg bg-surface-container-high border-none focus:ring-2 focus:ring-primary/40 text-on-surface transition-all placeholder:text-slate-400 text-sm" placeholder="Jean" type="text"/>
 </div>
 <div className="flex flex-col gap-1.5">
@@ -107,7 +107,7 @@ const CreationDeCompteClient3 = () => {
 <input className="w-full h-11 px-4 rounded-lg bg-surface-container-high border-none focus:ring-2 focus:ring-primary/40 text-on-surface transition-all placeholder:text-slate-400 text-sm" placeholder="jean.dupont@exemple.com" type="email"/>
 </div>
 <div className="flex flex-col gap-1.5">
-<label className="text-[10px] font-bold uppercase tracking-widest text-slate-500 ml-1">TÃ©lÃ©phone</label>
+<label className="text-[10px] font-bold uppercase tracking-widest text-slate-500 ml-1">Téléphone</label>
 <div className="relative flex items-center">
 <div className="absolute left-3 flex items-center gap-2 pointer-events-none border-r border-slate-200 pr-2">
 <span className="text-sm font-semibold text-slate-500 tracking-tight">+213</span>
@@ -129,29 +129,29 @@ const CreationDeCompteClient3 = () => {
 </div>
 {/*  Address  */}
 <div className="flex flex-col gap-1.5">
-<label className="text-[10px] font-bold uppercase tracking-widest text-slate-500 ml-1">Adresse DÃ©taillÃ©e</label>
-<input className="w-full h-11 px-4 rounded-lg bg-surface-container-high border-none focus:ring-2 focus:ring-primary/40 text-on-surface transition-all placeholder:text-slate-400 text-sm" placeholder="NÂ° 45, Rue des FrÃ¨res, Quartier Central" type="text"/>
+<label className="text-[10px] font-bold uppercase tracking-widest text-slate-500 ml-1">Adresse Détaillée</label>
+<input className="w-full h-11 px-4 rounded-lg bg-surface-container-high border-none focus:ring-2 focus:ring-primary/40 text-on-surface transition-all placeholder:text-slate-400 text-sm" placeholder="NÂ° 45, Rue des Frères, Quartier Central" type="text"/>
 </div>
 {/*  Password Group  */}
 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
 <div className="flex flex-col gap-1.5">
 <label className="text-[10px] font-bold uppercase tracking-widest text-slate-500 ml-1">Mot de passe</label>
-<input className="w-full h-11 px-4 rounded-lg bg-surface-container-high border-none focus:ring-2 focus:ring-primary/40 text-on-surface transition-all placeholder:text-slate-400 text-sm" placeholder="âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢" type="password"/>
+<input className="w-full h-11 px-4 rounded-lg bg-surface-container-high border-none focus:ring-2 focus:ring-primary/40 text-on-surface transition-all placeholder:text-slate-400 text-sm" placeholder="••••••••" type="password"/>
 </div>
 <div className="flex flex-col gap-1.5">
 <label className="text-[10px] font-bold uppercase tracking-widest text-slate-500 ml-1">Confirmer</label>
-<input className="w-full h-11 px-4 rounded-lg bg-surface-container-high border-none focus:ring-2 focus:ring-primary/40 text-on-surface transition-all placeholder:text-slate-400 text-sm" placeholder="âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢" type="password"/>
+<input className="w-full h-11 px-4 rounded-lg bg-surface-container-high border-none focus:ring-2 focus:ring-primary/40 text-on-surface transition-all placeholder:text-slate-400 text-sm" placeholder="••••••••" type="password"/>
 </div>
 </div>
 {/*  Password Requirements  */}
 <div className="bg-surface-container-low p-4 rounded-lg border-l-4 border-primary">
-<h4 className="text-[10px] font-black text-slate-700 mb-2 uppercase tracking-widest">Exigences de sÃ©curitÃ© :</h4>
+<h4 className="text-[10px] font-black text-slate-700 mb-2 uppercase tracking-widest">Exigences de sécurité :</h4>
 <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-1.5">
 <li className="flex items-center gap-2 text-[11px] text-slate-600 font-medium">
-<span className="material-symbols-outlined text-sm text-green-500" >check_circle</span> 8+ caractÃ¨res
+<span className="material-symbols-outlined text-sm text-green-500" >check_circle</span> 8+ caractères
                             </li>
 <li className="flex items-center gap-2 text-[11px] text-slate-600 font-medium">
-<span className="material-symbols-outlined text-sm text-slate-400">circle</span> DÃ©bute par une lettre
+<span className="material-symbols-outlined text-sm text-slate-400">circle</span> Débute par une lettre
                             </li>
 <li className="flex items-center gap-2 text-[11px] text-slate-600 font-medium">
 <span className="material-symbols-outlined text-sm text-slate-400">circle</span> Contient un chiffre
@@ -162,7 +162,7 @@ const CreationDeCompteClient3 = () => {
 <div className="flex items-start gap-3 py-1">
 <input className="mt-1 w-4 h-4 rounded border-none bg-surface-container-high text-primary focus:ring-primary/40" id="consent" type="checkbox"/>
 <label className="text-xs text-on-surface-variant leading-relaxed" htmlFor="consent">
-                            J'accepte les <a className="text-primary font-bold hover:underline" href="#">Conditions d'Utilisation</a> et la <a className="text-primary font-bold hover:underline" href="#">Politique de ConfidentialitÃ©</a>.
+                            J'accepte les <a className="text-primary font-bold hover:underline" href="#">Conditions d'Utilisation</a> et la <a className="text-primary font-bold hover:underline" href="#">Politique de Confidentialité</a>.
                         </label>
 </div>
 {/*  CTA  */}
@@ -173,7 +173,7 @@ const CreationDeCompteClient3 = () => {
 {/*  Footer Link  */}
 <div className="pt-6 text-center">
 <p className="text-on-surface-variant text-sm">
-                            Vous avez dÃ©jÃ  un compte ? 
+                            Vous avez déjà un compte ? 
                             <a className="text-primary font-black ml-1 hover:underline" href="#">Sign In</a>
 </p>
 </div>
@@ -186,12 +186,12 @@ const CreationDeCompteClient3 = () => {
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-12 max-w-7xl mx-auto">
 <div className="space-y-4">
 <div className="text-lg font-bold text-slate-900">The Violet Protocol</div>
-<p className="text-sm text-slate-500 font-medium">Â© 2024 The Violet Protocol. All rights reserved.</p>
+<p className="text-sm text-slate-500 font-medium">© 2024 The Violet Protocol. All rights reserved.</p>
 </div>
 <div className="flex flex-col gap-3">
 <h4 className="text-xs font-bold uppercase tracking-widest text-slate-400">Plateforme</h4>
 <a className="text-slate-500 hover:text-slate-900 text-sm font-medium transition-colors" href="#">Annuaire</a>
-<a className="text-slate-500 hover:text-slate-900 text-sm font-medium transition-colors" href="#">Comment Ã§a marche</a>
+<a className="text-slate-500 hover:text-slate-900 text-sm font-medium transition-colors" href="#">Comment ça marche</a>
 </div>
 <div className="flex flex-col gap-3">
 <h4 className="text-xs font-bold uppercase tracking-widest text-slate-400">Support</h4>
@@ -199,8 +199,8 @@ const CreationDeCompteClient3 = () => {
 <a className="text-slate-500 hover:text-slate-900 text-sm font-medium transition-colors" href="#">Contact</a>
 </div>
 <div className="flex flex-col gap-3">
-<h4 className="text-xs font-bold uppercase tracking-widest text-slate-400">LÃ©gal</h4>
-<a className="text-slate-500 hover:text-slate-900 text-sm font-medium transition-colors" href="#">ConfidentialitÃ©</a>
+<h4 className="text-xs font-bold uppercase tracking-widest text-slate-400">Légal</h4>
+<a className="text-slate-500 hover:text-slate-900 text-sm font-medium transition-colors" href="#">Confidentialité</a>
 <a className="text-slate-500 hover:text-slate-900 text-sm font-medium transition-colors" href="#">Conditions</a>
 </div>
 </div>

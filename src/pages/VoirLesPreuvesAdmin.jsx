@@ -3,14 +3,14 @@ import AdminLayout from '../layouts/AdminLayout';
 
 const VoirLesPreuvesAdmin = () => {
   return (
-    <AdminLayout title="DÃ©tails du constat" subtitle="RÃ©vision des preuves">
+    <AdminLayout title="Détails du constat" subtitle="Révision des preuves">
       <div className="flex-1 overflow-y-auto p-8 space-y-8 max-w-4xl mx-auto w-full">
         
         {/* Header Section */}
         <div className="flex flex-wrap justify-between items-start gap-4">
           <div className="flex flex-col gap-2">
             <h1 className="text-slate-900 dark:text-white text-4xl font-black leading-tight tracking-tight">Voir les preuves admin</h1>
-            <p className="text-slate-500 dark:text-slate-400 text-base font-normal">RÃ©fÃ©rence de l'avertissement : <span className="font-mono font-semibold">#ADV-2023-0892</span></p>
+            <p className="text-slate-500 dark:text-slate-400 text-base font-normal">Référence de l'avertissement : <span className="font-mono font-semibold">#ADV-2023-0892</span></p>
           </div>
           <button className="flex items-center justify-center rounded-xl h-10 px-4 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 text-sm font-bold hover:bg-slate-50 transition-colors border border-slate-200 dark:border-slate-700">
             <span className="material-symbols-outlined mr-2 text-sm">arrow_back</span>
@@ -22,19 +22,19 @@ const VoirLesPreuvesAdmin = () => {
         <div className="mt-6 p-6 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
           <h2 className="text-slate-900 dark:text-white text-[22px] font-bold leading-tight tracking-tight mb-4 flex items-center gap-2">
             <span className="material-symbols-outlined text-indigo-600">report_problem</span>
-            RÃ©sumÃ© de l'infraction
+            Résumé de l'infraction
           </h2>
           <p className="text-slate-600 dark:text-slate-400 text-base font-normal leading-relaxed mb-6">
-            Non-conformitÃ© dÃ©tectÃ©e lors de l'inspection du site le 14/10/2023. Les travaux en cours sur la zone B ne respectent pas les protocoles de sÃ©curitÃ© incendie et les normes de balisage en vigueur (Article R. 4227-1 du Code du travail).
+            Non-conformité détectée lors de l'inspection du site le 14/10/2023. Les travaux en cours sur la zone B ne respectent pas les protocoles de sécurité incendie et les normes de balisage en vigueur (Article R. 4227-1 du Code du travail).
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="flex flex-1 flex-col gap-2 rounded-xl p-6 bg-red-50 dark:bg-red-900/10 border border-red-100 dark:border-red-900/20">
-              <p className="text-red-700 dark:text-red-400 text-sm font-bold uppercase tracking-wider">GravitÃ©</p>
-              <p className="text-red-800 dark:text-red-300 tracking-tight text-2xl font-black">Ã‰levÃ©e</p>
+              <p className="text-red-700 dark:text-red-400 text-sm font-bold uppercase tracking-wider">Gravité</p>
+              <p className="text-red-800 dark:text-red-300 tracking-tight text-2xl font-black">Élevée</p>
             </div>
             <div className="flex flex-1 flex-col gap-2 rounded-xl p-6 bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700">
-              <p className="text-slate-500 dark:text-slate-400 text-sm font-bold uppercase tracking-wider">DÃ©lai de rÃ©ponse restant</p>
-              <p className="text-slate-900 dark:text-white tracking-tight text-2xl font-black">5 jours ouvrÃ©s</p>
+              <p className="text-slate-500 dark:text-slate-400 text-sm font-bold uppercase tracking-wider">Délai de réponse restant</p>
+              <p className="text-slate-900 dark:text-white tracking-tight text-2xl font-black">5 jours ouvrés</p>
             </div>
           </div>
         </div>
@@ -54,11 +54,11 @@ const VoirLesPreuvesAdmin = () => {
                 <div className="flex justify-between items-start">
                   <div>
                     <p className="font-bold text-slate-900 dark:text-white">Photo_Site_ZoneB_01.jpg</p>
-                    <p className="text-xs text-slate-500 uppercase font-medium">Capture d'inspection âDA¢ 14/10/2023</p>
+                    <p className="text-xs text-slate-500 uppercase font-medium">Capture d'inspection • 14/10/2023</p>
                   </div>
                   <button className="text-indigo-600 hover:text-indigo-800"><span className="material-symbols-outlined">zoom_in</span></button>
                 </div>
-                <p className="mt-2 text-sm text-slate-600 dark:text-slate-400">Absence de balisage de sÃ©curitÃ© autour de la fosse d'excavation principale.</p>
+                <p className="mt-2 text-sm text-slate-600 dark:text-slate-400">Absence de balisage de sécurité autour de la fosse d'excavation principale.</p>
               </div>
             </div>
             <div className="group relative flex flex-col overflow-hidden rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 transition-all hover:shadow-md">
@@ -69,11 +69,11 @@ const VoirLesPreuvesAdmin = () => {
                 <div className="flex justify-between items-start">
                   <div>
                     <p className="font-bold text-slate-900 dark:text-white">Equipement_Defectueux.jpg</p>
-                    <p className="text-xs text-slate-500 uppercase font-medium">Capture d'inspection âDA¢ 14/10/2023</p>
+                    <p className="text-xs text-slate-500 uppercase font-medium">Capture d'inspection • 14/10/2023</p>
                   </div>
                   <button className="text-indigo-600 hover:text-indigo-800"><span className="material-symbols-outlined">zoom_in</span></button>
                 </div>
-                <p className="mt-2 text-sm text-slate-600 dark:text-slate-400">Extincteurs dont la date de validitÃ© est expirÃ©e depuis plus de 6 mois.</p>
+                <p className="mt-2 text-sm text-slate-600 dark:text-slate-400">Extincteurs dont la date de validité est expirée depuis plus de 6 mois.</p>
               </div>
             </div>
           </div>
@@ -85,7 +85,7 @@ const VoirLesPreuvesAdmin = () => {
               </div>
               <div className="flex-1">
                 <p className="font-bold text-slate-900 dark:text-white text-sm">Rapport_Plaintes_Clients.pdf</p>
-                <p className="text-xs text-slate-500">Document PDF âDA¢ 2.4 Mo</p>
+                <p className="text-xs text-slate-500">Document PDF • 2.4 Mo</p>
               </div>
               <button className="p-2 text-slate-400 hover:text-indigo-600 transition-colors"><span className="material-symbols-outlined">download</span></button>
             </div>
@@ -95,7 +95,7 @@ const VoirLesPreuvesAdmin = () => {
               </div>
               <div className="flex-1">
                 <p className="font-bold text-slate-900 dark:text-white text-sm">Registre_Securite.xlsx</p>
-                <p className="text-xs text-slate-500">Feuille de calcul âDA¢ 842 Ko</p>
+                <p className="text-xs text-slate-500">Feuille de calcul • 842 Ko</p>
               </div>
               <button className="p-2 text-slate-400 hover:text-indigo-600 transition-colors"><span className="material-symbols-outlined">download</span></button>
             </div>
@@ -109,11 +109,11 @@ const VoirLesPreuvesAdmin = () => {
             Action requise
           </h4>
           <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
-            Vous devez fournir un plan d'action rectificatif pour chaque Ã©lÃ©ment de preuve listÃ© ci-dessus avant le dÃ©lai imparti. Le non-respect de cette procÃ©dure pourra entraÃ®ner des sanctions administratives supplÃ©mentaires.
+            Vous devez fournir un plan d'action rectificatif pour chaque élément de preuve listé ci-dessus avant le délai imparti. Le non-respect de cette procédure pourra entraîner des sanctions administratives supplémentaires.
           </p>
           <div className="flex gap-3">
             <button className="bg-indigo-600 text-white font-bold py-2.5 px-6 rounded-lg hover:bg-indigo-700 transition-all text-sm shadow-lg shadow-indigo-600/20">
-              Soumettre une rÃ©ponse
+              Soumettre une réponse
             </button>
             <button className="bg-white dark:bg-slate-700 text-slate-700 dark:text-white border border-slate-200 dark:border-slate-600 font-bold py-2.5 px-6 rounded-lg hover:bg-slate-50 transition-all text-sm">
               Contester le constat

@@ -102,6 +102,7 @@ const ArtisanDashboard = () => {
     }
   };
 
+
   const activeProjects = bookings.filter(b => b.status === 'confirmed' || b.status === 'pending' || b.status === 'en attente').length;
 
   return (

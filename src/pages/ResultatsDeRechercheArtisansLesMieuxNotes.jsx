@@ -37,7 +37,7 @@ const ResultatsDeRechercheArtisansLesMieuxNotes = () => {
 <button className="flex min-w-[100px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
 <span>Connexion</span>
 </button>
-<div className="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border border-slate-200 dark:border-slate-700" data-alt="Avatar de l'utilisateur connectÃ©" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCzZHoRw03C7J5Q7F1-TvGKXmrpsIdB_c2rV7sic8ya6jBjgbmlleu5desrj-mz8sJaERArtHgaeSt1iTq52NDuaFn06N2y8jpYZonFmF1yxfxSGS7dHiNCA4qr1w4Pir_ecg5135IgytAbC9QbFvHsXqTx7VeyMFmVaV6AZ6XIv7F0Y_rmwOICEB7DTIqozq7A2rQiUQEIHLKLF4JtsJcPOZAM3c6_I_1cuBGp-DjyvjB_Z2dg7Q1VmLOIltLnBRlaYLcU-AT8PVmo");'></div>
+<div className="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border border-slate-200 dark:border-slate-700" data-alt="Avatar de l'utilisateur connecté" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCzZHoRw03C7J5Q7F1-TvGKXmrpsIdB_c2rV7sic8ya6jBjgbmlleu5desrj-mz8sJaERArtHgaeSt1iTq52NDuaFn06N2y8jpYZonFmF1yxfxSGS7dHiNCA4qr1w4Pir_ecg5135IgytAbC9QbFvHsXqTx7VeyMFmVaV6AZ6XIv7F0Y_rmwOICEB7DTIqozq7A2rQiUQEIHLKLF4JtsJcPOZAM3c6_I_1cuBGp-DjyvjB_Z2dg7Q1VmLOIltLnBRlaYLcU-AT8PVmo");'></div>
 </div>
 </header>
 <main className="flex flex-1 justify-center py-8 px-4 md:px-10 lg:px-20">
@@ -45,7 +45,7 @@ const ResultatsDeRechercheArtisansLesMieuxNotes = () => {
 {/*  Sidebar Filters  */}
 <aside className="w-full md:w-72 flex flex-col gap-6 shrink-0">
 <div className="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
-<h3 className="text-slate-900 dark:text-slate-100 text-lg font-bold mb-4">Filtres AvancÃ©s</h3>
+<h3 className="text-slate-900 dark:text-slate-100 text-lg font-bold mb-4">Filtres Avancés</h3>
 <div className="flex flex-col gap-1">
 {/*  Highlighting 'Notes' filter as requested  */}
 <div className="flex items-center gap-3 px-3 py-3 rounded-lg bg-primary/10 text-primary border border-primary/20">
@@ -59,11 +59,11 @@ const ResultatsDeRechercheArtisansLesMieuxNotes = () => {
 </div>
 <div className="flex items-center gap-3 px-3 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg cursor-pointer transition-colors">
 <span className="material-symbols-outlined text-[22px]">event_available</span>
-<p className="text-sm font-medium leading-normal">DisponibilitÃ©</p>
+<p className="text-sm font-medium leading-normal">Disponibilité</p>
 </div>
 <div className="flex items-center gap-3 px-3 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg cursor-pointer transition-colors">
 <span className="material-symbols-outlined text-[22px]">category</span>
-<p className="text-sm font-medium leading-normal">CatÃ©gories d'Artisanat</p>
+<p className="text-sm font-medium leading-normal">Catégories d'Artisanat</p>
 </div>
 </div>
 <div className="mt-8">
@@ -71,11 +71,11 @@ const ResultatsDeRechercheArtisansLesMieuxNotes = () => {
 <div className="flex flex-col gap-2">
 <label className="flex items-center gap-3 cursor-pointer group">
 <input defaultChecked className="form-radio text-primary border-slate-300 dark:border-slate-700 bg-transparent focus:ring-primary rounded-full" name="rating" type="radio"/>
-<span className="text-sm text-slate-700 dark:text-slate-300 group-hover:text-primary">4.5+ Ã‰toiles</span>
+<span className="text-sm text-slate-700 dark:text-slate-300 group-hover:text-primary">4.5+ Étoiles</span>
 </label>
 <label className="flex items-center gap-3 cursor-pointer group">
 <input className="form-radio text-primary border-slate-300 dark:border-slate-700 bg-transparent focus:ring-primary rounded-full" name="rating" type="radio"/>
-<span className="text-sm text-slate-700 dark:text-slate-300 group-hover:text-primary">4.0+ Ã‰toiles</span>
+<span className="text-sm text-slate-700 dark:text-slate-300 group-hover:text-primary">4.0+ Étoiles</span>
 </label>
 </div>
 </div>
@@ -84,25 +84,25 @@ const ResultatsDeRechercheArtisansLesMieuxNotes = () => {
                         </button>
 </div>
 <div className="bg-primary/5 dark:bg-primary/10 p-6 rounded-xl border border-primary/20 hidden md:block">
-<p className="text-primary text-sm font-bold mb-2">Pourquoi choisir un artisan vÃ©rifiÃ© ?</p>
-<p className="text-slate-600 dark:text-slate-400 text-xs leading-relaxed">Les artisans avec le badge de vÃ©rification ont fourni des justificatifs de compÃ©tences et d'assurance professionnelle.</p>
+<p className="text-primary text-sm font-bold mb-2">Pourquoi choisir un artisan vérifié ?</p>
+<p className="text-slate-600 dark:text-slate-400 text-xs leading-relaxed">Les artisans avec le badge de vérification ont fourni des justificatifs de compétences et d'assurance professionnelle.</p>
 </div>
 </aside>
 {/*  Results Section  */}
 <div className="flex-1 flex flex-col gap-6">
 <div className="flex flex-col gap-2">
-<h1 className="text-slate-900 dark:text-slate-100 text-3xl md:text-4xl font-black leading-tight tracking-[-0.033em]">Artisans les mieux notÃ©s</h1>
-<p className="text-slate-600 dark:text-slate-400 text-base font-normal">DÃ©couvrez nos experts les plus recommandÃ©s par la communautÃ©, basÃ©s sur des expÃ©riences rÃ©elles.</p>
+<h1 className="text-slate-900 dark:text-slate-100 text-3xl md:text-4xl font-black leading-tight tracking-[-0.033em]">Artisans les mieux notés</h1>
+<p className="text-slate-600 dark:text-slate-400 text-base font-normal">Découvrez nos experts les plus recommandés par la communauté, basés sur des expériences réelles.</p>
 </div>
 {/*  Quick Tags  */}
 <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
 <button className="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary text-white px-4 text-sm font-medium">
 <span className="material-symbols-outlined text-[18px]">star</span>
-                            4.5+ Ã‰toiles
+                            4.5+ Étoiles
                         </button>
 <button className="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 px-4 text-sm font-medium text-slate-700 dark:text-slate-300 hover:border-primary transition-colors">
 <span className="material-symbols-outlined text-[18px] text-primary">verified</span>
-                            Artisans VÃ©rifiÃ©s
+                            Artisans Vérifiés
                         </button>
 <button className="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 px-4 text-sm font-medium text-slate-700 dark:text-slate-300 hover:border-primary transition-colors">
                             Disponible ce mois
@@ -121,20 +121,20 @@ const ResultatsDeRechercheArtisansLesMieuxNotes = () => {
 <div>
 <div className="flex items-center gap-2 mb-1">
 <h3 className="text-slate-900 dark:text-slate-100 text-xl font-bold">Jean Dupont</h3>
-<span className="material-symbols-outlined text-primary text-[20px]" title="Artisan VÃ©rifiÃ©">verified</span>
+<span className="material-symbols-outlined text-primary text-[20px]" title="Artisan Vérifié">verified</span>
 </div>
-<p className="text-slate-500 text-sm font-medium">Menuiserie &amp; Ã‰bÃ©nisterie sur mesure</p>
+<p className="text-slate-500 text-sm font-medium">Menuiserie &amp; Ébénisterie sur mesure</p>
 </div>
 <div className="flex flex-col items-end">
 <div className="flex items-center gap-1 bg-yellow-400/10 text-yellow-600 dark:text-yellow-500 px-2 py-1 rounded-lg">
 <span className="material-symbols-outlined text-[18px] fill-1">star</span>
 <span className="font-bold text-base leading-none">4.9</span>
 </div>
-<p className="text-[11px] text-slate-400 mt-1 uppercase font-semibold">128 avis vÃ©rifiÃ©s</p>
+<p className="text-[11px] text-slate-400 mt-1 uppercase font-semibold">128 avis vérifiés</p>
 </div>
 </div>
 <div className="bg-slate-50 dark:bg-slate-800/50 p-3 rounded-lg border-l-4 border-primary/40 italic text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-                                        "Travail d'une prÃ©cision incroyable pour ma bibliothÃ¨que. Jean est ponctuel et trÃ¨s soigneux, je recommande vivement !"
+                                        "Travail d'une précision incroyable pour ma bibliothèque. Jean est ponctuel et très soigneux, je recommande vivement !"
                                         <span className="block mt-1 font-semibold not-italic text-slate-500 dark:text-slate-500 text-xs">âDA” Marie L.</span>
 </div>
 <div className="flex items-center justify-between mt-2 pt-3 border-t border-slate-100 dark:border-slate-800">
@@ -158,28 +158,28 @@ const ResultatsDeRechercheArtisansLesMieuxNotes = () => {
 {/*  Artisan Card 2  */}
 <div className="group flex flex-col @container items-stretch justify-start rounded-xl overflow-hidden shadow-sm border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 hover:shadow-md transition-all duration-300">
 <div className="flex flex-col @[600px]:flex-row">
-<div className="w-full @[600px]:w-64 h-48 @[600px]:h-auto bg-center bg-no-repeat bg-cover shrink-0 relative" data-alt="Ã‰lectricien professionnel au travail" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBjtZaEdCRTRXY29s0F5f-jI1gVvMT2tK5bEKheKkJgNC3h8PQSvx6uZft9nxYhMwEKW0vyjWoP9RBNCsmmxqfqeKW05GK1-uq_jNuJhNC5SsZXbQBeJkXteAqKEPjv2c5dSXNDV-71B1n_f99O4nLkbcELu9YiAdtskjRnk_4JppLZCWPls_5gnFRn2myrG33zWBO0fcBf-syB00bp1TuVmGxfCYuLeVKyyVA8zjKo5DT_wgLlpL5jJFkF_8q5HSUT1JCC9rM5JIxa");'>
-<div className="absolute top-3 left-3 bg-white/90 dark:bg-slate-900/90 backdrop-blur px-2 py-1 rounded text-[10px] font-bold text-primary uppercase tracking-widest border border-primary/20">Ã‰lectricien</div>
+<div className="w-full @[600px]:w-64 h-48 @[600px]:h-auto bg-center bg-no-repeat bg-cover shrink-0 relative" data-alt="Électricien professionnel au travail" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBjtZaEdCRTRXY29s0F5f-jI1gVvMT2tK5bEKheKkJgNC3h8PQSvx6uZft9nxYhMwEKW0vyjWoP9RBNCsmmxqfqeKW05GK1-uq_jNuJhNC5SsZXbQBeJkXteAqKEPjv2c5dSXNDV-71B1n_f99O4nLkbcELu9YiAdtskjRnk_4JppLZCWPls_5gnFRn2myrG33zWBO0fcBf-syB00bp1TuVmGxfCYuLeVKyyVA8zjKo5DT_wgLlpL5jJFkF_8q5HSUT1JCC9rM5JIxa");'>
+<div className="absolute top-3 left-3 bg-white/90 dark:bg-slate-900/90 backdrop-blur px-2 py-1 rounded text-[10px] font-bold text-primary uppercase tracking-widest border border-primary/20">Électricien</div>
 </div>
 <div className="flex flex-1 flex-col p-5 md:p-6 gap-3">
 <div className="flex justify-between items-start">
 <div>
 <div className="flex items-center gap-2 mb-1">
 <h3 className="text-slate-900 dark:text-slate-100 text-xl font-bold">Marc Lefebvre</h3>
-<span className="material-symbols-outlined text-primary text-[20px]" title="Artisan VÃ©rifiÃ©">verified</span>
+<span className="material-symbols-outlined text-primary text-[20px]" title="Artisan Vérifié">verified</span>
 </div>
-<p className="text-slate-500 text-sm font-medium">Installation et rÃ©novation Ã©lectrique</p>
+<p className="text-slate-500 text-sm font-medium">Installation et rénovation électrique</p>
 </div>
 <div className="flex flex-col items-end">
 <div className="flex items-center gap-1 bg-yellow-400/10 text-yellow-600 dark:text-yellow-500 px-2 py-1 rounded-lg">
 <span className="material-symbols-outlined text-[18px] fill-1">star</span>
 <span className="font-bold text-base leading-none">4.8</span>
 </div>
-<p className="text-[11px] text-slate-400 mt-1 uppercase font-semibold">94 avis vÃ©rifiÃ©s</p>
+<p className="text-[11px] text-slate-400 mt-1 uppercase font-semibold">94 avis vérifiés</p>
 </div>
 </div>
 <div className="bg-slate-50 dark:bg-slate-800/50 p-3 rounded-lg border-l-4 border-primary/40 italic text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-                                        "RÃ©actif et trÃ¨s pÃ©dagogue sur les explications. L'installation est propre et aux normes. Un vrai pro !"
+                                        "Réactif et très pédagogue sur les explications. L'installation est propre et aux normes. Un vrai pro !"
                                         <span className="block mt-1 font-semibold not-italic text-slate-500 dark:text-slate-500 text-xs">âDA” Thomas D.</span>
 </div>
 <div className="flex items-center justify-between mt-2 pt-3 border-t border-slate-100 dark:border-slate-800">
@@ -190,7 +190,7 @@ const ResultatsDeRechercheArtisansLesMieuxNotes = () => {
                                             </div>
 <div className="flex items-center gap-1 text-xs text-green-600 dark:text-green-500 font-medium">
 <span className="material-symbols-outlined text-[16px]">schedule</span>
-                                                Dispo. ImmÃ©diate
+                                                Dispo. Immédiate
                                             </div>
 </div>
 <button className="flex min-w-[120px] cursor-pointer items-center justify-center rounded-lg h-9 px-4 bg-primary text-white text-sm font-bold transition-all hover:bg-primary/90">
@@ -203,15 +203,15 @@ const ResultatsDeRechercheArtisansLesMieuxNotes = () => {
 {/*  Artisan Card 3  */}
 <div className="group flex flex-col @container items-stretch justify-start rounded-xl overflow-hidden shadow-sm border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 hover:shadow-md transition-all duration-300">
 <div className="flex flex-col @[600px]:flex-row">
-<div className="w-full @[600px]:w-64 h-48 @[600px]:h-auto bg-center bg-no-repeat bg-cover shrink-0 relative" data-alt="CÃ©ramiste faÃ§onnant un vase" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDNHKASEDL6JU3dojHcPfySzsL6RUMocrIb_LHg-DE3qxkb1I8_UutE3Shhqk7rfM2ESAa2sJUgllngP2BxSjqsram8UbW62Macsb70OFM9yL0aYqiUTqj-8Ca7p0aC7zBLo2tKvKjokZqZGJRMFmkxD5gX288BSaFnhaKXHXjQPHU-JdWkbCmYIjn9c8jJS_bnqWugZv65_EOk45c0Wxs7F_zmU4WZaQpu8BtyzMsKRbci4eck0ziN_tb6Hcr4o6AUZMhe_uSBO8Yy");'>
-<div className="absolute top-3 left-3 bg-white/90 dark:bg-slate-900/90 backdrop-blur px-2 py-1 rounded text-[10px] font-bold text-primary uppercase tracking-widest border border-primary/20">CÃ©ramiste</div>
+<div className="w-full @[600px]:w-64 h-48 @[600px]:h-auto bg-center bg-no-repeat bg-cover shrink-0 relative" data-alt="Céramiste façonnant un vase" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDNHKASEDL6JU3dojHcPfySzsL6RUMocrIb_LHg-DE3qxkb1I8_UutE3Shhqk7rfM2ESAa2sJUgllngP2BxSjqsram8UbW62Macsb70OFM9yL0aYqiUTqj-8Ca7p0aC7zBLo2tKvKjokZqZGJRMFmkxD5gX288BSaFnhaKXHXjQPHU-JdWkbCmYIjn9c8jJS_bnqWugZv65_EOk45c0Wxs7F_zmU4WZaQpu8BtyzMsKRbci4eck0ziN_tb6Hcr4o6AUZMhe_uSBO8Yy");'>
+<div className="absolute top-3 left-3 bg-white/90 dark:bg-slate-900/90 backdrop-blur px-2 py-1 rounded text-[10px] font-bold text-primary uppercase tracking-widest border border-primary/20">Céramiste</div>
 </div>
 <div className="flex flex-1 flex-col p-5 md:p-6 gap-3">
 <div className="flex justify-between items-start">
 <div>
 <div className="flex items-center gap-2 mb-1">
 <h3 className="text-slate-900 dark:text-slate-100 text-xl font-bold">Sophie Martin</h3>
-<span className="material-symbols-outlined text-primary text-[20px]" title="Artisan VÃ©rifiÃ©">verified</span>
+<span className="material-symbols-outlined text-primary text-[20px]" title="Artisan Vérifié">verified</span>
 </div>
 <p className="text-slate-500 text-sm font-medium">Poterie artisanale et cours particuliers</p>
 </div>
@@ -220,11 +220,11 @@ const ResultatsDeRechercheArtisansLesMieuxNotes = () => {
 <span className="material-symbols-outlined text-[18px] fill-1">star</span>
 <span className="font-bold text-base leading-none">4.9</span>
 </div>
-<p className="text-[11px] text-slate-400 mt-1 uppercase font-semibold">215 avis vÃ©rifiÃ©s</p>
+<p className="text-[11px] text-slate-400 mt-1 uppercase font-semibold">215 avis vérifiés</p>
 </div>
 </div>
 <div className="bg-slate-50 dark:bg-slate-800/50 p-3 rounded-lg border-l-4 border-primary/40 italic text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-                                        "Les piÃ¨ces de Sophie sont magnifiques et uniques. J'ai aussi pris un cours avec elle, c'Ã©tait une expÃ©rience gÃ©niale !"
+                                        "Les pièces de Sophie sont magnifiques et uniques. J'ai aussi pris un cours avec elle, c'était une expérience géniale !"
                                         <span className="block mt-1 font-semibold not-italic text-slate-500 dark:text-slate-500 text-xs">âDA” Claire G.</span>
 </div>
 <div className="flex items-center justify-between mt-2 pt-3 border-t border-slate-100 dark:border-slate-800">
@@ -273,31 +273,31 @@ const ResultatsDeRechercheArtisansLesMieuxNotes = () => {
 </svg>
 <h2 className="text-slate-900 dark:text-slate-100 text-lg font-bold">Artisanat</h2>
 </div>
-<p className="text-slate-500 text-sm max-w-xs leading-relaxed">Le rÃ©seau de confiance qui connecte les clients avec les meilleurs artisans de leur rÃ©gion.</p>
+<p className="text-slate-500 text-sm max-w-xs leading-relaxed">Le réseau de confiance qui connecte les clients avec les meilleurs artisans de leur région.</p>
 </div>
 <div className="grid grid-cols-2 sm:grid-cols-3 gap-8">
 <div className="flex flex-col gap-3">
 <p className="text-slate-900 dark:text-slate-100 text-sm font-bold">Plateforme</p>
-<a className="text-slate-500 text-sm hover:text-primary" href="#">Comment Ã§a marche</a>
+<a className="text-slate-500 text-sm hover:text-primary" href="#">Comment ça marche</a>
 <a className="text-slate-500 text-sm hover:text-primary" href="#">Tarifs</a>
 <a className="text-slate-500 text-sm hover:text-primary" href="#">Avis Clients</a>
 </div>
 <div className="flex flex-col gap-3">
 <p className="text-slate-900 dark:text-slate-100 text-sm font-bold">Artisans</p>
 <a className="text-slate-500 text-sm hover:text-primary" href="#">S'inscrire</a>
-<a className="text-slate-500 text-sm hover:text-primary" href="#">Guide de rÃ©ussite</a>
-<a className="text-slate-500 text-sm hover:text-primary" href="#">VÃ©rification</a>
+<a className="text-slate-500 text-sm hover:text-primary" href="#">Guide de réussite</a>
+<a className="text-slate-500 text-sm hover:text-primary" href="#">Vérification</a>
 </div>
 <div className="flex flex-col gap-3">
-<p className="text-slate-900 dark:text-slate-100 text-sm font-bold">LÃ©gal</p>
-<a className="text-slate-500 text-sm hover:text-primary" href="#">ConfidentialitÃ©</a>
+<p className="text-slate-900 dark:text-slate-100 text-sm font-bold">Légal</p>
+<a className="text-slate-500 text-sm hover:text-primary" href="#">Confidentialité</a>
 <a className="text-slate-500 text-sm hover:text-primary" href="#">CGU</a>
 <a className="text-slate-500 text-sm hover:text-primary" href="#">Contact</a>
 </div>
 </div>
 </div>
 <div className="max-w-[1200px] mx-auto mt-12 pt-6 border-t border-slate-100 dark:border-slate-800 text-center md:text-left">
-<p className="text-slate-400 text-xs">Â© 2024 Artisanat. Tous droits rÃ©servÃ©s.</p>
+<p className="text-slate-400 text-xs">© 2024 Artisanat. Tous droits réservés.</p>
 </div>
 </footer>
 </div>

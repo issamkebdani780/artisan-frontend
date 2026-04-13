@@ -52,16 +52,16 @@ const SettingsPageParametres = () => {
 </a>
 <a className="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary/10 text-primary transition-colors" href="#">
 <span className="material-symbols-outlined text-primary" >settings</span>
-<span className="text-sm font-bold">ParamÃ¨tres</span>
+<span className="text-sm font-bold">Paramètres</span>
 </a>
 </nav>
 <div className="mt-auto pt-6 border-t border-slate-200 dark:border-slate-800">
 <div className="bg-primary/5 rounded-xl p-4">
 <div className="flex items-center gap-2 mb-2">
 <span className="material-symbols-outlined text-primary text-sm">verified_user</span>
-<span className="text-xs font-bold text-primary uppercase tracking-wider">Statut VÃ©rifiÃ©</span>
+<span className="text-xs font-bold text-primary uppercase tracking-wider">Statut Vérifié</span>
 </div>
-<p className="text-xs text-slate-600 dark:text-slate-400 mb-3">Votre compte est entiÃ¨rement vÃ©rifiÃ© et visible par les clients.</p>
+<p className="text-xs text-slate-600 dark:text-slate-400 mb-3">Votre compte est entièrement vérifié et visible par les clients.</p>
 <a className="text-xs font-bold text-primary underline" href="#">Voir mon profil public</a>
 </div>
 </div>
@@ -69,8 +69,8 @@ const SettingsPageParametres = () => {
 {/*  Main Content  */}
 <main className="flex-1 p-6 lg:p-10 max-w-5xl">
 <div className="mb-8">
-<h2 className="text-2xl font-black text-slate-900 dark:text-white tracking-tight">ParamÃ¨tres du compte</h2>
-<p className="text-slate-500 dark:text-slate-400">GÃ©rez les informations de votre compte et vos prÃ©fÃ©rences personnelles.</p>
+<h2 className="text-2xl font-black text-slate-900 dark:text-white tracking-tight">Paramètres du compte</h2>
+<p className="text-slate-500 dark:text-slate-400">Gérez les informations de votre compte et vos préférences personnelles.</p>
 </div>
 <form className="space-y-10">
 {/*  Profile Section  */}
@@ -91,11 +91,11 @@ const SettingsPageParametres = () => {
 <input className="w-full rounded-lg border-slate-300 dark:border-slate-700 dark:bg-slate-800 focus:ring-primary focus:border-primary" type="text" value="Jean Dupont"/>
 </div>
 <div className="flex flex-col gap-1.5">
-<label className="text-sm font-semibold text-slate-700 dark:text-slate-300">CatÃ©gorie professionnelle</label>
+<label className="text-sm font-semibold text-slate-700 dark:text-slate-300">Catégorie professionnelle</label>
 <select className="w-full rounded-lg border-slate-300 dark:border-slate-700 dark:bg-slate-800 focus:ring-primary focus:border-primary">
 <option>Menuisier</option>
 <option>Plombier</option>
-<option>Ã‰lectricien</option>
+<option>Électricien</option>
 <option>Peintre</option>
 </select>
 </div>
@@ -104,7 +104,7 @@ const SettingsPageParametres = () => {
 <input className="w-full rounded-lg border-slate-300 dark:border-slate-700 dark:bg-slate-800 focus:ring-primary focus:border-primary" type="email" value="jean.dupont@example.com"/>
 </div>
 <div className="flex flex-col gap-1.5">
-<label className="text-sm font-semibold text-slate-700 dark:text-slate-300">TÃ©lÃ©phone</label>
+<label className="text-sm font-semibold text-slate-700 dark:text-slate-300">Téléphone</label>
 <input className="w-full rounded-lg border-slate-300 dark:border-slate-700 dark:bg-slate-800 focus:ring-primary focus:border-primary" type="tel" value="+33 6 12 34 56 78"/>
 </div>
 </div>
@@ -115,21 +115,21 @@ const SettingsPageParametres = () => {
 <section>
 <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2">
 <span className="material-symbols-outlined text-slate-400">lock</span>
-                                SÃ©curitÃ© &amp; Mot de passe
+                                Sécurité &amp; Mot de passe
                             </h3>
 <div className="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 p-6">
 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 <div className="flex flex-col gap-1.5">
 <label className="text-sm font-semibold text-slate-700 dark:text-slate-300">Mot de passe actuel</label>
-<input className="w-full rounded-lg border-slate-300 dark:border-slate-700 dark:bg-slate-800 focus:ring-primary focus:border-primary" placeholder="âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢" type="password"/>
+<input className="w-full rounded-lg border-slate-300 dark:border-slate-700 dark:bg-slate-800 focus:ring-primary focus:border-primary" placeholder="••••••••" type="password"/>
 </div>
 <div className="flex flex-col gap-1.5">
 <label className="text-sm font-semibold text-slate-700 dark:text-slate-300">Nouveau mot de passe</label>
-<input className="w-full rounded-lg border-slate-300 dark:border-slate-700 dark:bg-slate-800 focus:ring-primary focus:border-primary" placeholder="âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢" type="password"/>
+<input className="w-full rounded-lg border-slate-300 dark:border-slate-700 dark:bg-slate-800 focus:ring-primary focus:border-primary" placeholder="••••••••" type="password"/>
 </div>
 <div className="flex flex-col gap-1.5">
 <label className="text-sm font-semibold text-slate-700 dark:text-slate-300">Confirmer le nouveau</label>
-<input className="w-full rounded-lg border-slate-300 dark:border-slate-700 dark:bg-slate-800 focus:ring-primary focus:border-primary" placeholder="âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢âDA¢" type="password"/>
+<input className="w-full rounded-lg border-slate-300 dark:border-slate-700 dark:bg-slate-800 focus:ring-primary focus:border-primary" placeholder="••••••••" type="password"/>
 </div>
 </div>
 </div>
@@ -138,13 +138,13 @@ const SettingsPageParametres = () => {
 <section>
 <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2">
 <span className="material-symbols-outlined text-slate-400">tune</span>
-                                PrÃ©fÃ©rences &amp; Notifications
+                                Préférences &amp; Notifications
                             </h3>
 <div className="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 p-6 space-y-8">
 <div className="flex flex-col gap-1.5 max-w-xs">
 <label className="text-sm font-semibold text-slate-700 dark:text-slate-300">Langue de l'interface</label>
 <select className="w-full rounded-lg border-slate-300 dark:border-slate-700 dark:bg-slate-800 focus:ring-primary focus:border-primary">
-<option selected="">FranÃ§ais</option>
+<option selected="">Français</option>
 <option>Arabe</option>
 <option>English</option>
 </select>
@@ -163,7 +163,7 @@ const SettingsPageParametres = () => {
 <div className="flex items-center justify-between gap-4 p-4 rounded-lg bg-slate-50 dark:bg-slate-800/50">
 <div>
 <p className="text-sm font-bold text-slate-900 dark:text-white">Notifications Push</p>
-<p className="text-xs text-slate-500 dark:text-slate-400">Alertes en temps rÃ©el sur mobile</p>
+<p className="text-xs text-slate-500 dark:text-slate-400">Alertes en temps réel sur mobile</p>
 </div>
 <label className="relative inline-flex items-center cursor-pointer">
 <input defaultChecked className="sr-only peer" type="checkbox"/>

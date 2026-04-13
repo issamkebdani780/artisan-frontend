@@ -20,7 +20,7 @@ const MessagesEtLitiges = () => {
 </a>
 <a className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
 <span className="material-symbols-outlined">description</span>
-<span className="text-sm font-medium">VÃ©rification et documents</span>
+<span className="text-sm font-medium">Vérification et documents</span>
 </a>
 <a className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
 <span className="material-symbols-outlined">work</span>
@@ -35,7 +35,7 @@ const MessagesEtLitiges = () => {
 <span className="text-sm font-medium">Litiges</span>
 </a><a className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
 <span className="material-symbols-outlined">settings</span>
-<span className="text-sm font-medium">ParamÃ¨tres</span>
+<span className="text-sm font-medium">Paramètres</span>
 </a>
 </nav>
 <div className="p-4 border-t border-slate-200 dark:border-slate-800">
@@ -112,7 +112,7 @@ const MessagesEtLitiges = () => {
 <span className="text-[10px] text-slate-400">Hier</span>
 </div>
 <p className="text-xs text-slate-500 truncate mt-0.5">Merci pour le devis, c'est parfait pour moi.</p>
-<p className="text-[10px] text-slate-400 mt-1 uppercase tracking-wider font-bold">RÃ©fection Salle de Bain</p>
+<p className="text-[10px] text-slate-400 mt-1 uppercase tracking-wider font-bold">Réfection Salle de Bain</p>
 </div>
 </div>
 </div>
@@ -127,7 +127,7 @@ const MessagesEtLitiges = () => {
 <span className="text-[10px] text-slate-400">22 Oct</span>
 </div>
 <p className="text-xs text-slate-500 truncate mt-0.5">Pouvez-vous confirmer la date de livraison?</p>
-<p className="text-[10px] text-slate-400 mt-1 uppercase tracking-wider font-bold">Escalier ChÃªne</p>
+<p className="text-[10px] text-slate-400 mt-1 uppercase tracking-wider font-bold">Escalier Chêne</p>
 </div>
 </div>
 </div>
@@ -176,7 +176,7 @@ const MessagesEtLitiges = () => {
 </div>
 <div className="space-y-1">
 <div className="bg-white dark:bg-slate-800 p-4 rounded-2xl rounded-tl-none shadow-sm border border-slate-100 dark:border-slate-800">
-<p className="text-sm leading-relaxed">Bonjour Marc, j'ai bien reÃ§u les plans pour la cuisine. C'est magnifique ! J'aurais cependant une question sur l'essence de bois pour l'Ã®lot central.</p>
+<p className="text-sm leading-relaxed">Bonjour Marc, j'ai bien reçu les plans pour la cuisine. C'est magnifique ! J'aurais cependant une question sur l'essence de bois pour l'îlot central.</p>
 </div>
 <span className="text-[10px] text-slate-400 font-medium ml-1">10:28</span>
 </div>
@@ -188,7 +188,7 @@ const MessagesEtLitiges = () => {
 </div>
 <div className="space-y-1 text-right">
 <div className="bg-primary text-white p-4 rounded-2xl rounded-tr-none shadow-md">
-<p className="text-sm leading-relaxed">Bonjour Jean, merci pour votre retour. Quel bois aviez-vous en tÃªte ? Pour l'Ã®lot, je recommande gÃ©nÃ©ralement du chÃªne massif pour la durabilitÃ©.</p>
+<p className="text-sm leading-relaxed">Bonjour Jean, merci pour votre retour. Quel bois aviez-vous en tête ? Pour l'îlot, je recommande généralement du chêne massif pour la durabilité.</p>
 </div>
 <div className="flex items-center justify-end gap-1">
 <span className="text-[10px] text-slate-400 font-medium">10:29</span>
@@ -203,7 +203,7 @@ const MessagesEtLitiges = () => {
 </div>
 <div className="space-y-1">
 <div className="bg-white dark:bg-slate-800 p-4 rounded-2xl rounded-tl-none shadow-sm border border-slate-100 dark:border-slate-800">
-<p className="text-sm leading-relaxed">Bonjour, seriez-vous disponible pour un court appel aujourd'hui vers 14h pour en discuter ? J'ai aussi quelques photos de rÃ©fÃ©rences que je viens de trouver.</p>
+<p className="text-sm leading-relaxed">Bonjour, seriez-vous disponible pour un court appel aujourd'hui vers 14h pour en discuter ? J'ai aussi quelques photos de références que je viens de trouver.</p>
 </div>
 <span className="text-[10px] text-slate-400 font-medium ml-1">10:30</span>
 </div>
@@ -212,7 +212,7 @@ const MessagesEtLitiges = () => {
 {/*  Input Area  */}
 <div className="p-6 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
 <div className="bg-slate-50 dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-2">
-<textarea className="w-full bg-transparent border-none focus:ring-0 text-sm p-3 resize-none h-20" placeholder="Ã‰crivez votre message ici..." rows="1"></textarea>
+<textarea className="w-full bg-transparent border-none focus:ring-0 text-sm p-3 resize-none h-20" placeholder="Écrivez votre message ici..." rows="1"></textarea>
 <div className="flex items-center justify-between mt-2 px-2 pb-1">
 <div className="flex gap-1">
 <button className="w-8 h-8 flex items-center justify-center text-slate-400 hover:text-primary transition-colors">
@@ -240,26 +240,26 @@ const MessagesEtLitiges = () => {
 <img alt="Jean Dupont" className="w-full h-full object-cover" data-alt="Client profile photo large" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyB7exS6uA3YBXXNCZv2y7W3603KKx-4-5TqNk9I5mocAzymFegyVu0-25_cIxYWRAn_pn-UtYcdu9qvbnZbQdx8fT7CwUulNhveWqykMpdY7OJDJhsbpJs5ABptxLWHKK-fIBlUjda7QCN2oUc55pXZUZ3wMx2wmXBjkXbmB0ni88z7OXbx4_Y_DNTZxqjasRA0yu67kTS9z5OdR5A6pz1pr6wRn1Krzxae1K8prrVxAINoWTQoEQjuwzPdY1mUAYnAUicNlDkZmm"/>
 </div>
 <h3 className="font-bold">Jean Dupont</h3>
-<p className="text-xs text-slate-500 mt-1">Client depuis AoÃ»t 2023</p>
+<p className="text-xs text-slate-500 mt-1">Client depuis Août 2023</p>
 <div className="flex justify-center gap-2 mt-4">
 <span className="bg-slate-100 dark:bg-slate-800 text-[10px] font-bold px-2 py-1 rounded">PARTICULIER</span>
-<span className="bg-green-100 dark:bg-green-900/30 text-green-600 text-[10px] font-bold px-2 py-1 rounded">VÃ‰RIFIÃ‰</span>
+<span className="bg-green-100 dark:bg-green-900/30 text-green-600 text-[10px] font-bold px-2 py-1 rounded">VÉRIFIÉ</span>
 </div>
 </div>
 <div className="flex-1 overflow-y-auto p-6 space-y-6">
 <div>
-<h4 className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-3">DÃ©tails du projet</h4>
+<h4 className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-3">Détails du projet</h4>
 <div className="bg-slate-50 dark:bg-slate-800 p-3 rounded-xl border border-slate-100 dark:border-slate-700">
 <p className="text-xs font-bold">Cuisine Contemporaine</p>
-<p className="text-[10px] text-slate-500 mt-1">Budget est.: 12,000â‚¬ - 15,000â‚¬</p>
+<p className="text-[10px] text-slate-500 mt-1">Budget est.: 12,000€ - 15,000€</p>
 <div className="mt-3 h-1.5 w-full bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
 <div className="bg-primary h-full w-[45%]"></div>
 </div>
-<p className="text-[10px] text-slate-400 mt-2 font-medium">Phase: Devis validÃ©</p>
+<p className="text-[10px] text-slate-400 mt-2 font-medium">Phase: Devis validé</p>
 </div>
 </div>
 <div>
-<h4 className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-3">Fichiers partagÃ©s</h4>
+<h4 className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-3">Fichiers partagés</h4>
 <div className="space-y-2">
 <div className="flex items-center gap-3 p-2 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg cursor-pointer">
 <div className="w-8 h-8 rounded bg-red-100 dark:bg-red-900/30 flex items-center justify-center text-red-600">
@@ -267,7 +267,7 @@ const MessagesEtLitiges = () => {
 </div>
 <div className="min-w-0">
 <p className="text-[11px] font-bold truncate">Plans_cuisine_v2.pdf</p>
-<p className="text-[9px] text-slate-400">2.4 MB âDA¢ 22 Oct</p>
+<p className="text-[9px] text-slate-400">2.4 MB • 22 Oct</p>
 </div>
 </div>
 <div className="flex items-center gap-3 p-2 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg cursor-pointer">
@@ -276,7 +276,7 @@ const MessagesEtLitiges = () => {
 </div>
 <div className="min-w-0">
 <p className="text-[11px] font-bold truncate">Inspiration_ilot.jpg</p>
-<p className="text-[9px] text-slate-400">1.1 MB âDA¢ Hier</p>
+<p className="text-[9px] text-slate-400">1.1 MB • Hier</p>
 </div>
 </div>
 </div>

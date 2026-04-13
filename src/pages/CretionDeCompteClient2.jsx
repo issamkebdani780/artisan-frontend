@@ -39,10 +39,10 @@ const CretionDeCompteClient2 = () => {
 <div className="lg:col-span-5 flex flex-col gap-8">
 <div className="space-y-4">
 <h1 className="text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white lg:text-5xl">
-                        Pourquoi crÃ©er un compte ?
+                        Pourquoi créer un compte ?
                     </h1>
 <p className="text-lg text-slate-600 dark:text-slate-400">
-                        Rejoignez le premier rÃ©seau d'artisans qualifiÃ©s et profitez d'une expÃ©rience sÃ©curisÃ©e pour tous vos travaux de rÃ©novation et d'entretien.
+                        Rejoignez le premier réseau d'artisans qualifiés et profitez d'une expérience sécurisée pour tous vos travaux de rénovation et d'entretien.
                     </p>
 </div>
 <div className="grid gap-6">
@@ -51,8 +51,8 @@ const CretionDeCompteClient2 = () => {
 <span className="material-symbols-outlined">verified_user</span>
 </div>
 <div>
-<h3 className="font-bold text-slate-900 dark:text-white">Avis vÃ©rifiÃ©s</h3>
-<p className="text-sm text-slate-500 dark:text-slate-400">Consultez uniquement des avis de clients rÃ©els ayant effectuÃ© des travaux.</p>
+<h3 className="font-bold text-slate-900 dark:text-white">Avis vérifiés</h3>
+<p className="text-sm text-slate-500 dark:text-slate-400">Consultez uniquement des avis de clients réels ayant effectué des travaux.</p>
 </div>
 </div>
 <div className="flex gap-4 p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 shadow-sm transition-all hover:shadow-md">
@@ -60,8 +60,8 @@ const CretionDeCompteClient2 = () => {
 <span className="material-symbols-outlined">security</span>
 </div>
 <div>
-<h3 className="font-bold text-slate-900 dark:text-white">Paiements sÃ©curisÃ©s</h3>
-<p className="text-sm text-slate-500 dark:text-slate-400">Vos transactions sont protÃ©gÃ©es par nos protocoles bancaires de pointe.</p>
+<h3 className="font-bold text-slate-900 dark:text-white">Paiements sécurisés</h3>
+<p className="text-sm text-slate-500 dark:text-slate-400">Vos transactions sont protégées par nos protocoles bancaires de pointe.</p>
 </div>
 </div>
 <div className="flex gap-4 p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 shadow-sm transition-all hover:shadow-md">
@@ -70,7 +70,7 @@ const CretionDeCompteClient2 = () => {
 </div>
 <div>
 <h3 className="font-bold text-slate-900 dark:text-white">Communication directe</h3>
-<p className="text-sm text-slate-500 dark:text-slate-400">Ã‰changez instantanÃ©ment avec vos prestataires via notre messagerie sÃ©curisÃ©e.</p>
+<p className="text-sm text-slate-500 dark:text-slate-400">Échangez instantanément avec vos prestataires via notre messagerie sécurisée.</p>
 </div>
 </div>
 <div className="flex gap-4 p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 shadow-sm transition-all hover:shadow-md">
@@ -79,14 +79,14 @@ const CretionDeCompteClient2 = () => {
 </div>
 <div>
 <h3 className="font-bold text-slate-900 dark:text-white">Suivi de projet</h3>
-<p className="text-sm text-slate-500 dark:text-slate-400">GÃ©rez l'avancement de vos travaux et centralisez vos factures en un clic.</p>
+<p className="text-sm text-slate-500 dark:text-slate-400">Gérez l'avancement de vos travaux et centralisez vos factures en un clic.</p>
 </div>
 </div>
 </div>
 <div className="hidden lg:block relative rounded-2xl overflow-hidden h-64 border border-slate-200 dark:border-slate-800 shadow-xl">
-<img alt="Artisan professionnel au travail" className="h-full w-full object-cover" data-alt="Artisan professionnel travaillant avec des outils de prÃ©cision" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNGt7OpSRwv7_oT-xh8v2rHXB2vN6GXlPTwAbQxn5914KPpL3Aab8miDP-879H__E2vBdzKDxPSTAucP-4_rT4ZCJu5PRMHOi3nf7EPWRMOU6esom-sjJrVZUXH32ooM1SSbAK3qE4_WuFHB-NoNhD6t0OR6SWJyktJ7k8mmmP6-KFtYFDawKGHUHVfgazx1zp9okkIK7I4szaw0aFuY8p8egjPacSUcVPtH4vcOhOspTMViKrd0cXxUf4vYL30PAbDbNGKAUh44kr"/>
+<img alt="Artisan professionnel au travail" className="h-full w-full object-cover" data-alt="Artisan professionnel travaillant avec des outils de précision" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNGt7OpSRwv7_oT-xh8v2rHXB2vN6GXlPTwAbQxn5914KPpL3Aab8miDP-879H__E2vBdzKDxPSTAucP-4_rT4ZCJu5PRMHOi3nf7EPWRMOU6esom-sjJrVZUXH32ooM1SSbAK3qE4_WuFHB-NoNhD6t0OR6SWJyktJ7k8mmmP6-KFtYFDawKGHUHVfgazx1zp9okkIK7I4szaw0aFuY8p8egjPacSUcVPtH4vcOhOspTMViKrd0cXxUf4vYL30PAbDbNGKAUh44kr"/>
 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
-<p className="text-white text-sm italic font-medium">"ArtisanDirect a simplifiÃ© ma rÃ©novation de A Ã  Z. La confiance est enfin au rendez-vous." âDA” Marc L.</p>
+<p className="text-white text-sm italic font-medium">"ArtisanDirect a simplifié ma rénovation de A à Z. La confiance est enfin au rendez-vous." âDA” Marc L.</p>
 </div>
 </div>
 </div>
@@ -94,8 +94,8 @@ const CretionDeCompteClient2 = () => {
 <div className="lg:col-span-7">
 <div className="bg-white dark:bg-slate-900 rounded-2xl shadow-xl border border-slate-200 dark:border-slate-800 p-6 sm:p-10">
 <div className="mb-8">
-<h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">CrÃ©er un compte client</h2>
-<p className="text-slate-500 dark:text-slate-400">ComplÃ©tez le formulaire ci-dessous pour dÃ©marrer vos projets.</p>
+<h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">Créer un compte client</h2>
+<p className="text-slate-500 dark:text-slate-400">Complétez le formulaire ci-dessous pour démarrer vos projets.</p>
 </div>
 <form action="#" className="space-y-6" method="POST">
 {/*  Photo Upload Section  */}
@@ -116,7 +116,7 @@ const CretionDeCompteClient2 = () => {
 {/*  Personal Info  */}
 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
 <div className="space-y-1.5">
-<label className="text-sm font-semibold text-slate-700 dark:text-slate-300" htmlFor="first-name">PrÃ©nom</label>
+<label className="text-sm font-semibold text-slate-700 dark:text-slate-300" htmlFor="first-name">Prénom</label>
 <input className="block w-full rounded-lg border-slate-300 dark:border-slate-700 dark:bg-slate-800 dark:text-white focus:border-primary focus:ring-primary shadow-sm px-4 py-2.5" id="first-name" name="first-name" placeholder="Ex: Jean" type="text"/>
 </div>
 <div className="space-y-1.5">
@@ -136,7 +136,7 @@ const CretionDeCompteClient2 = () => {
 <input className="block w-full rounded-lg border-slate-300 dark:border-slate-700 dark:bg-slate-800 dark:text-white focus:border-primary focus:ring-primary shadow-sm px-4 py-2.5" id="city" name="city" placeholder="Ex: Lyon" type="text"/>
 </div>
 <div className="sm:col-span-2 space-y-1.5">
-<label className="text-sm font-semibold text-slate-700 dark:text-slate-300" htmlFor="address">Adresse dÃ©taillÃ©e</label>
+<label className="text-sm font-semibold text-slate-700 dark:text-slate-300" htmlFor="address">Adresse détaillée</label>
 <input className="block w-full rounded-lg border-slate-300 dark:border-slate-700 dark:bg-slate-800 dark:text-white focus:border-primary focus:ring-primary shadow-sm px-4 py-2.5" id="address" name="address" placeholder="12 rue de la Paix" type="text"/>
 </div>
 </div>
@@ -153,11 +153,11 @@ const CretionDeCompteClient2 = () => {
 </div>
 {/*  Password Validation Rules  */}
 <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4">
-<p className="text-xs font-bold text-blue-700 dark:text-blue-300 mb-2 uppercase tracking-wider">RÃ¨gles de sÃ©curitÃ© :</p>
+<p className="text-xs font-bold text-blue-700 dark:text-blue-300 mb-2 uppercase tracking-wider">Règles de sécurité :</p>
 <ul className="text-xs space-y-1 text-blue-600 dark:text-blue-400">
 <li className="flex items-center gap-2">
 <span className="material-symbols-outlined text-[14px]">check_circle</span>
-                                    Au moins 8 caractÃ¨res
+                                    Au moins 8 caractères
                                 </li>
 <li className="flex items-center gap-2">
 <span className="material-symbols-outlined text-[14px]">check_circle</span>
@@ -173,16 +173,16 @@ const CretionDeCompteClient2 = () => {
 <div className="space-y-3">
 <label className="flex items-start gap-3 cursor-pointer">
 <input className="mt-1 rounded border-slate-300 text-primary focus:ring-primary dark:bg-slate-800 dark:border-slate-700 h-4 w-4" type="checkbox"/>
-<span className="text-sm text-slate-600 dark:text-slate-400 leading-tight">J'accepte les <a className="text-primary font-medium hover:underline" href="#">Conditions GÃ©nÃ©rales d'Utilisation</a></span>
+<span className="text-sm text-slate-600 dark:text-slate-400 leading-tight">J'accepte les <a className="text-primary font-medium hover:underline" href="#">Conditions Générales d'Utilisation</a></span>
 </label>
 <label className="flex items-start gap-3 cursor-pointer">
 <input className="mt-1 rounded border-slate-300 text-primary focus:ring-primary dark:bg-slate-800 dark:border-slate-700 h-4 w-4" type="checkbox"/>
-<span className="text-sm text-slate-600 dark:text-slate-400 leading-tight">Je consens au traitement de mes donnÃ©es conformÃ©ment Ã  la <a className="text-primary font-medium hover:underline" href="#">Politique de ConfidentialitÃ©</a></span>
+<span className="text-sm text-slate-600 dark:text-slate-400 leading-tight">Je consens au traitement de mes données conformément à la <a className="text-primary font-medium hover:underline" href="#">Politique de Confidentialité</a></span>
 </label>
 </div>
 {/*  Submit Button  */}
 <button className="w-full bg-primary hover:bg-primary/90 text-white font-bold py-3.5 rounded-lg shadow-lg shadow-primary/30 transition-all flex items-center justify-center gap-2" type="submit">
-<span>CrÃ©er mon compte gratuitement</span>
+<span>Créer mon compte gratuitement</span>
 <span className="material-symbols-outlined text-xl">arrow_forward</span>
 </button>
 {/*  Social Login Divider  */}
@@ -194,16 +194,16 @@ const CretionDeCompteClient2 = () => {
 {/*  Social Login Buttons  */}
 <div className="grid grid-cols-2 gap-4">
 <button className="flex items-center justify-center gap-2 px-4 py-2.5 border border-slate-200 dark:border-slate-700 rounded-lg bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-750 transition-colors" type="button">
-<img alt="Google Logo" className="h-5 w-5" data-alt="IcÃ´ne logo Google colorÃ©" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtOdjwF0ZBcS2n39BJ6yIetW7it403y6NfljCS0kn_tANl_iULO_tvXs2k4mja6SmEPYGZ60rUcXDI7Sc7egA7lEpUkLuVifbVUr6LRxnKRtN3Zh2cFhz_rGoOf6oH4xUFc7DFwiord045rZJPy2lyzGPBH_Rh0c-VHkJp_o_WeK7WvCqjmoeQyW7JP8ISJV_TxAzpyH7VC5-JhI4erLEYzoRQw2Usv0LOHJ3RltJWwqxAk1PE0JUPVgrtP1htomtHEVfyVeBf-cZH"/>
+<img alt="Google Logo" className="h-5 w-5" data-alt="Icône logo Google coloré" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtOdjwF0ZBcS2n39BJ6yIetW7it403y6NfljCS0kn_tANl_iULO_tvXs2k4mja6SmEPYGZ60rUcXDI7Sc7egA7lEpUkLuVifbVUr6LRxnKRtN3Zh2cFhz_rGoOf6oH4xUFc7DFwiord045rZJPy2lyzGPBH_Rh0c-VHkJp_o_WeK7WvCqjmoeQyW7JP8ISJV_TxAzpyH7VC5-JhI4erLEYzoRQw2Usv0LOHJ3RltJWwqxAk1PE0JUPVgrtP1htomtHEVfyVeBf-cZH"/>
 <span className="text-sm font-semibold text-slate-700 dark:text-slate-300">Google</span>
 </button>
 <button className="flex items-center justify-center gap-2 px-4 py-2.5 border border-slate-200 dark:border-slate-700 rounded-lg bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-750 transition-colors" type="button">
-<img alt="Facebook Logo" className="h-5 w-5" data-alt="IcÃ´ne logo Facebook bleu" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPFnvIkpd4W8qVpzgbOAlCu8Whq2O0alDjgLzIOQ-hzY0n3d_hlaEj9fa9rjukQJaDpp9s0twKeDKuOELGgpV5GAdkcIVwAPoluQHEVSi8PMYkhY3oqSB06re1E1e7rxUzZhGfk3C_GcttU-5OVM32anGhe08FoKTPhIqCnWTDv_uSJFpGRpWloDcmPdmOkX6zViGVv47giAqnW-xzGjP5ywxlMfy4MtqrY5KeDd3DcUSzCREwE5ku6WEwV7NAQNk1TkhaCVlUtZ9s"/>
+<img alt="Facebook Logo" className="h-5 w-5" data-alt="Icône logo Facebook bleu" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPFnvIkpd4W8qVpzgbOAlCu8Whq2O0alDjgLzIOQ-hzY0n3d_hlaEj9fa9rjukQJaDpp9s0twKeDKuOELGgpV5GAdkcIVwAPoluQHEVSi8PMYkhY3oqSB06re1E1e7rxUzZhGfk3C_GcttU-5OVM32anGhe08FoKTPhIqCnWTDv_uSJFpGRpWloDcmPdmOkX6zViGVv47giAqnW-xzGjP5ywxlMfy4MtqrY5KeDd3DcUSzCREwE5ku6WEwV7NAQNk1TkhaCVlUtZ9s"/>
 <span className="text-sm font-semibold text-slate-700 dark:text-slate-300">Facebook</span>
 </button>
 </div>
 <p className="text-center text-sm text-slate-500 dark:text-slate-400 mt-6">
-                            Vous avez dÃ©jÃ  un compte ? <a className="text-primary font-bold hover:underline" href="#">Se connecter</a>
+                            Vous avez déjà un compte ? <a className="text-primary font-bold hover:underline" href="#">Se connecter</a>
 </p>
 </form>
 </div>
@@ -216,10 +216,10 @@ const CretionDeCompteClient2 = () => {
 <span className="material-symbols-outlined text-primary">construction</span>
 <span className="font-bold text-slate-900 dark:text-white">ArtisanDirect</span>
 </div>
-<p className="text-sm text-slate-500 dark:text-slate-400">Â© 2024 ArtisanDirect - Tous droits rÃ©servÃ©s.</p>
+<p className="text-sm text-slate-500 dark:text-slate-400">© 2024 ArtisanDirect - Tous droits réservés.</p>
 <div className="flex justify-center gap-6 mt-4">
 <a className="text-xs text-slate-500 hover:text-primary" href="#">Conditions</a>
-<a className="text-xs text-slate-500 hover:text-primary" href="#">ConfidentialitÃ©</a>
+<a className="text-xs text-slate-500 hover:text-primary" href="#">Confidentialité</a>
 <a className="text-xs text-slate-500 hover:text-primary" href="#">Contact</a>
 </div>
 </div>

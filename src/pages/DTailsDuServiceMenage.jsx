@@ -10,7 +10,7 @@ const DTailsDuServiceMenage = () => {
 <div className="flex items-center gap-8">
 <div className="flex items-center gap-3 text-primary">
 <span className="material-symbols-outlined text-3xl">cleaning_services</span>
-<h2 className="text-slate-900 dark:text-white text-xl font-bold leading-tight tracking-tight">MÃ©nagePro</h2>
+<h2 className="text-slate-900 dark:text-white text-xl font-bold leading-tight tracking-tight">MénagePro</h2>
 </div>
 <div className="hidden md:flex items-center gap-6">
 <a className="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">FR</a>
@@ -38,14 +38,14 @@ const DTailsDuServiceMenage = () => {
 <div className="flex min-h-[500px] flex-col gap-6 bg-cover bg-center bg-no-repeat items-center justify-center p-6 text-center" data-alt="Professional cleaner cleaning a modern living room" >
 <div className="max-w-3xl flex flex-col gap-4">
 <h1 className="text-white text-4xl md:text-6xl font-black leading-tight tracking-tight">
-                            Services de MÃ©nage Ã  Domicile
+                            Services de Ménage à Domicile
                         </h1>
 <p className="text-white/90 text-lg md:text-xl font-normal leading-relaxed">
-                            Des professionnels qualifiÃ©s pour un intÃ©rieur impeccable. Simple, rapide et fiable. RÃ©servez votre prestation en moins de 2 minutes.
+                            Des professionnels qualifiés pour un intérieur impeccable. Simple, rapide et fiable. Réservez votre prestation en moins de 2 minutes.
                         </p>
 <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center">
 <button className="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-lg font-bold text-lg shadow-lg transition-all">
-                                RÃ©server maintenant
+                                Réserver maintenant
                             </button>
 <button className="bg-white/20 backdrop-blur-md hover:bg-white/30 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all">
                                 Voir les tarifs
@@ -57,42 +57,42 @@ const DTailsDuServiceMenage = () => {
 <div className="max-w-7xl mx-auto px-6 py-12">
 {/*  How it Works  */}
 <section className="mb-20">
-<h2 className="text-slate-900 dark:text-white text-3xl font-bold mb-10 text-center">Comment Ã§a marche</h2>
+<h2 className="text-slate-900 dark:text-white text-3xl font-bold mb-10 text-center">Comment ça marche</h2>
 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 <div className="flex flex-col items-center text-center p-6 bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800">
 <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-6">
 <span className="material-symbols-outlined text-3xl">event_available</span>
 </div>
-<h3 className="text-xl font-bold mb-3">RÃ©servez en ligne</h3>
-<p className="text-slate-600 dark:text-slate-400">Choisissez une date, l'heure et la frÃ©quence qui vous conviennent le mieux.</p>
+<h3 className="text-xl font-bold mb-3">Réservez en ligne</h3>
+<p className="text-slate-600 dark:text-slate-400">Choisissez une date, l'heure et la fréquence qui vous conviennent le mieux.</p>
 </div>
 <div className="flex flex-col items-center text-center p-6 bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800">
 <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-6">
 <span className="material-symbols-outlined text-3xl">verified_user</span>
 </div>
 <h3 className="text-xl font-bold mb-3">Un expert intervient</h3>
-<p className="text-slate-600 dark:text-slate-400">Notre agent rigoureusement sÃ©lectionnÃ© arrive avec tout le matÃ©riel nÃ©cessaire.</p>
+<p className="text-slate-600 dark:text-slate-400">Notre agent rigoureusement sélectionné arrive avec tout le matériel nécessaire.</p>
 </div>
 <div className="flex flex-col items-center text-center p-6 bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800">
 <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-6">
 <span className="material-symbols-outlined text-3xl">mood</span>
 </div>
 <h3 className="text-xl font-bold mb-3">Profitez de votre temps</h3>
-<p className="text-slate-600 dark:text-slate-400">DÃ©tendez-vous et retrouvez un foyer parfaitement propre et sain.</p>
+<p className="text-slate-600 dark:text-slate-400">Détendez-vous et retrouvez un foyer parfaitement propre et sain.</p>
 </div>
 </div>
 </section>
 {/*  Pricing Section  */}
 <section className="mb-20">
-<h2 className="text-slate-900 dark:text-white text-3xl font-bold mb-10">Tarification et DÃ©tails</h2>
+<h2 className="text-slate-900 dark:text-white text-3xl font-bold mb-10">Tarification et Détails</h2>
 <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
 {/*  Card 1  */}
 <div className="bg-white dark:bg-slate-900 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 flex flex-col h-full">
 <div className="p-6 border-b border-slate-100 dark:border-slate-800">
-<h3 className="text-xl font-bold text-slate-900 dark:text-white">MÃ©nage RÃ©gulier</h3>
+<h3 className="text-xl font-bold text-slate-900 dark:text-white">Ménage Régulier</h3>
 <p className="text-slate-500 text-sm mt-1">Entretien courant de votre maison</p>
 <div className="mt-4">
-<span className="text-3xl font-black text-primary">25â‚¬</span>
+<span className="text-3xl font-black text-primary">25€</span>
 <span className="text-slate-500">/ heure</span>
 </div>
 </div>
@@ -100,7 +100,7 @@ const DTailsDuServiceMenage = () => {
 <ul className="space-y-3">
 <li className="flex items-start gap-3 text-sm text-slate-600 dark:text-slate-400">
 <span className="material-symbols-outlined text-green-500 text-lg">check_circle</span>
-                                        DÃ©poussiÃ©rage et sols
+                                        Dépoussiérage et sols
                                     </li>
 <li className="flex items-start gap-3 text-sm text-slate-600 dark:text-slate-400">
 <span className="material-symbols-outlined text-green-500 text-lg">check_circle</span>
@@ -121,9 +121,9 @@ const DTailsDuServiceMenage = () => {
 <div className="absolute top-0 right-0 bg-primary text-white text-[10px] font-bold uppercase px-3 py-1 rounded-bl-lg">Populaire</div>
 <div className="p-6 border-b border-slate-100 dark:border-slate-800">
 <h3 className="text-xl font-bold text-slate-900 dark:text-white">Nettoyage Profond</h3>
-<p className="text-slate-500 text-sm mt-1">Remise Ã  neuf complÃ¨te de l'intÃ©rieur</p>
+<p className="text-slate-500 text-sm mt-1">Remise à neuf complète de l'intérieur</p>
 <div className="mt-4">
-<span className="text-3xl font-black text-primary">35â‚¬</span>
+<span className="text-3xl font-black text-primary">35€</span>
 <span className="text-slate-500">/ heure</span>
 </div>
 </div>
@@ -131,11 +131,11 @@ const DTailsDuServiceMenage = () => {
 <ul className="space-y-3">
 <li className="flex items-start gap-3 text-sm text-slate-600 dark:text-slate-400">
 <span className="material-symbols-outlined text-green-500 text-lg">check_circle</span>
-                                        Tout le mÃ©nage rÃ©gulier
+                                        Tout le ménage régulier
                                     </li>
 <li className="flex items-start gap-3 text-sm text-slate-600 dark:text-slate-400">
 <span className="material-symbols-outlined text-green-500 text-lg">check_circle</span>
-                                        Nettoyage intÃ©rieur placards
+                                        Nettoyage intérieur placards
                                     </li>
 <li className="flex items-start gap-3 text-sm text-slate-600 dark:text-slate-400">
 <span className="material-symbols-outlined text-green-500 text-lg">check_circle</span>
@@ -143,21 +143,21 @@ const DTailsDuServiceMenage = () => {
                                     </li>
 <li className="flex items-start gap-3 text-sm text-slate-600 dark:text-slate-400">
 <span className="material-symbols-outlined text-green-500 text-lg">check_circle</span>
-                                        DÃ©tartrage complet
+                                        Détartrage complet
                                     </li>
 </ul>
 </div>
 <div className="p-6 bg-primary/5 dark:bg-primary/10">
-<button className="w-full py-3 bg-primary text-white font-bold rounded-lg hover:bg-primary/90 transition-all shadow-md">RÃ©server maintenant</button>
+<button className="w-full py-3 bg-primary text-white font-bold rounded-lg hover:bg-primary/90 transition-all shadow-md">Réserver maintenant</button>
 </div>
 </div>
 {/*  Card 3  */}
 <div className="bg-white dark:bg-slate-900 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 flex flex-col h-full">
 <div className="p-6 border-b border-slate-100 dark:border-slate-800">
 <h3 className="text-xl font-bold text-slate-900 dark:text-white">Nettoyage Fin de Bail</h3>
-<p className="text-slate-500 text-sm mt-1">Garanti pour votre Ã©tat des lieux</p>
+<p className="text-slate-500 text-sm mt-1">Garanti pour votre état des lieux</p>
 <div className="mt-4">
-<span className="text-3xl font-black text-primary">45â‚¬</span>
+<span className="text-3xl font-black text-primary">45€</span>
 <span className="text-slate-500">/ heure</span>
 </div>
 </div>
@@ -165,7 +165,7 @@ const DTailsDuServiceMenage = () => {
 <ul className="space-y-3">
 <li className="flex items-start gap-3 text-sm text-slate-600 dark:text-slate-400">
 <span className="material-symbols-outlined text-green-500 text-lg">check_circle</span>
-                                        Nettoyage spÃ©cialisÃ© complet
+                                        Nettoyage spécialisé complet
                                     </li>
 <li className="flex items-start gap-3 text-sm text-slate-600 dark:text-slate-400">
 <span className="material-symbols-outlined text-green-500 text-lg">check_circle</span>
@@ -173,7 +173,7 @@ const DTailsDuServiceMenage = () => {
                                     </li>
 <li className="flex items-start gap-3 text-sm text-slate-600 dark:text-slate-400">
 <span className="material-symbols-outlined text-green-500 text-lg">check_circle</span>
-                                        PrÃªt pour la remise des clÃ©s
+                                        Prêt pour la remise des clés
                                     </li>
 </ul>
 </div>
@@ -188,7 +188,7 @@ const DTailsDuServiceMenage = () => {
 <div className="flex justify-between items-end mb-10">
 <div>
 <h2 className="text-slate-900 dark:text-white text-3xl font-bold">Nos meilleurs agents</h2>
-<p className="text-slate-500 mt-2">Des professionnels qualifiÃ©s et Ã©valuÃ©s par la communautÃ©.</p>
+<p className="text-slate-500 mt-2">Des professionnels qualifiés et évalués par la communauté.</p>
 </div>
 <button className="text-primary font-bold hover:underline">Voir tous les agents</button>
 </div>
@@ -209,9 +209,9 @@ const DTailsDuServiceMenage = () => {
 <span className="text-slate-600 dark:text-slate-400 text-xs font-bold ml-1">(124 avis)</span>
 </div>
 <p className="text-slate-500 text-sm mb-6 leading-relaxed">
-                                "SpÃ©cialiste du nettoyage Ã©cologique avec 5 ans d'expÃ©rience. Ponctuelle et minutieuse."
+                                "Spécialiste du nettoyage écologique avec 5 ans d'expérience. Ponctuelle et minutieuse."
                             </p>
-<button className="w-full py-2 bg-primary text-white font-bold rounded-lg hover:bg-primary/90 transition-all">RÃ©server Sarah</button>
+<button className="w-full py-2 bg-primary text-white font-bold rounded-lg hover:bg-primary/90 transition-all">Réserver Sarah</button>
 </div>
 {/*  Agent 2  */}
 <div className="bg-white dark:bg-slate-900 rounded-xl p-6 border border-slate-100 dark:border-slate-800 shadow-sm text-center">
@@ -229,9 +229,9 @@ const DTailsDuServiceMenage = () => {
 <span className="text-slate-600 dark:text-slate-400 text-xs font-bold ml-1">(89 avis)</span>
 </div>
 <p className="text-slate-500 text-sm mb-6 leading-relaxed">
-                                "Expert en nettoyage de fin de chantier et vitrerie. Travail efficace et soignÃ©."
+                                "Expert en nettoyage de fin de chantier et vitrerie. Travail efficace et soigné."
                             </p>
-<button className="w-full py-2 bg-primary text-white font-bold rounded-lg hover:bg-primary/90 transition-all">RÃ©server Marc</button>
+<button className="w-full py-2 bg-primary text-white font-bold rounded-lg hover:bg-primary/90 transition-all">Réserver Marc</button>
 </div>
 {/*  Agent 3  */}
 <div className="bg-white dark:bg-slate-900 rounded-xl p-6 border border-slate-100 dark:border-slate-800 shadow-sm text-center">
@@ -239,7 +239,7 @@ const DTailsDuServiceMenage = () => {
 <img alt="Cleaning agent profile" className="w-full h-full object-cover rounded-full" data-alt="Young female professional cleaning staff" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7jb-_A_NzKhw9TJVBIh-gPQmNOMJ95efn0RTWK3fX86OevMfu9rkXsN3IBDQL3PkPpRIe1iVintiLKji2t4laZJ9Sbe4G_NRHXgLdZ12RkUNU8zoy8OO0Z6ettROfJKk2qF2EAm2QZQ5F7YPd6tTzWd70GeYNTRmGrHbC01GjyvNeeYyRWlitdIDPMCzGw8h46OFgEWsavlqTiq4nNelrjP1quRH7T_qEjfWSi6YUTq7Z0audFK4WXkyh289q-v2KN9_4UfrmbWVo"/>
 <div className="absolute bottom-0 right-0 bg-green-500 w-4 h-4 rounded-full border-2 border-white"></div>
 </div>
-<h4 className="text-lg font-bold text-slate-900 dark:text-white">InÃ¨s K.</h4>
+<h4 className="text-lg font-bold text-slate-900 dark:text-white">Inès K.</h4>
 <div className="flex items-center justify-center gap-1 text-yellow-400 my-2">
 <span className="material-symbols-outlined text-lg fill-1">star</span>
 <span className="material-symbols-outlined text-lg fill-1">star</span>
@@ -249,19 +249,19 @@ const DTailsDuServiceMenage = () => {
 <span className="text-slate-600 dark:text-slate-400 text-xs font-bold ml-1">(210 avis)</span>
 </div>
 <p className="text-slate-500 text-sm mb-6 leading-relaxed">
-                                "PassionnÃ©e par l'organisation et le rangement. Je transforme votre foyer en havre de paix."
+                                "Passionnée par l'organisation et le rangement. Je transforme votre foyer en havre de paix."
                             </p>
-<button className="w-full py-2 bg-primary text-white font-bold rounded-lg hover:bg-primary/90 transition-all">RÃ©server InÃ¨s</button>
+<button className="w-full py-2 bg-primary text-white font-bold rounded-lg hover:bg-primary/90 transition-all">Réserver Inès</button>
 </div>
 </div>
 </section>
 {/*  FAQ Section  */}
 <section className="mb-20">
-<h2 className="text-slate-900 dark:text-white text-3xl font-bold mb-10 text-center">Questions frÃ©quentes</h2>
+<h2 className="text-slate-900 dark:text-white text-3xl font-bold mb-10 text-center">Questions fréquentes</h2>
 <div className="max-w-3xl mx-auto space-y-4">
 <div className="border border-slate-200 dark:border-slate-800 rounded-lg overflow-hidden">
 <button className="w-full px-6 py-4 text-left flex justify-between items-center bg-white dark:bg-slate-900 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
-<span className="font-semibold">Dois-je Ãªtre prÃ©sent lors du mÃ©nage ?</span>
+<span className="font-semibold">Dois-je être présent lors du ménage ?</span>
 <span className="material-symbols-outlined">expand_more</span>
 </button>
 </div>
@@ -293,10 +293,10 @@ const DTailsDuServiceMenage = () => {
 <div className="col-span-1 md:col-span-1">
 <div className="flex items-center gap-3 text-white mb-6">
 <span className="material-symbols-outlined text-3xl text-primary">cleaning_services</span>
-<h2 className="text-xl font-bold">MÃ©nagePro</h2>
+<h2 className="text-xl font-bold">MénagePro</h2>
 </div>
 <p className="text-sm leading-relaxed mb-6">
-                        La plateforme de confiance pour trouver des professionnels du nettoyage prÃ¨s de chez vous.
+                        La plateforme de confiance pour trouver des professionnels du nettoyage près de chez vous.
                     </p>
 <div className="flex gap-4">
 <a className="hover:text-primary transition-colors" href="#"><span className="material-symbols-outlined">public</span></a>
@@ -307,16 +307,16 @@ const DTailsDuServiceMenage = () => {
 <div>
 <h4 className="text-white font-bold mb-6">Services</h4>
 <ul className="space-y-3 text-sm">
-<li><a className="hover:text-primary transition-colors" href="#">MÃ©nage rÃ©gulier</a></li>
+<li><a className="hover:text-primary transition-colors" href="#">Ménage régulier</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Nettoyage en profondeur</a></li>
-<li><a className="hover:text-primary transition-colors" href="#">Repassage Ã  domicile</a></li>
+<li><a className="hover:text-primary transition-colors" href="#">Repassage à domicile</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Bureaux &amp; locaux</a></li>
 </ul>
 </div>
 <div>
-<h4 className="text-white font-bold mb-6">SociÃ©tÃ©</h4>
+<h4 className="text-white font-bold mb-6">Société</h4>
 <ul className="space-y-3 text-sm">
-<li><a className="hover:text-primary transition-colors" href="#">ÃDA propos</a></li>
+<li><a className="hover:text-primary transition-colors" href="#">À propos</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Devenir agent</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Blog</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Contact</a></li>
@@ -325,15 +325,15 @@ const DTailsDuServiceMenage = () => {
 <div>
 <h4 className="text-white font-bold mb-6">Informations</h4>
 <ul className="space-y-3 text-sm">
-<li><a className="hover:text-primary transition-colors" href="#">Conditions gÃ©nÃ©rales</a></li>
-<li><a className="hover:text-primary transition-colors" href="#">ConfidentialitÃ©</a></li>
+<li><a className="hover:text-primary transition-colors" href="#">Conditions générales</a></li>
+<li><a className="hover:text-primary transition-colors" href="#">Confidentialité</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Assurances</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Centre d'aide</a></li>
 </ul>
 </div>
 </div>
 <div className="max-w-7xl mx-auto mt-12 pt-8 border-t border-slate-800 text-center text-xs">
-<p>Â© 2024 MÃ©nagePro - Tous droits rÃ©servÃ©s.</p>
+<p>© 2024 MénagePro - Tous droits réservés.</p>
 </div>
 </footer>
 </div>

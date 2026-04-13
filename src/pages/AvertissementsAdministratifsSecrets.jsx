@@ -25,7 +25,7 @@ const AvertissementsAdministratifsSecrets = () => {
 </Link>
 <Link className="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-slate-800 transition-colors" to="/search">
 <span className="material-symbols-outlined">verified_user</span>
-<p className="text-sm font-medium">VÃ©rification</p>
+<p className="text-sm font-medium">Vérification</p>
 </Link>
 <Link className="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-slate-800 transition-colors" to="/dashboard/artisan/projects">
 <span className="material-symbols-outlined">work</span>
@@ -41,7 +41,7 @@ const AvertissementsAdministratifsSecrets = () => {
 </Link>
 <Link className="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-slate-800 transition-colors" to="/dashboard/artisan/settings">
 <span className="material-symbols-outlined">settings</span>
-<p className="text-sm font-medium">ParamÃ¨tres</p>
+<p className="text-sm font-medium">Paramètres</p>
 </Link>
 </nav>
 <div className="mt-auto pt-6 border-t border-slate-800">
@@ -51,7 +51,7 @@ const AvertissementsAdministratifsSecrets = () => {
 </div>
 <div className="flex flex-col">
 <p className="text-sm font-bold">Jean Dupont</p>
-<p className="text-xs text-slate-400">Ã‰lectricien AgrÃ©Ã©</p>
+<p className="text-xs text-slate-400">Électricien Agréé</p>
 </div>
 </div>
 </div>
@@ -81,7 +81,7 @@ const AvertissementsAdministratifsSecrets = () => {
 {/*  Title Section  */}
 <div className="mb-10">
 <h1 className="text-4xl font-black text-slate-900 dark:text-white mb-2 tracking-tight">Avertissements Administratifs</h1>
-<p className="text-slate-600 dark:text-slate-400 text-lg">Suivi officiel de la conformitÃ© et de la qualitÃ© de vos services sur la plateforme.</p>
+<p className="text-slate-600 dark:text-slate-400 text-lg">Suivi officiel de la conformité et de la qualité de vos services sur la plateforme.</p>
 </div>
 {/*  Privacy Policy Banner  */}
 <div className="bg-primary/5 border border-primary/20 rounded-2xl p-6 mb-10 flex flex-col md:flex-row items-center gap-6">
@@ -89,14 +89,14 @@ const AvertissementsAdministratifsSecrets = () => {
 <span className="material-symbols-outlined text-primary text-3xl">visibility_off</span>
 </div>
 <div className="flex-1 text-center md:text-left">
-<h3 className="text-lg font-bold text-slate-900 dark:text-white mb-1">Politique de ConfidentialitÃ© &amp; NeutralitÃ©</h3>
+<h3 className="text-lg font-bold text-slate-900 dark:text-white mb-1">Politique de Confidentialité &amp; Neutralité</h3>
 <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-                        Pour maintenir un environnement professionnel neutre et serein, les plaintes sont traitÃ©es de maniÃ¨re strictement anonyme par l'administration d'ArtisanDirect. 
-                        <strong>L'identitÃ© du client rapporteur n'est pas divulguÃ©e</strong> afin d'Ã©viter tout conflit direct et de garantir l'objectivitÃ© de l'arbitrage.
+                        Pour maintenir un environnement professionnel neutre et serein, les plaintes sont traitées de manière strictement anonyme par l'administration d'ArtisanDirect. 
+                        <strong>L'identité du client rapporteur n'est pas divulguée</strong> afin d'éviter tout conflit direct et de garantir l'objectivité de l'arbitrage.
                     </p>
 </div>
 <button className="whitespace-nowrap bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-6 py-2.5 rounded-xl text-sm font-bold shadow-sm">
-                    Consulter le rÃ¨glement
+                    Consulter le règlement
                 </button>
 </div>
 {/*  Warnings List  */}
@@ -110,7 +110,7 @@ const AvertissementsAdministratifsSecrets = () => {
 <div className="flex items-stretch flex-col md:flex-row">
 <div className="w-full md:w-48 bg-orange-500 flex flex-col items-center justify-center p-6 text-white text-center">
 <span className="material-symbols-outlined text-4xl mb-2">warning</span>
-<span className="text-xs font-bold uppercase tracking-wider opacity-80">GravitÃ©</span>
+<span className="text-xs font-bold uppercase tracking-wider opacity-80">Gravité</span>
 <span className="text-lg font-black leading-tight">Premier Avertissement</span>
 </div>
 <div className="flex-1 p-6">
@@ -118,14 +118,14 @@ const AvertissementsAdministratifsSecrets = () => {
 <div>
 <div className="flex items-center gap-2 mb-1">
 <span className="bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-tighter">REF: AD-2024-0812</span>
-<span className="text-slate-400 text-xs">âDA¢ Mis Ã  jour le 12 Mai 2024</span>
+<span className="text-slate-400 text-xs">• Mis à jour le 12 Mai 2024</span>
 </div>
-<h3 className="text-xl font-bold text-slate-900 dark:text-white">QualitÃ© de service &amp; Finitions</h3>
+<h3 className="text-xl font-bold text-slate-900 dark:text-white">Qualité de service &amp; Finitions</h3>
 </div>
-<span className="bg-primary/10 text-primary text-xs font-bold px-3 py-1 rounded-full">En attente de rÃ©ponse</span>
+<span className="bg-primary/10 text-primary text-xs font-bold px-3 py-1 rounded-full">En attente de réponse</span>
 </div>
 <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6 italic">
-                                "L'administration a reÃ§u un signalement concernant des finitions non conformes au devis initial. AprÃ¨s examen des photos fournies par le client anonyme, il apparaÃ®t que les standards de qualitÃ© ArtisanDirect n'ont pas Ã©tÃ© pleinement respectÃ©s sur ce chantier."
+                                "L'administration a reçu un signalement concernant des finitions non conformes au devis initial. Après examen des photos fournies par le client anonyme, il apparaît que les standards de qualité ArtisanDirect n'ont pas été pleinement respectés sur ce chantier."
                             </p>
 <div className="flex flex-wrap gap-4 pt-4 border-t border-slate-100 dark:border-slate-800">
 <button className="flex items-center gap-2 text-primary font-bold text-sm">
@@ -145,25 +145,25 @@ const AvertissementsAdministratifsSecrets = () => {
 <div className="flex items-stretch flex-col md:flex-row">
 <div className="w-full md:w-48 bg-slate-500 flex flex-col items-center justify-center p-6 text-white text-center">
 <span className="material-symbols-outlined text-4xl mb-2">notifications_active</span>
-<span className="text-xs font-bold uppercase tracking-wider opacity-80">GravitÃ©</span>
-<span className="text-lg font-black leading-tight">Rappel Ã  l'ordre</span>
+<span className="text-xs font-bold uppercase tracking-wider opacity-80">Gravité</span>
+<span className="text-lg font-black leading-tight">Rappel à l'ordre</span>
 </div>
 <div className="flex-1 p-6">
 <div className="flex justify-between items-start mb-4">
 <div>
 <div className="flex items-center gap-2 mb-1">
 <span className="bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-tighter">REF: AD-2024-0345</span>
-<span className="text-slate-400 text-xs">âDA¢ ClassÃ© le 15 Mars 2024</span>
+<span className="text-slate-400 text-xs">• Classé le 15 Mars 2024</span>
 </div>
-<h3 className="text-xl font-bold text-slate-900 dark:text-white">DÃ©lai de rÃ©ponse (Communication)</h3>
+<h3 className="text-xl font-bold text-slate-900 dark:text-white">Délai de réponse (Communication)</h3>
 </div>
-<span className="bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400 text-xs font-bold px-3 py-1 rounded-full">Dossier clÃ´turÃ©</span>
+<span className="bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400 text-xs font-bold px-3 py-1 rounded-full">Dossier clôturé</span>
 </div>
 <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6 italic">
-                                "Un client a signalÃ© une absence totale de rÃ©ponse aux messages via la plateforme pendant plus de 72 heures ouvrÃ©es. Nous vous rappelons que la rÃ©activitÃ© est un critÃ¨re essentiel de votre rÃ©fÃ©rencement."
+                                "Un client a signalé une absence totale de réponse aux messages via la plateforme pendant plus de 72 heures ouvrées. Nous vous rappelons que la réactivité est un critère essentiel de votre référencement."
                             </p>
 <div className="flex flex-wrap gap-4 pt-4 border-t border-slate-100 dark:border-slate-800 text-slate-400 italic text-xs">
-<span>Note Admin: RÃ©ponse de l'artisan acceptÃ©e. Incident isolÃ© liÃ© Ã  une urgence mÃ©dicale.</span>
+<span>Note Admin: Réponse de l'artisan acceptée. Incident isolé lié à une urgence médicale.</span>
 </div>
 </div>
 </div>
@@ -174,7 +174,7 @@ const AvertissementsAdministratifsSecrets = () => {
 <div className="relative z-10">
 <h2 className="text-2xl font-bold mb-4">Contester ou expliquer un signalement ?</h2>
 <p className="text-slate-300 mb-8 max-w-2xl leading-relaxed">
-                        Si vous estimez qu'un avertissement est injustifiÃ© ou si vous souhaitez apporter des prÃ©cisions factuelles (photos, documents, logs) Ã  l'administration, utilisez le formulaire de recours officiel. Nos modÃ©rateurs reviendront vers vous sous 48h.
+                        Si vous estimez qu'un avertissement est injustifié ou si vous souhaitez apporter des précisions factuelles (photos, documents, logs) à l'administration, utilisez le formulaire de recours officiel. Nos modérateurs reviendront vers vous sous 48h.
                     </p>
 <div className="flex flex-wrap gap-4">
 <button className="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-xl font-bold transition-colors flex items-center gap-3">
@@ -193,7 +193,7 @@ const AvertissementsAdministratifsSecrets = () => {
 {/*  Footer Help  */}
 <div className="mt-12 text-center">
 <p className="text-slate-500 text-sm">
-                    Besoin de plus d'informations sur notre systÃ¨me de notation ? 
+                    Besoin de plus d'informations sur notre système de notation ? 
                     <Link className="text-primary font-bold underline underline-offset-4 ml-1" to="/faq">Consultez la FAQ Artisan</Link>
 </p>
 </div>

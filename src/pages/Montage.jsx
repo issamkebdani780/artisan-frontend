@@ -15,7 +15,7 @@ const Montage = () => {
 <nav className="hidden md:flex items-center gap-6">
 <a className="text-sm font-semibold text-slate-700 hover:text-primary transition-colors" href="#">Accueil</a>
 <a className="text-sm font-semibold text-slate-700 hover:text-primary transition-colors" href="#">Artisans</a>
-<a className="text-sm font-semibold text-slate-700 hover:text-primary transition-colors" href="#">Comment Ã§a marche</a>
+<a className="text-sm font-semibold text-slate-700 hover:text-primary transition-colors" href="#">Comment ça marche</a>
 <a className="text-sm font-semibold text-slate-700 hover:text-primary transition-colors" href="#">Tarifs</a>
 </nav>
 </div>
@@ -28,7 +28,7 @@ const Montage = () => {
 </div>
 </div>
 <div className="flex items-center gap-3">
-<button className="p-2 text-slate-600 hover:bg-slate-100 rounded-lg flex items-center justify-center transition-all mr-1" onclick="toggleDarkMode()" title="Changer de thÃ¨me">
+<button className="p-2 text-slate-600 hover:bg-slate-100 rounded-lg flex items-center justify-center transition-all mr-1" onclick="toggleDarkMode()" title="Changer de thème">
 <span className="material-symbols-outlined text-xl">
         light_mode
     </span>
@@ -48,10 +48,10 @@ const Montage = () => {
 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-12">
 <div className="flex-1 text-center lg:text-left">
 <h1 className="text-4xl md:text-6xl font-black text-slate-900 leading-tight mb-6">
-                    Trouvez l'artisan expert pour <span className="text-primary">tous vos travaux</span> Ã  domicile
+                    Trouvez l'artisan expert pour <span className="text-primary">tous vos travaux</span> à domicile
                 </h1>
 <p className="text-lg text-slate-600 mb-10 max-w-2xl">
-                    Des services professionnels, vÃ©rifiÃ©s et proches de chez vous. Simplifiez votre quotidien avec MihnaPro.
+                    Des services professionnels, vérifiés et proches de chez vous. Simplifiez votre quotidien avec MihnaPro.
                 </p>
 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
 <button className="px-8 py-4 bg-primary text-white font-bold rounded-xl shadow-lg shadow-primary/25 hover:translate-y-[-2px] transition-all text-lg">
@@ -72,8 +72,8 @@ const Montage = () => {
 <span className="material-symbols-outlined">verified</span>
 </div>
 <div>
-<p className="text-sm font-black text-slate-900">Artisans CertifiÃ©s</p>
-<p className="text-xs text-slate-500">Profils vÃ©rifiÃ©s manuellement</p>
+<p className="text-sm font-black text-slate-900">Artisans Certifiés</p>
+<p className="text-xs text-slate-500">Profils vérifiés manuellement</p>
 </div>
 </div>
 </div>
@@ -84,7 +84,7 @@ const Montage = () => {
 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div className="text-center mb-16">
 <h2 className="text-3xl font-black text-slate-900 mb-4">Nos services populaires</h2>
-<p className="text-slate-600">Choisissez une catÃ©gorie pour voir nos spÃ©cialitÃ©s</p>
+<p className="text-slate-600">Choisissez une catégorie pour voir nos spécialités</p>
 </div>
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 <div className="service-card relative group bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all border border-slate-100 cursor-pointer overflow-hidden">
@@ -94,7 +94,7 @@ const Montage = () => {
 </div>
 <h3 className="text-xl font-bold text-slate-900">Montage</h3>
 </div>
-<p className="text-slate-500 mb-4 group-hover:opacity-0 transition-opacity opacity-0">Meubles, Ã©tagÃ¨res, luminaires...</p>
+<p className="text-slate-500 mb-4 group-hover:opacity-0 transition-opacity opacity-0">Meubles, étagères, luminaires...</p>
 <div className="sub-services absolute inset-0 bg-white p-8 flex-col justify-center animate-in fade-in slide-in-from-bottom-4 duration-300" >
 <h4 className="font-black text-primary mb-4 text-lg border-b border-slate-100 pb-2">Services Montage</h4>
 <div className="grid grid-cols-1 gap-4"><a className="flex items-center justify-between p-2 rounded-lg hover:bg-blue-50 transition-colors group/item" href="#">
@@ -102,7 +102,7 @@ const Montage = () => {
 <span className="material-symbols-outlined text-primary text-sm">arrow_forward</span>
 </a>
 <a className="flex items-center justify-between p-2 rounded-lg hover:bg-blue-50 transition-colors group/item" href="#">
-<span className="text-sm font-semibold text-slate-700">Montage d'Ã©tagÃ¨res</span>
+<span className="text-sm font-semibold text-slate-700">Montage d'étagères</span>
 <span className="material-symbols-outlined text-primary text-sm">arrow_forward</span>
 </a>
 <a className="flex items-center justify-between p-2 rounded-lg hover:bg-blue-50 transition-colors group/item" href="#">
@@ -116,11 +116,11 @@ const Montage = () => {
 <div className="p-4 bg-green-50 text-green-600 rounded-xl group-hover:bg-green-600 group-hover:text-white transition-colors">
 <span className="material-symbols-outlined text-4xl">cleaning_services</span>
 </div>
-<h3 className="text-xl font-bold text-slate-900">MÃ©nage</h3>
+<h3 className="text-xl font-bold text-slate-900">Ménage</h3>
 </div>
 <p className="text-slate-500 mb-4 group-hover:opacity-0 transition-opacity">Nettoyage complet, vitres...</p>
 <div className="sub-services absolute inset-0 bg-white p-8 flex-col justify-center">
-<h4 className="font-black text-green-600 mb-4 text-lg border-b border-slate-100 pb-2">Services MÃ©nage</h4>
+<h4 className="font-black text-green-600 mb-4 text-lg border-b border-slate-100 pb-2">Services Ménage</h4>
 <div className="grid grid-cols-1 gap-4">
 <a className="flex items-center gap-3 p-2 rounded-lg hover:bg-green-50 transition-colors group/item" href="#">
 <span className="material-symbols-outlined text-green-600 bg-green-50 p-2 rounded-lg">vacuum</span>
@@ -128,7 +128,7 @@ const Montage = () => {
 </a>
 <a className="flex items-center gap-3 p-2 rounded-lg hover:bg-green-50 transition-colors group/item" href="#">
 <span className="material-symbols-outlined text-green-600 bg-green-50 p-2 rounded-lg">iron</span>
-<span className="text-sm font-semibold text-slate-700">Repassage Ã  domicile</span>
+<span className="text-sm font-semibold text-slate-700">Repassage à domicile</span>
 </a>
 <a className="flex items-center gap-3 p-2 rounded-lg hover:bg-green-50 transition-colors group/item" href="#">
 <span className="material-symbols-outlined text-green-600 bg-green-50 p-2 rounded-lg">key</span>
@@ -144,17 +144,17 @@ const Montage = () => {
 </div>
 <h3 className="text-xl font-bold text-slate-900">Plomberie</h3>
 </div>
-<p className="text-slate-500 mb-4 group-hover:opacity-0 transition-opacity">Fuites, robinetterie, dÃ©bouchage...</p>
+<p className="text-slate-500 mb-4 group-hover:opacity-0 transition-opacity">Fuites, robinetterie, débouchage...</p>
 <div className="sub-services absolute inset-0 bg-white p-8 flex-col justify-center">
 <h4 className="font-black text-cyan-600 mb-4 text-lg border-b border-slate-100 pb-2">Services Plomberie</h4>
 <div className="grid grid-cols-1 gap-4">
 <a className="flex items-center gap-3 p-2 rounded-lg hover:bg-cyan-50 transition-colors group/item" href="#">
 <span className="material-symbols-outlined text-cyan-600 bg-cyan-50 p-2 rounded-lg">water_drop</span>
-<span className="text-sm font-semibold text-slate-700">RÃ©paration de fuite</span>
+<span className="text-sm font-semibold text-slate-700">Réparation de fuite</span>
 </a>
 <a className="flex items-center gap-3 p-2 rounded-lg hover:bg-cyan-50 transition-colors group/item" href="#">
 <span className="material-symbols-outlined text-cyan-600 bg-cyan-50 p-2 rounded-lg">mop</span>
-<span className="text-sm font-semibold text-slate-700">DÃ©bouchage Ã©vier</span>
+<span className="text-sm font-semibold text-slate-700">Débouchage évier</span>
 </a>
 <a className="flex items-center gap-3 p-2 rounded-lg hover:bg-cyan-50 transition-colors group/item" href="#">
 <span className="material-symbols-outlined text-cyan-600 bg-cyan-50 p-2 rounded-lg">toilet</span>
@@ -168,11 +168,11 @@ const Montage = () => {
 <div className="p-4 bg-orange-50 text-orange-600 rounded-xl group-hover:bg-orange-600 group-hover:text-white transition-colors">
 <span className="material-symbols-outlined text-4xl">bolt</span>
 </div>
-<h3 className="text-xl font-bold text-slate-900">Ã‰lectricitÃ©</h3>
+<h3 className="text-xl font-bold text-slate-900">Électricité</h3>
 </div>
-<p className="text-slate-500 mb-4 group-hover:opacity-0 transition-opacity">Prises, tableaux, Ã©clairage...</p>
+<p className="text-slate-500 mb-4 group-hover:opacity-0 transition-opacity">Prises, tableaux, éclairage...</p>
 <div className="sub-services absolute inset-0 bg-white p-8 flex-col justify-center">
-<h4 className="font-black text-orange-600 mb-4 text-lg border-b border-slate-100 pb-2">Services Ã‰lectricitÃ©</h4>
+<h4 className="font-black text-orange-600 mb-4 text-lg border-b border-slate-100 pb-2">Services Électricité</h4>
 <div className="grid grid-cols-1 gap-4">
 <a className="flex items-center gap-3 p-2 rounded-lg hover:bg-orange-50 transition-colors group/item" href="#">
 <span className="material-symbols-outlined text-orange-600 bg-orange-50 p-2 rounded-lg">power</span>
@@ -220,7 +220,7 @@ const Montage = () => {
 <div className="p-4 bg-indigo-50 text-indigo-600 rounded-xl group-hover:bg-indigo-600 group-hover:text-white transition-colors">
 <span className="material-symbols-outlined text-4xl">local_shipping</span>
 </div>
-<h3 className="text-xl font-bold text-slate-900">DÃ©mÃ©nagement</h3>
+<h3 className="text-xl font-bold text-slate-900">Déménagement</h3>
 </div>
 <p className="text-slate-500 mb-4 group-hover:opacity-0 transition-opacity">Transport, aide bras, cartons...</p>
 <div className="sub-services absolute inset-0 bg-white p-8 flex-col justify-center">
@@ -236,7 +236,7 @@ const Montage = () => {
 </a>
 <a className="flex items-center gap-3 p-2 rounded-lg hover:bg-indigo-50 transition-colors group/item" href="#">
 <span className="material-symbols-outlined text-indigo-600 bg-indigo-50 p-2 rounded-lg">local_shipping</span>
-<span className="text-sm font-semibold text-slate-700">Petit dÃ©mÃ©nagement</span>
+<span className="text-sm font-semibold text-slate-700">Petit déménagement</span>
 </a>
 </div>
 </div>
@@ -253,22 +253,22 @@ const Montage = () => {
 </div>
 <div className="flex flex-col items-center">
 <span className="text-4xl font-black mb-2">2,500+</span>
-<span className="text-primary-foreground/80 font-medium">Artisans VÃ©rifiÃ©s</span>
+<span className="text-primary-foreground/80 font-medium">Artisans Vérifiés</span>
 </div>
 <div className="flex flex-col items-center">
 <span className="text-4xl font-black mb-2">40k+</span>
-<span className="text-primary-foreground/80 font-medium">Projets RÃ©alisÃ©s</span>
+<span className="text-primary-foreground/80 font-medium">Projets Réalisés</span>
 </div>
 </div>
 </div>
 </section>
 <section className="py-24 bg-white">
 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-<h2 className="text-3xl font-black text-slate-900 mb-16">Comment Ã§a marche</h2>
+<h2 className="text-3xl font-black text-slate-900 mb-16">Comment ça marche</h2>
 <div className="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
 <div className="flex flex-col items-center gap-6">
 <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary font-black text-xl">1</div>
-<h3 className="text-xl font-bold">DÃ©crivez votre besoin</h3>
+<h3 className="text-xl font-bold">Décrivez votre besoin</h3>
 <p className="text-slate-500">Dites-nous ce dont vous avez besoin, la date et le lieu.</p>
 </div>
 <div className="flex flex-col items-center gap-6">
@@ -279,7 +279,7 @@ const Montage = () => {
 <div className="flex flex-col items-center gap-6">
 <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary font-black text-xl">3</div>
 <h3 className="text-xl font-bold">Travail accompli</h3>
-<p className="text-slate-500">Payez en toute sÃ©curitÃ© une fois le service terminÃ© avec succÃ¨s.</p>
+<p className="text-slate-500">Payez en toute sécurité une fois le service terminé avec succès.</p>
 </div>
 </div>
 </div>
@@ -288,8 +288,8 @@ const Montage = () => {
 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div className="flex justify-between items-end mb-12">
 <div>
-<h2 className="text-3xl font-black text-slate-900 mb-4">Artisans Ã  la une</h2>
-<p className="text-slate-600">Les mieux notÃ©s de votre rÃ©gion</p>
+<h2 className="text-3xl font-black text-slate-900 mb-4">Artisans à la une</h2>
+<p className="text-slate-600">Les mieux notés de votre région</p>
 </div>
 <button className="text-primary font-bold hover:underline">Voir tous les artisans</button>
 </div>
@@ -306,9 +306,9 @@ const Montage = () => {
 <h4 className="font-bold text-slate-900">Ahmed Mansouri</h4>
 <span className="material-symbols-outlined text-primary text-sm">verified</span>
 </div>
-<p className="text-xs text-slate-500 mb-4">SpÃ©cialiste Ã‰lectricitÃ© &amp; Montage</p>
+<p className="text-xs text-slate-500 mb-4">Spécialiste Électricité &amp; Montage</p>
 <div className="flex items-center justify-between">
-<span className="text-sm font-bold">35â‚¬ <span className="text-slate-400 font-normal">/h</span></span>
+<span className="text-sm font-bold">35€ <span className="text-slate-400 font-normal">/h</span></span>
 <button className="px-4 py-2 bg-slate-100 text-slate-700 text-xs font-bold rounded-lg group-hover:bg-primary group-hover:text-white transition-colors">Profil</button>
 </div>
 </div>
@@ -326,7 +326,7 @@ const Montage = () => {
 </div>
 <p className="text-xs text-slate-500 mb-4">Expert Plomberie 24/7</p>
 <div className="flex items-center justify-between">
-<span className="text-sm font-bold">45â‚¬ <span className="text-slate-400 font-normal">/h</span></span>
+<span className="text-sm font-bold">45€ <span className="text-slate-400 font-normal">/h</span></span>
 <button className="px-4 py-2 bg-slate-100 text-slate-700 text-xs font-bold rounded-lg group-hover:bg-primary group-hover:text-white transition-colors">Profil</button>
 </div>
 </div>
@@ -342,9 +342,9 @@ const Montage = () => {
 <h4 className="font-bold text-slate-900">Sarah L.</h4>
 <span className="material-symbols-outlined text-primary text-sm">verified</span>
 </div>
-<p className="text-xs text-slate-500 mb-4">Peinture &amp; DÃ©coration</p>
+<p className="text-xs text-slate-500 mb-4">Peinture &amp; Décoration</p>
 <div className="flex items-center justify-between">
-<span className="text-sm font-bold">30â‚¬ <span className="text-slate-400 font-normal">/h</span></span>
+<span className="text-sm font-bold">30€ <span className="text-slate-400 font-normal">/h</span></span>
 <button className="px-4 py-2 bg-slate-100 text-slate-700 text-xs font-bold rounded-lg group-hover:bg-primary group-hover:text-white transition-colors">Profil</button>
 </div>
 </div>
@@ -360,9 +360,9 @@ const Montage = () => {
 <h4 className="font-bold text-slate-900">Omar Zed</h4>
 <span className="material-symbols-outlined text-primary text-sm">verified</span>
 </div>
-<p className="text-xs text-slate-500 mb-4">DÃ©mÃ©nagement &amp; Transport</p>
+<p className="text-xs text-slate-500 mb-4">Déménagement &amp; Transport</p>
 <div className="flex items-center justify-between">
-<span className="text-sm font-bold">28â‚¬ <span className="text-slate-400 font-normal">/h</span></span>
+<span className="text-sm font-bold">28€ <span className="text-slate-400 font-normal">/h</span></span>
 <button className="px-4 py-2 bg-slate-100 text-slate-700 text-xs font-bold rounded-lg group-hover:bg-primary group-hover:text-white transition-colors">Profil</button>
 </div>
 </div>
@@ -371,15 +371,15 @@ const Montage = () => {
 </section>
 <section className="py-24 bg-white">
 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-<h2 className="text-3xl font-black text-slate-900 text-center mb-16">Questions FrÃ©quemment PosÃ©es</h2>
+<h2 className="text-3xl font-black text-slate-900 text-center mb-16">Questions Fréquemment Posées</h2>
 <div className="space-y-4">
 <details className="group border border-slate-200 rounded-xl overflow-hidden" open="">
 <summary className="flex justify-between items-center p-6 cursor-pointer bg-slate-50 hover:bg-slate-100 transition-colors list-none">
-<span className="font-bold text-slate-900">Comment les artisans sont-ils vÃ©rifiÃ©s ?</span>
+<span className="font-bold text-slate-900">Comment les artisans sont-ils vérifiés ?</span>
 <span className="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
 </summary>
 <div className="p-6 text-slate-600 leading-relaxed bg-white border-t border-slate-200">
-                        Chaque artisan sur MihnaPro passe par un processus de vÃ©rification rigoureux comprenant la vÃ©rification de l'identitÃ©, des qualifications professionnelles et des antÃ©cÃ©dents. Nous recueillons Ã©galement les avis rÃ©els des clients prÃ©cÃ©dents.
+                        Chaque artisan sur MihnaPro passe par un processus de vérification rigoureux comprenant la vérification de l'identité, des qualifications professionnelles et des antécédents. Nous recueillons également les avis réels des clients précédents.
                     </div>
 </details>
 <details className="group border border-slate-200 rounded-xl overflow-hidden">
@@ -388,16 +388,16 @@ const Montage = () => {
 <span className="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
 </summary>
 <div className="p-6 text-slate-600 leading-relaxed bg-white border-t border-slate-200">
-                        Votre satisfaction est notre prioritÃ©. Si un service ne rÃ©pond pas Ã  vos attentes, notre Ã©quipe de support intervient pour rÃ©soudre le litige. Le paiement n'est libÃ©rÃ© Ã  l'artisan que lorsque vous confirmez la fin des travaux.
+                        Votre satisfaction est notre priorité. Si un service ne répond pas à vos attentes, notre équipe de support intervient pour résoudre le litige. Le paiement n'est libéré à l'artisan que lorsque vous confirmez la fin des travaux.
                     </div>
 </details>
 <details className="group border border-slate-200 rounded-xl overflow-hidden">
 <summary className="flex justify-between items-center p-6 cursor-pointer bg-slate-50 hover:bg-slate-100 transition-colors list-none">
-<span className="font-bold text-slate-900">Est-ce que le service est assurÃ© ?</span>
+<span className="font-bold text-slate-900">Est-ce que le service est assuré ?</span>
 <span className="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
 </summary>
 <div className="p-6 text-slate-600 leading-relaxed bg-white border-t border-slate-200">
-                        Oui, tous les projets rÃ©servÃ©s et payÃ©s via MihnaPro bÃ©nÃ©ficient d'une assurance responsabilitÃ© civile professionnelle pour couvrir d'Ã©ventuels dommages accidentels pendant l'intervention.
+                        Oui, tous les projets réservés et payés via MihnaPro bénéficient d'une assurance responsabilité civile professionnelle pour couvrir d'éventuels dommages accidentels pendant l'intervention.
                     </div>
 </details>
 </div>
@@ -429,11 +429,11 @@ const Montage = () => {
 <div>
 <h4 className="text-white font-bold mb-6">Liens Rapides</h4>
 <ul className="space-y-4 text-sm">
-<li><a className="hover:text-primary transition-colors" href="#">ÃDA propos de nous</a></li>
-<li><a className="hover:text-primary transition-colors" href="#">Comment Ã§a marche</a></li>
+<li><a className="hover:text-primary transition-colors" href="#">À propos de nous</a></li>
+<li><a className="hover:text-primary transition-colors" href="#">Comment ça marche</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Devenir Artisan</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Blog &amp; Conseils</a></li>
-<li><a className="hover:text-primary transition-colors" href="#">Conditions GÃ©nÃ©rales</a></li>
+<li><a className="hover:text-primary transition-colors" href="#">Conditions Générales</a></li>
 </ul>
 </div>
 <div>
@@ -455,7 +455,7 @@ const Montage = () => {
 </div>
 <div>
 <h4 className="text-white font-bold mb-6">Newsletter</h4>
-<p className="text-sm mb-4">Recevez nos meilleures offres et conseils dÃ©co.</p>
+<p className="text-sm mb-4">Recevez nos meilleures offres et conseils déco.</p>
 <form className="flex gap-2">
 <input className="bg-slate-800 border-none rounded-lg px-4 py-2 text-sm w-full focus:ring-1 focus:ring-primary" placeholder="Email" type="email"/>
 <button className="p-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors">
@@ -465,11 +465,11 @@ const Montage = () => {
 </div>
 </div>
 <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
-<p>Â© 2024 MihnaPro. Tous droits rÃ©servÃ©s.</p>
+<p>© 2024 MihnaPro. Tous droits réservés.</p>
 <div className="flex gap-6">
-<a className="hover:text-white transition-colors" href="#">ConfidentialitÃ©</a>
+<a className="hover:text-white transition-colors" href="#">Confidentialité</a>
 <a className="hover:text-white transition-colors" href="#">Cookies</a>
-<a className="hover:text-white transition-colors" href="#">SÃ©curitÃ©</a>
+<a className="hover:text-white transition-colors" href="#">Sécurité</a>
 </div>
 </div>
 </div>
