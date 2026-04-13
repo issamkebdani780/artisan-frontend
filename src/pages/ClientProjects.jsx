@@ -158,7 +158,7 @@ const ClientProjects = () => {
                         </td>
                         <td className="px-8 py-6 text-right">
                           <div className="flex items-center justify-end gap-2">
-                             {(project.status === 'accepté' || (project.status === 'confirmed' && project.type === 'booking')) && (
+                             {(project.status === 'accepté' || (project.status === 'confirmed' && project.type === 'booking')) && project.artisan_id && (
                                 <button
                                   onClick={() => {
                                     setSelectedProject(project);

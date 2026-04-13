@@ -166,7 +166,7 @@ const ClientInbox = () => {
                   </div>
 
                   <div className="flex flex-row lg:flex-col justify-end gap-4 min-w-[240px] pt-8 lg:pt-0 border-t lg:border-t-0 lg:border-l border-slate-50 lg:pl-10">
-                     {devis.status === 'accepté' && (
+                     {devis.status === 'accepté' && devis.artisan_id && (
                         <button
                           onClick={() => {
                             setSelectedProject({
