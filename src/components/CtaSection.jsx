@@ -56,7 +56,7 @@ const CtaSection = () => {
                   to="/register/artisan" 
                   className="px-12 py-5 bg-white text-slate-900 font-black uppercase tracking-widest text-sm rounded-2xl border border-slate-100 shadow-lg hover:shadow-xl transition-all active:scale-95 flex items-center justify-center"
                 >
-                  Devenir prestataire
+                  Devenir artisan
                 </Link>
               </>
             )}

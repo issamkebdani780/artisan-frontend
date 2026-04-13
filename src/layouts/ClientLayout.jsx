@@ -107,10 +107,7 @@ const ClientLayout = ({ children, title = "Mihnati Client", subtitle = "Tableau 
             <button className="lg:hidden size-12 rounded-2xl bg-slate-50 flex items-center justify-center text-slate-600 shadow-sm" onClick={() => setIsSidebarOpen(true)}>
               <span className="material-symbols-outlined text-2xl">menu</span>
             </button>
-            <div className={`relative w-full max-w-md transition-all duration-300 ${isCollapsed ? 'lg:max-w-xl' : 'lg:max-w-md'} hidden lg:block`}>
-              <span className="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">search</span>
-              <input type="text" placeholder="Rechercher des services..." className="w-full pl-12 pr-6 h-12 bg-slate-50 border border-slate-100 rounded-2xl focus:ring-2 focus:ring-primary/20 focus:bg-white outline-none transition-all text-xs font-bold" />
-            </div>
+
 
           </div>
 

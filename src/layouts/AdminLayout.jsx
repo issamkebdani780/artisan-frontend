@@ -97,27 +97,7 @@ const AdminLayout = ({ children, title = "Admin", subtitle }) => {
             <span className="material-symbols-outlined text-xl">menu_open</span>
             <div className="w-px h-6 bg-slate-200"></div>
           </div>
-          <div className="flex items-center gap-6 flex-1 max-w-2xl">
-            <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                const q = e.target.search.value;
-                if (!q) return;
-                const target = path.includes('clients') ? 'clients' : 'artisans';
-                navigate(`/dashboard/admin/${target}?search=${q}`);
-              }}
-              className="relative w-full group"
-            >
 
-              <span className="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-primary transition-colors">search</span>
-              <input
-                name="search"
-                type="text"
-                placeholder="Rechercher un artisan ou client..."
-                className="w-full pl-12 pr-6 py-3.5 bg-slate-100 border-transparent focus:bg-white border focus:border-primary/50 text-sm font-medium rounded-2xl outline-none transition-all"
-              />
-            </form>
-          </div>
 
 
 
