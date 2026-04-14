@@ -64,7 +64,7 @@ const FormulaireDeContestationDeConstat = () => {
 <label className="flex items-center gap-4 p-4 rounded-xl border border-slate-200 hover:bg-slate-50 cursor-pointer transition-colors group">
 <input className="size-5 rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/>
 <div className="flex-1">
-<p className="font-semibold text-sm">Preuve photo nÂ°1 : Retard de livraison constaté</p>
+<p className="font-semibold text-sm">Preuve photo n°1 : Retard de livraison constaté</p>
 <p className="text-xs text-slate-400">Ajouté le 12/10/2023 par Admin-42</p>
 </div>
 <span className="material-symbols-outlined text-slate-300 group-hover:text-primary">image</span>
@@ -72,7 +72,7 @@ const FormulaireDeContestationDeConstat = () => {
 <label className="flex items-center gap-4 p-4 rounded-xl border border-slate-200 hover:bg-slate-50 cursor-pointer transition-colors group">
 <input className="size-5 rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/>
 <div className="flex-1">
-<p className="font-semibold text-sm">Preuve photo nÂ°2 : Qualité des matériaux non-conforme</p>
+<p className="font-semibold text-sm">Preuve photo n°2 : Qualité des matériaux non-conforme</p>
 <p className="text-xs text-slate-400">Ajouté le 12/10/2023 par Admin-42</p>
 </div>
 <span className="material-symbols-outlined text-slate-300 group-hover:text-primary">image</span>

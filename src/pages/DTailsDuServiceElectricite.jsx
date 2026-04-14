@@ -211,7 +211,7 @@ const DTailsDuServiceElectricite = () => {
 <span className="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
 </summary>
 <div className="mt-4 text-slate-600 text-sm leading-relaxed">
-                                Les prix affichés "Ã€ partir de" incluent le diagnostic et la main-d'Ã…â€œuvre de base. Le coût des pièces spécifiques (interrupteurs, disjoncteurs, câbles) est facturé en sus après validation du devis sur place.
+                                Les prix affichés "Ã€ partir de" incluent le diagnostic et la main-d'Ã…"uvre de base. Le coût des pièces spécifiques (interrupteurs, disjoncteurs, câbles) est facturé en sus après validation du devis sur place.
                             </div>
 </details>
 <details className="group bg-slate-50 rounded-xl border border-slate-200 p-4">

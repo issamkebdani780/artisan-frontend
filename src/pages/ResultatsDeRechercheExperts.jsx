@@ -116,7 +116,7 @@ const ResultatsDeRechercheExperts = () => {
                                         <h3 className="text-lg font-bold text-slate-900">Thomas Martin</h3>
                                         <span className="material-symbols-outlined text-primary text-lg" title="Profil vérifié">verified</span>
                                     </div>
-                                    <p className="text-slate-500 text-sm mb-4">Plombier Expert â€¢ 12 ans d'exp.</p>
+                                    <p className="text-slate-500 text-sm mb-4">Plombier Expert • 12 ans d'exp.</p>
                                     <div className="flex items-center justify-between mt-auto pt-4 border-t border-slate-100">
                                         <div>
                                             <span className="text-xs text-slate-400 block">Ã€ partir de</span>
@@ -287,7 +287,7 @@ const ResultatsDeRechercheExperts = () => {
                                 </div>
                                 <span className="font-bold text-lg text-slate-900">ArtisanDirect</span>
                             </div>
-                            <p className="text-sm text-slate-500">La plateforme nÂ°1 pour trouver des artisans qualifiés près de chez vous.</p>
+                            <p className="text-sm text-slate-500">La plateforme n°1 pour trouver des artisans qualifiés près de chez vous.</p>
                         </div>
                         <div>
                             <h4 className="font-bold text-slate-900 mb-4">Plateforme</h4>

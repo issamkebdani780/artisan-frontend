@@ -54,7 +54,7 @@ const VoirLesPreuvesAdmin = () => {
                 <div className="flex justify-between items-start">
                   <div>
                     <p className="font-bold text-slate-900">Photo_Site_ZoneB_01.jpg</p>
-                    <p className="text-xs text-slate-500 uppercase font-medium">Capture d'inspection â€¢ 14/10/2023</p>
+                    <p className="text-xs text-slate-500 uppercase font-medium">Capture d'inspection • 14/10/2023</p>
                   </div>
                   <button className="text-indigo-600 hover:text-indigo-800"><span className="material-symbols-outlined">zoom_in</span></button>
                 </div>
@@ -69,7 +69,7 @@ const VoirLesPreuvesAdmin = () => {
                 <div className="flex justify-between items-start">
                   <div>
                     <p className="font-bold text-slate-900">Equipement_Defectueux.jpg</p>
-                    <p className="text-xs text-slate-500 uppercase font-medium">Capture d'inspection â€¢ 14/10/2023</p>
+                    <p className="text-xs text-slate-500 uppercase font-medium">Capture d'inspection • 14/10/2023</p>
                   </div>
                   <button className="text-indigo-600 hover:text-indigo-800"><span className="material-symbols-outlined">zoom_in</span></button>
                 </div>
@@ -85,7 +85,7 @@ const VoirLesPreuvesAdmin = () => {
               </div>
               <div className="flex-1">
                 <p className="font-bold text-slate-900 text-sm">Rapport_Plaintes_Clients.pdf</p>
-                <p className="text-xs text-slate-500">Document PDF â€¢ 2.4 Mo</p>
+                <p className="text-xs text-slate-500">Document PDF • 2.4 Mo</p>
               </div>
               <button className="p-2 text-slate-400 hover:text-indigo-600 transition-colors"><span className="material-symbols-outlined">download</span></button>
             </div>
@@ -95,7 +95,7 @@ const VoirLesPreuvesAdmin = () => {
               </div>
               <div className="flex-1">
                 <p className="font-bold text-slate-900 text-sm">Registre_Securite.xlsx</p>
-                <p className="text-xs text-slate-500">Feuille de calcul â€¢ 842 Ko</p>
+                <p className="text-xs text-slate-500">Feuille de calcul • 842 Ko</p>
               </div>
               <button className="p-2 text-slate-400 hover:text-indigo-600 transition-colors"><span className="material-symbols-outlined">download</span></button>
             </div>

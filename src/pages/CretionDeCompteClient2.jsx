@@ -86,7 +86,7 @@ const CretionDeCompteClient2 = () => {
 <div className="hidden lg:block relative rounded-2xl overflow-hidden h-64 border border-slate-200 shadow-xl">
 <img alt="Mihnati PROfessionnel au travail" className="h-full w-full object-cover" data-alt="Mihnati PROfessionnel travaillant avec des outils de précision" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNGt7OpSRwv7_oT-xh8v2rHXB2vN6GXlPTwAbQxn5914KPpL3Aab8miDP-879H__E2vBdzKDxPSTAucP-4_rT4ZCJu5PRMHOi3nf7EPWRMOU6esom-sjJrVZUXH32ooM1SSbAK3qE4_WuFHB-NoNhD6t0OR6SWJyktJ7k8mmmP6-KFtYFDawKGHUHVfgazx1zp9okkIK7I4szaw0aFuY8p8egjPacSUcVPtH4vcOhOspTMViKrd0cXxUf4vYL30PAbDbNGKAUh44kr"/>
 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
-<p className="text-white text-sm italic font-medium">"ArtisanDirect a simplifié ma rénovation de A à Z. La confiance est enfin au rendez-vous." âDAâ€ Marc L.</p>
+<p className="text-white text-sm italic font-medium">"ArtisanDirect a simplifié ma rénovation de A à Z. La confiance est enfin au rendez-vous." âDA" Marc L.</p>
 </div>
 </div>
 </div>

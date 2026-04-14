@@ -283,7 +283,7 @@ const ServiceDetailsInstallationRobinetterie = () => {
 <span className="material-symbols-outlined text-primary">plumbing</span>
 <span className="text-xl font-bold">PlumbExpert</span>
 </div>
-<p className="max-w-md">Le réseau nÂ°1 des experts en plomberie à Paris et en ÃŽle-de-France. Disponibilité 24/7 pour vos urgences et projets d'installation.</p>
+<p className="max-w-md">Le réseau n°1 des experts en plomberie à Paris et en ÃŽle-de-France. Disponibilité 24/7 pour vos urgences et projets d'installation.</p>
 </div>
 <div>
 <h6 className="text-white font-bold mb-6">Navigation</h6>

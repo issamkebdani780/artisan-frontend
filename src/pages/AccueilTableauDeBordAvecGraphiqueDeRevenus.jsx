@@ -192,7 +192,7 @@ const AccueilTableauDeBordAvecGraphiqueDeRevenus = () => {
 </div>
 <div className="flex-1">
 <h4 className="font-bold text-slate-900">Rénovation Cuisine - Villa Arras</h4>
-<p className="text-sm text-slate-500">Client: Jean Dupont â€¢ 12 Oct 2023</p>
+<p className="text-sm text-slate-500">Client: Jean Dupont • 12 Oct 2023</p>
 </div>
 <div className="text-right">
 <span className="px-3 py-1 rounded-full text-xs font-bold bg-blue-100 text-blue-600">En cours</span>
@@ -206,7 +206,7 @@ const AccueilTableauDeBordAvecGraphiqueDeRevenus = () => {
 </div>
 <div className="flex-1">
 <h4 className="font-bold text-slate-900">Installation Ã‰lectrique Bureau</h4>
-<p className="text-sm text-slate-500">Client: SARL Tech â€¢ 09 Oct 2023</p>
+<p className="text-sm text-slate-500">Client: SARL Tech • 09 Oct 2023</p>
 </div>
 <div className="text-right">
 <span className="px-3 py-1 rounded-full text-xs font-bold bg-green-100 text-green-600">Terminé</span>
@@ -220,7 +220,7 @@ const AccueilTableauDeBordAvecGraphiqueDeRevenus = () => {
 </div>
 <div className="flex-1">
 <h4 className="font-bold text-slate-900">Réparation Fuite Canalisation</h4>
-<p className="text-sm text-slate-500">Client: Marie Curie â€¢ 05 Oct 2023</p>
+<p className="text-sm text-slate-500">Client: Marie Curie • 05 Oct 2023</p>
 </div>
 <div className="text-right">
 <span className="px-3 py-1 rounded-full text-xs font-bold bg-orange-100 text-orange-600">En attente</span>
@@ -244,7 +244,7 @@ const AccueilTableauDeBordAvecGraphiqueDeRevenus = () => {
 </div>
 <div className="flex-1 min-w-0">
 <p className="text-sm font-bold text-slate-900 truncate">Visite technique - Loft Paris</p>
-<p className="text-xs text-slate-500 mt-0.5">09:00 - 10:30 â€¢ 2.5km</p>
+<p className="text-xs text-slate-500 mt-0.5">09:00 - 10:30 • 2.5km</p>
 </div>
 <button className="size-8 flex items-center justify-center rounded-lg bg-white text-slate-400 hover:text-primary border border-slate-200">
 <span className="material-symbols-outlined text-sm">navigation</span>
@@ -258,7 +258,7 @@ const AccueilTableauDeBordAvecGraphiqueDeRevenus = () => {
 </div>
 <div className="flex-1 min-w-0">
 <p className="text-sm font-bold text-slate-900 truncate">Signature Contrat - Agence Immo</p>
-<p className="text-xs text-slate-500 mt-0.5">14:00 - 15:00 â€¢ Zoom</p>
+<p className="text-xs text-slate-500 mt-0.5">14:00 - 15:00 • Zoom</p>
 </div>
 <button className="size-8 flex items-center justify-center rounded-lg bg-white text-slate-400 hover:text-primary border border-slate-200">
 <span className="material-symbols-outlined text-sm">videocam</span>
@@ -272,7 +272,7 @@ const AccueilTableauDeBordAvecGraphiqueDeRevenus = () => {
 </div>
 <div className="flex-1 min-w-0">
 <p className="text-sm font-bold text-slate-900 truncate">Maintenance Climatisation</p>
-<p className="text-xs text-slate-500 mt-0.5">10:30 - 12:00 â€¢ 5.0km</p>
+<p className="text-xs text-slate-500 mt-0.5">10:30 - 12:00 • 5.0km</p>
 </div>
 <button className="size-8 flex items-center justify-center rounded-lg bg-white text-slate-400 hover:text-primary border border-slate-200">
 <span className="material-symbols-outlined text-sm">navigation</span>

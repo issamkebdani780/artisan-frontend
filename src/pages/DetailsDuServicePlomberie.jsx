@@ -213,7 +213,7 @@ const DetailsDuServicePlomberie = () => {
 <span className="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
 </summary>
 <p className="mt-4 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-4">
-                            Le tarif affiché correspond à la main-d'Ã…â€œuvre et au déplacement. Les pièces de rechange nécessaires (joints, robinets, siphons) sont facturées en supplément après validation d'un devis gratuit sur place.
+                            Le tarif affiché correspond à la main-d'Ã…"uvre et au déplacement. Les pièces de rechange nécessaires (joints, robinets, siphons) sont facturées en supplément après validation d'un devis gratuit sur place.
                         </p>
 </details>
 <details className="group bg-white rounded-lg border border-slate-200 p-4">

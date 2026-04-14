@@ -412,7 +412,7 @@ const Montage = () => {
 <span className="text-xl font-black tracking-tight">MihnaPro</span>
 </div>
 <p className="text-sm leading-relaxed mb-6">
-                        La plateforme nÂ°1 de mise en relation avec des artisans de confiance pour tous vos besoins domestiques et professionnels.
+                        La plateforme n°1 de mise en relation avec des artisans de confiance pour tous vos besoins domestiques et professionnels.
                     </p>
 <div className="flex gap-4">
 <a className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary transition-colors" href="#">

@@ -118,7 +118,7 @@ const AvertissementsAdministratifsSecrets = () => {
 <div>
 <div className="flex items-center gap-2 mb-1">
 <span className="bg-slate-100 text-slate-600 text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-tighter">REF: AD-2024-0812</span>
-<span className="text-slate-400 text-xs">â€¢ Mis à jour le 12 Mai 2024</span>
+<span className="text-slate-400 text-xs">• Mis à jour le 12 Mai 2024</span>
 </div>
 <h3 className="text-xl font-bold text-slate-900">Qualité de service &amp; Finitions</h3>
 </div>
@@ -153,7 +153,7 @@ const AvertissementsAdministratifsSecrets = () => {
 <div>
 <div className="flex items-center gap-2 mb-1">
 <span className="bg-slate-100 text-slate-600 text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-tighter">REF: AD-2024-0345</span>
-<span className="text-slate-400 text-xs">â€¢ Classé le 15 Mars 2024</span>
+<span className="text-slate-400 text-xs">• Classé le 15 Mars 2024</span>
 </div>
 <h3 className="text-xl font-bold text-slate-900">Délai de réponse (Communication)</h3>
 </div>

@@ -171,9 +171,9 @@ const PeinturePlafond = () => {
 <p className="text-slate-500 text-sm mb-4">Pour plafonds sains sans dégâts majeurs.</p>
 <div className="text-3xl font-black text-primary mb-4">18â‚¬ <span className="text-sm text-slate-400">/ mÂ²</span></div>
 <ul className="text-xs space-y-2 text-slate-600">
-<li>â€¢ Lessivage léger</li>
-<li>â€¢ 2 couches mat</li>
-<li>â€¢ Protection sol incluse</li>
+<li>• Lessivage léger</li>
+<li>• 2 couches mat</li>
+<li>• Protection sol incluse</li>
 </ul>
 </div>
 <div className="bg-white p-6 rounded-2xl shadow-lg border-b-4 border-orange-500">
@@ -181,9 +181,9 @@ const PeinturePlafond = () => {
 <p className="text-slate-500 text-sm mb-4">Isolation des traces de nicotine et suie.</p>
 <div className="text-3xl font-black text-orange-500 mb-4">26â‚¬ <span className="text-sm text-slate-400">/ mÂ²</span></div>
 <ul className="text-xs space-y-2 text-slate-600">
-<li>â€¢ Impression isolante solvantée</li>
-<li>â€¢ Neutralisation des odeurs</li>
-<li>â€¢ Finition haute opacité</li>
+<li>• Impression isolante solvantée</li>
+<li>• Neutralisation des odeurs</li>
+<li>• Finition haute opacité</li>
 </ul>
 </div>
 <div className="bg-white p-6 rounded-2xl shadow-lg border-b-4 border-red-500">
@@ -191,9 +191,9 @@ const PeinturePlafond = () => {
 <p className="text-slate-500 text-sm mb-4">Après dégâts des eaux ou taches rebelles.</p>
 <div className="text-3xl font-black text-red-500 mb-4">32â‚¬ <span className="text-sm text-slate-400">/ mÂ²</span></div>
 <ul className="text-xs space-y-2 text-slate-600">
-<li>â€¢ Traitement anti-salpÃªtre</li>
-<li>â€¢ Durcisseur de fonds</li>
-<li>â€¢ Peinture hydrofuge</li>
+<li>• Traitement anti-salpÃªtre</li>
+<li>• Durcisseur de fonds</li>
+<li>• Peinture hydrofuge</li>
 </ul>
 </div>
 </div>

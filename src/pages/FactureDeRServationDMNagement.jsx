@@ -114,7 +114,7 @@ const FactureDeRServationDMNagement = () => {
 <span className="material-symbols-outlined text-primary">location_on</span>
 <div>
 <p className="text-sm font-bold text-slate-900">Itinéraire</p>
-<p className="text-slate-500 text-sm">Paris (75002) ââ€ â€™ Boulogne-Billancourt (92100)</p>
+<p className="text-slate-500 text-sm">Paris (75002) ââ€ ' Boulogne-Billancourt (92100)</p>
 <p className="text-xs text-slate-400 mt-1">Distance estimée : 12.5 km</p>
 </div>
 </div>
@@ -147,7 +147,7 @@ const FactureDeRServationDMNagement = () => {
 <tr>
 <td className="px-6 py-4">
 <p className="text-slate-900 font-semibold">Forfait Déménagement de base</p>
-<p className="text-xs text-slate-500">Main d'Ã…â€œuvre (2 pers.) + Camion 20mÂ³</p>
+<p className="text-xs text-slate-500">Main d'Ã…"uvre (2 pers.) + Camion 20mÂ³</p>
 </td>
 <td className="px-6 py-4 text-center text-slate-700">1</td>
 <td className="px-6 py-4 text-right text-slate-700">450,00 â‚¬</td>
@@ -197,7 +197,7 @@ const FactureDeRServationDMNagement = () => {
 </div>
 <div>
 <p className="text-sm font-bold text-slate-900">Carte Bancaire Visa</p>
-<p className="text-xs text-slate-500">Terminant par â€¢â€¢â€¢â€¢ 1234</p>
+<p className="text-xs text-slate-500">Terminant par •••• 1234</p>
 </div>
 <div className="ml-auto">
 <span className="material-symbols-outlined text-green-500">check_circle</span>

@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import apiService from '../services/api';
 import ClientLayout from '../layouts/ClientLayout';
@@ -249,7 +249,7 @@ const ClientInbox = () => {
                         star <= reviewForm.rating ? 'text-amber-400 drop-shadow-md scale-110' : 'text-slate-200'
                       }`}
                     >
-                      {star <= reviewForm.rating ? 'â˜…' : 'â˜†'}
+                      {star <= reviewForm.rating ? '★' : '☆'}
                     </button>
                   ))}
                 </div>

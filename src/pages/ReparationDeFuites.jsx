@@ -146,7 +146,7 @@ const ReparationDeFuites = () => {
                     </h3>
 <div className="grid md:grid-cols-3 gap-6">
 <div className="p-6 rounded-xl border border-slate-100 hover:border-primary transition-all">
-<p className="text-sm font-medium text-slate-500 uppercase tracking-widest">Main d'Ã…â€œuvre</p>
+<p className="text-sm font-medium text-slate-500 uppercase tracking-widest">Main d'Ã…"uvre</p>
 <div className="flex items-baseline gap-1 mt-2">
 <span className="text-3xl font-black text-slate-900">65â‚¬</span>
 <span className="text-slate-500">/heure</span>
@@ -236,7 +236,7 @@ const ReparationDeFuites = () => {
                                 <span className="material-symbols-outlined text-slate-400 group-hover:text-primary">expand_more</span>
 </button>
 <p className="mt-2 text-slate-600 text-sm leading-relaxed">
-                                Oui, toutes nos réparations de fuites sont couvertes par une garantie pièces et main d'Ã…â€œuvre de 2 ans, en plus de l'assurance décennale obligatoire.
+                                Oui, toutes nos réparations de fuites sont couvertes par une garantie pièces et main d'Ã…"uvre de 2 ans, en plus de l'assurance décennale obligatoire.
                             </p>
 </div>
 <div className="pb-2">

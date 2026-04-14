@@ -247,7 +247,7 @@ const MontageDetageres = () => {
 <span className="material-symbols-outlined">shelves</span>
 <span className="font-bold text-xl text-slate-900">ShelfMaster</span>
 </div>
-<p className="text-sm text-slate-500">Solution nÂ°1 pour le montage et la fixation de vos rangements à domicile.</p>
+<p className="text-sm text-slate-500">Solution n°1 pour le montage et la fixation de vos rangements à domicile.</p>
 </div>
 <div>
 <h5 className="font-bold mb-4 text-slate-900">Services</h5>

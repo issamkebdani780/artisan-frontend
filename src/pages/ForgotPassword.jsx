@@ -120,7 +120,7 @@ const ForgotPassword = () => {
                   onChange={(e) => setNewPassword(e.target.value)}
                   required
                   className="w-full bg-slate-100 border-2 border-transparent rounded-xl py-4 px-4 focus:bg-white focus:border-blue-500 transition-all outline-none"
-                  placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢"
+                  placeholder="••••••••"
                 />
               </div>
               <div className="space-y-2">
@@ -131,7 +131,7 @@ const ForgotPassword = () => {
                   onChange={(e) => setConfirmPassword(e.target.value)}
                   required
                   className="w-full bg-slate-100 border-2 border-transparent rounded-xl py-4 px-4 focus:bg-white focus:border-blue-500 transition-all outline-none"
-                  placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢"
+                  placeholder="••••••••"
                 />
               </div>
               <button 

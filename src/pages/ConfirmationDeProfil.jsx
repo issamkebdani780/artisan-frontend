@@ -171,7 +171,7 @@ Enregistré</button>
 </svg>
 <span className="font-black text-slate-900">ArtisanDirect</span>
 </div>
-<p className="text-sm text-slate-500">La plateforme nÂ°1 pour trouver vos artisans locaux.</p>
+<p className="text-sm text-slate-500">La plateforme n°1 pour trouver vos artisans locaux.</p>
 </div>
 <div className="flex gap-8">
 <a className="text-sm text-slate-500 hover:text-primary" href="#">Conditions d'utilisation</a>

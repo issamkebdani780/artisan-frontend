@@ -134,11 +134,11 @@ const CreationDeCompteClientArtisan = () => {
 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
 <div className="flex flex-col gap-2">
 <label className="text-xs font-bold uppercase tracking-wider text-slate-500 ml-1">Mot de passe</label>
-<input className="w-full h-12 px-4 rounded-lg bg-surface-container-high border-none focus:ring-2 theme-color-ring text-on-surface transition-all" placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢" required="" type="password"/>
+<input className="w-full h-12 px-4 rounded-lg bg-surface-container-high border-none focus:ring-2 theme-color-ring text-on-surface transition-all" placeholder="••••••••" required="" type="password"/>
 </div>
 <div className="flex flex-col gap-2">
 <label className="text-xs font-bold uppercase tracking-wider text-slate-500 ml-1">Confirmer</label>
-<input className="w-full h-12 px-4 rounded-lg bg-surface-container-high border-none focus:ring-2 theme-color-ring text-on-surface transition-all" placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢" required="" type="password"/>
+<input className="w-full h-12 px-4 rounded-lg bg-surface-container-high border-none focus:ring-2 theme-color-ring text-on-surface transition-all" placeholder="••••••••" required="" type="password"/>
 </div>
 </div>
 {/*  Password Validation Hints  */}

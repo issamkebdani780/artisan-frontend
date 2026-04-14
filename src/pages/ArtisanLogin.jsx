@@ -99,7 +99,7 @@ const ArtisanLogin = () => {
                     id="password" 
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
-                    placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢" 
+                    placeholder="••••••••••••" 
                     required
                     className="w-full h-[72px] px-6 text-lg text-slate-900 bg-slate-50 border-2 border-transparent rounded-2xl focus:ring-4 focus:ring-orange-500/10 focus:border-orange-500/40 focus:bg-white transition-all duration-300 placeholder:text-slate-400" 
                   />

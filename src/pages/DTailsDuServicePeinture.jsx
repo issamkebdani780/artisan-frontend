@@ -89,7 +89,7 @@ const DTailsDuServicePeinture = () => {
 <div className="flex justify-between items-end mb-8">
 <div>
 <h2 className="text-slate-900 text-3xl font-bold leading-tight">Nos Tarifs et Prestations</h2>
-<p className="text-slate-600 mt-2">Prix estimés par mÂ² incluant la main d'Ã…â€œuvre et le matériel de base.</p>
+<p className="text-slate-600 mt-2">Prix estimés par mÂ² incluant la main d'Ã…"uvre et le matériel de base.</p>
 </div>
 <a className="text-primary font-bold hover:underline hidden md:block" href="#">Voir tout le catalogue</a>
 </div>

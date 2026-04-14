@@ -135,7 +135,7 @@ const InstallationRobinetterie = () => {
 <thead>
 <tr className="bg-slate-50">
 <th className="p-4 text-sm font-bold text-slate-600">Prestation</th>
-<th className="p-4 text-sm font-bold text-slate-600">Main d'Ã…â€œuvre</th>
+<th className="p-4 text-sm font-bold text-slate-600">Main d'Ã…"uvre</th>
 <th className="p-4 text-sm font-bold text-slate-600">Durée estimée</th>
 </tr>
 </thead>
@@ -176,7 +176,7 @@ const InstallationRobinetterie = () => {
 <span className="text-xs font-bold ml-1">4.9 (124 avis)</span>
 </div>
 </div>
-<p className="text-xs text-slate-500">Expert Robinetterie &amp; Sanitaire â€¢ Disponible aujourd'hui</p>
+<p className="text-xs text-slate-500">Expert Robinetterie &amp; Sanitaire • Disponible aujourd'hui</p>
 <div className="flex items-center gap-2 mt-2">
 <span className="text-[10px] bg-slate-100 px-2 py-0.5 rounded">RGE</span>
 <span className="text-[10px] bg-slate-100 px-2 py-0.5 rounded">Garantie Décennale</span>
@@ -193,7 +193,7 @@ const InstallationRobinetterie = () => {
 <span className="text-xs font-bold ml-1">4.8 (89 avis)</span>
 </div>
 </div>
-<p className="text-xs text-slate-500">Spécialiste installation cuisine â€¢ Prochain RDV demain</p>
+<p className="text-xs text-slate-500">Spécialiste installation cuisine • Prochain RDV demain</p>
 <div className="flex items-center gap-2 mt-2">
 <span className="text-[10px] bg-slate-100 px-2 py-0.5 rounded">Qualibat</span>
 </div>

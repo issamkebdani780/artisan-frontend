@@ -174,7 +174,7 @@ const PoseDePapierPeint = () => {
 <span className="material-symbols-outlined text-sm">star</span>
 </div>
 <p className="text-slate-700 italic mb-4">"Travail remarquable. Marc a posé un papier peint panoramique très complexe et le résultat est bluffant. Aucune bulle, raccords invisibles."</p>
-<div className="text-sm font-bold text-slate-900">âDAâ€ Jean-Pierre D.</div>
+<div className="text-sm font-bold text-slate-900">âDA" Jean-Pierre D.</div>
 </div>
 <div className="bg-primary/5 p-6 rounded-2xl border-l-4 border-primary">
 <div className="flex gap-1 mb-3 text-primary">
@@ -185,7 +185,7 @@ const PoseDePapierPeint = () => {
 <span className="material-symbols-outlined text-sm">star</span>
 </div>
 <p className="text-slate-700 italic mb-4">"Service très professionnel et ponctuel. Sophie est une véritable artiste. Mon salon est métamorphosé. Je recommande vivement !"</p>
-<div className="text-sm font-bold text-slate-900">âDAâ€ Claire M.</div>
+<div className="text-sm font-bold text-slate-900">âDA" Claire M.</div>
 </div>
 </div>
 </section>

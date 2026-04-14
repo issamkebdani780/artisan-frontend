@@ -111,17 +111,17 @@ const CrAtionDeCompteClient = () => {
 {/*  Address  */}
 <div className="flex flex-col gap-3">
 <label className="text-xs font-bold uppercase tracking-widest text-slate-400 ml-1">Adresse Détaillée</label>
-<input className="w-full h-14 px-5 rounded-xl bg-surface-container-low border border-slate-100 focus:ring-2 focus:ring-primary/40 focus:border-transparent text-on-surface transition-all" placeholder="NÂ° 45, Rue des Frères, Quartier Central" type="text"/>
+<input className="w-full h-14 px-5 rounded-xl bg-surface-container-low border border-slate-100 focus:ring-2 focus:ring-primary/40 focus:border-transparent text-on-surface transition-all" placeholder="N° 45, Rue des Frères, Quartier Central" type="text"/>
 </div>
 {/*  Password Group  */}
 <div className="grid grid-cols-2 gap-8">
 <div className="flex flex-col gap-3">
 <label className="text-xs font-bold uppercase tracking-widest text-slate-400 ml-1">Mot de passe</label>
-<input className="w-full h-14 px-5 rounded-xl bg-surface-container-low border border-slate-100 focus:ring-2 focus:ring-primary/40 focus:border-transparent text-on-surface transition-all" placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢" type="password"/>
+<input className="w-full h-14 px-5 rounded-xl bg-surface-container-low border border-slate-100 focus:ring-2 focus:ring-primary/40 focus:border-transparent text-on-surface transition-all" placeholder="••••••••" type="password"/>
 </div>
 <div className="flex flex-col gap-3">
 <label className="text-xs font-bold uppercase tracking-widest text-slate-400 ml-1">Confirmer</label>
-<input className="w-full h-14 px-5 rounded-xl bg-surface-container-low border border-slate-100 focus:ring-2 focus:ring-primary/40 focus:border-transparent text-on-surface transition-all" placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢" type="password"/>
+<input className="w-full h-14 px-5 rounded-xl bg-surface-container-low border border-slate-100 focus:ring-2 focus:ring-primary/40 focus:border-transparent text-on-surface transition-all" placeholder="••••••••" type="password"/>
 </div>
 </div>
 {/*  Password Requirements  */}

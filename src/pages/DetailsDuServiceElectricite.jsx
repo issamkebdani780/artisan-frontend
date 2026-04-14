@@ -277,7 +277,7 @@ const DetailsDuServiceElectricite = () => {
 <span className="material-symbols-outlined">lightbulb</span>
 <span className="font-bold text-lg text-slate-900">ArtisanPro</span>
 </div>
-<p className="text-sm text-slate-500 leading-relaxed">Le réseau nÂ°1 d'électriciens experts pour vos besoins domestiques et professionnels.</p>
+<p className="text-sm text-slate-500 leading-relaxed">Le réseau n°1 d'électriciens experts pour vos besoins domestiques et professionnels.</p>
 </div>
 <div>
 <h4 className="font-bold mb-4">Services</h4>

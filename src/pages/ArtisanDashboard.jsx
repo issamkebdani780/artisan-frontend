@@ -266,7 +266,7 @@ const ArtisanDashboard = () => {
                           <span className="font-black text-slate-900 uppercase tracking-tight text-sm">{booking.service_title}</span>
                           <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest flex items-center gap-1.5">
                             <span className="material-symbols-outlined text-xs">account_circle</span>
-                            {booking.client_name} {booking.client_phone ? `â€¢ ${booking.client_phone}` : ''}
+                            {booking.client_name} {booking.client_phone ? `• ${booking.client_phone}` : ''}
                           </span>
                         </div>
                       </td>

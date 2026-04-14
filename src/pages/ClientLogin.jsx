@@ -78,7 +78,7 @@ const ClientLogin = () => {
                   type="password" 
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢" 
+                  placeholder="••••••••" 
                   required
                   className="w-full bg-slate-100 border-2 border-transparent rounded-xl py-5 pl-14 pr-6 text-lg text-slate-900 focus:ring-0 focus:border-blue-500 focus:bg-white transition-all outline-none" 
                 />
