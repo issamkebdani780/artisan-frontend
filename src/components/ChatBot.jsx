@@ -8,6 +8,7 @@ const ChatBot = () => {
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [context, setContext] = useState("");
+  
   const messagesEndRef = useRef(null);
   const user = apiService.getCurrentUser();
 
