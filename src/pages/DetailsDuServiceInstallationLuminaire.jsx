@@ -48,7 +48,7 @@ const DetailsDuServiceInstallationLuminaire = () => {
 {/*  CTA & Pricing Quick Stats  */}
 <div className="flex flex-wrap justify-between items-center gap-6 p-6 bg-white rounded-xl mt-6 border border-slate-100 shadow-sm">
 <div className="flex flex-col gap-1">
-<p className="text-slate-900 text-2xl font-bold">Ã€ partir de 45â‚¬ <span className="text-sm font-normal text-slate-500">/ luminaire</span></p>
+<p className="text-slate-900 text-2xl font-bold">À partir de 45â‚¬ <span className="text-sm font-normal text-slate-500">/ luminaire</span></p>
 <div className="flex items-center gap-2">
 <span className="material-symbols-outlined text-primary text-sm">verified_user</span>
 <p className="text-slate-600 text-sm">Assurance responsabilité civile incluse</p>
@@ -108,7 +108,7 @@ const DetailsDuServiceInstallationLuminaire = () => {
 <span className="material-symbols-outlined">settings_input_component</span>
 </div>
 <div>
-<h3 className="text-lg font-bold mb-1">Ã‰clairage Connecté</h3>
+<h3 className="text-lg font-bold mb-1">Éclairage Connecté</h3>
 <p className="text-slate-600 text-sm">Configuration de systèmes Philips Hue, Lutron ou autres solutions domotiques.</p>
 </div>
 </div>
@@ -117,7 +117,7 @@ const DetailsDuServiceInstallationLuminaire = () => {
 <span className="material-symbols-outlined">outdoor_grill</span>
 </div>
 <div>
-<h3 className="text-lg font-bold mb-1">Ã‰clairage Extérieur</h3>
+<h3 className="text-lg font-bold mb-1">Éclairage Extérieur</h3>
 <p className="text-slate-600 text-sm">Installation étanche (norme IP65/67) pour jardins, terrasses et façades.</p>
 </div>
 </div>
@@ -159,7 +159,7 @@ const DetailsDuServiceInstallationLuminaire = () => {
 <section className="py-8">
 <div className="flex justify-between items-end mb-8">
 <div>
-<h2 className="text-slate-900 text-3xl font-bold">Nos Ã‰lectriciens Certifiés</h2>
+<h2 className="text-slate-900 text-3xl font-bold">Nos Électriciens Certifiés</h2>
 <p className="text-slate-600 mt-2">Des experts passionnés près de chez vous.</p>
 </div>
 <button className="text-primary font-bold text-sm flex items-center gap-2">
@@ -174,7 +174,7 @@ const DetailsDuServiceInstallationLuminaire = () => {
 <div className="flex justify-between items-start mb-2">
 <h3 className="font-bold text-lg">Thomas Morel</h3>
 <div className="flex items-center gap-1 bg-green-100 text-green-700 px-2 py-0.5 rounded text-xs font-bold">
-<span className="material-symbols-outlined text-xs">verified</span> VÃ‰RIFIÃ‰
+<span className="material-symbols-outlined text-xs">verified</span> VÉRIFIÉ
                                         </div>
 </div>
 <p className="text-slate-500 text-sm mb-4">Expert en éclairage LED &amp; Domotique</p>
@@ -196,7 +196,7 @@ const DetailsDuServiceInstallationLuminaire = () => {
 <div className="flex justify-between items-start mb-2">
 <h3 className="font-bold text-lg">Sami Benali</h3>
 <div className="flex items-center gap-1 bg-green-100 text-green-700 px-2 py-0.5 rounded text-xs font-bold">
-<span className="material-symbols-outlined text-xs">verified</span> VÃ‰RIFIÃ‰
+<span className="material-symbols-outlined text-xs">verified</span> VÉRIFIÉ
                                         </div>
 </div>
 <p className="text-slate-500 text-sm mb-4">Spécialiste Lustres &amp; Haute-Tension</p>
@@ -218,7 +218,7 @@ const DetailsDuServiceInstallationLuminaire = () => {
 <div className="flex justify-between items-start mb-2">
 <h3 className="font-bold text-lg">Nicolas Dubois</h3>
 <div className="flex items-center gap-1 bg-green-100 text-green-700 px-2 py-0.5 rounded text-xs font-bold">
-<span className="material-symbols-outlined text-xs">verified</span> VÃ‰RIFIÃ‰
+<span className="material-symbols-outlined text-xs">verified</span> VÉRIFIÉ
                                         </div>
 </div>
 <p className="text-slate-500 text-sm mb-4">Installation Tertiaire &amp; Habitat</p>
@@ -317,7 +317,7 @@ const DetailsDuServiceInstallationLuminaire = () => {
 </div>
 </div>
 <div className="max-w-[1024px] mx-auto mt-12 pt-8 border-t border-slate-100 text-center text-xs text-slate-400">
-                    Â© 2024 LuxEclair Pro. Tous droits réservés.
+                    © 2024 LuxEclair Pro. Tous droits réservés.
                 </div>
 </footer>
 </div>

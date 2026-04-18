@@ -84,7 +84,7 @@ const ServiceDetailsDemenagement = () => {
 <span className="material-symbols-outlined">local_shipping</span>
 </div>
 <h3 className="text-lg font-bold text-slate-900">Transport local</h3>
-<p className="mt-2 text-sm text-slate-600 leading-relaxed">Solution optimale pour vos déménagements en ville ou dans la mÃªme région.</p>
+<p className="mt-2 text-sm text-slate-600 leading-relaxed">Solution optimale pour vos déménagements en ville ou dans la même région.</p>
 </div>
 <div className="group relative overflow-hidden rounded-xl bg-white border border-slate-200 p-6 transition-all hover:shadow-lg">
 <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
@@ -119,7 +119,7 @@ const ServiceDetailsDemenagement = () => {
 <span className="material-symbols-outlined text-primary mt-1">check_circle</span>
 <div>
 <h4 className="font-bold">Expertise Certifiée</h4>
-<p className="text-sm text-slate-400">Ã‰quipe formée aux dernières techniques de manutention.</p>
+<p className="text-sm text-slate-400">Équipe formée aux dernières techniques de manutention.</p>
 </div>
 </li>
 <li className="flex items-start gap-3">
@@ -244,7 +244,7 @@ const ServiceDetailsDemenagement = () => {
 <div>
 <h5 className="font-bold text-sm uppercase tracking-wider text-slate-900 mb-4">Entreprise</h5>
 <ul className="space-y-2 text-sm text-slate-500">
-<li><a className="hover:text-primary" href="#">Ã€ propos</a></li>
+<li><a className="hover:text-primary" href="#">À propos</a></li>
 <li><a className="hover:text-primary" href="#">Recrutement</a></li>
 <li><a className="hover:text-primary" href="#">Nos engagements</a></li>
 </ul>
@@ -267,7 +267,7 @@ const ServiceDetailsDemenagement = () => {
 </div>
 </div>
 <div className="mt-12 pt-8 border-t border-slate-100 text-center text-sm text-slate-400">
-                Â© 2024 Déménagement Pro. Tous droits réservés.
+                © 2024 Déménagement Pro. Tous droits réservés.
             </div>
 </div>
 </footer>

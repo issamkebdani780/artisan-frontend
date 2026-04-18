@@ -341,8 +341,8 @@ const ClientRegister = () => {
 
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-3 max-h-[300px] overflow-y-auto pr-2 custom-scrollbar p-1">
                         {[
-                          { group: "Bâtiment", options: ["Plomberie", "Ã‰lectricité", "Peinture", "Maçonnerie", "Menuiserie", "Déménagement"] },
-                          { group: "Extérieur", options: ["Jardinage", "Ã‰tanchéité", "Clôture", "Nettoyage façade"] },
+                          { group: "Bâtiment", options: ["Plomberie", "Électricité", "Peinture", "Maçonnerie", "Menuiserie", "Déménagement"] },
+                          { group: "Extérieur", options: ["Jardinage", "Étanchéité", "Clôture", "Nettoyage façade"] },
                           { group: "Autre", options: ["Mécanique", "Serrurerie", "Vitrerie", "Climatisation"] }
                         ].map((group, idx) => (
                           <div key={idx} className="space-y-2">

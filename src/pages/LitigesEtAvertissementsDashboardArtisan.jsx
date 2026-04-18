@@ -155,7 +155,7 @@ const LitigesEtAvertissementsDashboardArtisan = () => {
 <td className="px-6 py-5">
 <div className="flex flex-col">
 <span className="font-semibold text-slate-900">Marie Curie</span>
-<span className="text-xs text-primary font-medium italic">Table en chÃªne massif</span>
+<span className="text-xs text-primary font-medium italic">Table en chêne massif</span>
 </div>
 </td>
 <td className="px-6 py-5">
@@ -183,7 +183,7 @@ const LitigesEtAvertissementsDashboardArtisan = () => {
 <td className="px-6 py-5">
 <div className="flex flex-col">
 <span className="font-semibold text-slate-900">Lucas Martin</span>
-<span className="text-xs text-primary font-medium italic">Ã‰tagères sur mesure</span>
+<span className="text-xs text-primary font-medium italic">Étagères sur mesure</span>
 </div>
 </td>
 <td className="px-6 py-5">

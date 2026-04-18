@@ -16,7 +16,7 @@ const ReparationDeFuites = () => {
 <a className="text-slate-700 text-sm font-medium hover:text-primary transition-colors" href="#">Services</a>
 <a className="text-slate-700 text-sm font-medium hover:text-primary transition-colors" href="#">Urgence</a>
 <a className="text-slate-700 text-sm font-medium hover:text-primary transition-colors" href="#">Tarifs</a>
-<a className="text-slate-700 text-sm font-medium hover:text-primary transition-colors" href="#">Ã€ Propos</a>
+<a className="text-slate-700 text-sm font-medium hover:text-primary transition-colors" href="#">À Propos</a>
 </nav>
 <div className="flex items-center gap-4">
 <button className="flex min-w-[100px] cursor-pointer items-center justify-center rounded-lg h-10 px-5 bg-primary text-white text-sm font-bold shadow-sm hover:bg-primary/90 transition-all">
@@ -106,7 +106,7 @@ const ReparationDeFuites = () => {
 <div className="grid md:grid-cols-2 gap-8">
 <div className="space-y-4">
 <p className="text-slate-600 leading-relaxed">
-                                Une fuite d'eau non traitée peut causer des dommages structurels importants et une augmentation drastique de votre facture d'eau. Nos techniciens interviennent avec un équipement de pointe pour localiser et réparer toute fuite, mÃªme invisible.
+                                Une fuite d'eau non traitée peut causer des dommages structurels importants et une augmentation drastique de votre facture d'eau. Nos techniciens interviennent avec un équipement de pointe pour localiser et réparer toute fuite, même invisible.
                             </p>
 <ul className="space-y-3">
 <li className="flex items-start gap-3 text-slate-700">
@@ -130,7 +130,7 @@ const ReparationDeFuites = () => {
 </div>
 <div>
 <p className="font-bold text-slate-900">Délai d'intervention</p>
-<p className="text-sm text-slate-500">Moyenne constatée en ÃŽle-de-France</p>
+<p className="text-sm text-slate-500">Moyenne constatée en Île-de-France</p>
 </div>
 </div>
 <div className="text-4xl font-black text-primary">28 min</div>
@@ -146,7 +146,7 @@ const ReparationDeFuites = () => {
                     </h3>
 <div className="grid md:grid-cols-3 gap-6">
 <div className="p-6 rounded-xl border border-slate-100 hover:border-primary transition-all">
-<p className="text-sm font-medium text-slate-500 uppercase tracking-widest">Main d'Ã…"uvre</p>
+<p className="text-sm font-medium text-slate-500 uppercase tracking-widest">Main d'Å"uvre</p>
 <div className="flex items-baseline gap-1 mt-2">
 <span className="text-3xl font-black text-slate-900">65â‚¬</span>
 <span className="text-slate-500">/heure</span>
@@ -227,7 +227,7 @@ const ReparationDeFuites = () => {
                                 <span className="material-symbols-outlined text-slate-400 group-hover:text-primary">expand_more</span>
 </button>
 <p className="mt-2 text-slate-600 text-sm leading-relaxed">
-                                Localisez votre vanne d'arrÃªt générale, généralement située près du compteur d'eau ou sous l'évier de la cuisine. Tournez-la dans le sens des aiguilles d'une montre pour couper l'alimentation.
+                                Localisez votre vanne d'arrêt générale, généralement située près du compteur d'eau ou sous l'évier de la cuisine. Tournez-la dans le sens des aiguilles d'une montre pour couper l'alimentation.
                             </p>
 </div>
 <div className="border-b border-slate-100 pb-4">
@@ -236,7 +236,7 @@ const ReparationDeFuites = () => {
                                 <span className="material-symbols-outlined text-slate-400 group-hover:text-primary">expand_more</span>
 </button>
 <p className="mt-2 text-slate-600 text-sm leading-relaxed">
-                                Oui, toutes nos réparations de fuites sont couvertes par une garantie pièces et main d'Ã…"uvre de 2 ans, en plus de l'assurance décennale obligatoire.
+                                Oui, toutes nos réparations de fuites sont couvertes par une garantie pièces et main d'Å"uvre de 2 ans, en plus de l'assurance décennale obligatoire.
                             </p>
 </div>
 <div className="pb-2">
@@ -291,7 +291,7 @@ const ReparationDeFuites = () => {
 </div>
 </div>
 <div className="max-w-[1280px] mx-auto mt-12 pt-8 border-t border-slate-800 text-xs flex flex-col md:flex-row justify-between gap-4">
-<p>Â© 2024 PlumbMaster Pro. Tous droits réservés.</p>
+<p>© 2024 PlumbMaster Pro. Tous droits réservés.</p>
 <div className="flex gap-6">
 <a className="hover:text-white" href="#">Mentions Légales</a>
 <a className="hover:text-white" href="#">CGV</a>

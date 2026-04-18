@@ -158,7 +158,7 @@ const AccueilTableauDeBordArtisan = () => {
 <img alt="Mission" className="w-full h-full object-cover" data-alt="Electrical wiring maintenance" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHyJmuHXj1suDm4lF9QUdZzfGj9nkb7YOYyopISV11l21Z_HmQY6fm3n1NqcwmBB3LVmofsv3pDymbpXU6k1b-0_Wp8tnhH6CMBroiEW2TTohF8JRGeCwjtWWmJIjIvA8X4-V0vdrRi6YS_ovoisbhSqkzBffjTke4BGb6ts-3IK5rSOJZcLVR8W2tXnKSmNX2BoDeCZEw9eA4ysST7jiaftQOMYHJLgqZoylCb4f5YRHFx25qSSojAfvWQH8mQpq2gg4PqSckwaIm"/>
 </div>
 <div className="flex-1">
-<h4 className="font-bold text-slate-900">Installation Ã‰lectrique Bureau</h4>
+<h4 className="font-bold text-slate-900">Installation Électrique Bureau</h4>
 <p className="text-sm text-slate-500">Client: SARL Tech • 09 Oct 2023</p>
 </div>
 <div className="text-right">

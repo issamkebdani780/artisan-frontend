@@ -115,7 +115,7 @@ const ServiceDetailsInstallationRobinetterie = () => {
 <div className="text-3xl font-black mb-2">Sur Devis</div>
 <p className="text-xs text-slate-400 mb-6">Réponse sous 2 heures</p>
 <ul className="space-y-3 mb-8 text-sm">
-<li className="flex items-center gap-2"><span className="material-symbols-outlined text-green-500 text-sm">check_circle</span> Ã‰tude de faisabilité</li>
+<li className="flex items-center gap-2"><span className="material-symbols-outlined text-green-500 text-sm">check_circle</span> Étude de faisabilité</li>
 <li className="flex items-center gap-2"><span className="material-symbols-outlined text-green-500 text-sm">check_circle</span> Matériel spécifique</li>
 <li className="flex items-center gap-2"><span className="material-symbols-outlined text-green-500 text-sm">check_circle</span> Finition luxe</li>
 </ul>
@@ -249,7 +249,7 @@ const ServiceDetailsInstallationRobinetterie = () => {
                         <span className="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
 </summary>
 <div className="px-6 pb-6 text-slate-600">
-                        Nous pouvons faire les deux ! Vous pouvez acheter votre robinet vous-mÃªme, ou nous pouvons vous proposer une sélection de modèles de haute qualité issus de nos partenaires (Grohe, Hansgrohe, Jacob Delafon) avec une remise professionnelle.
+                        Nous pouvons faire les deux ! Vous pouvez acheter votre robinet vous-même, ou nous pouvons vous proposer une sélection de modèles de haute qualité issus de nos partenaires (Grohe, Hansgrohe, Jacob Delafon) avec une remise professionnelle.
                     </div>
 </details>
 <details className="group bg-white border border-slate-200 rounded-xl overflow-hidden">
@@ -267,7 +267,7 @@ const ServiceDetailsInstallationRobinetterie = () => {
 <section className="bg-primary rounded-3xl p-10 text-center text-white relative overflow-hidden">
 <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -mr-32 -mt-32"></div>
 <div className="absolute bottom-0 left-0 w-48 h-48 bg-black/10 rounded-full -ml-24 -mb-24"></div>
-<h3 className="text-3xl font-black mb-4 relative z-10">PrÃªt à rénover votre robinetterie ?</h3>
+<h3 className="text-3xl font-black mb-4 relative z-10">Prêt à rénover votre robinetterie ?</h3>
 <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto relative z-10">Prenez rendez-vous en ligne en moins de 2 minutes et profitez d'une installation parfaite.</p>
 <div className="flex flex-col sm:flex-row gap-4 justify-center relative z-10">
 <button className="bg-white text-primary px-10 py-4 rounded-xl font-bold text-lg hover:bg-slate-100 transition-colors">Réserver maintenant</button>
@@ -283,7 +283,7 @@ const ServiceDetailsInstallationRobinetterie = () => {
 <span className="material-symbols-outlined text-primary">plumbing</span>
 <span className="text-xl font-bold">PlumbExpert</span>
 </div>
-<p className="max-w-md">Le réseau n°1 des experts en plomberie à Paris et en ÃŽle-de-France. Disponibilité 24/7 pour vos urgences et projets d'installation.</p>
+<p className="max-w-md">Le réseau n°1 des experts en plomberie à Paris et en Île-de-France. Disponibilité 24/7 pour vos urgences et projets d'installation.</p>
 </div>
 <div>
 <h6 className="text-white font-bold mb-6">Navigation</h6>
@@ -304,7 +304,7 @@ const ServiceDetailsInstallationRobinetterie = () => {
 </div>
 </div>
 <div className="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
-<p>Â© 2024 PlumbExpert. Tous droits réservés.</p>
+<p>© 2024 PlumbExpert. Tous droits réservés.</p>
 <div className="flex gap-6">
 <a className="hover:text-white transition-colors" href="#">Facebook</a>
 <a className="hover:text-white transition-colors" href="#">Instagram</a>

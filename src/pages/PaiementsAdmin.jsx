@@ -130,7 +130,7 @@ const PaiementsAdmin = () => {
               <span className="text-xs text-slate-400 font-bold uppercase tracking-widest">En attente</span>
             </div>
             <div className="mt-8 flex justify-between items-center opacity-40 group-hover:opacity-100 transition-all">
-              <p className="text-[10px] font-bold text-slate-400">PRÃŠT POUR AUDIT</p>
+              <p className="text-[10px] font-bold text-slate-400">PRÊT POUR AUDIT</p>
               <div className="size-10 rounded-xl bg-amber-50 flex items-center justify-center text-amber-600">
                 <span className="material-symbols-outlined">hourglass_empty</span>
               </div>
@@ -138,13 +138,13 @@ const PaiementsAdmin = () => {
           </div>
 
           <div className="bg-white p-8 rounded-[2.5rem] shadow-xl shadow-slate-200/50 border border-white/50 relative overflow-hidden group">
-            <p className="text-[10px] font-black tracking-widest text-slate-400 uppercase mb-4">FIABILITÃ‰ DU RÃ‰SEAU</p>
+            <p className="text-[10px] font-black tracking-widest text-slate-400 uppercase mb-4">FIABILITÉ DU RÉSEAU</p>
             <div className="flex items-baseline gap-4">
               <h3 className="text-4xl font-black tracking-tighter text-slate-900">{stats.successRate}%</h3>
               <span className="text-xs text-slate-400 font-bold uppercase tracking-widest">Global</span>
             </div>
             <div className="mt-8 flex justify-between items-center opacity-40 group-hover:opacity-100 transition-all">
-              <p className="text-[10px] font-bold text-slate-400">STABILITÃ‰ OPÃ‰RATIONNELLE</p>
+              <p className="text-[10px] font-bold text-slate-400">STABILITÉ OPÉRATIONNELLE</p>
               <div className="size-10 rounded-xl bg-emerald-50 flex items-center justify-center text-emerald-600">
                 <span className="material-symbols-outlined">verified</span>
               </div>

@@ -74,9 +74,9 @@ const TransportDObjetsLourds = () => {
 <span className="material-symbols-outlined text-3xl">construction</span>
 </div>
 <div>
-<h3 className="font-bold text-lg mb-2">Ã‰quipement spécialisé</h3>
+<h3 className="font-bold text-lg mb-2">Équipement spécialisé</h3>
 <p className="text-slate-600 text-sm leading-relaxed">
-                                        Nous utilisons des chariots élévateurs haute performance, des sangles de levage professionnelles et des grues de fenÃªtre si nécessaire.
+                                        Nous utilisons des chariots élévateurs haute performance, des sangles de levage professionnelles et des grues de fenêtre si nécessaire.
                                     </p>
 </div>
 </div>
@@ -128,17 +128,17 @@ const TransportDObjetsLourds = () => {
 <tbody className="divide-y divide-slate-200">
 <tr>
 <td className="px-6 py-4 font-medium">Piano Droit</td>
-<td className="px-6 py-4 text-primary font-bold">Ã€ partir de 150â‚¬</td>
+<td className="px-6 py-4 text-primary font-bold">À partir de 150â‚¬</td>
 <td className="px-6 py-4 text-sm text-slate-500">Protection housse incluse</td>
 </tr>
 <tr>
 <td className="px-6 py-4 font-medium">Piano à Queue</td>
-<td className="px-6 py-4 text-primary font-bold">Ã€ partir de 350â‚¬</td>
+<td className="px-6 py-4 text-primary font-bold">À partir de 350â‚¬</td>
 <td className="px-6 py-4 text-sm text-slate-500">Démontage lyre et pieds</td>
 </tr>
 <tr>
 <td className="px-6 py-4 font-medium">Coffre-fort (&lt; 200kg)</td>
-<td className="px-6 py-4 text-primary font-bold">Ã€ partir de 200â‚¬</td>
+<td className="px-6 py-4 text-primary font-bold">À partir de 200â‚¬</td>
 <td className="px-6 py-4 text-sm text-slate-500">Ancrage possible sur demande</td>
 </tr>
 </tbody>
@@ -183,7 +183,7 @@ const TransportDObjetsLourds = () => {
 </div>
 </div>
 <div className="border-t border-slate-200 mt-10 pt-6 text-center text-xs text-slate-400">
-                    Â© 2024 TransportLourd SAS. Tous droits réservés. Mentions Légales | Politique de Confidentialité
+                    © 2024 TransportLourd SAS. Tous droits réservés. Mentions Légales | Politique de Confidentialité
                 </div>
 </footer>
 </div>

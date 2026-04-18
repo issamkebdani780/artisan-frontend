@@ -206,7 +206,7 @@ const ServiceMenage = () => {
 <div>
 <h4 className="text-white font-bold mb-6">Entreprise</h4>
 <ul className="space-y-3 text-sm">
-<li><a className="hover:text-primary transition-colors" href="#">Ã€ propos</a></li>
+<li><a className="hover:text-primary transition-colors" href="#">À propos</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Nos tarifs</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Recrutement</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">FAQ</a></li>
@@ -228,7 +228,7 @@ const ServiceMenage = () => {
 </div>
 </div>
 <div className="border-t border-slate-800 mt-12 pt-8 text-center text-xs">
-                    Â© 2024 Ménage Inc. Tous droits réservés.
+                    © 2024 Ménage Inc. Tous droits réservés.
                 </div>
 </footer>
 </div>

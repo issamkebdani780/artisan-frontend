@@ -178,7 +178,7 @@ const Parametres = () => {
 </div>
 {/*  Footer  */}
 <footer className="mt-auto border-t border-slate-200 bg-white py-6 px-8 flex justify-between items-center text-xs text-slate-500">
-<p>Â© 2024 Purple Edition - Plateforme d'Administration</p>
+<p>© 2024 Purple Edition - Plateforme d'Administration</p>
 <div className="flex gap-6">
 <a className="hover:text-primary" href="#">Conditions d'utilisation</a>
 <a className="hover:text-primary" href="#">Confidentialité</a>

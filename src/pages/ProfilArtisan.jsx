@@ -8,7 +8,7 @@ const specialtyToCategoryMap = {
   'Menuiserie': 'Menuiserie et Bois',
   'Soudure': 'Ferronnerie et Soudure',
   'Plomberie': 'Plomberie et Réseaux',
-  'Ã‰lectricité': 'Ã‰lectricité et Ã‰nergie',
+  'Électricité': 'Électricité et Énergie',
   'Peinture': 'Peinture et Plâtre',
   'Maçonnerie': 'Maçonnerie et Finitions',
   'Mécanique': 'Mécanique et Machines',
@@ -18,9 +18,9 @@ const specialtyOptionToGroup = {
   'Menuisier ébéniste': 'Menuiserie', 'Menuisier de chantier': 'Menuiserie', 'Presseur de bois': 'Menuiserie', 'Décorateur bois': 'Menuiserie', 'Fabricant ouvertures bois': 'Menuiserie',
   "Ferronnier d'art": 'Soudure', 'Soudeur arc/argon': 'Soudure', 'Chaudronnier': 'Soudure', 'Soudeur carrosserie': 'Soudure',
   'Plombier sanitaire': 'Plomberie', 'Chauffage central': 'Plomberie', 'Monteur gaz': 'Plomberie', 'Tuyauterie cuivre/PER': 'Plomberie',
-  'Ã‰lectricien bâtiment': 'Ã‰lectricité', 'Ã‰lectricien industriel': 'Ã‰lectricité', 'Technicien solaire': 'Ã‰lectricité', 'Tireur de câbles': 'Ã‰lectricité',
+  'Électricien bâtiment': 'Électricité', 'Électricien industriel': 'Électricité', 'Technicien solaire': 'Électricité', 'Tireur de câbles': 'Électricité',
   'Peintre décorateur': 'Peinture', 'Peintre automobile': 'Peinture', 'Plâtrier staffeur': 'Peinture', 'Marbrier': 'Peinture', 'Vernisseur': 'Peinture',
-  'Maçon brique': 'Maçonnerie', 'Carreleur': 'Maçonnerie', 'Crépisseur': 'Maçonnerie', 'Ã‰tanchéité': 'Maçonnerie', 'Rénovation': 'Maçonnerie',
+  'Maçon brique': 'Maçonnerie', 'Carreleur': 'Maçonnerie', 'Crépisseur': 'Maçonnerie', 'Étanchéité': 'Maçonnerie', 'Rénovation': 'Maçonnerie',
   'Mécanicien auto': 'Mécanique', 'Mécanicien moto': 'Mécanique', 'Moteurs électriques': 'Mécanique', 'Mécanicien agricole': 'Mécanique',
 };
 
@@ -285,7 +285,7 @@ const ProfilArtisan = () => {
                         <button 
                           onClick={() => {
                             if (!currentUser) {
-                              if (window.confirm("Vous devez Ãªtre connecté pour envoyer un message. Se connecter ?")) {
+                              if (window.confirm("Vous devez être connecté pour envoyer un message. Se connecter ?")) {
                                 navigate('/login/client');
                               }
                               return;
@@ -355,7 +355,7 @@ const ProfilArtisan = () => {
             <div className="flex items-center gap-4">
               <img src={logo} alt="Mihnati" className="h-10 w-auto object-contain bg-white rounded-xl p-1" />
               <div className="h-8 w-px bg-slate-100 hidden md:block"></div>
-              <p className="text-slate-400 text-xs font-bold tracking-tight transition-colors">Le réseau des experts de confiance. Â© 2026 Mihnati.</p>
+              <p className="text-slate-400 text-xs font-bold tracking-tight transition-colors">Le réseau des experts de confiance. © 2026 Mihnati.</p>
             </div>
             <div className="flex gap-6">
               {['Accueil', 'Expertise', 'Aide', 'Confidentialité'].map((link) => (

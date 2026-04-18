@@ -121,7 +121,7 @@ const FournirUneExplication = () => {
 </div>
 </main>
 <footer className="bg-white border-t border-slate-200 py-6 px-6 text-center text-xs text-slate-400 uppercase tracking-widest">
-            Â© 2024 ArtisanDirect - Plateforme Professionnelle de Confiance
+            © 2024 ArtisanDirect - Plateforme Professionnelle de Confiance
         </footer>
 </div>
 

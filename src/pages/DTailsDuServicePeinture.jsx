@@ -89,7 +89,7 @@ const DTailsDuServicePeinture = () => {
 <div className="flex justify-between items-end mb-8">
 <div>
 <h2 className="text-slate-900 text-3xl font-bold leading-tight">Nos Tarifs et Prestations</h2>
-<p className="text-slate-600 mt-2">Prix estimés par mÂ² incluant la main d'Ã…"uvre et le matériel de base.</p>
+<p className="text-slate-600 mt-2">Prix estimés par mÂ² incluant la main d'Å"uvre et le matériel de base.</p>
 </div>
 <a className="text-primary font-bold hover:underline hidden md:block" href="#">Voir tout le catalogue</a>
 </div>
@@ -218,7 +218,7 @@ const DTailsDuServicePeinture = () => {
 <span className="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
 </summary>
 <div className="p-6 pt-0 text-slate-600 border-t border-slate-100">
-                                Le tarif par mÂ² inclut la peinture blanche standard pour les sous-couches. Pour les couleurs spécifiques, vous pouvez soit les fournir vous-mÃªme, soit demander à l'expert de les acheter pour vous (un supplément s'appliquera alors selon le prix de la peinture choisie).
+                                Le tarif par mÂ² inclut la peinture blanche standard pour les sous-couches. Pour les couleurs spécifiques, vous pouvez soit les fournir vous-même, soit demander à l'expert de les acheter pour vous (un supplément s'appliquera alors selon le prix de la peinture choisie).
                             </div>
 </details>
 <details className="group border border-slate-200 rounded-xl bg-white overflow-hidden">
@@ -258,7 +258,7 @@ const DTailsDuServicePeinture = () => {
 <div>
 <h4 className="font-bold mb-4">Entreprise</h4>
 <ul className="space-y-2 text-sm text-slate-500">
-<li><a className="hover:text-primary transition-colors" href="#">Ã€ propos</a></li>
+<li><a className="hover:text-primary transition-colors" href="#">À propos</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Notre équipe</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Avis clients</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Contact</a></li>
@@ -281,7 +281,7 @@ const DTailsDuServicePeinture = () => {
 </div>
 </div>
 <div className="pt-8 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-400">
-<p>Â© 2024 Services de Peinture SAS. Tous droits réservés.</p>
+<p>© 2024 Services de Peinture SAS. Tous droits réservés.</p>
 <div className="flex gap-6">
 <a className="hover:text-slate-600" href="#">Confidentialité</a>
 <a className="hover:text-slate-600" href="#">Conditions d'utilisation</a>

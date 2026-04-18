@@ -178,7 +178,7 @@ Enregistré</button>
 <a className="text-sm text-slate-500 hover:text-primary" href="#">Confidentialité</a>
 <a className="text-sm text-slate-500 hover:text-primary" href="#">Support</a>
 </div>
-<p className="text-sm text-slate-500">Â© 2024 ArtisanDirect Inc.</p>
+<p className="text-sm text-slate-500">© 2024 ArtisanDirect Inc.</p>
 </div>
 </footer>
 </div>

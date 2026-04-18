@@ -262,7 +262,7 @@ const ListeDesRecoursAdminstr = () => {
 </div>
 </div>
 <div className="mt-12 pt-8 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-400">
-<p>Â© 2023 ArtisanDirect. Tous droits réservés.</p>
+<p>© 2023 ArtisanDirect. Tous droits réservés.</p>
 <div className="flex gap-6">
 <a className="hover:text-primary transition-colors" href="#">Confidentialité</a>
 <a className="hover:text-primary transition-colors" href="#">CGU</a>

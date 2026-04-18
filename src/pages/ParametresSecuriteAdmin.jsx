@@ -151,7 +151,7 @@ const ParametresSecuriteAdmin = () => {
 <span className="material-symbols-outlined text-slate-400">laptop_mac</span>
 <div>
 <p className="text-sm font-bold">MacBook Pro - Chrome</p>
-<p className="text-xs text-slate-500">Paris, France • En ce moment mÃªme</p>
+<p className="text-xs text-slate-500">Paris, France • En ce moment même</p>
 </div>
 </div>
 <span className="text-xs font-bold text-green-500 bg-green-50 px-2 py-1 rounded">Session actuelle</span>
@@ -235,7 +235,7 @@ Enregistrer les modifications
 </div>
 {/*  Footer  */}
 <footer className="mt-12 py-8 border-t border-slate-200 text-center text-slate-400 text-sm">
-<p>Â© 2023 Admin Panel Purple Edition. Tous droits réservés.</p>
+<p>© 2023 Admin Panel Purple Edition. Tous droits réservés.</p>
 <div className="mt-2 flex justify-center gap-4">
 <a className="hover:text-purple-500 transition-colors" href="#">Aide</a>
 <a className="hover:text-purple-500 transition-colors" href="#">Confidentialité</a>

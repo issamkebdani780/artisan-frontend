@@ -99,7 +99,7 @@ const AmenagementPaysager = () => {
 </div>
 <div className="p-5 rounded-xl border border-slate-200 bg-white hover:border-primary transition-colors">
 <span className="material-symbols-outlined text-primary text-3xl mb-3">nature_people</span>
-<h3 className="font-bold mb-2">Approche Ã‰cologique</h3>
+<h3 className="font-bold mb-2">Approche Écologique</h3>
 <p className="text-sm text-slate-500 leading-relaxed">Utilisation de méthodes respectueuses de la biodiversité locale.</p>
 </div>
 </div>
@@ -135,7 +135,7 @@ const AmenagementPaysager = () => {
                                 </h2>
 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 <div className="flex flex-col p-6 rounded-xl border-2 border-slate-100 relative overflow-hidden">
-<h3 className="text-lg font-bold mb-1">Ã‰tude &amp; Plan</h3>
+<h3 className="text-lg font-bold mb-1">Étude &amp; Plan</h3>
 <p className="text-3xl font-black text-primary mb-4">450â‚¬ <span className="text-sm font-normal text-slate-500">/ projet</span></p>
 <ul className="space-y-3 mb-6 flex-1">
 <li className="flex items-start gap-2 text-sm"><span className="material-symbols-outlined text-primary text-lg">check_circle</span> Relevé de terrain précis</li>
@@ -149,7 +149,7 @@ const AmenagementPaysager = () => {
 <h3 className="text-lg font-bold mb-1">Immersion 3D</h3>
 <p className="text-3xl font-black text-primary mb-4">890â‚¬ <span className="text-sm font-normal text-slate-500">/ projet</span></p>
 <ul className="space-y-3 mb-6 flex-1">
-<li className="flex items-start gap-2 text-sm"><span className="material-symbols-outlined text-primary text-lg">check_circle</span> Tout le forfait Ã‰tude &amp; Plan</li>
+<li className="flex items-start gap-2 text-sm"><span className="material-symbols-outlined text-primary text-lg">check_circle</span> Tout le forfait Étude &amp; Plan</li>
 <li className="flex items-start gap-2 text-sm"><span className="material-symbols-outlined text-primary text-lg">check_circle</span> Modélisation 3D réaliste</li>
 <li className="flex items-start gap-2 text-sm"><span className="material-symbols-outlined text-primary text-lg">check_circle</span> Vidéo de visite virtuelle</li>
 </ul>
@@ -185,7 +185,7 @@ const AmenagementPaysager = () => {
 </main>
 {/*  Footer Small  */}
 <footer className="bg-slate-100 border-t border-slate-200 py-8 px-6 text-center">
-<p className="text-slate-500 text-sm">Â© 2024 EcoPaysage. Tous droits réservés. Design pour un aménagement durable.</p>
+<p className="text-slate-500 text-sm">© 2024 EcoPaysage. Tous droits réservés. Design pour un aménagement durable.</p>
 </footer>
 </div>
 </div>

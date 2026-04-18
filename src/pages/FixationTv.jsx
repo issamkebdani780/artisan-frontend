@@ -209,7 +209,7 @@ const FixationTv = () => {
 </div>
 </div>
 <div className="max-w-[1280px] mx-auto px-6 md:px-10 mt-12 pt-8 border-t border-primary/5 text-center text-xs text-slate-400">
-                Â© 2024 Fixation TV Pro. Tous droits réservés.
+                © 2024 Fixation TV Pro. Tous droits réservés.
             </div>
 </footer>
 </div>

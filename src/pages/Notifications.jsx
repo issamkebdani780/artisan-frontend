@@ -156,7 +156,7 @@ const Notifications = () => {
 </div>
 <div className="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
 <div className="flex gap-2 p-1">
-<input className="flex-1 h-9 px-3 text-xs border border-slate-200 bg-white rounded-lg focus:ring-1 focus:ring-primary focus:border-primary transition-all" placeholder="Ã‰crire une réponse rapide..." type="text"/>
+<input className="flex-1 h-9 px-3 text-xs border border-slate-200 bg-white rounded-lg focus:ring-1 focus:ring-primary focus:border-primary transition-all" placeholder="Écrire une réponse rapide..." type="text"/>
 <button className="flex items-center justify-center size-9 rounded-lg border border-slate-200 text-slate-500 hover:text-primary hover:bg-primary/5 transition-all" title="Joindre une image">
 <span className="material-symbols-outlined text-xl">photo_camera</span>
 </button>

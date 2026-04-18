@@ -188,7 +188,7 @@ const PeintureInterieure = () => {
 <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -mr-32 -mt-32 blur-3xl"></div>
 <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/10 rounded-full -ml-32 -mb-32 blur-3xl"></div>
 <div className="relative z-10 max-w-2xl mx-auto">
-<h2 className="text-3xl md:text-4xl font-black mb-6">PrÃªt à transformer votre intérieur ?</h2>
+<h2 className="text-3xl md:text-4xl font-black mb-6">Prêt à transformer votre intérieur ?</h2>
 <p className="text-slate-100 mb-10 text-lg opacity-90">Obtenez un devis gratuit et personnalisé en moins de 2 minutes. Nos experts vous répondent sous 24h.</p>
 <div className="flex flex-col sm:flex-row justify-center gap-4">
 <button className="bg-white text-primary hover:bg-slate-100 font-black py-4 px-10 rounded-xl transition-all shadow-xl shadow-primary/20">Demander mon devis gratuit</button>
@@ -207,7 +207,7 @@ const PeintureInterieure = () => {
 </div>
 </section>
 <footer className="mt-20 py-8 border-t border-primary/10 flex flex-col md:flex-row items-center justify-between gap-4 text-slate-400 text-sm">
-<p>Â© 2024 Services Pro Peinture. Tous droits réservés.</p>
+<p>© 2024 Services Pro Peinture. Tous droits réservés.</p>
 <div className="flex gap-6">
 <a className="hover:text-primary transition-colors" href="#">Mentions légales</a>
 <a className="hover:text-primary transition-colors" href="#">Confidentialité</a>

@@ -168,7 +168,7 @@ const ContacterLArtisanInterfaceDeMessage = () => {
 <img className="h-full w-full object-cover" data-alt="Photo de parquet posé par un artisan" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkDdYR_16ZgMBBjkcrqbfkHynn35x1uDSapkHLUL0GLTE16q5Vi1vjZA7_hSSX4P4O3--eprI8-BkAubz0MFrTPexGv-hQyD7nUx8zlMzykRkrgG4f5Tmhv9ZaMDCFV8THxYJGk1Yxidhs29ZzfDJ4u9f06awlmZvEdcGfcjrF9j9n9TD47M3uCsXHraik5qiV4ffwFX5gG1xdjb76GT4F3dHcpFC-UWsNMXi4K-C3IiUGXb0IVde7li7k0B3ndoIlJLq10HAomNYy"/>
 </div>
 <div className="flex flex-col">
-<p className="text-xs font-bold truncate">Rénovation Parquet ChÃªne</p>
+<p className="text-xs font-bold truncate">Rénovation Parquet Chêne</p>
 <p className="text-[10px] text-slate-500">Terminé il y a 1 semaine</p>
 </div>
 </div>
@@ -185,7 +185,7 @@ const ContacterLArtisanInterfaceDeMessage = () => {
 <span className="material-symbols-outlined text-primary">construction</span>
 <span className="font-bold text-lg">Artisanat</span>
 </div>
-<p className="text-xs text-slate-500">Â© 2024 Artisanat Platform. Tous droits réservés.</p>
+<p className="text-xs text-slate-500">© 2024 Artisanat Platform. Tous droits réservés.</p>
 </div>
 <div className="flex gap-8">
 <a className="text-xs font-medium text-slate-500 hover:text-primary" href="#">Conditions d'utilisation</a>

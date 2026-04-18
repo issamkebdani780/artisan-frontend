@@ -58,7 +58,7 @@ const AdminDashboard = () => {
       const newStats = await apiService.getDetailedStats();
       setStats(newStats);
     } catch (err) {
-      alert('Ã‰chec de la vérification');
+      alert('Échec de la vérification');
     }
   };
   const handleRefuse = async (id) => {
@@ -69,7 +69,7 @@ const AdminDashboard = () => {
       const newStats = await apiService.getDetailedStats();
       setStats(newStats);
     } catch (err) {
-      alert('Ã‰chec du refus');
+      alert('Échec du refus');
     }
   };
 
@@ -121,7 +121,7 @@ const AdminDashboard = () => {
             <div className="flex justify-between items-center mb-10">
               <div>
                 <h3 className="text-2xl font-black text-slate-900 tracking-tight">Analyse de Performance</h3>
-                <p className="text-slate-400 font-medium mt-1">Ã‰volution des revenus sur les 6 derniers mois</p>
+                <p className="text-slate-400 font-medium mt-1">Évolution des revenus sur les 6 derniers mois</p>
               </div>
               <div className="hidden sm:flex gap-2">
                 <span className="px-4 py-2 bg-slate-50 rounded-xl text-[10px] font-black text-slate-400 uppercase tracking-widest border border-slate-100 transition-all cursor-default">

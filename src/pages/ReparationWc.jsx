@@ -225,7 +225,7 @@ const ReparationWc = () => {
 </div>
 </div>
 <div className="max-w-[1200px] mx-auto mt-12 pt-8 border-t border-slate-800 text-center text-xs">
-                    Â© 2024 PlombierExpert. Tous droits réservés.
+                    © 2024 PlombierExpert. Tous droits réservés.
                 </div>
 </footer>
 </div>

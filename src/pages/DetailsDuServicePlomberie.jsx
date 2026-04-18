@@ -90,7 +90,7 @@ const DetailsDuServicePlomberie = () => {
 <div className="p-6 bg-white rounded-xl shadow-sm border border-slate-200">
 <div className="flex justify-between items-start mb-4">
 <h3 className="text-lg font-bold">Réparation de fuite</h3>
-<span className="text-primary font-bold">Ã€ partir de 45â‚¬</span>
+<span className="text-primary font-bold">À partir de 45â‚¬</span>
 </div>
 <ul className="space-y-3 mb-6 text-slate-600 text-sm">
 <li className="flex items-center gap-2"><span className="material-symbols-outlined text-green-500 text-lg">check_circle</span> Diagnostic inclus</li>
@@ -102,7 +102,7 @@ const DetailsDuServicePlomberie = () => {
 <div className="p-6 bg-primary text-white rounded-xl shadow-xl scale-105 border-2 border-primary">
 <div className="flex justify-between items-start mb-4">
 <h3 className="text-lg font-bold">Installation robinet</h3>
-<span className="text-white font-bold">Ã€ partir de 60â‚¬</span>
+<span className="text-white font-bold">À partir de 60â‚¬</span>
 </div>
 <ul className="space-y-3 mb-6 text-white/80 text-sm">
 <li className="flex items-center gap-2"><span className="material-symbols-outlined text-white text-lg">check_circle</span> Dépose ancien robinet</li>
@@ -114,7 +114,7 @@ const DetailsDuServicePlomberie = () => {
 <div className="p-6 bg-white rounded-xl shadow-sm border border-slate-200">
 <div className="flex justify-between items-start mb-4">
 <h3 className="text-lg font-bold">Débouchage canalisation</h3>
-<span className="text-primary font-bold">Ã€ partir de 50â‚¬</span>
+<span className="text-primary font-bold">À partir de 50â‚¬</span>
 </div>
 <ul className="space-y-3 mb-6 text-slate-600 text-sm">
 <li className="flex items-center gap-2"><span className="material-symbols-outlined text-green-500 text-lg">check_circle</span> Utilisation furet/pompe</li>
@@ -213,7 +213,7 @@ const DetailsDuServicePlomberie = () => {
 <span className="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
 </summary>
 <p className="mt-4 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-4">
-                            Le tarif affiché correspond à la main-d'Ã…"uvre et au déplacement. Les pièces de rechange nécessaires (joints, robinets, siphons) sont facturées en supplément après validation d'un devis gratuit sur place.
+                            Le tarif affiché correspond à la main-d'Å"uvre et au déplacement. Les pièces de rechange nécessaires (joints, robinets, siphons) sont facturées en supplément après validation d'un devis gratuit sur place.
                         </p>
 </details>
 <details className="group bg-white rounded-lg border border-slate-200 p-4">
@@ -285,7 +285,7 @@ const DetailsDuServicePlomberie = () => {
 </div>
 </div>
 <div className="pt-8 border-t border-slate-800 text-xs text-center md:text-left flex flex-col md:flex-row justify-between gap-4">
-<span>Â© 2024 Plomberie Pro. Tous droits réservés.</span>
+<span>© 2024 Plomberie Pro. Tous droits réservés.</span>
 <div className="flex justify-center md:justify-end gap-6">
 <a href="#">Mentions légales</a>
 <a href="#">Cookies</a>

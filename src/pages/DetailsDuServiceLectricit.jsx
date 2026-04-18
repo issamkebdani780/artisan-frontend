@@ -17,7 +17,7 @@ const DetailsDuServiceLectricit = () => {
 <nav className="hidden md:flex items-center gap-6">
 <a className="text-sm font-medium hover:text-primary transition-colors" href="#">Services</a>
 <a className="text-sm font-medium hover:text-primary transition-colors" href="#">Comment ça marche</a>
-<a className="text-sm font-medium hover:text-primary transition-colors" href="#">Ã‰lectriciens</a>
+<a className="text-sm font-medium hover:text-primary transition-colors" href="#">Électriciens</a>
 <a className="text-sm font-medium hover:text-primary transition-colors" href="#">FAQ</a>
 </nav>
 </div>
@@ -41,7 +41,7 @@ const DetailsDuServiceLectricit = () => {
 <div className="absolute inset-0 z-20 flex items-center">
 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
 <div className="max-w-2xl bg-white/10 backdrop-blur-md p-8 rounded-xl border border-white/20">
-<h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Travaux d'Ã‰lectricité</h1>
+<h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Travaux d'Électricité</h1>
 <p className="text-lg text-slate-100 mb-8">Installation, dépannage et mise aux normes par des experts certifiés. Un service rapide, transparent et garanti pour tous vos besoins électriques.</p>
 <div className="flex gap-4">
 <button className="rounded-lg bg-primary px-8 py-3 font-bold text-white hover:bg-primary/90 shadow-lg transition-transform active:scale-95">Réserver maintenant</button>
@@ -99,7 +99,7 @@ const DetailsDuServiceLectricit = () => {
 <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
 <div className="flex justify-between items-start mb-4">
 <span className="material-symbols-outlined text-primary text-4xl">build_circle</span>
-<span className="text-sm font-bold text-primary bg-primary/10 px-3 py-1 rounded-full">Ã€ partir de 50â‚¬</span>
+<span className="text-sm font-bold text-primary bg-primary/10 px-3 py-1 rounded-full">À partir de 50â‚¬</span>
 </div>
 <h3 className="text-lg font-bold mb-2">Diagnostic &amp; Réparation</h3>
 <p className="text-slate-600 text-sm mb-6">Recherche de panne, remplacement de fusibles ou réparation de tableau électrique.</p>
@@ -108,7 +108,7 @@ const DetailsDuServiceLectricit = () => {
 <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
 <div className="flex justify-between items-start mb-4">
 <span className="material-symbols-outlined text-primary text-4xl">light</span>
-<span className="text-sm font-bold text-primary bg-primary/10 px-3 py-1 rounded-full">Ã€ partir de 45â‚¬</span>
+<span className="text-sm font-bold text-primary bg-primary/10 px-3 py-1 rounded-full">À partir de 45â‚¬</span>
 </div>
 <h3 className="text-lg font-bold mb-2">Installation Luminaires</h3>
 <p className="text-slate-600 text-sm mb-6">Pose de lustres, spots LED, appliques murales ou remplacement d'interrupteurs.</p>
@@ -145,7 +145,7 @@ const DetailsDuServiceLectricit = () => {
 </div>
 <div className="p-6">
 <h3 className="text-xl font-bold mb-1 text-slate-900">Jean-Pierre Durand</h3>
-<p className="text-primary text-sm font-medium mb-4">Ã‰lectricien certifié - 15 ans d'exp.</p>
+<p className="text-primary text-sm font-medium mb-4">Électricien certifié - 15 ans d'exp.</p>
 <p className="text-slate-600 text-sm mb-6 line-clamp-2">Spécialiste en domotique et rénovation complète. Travail soigné et respect des délais garanti.</p>
 <button className="w-full py-3 rounded-xl bg-primary text-white font-bold hover:bg-primary/90 transition-all flex items-center justify-center gap-2">
 <span className="material-symbols-outlined">calendar_today</span> Réserver
@@ -211,7 +211,7 @@ const DetailsDuServiceLectricit = () => {
 <span className="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
 </summary>
 <div className="mt-4 text-slate-600 text-sm leading-relaxed">
-                                Les prix affichés "Ã€ partir de" incluent le diagnostic et la main-d'Ã…"uvre de base. Le coût des pièces spécifiques (interrupteurs, disjoncteurs, câbles) est facturé en sus après validation du devis sur place.
+                                Les prix affichés "À partir de" incluent le diagnostic et la main-d'Å"uvre de base. Le coût des pièces spécifiques (interrupteurs, disjoncteurs, câbles) est facturé en sus après validation du devis sur place.
                             </div>
 </details>
 <details className="group bg-slate-50 rounded-xl border border-slate-200 p-4">
@@ -249,7 +249,7 @@ const DetailsDuServiceLectricit = () => {
 <div>
 <h4 className="font-bold mb-6 text-slate-900">Services</h4>
 <ul className="space-y-4 text-sm text-slate-500">
-<li><a className="hover:text-primary transition-colors" href="#">Ã‰lectricité</a></li>
+<li><a className="hover:text-primary transition-colors" href="#">Électricité</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Plomberie</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Chauffage</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Peinture</a></li>
@@ -258,7 +258,7 @@ const DetailsDuServiceLectricit = () => {
 <div>
 <h4 className="font-bold mb-6 text-slate-900">Entreprise</h4>
 <ul className="space-y-4 text-sm text-slate-500">
-<li><a className="hover:text-primary transition-colors" href="#">Ã€ propos</a></li>
+<li><a className="hover:text-primary transition-colors" href="#">À propos</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Recrutement</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Blog</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Presse</a></li>
@@ -275,7 +275,7 @@ const DetailsDuServiceLectricit = () => {
 </div>
 </div>
 <div className="border-t border-slate-100 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-400">
-<p>Â© 2024 ArtisanPro. Tous droits réservés.</p>
+<p>© 2024 ArtisanPro. Tous droits réservés.</p>
 <div className="flex gap-6">
 <a className="hover:text-primary" href="#">Confidentialité</a>
 <a className="hover:text-primary" href="#">Mentions légales</a>

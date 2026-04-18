@@ -51,7 +51,7 @@ const ServicePricing = () => {
               <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-yellow-500/10 text-yellow-500">
                 <span className="material-symbols-outlined text-3xl">bolt</span>
               </div>
-              <span className="text-sm font-bold uppercase tracking-wider text-slate-400">Ã‰lectricité</span>
+              <span className="text-sm font-bold uppercase tracking-wider text-slate-400">Électricité</span>
             </div>
             <div className="mb-8">
               <div className="flex items-baseline gap-1">
@@ -227,7 +227,7 @@ const ServicePricing = () => {
         <div className="bg-blue-600 rounded-[2.5rem] p-12 lg:p-20 text-white relative overflow-hidden shadow-2xl">
           <div className="absolute -top-24 -right-24 w-64 h-64 bg-white/20 rounded-full blur-3xl mix-blend-overlay"></div>
           <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-white/20 rounded-full blur-3xl mix-blend-overlay"></div>
-          <h2 className="text-3xl lg:text-5xl font-black mb-6 leading-tight relative z-10">Un projet spécifique en tÃªte ?</h2>
+          <h2 className="text-3xl lg:text-5xl font-black mb-6 leading-tight relative z-10">Un projet spécifique en tête ?</h2>
           <p className="text-xl text-blue-100 mb-10 relative z-10 max-w-2xl mx-auto">Obtenez une estimation précise et 100% gratuite pour vos travaux en moins de 24 heures.</p>
           <Link to="/request-quote" className="inline-flex bg-white text-blue-600 px-10 py-5 rounded-2xl text-xl font-bold shadow-xl transition-all hover:scale-105 hover:bg-slate-50 relative z-10">
             Commencer mon estimation

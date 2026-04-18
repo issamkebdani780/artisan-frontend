@@ -199,7 +199,7 @@ const ArtisanDashboard = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {[
             { label: 'Revenus Totaux', value: `${(stats.totalRevenue || 0).toLocaleString()} DA`, icon: 'payments', trend: 'Paiements cumulés', color: 'bg-emerald-50 text-emerald-600' },
-            { label: 'Projets Actifs', value: (stats.activeBookings || 0) + (stats.pendingDevis || 0), icon: 'pending_actions', trend: 'Ã€ traiter', color: 'bg-orange-50 text-orange-600' },
+            { label: 'Projets Actifs', value: (stats.activeBookings || 0) + (stats.pendingDevis || 0), icon: 'pending_actions', trend: 'À traiter', color: 'bg-orange-50 text-orange-600' },
             { label: 'Avis Clients', value: `${stats.rating || '0.0'}/5`, icon: 'star', trend: `${stats.reviewCount || 0} avis`, color: 'bg-yellow-50 text-yellow-600' },
             { label: 'Total Projets', value: (stats.completedBookings || 0) + (stats.totalDevis || 0), icon: 'assignment', trend: 'Expérience globale', color: 'bg-secondary text-white', highlight: true }
           ].map((stat, i) => (

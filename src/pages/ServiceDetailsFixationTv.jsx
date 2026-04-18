@@ -282,7 +282,7 @@ const ServiceDetailsFixationTv = () => {
 </div>
 </div>
 <div className="pt-8 border-t border-slate-100 flex flex-col md:flex-row justify-between gap-4">
-<p className="text-slate-400 text-xs">Â© 2024 TaskIndigo Services. All rights reserved.</p>
+<p className="text-slate-400 text-xs">© 2024 TaskIndigo Services. All rights reserved.</p>
 <div className="flex gap-4">
 <a className="text-slate-400 hover:text-primary" href="#"><span className="material-symbols-outlined text-lg">language</span></a>
 <a className="text-slate-400 hover:text-primary" href="#"><span className="material-symbols-outlined text-lg">public</span></a>

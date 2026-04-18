@@ -115,7 +115,7 @@ const ClientProfileSettings = () => {
       <div className="flex-1 font-['Outfit',sans-serif] py-4 text-left max-w-6xl">
         <div className="mb-10 px-2 text-left">
           <h2 className="text-3xl font-black text-slate-900 tracking-tighter uppercase mb-2">Paramètres de compte</h2>
-          <p className="text-slate-500 font-bold max-w-xl leading-relaxed text-sm">Gérez vos informations, votre localisation et votre sécurité au mÃªme endroit.</p>
+          <p className="text-slate-500 font-bold max-w-xl leading-relaxed text-sm">Gérez vos informations, votre localisation et votre sécurité au même endroit.</p>
         </div>
 
         <div className="flex items-center gap-1 border-b border-slate-100 mb-10 px-2 overflow-x-auto whitespace-nowrap scrollbar-hide">

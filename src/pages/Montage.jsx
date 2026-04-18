@@ -168,11 +168,11 @@ const Montage = () => {
 <div className="p-4 bg-orange-50 text-orange-600 rounded-xl group-hover:bg-orange-600 group-hover:text-white transition-colors">
 <span className="material-symbols-outlined text-4xl">bolt</span>
 </div>
-<h3 className="text-xl font-bold text-slate-900">Ã‰lectricité</h3>
+<h3 className="text-xl font-bold text-slate-900">Électricité</h3>
 </div>
 <p className="text-slate-500 mb-4 group-hover:opacity-0 transition-opacity">Prises, tableaux, éclairage...</p>
 <div className="sub-services absolute inset-0 bg-white p-8 flex-col justify-center">
-<h4 className="font-black text-orange-600 mb-4 text-lg border-b border-slate-100 pb-2">Services Ã‰lectricité</h4>
+<h4 className="font-black text-orange-600 mb-4 text-lg border-b border-slate-100 pb-2">Services Électricité</h4>
 <div className="grid grid-cols-1 gap-4">
 <a className="flex items-center gap-3 p-2 rounded-lg hover:bg-orange-50 transition-colors group/item" href="#">
 <span className="material-symbols-outlined text-orange-600 bg-orange-50 p-2 rounded-lg">power</span>
@@ -306,7 +306,7 @@ const Montage = () => {
 <h4 className="font-bold text-slate-900">Ahmed Mansouri</h4>
 <span className="material-symbols-outlined text-primary text-sm">verified</span>
 </div>
-<p className="text-xs text-slate-500 mb-4">Spécialiste Ã‰lectricité &amp; Montage</p>
+<p className="text-xs text-slate-500 mb-4">Spécialiste Électricité &amp; Montage</p>
 <div className="flex items-center justify-between">
 <span className="text-sm font-bold">35â‚¬ <span className="text-slate-400 font-normal">/h</span></span>
 <button className="px-4 py-2 bg-slate-100 text-slate-700 text-xs font-bold rounded-lg group-hover:bg-primary group-hover:text-white transition-colors">Profil</button>
@@ -429,7 +429,7 @@ const Montage = () => {
 <div>
 <h4 className="text-white font-bold mb-6">Liens Rapides</h4>
 <ul className="space-y-4 text-sm">
-<li><a className="hover:text-primary transition-colors" href="#">Ã€ propos de nous</a></li>
+<li><a className="hover:text-primary transition-colors" href="#">À propos de nous</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Comment ça marche</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Devenir Artisan</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Blog &amp; Conseils</a></li>
@@ -465,7 +465,7 @@ const Montage = () => {
 </div>
 </div>
 <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
-<p>Â© 2024 MihnaPro. Tous droits réservés.</p>
+<p>© 2024 MihnaPro. Tous droits réservés.</p>
 <div className="flex gap-6">
 <a className="hover:text-white transition-colors" href="#">Confidentialité</a>
 <a className="hover:text-white transition-colors" href="#">Cookies</a>

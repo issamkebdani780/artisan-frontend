@@ -90,7 +90,7 @@ const ServiceDetailsPeinture = () => {
 <div className="aspect-video w-full bg-cover bg-center transition-transform group-hover:scale-105" data-alt="Elegant floral wallpaper being applied" ></div>
 <div className="p-4">
 <h3 className="font-bold text-lg">Papier peint</h3>
-<p className="text-sm text-slate-500 mt-1">Pose soignée de revÃªtements muraux.</p>
+<p className="text-sm text-slate-500 mt-1">Pose soignée de revêtements muraux.</p>
 </div>
 </div>
 <div className="group relative overflow-hidden rounded-xl bg-white shadow-sm border border-primary/5 transition-all hover:shadow-md">
@@ -216,7 +216,7 @@ const ServiceDetailsPeinture = () => {
 <span className="material-symbols-outlined text-primary">format_paint</span>
 <span className="font-bold text-lg">Peinture</span>
 </div>
-<p className="text-sm text-slate-500">Â© 2024 Peinture &amp; Décoration. Tous droits réservés.</p>
+<p className="text-sm text-slate-500">© 2024 Peinture &amp; Décoration. Tous droits réservés.</p>
 </div>
 </footer>
 </div>

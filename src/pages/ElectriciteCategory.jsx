@@ -15,7 +15,7 @@ const ElectriciteCategory = () => {
 </div>
 <nav className="hidden md:flex items-center gap-6">
 <a className="text-sm font-semibold hover:text-primary transition-colors" href="#">Accueil</a>
-<a className="text-sm font-semibold text-primary" href="#">Ã‰lectricité</a>
+<a className="text-sm font-semibold text-primary" href="#">Électricité</a>
 <a className="text-sm font-semibold hover:text-primary transition-colors" href="#">Plomberie</a>
 <a className="text-sm font-semibold hover:text-primary transition-colors" href="#">Chauffage</a>
 </nav>
@@ -41,7 +41,7 @@ const ElectriciteCategory = () => {
 <div className="lg:col-span-2 relative rounded-2xl overflow-hidden min-h-[400px] flex items-end">
 <div className="absolute inset-0 z-0">
 <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent z-10"></div>
-<div className="w-full h-full bg-center bg-cover" data-alt="Ã‰lectricien professionnel travaillant sur un tableau électrique" ></div>
+<div className="w-full h-full bg-center bg-cover" data-alt="Électricien professionnel travaillant sur un tableau électrique" ></div>
 </div>
 <div className="relative z-20 p-8 md:p-12">
 <span className="bg-primary text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-4 inline-block">Services Certifiés</span>
@@ -112,7 +112,7 @@ const ElectriciteCategory = () => {
 <div className="size-14 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
 <span className="material-symbols-outlined text-blue-600 text-3xl">lightbulb</span>
 </div>
-<h3 className="text-xl font-bold mb-3">Ã‰clairage &amp; Design</h3>
+<h3 className="text-xl font-bold mb-3">Éclairage &amp; Design</h3>
 <p className="text-slate-500 text-sm leading-relaxed mb-6">Installation de luminaires intérieurs et extérieurs, rubans LED et solutions domotiques connectées.</p>
 <a className="text-primary font-bold text-sm flex items-center gap-2" href="#">Découvrir <span className="material-symbols-outlined text-sm">chevron_right</span></a>
 </div>
@@ -221,7 +221,7 @@ const ElectriciteCategory = () => {
 </div>
 <div className="p-5">
 <h4 className="font-bold text-lg mb-1">Thomas G.</h4>
-<p className="text-slate-500 text-sm mb-4">Ã‰lectricien Indépendant • 12 ans d'exp.</p>
+<p className="text-slate-500 text-sm mb-4">Électricien Indépendant • 12 ans d'exp.</p>
 <div className="flex flex-wrap gap-2 mb-6">
 <span className="text-[10px] uppercase font-black bg-slate-100 px-2 py-1 rounded">Dépannage</span>
 <span className="text-[10px] uppercase font-black bg-slate-100 px-2 py-1 rounded">Domotique</span>
@@ -239,7 +239,7 @@ const ElectriciteCategory = () => {
 </div>
 <div className="p-5">
 <h4 className="font-bold text-lg mb-1">Sarah M.</h4>
-<p className="text-slate-500 text-sm mb-4">SARL Ã‰lec Pro • 8 ans d'exp.</p>
+<p className="text-slate-500 text-sm mb-4">SARL Élec Pro • 8 ans d'exp.</p>
 <div className="flex flex-wrap gap-2 mb-6">
 <span className="text-[10px] uppercase font-black bg-slate-100 px-2 py-1 rounded">Mise aux normes</span>
 <span className="text-[10px] uppercase font-black bg-slate-100 px-2 py-1 rounded">Rénovation</span>
@@ -275,7 +275,7 @@ const ElectriciteCategory = () => {
 </div>
 <div className="p-5">
 <h4 className="font-bold text-lg mb-1">Karim A.</h4>
-<p className="text-slate-500 text-sm mb-4">Ã‰co-Solution Ã‰lec • 5 ans d'exp.</p>
+<p className="text-slate-500 text-sm mb-4">Éco-Solution Élec • 5 ans d'exp.</p>
 <div className="flex flex-wrap gap-2 mb-6">
 <span className="text-[10px] uppercase font-black bg-slate-100 px-2 py-1 rounded">Bornes IRVE</span>
 <span className="text-[10px] uppercase font-black bg-slate-100 px-2 py-1 rounded">Solaire</span>
@@ -293,7 +293,7 @@ const ElectriciteCategory = () => {
 <div>
 <h5 className="font-bold mb-4">ProServices</h5>
 <ul className="space-y-2 text-sm text-slate-500">
-<li><a className="hover:text-primary" href="#">Ã€ propos</a></li>
+<li><a className="hover:text-primary" href="#">À propos</a></li>
 <li><a className="hover:text-primary" href="#">Carrières</a></li>
 <li><a className="hover:text-primary" href="#">Presse</a></li>
 </ul>
@@ -301,7 +301,7 @@ const ElectriciteCategory = () => {
 <div>
 <h5 className="font-bold mb-4">Services</h5>
 <ul className="space-y-2 text-sm text-slate-500">
-<li><a className="hover:text-primary" href="#">Ã‰lectricité</a></li>
+<li><a className="hover:text-primary" href="#">Électricité</a></li>
 <li><a className="hover:text-primary" href="#">Plomberie</a></li>
 <li><a className="hover:text-primary" href="#">Serrurerie</a></li>
 </ul>
@@ -324,7 +324,7 @@ const ElectriciteCategory = () => {
 </div>
 </div>
 <div className="pt-8 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-4">
-<p className="text-sm text-slate-500">Â© 2024 ProServices. Tous droits réservés.</p>
+<p className="text-sm text-slate-500">© 2024 ProServices. Tous droits réservés.</p>
 <div className="flex gap-4">
 <span className="material-symbols-outlined text-slate-400 cursor-pointer hover:text-primary">social_leaderboard</span>
 <span className="material-symbols-outlined text-slate-400 cursor-pointer hover:text-primary">share</span>

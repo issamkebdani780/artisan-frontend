@@ -68,7 +68,7 @@ const ResultatsDeRechercheDisponibleCetteSemaine = () => {
 {/*  Filter Item Active  */}
 <div className="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary/10 text-primary border border-primary/20">
 <span className="material-symbols-outlined text-xl">calendar_today</span>
-<span className="text-sm font-semibold uppercase tracking-wider">DISPONIBILITÃ‰</span>
+<span className="text-sm font-semibold uppercase tracking-wider">DISPONIBILITÉ</span>
 </div>
 <div className="pl-4 py-2 space-y-3 checkbox-tick">
 <label className="flex items-center gap-3 cursor-pointer group">
@@ -91,7 +91,7 @@ const ResultatsDeRechercheDisponibleCetteSemaine = () => {
 {/*  Other Categories (Inactive Headings)  */}
 <div className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 transition-colors cursor-pointer text-slate-600 mt-4">
 <span className="material-symbols-outlined text-xl">handyman</span>
-<span className="text-sm font-semibold uppercase tracking-wider">CATÃ‰GORIE</span>
+<span className="text-sm font-semibold uppercase tracking-wider">CATÉGORIE</span>
 </div>
 <div className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 transition-colors cursor-pointer text-slate-600">
 <span className="material-symbols-outlined text-xl">payments</span>
@@ -99,7 +99,7 @@ const ResultatsDeRechercheDisponibleCetteSemaine = () => {
 </div>
 <div className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 transition-colors cursor-pointer text-slate-600">
 <span className="material-symbols-outlined text-xl">star</span>
-<span className="text-sm font-semibold uppercase tracking-wider">Ã‰VALUATIONS</span>
+<span className="text-sm font-semibold uppercase tracking-wider">ÉVALUATIONS</span>
 </div>
 </div>
 </div>
@@ -159,7 +159,7 @@ const ResultatsDeRechercheDisponibleCetteSemaine = () => {
 <h3 className="font-bold text-lg text-slate-900">Marc Lefebvre</h3>
 <span className="material-symbols-outlined text-primary text-lg">verified</span>
 </div>
-<p className="text-sm font-medium text-primary">Ã‰lectricité générale</p>
+<p className="text-sm font-medium text-primary">Électricité générale</p>
 </div>
 </div>
 <div className="flex items-center gap-1 mb-4">
@@ -382,7 +382,7 @@ const ResultatsDeRechercheDisponibleCetteSemaine = () => {
 <path d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z"></path>
 </svg>
 </div>
-<p className="text-sm text-slate-500">Â© 2024 ArtisanDirect. Tous droits réservés.</p>
+<p className="text-sm text-slate-500">© 2024 ArtisanDirect. Tous droits réservés.</p>
 </div>
 <div className="flex gap-4">
 <a className="w-10 h-10 flex items-center justify-center rounded-full bg-slate-100 text-slate-600 hover:bg-primary hover:text-white transition-all" href="#">

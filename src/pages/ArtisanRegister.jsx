@@ -155,7 +155,7 @@ const ArtisanRegister = () => {
         <section className="hidden lg:flex w-[45%] relative overflow-hidden bg-slate-950">
           <div className="relative z-10 flex flex-col justify-center p-16 w-full bg-linear-to-b from-slate-900/10 to-slate-900/90">
             <div className="space-y-8 max-w-md">
-              <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-500/20 text-orange-500 border border-orange-500/30 text-xs font-bold tracking-widest uppercase">REJOIGNEZ L'Ã‰LITE</span>
+              <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-500/20 text-orange-500 border border-orange-500/30 text-xs font-bold tracking-widest uppercase">REJOIGNEZ L'ÉLITE</span>
               <h1 className="text-5xl font-black text-white leading-tight tracking-tighter">
                 Rejoignez l'élite des <span className="text-orange-500">services professionnels.</span>
               </h1>
@@ -236,8 +236,8 @@ const ArtisanRegister = () => {
                         options: ["Plombier sanitaire", "Chauffage central", "Monteur gaz", "Tuyauterie cuivre/PER"]
                       },
                       {
-                        group: "Ã‰lectricité",
-                        options: ["Ã‰lectricien bâtiment", "Ã‰lectricien industriel", "Technicien solaire", "Tireur de câbles"]
+                        group: "Électricité",
+                        options: ["Électricien bâtiment", "Électricien industriel", "Technicien solaire", "Tireur de câbles"]
                       },
                       {
                         group: "Peinture",
@@ -245,7 +245,7 @@ const ArtisanRegister = () => {
                       },
                       {
                         group: "Maçonnerie",
-                        options: ["Maçon brique", "Carreleur", "Crépisseur", "Ã‰tanchéité", "Rénovation"]
+                        options: ["Maçon brique", "Carreleur", "Crépisseur", "Étanchéité", "Rénovation"]
                       },
                       {
                         group: "Mécanique",

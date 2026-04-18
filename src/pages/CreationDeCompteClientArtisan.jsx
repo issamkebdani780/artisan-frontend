@@ -23,7 +23,7 @@ const CreationDeCompteClientArtisan = () => {
 <img alt="Professionnel" className="absolute inset-0 w-full h-full object-cover opacity-60" id="side-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsz9-zVUjve2U7W-lbCFlSBNhNC36UnG10fWA0uTqL36nQ-ckEqXFJGeVNZdhaRJLo2PUNQLqvHACrbrGtcBJQQHkpGBM3ODLvlQzG2Vm9GQQvYrfQOjtsLUxuki4ObxF_uVxtq7SvjozYSnNDK8e30LASe2OyfizPQ42Uvq_JnjogEAJaH-3fOkZcXPqGSc3BYBT117c9R6ceoooZxTHnkrXycNRmjiy8OMKSmbGxIxuEX_zB0G1XZml4dS09KNKBRoTDN8QbGfRl"/>
 <div className="relative z-10 flex flex-col justify-end p-20 w-full bg-gradient-to-t from-slate-950/90 via-transparent to-transparent">
 <div className="space-y-6 max-w-lg">
-<span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-orange/20 text-primary-orange border border-primary-orange/30 text-xs font-bold tracking-widest uppercase">REJOIGNEZ L'Ã‰LITE</span>
+<span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-orange/20 text-primary-orange border border-primary-orange/30 text-xs font-bold tracking-widest uppercase">REJOIGNEZ L'ÉLITE</span>
 <h1 className="text-5xl font-black text-white leading-tight tracking-tighter">Rejoignez l'élite des <span className="text-primary-orange">services professionnels.</span></h1>
 <p className="text-lg text-slate-300 leading-relaxed font-light">Accédez à un réseau exclusif de professionnels vérifiés et gérez vos projets en toute sérénité avec ArtisanHub.</p>
 {/*  Bento-style Benefits Grid  */}
@@ -103,7 +103,7 @@ const CreationDeCompteClientArtisan = () => {
 <option>Architecte d'Intérieur</option>
 <option>Artisan Métallier</option>
 <option>Paysagiste</option>
-<option>Spécialiste de l'Ã‰clairage</option>
+<option>Spécialiste de l'Éclairage</option>
 </select>
 </div>
 <div className="flex flex-col gap-2">
@@ -183,7 +183,7 @@ const CreationDeCompteClientArtisan = () => {
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-12 max-w-7xl mx-auto">
 <div className="space-y-4">
 <div className="text-lg font-bold text-slate-900">ArtisanHub</div>
-<p className="text-sm text-slate-500 font-medium">Â© 2024 ArtisanHub. Créé pour l'Excellence.</p>
+<p className="text-sm text-slate-500 font-medium">© 2024 ArtisanHub. Créé pour l'Excellence.</p>
 </div>
 <div className="flex flex-col gap-3">
 <h4 className="text-xs font-bold uppercase tracking-widest text-slate-400">Plateforme</h4>

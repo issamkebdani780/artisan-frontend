@@ -163,7 +163,7 @@ const GestionDesArtisans = () => {
 </div>
 </td>
 <td className="px-6 py-5">
-<span className="text-sm font-medium text-slate-600">Ã‰lectricienne</span>
+<span className="text-sm font-medium text-slate-600">Électricienne</span>
 </td>
 <td className="px-6 py-5">
 <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-amber-100 text-amber-700">

@@ -168,7 +168,7 @@ const CrAtionDeCompteClient = () => {
 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 px-8 max-w-7xl mx-auto">
 <div className="space-y-4">
 <div className="text-xl font-bold text-slate-900 tracking-tighter">ArtisanHub</div>
-<p className="text-sm text-slate-500 font-medium">Â© 2024 ArtisanHub. Créé pour l'Excellence.</p>
+<p className="text-sm text-slate-500 font-medium">© 2024 ArtisanHub. Créé pour l'Excellence.</p>
 </div>
 <div className="flex flex-col gap-3">
 <h4 className="text-xs font-bold uppercase tracking-widest text-slate-400">Plateforme</h4>

@@ -158,7 +158,7 @@ const PaintingCategory = () => {
 <div className="text-primary mb-4">
 <span className="material-symbols-outlined text-3xl">texture</span>
 </div>
-<h3 className="text-xl font-bold text-slate-900 mb-2">Papier Peint &amp; RevÃªtements</h3>
+<h3 className="text-xl font-bold text-slate-900 mb-2">Papier Peint &amp; Revêtements</h3>
 <p className="text-sm text-slate-600 mb-4">Pose précise de papiers peints, panoramiques et toiles de verre.</p>
 <a className="inline-flex items-center text-primary font-bold text-sm hover:gap-2 transition-all" href="#">
                                     Découvrir le service <span className="material-symbols-outlined ml-1 text-sm">arrow_forward</span>
@@ -288,7 +288,7 @@ const PaintingCategory = () => {
 <a className="hover:text-primary" href="#">Confidentialité</a>
 <a className="hover:text-primary" href="#">Contact</a>
 </div>
-<p className="text-sm text-slate-400">Â© 2024 PeinturePro SAS. Tous droits réservés.</p>
+<p className="text-sm text-slate-400">© 2024 PeinturePro SAS. Tous droits réservés.</p>
 </div>
 </footer>
 </div>

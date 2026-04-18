@@ -58,9 +58,9 @@ const ServiceDetailsReparationDeFuites = () => {
 <div className="lg:col-span-2 space-y-10">
 {/*  Service Description  */}
 <section>
-<h3 className="text-2xl font-bold mb-4">Ã€ propos de ce service</h3>
+<h3 className="text-2xl font-bold mb-4">À propos de ce service</h3>
 <p className="text-slate-600 leading-relaxed mb-6">
-                                    Une fuite d'eau, mÃªme minime, peut causer des dommages structurels importants et alourdir considérablement votre facture. Nos experts interviennent avec un équipement de pointe pour détecter et colmater tout type de fuite : canalisations encastrées, robinetterie, chauffe-eau ou WC.
+                                    Une fuite d'eau, même minime, peut causer des dommages structurels importants et alourdir considérablement votre facture. Nos experts interviennent avec un équipement de pointe pour détecter et colmater tout type de fuite : canalisations encastrées, robinetterie, chauffe-eau ou WC.
                                 </p>
 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
 <div className="flex items-start gap-3 p-4 rounded-xl bg-white border border-slate-100">
@@ -87,7 +87,7 @@ const ServiceDetailsReparationDeFuites = () => {
 <p className="text-slate-600">Pas de frais cachés, devis gratuit avant intervention.</p>
 </div>
 <div className="text-right">
-<span className="text-sm text-slate-500 block uppercase tracking-wide font-bold">Ã€ partir de</span>
+<span className="text-sm text-slate-500 block uppercase tracking-wide font-bold">À partir de</span>
 <span className="text-4xl font-black text-primary">45â‚¬</span>
 </div>
 </div>
@@ -181,7 +181,7 @@ const ServiceDetailsReparationDeFuites = () => {
 <div className="pt-4">
 <div className="flex justify-between text-sm mb-2">
 <span className="text-slate-500">Estimation</span>
-<span className="font-bold">Ã€ partir de 45â‚¬</span>
+<span className="font-bold">À partir de 45â‚¬</span>
 </div>
 <button className="w-full bg-primary text-white py-4 rounded-xl font-bold text-lg hover:bg-blue-600 transition-all shadow-lg shadow-primary/25" type="submit">
                                             Confirmer la réservation
@@ -218,7 +218,7 @@ const ServiceDetailsReparationDeFuites = () => {
 <div>
 <h4 className="font-bold mb-4">Compagnie</h4>
 <ul className="space-y-2 text-sm text-slate-500">
-<li><a className="hover:text-primary transition-colors" href="#">Ã€ propos</a></li>
+<li><a className="hover:text-primary transition-colors" href="#">À propos</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Recrutement</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Blog</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Contact</a></li>
@@ -236,7 +236,7 @@ const ServiceDetailsReparationDeFuites = () => {
 </div>
 </div>
 <div className="mt-12 pt-8 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-400">
-<p>Â© 2024 PlumbPro Expertise. Tous droits réservés.</p>
+<p>© 2024 PlumbPro Expertise. Tous droits réservés.</p>
 <div className="flex gap-6">
 <a className="hover:underline" href="#">Mentions Légales</a>
 <a className="hover:underline" href="#">Confidentialité</a>

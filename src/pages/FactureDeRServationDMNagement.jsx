@@ -147,7 +147,7 @@ const FactureDeRServationDMNagement = () => {
 <tr>
 <td className="px-6 py-4">
 <p className="text-slate-900 font-semibold">Forfait Déménagement de base</p>
-<p className="text-xs text-slate-500">Main d'Ã…"uvre (2 pers.) + Camion 20mÂ³</p>
+<p className="text-xs text-slate-500">Main d'Å"uvre (2 pers.) + Camion 20mÂ³</p>
 </td>
 <td className="px-6 py-4 text-center text-slate-700">1</td>
 <td className="px-6 py-4 text-right text-slate-700">450,00 â‚¬</td>
@@ -233,7 +233,7 @@ const FactureDeRServationDMNagement = () => {
 <a className="hover:text-primary transition-colors" href="#">Aide</a>
 </div>
 <p className="text-xs text-slate-400 uppercase tracking-widest">
-                        Â© 2024 ArtisanDirect - Une plateforme au service de l'excellence artisanale
+                        © 2024 ArtisanDirect - Une plateforme au service de l'excellence artisanale
                     </p>
 </footer>
 </div>

@@ -139,7 +139,7 @@ const ConfigurationPlateforme = () => {
 <span className="material-symbols-outlined text-primary bg-primary/10 p-2 rounded-lg">security</span>
 <h2 className="text-slate-900 text-xl font-bold">Sécurité de la Plateforme</h2>
 </div>
-<span className="px-3 py-1 bg-green-100 text-green-600 rounded-full text-xs font-bold uppercase tracking-wider">Ã‰tat : Sécurisé</span>
+<span className="px-3 py-1 bg-green-100 text-green-600 rounded-full text-xs font-bold uppercase tracking-wider">État : Sécurisé</span>
 </div>
 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 <div className="flex flex-col gap-3 p-4 border border-slate-100 rounded-xl hover:border-primary/30 transition-all group">

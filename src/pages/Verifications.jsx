@@ -168,7 +168,7 @@ const Verifications = () => {
 </div>
 </div>
 </td>
-<td className="px-6 py-4 text-sm">Ã‰lectricité</td>
+<td className="px-6 py-4 text-sm">Électricité</td>
 <td className="px-6 py-4 text-sm text-slate-500">11 Oct 2023</td>
 <td className="px-6 py-4">
 <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-green-100 text-green-700">
@@ -244,7 +244,7 @@ const Verifications = () => {
 </div>
 {/*  Footer  */}
 <footer className="mt-auto p-8 border-t border-slate-200 text-center text-slate-400 text-sm">
-<p>Â© 2023 Admin Panel Purple Edition. Tous droits réservés.</p>
+<p>© 2023 Admin Panel Purple Edition. Tous droits réservés.</p>
 <div className="mt-2 flex justify-center gap-4">
 <a className="hover:text-purple-500 transition-colors" href="#">Aide</a>
 <a className="hover:text-purple-500 transition-colors" href="#">Confidentialité</a>

@@ -108,7 +108,7 @@ const DetailsDuServiceMontage = () => {
 <span className="material-symbols-outlined text-primary">schedule</span>
 <span className="font-medium">Taux horaire moyen</span>
 </div>
-<span className="text-primary font-bold">Ã€ partir de 35â‚¬ / h</span>
+<span className="text-primary font-bold">À partir de 35â‚¬ / h</span>
 </div>
 <div className="flex items-center justify-between p-4 bg-white rounded-lg shadow-sm border border-slate-100">
 <div className="flex items-center gap-3">
@@ -260,7 +260,7 @@ const DetailsDuServiceMontage = () => {
 <div>
 <h4 className="font-bold mb-4">Plateforme</h4>
 <ul className="space-y-2 text-slate-500 text-sm">
-<li><a className="hover:text-primary" href="#">Ã€ propos</a></li>
+<li><a className="hover:text-primary" href="#">À propos</a></li>
 <li><a className="hover:text-primary" href="#">Comment ça marche</a></li>
 <li><a className="hover:text-primary" href="#">Sécurité</a></li>
 <li><a className="hover:text-primary" href="#">Avis clients</a></li>
@@ -272,13 +272,13 @@ const DetailsDuServiceMontage = () => {
 <select className="bg-slate-50 border border-slate-200 rounded-lg text-sm px-3 py-2 outline-none focus:ring-1 focus:ring-primary">
 <option selected="" value="fr">Français</option>
 <option value="en">English</option>
-<option value="ar">Ã˜Â§Ã™â€žÃ˜Â¹Ã˜Â±Ã˜Â¨Ã™Å Ã˜Â©</option>
+<option value="ar">ØÂ§Ùâ€žØÂ¹ØÂ±ØÂ¨ÙÅ Ø©</option>
 </select>
 </div>
 </div>
 </div>
 <div className="max-w-[1200px] mx-auto mt-12 pt-8 border-t border-slate-100 text-center text-slate-400 text-sm">
-                Â© 2024 TaskService. Tous droits réservés.
+                © 2024 TaskService. Tous droits réservés.
             </div>
 </footer>
 </div>

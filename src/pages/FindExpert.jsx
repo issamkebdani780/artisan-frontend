@@ -42,17 +42,17 @@ const FindExpert = () => {
 
       if (activeFilters.selectedCategories.length > 1) {
         const categoryMap = {
-            'Menuiserie et Bois': ['Menuisier', 'Presseur', 'Décorateur bois', 'fenÃªtres en bois'],
+            'Menuiserie et Bois': ['Menuisier', 'Presseur', 'Décorateur bois', 'fenêtres en bois'],
             'Ferronnerie et Soudure': ['Ferronnier', 'Soudeur', 'Chaudronnier'],
             'Plomberie et Réseaux': ['Plombier', 'Monteur de réseaux', 'tuyauterie'],
-            'Ã‰lectricité et Ã‰nergie': ['Ã‰lectricien', 'solaire', 'câbles', 'tableaux électriques'],
+            'Électricité et Énergie': ['Électricien', 'solaire', 'câbles', 'tableaux électriques'],
             'Peinture et Plâtre': ['Peinture', 'Plâtrier', 'Marbrier', 'Vernisseur'],
             'Maçonnerie et Finitions': ['Maçon', 'Carreleur', 'Crépisseur', 'isolation'],
             'Mécanique et Machines': ['Mécanicien', 'moteurs', 'électrogènes'],
             'Couture et Cuir': ['Tailleur', 'Couturière', 'Rapiéceur', 'Cordonnier', 'Maroquinier'],
             'Verre et Miroiterie': ['verre', 'Verrier', 'Miroitier', 'Vitrier'],
             'Métiers alimentaires artisanaux': ['Boulanger', 'Pâtissier', 'Fromager', 'Apiculteur', 'conserveur'],
-            'Jardinage et Espaces Verts': ['Jardinier', 'espaces verts', 'jardins', 'irrigation', 'Ã‰lagueur', 'palmiers']
+            'Jardinage et Espaces Verts': ['Jardinier', 'espaces verts', 'jardins', 'irrigation', 'Élagueur', 'palmiers']
         };
 
         results = results.filter(e =>
@@ -111,7 +111,7 @@ const FindExpert = () => {
                   <span className="material-symbols-outlined text-slate-300">search</span>
                   <input
                     type="text"
-                    placeholder="Plomberie, Peinture, Ã‰lectricité..."
+                    placeholder="Plomberie, Peinture, Électricité..."
                     className="w-full border-none focus:ring-0 bg-transparent text-slate-900 placeholder:text-slate-300 py-4 outline-none font-bold"
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}

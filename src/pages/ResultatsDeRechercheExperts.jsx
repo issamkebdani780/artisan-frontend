@@ -119,7 +119,7 @@ const ResultatsDeRechercheExperts = () => {
                                     <p className="text-slate-500 text-sm mb-4">Plombier Expert • 12 ans d'exp.</p>
                                     <div className="flex items-center justify-between mt-auto pt-4 border-t border-slate-100">
                                         <div>
-                                            <span className="text-xs text-slate-400 block">Ã€ partir de</span>
+                                            <span className="text-xs text-slate-400 block">À partir de</span>
                                             <span className="text-lg font-bold text-primary">45â‚¬/h</span>
                                         </div>
                                         <button className="bg-slate-100 text-slate-900 px-4 py-2 rounded-lg text-sm font-bold hover:bg-primary hover:text-white transition-colors">
@@ -145,7 +145,7 @@ const ResultatsDeRechercheExperts = () => {
                                     <p className="text-slate-500 text-sm mb-4">Installation &amp; Dépannage</p>
                                     <div className="flex items-center justify-between mt-auto pt-4 border-t border-slate-100">
                                         <div>
-                                            <span className="text-xs text-slate-400 block">Ã€ partir de</span>
+                                            <span className="text-xs text-slate-400 block">À partir de</span>
                                             <span className="text-lg font-bold text-primary">50â‚¬/h</span>
                                         </div>
                                         <button className="bg-slate-100 text-slate-900 px-4 py-2 rounded-lg text-sm font-bold hover:bg-primary hover:text-white transition-colors">
@@ -171,7 +171,7 @@ const ResultatsDeRechercheExperts = () => {
                                     <p className="text-slate-500 text-sm mb-4">Chauffage &amp; Sanitaire</p>
                                     <div className="flex items-center justify-between mt-auto pt-4 border-t border-slate-100">
                                         <div>
-                                            <span className="text-xs text-slate-400 block">Ã€ partir de</span>
+                                            <span className="text-xs text-slate-400 block">À partir de</span>
                                             <span className="text-lg font-bold text-primary">42â‚¬/h</span>
                                         </div>
                                         <button className="bg-slate-100 text-slate-900 px-4 py-2 rounded-lg text-sm font-bold hover:bg-primary hover:text-white transition-colors">
@@ -197,7 +197,7 @@ const ResultatsDeRechercheExperts = () => {
                                     <p className="text-slate-500 text-sm mb-4">Urgence Plomberie 24/7</p>
                                     <div className="flex items-center justify-between mt-auto pt-4 border-t border-slate-100">
                                         <div>
-                                            <span className="text-xs text-slate-400 block">Ã€ partir de</span>
+                                            <span className="text-xs text-slate-400 block">À partir de</span>
                                             <span className="text-lg font-bold text-primary">60â‚¬/h</span>
                                         </div>
                                         <button className="bg-slate-100 text-slate-900 px-4 py-2 rounded-lg text-sm font-bold hover:bg-primary hover:text-white transition-colors">
@@ -223,7 +223,7 @@ const ResultatsDeRechercheExperts = () => {
                                     <p className="text-slate-500 text-sm mb-4">Rénovation Salles de Bain</p>
                                     <div className="flex items-center justify-between mt-auto pt-4 border-t border-slate-100">
                                         <div>
-                                            <span className="text-xs text-slate-400 block">Ã€ partir de</span>
+                                            <span className="text-xs text-slate-400 block">À partir de</span>
                                             <span className="text-lg font-bold text-primary">48â‚¬/h</span>
                                         </div>
                                         <button className="bg-slate-100 text-slate-900 px-4 py-2 rounded-lg text-sm font-bold hover:bg-primary hover:text-white transition-colors">
@@ -249,7 +249,7 @@ const ResultatsDeRechercheExperts = () => {
                                     <p className="text-slate-500 text-sm mb-4">Plombier Chauffagiste Qualifié</p>
                                     <div className="flex items-center justify-between mt-auto pt-4 border-t border-slate-100">
                                         <div>
-                                            <span className="text-xs text-slate-400 block">Ã€ partir de</span>
+                                            <span className="text-xs text-slate-400 block">À partir de</span>
                                             <span className="text-lg font-bold text-primary">55â‚¬/h</span>
                                         </div>
                                         <button className="bg-slate-100 text-slate-900 px-4 py-2 rounded-lg text-sm font-bold hover:bg-primary hover:text-white transition-colors">
@@ -315,7 +315,7 @@ const ResultatsDeRechercheExperts = () => {
                         </div>
                     </div>
                     <div className="max-w-7xl mx-auto px-6 mt-10 pt-6 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-4">
-                        <p className="text-xs text-slate-400">Â© 2024 ArtisanDirect. Tous droits réservés.</p>
+                        <p className="text-xs text-slate-400">© 2024 ArtisanDirect. Tous droits réservés.</p>
                         <div className="flex gap-4">
                             <a className="text-slate-400 hover:text-primary" href="#"><span className="material-symbols-outlined text-lg">public</span></a>
                             <a className="text-slate-400 hover:text-primary" href="#"><span className="material-symbols-outlined text-lg">mail</span></a>

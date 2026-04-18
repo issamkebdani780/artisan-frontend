@@ -92,7 +92,7 @@ const NettoyageDeVitres = () => {
 <div className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Modern building windows being cleaned by professional cleaner" ></div>
 <div className="relative z-20 h-full flex flex-col justify-end p-10 max-w-2xl">
 <span className="bg-primary/20 text-teal-300 text-xs font-bold px-3 py-1 rounded-full w-fit mb-4 backdrop-blur-md border border-white/10 uppercase tracking-widest">Service Premium</span>
-<h1 className="text-white text-4xl md:text-5xl font-black leading-tight mb-4">La clarté absolue pour vos fenÃªtres.</h1>
+<h1 className="text-white text-4xl md:text-5xl font-black leading-tight mb-4">La clarté absolue pour vos fenêtres.</h1>
 <p className="text-teal-100 text-lg font-medium mb-6">Expertise résidentielle et commerciale avec technologie d'eau pure et accès haute altitude.</p>
 <div className="flex gap-4">
 <button className="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-xl font-bold shadow-lg shadow-primary/20 transition-all active:scale-95">Réserver maintenant</button>
@@ -130,7 +130,7 @@ const NettoyageDeVitres = () => {
 <ul className="flex flex-col gap-4 mb-8 flex-1">
 <li className="flex items-start gap-3 text-sm text-slate-600">
 <span className="material-symbols-outlined text-primary text-lg">check_circle</span>
-                        Jusqu'à 10 fenÃªtres standards
+                        Jusqu'à 10 fenêtres standards
                     </li>
 <li className="flex items-start gap-3 text-sm text-slate-600">
 <span className="material-symbols-outlined text-primary text-lg">check_circle</span>
@@ -204,7 +204,7 @@ const NettoyageDeVitres = () => {
 <section className="bg-white py-16 px-6">
 <div className="max-w-6xl mx-auto">
 <div className="text-center mb-16">
-<h2 className="text-3xl font-black text-slate-900 mb-4">Ã‰quipement de Pointe</h2>
+<h2 className="text-3xl font-black text-slate-900 mb-4">Équipement de Pointe</h2>
 <p className="text-slate-500 max-w-2xl mx-auto">Nous investissons dans les dernières technologies pour garantir un résultat parfait sans utiliser de produits chimiques nocifs.</p>
 </div>
 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -243,7 +243,7 @@ const NettoyageDeVitres = () => {
 <div className="absolute inset-0 flex items-center justify-center">
 <div className="bg-white p-6 rounded-2xl shadow-2xl border border-primary/20 max-w-[200px]">
 <p className="text-primary font-black text-4xl mb-1">100%</p>
-<p className="text-xs font-bold text-slate-500 uppercase tracking-tighter">Ã‰cologique &amp; Sans Détergent</p>
+<p className="text-xs font-bold text-slate-500 uppercase tracking-tighter">Écologique &amp; Sans Détergent</p>
 </div>
 </div>
 </div>
@@ -320,7 +320,7 @@ const NettoyageDeVitres = () => {
 <footer className="mt-auto px-6 pb-12">
 <div className="bg-slate-900 rounded-3xl p-10 text-center text-white relative overflow-hidden">
 <div className="absolute inset-0 bg-primary/10 mix-blend-overlay"></div>
-<h2 className="text-3xl font-black mb-4 relative z-10">PrÃªt pour des vitres étincelantes ?</h2>
+<h2 className="text-3xl font-black mb-4 relative z-10">Prêt pour des vitres étincelantes ?</h2>
 <p className="text-slate-400 mb-8 relative z-10">Estimation gratuite en ligne en moins de 2 minutes.</p>
 <div className="flex flex-col sm:flex-row justify-center gap-4 relative z-10">
 <button className="bg-primary text-white font-bold px-10 py-4 rounded-xl hover:bg-primary/90 transition-all">Démarrer mon devis</button>
@@ -328,7 +328,7 @@ const NettoyageDeVitres = () => {
 </div>
 </div>
 <div className="mt-8 text-center text-xs text-slate-500 font-medium">
-                Â© 2024 AquaShine Pro Services. Tous droits réservés. Mentions légales &amp; Confidentialité.
+                © 2024 AquaShine Pro Services. Tous droits réservés. Mentions légales &amp; Confidentialité.
             </div>
 </footer>
 </main>

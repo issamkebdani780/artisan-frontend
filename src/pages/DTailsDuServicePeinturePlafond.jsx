@@ -79,7 +79,7 @@ const DTailsDuServicePeinturePlafond = () => {
 <section>
 <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
 <span className="material-symbols-outlined text-primary">construction</span>
-                            Ã‰quipements Spécialisés
+                            Équipements Spécialisés
                         </h3>
 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
 <div className="p-4 rounded-lg bg-primary/5 border border-primary/10 flex gap-4">
@@ -223,7 +223,7 @@ const DTailsDuServicePeinturePlafond = () => {
 <footer className="bg-slate-900 text-white py-12 mt-12 px-6">
 <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 <div>
-<h3 className="text-3xl font-black mb-4">PrÃªt à transformer vos plafonds ?</h3>
+<h3 className="text-3xl font-black mb-4">Prêt à transformer vos plafonds ?</h3>
 <p className="text-slate-400 text-lg">Nos experts sont disponibles 6j/7 pour vos projets de rénovation. Bénéficiez d'une estimation précise en moins de 24h.</p>
 </div>
 <div className="flex flex-col sm:flex-row gap-4 justify-end">
@@ -237,7 +237,7 @@ const DTailsDuServicePeinturePlafond = () => {
 </div>
 </div>
 <div className="max-w-[1200px] mx-auto mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between gap-6 text-sm text-slate-500">
-<p>Â© 2024 PlafondPro France - Peinture &amp; Rénovation.</p>
+<p>© 2024 PlafondPro France - Peinture &amp; Rénovation.</p>
 <div className="flex gap-8">
 <a className="hover:text-primary" href="#">Conditions générales</a>
 <a className="hover:text-primary" href="#">Confidentialité</a>

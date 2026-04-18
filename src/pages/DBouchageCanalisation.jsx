@@ -46,7 +46,7 @@ const DBouchageCanalisation = () => {
 </a>
 <a className="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-slate-50 text-slate-700 transition-colors" href="#">
 <span className="material-symbols-outlined">construction</span>
-<span>Ã‰quipement</span>
+<span>Équipement</span>
 </a>
 <a className="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-slate-50 text-slate-700 transition-colors" href="#">
 <span className="material-symbols-outlined">reviews</span>
@@ -165,7 +165,7 @@ const DBouchageCanalisation = () => {
 <section className="mb-16 bg-slate-100 p-8 rounded-2xl">
 <div className="flex flex-col md:flex-row gap-10 items-center">
 <div className="flex-1">
-<h2 className="text-2xl font-bold mb-4">Ã‰quipement de Pointe</h2>
+<h2 className="text-2xl font-bold mb-4">Équipement de Pointe</h2>
 <p className="text-slate-600 mb-6 leading-relaxed">
                                     Nous utilisons les dernières technologies pour garantir un débouchage durable sans endommager vos installations. Nos camions sont équipés de pompes haute pression et de caméras HD.
                                 </p>
@@ -288,7 +288,7 @@ const DBouchageCanalisation = () => {
 </div>
 </div>
 <div className="max-w-[1280px] mx-auto mt-12 pt-8 border-t border-slate-800 text-xs text-center">
-                Â© 2024 ExpertDébouchage. Tous droits réservés.
+                © 2024 ExpertDébouchage. Tous droits réservés.
             </div>
 </footer>
 </div>

@@ -215,7 +215,7 @@ const VerifiedCraftsmanProfile = () => {
 <a className="hover:text-primary transition-colors" href="#">Support</a>
 <a className="hover:text-primary transition-colors" href="#">Terms</a>
 </div>
-<p className="text-xs text-slate-400">Â© 2024 CraftsmanHub Pro. All rights reserved.</p>
+<p className="text-xs text-slate-400">© 2024 CraftsmanHub Pro. All rights reserved.</p>
 </div>
 </footer>
 </div>

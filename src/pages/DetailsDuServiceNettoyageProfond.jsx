@@ -71,7 +71,7 @@ const DetailsDuServiceNettoyageProfond = () => {
 <div className="flex gap-4 p-4 bg-white rounded-lg border border-slate-100">
 <span className="material-symbols-outlined text-primary">kitchen</span>
 <div>
-<h3 className="font-bold text-slate-900">Ã‰lectroménagers</h3>
+<h3 className="font-bold text-slate-900">Électroménagers</h3>
 <p className="text-sm text-slate-600">Nettoyage intérieur du four, du micro-ondes et du réfrigérateur.</p>
 </div>
 </div>
@@ -92,7 +92,7 @@ const DetailsDuServiceNettoyageProfond = () => {
 <div className="flex gap-4 p-4 bg-white rounded-lg border border-slate-100">
 <span className="material-symbols-outlined text-primary">window</span>
 <div>
-<h3 className="font-bold text-slate-900">FenÃªtres &amp; Rails</h3>
+<h3 className="font-bold text-slate-900">Fenêtres &amp; Rails</h3>
 <p className="text-sm text-slate-600">Lavage des vitres intérieures, encadrements et rails coulissants.</p>
 </div>
 </div>
@@ -197,7 +197,7 @@ const DetailsDuServiceNettoyageProfond = () => {
 <img className="w-full h-full object-cover opacity-50 grayscale" data-alt="Carte stylisée de la zone de service à Paris" data-location="Paris, France" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAw0x3BmWwPvhVqp7ciswL-ZAKyUM33a2u938cnKLfcS2j8_BatDk3uTyGQ_Li7ziwuzfVt-548LaAf33IAsZJ2vXt1JBJv0Hsgu_iRWSdZ71KJKXL4jfN9I4kYAgaG0QIY4oiFEVzTDbQ2-UDwlR5UvcxVJrbQ0JbSlT11w5ZsbVPd0sa4FDC3VPhflI28j8P0LhBuDwatiwFre-dTNRAYDk-jWasXLwTZiVA1kbji5TWG79TonNXT39W1PvzBMDtaEK7GtZMnNwUr"/>
 <div className="absolute bg-white px-4 py-2 rounded-lg shadow-lg border border-primary flex items-center gap-2">
 <span className="material-symbols-outlined text-primary">location_on</span>
-<span className="font-bold text-sm">Disponible à Paris et ÃŽle-de-France</span>
+<span className="font-bold text-sm">Disponible à Paris et Île-de-France</span>
 </div>
 </div>
 </div>
@@ -231,7 +231,7 @@ const DetailsDuServiceNettoyageProfond = () => {
 </div>
 </div>
 <div className="max-w-[1200px] mx-auto mt-12 pt-8 border-t border-slate-800 text-center text-xs">
-                Â© 2024 CleanPro SAS. Tous droits réservés.
+                © 2024 CleanPro SAS. Tous droits réservés.
             </div>
 </footer>
 </div>

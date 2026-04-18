@@ -64,7 +64,7 @@ const GestionDesArtisansVueDashboard = () => {
 <select className="bg-transparent border-none text-sm font-medium focus:ring-0 p-0 pr-6">
 <option>Toutes</option>
 <option>Plomberie</option>
-<option>Ã‰lectricité</option>
+<option>Électricité</option>
 <option>Menuiserie</option>
 <option>Peinture</option>
 </select>
@@ -99,7 +99,7 @@ const GestionDesArtisansVueDashboard = () => {
 <th className="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">Spécialité</th>
 <th className="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">Inscription</th>
 <th className="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">Statut</th>
-<th className="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">Ã‰valuation</th>
+<th className="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">Évaluation</th>
 <th className="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider text-right">Actions</th>
 </tr>
 </thead>
@@ -156,7 +156,7 @@ const GestionDesArtisansVueDashboard = () => {
 </div>
 </td>
 <td className="px-6 py-4">
-<span className="px-2 py-1 bg-blue-100 text-blue-700 text-xs font-bold rounded-lg">Ã‰lectricité</span>
+<span className="px-2 py-1 bg-blue-100 text-blue-700 text-xs font-bold rounded-lg">Électricité</span>
 </td>
 <td className="px-6 py-4 text-sm text-slate-600">15 Oct 2023</td>
 <td className="px-6 py-4">

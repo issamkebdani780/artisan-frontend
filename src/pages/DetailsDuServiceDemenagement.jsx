@@ -145,11 +145,11 @@ const DetailsDuServiceDemenagement = () => {
 <ul className="space-y-4 mb-8 flex-1">
 <li className="flex items-center gap-3">
 <span className="material-symbols-outlined text-green-500">check_circle</span>
-<span>Ã‰quipe spécialisée</span>
+<span>Équipe spécialisée</span>
 </li>
 <li className="flex items-center gap-3">
 <span className="material-symbols-outlined text-green-500">check_circle</span>
-<span>Ã‰quipement de levage</span>
+<span>Équipement de levage</span>
 </li>
 <li className="flex items-center gap-3">
 <span className="material-symbols-outlined text-green-500">check_circle</span>
@@ -215,7 +215,7 @@ const DetailsDuServiceDemenagement = () => {
                                 Proposez-vous des cartons de déménagement ?
                                 <span className="material-symbols-outlined text-primary">expand_more</span>
 </h4>
-<p className="text-slate-600">Oui, selon la formule choisie, nous pouvons vous fournir tout le matériel nécessaire (cartons, ruban adhésif, papier bulle) ou mÃªme nous occuper de l'emballage complet.</p>
+<p className="text-slate-600">Oui, selon la formule choisie, nous pouvons vous fournir tout le matériel nécessaire (cartons, ruban adhésif, papier bulle) ou même nous occuper de l'emballage complet.</p>
 </div>
 <div className="bg-white rounded-lg border border-slate-200 p-6">
 <h4 className="font-bold mb-2 flex justify-between items-center">
@@ -276,7 +276,7 @@ const DetailsDuServiceDemenagement = () => {
 </div>
 </div>
 <div className="mt-12 pt-8 border-t border-slate-100 text-center text-xs text-slate-500">
-<p>Â© 2024 Déménagement Pro. Tous droits réservés. Mentions légales | Confidentialité</p>
+<p>© 2024 Déménagement Pro. Tous droits réservés. Mentions légales | Confidentialité</p>
 </div>
 </footer>
 </div>

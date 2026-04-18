@@ -106,7 +106,7 @@ const InstallationRobinetterie = () => {
 </div>
 <h3 className="font-bold mb-2">Standard</h3>
 <p className="text-sm text-slate-500 mb-4">Mitigeurs classiques pour évier ou lavabo. Simplicité et efficacité.</p>
-<p className="text-primary font-bold">Ã€ partir de 89â‚¬</p>
+<p className="text-primary font-bold">À partir de 89â‚¬</p>
 </div>
 <div className="bg-white p-6 rounded-xl border border-slate-200 hover:border-primary transition-colors">
 <div className="size-12 rounded-lg bg-slate-100 flex items-center justify-center mb-4">
@@ -114,7 +114,7 @@ const InstallationRobinetterie = () => {
 </div>
 <h3 className="font-bold mb-2">Pack Installation</h3>
 <p className="text-sm text-slate-500 mb-4">Matériel inclus + pose. La solution clé en main pour votre cuisine ou bain.</p>
-<p className="text-primary font-bold">Ã€ partir de 159â‚¬</p>
+<p className="text-primary font-bold">À partir de 159â‚¬</p>
 </div>
 <div className="bg-white p-6 rounded-xl border border-slate-200 hover:border-primary transition-colors">
 <div className="size-12 rounded-lg bg-slate-100 flex items-center justify-center mb-4">
@@ -135,7 +135,7 @@ const InstallationRobinetterie = () => {
 <thead>
 <tr className="bg-slate-50">
 <th className="p-4 text-sm font-bold text-slate-600">Prestation</th>
-<th className="p-4 text-sm font-bold text-slate-600">Main d'Ã…"uvre</th>
+<th className="p-4 text-sm font-bold text-slate-600">Main d'Å"uvre</th>
 <th className="p-4 text-sm font-bold text-slate-600">Durée estimée</th>
 </tr>
 </thead>
@@ -256,7 +256,7 @@ const InstallationRobinetterie = () => {
 <div>
 <h5 className="text-white font-bold mb-6">Entreprise</h5>
 <ul className="space-y-4 text-sm">
-<li><a className="hover:text-primary transition-colors" href="#">Ã€ Propos</a></li>
+<li><a className="hover:text-primary transition-colors" href="#">À Propos</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Recrutement</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Mentions Légales</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Contact</a></li>
@@ -271,7 +271,7 @@ const InstallationRobinetterie = () => {
 </div>
 </div>
 <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
-<p>Â© 2024 PlumbPro France. Tous droits réservés.</p>
+<p>© 2024 PlumbPro France. Tous droits réservés.</p>
 <div className="flex gap-6">
 <a href="#">Cookies</a>
 <a href="#">Confidentialité</a>

@@ -131,7 +131,7 @@ const PoseDePapierPeint = () => {
 <span className="text-primary font-bold">22â‚¬ / mÂ²</span>
 </div>
 <div className="flex items-center justify-between p-4 bg-slate-50 rounded-xl">
-<span className="text-slate-700">Dépose ancien revÃªtement</span>
+<span className="text-slate-700">Dépose ancien revêtement</span>
 <span className="text-primary font-bold">8â‚¬ / mÂ²</span>
 </div>
 </div>
@@ -193,7 +193,7 @@ const PoseDePapierPeint = () => {
 </main>
 {/*  Footer Small  */}
 <footer className="mt-auto border-t border-slate-200 px-6 py-6 text-center text-slate-500 text-sm">
-<p>Â© 2024 DécoExpert - Service de pose de papier peint professionnel.</p>
+<p>© 2024 DécoExpert - Service de pose de papier peint professionnel.</p>
 </footer>
 </div>
 </div>

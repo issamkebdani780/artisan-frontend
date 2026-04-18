@@ -78,7 +78,7 @@ const ResultatsDeRechercheArtisansVerifies = () => {
 </label>
 <label className="flex items-center gap-2 cursor-pointer">
 <input className="rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/>
-<span className="text-sm">Ã‰lectricité</span>
+<span className="text-sm">Électricité</span>
 </label>
 <label className="flex items-center gap-2 cursor-pointer">
 <input className="rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/>
@@ -178,7 +178,7 @@ const ResultatsDeRechercheArtisansVerifies = () => {
 <div className="flex justify-between items-start mb-4">
 <div className="flex flex-col gap-1">
 <h3 className="text-xl font-bold">Marc Lefebvre</h3>
-<p className="text-sm text-slate-500">Expert Ã‰lectricien</p>
+<p className="text-sm text-slate-500">Expert Électricien</p>
 </div>
 <div className="flex items-center gap-1 bg-amber-50 text-amber-600 px-2 py-1 rounded-lg text-sm font-bold">
 <span className="material-symbols-outlined text-sm" >star</span>
@@ -314,7 +314,7 @@ const ResultatsDeRechercheArtisansVerifies = () => {
 <a className="hover:text-primary transition-colors" href="#">Politique de Confidentialité</a>
 <a className="hover:text-primary transition-colors" href="#">Support</a>
 </div>
-<div>Â© 2024 Artisans Pro. Tous droits réservés.</div>
+<div>© 2024 Artisans Pro. Tous droits réservés.</div>
 </div>
 </footer>
 </div>

@@ -17,7 +17,7 @@ const DTailsDuServiceElectricite = () => {
 <nav className="hidden md:flex items-center gap-6">
 <a className="text-sm font-medium transition-colors hover:text-[#f39c12]" href="#">Services</a>
 <a className="text-sm font-medium transition-colors hover:text-[#f39c12]" href="#">Comment ça marche</a>
-<a className="text-sm font-medium transition-colors hover:text-[#f39c12]" href="#">Ã‰lectriciens</a>
+<a className="text-sm font-medium transition-colors hover:text-[#f39c12]" href="#">Électriciens</a>
 <a className="text-sm font-medium transition-colors hover:text-[#f39c12]" href="#">FAQ</a>
 </nav>
 </div>
@@ -41,7 +41,7 @@ const DTailsDuServiceElectricite = () => {
 <div className="absolute inset-0 z-20 flex items-center">
 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
 <div className="max-w-2xl bg-white/10 backdrop-blur-md p-8 rounded-xl border border-white/20">
-<h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Travaux d'Ã‰lectricité</h1>
+<h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Travaux d'Électricité</h1>
 <p className="text-lg text-slate-100 mb-8">Installation, dépannage et mise aux normes par des experts certifiés. Un service rapide, transparent et garanti pour tous vos besoins électriques.</p>
 <div className="flex gap-4">
 <button className="rounded-lg px-8 py-3 font-bold text-white shadow-lg transition-transform active:scale-95 bg-[#f39c12] hover:bg-[#f39c12]/90">Réserver maintenant</button>
@@ -99,7 +99,7 @@ const DTailsDuServiceElectricite = () => {
 <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
 <div className="flex justify-between items-start mb-4">
 <span className="material-symbols-outlined text-4xl text-[#f39c12]">build_circle</span>
-<span className="text-sm font-bold px-3 py-1 rounded-full text-[#f39c12] bg-[#f39c12]/10">Ã€ partir de 50â‚¬</span>
+<span className="text-sm font-bold px-3 py-1 rounded-full text-[#f39c12] bg-[#f39c12]/10">À partir de 50â‚¬</span>
 </div>
 <h3 className="text-lg font-bold mb-2">Diagnostic &amp; Réparation</h3>
 <p className="text-slate-600 text-sm mb-6">Recherche de panne, remplacement de fusibles ou réparation de tableau électrique.</p>
@@ -108,7 +108,7 @@ const DTailsDuServiceElectricite = () => {
 <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
 <div className="flex justify-between items-start mb-4">
 <span className="material-symbols-outlined text-4xl text-[#f39c12]">light</span>
-<span className="text-sm font-bold px-3 py-1 rounded-full text-[#f39c12] bg-[#f39c12]/10">Ã€ partir de 45â‚¬</span>
+<span className="text-sm font-bold px-3 py-1 rounded-full text-[#f39c12] bg-[#f39c12]/10">À partir de 45â‚¬</span>
 </div>
 <h3 className="text-lg font-bold mb-2">Installation Luminaires</h3>
 <p className="text-slate-600 text-sm mb-6">Pose de lustres, spots LED, appliques murales ou remplacement d'interrupteurs.</p>
@@ -145,7 +145,7 @@ const DTailsDuServiceElectricite = () => {
 </div>
 <div className="p-6">
 <h3 className="text-xl font-bold mb-1 text-slate-900">Jean-Pierre Durand</h3>
-<p className="text-sm font-medium mb-4 text-[#f39c12]">Ã‰lectricien certifié - 15 ans d'exp.</p>
+<p className="text-sm font-medium mb-4 text-[#f39c12]">Électricien certifié - 15 ans d'exp.</p>
 <p className="text-slate-600 text-sm mb-6 line-clamp-2">Spécialiste en domotique et rénovation complète. Travail soigné et respect des délais garanti.</p>
 <button className="w-full py-3 rounded-xl text-white font-bold transition-all flex items-center justify-center gap-2 bg-[#f39c12] hover:bg-[#f39c12]/90">
 <span className="material-symbols-outlined">calendar_today</span> Réserver
@@ -211,7 +211,7 @@ const DTailsDuServiceElectricite = () => {
 <span className="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
 </summary>
 <div className="mt-4 text-slate-600 text-sm leading-relaxed">
-                                Les prix affichés "Ã€ partir de" incluent le diagnostic et la main-d'Ã…"uvre de base. Le coût des pièces spécifiques (interrupteurs, disjoncteurs, câbles) est facturé en sus après validation du devis sur place.
+                                Les prix affichés "À partir de" incluent le diagnostic et la main-d'Å"uvre de base. Le coût des pièces spécifiques (interrupteurs, disjoncteurs, câbles) est facturé en sus après validation du devis sur place.
                             </div>
 </details>
 <details className="group bg-slate-50 rounded-xl border border-slate-200 p-4">
@@ -249,7 +249,7 @@ const DTailsDuServiceElectricite = () => {
 <div>
 <h4 className="font-bold mb-6 text-slate-900">Services</h4>
 <ul className="space-y-4 text-sm text-slate-500">
-<li><a className="transition-colors hover:text-[#f39c12]" href="#">Ã‰lectricité</a></li>
+<li><a className="transition-colors hover:text-[#f39c12]" href="#">Électricité</a></li>
 <li><a className="transition-colors hover:text-[#f39c12]" href="#">Plomberie</a></li>
 <li><a className="transition-colors hover:text-[#f39c12]" href="#">Chauffage</a></li>
 <li><a className="transition-colors hover:text-[#f39c12]" href="#">Peinture</a></li>
@@ -258,7 +258,7 @@ const DTailsDuServiceElectricite = () => {
 <div>
 <h4 className="font-bold mb-6 text-slate-900">Entreprise</h4>
 <ul className="space-y-4 text-sm text-slate-500">
-<li><a className="transition-colors hover:text-[#f39c12]" href="#">Ã€ propos</a></li>
+<li><a className="transition-colors hover:text-[#f39c12]" href="#">À propos</a></li>
 <li><a className="transition-colors hover:text-[#f39c12]" href="#">Recrutement</a></li>
 <li><a className="transition-colors hover:text-[#f39c12]" href="#">Blog</a></li>
 <li><a className="transition-colors hover:text-[#f39c12]" href="#">Presse</a></li>
@@ -275,7 +275,7 @@ const DTailsDuServiceElectricite = () => {
 </div>
 </div>
 <div className="border-t border-slate-100 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-400">
-<p>Â© 2024 ArtisanPro. Tous droits réservés.</p>
+<p>© 2024 ArtisanPro. Tous droits réservés.</p>
 <div className="flex gap-6">
 <a className="hover:text-[#f39c12]" href="#">Confidentialité</a>
 <a className="hover:text-[#f39c12]" href="#">Mentions légales</a>

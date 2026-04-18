@@ -79,7 +79,7 @@ const ConfirmationDeCreationDeCompte = () => {
 <a className="hover:text-primary transition-colors" href="#">Confidentialité</a>
 </div>
 <p className="text-sm text-slate-400">
-                    Â© 2024 ArtisanDirect. Tous droits réservés.
+                    © 2024 ArtisanDirect. Tous droits réservés.
                 </p>
 </div>
 </div>

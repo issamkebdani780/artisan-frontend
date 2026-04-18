@@ -15,7 +15,7 @@ const PeinturePlafond = () => {
 </div>
 <nav className="hidden md:flex items-center gap-8">
 <a className="text-slate-600 text-sm font-medium hover:text-primary" href="#">Expertise</a>
-<a className="text-slate-600 text-sm font-medium hover:text-primary" href="#">Ã‰quipement</a>
+<a className="text-slate-600 text-sm font-medium hover:text-primary" href="#">Équipement</a>
 <a className="text-slate-600 text-sm font-medium hover:text-primary" href="#">Tarifs</a>
 <a className="text-slate-600 text-sm font-medium hover:text-primary" href="#">Peintres</a>
 </nav>
@@ -68,7 +68,7 @@ const PeinturePlafond = () => {
 </a>
 <a className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-primary/10 hover:text-primary transition-colors" href="#">
 <span className="material-symbols-outlined">wallpaper</span>
-<p className="text-sm font-semibold">RevÃªtements</p>
+<p className="text-sm font-semibold">Revêtements</p>
 </a>
 <a className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-primary/10 hover:text-primary transition-colors mt-4" href="#">
 <span className="material-symbols-outlined">settings</span>
@@ -191,7 +191,7 @@ const PeinturePlafond = () => {
 <p className="text-slate-500 text-sm mb-4">Après dégâts des eaux ou taches rebelles.</p>
 <div className="text-3xl font-black text-red-500 mb-4">32â‚¬ <span className="text-sm text-slate-400">/ mÂ²</span></div>
 <ul className="text-xs space-y-2 text-slate-600">
-<li>• Traitement anti-salpÃªtre</li>
+<li>• Traitement anti-salpêtre</li>
 <li>• Durcisseur de fonds</li>
 <li>• Peinture hydrofuge</li>
 </ul>

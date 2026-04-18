@@ -63,7 +63,7 @@ const ServicedetailsMontage = () => {
 <span className="mx-2 text-slate-300">/</span>
 <a className="hover:text-primary" href="#">Montage de meubles</a>
 <span className="mx-2 text-slate-300">/</span>
-<span className="text-slate-900">Ã‰tagères</span>
+<span className="text-slate-900">Étagères</span>
 </nav>
 {/*  Expert Badges  */}
 <div className="flex flex-wrap gap-3">
@@ -148,7 +148,7 @@ const ServicedetailsMontage = () => {
 <h3 className="text-lg font-bold text-slate-900">Estimation de prix</h3>
 <div className="mt-6 space-y-4">
 <div className="flex justify-between items-center p-3 rounded-lg bg-slate-50">
-<span className="text-sm font-medium">Ã€ l'unité</span>
+<span className="text-sm font-medium">À l'unité</span>
 <span className="text-lg font-bold text-primary">Dès 15â‚¬</span>
 </div>
 <div className="flex justify-between items-center p-3 rounded-lg bg-slate-50">
@@ -216,7 +216,7 @@ const ServicedetailsMontage = () => {
 <div>
 <h4 className="font-bold mb-4">Société</h4>
 <ul className="text-sm space-y-2 text-slate-500">
-<li><a className="hover:text-primary" href="#">Ã€ propos</a></li>
+<li><a className="hover:text-primary" href="#">À propos</a></li>
 <li><a className="hover:text-primary" href="#">Jobs</a></li>
 <li><a className="hover:text-primary" href="#">Presse</a></li>
 </ul>
@@ -231,7 +231,7 @@ const ServicedetailsMontage = () => {
 </div>
 </div>
 <div className="mx-auto max-w-7xl mt-12 pt-8 border-t border-slate-100 text-center text-xs text-slate-400">
-                Â© 2024 BricolagePro Inc. Tous droits réservés.
+                © 2024 BricolagePro Inc. Tous droits réservés.
             </div>
 </footer>
 </div>

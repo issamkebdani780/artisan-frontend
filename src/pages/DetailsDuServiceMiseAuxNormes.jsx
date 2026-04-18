@@ -40,7 +40,7 @@ const DetailsDuServiceMiseAuxNormes = () => {
 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
 <div className="relative z-10 space-y-4 max-w-2xl">
 <div className="inline-flex items-center px-3 py-1 rounded-full bg-primary text-white text-xs font-bold uppercase tracking-wider">Norme NF C 15-100</div>
-<h1 className="text-white text-4xl md:text-5xl font-black leading-tight">Mise aux Normes Ã‰lectriques</h1>
+<h1 className="text-white text-4xl md:text-5xl font-black leading-tight">Mise aux Normes Électriques</h1>
 <p className="text-slate-200 text-lg">Protégez votre foyer et vos proches avec une installation électrique certifiée, sûre et performante.</p>
 </div>
 </div>
@@ -159,7 +159,7 @@ const DetailsDuServiceMiseAuxNormes = () => {
 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 <div className="bg-white p-8 rounded-2xl shadow-sm italic relative">
 <span className="material-symbols-outlined text-primary/20 text-6xl absolute top-4 left-4">format_quote</span>
-<p className="relative z-10 text-slate-600 mb-6">"Ã‰quipe très professionnelle. Le diagnostic a été clair et les travaux de mise aux normes de mon appartement ancien ont été réalisés proprement et dans les délais. Je recommande VoltExpert sans hésiter."</p>
+<p className="relative z-10 text-slate-600 mb-6">"Équipe très professionnelle. Le diagnostic a été clair et les travaux de mise aux normes de mon appartement ancien ont été réalisés proprement et dans les délais. Je recommande VoltExpert sans hésiter."</p>
 <div className="flex items-center gap-4">
 <div className="size-12 rounded-full bg-slate-200 bg-cover bg-center" data-alt="Portrait of a satisfied customer" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCbO5w2xHXuSNubH8HOlN4roEaVZxa9P0SFvJdkkLWMKTjeVw3OIdWNVqBJ-pOBd0xZS_vQEC7FHk86_yvJdVAJaN5G_Qk31ftOAfeuR24TkDigAcjk-tw9LTMWnLn1_VCyUZmFX1ShDK0ZPCWkYpXl4fbSmfXEbr0Ti0iFuz5iek6NBGuYlA_HOyMYmRbSlSXfqKeS7HflImkk60fy5iYCi4d0XQw5i8ExYxXO_Dj2njqZUVQnb9b0hBK4tbp1pkiEwfVzEUFp00u5");'></div>
 <div>
@@ -199,7 +199,7 @@ const DetailsDuServiceMiseAuxNormes = () => {
 <li><a className="hover:text-primary transition-colors" href="#">Mise aux normes</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Dépannage 24/7</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Domotique</a></li>
-<li><a className="hover:text-primary transition-colors" href="#">Ã‰clairage LED</a></li>
+<li><a className="hover:text-primary transition-colors" href="#">Éclairage LED</a></li>
 </ul>
 </div>
 <div>
@@ -220,7 +220,7 @@ const DetailsDuServiceMiseAuxNormes = () => {
 </div>
 </div>
 <div className="border-t border-slate-800 mt-12 pt-8 text-center text-slate-500 text-sm">
-                Â© 2024 VoltExpert. Tous droits réservés.
+                © 2024 VoltExpert. Tous droits réservés.
             </div>
 </footer>
 </div>

@@ -88,7 +88,7 @@ const AccueilTableauDeBordAvecGraphiqueDeRevenus = () => {
 </div><div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm mb-8">
 <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
 <div>
-<h3 className="text-lg font-bold text-slate-900">Ã‰volution des revenus</h3>
+<h3 className="text-lg font-bold text-slate-900">Évolution des revenus</h3>
 <p className="text-sm text-slate-500">Revenus mensuels sur les 6 derniers mois</p>
 </div>
 <div className="flex items-center gap-4">
@@ -205,7 +205,7 @@ const AccueilTableauDeBordAvecGraphiqueDeRevenus = () => {
 <img alt="Mission" className="w-full h-full object-cover" data-alt="Electrical wiring maintenance" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHyJmuHXj1suDm4lF9QUdZzfGj9nkb7YOYyopISV11l21Z_HmQY6fm3n1NqcwmBB3LVmofsv3pDymbpXU6k1b-0_Wp8tnhH6CMBroiEW2TTohF8JRGeCwjtWWmJIjIvA8X4-V0vdrRi6YS_ovoisbhSqkzBffjTke4BGb6ts-3IK5rSOJZcLVR8W2tXnKSmNX2BoDeCZEw9eA4ysST7jiaftQOMYHJLgqZoylCb4f5YRHFx25qSSojAfvWQH8mQpq2gg4PqSckwaIm"/>
 </div>
 <div className="flex-1">
-<h4 className="font-bold text-slate-900">Installation Ã‰lectrique Bureau</h4>
+<h4 className="font-bold text-slate-900">Installation Électrique Bureau</h4>
 <p className="text-sm text-slate-500">Client: SARL Tech • 09 Oct 2023</p>
 </div>
 <div className="text-right">

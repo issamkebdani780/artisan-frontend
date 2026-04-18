@@ -22,7 +22,7 @@ const AboutUs = () => {
             </span>
           </h1>
           <p className="text-lg md:text-xl text-slate-500 max-w-3xl mx-auto leading-relaxed font-medium">
-            Mihnati est née d'une idée simple : trouver un artisan de confiance ne devrait pas Ãªtre un parcours du combattant. Nous construisons le futur des services à domicile en Algérie.
+            Mihnati est née d'une idée simple : trouver un artisan de confiance ne devrait pas être un parcours du combattant. Nous construisons le futur des services à domicile en Algérie.
           </p>
         </div>
       </section>
@@ -110,7 +110,7 @@ const AboutUs = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {[
-            { title: "Transparence", desc: "Pas de frais cachés, des prix clairs et des avis honnÃªtes pour chaque artisan.", icon: "visibility", color: "text-indigo-600" },
+            { title: "Transparence", desc: "Pas de frais cachés, des prix clairs et des avis honnêtes pour chaque artisan.", icon: "visibility", color: "text-indigo-600" },
             { title: "Excellence", desc: "Nous visons l'excellence dans chaque interaction, du clic sur le site au coup de marteau.", icon: "star_rate", color: "text-amber-500" },
             { title: "Proximité", desc: "Nous favorisons l'économie locale en mettant en avant les artisans de votre quartier.", icon: "location_home", color: "text-emerald-600" }
           ].map((val, i) => (

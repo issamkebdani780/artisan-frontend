@@ -176,7 +176,7 @@ const ProArtisan = () => {
 </main>
 {/*  Footer Space  */}
 <footer className="mt-auto py-10 px-4 lg:px-20 text-center text-slate-400 text-sm border-t border-slate-100">
-<p>Â© 2024 Pro Artisan Global. The Premium Professional Network.</p>
+<p>© 2024 Pro Artisan Global. The Premium Professional Network.</p>
 </footer>
 </div>
 

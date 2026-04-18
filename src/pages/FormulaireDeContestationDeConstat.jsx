@@ -57,9 +57,9 @@ const FormulaireDeContestationDeConstat = () => {
 <section>
 <div className="flex items-center gap-2 mb-4">
 <span className="material-symbols-outlined text-primary">checklist</span>
-<h3 className="text-lg font-bold">Ã‰léments à contester</h3>
+<h3 className="text-lg font-bold">Éléments à contester</h3>
 </div>
-<p className="text-sm text-slate-500 mb-4">Sélectionnez les preuves administratives avec lesquelles vous n'Ãªtes pas d'accord :</p>
+<p className="text-sm text-slate-500 mb-4">Sélectionnez les preuves administratives avec lesquelles vous n'êtes pas d'accord :</p>
 <div className="grid grid-cols-1 gap-3">
 <label className="flex items-center gap-4 p-4 rounded-xl border border-slate-200 hover:bg-slate-50 cursor-pointer transition-colors group">
 <input className="size-5 rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/>
@@ -178,7 +178,7 @@ const FormulaireDeContestationDeConstat = () => {
 </div>
 </div>
 <div className="max-w-7xl mx-auto px-4 mt-12 pt-8 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-4">
-<p className="text-xs text-slate-400">Â© 2023 ArtisanDirect SAS. Tous droits réservés.</p>
+<p className="text-xs text-slate-400">© 2023 ArtisanDirect SAS. Tous droits réservés.</p>
 <div className="flex gap-4">
 <span className="size-8 rounded-full bg-slate-100 flex items-center justify-center cursor-pointer hover:bg-primary hover:text-white transition-all">
 <span className="material-symbols-outlined text-sm">public</span>

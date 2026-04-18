@@ -93,7 +93,7 @@ const ResultatsDeRechercheDisponibleCeMois = () => {
 <div className="flex items-center justify-between text-slate-600 cursor-pointer hover:text-primary mb-2">
 <div className="flex items-center gap-2 font-bold">
 <span className="material-symbols-outlined">star</span>
-<span className="text-sm uppercase tracking-wider">Ã‰valuations</span>
+<span className="text-sm uppercase tracking-wider">Évaluations</span>
 </div>
 <span className="material-symbols-outlined">expand_more</span>
 </div>
@@ -114,7 +114,7 @@ const ResultatsDeRechercheDisponibleCeMois = () => {
 <div className="space-y-1">
 <h1 className="text-3xl font-black tracking-tight">Artisans disponibles ce mois</h1>
 <p className="text-slate-500 max-w-xl">
-                                Découvrez nos professionnels qualifiés et vérifiés, prÃªts à intervenir sur vos projets immédiatement.
+                                Découvrez nos professionnels qualifiés et vérifiés, prêts à intervenir sur vos projets immédiatement.
                             </p>
 </div>
 <div className="flex items-center gap-2 bg-white border border-slate-200 rounded-lg px-3 py-2 text-sm font-semibold">
@@ -196,7 +196,7 @@ const ResultatsDeRechercheDisponibleCeMois = () => {
 </div>
 <p className="text-slate-500 text-sm font-medium flex items-center gap-1">
 <span className="material-symbols-outlined text-sm">bolt</span>
-                                        Ã‰lectricité Générale
+                                        Électricité Générale
                                     </p>
 </div>
 <div className="text-right">
@@ -438,7 +438,7 @@ const ResultatsDeRechercheDisponibleCeMois = () => {
 <h4 className="text-sm font-black uppercase tracking-widest mb-6">Artisans</h4>
 <ul className="space-y-4">
 <li><a className="text-slate-500 text-sm hover:text-primary transition-colors" href="#">Plombiers</a></li>
-<li><a className="text-slate-500 text-sm hover:text-primary transition-colors" href="#">Ã‰lectriciens</a></li>
+<li><a className="text-slate-500 text-sm hover:text-primary transition-colors" href="#">Électriciens</a></li>
 <li><a className="text-slate-500 text-sm hover:text-primary transition-colors" href="#">Peintres</a></li>
 <li><a className="text-slate-500 text-sm hover:text-primary transition-colors" href="#">Menuisiers</a></li>
 </ul>
@@ -454,7 +454,7 @@ const ResultatsDeRechercheDisponibleCeMois = () => {
 </div>
 </div>
 <div className="pt-8 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-4">
-<p className="text-slate-400 text-xs">Â© 2024 ArtisanDirect. Tous droits réservés.</p>
+<p className="text-slate-400 text-xs">© 2024 ArtisanDirect. Tous droits réservés.</p>
 <div className="flex items-center gap-6">
 <img className="h-4 grayscale opacity-50" data-alt="Paypal logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOZy1E-PHlRXoG7mxvr6bCWy5oZAokUBGh9797lakjUcbvGzrtWPaTZiXqJu7qTxJ07ZVmQcQU0MANYthQWzfrUuZaYUMvfeiwfIXmTUJnjBdBcrQEVB-FoFjtshth54X-JLQfWNq_vBDobiO-TPInMjQbUWYQOT56fm6wS28G8sIqPPYhivqr5oTk7odrFB_4YEke5-zwo33XsIIN9mMS0nHFsDklNkjKtRpdo57XJUPn6Lr1JHtUzZ-RAmxIF4R1hMgQ-8I4RPxk"/>
 <img className="h-4 grayscale opacity-50" data-alt="Visa logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbbkwuj-ceSml_T-11J0uTmPH0OWmkf-UcbKdoVK5gpVBwix0e8pMHIOJj52An_hpwPhzbbYJCCOWyhHBcRD_YtJrFbR9xYE_v8R1JKqDNwnubUli-1tULySiZp4nXE9bJAs_PrPTgfNj_5W0j3qYpIp3x3enq6KmegJZaOPqzhhXaxIw_mT33Cy4yHWiEMFfexwPe9FP67D11ZWPRsE4S5BVwlS8_M44Vl4yCxB24IydIni5RkR8nOIiOVYsgTQLKXXIULcYgyxMV"/>

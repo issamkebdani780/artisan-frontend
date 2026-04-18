@@ -38,7 +38,7 @@ const DetailsDuServiceElectricite = () => {
 <div className="bg-cover bg-center flex flex-col justify-end overflow-hidden bg-slate-200 @[480px]:rounded-xl min-h-[400px] relative group" style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 50%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuC3GPfsfxp_J7HrDQpWsw1cqF-LpbBUipZzrmr1CNt1gO3QsKtF_l0k2ooZm6ZJRs-DELKL-tEGpzNfBciWg3CmYZnAxdPEteSrQ0_Xt-E9Lj4WrQK8tLx79LgYuiz8qlomcwnMFt-Nw017HY7W1P2LF0NmVer9dR9cxoB8ILGb089IqsJHQIiEpCYLuQgt0boXvLJopcmHDsjq7IB_zJw9bBZ9SRZMUtw_M4a7ORP2CJ__wP5M1ar4BIYTzqEodED0ah_llI8U240H");'>
 <div className="flex flex-col p-8 gap-2">
 <span className="bg-primary text-white text-xs font-bold px-3 py-1 rounded-full w-fit uppercase tracking-widest">Service Premium</span>
-<h1 className="text-white text-4xl md:text-5xl font-black leading-tight tracking-tight">Dépannage et Installation Ã‰lectrique</h1>
+<h1 className="text-white text-4xl md:text-5xl font-black leading-tight tracking-tight">Dépannage et Installation Électrique</h1>
 <p className="text-slate-200 text-lg max-w-2xl">Sublimez votre intérieur avec une installation professionnelle, sécurisée et sur-mesure pour tous vos systèmes d'éclairage.</p>
 </div>
 </div>
@@ -47,7 +47,7 @@ const DetailsDuServiceElectricite = () => {
 {/*  CTA & Pricing Quick Stats  */}
 <div className="flex flex-wrap justify-between items-center gap-6 p-6 bg-white rounded-xl mt-6 border border-slate-100 shadow-sm">
 <div className="flex flex-col gap-1">
-<p className="text-slate-900 text-2xl font-bold">Ã€ partir de 45â‚¬ <span className="text-sm font-normal text-slate-500">/ prestation</span></p>
+<p className="text-slate-900 text-2xl font-bold">À partir de 45â‚¬ <span className="text-sm font-normal text-slate-500">/ prestation</span></p>
 <div className="flex items-center gap-2">
 <span className="material-symbols-outlined text-primary text-sm">verified_user</span>
 <p className="text-slate-600 text-sm">Assurance responsabilité civile incluse</p>
@@ -170,10 +170,10 @@ const DetailsDuServiceElectricite = () => {
 <div className="flex justify-between items-start mb-2">
 <h3 className="font-bold text-lg">Jean-Pierre Durand</h3>
 <div className="flex items-center gap-1 bg-green-100 text-green-700 px-2 py-0.5 rounded text-xs font-bold">
-<span className="material-symbols-outlined text-xs">verified</span> VÃ‰RIFIÃ‰
+<span className="material-symbols-outlined text-xs">verified</span> VÉRIFIÉ
                                         </div>
 </div>
-<p className="text-slate-500 text-sm mb-4">Ã‰lectricien certifié - 15 ans d'exp.</p>
+<p className="text-slate-500 text-sm mb-4">Électricien certifié - 15 ans d'exp.</p>
 <div className="flex items-center gap-1 text-primary mb-4">
 <span className="material-symbols-outlined text-sm">star</span>
 <span className="material-symbols-outlined text-sm">star</span>
@@ -192,7 +192,7 @@ const DetailsDuServiceElectricite = () => {
 <div className="flex justify-between items-start mb-2">
 <h3 className="font-bold text-lg">Marc Lefebvre</h3>
 <div className="flex items-center gap-1 bg-green-100 text-green-700 px-2 py-0.5 rounded text-xs font-bold">
-<span className="material-symbols-outlined text-xs">verified</span> VÃ‰RIFIÃ‰
+<span className="material-symbols-outlined text-xs">verified</span> VÉRIFIÉ
                                         </div>
 </div>
 <p className="text-slate-500 text-sm mb-4">Expert Dépannage Urgent</p>
@@ -214,7 +214,7 @@ const DetailsDuServiceElectricite = () => {
 <div className="flex justify-between items-start mb-2">
 <h3 className="font-bold text-lg">Sofiane Amari</h3>
 <div className="flex items-center gap-1 bg-green-100 text-green-700 px-2 py-0.5 rounded text-xs font-bold">
-<span className="material-symbols-outlined text-xs">verified</span> VÃ‰RIFIÃ‰
+<span className="material-symbols-outlined text-xs">verified</span> VÉRIFIÉ
                                         </div>
 </div>
 <p className="text-slate-500 text-sm mb-4">Spécialiste Installation Neuve</p>
@@ -307,7 +307,7 @@ const DetailsDuServiceElectricite = () => {
 </div>
 </div>
 <div className="max-w-[1024px] mx-auto mt-12 pt-8 border-t border-slate-100 text-center text-xs text-slate-400">
-                    Â© 2024 ArtisanPro. Tous droits réservés.
+                    © 2024 ArtisanPro. Tous droits réservés.
                 </div>
 </footer>
 </div>

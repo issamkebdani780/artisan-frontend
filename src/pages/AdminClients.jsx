@@ -40,7 +40,7 @@ const AdminClients = () => {
       await apiService.deleteUser(id);
       setClients(clients.filter(c => c.id !== id));
     } catch (err) {
-      alert('Ã‰chec de la suppression: ' + err.message);
+      alert('Échec de la suppression: ' + err.message);
     }
   };
 

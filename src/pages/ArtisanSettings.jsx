@@ -30,7 +30,7 @@ const ArtisanSettings = () => {
   const categoryGroups = [
     {
       group: "Menuiserie et Bois",
-      options: ["Menuisier ébéniste", "Menuisier de chantier (coffreur)", "Presseur de bois", "Décorateur bois intérieur", "Fabricant de portes et fenÃªtres en bois"]
+      options: ["Menuisier ébéniste", "Menuisier de chantier (coffreur)", "Presseur de bois", "Décorateur bois intérieur", "Fabricant de portes et fenêtres en bois"]
     },
     {
       group: "Ferronnerie et Soudure",
@@ -41,8 +41,8 @@ const ArtisanSettings = () => {
       options: ["Plombier sanitaire", "Plombier chauffage central", "Monteur de réseaux de gaz", "Installateur tuyauterie cuivre et PER", "Plombier maintenance eau"]
     },
     {
-      group: "Ã‰lectricité et Ã‰nergie",
-      options: ["Ã‰lectricien bâtiment", "Ã‰lectricien industriel", "Technicien solaire photovoltaïque", "Tireur de câbles et filerie", "Réparateur tableaux électriques"]
+      group: "Électricité et Énergie",
+      options: ["Électricien bâtiment", "Électricien industriel", "Technicien solaire photovoltaïque", "Tireur de câbles et filerie", "Réparateur tableaux électriques"]
     },
     {
       group: "Peinture et Plâtre",
@@ -70,7 +70,7 @@ const ArtisanSettings = () => {
     },
     {
       group: "Jardinage et Espaces Verts",
-      options: ["Jardinier paysagiste", "Ouvrier en aménagement des espaces verts", "Technicien en entretien des jardins", "Technicien en irrigation goutte-à-goutte et arrosage", "Ã‰lagueur et tailleur d'arbres et palmiers"]
+      options: ["Jardinier paysagiste", "Ouvrier en aménagement des espaces verts", "Technicien en entretien des jardins", "Technicien en irrigation goutte-à-goutte et arrosage", "Élagueur et tailleur d'arbres et palmiers"]
     }
   ];
 

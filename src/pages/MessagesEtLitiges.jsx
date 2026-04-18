@@ -127,7 +127,7 @@ const MessagesEtLitiges = () => {
 <span className="text-[10px] text-slate-400">22 Oct</span>
 </div>
 <p className="text-xs text-slate-500 truncate mt-0.5">Pouvez-vous confirmer la date de livraison?</p>
-<p className="text-[10px] text-slate-400 mt-1 uppercase tracking-wider font-bold">Escalier ChÃªne</p>
+<p className="text-[10px] text-slate-400 mt-1 uppercase tracking-wider font-bold">Escalier Chêne</p>
 </div>
 </div>
 </div>
@@ -188,7 +188,7 @@ const MessagesEtLitiges = () => {
 </div>
 <div className="space-y-1 text-right">
 <div className="bg-primary text-white p-4 rounded-2xl rounded-tr-none shadow-md">
-<p className="text-sm leading-relaxed">Bonjour Jean, merci pour votre retour. Quel bois aviez-vous en tÃªte ? Pour l'îlot, je recommande généralement du chÃªne massif pour la durabilité.</p>
+<p className="text-sm leading-relaxed">Bonjour Jean, merci pour votre retour. Quel bois aviez-vous en tête ? Pour l'îlot, je recommande généralement du chêne massif pour la durabilité.</p>
 </div>
 <div className="flex items-center justify-end gap-1">
 <span className="text-[10px] text-slate-400 font-medium">10:29</span>
@@ -212,7 +212,7 @@ const MessagesEtLitiges = () => {
 {/*  Input Area  */}
 <div className="p-6 bg-white border-t border-slate-200">
 <div className="bg-slate-50 rounded-2xl border border-slate-200 p-2">
-<textarea className="w-full bg-transparent border-none focus:ring-0 text-sm p-3 resize-none h-20" placeholder="Ã‰crivez votre message ici..." rows="1"></textarea>
+<textarea className="w-full bg-transparent border-none focus:ring-0 text-sm p-3 resize-none h-20" placeholder="Écrivez votre message ici..." rows="1"></textarea>
 <div className="flex items-center justify-between mt-2 px-2 pb-1">
 <div className="flex gap-1">
 <button className="w-8 h-8 flex items-center justify-center text-slate-400 hover:text-primary transition-colors">
@@ -243,7 +243,7 @@ const MessagesEtLitiges = () => {
 <p className="text-xs text-slate-500 mt-1">Client depuis Août 2023</p>
 <div className="flex justify-center gap-2 mt-4">
 <span className="bg-slate-100 text-[10px] font-bold px-2 py-1 rounded">PARTICULIER</span>
-<span className="bg-green-100 text-green-600 text-[10px] font-bold px-2 py-1 rounded">VÃ‰RIFIÃ‰</span>
+<span className="bg-green-100 text-green-600 text-[10px] font-bold px-2 py-1 rounded">VÉRIFIÉ</span>
 </div>
 </div>
 <div className="flex-1 overflow-y-auto p-6 space-y-6">

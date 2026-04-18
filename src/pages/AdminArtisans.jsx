@@ -41,7 +41,7 @@ const AdminArtisans = () => {
       await apiService.verifyArtisan(id);
       setArtisans(artisans.map(a => a.id === id ? { ...a, is_verified: 1 } : a));
     } catch (err) {
-      alert('Ã‰chec de la vérification');
+      alert('Échec de la vérification');
     }
   };
 
@@ -51,7 +51,7 @@ const AdminArtisans = () => {
       await apiService.refuseArtisan(id);
       setArtisans(artisans.map(a => a.id === id ? { ...a, is_verified: -1 } : a));
     } catch (err) {
-      alert('Ã‰chec du refus');
+      alert('Échec du refus');
     }
   };
 
@@ -61,7 +61,7 @@ const AdminArtisans = () => {
       await apiService.deleteUser(id);
       setArtisans(artisans.filter(a => a.id !== id));
     } catch (err) {
-      alert('Ã‰chec de la suppression: ' + err.message);
+      alert('Échec de la suppression: ' + err.message);
     }
   };
 
@@ -130,7 +130,7 @@ const AdminArtisans = () => {
                   <th className="px-8 py-5 text-[10px] font-black text-slate-400 uppercase tracking-widest border-b border-slate-100">Artisan</th>
                   <th className="px-8 py-5 text-[10px] font-black text-slate-400 uppercase tracking-widest border-b border-slate-100">Spécialité</th>
                   <th className="px-8 py-5 text-[10px] font-black text-slate-400 uppercase tracking-widest border-b border-slate-100">Statut</th>
-                  <th className="px-8 py-5 text-[10px] font-black text-slate-400 uppercase tracking-widest border-b border-slate-100">Ã‰valuation</th>
+                  <th className="px-8 py-5 text-[10px] font-black text-slate-400 uppercase tracking-widest border-b border-slate-100">Évaluation</th>
                   <th className="px-8 py-5 text-[10px] font-black text-slate-400 uppercase tracking-widest border-b border-slate-100">Inscrit le</th>
                   <th className="px-8 py-5 text-[10px] font-black text-slate-400 uppercase tracking-widest border-b border-slate-100 text-right">Actions</th>
                 </tr>
@@ -159,7 +159,7 @@ const AdminArtisans = () => {
                       </div>
                     </td>
                     <td className="px-8 py-6 font-bold text-sm text-slate-600">
-                      {(artisan.specialty || 'Général').replace(/é/g, 'E').replace(/è/g, 'E').replace(/à/g, 'A').replace(/Ãƒ/g, 'E')}
+                      {(artisan.specialty || 'Général').replace(/é/g, 'E').replace(/è/g, 'E').replace(/à/g, 'A').replace(/Ã/g, 'E')}
                     </td>
                     <td className="px-8 py-6">
                       <span className={`px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-tighter ${artisan.is_verified === 1 ? 'bg-emerald-100 text-emerald-700' : artisan.is_verified === -1 ? 'bg-rose-100 text-rose-700' : 'bg-amber-100 text-amber-700'}`}>

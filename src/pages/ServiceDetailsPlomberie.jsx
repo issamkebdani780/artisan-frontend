@@ -182,7 +182,7 @@ const ServiceDetailsPlomberie = () => {
 </div>
 <div className="p-8 rounded-2xl bg-white border border-primary/5 shadow-sm italic text-slate-700 relative">
 <span className="material-symbols-outlined text-primary/20 text-6xl absolute top-4 right-4">format_quote</span>
-                                "Prix conforme au devis annoncé. Installation d'un nouveau chauffe-eau en un temps record. Ã‰quipe sérieuse et ponctuelle."
+                                "Prix conforme au devis annoncé. Installation d'un nouveau chauffe-eau en un temps record. Équipe sérieuse et ponctuelle."
                                 <div className="mt-6 flex items-center gap-3 not-italic">
 <div className="w-10 h-10 rounded-full bg-primary/20"></div>
 <div>
@@ -227,7 +227,7 @@ const ServiceDetailsPlomberie = () => {
 </div>
 <div className="p-6">
 <h4 className="font-bold mb-2">Secteur d'intervention</h4>
-<p className="text-slate-600 text-sm">Nous intervenons dans toute l'ÃŽle-de-France et les grandes métropoles.</p>
+<p className="text-slate-600 text-sm">Nous intervenons dans toute l'Île-de-France et les grandes métropoles.</p>
 </div>
 </div>
 </div>
@@ -278,7 +278,7 @@ const ServiceDetailsPlomberie = () => {
 </div>
 </div>
 <div className="mt-16 pt-8 border-t border-white/5 text-center text-xs">
-                Â© 2024 Plomberie Pro. Tous droits réservés.
+                © 2024 Plomberie Pro. Tous droits réservés.
             </div>
 </footer>
 </div>

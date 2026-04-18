@@ -125,7 +125,7 @@ const NettoyageProfond = () => {
                                 </div>
 <div className="flex gap-3 items-start text-sm text-slate-600">
 <span className="material-symbols-outlined text-primary scale-90">check_circle</span>
-                                    Rails de fenÃªtres &amp; plinthes
+                                    Rails de fenêtres &amp; plinthes
                                 </div>
 </div>
 <button className="mt-auto w-full py-3 rounded-lg bg-primary text-white font-bold hover:opacity-90 transition-opacity">Réserver</button>
@@ -184,7 +184,7 @@ const NettoyageProfond = () => {
 <div className="bg-primary/10 text-primary size-12 rounded-xl flex items-center justify-center">
 <span className="material-symbols-outlined">window</span>
 </div>
-<h4 className="font-bold text-slate-900">FenÃªtres</h4>
+<h4 className="font-bold text-slate-900">Fenêtres</h4>
 <p className="text-sm text-slate-500">Nettoyage des vitres recto/verso et des encadrements PVC/Alu.</p>
 </div>
 </div>
@@ -260,7 +260,7 @@ const NettoyageProfond = () => {
 <div className="size-16 rounded-full bg-white/20 flex items-center justify-center backdrop-blur-sm">
 <span className="material-symbols-outlined text-3xl">eco</span>
 </div>
-<h4 className="font-bold text-xl">Produits Ã‰co</h4>
+<h4 className="font-bold text-xl">Produits Éco</h4>
 <p className="text-teal-100 text-sm">Utilisation exclusive de produits certifiés non-toxiques.</p>
 </div>
 <div className="flex flex-col items-center gap-4">
@@ -306,7 +306,7 @@ const NettoyageProfond = () => {
 </div>
 </section>
 <footer className="p-8 border-t border-teal-100 flex flex-col md:flex-row justify-between items-center gap-4 text-slate-500 text-sm">
-<p>Â© 2024 EcoClean Services. Tous droits réservés.</p>
+<p>© 2024 EcoClean Services. Tous droits réservés.</p>
 <div className="flex gap-6">
 <a className="hover:text-primary transition-colors" href="#">Confidentialité</a>
 <a className="hover:text-primary transition-colors" href="#">CGV</a>

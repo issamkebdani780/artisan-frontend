@@ -117,7 +117,7 @@ const PlumbingCategory = () => {
                                 Détection non-destructive et colmatage immédiat de vos tuyauteries et robinetteries.
                             </p>
 <span className="text-sm font-bold text-primary group-hover:gap-2 flex items-center gap-1 transition-all">
-                                Ã€ partir de 89â‚¬ <span className="material-symbols-outlined text-sm">chevron_right</span>
+                                À partir de 89â‚¬ <span className="material-symbols-outlined text-sm">chevron_right</span>
 </span>
 </div>
 {/*  Card 2  */}
@@ -143,7 +143,7 @@ const PlumbingCategory = () => {
                                 Canalisations obstruées, évacuations lentes : intervention haute pression disponible.
                             </p>
 <span className="text-sm font-bold text-primary group-hover:gap-2 flex items-center gap-1 transition-all">
-                                Ã€ partir de 120â‚¬ <span className="material-symbols-outlined text-sm">chevron_right</span>
+                                À partir de 120â‚¬ <span className="material-symbols-outlined text-sm">chevron_right</span>
 </span>
 </div>
 </div>
@@ -276,7 +276,7 @@ const PlumbingCategory = () => {
 <div>
 <h5 className="font-bold mb-6">Compagnie</h5>
 <ul className="space-y-4 text-sm text-slate-500">
-<li><a className="hover:text-primary" href="#">Ã€ propos</a></li>
+<li><a className="hover:text-primary" href="#">À propos</a></li>
 <li><a className="hover:text-primary" href="#">Nos Réalisations</a></li>
 <li><a className="hover:text-primary" href="#">Recrutement</a></li>
 <li><a className="hover:text-primary" href="#">Contact</a></li>
@@ -291,7 +291,7 @@ const PlumbingCategory = () => {
                             </p>
 <p className="flex items-center gap-2">
 <span className="material-symbols-outlined text-primary text-lg">location_on</span>
-                                Paris &amp; ÃŽle-de-France
+                                Paris &amp; Île-de-France
                             </p>
 <div className="flex gap-4 pt-2">
 <a className="h-8 w-8 rounded-full bg-slate-200 flex items-center justify-center text-slate-600" href="#">
@@ -305,7 +305,7 @@ const PlumbingCategory = () => {
 </div>
 </div>
 <div className="mt-12 pt-8 border-t border-slate-200 text-center text-xs text-slate-500">
-                    Â© 2024 Plomberie Pro. Tous droits réservés. Mentions Légales | Cookies
+                    © 2024 Plomberie Pro. Tous droits réservés. Mentions Légales | Cookies
                 </div>
 </div>
 </footer>

@@ -140,7 +140,7 @@ const PerformanceExportPdf = () => {
 {/*  Line Chart: Monthly Revenue  */}
 <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
 <div className="flex items-center justify-between mb-6">
-<h3 className="font-bold text-slate-800">Ã‰volution des Revenus</h3>
+<h3 className="font-bold text-slate-800">Évolution des Revenus</h3>
 <button className="text-slate-400 hover:text-primary"><span className="material-symbols-outlined">more_horiz</span></button>
 </div>
 <div className="h-64 relative chart-container rounded-lg border border-primary/10 flex items-end justify-between px-4 pb-2">
@@ -288,7 +288,7 @@ const PerformanceExportPdf = () => {
 <td className="px-6 py-4 text-sm text-slate-500">09 Oct 2023</td>
 <td className="px-6 py-4 text-sm font-bold">15,00 â‚¬</td>
 <td className="px-6 py-4">
-<span className="px-2.5 py-1 rounded-full text-[10px] font-bold bg-red-500/10 text-red-500 uppercase tracking-wider">Ã‰choué</span>
+<span className="px-2.5 py-1 rounded-full text-[10px] font-bold bg-red-500/10 text-red-500 uppercase tracking-wider">Échoué</span>
 </td>
 <td className="px-6 py-4 text-sm text-slate-500">Mastercard</td>
 <td className="px-6 py-4 text-right">

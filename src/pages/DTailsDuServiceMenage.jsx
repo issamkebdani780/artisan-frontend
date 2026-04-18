@@ -173,7 +173,7 @@ const DTailsDuServiceMenage = () => {
                                     </li>
 <li className="flex items-start gap-3 text-sm text-slate-600">
 <span className="material-symbols-outlined text-green-500 text-lg">check_circle</span>
-                                        PrÃªt pour la remise des clés
+                                        Prêt pour la remise des clés
                                     </li>
 </ul>
 </div>
@@ -261,7 +261,7 @@ const DTailsDuServiceMenage = () => {
 <div className="max-w-3xl mx-auto space-y-4">
 <div className="border border-slate-200 rounded-lg overflow-hidden">
 <button className="w-full px-6 py-4 text-left flex justify-between items-center bg-white hover:bg-slate-50 transition-colors">
-<span className="font-semibold">Dois-je Ãªtre présent lors du ménage ?</span>
+<span className="font-semibold">Dois-je être présent lors du ménage ?</span>
 <span className="material-symbols-outlined">expand_more</span>
 </button>
 </div>
@@ -316,7 +316,7 @@ const DTailsDuServiceMenage = () => {
 <div>
 <h4 className="text-white font-bold mb-6">Société</h4>
 <ul className="space-y-3 text-sm">
-<li><a className="hover:text-primary transition-colors" href="#">Ã€ propos</a></li>
+<li><a className="hover:text-primary transition-colors" href="#">À propos</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Devenir agent</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Blog</a></li>
 <li><a className="hover:text-primary transition-colors" href="#">Contact</a></li>
@@ -333,7 +333,7 @@ const DTailsDuServiceMenage = () => {
 </div>
 </div>
 <div className="max-w-7xl mx-auto mt-12 pt-8 border-t border-slate-800 text-center text-xs">
-<p>Â© 2024 MénagePro - Tous droits réservés.</p>
+<p>© 2024 MénagePro - Tous droits réservés.</p>
 </div>
 </footer>
 </div>

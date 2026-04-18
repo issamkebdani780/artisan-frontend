@@ -51,7 +51,7 @@ const AvertissementsAdministratifsSecrets = () => {
 </div>
 <div className="flex flex-col">
 <p className="text-sm font-bold">Jean Dupont</p>
-<p className="text-xs text-slate-400">Ã‰lectricien Agréé</p>
+<p className="text-xs text-slate-400">Électricien Agréé</p>
 </div>
 </div>
 </div>

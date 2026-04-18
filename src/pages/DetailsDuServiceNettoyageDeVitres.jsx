@@ -17,7 +17,7 @@ const DetailsDuServiceNettoyageDeVitres = () => {
 <defs><clippath id="clip0_6_330"><rect fill="white" height="48" width="48"></rect></clippath></defs>
 </svg>
 </div>
-<h2 className="text-slate-900 text-xl font-bold leading-tight tracking-tight">Ã‰clat Cristal</h2>
+<h2 className="text-slate-900 text-xl font-bold leading-tight tracking-tight">Éclat Cristal</h2>
 </div>
 <div className="flex gap-3">
 <button className="flex items-center justify-center rounded-lg h-10 bg-teal-50 text-primary px-3 transition-colors hover:bg-teal-100">
@@ -53,20 +53,20 @@ const DetailsDuServiceNettoyageDeVitres = () => {
 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
 <div className="flex flex-col gap-2 rounded-xl p-6 border-2 border-teal-100 bg-white shadow-sm">
 <p className="text-slate-500 text-sm font-medium uppercase tracking-wider">Forfait Résidentiel</p>
-<p className="text-slate-900 text-3xl font-black">Ã€ partir de 5â‚¬ <span className="text-sm font-normal text-slate-500">/ vitre</span></p>
+<p className="text-slate-900 text-3xl font-black">À partir de 5â‚¬ <span className="text-sm font-normal text-slate-500">/ vitre</span></p>
 <p className="text-slate-600 text-sm">Idéal pour les maisons individuelles et appartements. Nettoyage intérieur et extérieur inclus.</p>
 </div>
 <div className="flex flex-col gap-2 rounded-xl p-6 border-2 border-teal-100 bg-white shadow-sm">
 <p className="text-slate-500 text-sm font-medium uppercase tracking-wider">Service Commercial</p>
 <p className="text-slate-900 text-3xl font-black">45â‚¬ <span className="text-sm font-normal text-slate-500">/ heure</span></p>
-<p className="text-slate-600 text-sm">Parfait pour les bureaux et commerces. Ã‰quipe de 2 experts avec matériel haute pression.</p>
+<p className="text-slate-600 text-sm">Parfait pour les bureaux et commerces. Équipe de 2 experts avec matériel haute pression.</p>
 </div>
 </div>
 </section>
 {/*  Specialized Tools  */}
 <section>
 <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
-<span className="material-symbols-outlined text-primary">construction</span> Ã‰quipement Spécialisé
+<span className="material-symbols-outlined text-primary">construction</span> Équipement Spécialisé
                         </h2>
 <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
 <div className="text-center p-4">
@@ -190,7 +190,7 @@ const DetailsDuServiceNettoyageDeVitres = () => {
 <div className="col-span-1 md:col-span-2">
 <div className="flex items-center gap-2 text-white mb-4">
 <span className="material-symbols-outlined text-primary">diamond</span>
-<span className="text-xl font-bold">Ã‰clat Cristal</span>
+<span className="text-xl font-bold">Éclat Cristal</span>
 </div>
 <p className="text-sm">Leader du nettoyage de vitres professionnel depuis 2012. Nous intervenons partout en France pour les particuliers et les professionnels.</p>
 </div>
@@ -213,7 +213,7 @@ const DetailsDuServiceNettoyageDeVitres = () => {
 </div>
 </div>
 <div className="max-w-5xl mx-auto border-t border-slate-800 mt-12 pt-8 text-xs text-center">
-                Â© 2024 Ã‰clat Cristal. Tous droits réservés.
+                © 2024 Éclat Cristal. Tous droits réservés.
             </div>
 </footer>
 </div>

@@ -115,7 +115,7 @@ const ParametresNotificationsAdmin = () => {
 <div className="flex items-center justify-between py-2 border-t border-slate-50 pt-6">
 <div>
 <p className="text-sm font-bold">Nouveaux litiges</p>
-<p className="text-xs text-slate-500 mt-1">ÃŠtre informé dès qu'un nouveau litige est ouvert entre un client et un artisan.</p>
+<p className="text-xs text-slate-500 mt-1">Être informé dès qu'un nouveau litige est ouvert entre un client et un artisan.</p>
 </div>
 <label className="inline-flex items-center cursor-pointer">
 <input defaultChecked className="sr-only peer" type="checkbox"/>
@@ -264,7 +264,7 @@ const ParametresNotificationsAdmin = () => {
 </div>
 {/*  Footer  */}
 <footer className="mt-12 py-8 border-t border-slate-200 text-center text-slate-400 text-sm">
-<p>Â© 2023 Admin Panel Purple Edition. Tous droits réservés.</p>
+<p>© 2023 Admin Panel Purple Edition. Tous droits réservés.</p>
 <div className="mt-2 flex justify-center gap-4">
 <a className="hover:text-purple-500 transition-colors" href="#">Aide</a>
 <a className="hover:text-purple-500 transition-colors" href="#">Confidentialité</a>

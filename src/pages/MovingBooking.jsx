@@ -99,7 +99,7 @@ const MovingBooking = () => {
     today.setHours(0, 0, 0, 0);
     const selectedDate = new Date(bookingDate);
     if (selectedDate < today) {
-      setError('La date du déménagement ne peut pas Ãªtre dans le passé.');
+      setError('La date du déménagement ne peut pas être dans le passé.');
       return;
     }
     
@@ -135,7 +135,7 @@ const MovingBooking = () => {
       const devisData = {
         client_id: user.id,
         category_id: categoryId,
-        description: `DÃ‰MÃ‰NAGEMENT - Poids: ${weight}kg\nObjets: ${selectedItems.join(', ')}\nDE: ${departureWilaya} (${departureCommune}) - ${locations.departure}\nÃ€: ${destinationWilaya} (${destinationCommune}) - ${locations.destination}`,
+        description: `DÉMÉNAGEMENT - Poids: ${weight}kg\nObjets: ${selectedItems.join(', ')}\nDE: ${departureWilaya} (${departureCommune}) - ${locations.departure}\nÀ: ${destinationWilaya} (${destinationCommune}) - ${locations.destination}`,
         budget: totalPrice,
         date: bookingDate,
         wilaya_id: locations.departure_wilaya_id,

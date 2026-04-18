@@ -44,7 +44,7 @@ const MontageDetageres = () => {
 <div className="flex flex-col gap-4 bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
 <div className="flex flex-col">
 <h1 className="text-slate-900 text-xl font-bold">Devis Gratuit</h1>
-<p className="text-slate-500 text-sm font-normal">Des experts prÃªts à vous aider.</p>
+<p className="text-slate-500 text-sm font-normal">Des experts prêts à vous aider.</p>
 </div>
 <nav className="flex flex-col gap-1">
 <a className="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary/10 text-primary" href="#overview">
@@ -80,7 +80,7 @@ const MontageDetageres = () => {
 </div>
 <div className="p-4 bg-white">
 <p className="text-xs text-slate-500 uppercase font-bold tracking-wider">Zone d'intervention</p>
-<p className="text-sm text-slate-700 mt-1">Services disponibles à Paris et en ÃŽle-de-France.</p>
+<p className="text-sm text-slate-700 mt-1">Services disponibles à Paris et en Île-de-France.</p>
 </div>
 </div>
 </aside>
@@ -94,7 +94,7 @@ const MontageDetageres = () => {
 <span className="bg-primary px-3 py-1 rounded-full text-[10px] font-bold text-white uppercase tracking-widest">Recommandé</span>
 <span className="bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold text-white uppercase tracking-widest">Garanti 1 an</span>
 </div>
-<h1 className="text-white text-3xl md:text-5xl font-extrabold leading-tight">Montage d'Ã‰tagères Professionnel</h1>
+<h1 className="text-white text-3xl md:text-5xl font-extrabold leading-tight">Montage d'Étagères Professionnel</h1>
 <p className="text-slate-200 mt-4 max-w-2xl text-lg">Fixation murale sécurisée et montage de meubles en kit pour tous vos espaces de rangement.</p>
 </div>
 </div>
@@ -105,7 +105,7 @@ const MontageDetageres = () => {
 <span className="material-symbols-outlined text-slate-400 text-sm">chevron_right</span>
 <a className="text-slate-500 hover:text-primary transition-colors" href="#">Bricolage</a>
 <span className="material-symbols-outlined text-slate-400 text-sm">chevron_right</span>
-<span className="text-slate-900 font-semibold">Montage d'Ã‰tagères</span>
+<span className="text-slate-900 font-semibold">Montage d'Étagères</span>
 </div>
 {/*  Expertise Section  */}
 <section className="flex flex-col gap-6" id="expertise">
@@ -119,7 +119,7 @@ const MontageDetageres = () => {
 </div>
 <div>
 <h3 className="font-bold text-slate-900">Spécialiste IKEA</h3>
-<p className="text-sm text-slate-500 mt-1">Maîtrise parfaite des gammes Kallax, Billy, Pax et BestÃ¥.</p>
+<p className="text-sm text-slate-500 mt-1">Maîtrise parfaite des gammes Kallax, Billy, Pax et Bestå.</p>
 </div>
 </div>
 <div className="p-5 rounded-xl border border-slate-200 bg-white flex gap-4">
@@ -253,7 +253,7 @@ const MontageDetageres = () => {
 <h5 className="font-bold mb-4 text-slate-900">Services</h5>
 <ul className="text-sm space-y-2 text-slate-500">
 <li><a className="hover:text-primary" href="#">Montage IKEA</a></li>
-<li><a className="hover:text-primary" href="#">Ã‰tagères Murales</a></li>
+<li><a className="hover:text-primary" href="#">Étagères Murales</a></li>
 <li><a className="hover:text-primary" href="#">Dressings</a></li>
 <li><a className="hover:text-primary" href="#">Cuisine</a></li>
 </ul>
@@ -276,7 +276,7 @@ const MontageDetageres = () => {
 </div>
 </div>
 <div className="mx-auto max-w-[1280px] mt-10 pt-8 border-t border-slate-100 text-center text-xs text-slate-400">
-                    Â© 2024 ShelfMaster Services. Tous droits réservés.
+                    © 2024 ShelfMaster Services. Tous droits réservés.
                 </div>
 </footer>
 </div>

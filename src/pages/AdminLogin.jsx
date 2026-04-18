@@ -127,7 +127,7 @@ const AdminLogin = () => {
                     </>
                   ) : (
                     <>
-                      DÃ‰VERROUILLER L'ACCÃˆS
+                      DÉVERROUILLER L'ACCÈS
                       <span className="material-symbols-outlined text-sm">security</span>
                     </>
                   )}
@@ -146,7 +146,7 @@ const AdminLogin = () => {
         
         {/* Footer info */}
         <p className="mt-8 text-center text-slate-500 text-[9px] font-black uppercase tracking-[0.3em] opacity-50">
-          Â© 2026 BRICOLOPRO ADMINISTRATION • V.4.0.5 • SÃ‰CURITÃ‰ RENFORCÃ‰E
+          © 2026 BRICOLOPRO ADMINISTRATION • V.4.0.5 • SÉCURITÉ RENFORCÉE
         </p>
       </div>
     </div>

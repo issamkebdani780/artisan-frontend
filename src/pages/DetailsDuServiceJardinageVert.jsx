@@ -289,7 +289,7 @@ const DetailsDuServiceJardinageVert = () => {
 <div>
 <h5 className="font-bold mb-4">Entreprise</h5>
 <ul className="space-y-2 text-sm text-slate-500">
-<li><a className="hover:text-primary" href="#">Ã€ propos</a></li>
+<li><a className="hover:text-primary" href="#">À propos</a></li>
 <li><a className="hover:text-primary" href="#">Nos Jardiniers</a></li>
 <li><a className="hover:text-primary" href="#">Blog Jardin</a></li>
 <li><a className="hover:text-primary" href="#">Contact</a></li>
@@ -305,7 +305,7 @@ const DetailsDuServiceJardinageVert = () => {
 </div>
 </div>
 <div className="mt-12 pt-8 border-t border-slate-100 text-center text-xs text-slate-400">
-                    Â© 2024 JardinagePro. Tous droits réservés.
+                    © 2024 JardinagePro. Tous droits réservés.
                 </div>
 </footer>
 </div>

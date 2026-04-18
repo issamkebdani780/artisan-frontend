@@ -84,7 +84,7 @@ const ConfirmationDeSoumissionAdministration = () => {
 <span className="material-symbols-outlined text-primary">handyman</span>
 <span className="font-bold text-slate-900">ArtisanDirect</span>
 <span className="text-slate-400 mx-2">|</span>
-<p className="text-sm text-slate-500">Â© 2024 Plateforme Administrative des Artisans</p>
+<p className="text-sm text-slate-500">© 2024 Plateforme Administrative des Artisans</p>
 </div>
 <div className="flex gap-6">
 <a className="text-sm text-slate-500 hover:text-primary transition-colors" href="#">Mentions légales</a>

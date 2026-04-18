@@ -110,7 +110,7 @@ const ConnexionArtisanOrangeEdition = () => {
 <span className="material-symbols-outlined text-sm">send</span>
 </button>
 </div>
-<p className="text-[10px] text-slate-400 uppercase tracking-widest font-bold">Â© 2024 ArtisanHub. Crafted for Excellence.</p>
+<p className="text-[10px] text-slate-400 uppercase tracking-widest font-bold">© 2024 ArtisanHub. Crafted for Excellence.</p>
 </div>
 </div>
 </footer>

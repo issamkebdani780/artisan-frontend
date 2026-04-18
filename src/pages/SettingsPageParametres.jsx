@@ -95,7 +95,7 @@ const SettingsPageParametres = () => {
 <select className="w-full rounded-lg border-slate-300 focus:ring-primary focus:border-primary">
 <option>Menuisier</option>
 <option>Plombier</option>
-<option>Ã‰lectricien</option>
+<option>Électricien</option>
 <option>Peintre</option>
 </select>
 </div>

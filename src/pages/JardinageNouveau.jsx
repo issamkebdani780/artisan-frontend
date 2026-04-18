@@ -120,7 +120,7 @@ const JardinageNouveau = () => {
 <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
 <span className="material-symbols-outlined text-4xl">content_cut</span>
 </div>
-<h4 className="text-xl font-bold mb-3">Taille &amp; Ã‰lague</h4>
+<h4 className="text-xl font-bold mb-3">Taille &amp; Élague</h4>
 <p className="text-slate-500 mb-6 text-sm leading-relaxed">Taille de haies, d'arbustes décoratifs, d'arbres fruitiers et élagage sécurisé pour la santé de vos plantes.</p>
 <a className="text-primary font-bold text-sm flex items-center gap-2 hover:gap-3 transition-all" href="#">
                             En savoir plus <span className="material-symbols-outlined text-sm">arrow_forward</span>
@@ -194,7 +194,7 @@ const JardinageNouveau = () => {
                                 </li>
 <li className="flex items-center gap-3 text-sm">
 <span className="material-symbols-outlined text-primary text-xl">check_circle</span>
-                                    Ã‰vacuation des déchets
+                                    Évacuation des déchets
                                 </li>
 </ul>
 <button className="w-full py-3 bg-primary text-white font-bold rounded-xl hover:bg-primary/90 transition-colors shadow-lg">Choisir ce pack</button>
@@ -212,7 +212,7 @@ const JardinageNouveau = () => {
                                 </li>
 <li className="flex items-center gap-3 text-sm">
 <span className="material-symbols-outlined text-primary text-xl">check_circle</span>
-                                    Ã‰lagage grands arbres
+                                    Élagage grands arbres
                                 </li>
 <li className="flex items-center gap-3 text-sm">
 <span className="material-symbols-outlined text-primary text-xl">check_circle</span>
@@ -262,7 +262,7 @@ const JardinageNouveau = () => {
 <img alt="Expert" className="w-full h-full object-cover rounded-full" data-alt="Portrait d'un élagueur professionnel" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmUhJexNRy8ajaSZDLvkl42XV18scRhtaNBcpGi57RQK4bOh1rEIniUwmKF-Te9qlO75fANrYVyvMhQH-REF9zfNhxe4kz_LcgcuN3wmUnLONhEkQLfLF8Ue71tvL8PjE7G-i3eVhcwYnO0iCYEEX1yg-HGym8hWei2zBdm8jTwiby2G2AX47ud8R_VRVO4g6W3kQO742YCLf31CkHdBKGJwo0vIvbly32z2L1SoRIDmLYBFdEiMUw-okJV1AMk_CnfAYF2XHbpfi1"/>
 </div>
 <h5 className="font-bold text-slate-900">Marc Dubois</h5>
-<p className="text-xs text-slate-500 mb-2">Ã‰lagueur Certifié</p>
+<p className="text-xs text-slate-500 mb-2">Élagueur Certifié</p>
 <div className="flex items-center gap-1 mb-4">
 <span className="material-symbols-outlined text-yellow-500 text-sm">star</span>
 <span className="text-xs font-bold">5.0</span>
@@ -306,13 +306,13 @@ const JardinageNouveau = () => {
 </div>
 <div className="bg-white border border-slate-200 rounded-xl p-6">
 <div className="flex items-center justify-between cursor-pointer">
-<h6 className="font-bold text-slate-900">Faut-il Ãªtre présent lors de l'intervention ?</h6>
+<h6 className="font-bold text-slate-900">Faut-il être présent lors de l'intervention ?</h6>
 <span className="material-symbols-outlined text-slate-400">expand_more</span>
 </div>
 </div>
 <div className="bg-white border border-slate-200 rounded-xl p-6">
 <div className="flex items-center justify-between cursor-pointer">
-<h6 className="font-bold text-slate-900">Ã‰vacuez-vous les déchets verts ?</h6>
+<h6 className="font-bold text-slate-900">Évacuez-vous les déchets verts ?</h6>
 <span className="material-symbols-outlined text-slate-400">expand_more</span>
 </div>
 </div>
@@ -343,7 +343,7 @@ const JardinageNouveau = () => {
 </div>
 </div>
 <div className="mt-8 text-center text-slate-400 text-xs">
-                Â© 2024 Mon Jardin Service Professionnel. Tous droits réservés.
+                © 2024 Mon Jardin Service Professionnel. Tous droits réservés.
             </div>
 </footer>
 </main>

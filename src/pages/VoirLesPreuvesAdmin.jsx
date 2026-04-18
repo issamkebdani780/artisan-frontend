@@ -30,7 +30,7 @@ const VoirLesPreuvesAdmin = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="flex flex-1 flex-col gap-2 rounded-xl p-6 bg-red-50 border border-red-100">
               <p className="text-red-700 text-sm font-bold uppercase tracking-wider">Gravité</p>
-              <p className="text-red-800 tracking-tight text-2xl font-black">Ã‰levée</p>
+              <p className="text-red-800 tracking-tight text-2xl font-black">Élevée</p>
             </div>
             <div className="flex flex-1 flex-col gap-2 rounded-xl p-6 bg-slate-50 border border-slate-100">
               <p className="text-slate-500 text-sm font-bold uppercase tracking-wider">Délai de réponse restant</p>

@@ -129,7 +129,7 @@ const Demenagement = () => {
 </div>
 <div>
 <h4 className="font-bold text-lg mb-1">Flexibilité Totale</h4>
-<p className="text-slate-500 text-sm">Nous nous adaptons à votre calendrier, mÃªme pour les demandes de dernière minute.</p>
+<p className="text-slate-500 text-sm">Nous nous adaptons à votre calendrier, même pour les demandes de dernière minute.</p>
 </div>
 </div>
 <div className="flex gap-4">

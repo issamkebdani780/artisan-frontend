@@ -71,11 +71,11 @@ const ResultatsDeRechercheArtisansLesMieuxNotes = () => {
 <div className="flex flex-col gap-2">
 <label className="flex items-center gap-3 cursor-pointer group">
 <input defaultChecked className="form-radio text-primary border-slate-300 bg-transparent focus:ring-primary rounded-full" name="rating" type="radio"/>
-<span className="text-sm text-slate-700 group-hover:text-primary">4.5+ Ã‰toiles</span>
+<span className="text-sm text-slate-700 group-hover:text-primary">4.5+ Étoiles</span>
 </label>
 <label className="flex items-center gap-3 cursor-pointer group">
 <input className="form-radio text-primary border-slate-300 bg-transparent focus:ring-primary rounded-full" name="rating" type="radio"/>
-<span className="text-sm text-slate-700 group-hover:text-primary">4.0+ Ã‰toiles</span>
+<span className="text-sm text-slate-700 group-hover:text-primary">4.0+ Étoiles</span>
 </label>
 </div>
 </div>
@@ -98,7 +98,7 @@ const ResultatsDeRechercheArtisansLesMieuxNotes = () => {
 <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
 <button className="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary text-white px-4 text-sm font-medium">
 <span className="material-symbols-outlined text-[18px]">star</span>
-                            4.5+ Ã‰toiles
+                            4.5+ Étoiles
                         </button>
 <button className="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white border border-slate-200 px-4 text-sm font-medium text-slate-700 hover:border-primary transition-colors">
 <span className="material-symbols-outlined text-[18px] text-primary">verified</span>
@@ -123,7 +123,7 @@ const ResultatsDeRechercheArtisansLesMieuxNotes = () => {
 <h3 className="text-slate-900 text-xl font-bold">Jean Dupont</h3>
 <span className="material-symbols-outlined text-primary text-[20px]" title="Artisan Vérifié">verified</span>
 </div>
-<p className="text-slate-500 text-sm font-medium">Menuiserie &amp; Ã‰bénisterie sur mesure</p>
+<p className="text-slate-500 text-sm font-medium">Menuiserie &amp; Ébénisterie sur mesure</p>
 </div>
 <div className="flex flex-col items-end">
 <div className="flex items-center gap-1 bg-yellow-400/10 text-yellow-600 px-2 py-1 rounded-lg">
@@ -158,8 +158,8 @@ const ResultatsDeRechercheArtisansLesMieuxNotes = () => {
 {/*  Artisan Card 2  */}
 <div className="group flex flex-col @container items-stretch justify-start rounded-xl overflow-hidden shadow-sm border border-slate-200 bg-white hover:shadow-md transition-all duration-300">
 <div className="flex flex-col @[600px]:flex-row">
-<div className="w-full @[600px]:w-64 h-48 @[600px]:h-auto bg-center bg-no-repeat bg-cover shrink-0 relative" data-alt="Ã‰lectricien professionnel au travail" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBjtZaEdCRTRXY29s0F5f-jI1gVvMT2tK5bEKheKkJgNC3h8PQSvx6uZft9nxYhMwEKW0vyjWoP9RBNCsmmxqfqeKW05GK1-uq_jNuJhNC5SsZXbQBeJkXteAqKEPjv2c5dSXNDV-71B1n_f99O4nLkbcELu9YiAdtskjRnk_4JppLZCWPls_5gnFRn2myrG33zWBO0fcBf-syB00bp1TuVmGxfCYuLeVKyyVA8zjKo5DT_wgLlpL5jJFkF_8q5HSUT1JCC9rM5JIxa");'>
-<div className="absolute top-3 left-3 bg-white/90 backdrop-blur px-2 py-1 rounded text-[10px] font-bold text-primary uppercase tracking-widest border border-primary/20">Ã‰lectricien</div>
+<div className="w-full @[600px]:w-64 h-48 @[600px]:h-auto bg-center bg-no-repeat bg-cover shrink-0 relative" data-alt="Électricien professionnel au travail" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBjtZaEdCRTRXY29s0F5f-jI1gVvMT2tK5bEKheKkJgNC3h8PQSvx6uZft9nxYhMwEKW0vyjWoP9RBNCsmmxqfqeKW05GK1-uq_jNuJhNC5SsZXbQBeJkXteAqKEPjv2c5dSXNDV-71B1n_f99O4nLkbcELu9YiAdtskjRnk_4JppLZCWPls_5gnFRn2myrG33zWBO0fcBf-syB00bp1TuVmGxfCYuLeVKyyVA8zjKo5DT_wgLlpL5jJFkF_8q5HSUT1JCC9rM5JIxa");'>
+<div className="absolute top-3 left-3 bg-white/90 backdrop-blur px-2 py-1 rounded text-[10px] font-bold text-primary uppercase tracking-widest border border-primary/20">Électricien</div>
 </div>
 <div className="flex flex-1 flex-col p-5 md:p-6 gap-3">
 <div className="flex justify-between items-start">
@@ -297,7 +297,7 @@ const ResultatsDeRechercheArtisansLesMieuxNotes = () => {
 </div>
 </div>
 <div className="max-w-[1200px] mx-auto mt-12 pt-6 border-t border-slate-100 text-center md:text-left">
-<p className="text-slate-400 text-xs">Â© 2024 Artisanat. Tous droits réservés.</p>
+<p className="text-slate-400 text-xs">© 2024 Artisanat. Tous droits réservés.</p>
 </div>
 </footer>
 </div>

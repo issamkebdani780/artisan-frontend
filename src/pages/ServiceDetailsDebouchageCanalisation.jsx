@@ -47,7 +47,7 @@ const ServiceDetailsDebouchageCanalisation = () => {
                         Débouchage WC &amp; <span className="text-primary">Canalisations</span> 24h/7j
                     </h1>
 <p className="text-lg text-slate-600 mb-8 leading-relaxed">
-                        Toilettes bouchées ? Ã‰vier qui déborde ? Nos experts interviennent immédiatement avec caméra thermique et hydrocurage pour libérer vos canalisations durablement.
+                        Toilettes bouchées ? Évier qui déborde ? Nos experts interviennent immédiatement avec caméra thermique et hydrocurage pour libérer vos canalisations durablement.
                     </p>
 <div className="flex flex-col sm:flex-row gap-4">
 <button className="bg-primary text-white px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-2 hover:scale-[1.02] transition-transform">
@@ -102,7 +102,7 @@ const ServiceDetailsDebouchageCanalisation = () => {
 <span className="material-symbols-outlined text-primary text-4xl">support_agent</span>
 <div>
 <h3 className="font-bold text-slate-900">Dispo 24/7</h3>
-<p className="text-xs text-slate-500">MÃªme jours fériés</p>
+<p className="text-xs text-slate-500">Même jours fériés</p>
 </div>
 </div>
 </div>
@@ -246,7 +246,7 @@ const ServiceDetailsDebouchageCanalisation = () => {
 <span className="material-symbols-outlined">plumbing</span>
 </div>
 <div>
-<h4 className="font-bold mb-1">Furet Ã‰lectrique</h4>
+<h4 className="font-bold mb-1">Furet Électrique</h4>
 <p className="text-sm text-slate-500">Idéal pour les accès difficiles et les bouchons d'origine organique.</p>
 </div>
 </div>
@@ -323,7 +323,7 @@ const ServiceDetailsDebouchageCanalisation = () => {
 </div>
 </div>
 <div className="max-w-7xl mx-auto px-4 mt-12 pt-8 border-t border-slate-800 text-center text-xs">
-<p>Â© 2024 PlombierExpress. Tous droits réservés. Mentions légales.</p>
+<p>© 2024 PlombierExpress. Tous droits réservés. Mentions légales.</p>
 </div>
 </footer>
 

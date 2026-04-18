@@ -196,7 +196,7 @@ const TableauDeBordAdministrateur = () => {
 <div className="size-2 mt-2 bg-emerald-400 rounded-full shrink-0"></div>
 <div>
 <p className="text-sm font-semibold">Nouvel Artisan Validé</p>
-<p className="text-xs text-indigo-300 mt-1">Atelier Dubois - Ã‰bénisterie</p>
+<p className="text-xs text-indigo-300 mt-1">Atelier Dubois - Ébénisterie</p>
 <p className="text-[10px] text-indigo-400 mt-1 uppercase font-bold">Il y a 12 min</p>
 </div>
 </div>

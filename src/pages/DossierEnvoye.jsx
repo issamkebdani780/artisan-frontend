@@ -17,7 +17,7 @@ const DossierEnvoye = () => {
 <nav className="flex items-center space-x-4">
 <div className="hidden sm:flex flex-col text-right">
 <span className="text-sm font-semibold">Jean Dupont</span>
-<span className="text-xs text-slate-500">Menuisier Ã‰béniste</span>
+<span className="text-xs text-slate-500">Menuisier Ébéniste</span>
 </div>
 <div className="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center overflow-hidden border border-slate-300">
 <svg className="w-6 h-6 text-slate-400" fill="currentColor" viewBox="0 0 24 24">
@@ -119,7 +119,7 @@ const DossierEnvoye = () => {
 <footer className="bg-white border-t border-slate-200 py-8">
 <div className="max-w-7xl mx-auto px-4 text-center">
 <p className="text-sm text-slate-500">
-        Â© 2023 ArtisanDirect. Tous droits réservés.
+        © 2023 ArtisanDirect. Tous droits réservés.
       </p>
 <div className="mt-2 flex justify-center space-x-4 text-xs text-slate-400">
 <a className="hover:text-brand" href="#">Support Technique</a>

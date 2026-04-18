@@ -150,7 +150,7 @@ const RequestQuote = () => {
       const today = new Date();
       today.setHours(0, 0, 0, 0);
       if (selectedDate < today) {
-        alert("La date d'intervention ne peut pas Ãªtre dans le passé");
+        alert("La date d'intervention ne peut pas être dans le passé");
         setLoading(false);
         return;
       }
@@ -230,7 +230,7 @@ const RequestQuote = () => {
                     <span className="material-symbols-outlined">person</span>
                   </div>
                   <p className="text-primary font-black uppercase tracking-tight text-sm">
-                    Ã€ l'attention de : <span className="underline decoration-2 underline-offset-4">{decodeURIComponent(searchParams.get('artisanName'))}</span>
+                    À l'attention de : <span className="underline decoration-2 underline-offset-4">{decodeURIComponent(searchParams.get('artisanName'))}</span>
                   </p>
                 </div>
               )}
@@ -240,7 +240,7 @@ const RequestQuote = () => {
               
               <div className="space-y-8 bg-slate-50 p-8 md:p-10 rounded-[40px] border border-slate-100">
                 <h3 className="text-xs font-black text-slate-400 uppercase tracking-[0.3em] mb-4 flex items-center gap-3">
-                  <span className="size-6 bg-primary text-white rounded-lg flex items-center justify-center text-[10px]">1</span> DÃ‰TAILS DU PROJET
+                  <span className="size-6 bg-primary text-white rounded-lg flex items-center justify-center text-[10px]">1</span> DÉTAILS DU PROJET
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <label className="flex flex-col gap-3">
@@ -266,17 +266,17 @@ const RequestQuote = () => {
                         if (!artisan || !artisan.specialty) return true;
                         
                         const categoryMap = {
-                            'Menuiserie et Bois': ['Menuisier', 'Presseur', 'Décorateur bois', 'fenÃªtres en bois'],
+                            'Menuiserie et Bois': ['Menuisier', 'Presseur', 'Décorateur bois', 'fenêtres en bois'],
                             'Ferronnerie et Soudure': ['Ferronnier', 'Soudeur', 'Chaudronnier'],
                             'Plomberie et Réseaux': ['Plombier', 'Monteur de réseaux', 'tuyauterie'],
-                            'Ã‰lectricité et Ã‰nergie': ['Ã‰lectricien', 'solaire', 'câbles', 'tableaux électriques'],
+                            'Électricité et Énergie': ['Électricien', 'solaire', 'câbles', 'tableaux électriques'],
                             'Peinture et Plâtre': ['Peintre', 'Plâtrier', 'Marbrier', 'Vernisseur'],
                             'Maçonnerie et Finitions': ['Maçon', 'Carreleur', 'Crépisseur', 'isolation'],
                             'Mécanique et Machines': ['Mécanicien', 'moteurs', 'électrogènes'],
                             'Couture et Cuir': ['Tailleur', 'Couturière', 'Rapiéceur', 'Cordonnier', 'Maroquinier'],
                             'Verre et Miroiterie': ['verre', 'Verrier', 'Miroitier', 'Vitrier'],
                             'Métiers alimentaires artisanaux': ['Boulanger', 'Pâtissier', 'Fromager', 'Apiculteur', 'conserveur'],
-                            'Jardinage et Espaces Verts': ['Jardinier', 'espaces verts', 'jardins', 'irrigation', 'Ã‰lagueur', 'palmiers']
+                            'Jardinage et Espaces Verts': ['Jardinier', 'espaces verts', 'jardins', 'irrigation', 'Élagueur', 'palmiers']
                         };
                         const keys = categoryMap[c.name] || [c.name.substring(0, 5).toLowerCase()];
                         const spec = artisan.specialty.toLowerCase();
@@ -377,7 +377,7 @@ const RequestQuote = () => {
 
               <div className="space-y-8 bg-slate-50 p-8 md:p-10 rounded-[40px] border border-slate-100">
                 <h3 className="text-xs font-black text-slate-400 uppercase tracking-[0.3em] mb-4 flex items-center gap-3">
-                  <span className="size-6 bg-primary text-white rounded-lg flex items-center justify-center text-[10px]">4</span> BUDGET & DÃ‰LAI
+                  <span className="size-6 bg-primary text-white rounded-lg flex items-center justify-center text-[10px]">4</span> BUDGET & DÉLAI
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <label className="flex flex-col gap-3">

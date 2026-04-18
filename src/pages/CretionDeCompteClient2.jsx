@@ -70,7 +70,7 @@ const CretionDeCompteClient2 = () => {
 </div>
 <div>
 <h3 className="font-bold text-slate-900">Communication directe</h3>
-<p className="text-sm text-slate-500">Ã‰changez instantanément avec vos prestataires via notre messagerie sécurisée.</p>
+<p className="text-sm text-slate-500">Échangez instantanément avec vos prestataires via notre messagerie sécurisée.</p>
 </div>
 </div>
 <div className="flex gap-4 p-4 rounded-xl border border-slate-200 bg-white shadow-sm transition-all hover:shadow-md">
@@ -216,7 +216,7 @@ const CretionDeCompteClient2 = () => {
 <span className="material-symbols-outlined text-primary">construction</span>
 <span className="font-bold text-slate-900">ArtisanDirect</span>
 </div>
-<p className="text-sm text-slate-500">Â© 2024 ArtisanDirect - Tous droits réservés.</p>
+<p className="text-sm text-slate-500">© 2024 ArtisanDirect - Tous droits réservés.</p>
 <div className="flex justify-center gap-6 mt-4">
 <a className="text-xs text-slate-500 hover:text-primary" href="#">Conditions</a>
 <a className="text-xs text-slate-500 hover:text-primary" href="#">Confidentialité</a>

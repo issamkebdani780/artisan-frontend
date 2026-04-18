@@ -16,7 +16,7 @@ const VerificationsEnAttenteVue = () => {
 </div>
 <div>
 <h2 className="text-xl font-bold text-slate-900">Vérifications en attente</h2>
-<p className="text-xs text-slate-500 font-medium">Admin Dashboard / Ã‰dition Vérification</p>
+<p className="text-xs text-slate-500 font-medium">Admin Dashboard / Édition Vérification</p>
 </div>
 </div>
 <div className="flex items-center gap-6">
@@ -128,7 +128,7 @@ const VerificationsEnAttenteVue = () => {
 <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary font-bold">MC</div>
 <div>
 <p className="font-bold text-sm">Marie Curie</p>
-<p className="text-xs text-slate-500">Installation Ã‰lectrique</p>
+<p className="text-xs text-slate-500">Installation Électrique</p>
 </div>
 </div>
 </td>
