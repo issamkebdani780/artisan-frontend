@@ -117,7 +117,7 @@ const PlumbingCategory = () => {
                                 Détection non-destructive et colmatage immédiat de vos tuyauteries et robinetteries.
                             </p>
 <span className="text-sm font-bold text-primary group-hover:gap-2 flex items-center gap-1 transition-all">
-                                À partir de 89â‚¬ <span className="material-symbols-outlined text-sm">chevron_right</span>
+                                À partir de 89 DA <span className="material-symbols-outlined text-sm">chevron_right</span>
 </span>
 </div>
 {/*  Card 2  */}
@@ -143,7 +143,7 @@ const PlumbingCategory = () => {
                                 Canalisations obstruées, évacuations lentes : intervention haute pression disponible.
                             </p>
 <span className="text-sm font-bold text-primary group-hover:gap-2 flex items-center gap-1 transition-all">
-                                À partir de 120â‚¬ <span className="material-symbols-outlined text-sm">chevron_right</span>
+                                À partir de 120 DA <span className="material-symbols-outlined text-sm">chevron_right</span>
 </span>
 </div>
 </div>

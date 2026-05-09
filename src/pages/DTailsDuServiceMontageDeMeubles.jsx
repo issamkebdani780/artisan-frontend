@@ -108,21 +108,21 @@ const DTailsDuServiceMontageDeMeubles = () => {
 <span className="material-symbols-outlined text-primary">schedule</span>
 <span className="font-medium">Taux horaire moyen</span>
 </div>
-<span className="text-primary font-bold">À partir de 35â‚¬ / h</span>
+<span className="text-primary font-bold">À partir de 35 DA / h</span>
 </div>
 <div className="flex items-center justify-between p-4 bg-white rounded-lg shadow-sm border border-slate-100">
 <div className="flex items-center gap-3">
 <span className="material-symbols-outlined text-primary">package_2</span>
 <span className="font-medium">Forfait Commode / Petit Meuble</span>
 </div>
-<span className="text-primary font-bold">Dès 45â‚¬</span>
+<span className="text-primary font-bold">Dès 45 DA</span>
 </div>
 <div className="flex items-center justify-between p-4 bg-white rounded-lg shadow-sm border border-slate-100">
 <div className="flex items-center gap-3">
 <span className="material-symbols-outlined text-primary">dresser</span>
 <span className="font-medium">Forfait Grande Armoire (3+ portes)</span>
 </div>
-<span className="text-primary font-bold">Dès 120â‚¬</span>
+<span className="text-primary font-bold">Dès 120 DA</span>
 </div>
 </div>
 </div>
@@ -152,7 +152,7 @@ const DTailsDuServiceMontageDeMeubles = () => {
 </div>
 <p className="text-slate-600 text-sm mb-4 line-clamp-2">"Expert en montage IKEA avec plus de 5 ans d'expérience. Rapide et soigneux."</p>
 <div className="flex items-center justify-between pt-4 border-t border-slate-100">
-<span className="font-bold text-primary">38â‚¬ / h</span>
+<span className="font-bold text-primary">38 DA / h</span>
 <button className="bg-primary text-white px-4 py-2 rounded-lg text-sm font-bold hover:bg-primary/90">Réserver</button>
 </div>
 </div>
@@ -173,7 +173,7 @@ const DTailsDuServiceMontageDeMeubles = () => {
 </div>
 <p className="text-slate-600 text-sm mb-4 line-clamp-2">"Polyvalente et équipée de tous les outils nécessaires. Spécialiste dressings."</p>
 <div className="flex items-center justify-between pt-4 border-t border-slate-100">
-<span className="font-bold text-primary">42â‚¬ / h</span>
+<span className="font-bold text-primary">42 DA / h</span>
 <button className="bg-primary text-white px-4 py-2 rounded-lg text-sm font-bold hover:bg-primary/90">Réserver</button>
 </div>
 </div>
@@ -194,7 +194,7 @@ const DTailsDuServiceMontageDeMeubles = () => {
 </div>
 <p className="text-slate-600 text-sm mb-4 line-clamp-2">"Ponctuel et efficace. Je peux également fixer vos meubles au mur pour la sécurité."</p>
 <div className="flex items-center justify-between pt-4 border-t border-slate-100">
-<span className="font-bold text-primary">35â‚¬ / h</span>
+<span className="font-bold text-primary">35 DA / h</span>
 <button className="bg-primary text-white px-4 py-2 rounded-lg text-sm font-bold hover:bg-primary/90">Réserver</button>
 </div>
 </div>
@@ -272,7 +272,7 @@ const DTailsDuServiceMontageDeMeubles = () => {
 <select className="bg-slate-50 border border-slate-200 rounded-lg text-sm px-3 py-2 outline-none focus:ring-1 focus:ring-primary">
 <option selected="" value="fr">Français</option>
 <option value="en">English</option>
-<option value="ar">ØÂ§Ùâ€žØÂ¹ØÂ±ØÂ¨ÙÅ Ø©</option>
+<option value="ar">ØÂ§Ù"žØÂ¹ØÂ±ØÂ¨ÙÅ Ø©</option>
 </select>
 </div>
 </div>

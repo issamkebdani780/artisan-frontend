@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 
 const ResultatsDeRechercheDisponibleCetteSemaine = () => {
   return (
@@ -15,7 +15,7 @@ const ResultatsDeRechercheDisponibleCetteSemaine = () => {
 <path d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z"></path>
 </svg>
 </div>
-<span className="text-xl font-bold tracking-tight text-slate-900">ArtisanDirect</span>
+<span className="text-xl font-bold tracking-tight text-slate-900">Khadamati</span>
 </div>
 {/*  Search Bar  */}
 <div className="hidden md:flex flex-1 max-w-md">
@@ -382,7 +382,7 @@ const ResultatsDeRechercheDisponibleCetteSemaine = () => {
 <path d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z"></path>
 </svg>
 </div>
-<p className="text-sm text-slate-500">© 2024 ArtisanDirect. Tous droits réservés.</p>
+<p className="text-sm text-slate-500">© 2026 Khadamati. Tous droits réservés.</p>
 </div>
 <div className="flex gap-4">
 <a className="w-10 h-10 flex items-center justify-center rounded-full bg-slate-100 text-slate-600 hover:bg-primary hover:text-white transition-all" href="#">

@@ -124,15 +124,15 @@ const PoseDePapierPeint = () => {
 <div className="space-y-4">
 <div className="flex items-center justify-between p-4 bg-slate-50 rounded-xl">
 <span className="text-slate-700">Pose papier peint classique</span>
-<span className="text-primary font-bold">15â‚¬ / mÂ²</span>
+<span className="text-primary font-bold">15 DA / mÂ²</span>
 </div>
 <div className="flex items-center justify-between p-4 bg-slate-50 rounded-xl">
 <span className="text-slate-700">Papier peint panoramique</span>
-<span className="text-primary font-bold">22â‚¬ / mÂ²</span>
+<span className="text-primary font-bold">22 DA / mÂ²</span>
 </div>
 <div className="flex items-center justify-between p-4 bg-slate-50 rounded-xl">
 <span className="text-slate-700">Dépose ancien revêtement</span>
-<span className="text-primary font-bold">8â‚¬ / mÂ²</span>
+<span className="text-primary font-bold">8 DA / mÂ²</span>
 </div>
 </div>
 <p className="text-xs text-slate-500 mt-6 italic">* Matériaux non inclus. Devis final après visite technique.</p>

@@ -85,7 +85,7 @@ const NettoyageProfond = () => {
 <div className="flex flex-col gap-1">
 <h3 className="text-slate-900 text-lg font-bold">Studio / T1</h3>
 <p className="flex items-baseline gap-1">
-<span className="text-primary text-4xl font-black">120â‚¬</span>
+<span className="text-primary text-4xl font-black">120 DA</span>
 <span className="text-slate-500 text-sm font-medium">forfait</span>
 </p>
 </div>
@@ -110,7 +110,7 @@ const NettoyageProfond = () => {
 <div className="flex flex-col gap-1">
 <h3 className="text-slate-900 text-lg font-bold">Appartement T3/T4</h3>
 <p className="flex items-baseline gap-1">
-<span className="text-primary text-4xl font-black">250â‚¬</span>
+<span className="text-primary text-4xl font-black">250 DA</span>
 <span className="text-slate-500 text-sm font-medium">forfait</span>
 </p>
 </div>
@@ -134,7 +134,7 @@ const NettoyageProfond = () => {
 <div className="flex flex-col gap-1">
 <h3 className="text-slate-900 text-lg font-bold">Grande Villa</h3>
 <p className="flex items-baseline gap-1">
-<span className="text-primary text-4xl font-black">450â‚¬</span>
+<span className="text-primary text-4xl font-black">450 DA</span>
 <span className="text-slate-500 text-sm font-medium">à partir de</span>
 </p>
 </div>

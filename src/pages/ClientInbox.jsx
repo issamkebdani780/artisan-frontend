@@ -84,7 +84,7 @@ const ClientInbox = () => {
   };
 
   return (
-    <ClientLayout title="Mihnati Client" subtitle="Gestion des demandes">
+    <ClientLayout title="Khadamati Client" subtitle="Gestion des demandes">
       <div className="p-8 md:p-12 flex flex-col flex-1 bg-slate-50/20 font-['Outfit',sans-serif]">
         
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-12">

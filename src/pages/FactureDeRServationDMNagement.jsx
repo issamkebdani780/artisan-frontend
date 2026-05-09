@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 
 const FactureDeRServationDMNagement = () => {
   return (
@@ -17,7 +17,7 @@ const FactureDeRServationDMNagement = () => {
 <path d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z"></path>
 </svg>
 </div>
-<h2 className="text-slate-900 text-xl font-bold leading-tight tracking-tight">ArtisanDirect</h2>
+<h2 className="text-slate-900 text-xl font-bold leading-tight tracking-tight">Khadamati</h2>
 </div>
 <div className="flex gap-3">
 <button className="flex items-center justify-center rounded-lg h-10 bg-slate-100 text-slate-700 gap-2 text-sm font-bold px-4 hover:bg-slate-200 transition-colors">
@@ -100,7 +100,7 @@ const FactureDeRServationDMNagement = () => {
 <span className="material-symbols-outlined text-primary">local_shipping</span>
 <div>
 <p className="text-sm font-bold text-slate-900">Service</p>
-<p className="text-slate-500 text-sm">Déménagement Complet T3 (45mÂ²)</p>
+<p className="text-slate-500 text-sm">Déménagement Complet T3 (45m²)</p>
 </div>
 </div>
 <div className="flex items-start gap-3">
@@ -114,7 +114,7 @@ const FactureDeRServationDMNagement = () => {
 <span className="material-symbols-outlined text-primary">location_on</span>
 <div>
 <p className="text-sm font-bold text-slate-900">Itinéraire</p>
-<p className="text-slate-500 text-sm">Paris (75002) ââ€ ' Boulogne-Billancourt (92100)</p>
+<p className="text-slate-500 text-sm">Paris (75002) → Boulogne-Billancourt (92100)</p>
 <p className="text-xs text-slate-400 mt-1">Distance estimée : 12.5 km</p>
 </div>
 </div>
@@ -147,11 +147,11 @@ const FactureDeRServationDMNagement = () => {
 <tr>
 <td className="px-6 py-4">
 <p className="text-slate-900 font-semibold">Forfait Déménagement de base</p>
-<p className="text-xs text-slate-500">Main d'Å"uvre (2 pers.) + Camion 20mÂ³</p>
+<p className="text-xs text-slate-500">Main d'ouvre (2 pers.) + Camion 20m³</p>
 </td>
 <td className="px-6 py-4 text-center text-slate-700">1</td>
-<td className="px-6 py-4 text-right text-slate-700">450,00 â‚¬</td>
-<td className="px-6 py-4 text-right font-semibold text-slate-900">450,00 â‚¬</td>
+<td className="px-6 py-4 text-right text-slate-700">45 000 DA</td>
+<td className="px-6 py-4 text-right font-semibold text-slate-900">45 000 DA</td>
 </tr>
 <tr>
 <td className="px-6 py-4">
@@ -159,8 +159,8 @@ const FactureDeRServationDMNagement = () => {
 <p className="text-xs text-slate-500">Calculé sur 12.5 km</p>
 </td>
 <td className="px-6 py-4 text-center text-slate-700">1</td>
-<td className="px-6 py-4 text-right text-slate-700">25,00 â‚¬</td>
-<td className="px-6 py-4 text-right font-semibold text-slate-900">25,00 â‚¬</td>
+<td className="px-6 py-4 text-right text-slate-700">2 500 DA</td>
+<td className="px-6 py-4 text-right font-semibold text-slate-900">2 500 DA</td>
 </tr>
 <tr>
 <td className="px-6 py-4">
@@ -168,8 +168,8 @@ const FactureDeRServationDMNagement = () => {
 <p className="text-xs text-slate-500">Table en verre massif + Piano droit</p>
 </td>
 <td className="px-6 py-4 text-center text-slate-700">2</td>
-<td className="px-6 py-4 text-right text-slate-700">40,00 â‚¬</td>
-<td className="px-6 py-4 text-right font-semibold text-slate-900">80,00 â‚¬</td>
+<td className="px-6 py-4 text-right text-slate-700">4 000 DA</td>
+<td className="px-6 py-4 text-right font-semibold text-slate-900">8 000 DA</td>
 </tr>
 <tr>
 <td className="px-6 py-4">
@@ -177,8 +177,8 @@ const FactureDeRServationDMNagement = () => {
 <p className="text-xs text-slate-500">Armoire chambre + Lit King Size</p>
 </td>
 <td className="px-6 py-4 text-center text-slate-700">2</td>
-<td className="px-6 py-4 text-right text-slate-700">30,00 â‚¬</td>
-<td className="px-6 py-4 text-right font-semibold text-slate-900">60,00 â‚¬</td>
+<td className="px-6 py-4 text-right text-slate-700">3 000 DA</td>
+<td className="px-6 py-4 text-right font-semibold text-slate-900">6 000 DA</td>
 </tr>
 </tbody>
 </table>
@@ -205,22 +205,22 @@ const FactureDeRServationDMNagement = () => {
 </div>
 </div>
 <div className="px-2">
-<p className="text-xs text-slate-400 italic">Paiement sécurisé via ArtisanDirect Pay. Pour toute question, contactez notre support client muni de votre numéro de facture.</p>
+<p className="text-xs text-slate-400 italic">Paiement sécurisé via Khadamati Pay. Pour toute question, contactez notre support client muni de votre numéro de facture.</p>
 </div>
 </div>
 <div className="flex flex-col gap-3">
 <div className="flex justify-between items-center text-slate-600">
 <span className="text-sm font-medium">Sous-total HT</span>
-<span className="font-semibold">615,00 â‚¬</span>
+<span className="font-semibold">61 500 DA</span>
 </div>
 <div className="flex justify-between items-center text-slate-600">
 <span className="text-sm font-medium">TVA (20%)</span>
-<span className="font-semibold">123,00 â‚¬</span>
+<span className="font-semibold">12 300 DA</span>
 </div>
 <div className="h-px bg-slate-200 my-2"></div>
 <div className="flex justify-between items-center">
 <span className="text-lg font-black text-slate-900 uppercase tracking-wider">Total TTC</span>
-<span className="text-3xl font-black text-primary">738,00 â‚¬</span>
+<span className="text-3xl font-black text-primary">73 800 DA</span>
 </div>
 </div>
 </div>
@@ -233,7 +233,7 @@ const FactureDeRServationDMNagement = () => {
 <a className="hover:text-primary transition-colors" href="#">Aide</a>
 </div>
 <p className="text-xs text-slate-400 uppercase tracking-widest">
-                        © 2024 ArtisanDirect - Une plateforme au service de l'excellence artisanale
+                        © 2024 Khadamati - Une plateforme au service de l'excellence artisanale
                     </p>
 </footer>
 </div>

@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import ClientLayout from '../layouts/ClientLayout';
 import apiService from '../services/api';
@@ -252,7 +252,7 @@ const ClientProfileSettings = () => {
                   <div className="bg-red-50/20 rounded-4xl p-10 border border-red-100/50 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
                     <div>
                       <h3 className="text-lg font-black text-red-600 uppercase mb-1">Session</h3>
-                      <p className="text-[10px] font-black text-red-400 uppercase tracking-widest">Quitter Mihnati</p>
+                      <p className="text-[10px] font-black text-red-400 uppercase tracking-widest">Quitter Khadamati</p>
                     </div>
                     <button onClick={handleLogout} className="px-8 py-4 bg-red-600 text-white rounded-xl font-black uppercase text-[10px] tracking-widest hover:bg-red-700 active:scale-95 transition-all shadow-xl shadow-red-600/10">Déconnexion</button>
                   </div>

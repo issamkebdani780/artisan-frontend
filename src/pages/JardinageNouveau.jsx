@@ -156,7 +156,7 @@ const JardinageNouveau = () => {
 <div className="bg-white rounded-2xl p-8 border border-slate-200 flex flex-col">
 <span className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Essentiel</span>
 <div className="flex items-baseline gap-1 mb-6">
-<span className="text-4xl font-black">45â‚¬</span>
+<span className="text-4xl font-black">45 DA</span>
 <span className="text-slate-500 text-sm">/heure</span>
 </div>
 <ul className="space-y-4 mb-8 flex-1">
@@ -180,7 +180,7 @@ const JardinageNouveau = () => {
 <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-white text-xs font-bold py-1 px-4 rounded-full uppercase tracking-widest">Le plus populaire</div>
 <span className="text-xs font-bold text-primary uppercase tracking-widest mb-2">Complet</span>
 <div className="flex items-baseline gap-1 mb-6">
-<span className="text-4xl font-black">120â‚¬</span>
+<span className="text-4xl font-black">120 DA</span>
 <span className="text-slate-500 text-sm">/forfait</span>
 </div>
 <ul className="space-y-4 mb-8 flex-1">

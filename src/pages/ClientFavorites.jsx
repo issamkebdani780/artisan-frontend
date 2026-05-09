@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import ExpertCard from '../components/ExpertCard';
 import apiService from '../services/api';
 
@@ -46,7 +46,7 @@ const ClientFavorites = () => {
             </div>
             <div>
               <h3 className="text-2xl font-black text-slate-900 uppercase tracking-tight">Aucun favori pour le moment</h3>
-              <p className="text-slate-400 font-bold mt-2">Parcourez nos experts et cliquez sur le cÅ“ur pour les enregistrer.</p>
+              <p className="text-slate-400 font-bold mt-2">Parcourez nos experts et cliquez sur le cœur pour les enregistrer.</p>
             </div>
             <a 
               href="/search"

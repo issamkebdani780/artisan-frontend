@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 
 const DossierEnvoye = () => {
   return (
@@ -10,8 +10,8 @@ const DossierEnvoye = () => {
 <div className="flex justify-between items-center h-16">
 {/*  Logo  */}
 <div className="flex items-center gap-2">
-<div className="w-8 h-8 bg-brand rounded flex items-center justify-center text-white font-bold text-xl">A</div>
-<span className="text-xl font-bold text-brand tracking-tight">ArtisanDirect</span>
+<div className="w-8 h-8 bg-primary rounded flex items-center justify-center text-white font-bold text-xl">K</div>
+<span className="text-xl font-bold text-primary tracking-tight">Khadamati</span>
 </div>
 {/*  User Navigation  */}
 <nav className="flex items-center space-x-4">
@@ -104,7 +104,7 @@ const DossierEnvoye = () => {
 {/*  END: DocumentSummary  */}
 {/*  BEGIN: ActionButtons  */}
 <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
-<a className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-brand hover:bg-brand/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand transition-colors duration-200" href="#">
+<a className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-colors duration-200" href="#">
           Retour au Tableau de bord
         </a>
 <a className="inline-flex items-center justify-center px-6 py-3 border border-slate-300 text-base font-medium rounded-md text-slate-700 bg-white hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-slate-500 transition-colors duration-200" href="#">
@@ -119,12 +119,12 @@ const DossierEnvoye = () => {
 <footer className="bg-white border-t border-slate-200 py-8">
 <div className="max-w-7xl mx-auto px-4 text-center">
 <p className="text-sm text-slate-500">
-        © 2023 ArtisanDirect. Tous droits réservés.
+        © 2026 Khadamati. Tous droits réservés.
       </p>
 <div className="mt-2 flex justify-center space-x-4 text-xs text-slate-400">
-<a className="hover:text-brand" href="#">Support Technique</a>
-<a className="hover:text-brand" href="#">Conditions d'utilisation</a>
-<a className="hover:text-brand" href="#">Politique de confidentialité</a>
+<a className="hover:text-primary" href="#">Support Technique</a>
+<a className="hover:text-primary" href="#">Conditions d'utilisation</a>
+<a className="hover:text-primary" href="#">Politique de confidentialité</a>
 </div>
 </div>
 </footer>

@@ -167,17 +167,17 @@ const Demenagement = () => {
 <tr>
 <td className="p-4 text-sm">Studio / T1</td>
 <td className="p-4 text-sm text-slate-500">10-15 mÂ³</td>
-<td className="p-4 text-sm font-bold text-primary text-right">350 â‚¬</td>
+<td className="p-4 text-sm font-bold text-primary text-right">350  DA</td>
 </tr>
 <tr>
 <td className="p-4 text-sm">Appartement T2/T3</td>
 <td className="p-4 text-sm text-slate-500">20-30 mÂ³</td>
-<td className="p-4 text-sm font-bold text-primary text-right">650 â‚¬</td>
+<td className="p-4 text-sm font-bold text-primary text-right">650  DA</td>
 </tr>
 <tr>
 <td className="p-4 text-sm">Maison familiale</td>
 <td className="p-4 text-sm text-slate-500">45+ mÂ³</td>
-<td className="p-4 text-sm font-bold text-primary text-right">1 200 â‚¬</td>
+<td className="p-4 text-sm font-bold text-primary text-right">1 200  DA</td>
 </tr>
 </tbody>
 </table>

@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 
 const ConfirmationDeSoumissionAdministration = () => {
   return (
@@ -11,7 +11,7 @@ const ConfirmationDeSoumissionAdministration = () => {
 <div className="bg-primary p-1.5 rounded-lg text-white">
 <span className="material-symbols-outlined block">handyman</span>
 </div>
-<h2 className="text-slate-900 text-xl font-bold tracking-tight">ArtisanDirect</h2>
+<h2 className="text-slate-900 text-xl font-bold tracking-tight">Khadamati</h2>
 </div>
 <div className="flex items-center gap-4">
 <button className="p-2 rounded-xl bg-slate-100 text-slate-600 hover:bg-slate-200 transition-colors">
@@ -47,7 +47,7 @@ const ConfirmationDeSoumissionAdministration = () => {
 {/*  Reference Box  */}
 <div className="mt-8 mb-8 p-6 bg-slate-50 rounded-xl border border-dashed border-slate-300 inline-block w-full">
 <p className="text-xs uppercase tracking-widest text-slate-500 font-bold mb-1">Numéro de référence</p>
-<p className="text-3xl font-mono font-bold text-primary tracking-wider">AD-784920X</p>
+<p className="text-3xl font-mono font-bold text-primary tracking-wider">KH-784920X</p>
 </div>
 <div className="space-y-4 mb-10 max-w-md mx-auto">
 <div className="flex items-start gap-3 text-left">
@@ -73,7 +73,7 @@ const ConfirmationDeSoumissionAdministration = () => {
 </div>
 {/*  Help Footer  */}
 <p className="text-center text-slate-500 text-sm mt-8">
-                Besoin d'aide ? <a className="text-primary font-semibold hover:underline" href="#">Contacter le support ArtisanDirect</a>
+                Besoin d'aide ? <a className="text-primary font-semibold hover:underline" href="#">Contacter le support Khadamati</a>
 </p>
 </div>
 </main>
@@ -82,7 +82,7 @@ const ConfirmationDeSoumissionAdministration = () => {
 <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
 <div className="flex items-center gap-2">
 <span className="material-symbols-outlined text-primary">handyman</span>
-<span className="font-bold text-slate-900">ArtisanDirect</span>
+<span className="font-bold text-slate-900">Khadamati</span>
 <span className="text-slate-400 mx-2">|</span>
 <p className="text-sm text-slate-500">© 2024 Plateforme Administrative des Artisans</p>
 </div>

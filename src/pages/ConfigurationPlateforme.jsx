@@ -87,7 +87,7 @@ const ConfigurationPlateforme = () => {
 <div className="flex items-center justify-between p-3 rounded-lg bg-slate-50">
 <span className="text-slate-600 text-sm">Seuil de paiement</span>
 <div className="flex items-center gap-2">
-<span className="text-slate-900 font-medium">50.00 â‚¬</span>
+<span className="text-slate-900 font-medium">50.00  DA</span>
 <button className="material-symbols-outlined text-slate-400 hover:text-primary text-sm">edit</button>
 </div>
 </div>

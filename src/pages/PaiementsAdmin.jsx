@@ -106,7 +106,7 @@ const PaiementsAdmin = () => {
             <p className="text-[10px] font-black tracking-widest text-slate-400 uppercase mb-4">REVENU GLOBAL BRUT</p>
             <div className="flex items-baseline gap-4">
               <h3 className="text-4xl font-black tracking-tighter text-slate-900">
-                {loading ? '...' : `${stats.totalRevenue.toLocaleString()} â‚¬`}
+                {loading ? '...' : `${stats.totalRevenue.toLocaleString()}  DA`}
               </h3>
               <span className="flex items-center text-xs font-black text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full">
                 <span className="material-symbols-outlined text-sm mr-1">trending_up</span>
@@ -202,7 +202,7 @@ const PaiementsAdmin = () => {
                       </div>
                     </td>
                     <td className="px-10 py-6 text-sm font-black text-slate-900 text-right">
-                      {Number(payment.total_price || 0).toLocaleString()} â‚¬
+                      {Number(payment.total_price || 0).toLocaleString()}  DA
                     </td>
                     <td className="px-10 py-6">
                       <span className={`px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-tighter ${

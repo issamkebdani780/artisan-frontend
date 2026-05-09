@@ -136,7 +136,7 @@ const AmenagementPaysager = () => {
 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 <div className="flex flex-col p-6 rounded-xl border-2 border-slate-100 relative overflow-hidden">
 <h3 className="text-lg font-bold mb-1">Étude &amp; Plan</h3>
-<p className="text-3xl font-black text-primary mb-4">450â‚¬ <span className="text-sm font-normal text-slate-500">/ projet</span></p>
+<p className="text-3xl font-black text-primary mb-4">450 DA <span className="text-sm font-normal text-slate-500">/ projet</span></p>
 <ul className="space-y-3 mb-6 flex-1">
 <li className="flex items-start gap-2 text-sm"><span className="material-symbols-outlined text-primary text-lg">check_circle</span> Relevé de terrain précis</li>
 <li className="flex items-start gap-2 text-sm"><span className="material-symbols-outlined text-primary text-lg">check_circle</span> Plan de masse 2D</li>
@@ -147,7 +147,7 @@ const AmenagementPaysager = () => {
 <div className="flex flex-col p-6 rounded-xl border-2 border-primary bg-primary/5 relative overflow-hidden">
 <div className="absolute top-4 right-[-35px] bg-primary text-white text-[10px] font-bold px-10 py-1 rotate-45 shadow-sm">POPULAIRE</div>
 <h3 className="text-lg font-bold mb-1">Immersion 3D</h3>
-<p className="text-3xl font-black text-primary mb-4">890â‚¬ <span className="text-sm font-normal text-slate-500">/ projet</span></p>
+<p className="text-3xl font-black text-primary mb-4">890 DA <span className="text-sm font-normal text-slate-500">/ projet</span></p>
 <ul className="space-y-3 mb-6 flex-1">
 <li className="flex items-start gap-2 text-sm"><span className="material-symbols-outlined text-primary text-lg">check_circle</span> Tout le forfait Étude &amp; Plan</li>
 <li className="flex items-start gap-2 text-sm"><span className="material-symbols-outlined text-primary text-lg">check_circle</span> Modélisation 3D réaliste</li>

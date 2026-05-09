@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import apiService from '../services/api';
 import ClientLayout from '../layouts/ClientLayout';
 import ArtisanLayout from '../layouts/ArtisanLayout';
@@ -31,7 +31,7 @@ const FullMessages = () => {
   const Layout = user?.role === 'artisan' ? ArtisanLayout : ClientLayout;
   const layoutProps = user?.role === 'artisan' 
     ? { title: "Messages", subtitle: "Centre de communication" }
-    : { title: "Mihnati Client", subtitle: "Mes discussions" };
+    : { title: "Khadamati Client", subtitle: "Mes discussions" };
 
   return (
     <Layout {...layoutProps}>

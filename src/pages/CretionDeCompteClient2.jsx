@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 
 const CretionDeCompteClient2 = () => {
   return (
@@ -12,7 +12,7 @@ const CretionDeCompteClient2 = () => {
 <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-white">
 <span className="material-symbols-outlined">construction</span>
 </div>
-<h2 className="text-xl font-bold tracking-tight text-slate-900">ArtisanDirect</h2>
+<h2 className="text-xl font-bold tracking-tight text-slate-900">Khadamati</h2>
 </div>
 <nav className="hidden md:flex items-center gap-8">
 <a className="text-sm font-medium hover:text-primary transition-colors" href="#">Accueil</a>
@@ -84,9 +84,9 @@ const CretionDeCompteClient2 = () => {
 </div>
 </div>
 <div className="hidden lg:block relative rounded-2xl overflow-hidden h-64 border border-slate-200 shadow-xl">
-<img alt="Mihnati PROfessionnel au travail" className="h-full w-full object-cover" data-alt="Mihnati PROfessionnel travaillant avec des outils de précision" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNGt7OpSRwv7_oT-xh8v2rHXB2vN6GXlPTwAbQxn5914KPpL3Aab8miDP-879H__E2vBdzKDxPSTAucP-4_rT4ZCJu5PRMHOi3nf7EPWRMOU6esom-sjJrVZUXH32ooM1SSbAK3qE4_WuFHB-NoNhD6t0OR6SWJyktJ7k8mmmP6-KFtYFDawKGHUHVfgazx1zp9okkIK7I4szaw0aFuY8p8egjPacSUcVPtH4vcOhOspTMViKrd0cXxUf4vYL30PAbDbNGKAUh44kr"/>
+<img alt="Khadamati PROfessionnel au travail" className="h-full w-full object-cover" data-alt="Khadamati PROfessionnel travaillant avec des outils de précision" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNGt7OpSRwv7_oT-xh8v2rHXB2vN6GXlPTwAbQxn5914KPpL3Aab8miDP-879H__E2vBdzKDxPSTAucP-4_rT4ZCJu5PRMHOi3nf7EPWRMOU6esom-sjJrVZUXH32ooM1SSbAK3qE4_WuFHB-NoNhD6t0OR6SWJyktJ7k8mmmP6-KFtYFDawKGHUHVfgazx1zp9okkIK7I4szaw0aFuY8p8egjPacSUcVPtH4vcOhOspTMViKrd0cXxUf4vYL30PAbDbNGKAUh44kr"/>
 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
-<p className="text-white text-sm italic font-medium">"ArtisanDirect a simplifié ma rénovation de A à Z. La confiance est enfin au rendez-vous." âDA" Marc L.</p>
+<p className="text-white text-sm italic font-medium">"Khadamati a simplifié ma rénovation de A à Z. La confiance est enfin au rendez-vous." âDA" Marc L.</p>
 </div>
 </div>
 </div>
@@ -214,9 +214,9 @@ const CretionDeCompteClient2 = () => {
 <div className="max-w-7xl mx-auto px-4 text-center">
 <div className="flex justify-center items-center gap-2 mb-4">
 <span className="material-symbols-outlined text-primary">construction</span>
-<span className="font-bold text-slate-900">ArtisanDirect</span>
+<span className="font-bold text-slate-900">Khadamati</span>
 </div>
-<p className="text-sm text-slate-500">© 2024 ArtisanDirect - Tous droits réservés.</p>
+<p className="text-sm text-slate-500">© 2026 Khadamati - Tous droits réservés.</p>
 <div className="flex justify-center gap-6 mt-4">
 <a className="text-xs text-slate-500 hover:text-primary" href="#">Conditions</a>
 <a className="text-xs text-slate-500 hover:text-primary" href="#">Confidentialité</a>

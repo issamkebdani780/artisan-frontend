@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 
 const ConfirmationDeProfil = () => {
   return (
@@ -13,7 +13,7 @@ const ConfirmationDeProfil = () => {
 <path d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z" fill="currentColor"></path>
 </svg>
 </div>
-<h2 className="text-slate-900 text-xl font-bold leading-tight tracking-[-0.015em]">ArtisanDirect</h2>
+<h2 className="text-slate-900 text-xl font-bold leading-tight tracking-[-0.015em]">Khadamati</h2>
 </div>
 <div className="flex flex-1 justify-end gap-8 items-center">
 <nav className="hidden md:flex items-center gap-9">
@@ -31,7 +31,7 @@ const ConfirmationDeProfil = () => {
 <div className="flex flex-wrap justify-between items-end gap-4 mb-6">
 <div className="flex flex-col gap-1">
 <h1 className="text-slate-900 text-3xl font-black leading-tight tracking-tight">Complétez votre profil</h1>
-<p className="text-slate-500 text-base">Ces informations nous aident à personnaliser votre expérience sur ArtisanDirect.</p>
+<p className="text-slate-500 text-base">Ces informations nous aident à personnaliser votre expérience sur Khadamati.</p>
 </div>
 <div className="flex flex-col items-end gap-2 min-w-[120px]">
 <div className="flex gap-2 items-center">
@@ -169,7 +169,7 @@ Enregistré</button>
 <svg className="size-6" fill="currentColor" viewBox="0 0 48 48">
 <path d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z"></path>
 </svg>
-<span className="font-black text-slate-900">ArtisanDirect</span>
+<span className="font-black text-slate-900">Khadamati</span>
 </div>
 <p className="text-sm text-slate-500">La plateforme n°1 pour trouver vos artisans locaux.</p>
 </div>
@@ -178,7 +178,7 @@ Enregistré</button>
 <a className="text-sm text-slate-500 hover:text-primary" href="#">Confidentialité</a>
 <a className="text-sm text-slate-500 hover:text-primary" href="#">Support</a>
 </div>
-<p className="text-sm text-slate-500">© 2024 ArtisanDirect Inc.</p>
+<p className="text-sm text-slate-500">© 2026 Khadamati Inc.</p>
 </div>
 </footer>
 </div>

@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import apiService from '../services/api';
 
@@ -169,7 +169,7 @@ const MovingBooking = () => {
           <div className="mb-16 text-center lg:text-left">
             <h1 className="text-4xl md:text-6xl font-black text-slate-900 mb-6 uppercase tracking-tight">Réservez votre <br /><span className="text-primary italic">déménagement</span></h1>
             <p className="text-lg md:text-xl text-slate-500 max-w-2xl leading-relaxed mx-auto lg:mx-0 font-bold">
-              Calculez instantanément votre tarif basé sur la distance, le volume et la main-d'Å“uvre nécessaire. Simple, rapide et transparent.
+              Calculez instantanément votre tarif basé sur la distance, le volume et la main-d'œuvre nécessaire. Simple, rapide et transparent.
             </p>
           </div>
 
@@ -402,7 +402,7 @@ const MovingBooking = () => {
                     </div>
                     <div className="relative z-10 text-center md:text-right">
                       <p className="text-xs font-bold leading-relaxed opacity-90 max-w-[200px]">
-                        Comprend la logistique, la main-d'Å“uvre et l'assurance protection.
+                        Comprend la logistique, la main-d'œuvre et l'assurance protection.
                       </p>
                     </div>
                   </div>
@@ -457,7 +457,7 @@ const MovingBooking = () => {
               </div>
               
               <div className="p-1 text-center">
-                <p className="text-[10px] font-black text-slate-300 uppercase tracking-widest">Sécurisé par Mihnati Protection</p>
+                <p className="text-[10px] font-black text-slate-300 uppercase tracking-widest">Sécurisé par Khadamati Protection</p>
               </div>
             </div>
           </div>

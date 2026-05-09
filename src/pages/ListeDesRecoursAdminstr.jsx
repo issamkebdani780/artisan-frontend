@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 
 const ListeDesRecoursAdminstr = () => {
   return (
@@ -12,7 +12,7 @@ const ListeDesRecoursAdminstr = () => {
 <div className="size-8 flex items-center justify-center bg-primary/10 rounded-lg">
 <span className="material-symbols-outlined text-primary">construction</span>
 </div>
-<h2 className="text-slate-900 text-lg font-bold leading-tight tracking-tight">ArtisanDirect</h2>
+<h2 className="text-slate-900 text-lg font-bold leading-tight tracking-tight">Khadamati</h2>
 </div>
 <nav className="hidden md:flex items-center gap-9">
 <a className="text-slate-600 hover:text-primary text-sm font-medium transition-colors" href="#">Accueil</a>
@@ -225,7 +225,7 @@ const ListeDesRecoursAdminstr = () => {
 <div className="col-span-1 md:col-span-1">
 <div className="flex items-center gap-2 text-primary mb-6">
 <span className="material-symbols-outlined">construction</span>
-<span className="text-lg font-bold text-slate-900">ArtisanDirect</span>
+<span className="text-lg font-bold text-slate-900">Khadamati</span>
 </div>
 <p className="text-sm text-slate-500 leading-relaxed">
                             La plateforme leader pour les artisans indépendants. Gagnez en visibilité et simplifiez votre administratif.
@@ -262,7 +262,7 @@ const ListeDesRecoursAdminstr = () => {
 </div>
 </div>
 <div className="mt-12 pt-8 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-400">
-<p>© 2023 ArtisanDirect. Tous droits réservés.</p>
+<p>© 2026 Khadamati. Tous droits réservés.</p>
 <div className="flex gap-6">
 <a className="hover:text-primary transition-colors" href="#">Confidentialité</a>
 <a className="hover:text-primary transition-colors" href="#">CGU</a>

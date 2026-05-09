@@ -92,7 +92,7 @@ const DTailsDuServiceMenage = () => {
 <h3 className="text-xl font-bold text-slate-900">Ménage Régulier</h3>
 <p className="text-slate-500 text-sm mt-1">Entretien courant de votre maison</p>
 <div className="mt-4">
-<span className="text-3xl font-black text-primary">25â‚¬</span>
+<span className="text-3xl font-black text-primary">25 DA</span>
 <span className="text-slate-500">/ heure</span>
 </div>
 </div>
@@ -123,7 +123,7 @@ const DTailsDuServiceMenage = () => {
 <h3 className="text-xl font-bold text-slate-900">Nettoyage Profond</h3>
 <p className="text-slate-500 text-sm mt-1">Remise à neuf complète de l'intérieur</p>
 <div className="mt-4">
-<span className="text-3xl font-black text-primary">35â‚¬</span>
+<span className="text-3xl font-black text-primary">35 DA</span>
 <span className="text-slate-500">/ heure</span>
 </div>
 </div>
@@ -157,7 +157,7 @@ const DTailsDuServiceMenage = () => {
 <h3 className="text-xl font-bold text-slate-900">Nettoyage Fin de Bail</h3>
 <p className="text-slate-500 text-sm mt-1">Garanti pour votre état des lieux</p>
 <div className="mt-4">
-<span className="text-3xl font-black text-primary">45â‚¬</span>
+<span className="text-3xl font-black text-primary">45 DA</span>
 <span className="text-slate-500">/ heure</span>
 </div>
 </div>

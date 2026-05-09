@@ -308,7 +308,7 @@ const Montage = () => {
 </div>
 <p className="text-xs text-slate-500 mb-4">Spécialiste Électricité &amp; Montage</p>
 <div className="flex items-center justify-between">
-<span className="text-sm font-bold">35â‚¬ <span className="text-slate-400 font-normal">/h</span></span>
+<span className="text-sm font-bold">35 DA <span className="text-slate-400 font-normal">/h</span></span>
 <button className="px-4 py-2 bg-slate-100 text-slate-700 text-xs font-bold rounded-lg group-hover:bg-primary group-hover:text-white transition-colors">Profil</button>
 </div>
 </div>
@@ -326,7 +326,7 @@ const Montage = () => {
 </div>
 <p className="text-xs text-slate-500 mb-4">Expert Plomberie 24/7</p>
 <div className="flex items-center justify-between">
-<span className="text-sm font-bold">45â‚¬ <span className="text-slate-400 font-normal">/h</span></span>
+<span className="text-sm font-bold">45 DA <span className="text-slate-400 font-normal">/h</span></span>
 <button className="px-4 py-2 bg-slate-100 text-slate-700 text-xs font-bold rounded-lg group-hover:bg-primary group-hover:text-white transition-colors">Profil</button>
 </div>
 </div>
@@ -344,7 +344,7 @@ const Montage = () => {
 </div>
 <p className="text-xs text-slate-500 mb-4">Peinture &amp; Décoration</p>
 <div className="flex items-center justify-between">
-<span className="text-sm font-bold">30â‚¬ <span className="text-slate-400 font-normal">/h</span></span>
+<span className="text-sm font-bold">30 DA <span className="text-slate-400 font-normal">/h</span></span>
 <button className="px-4 py-2 bg-slate-100 text-slate-700 text-xs font-bold rounded-lg group-hover:bg-primary group-hover:text-white transition-colors">Profil</button>
 </div>
 </div>
@@ -362,7 +362,7 @@ const Montage = () => {
 </div>
 <p className="text-xs text-slate-500 mb-4">Déménagement &amp; Transport</p>
 <div className="flex items-center justify-between">
-<span className="text-sm font-bold">28â‚¬ <span className="text-slate-400 font-normal">/h</span></span>
+<span className="text-sm font-bold">28 DA <span className="text-slate-400 font-normal">/h</span></span>
 <button className="px-4 py-2 bg-slate-100 text-slate-700 text-xs font-bold rounded-lg group-hover:bg-primary group-hover:text-white transition-colors">Profil</button>
 </div>
 </div>

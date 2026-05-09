@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 
 const ServiceDetailsInstallationRobinetterie = () => {
   return (
@@ -85,7 +85,7 @@ const ServiceDetailsInstallationRobinetterie = () => {
 <span className="material-symbols-outlined text-primary text-4xl mb-4">water_lux</span>
 <h4 className="text-xl font-bold mb-2">Robinet Standard</h4>
 <p className="text-slate-500 text-sm mb-6 flex-grow">Installation d'un mitigeur classique d'évier ou de lavabo.</p>
-<div className="text-3xl font-black mb-6">79â‚¬ <span className="text-sm font-normal text-slate-500">TTC</span></div>
+<div className="text-3xl font-black mb-6">79 DA <span className="text-sm font-normal text-slate-500">TTC</span></div>
 <ul className="space-y-3 mb-8 text-sm">
 <li className="flex items-center gap-2"><span className="material-symbols-outlined text-green-500 text-sm">check_circle</span> Dépose de l'ancien robinet</li>
 <li className="flex items-center gap-2"><span className="material-symbols-outlined text-green-500 text-sm">check_circle</span> Raccordement eau chaude/froide</li>
@@ -99,7 +99,7 @@ const ServiceDetailsInstallationRobinetterie = () => {
 <span className="material-symbols-outlined text-4xl mb-4">shower</span>
 <h4 className="text-xl font-bold mb-2">Pack Douche &amp; Bain</h4>
 <p className="text-white/80 text-sm mb-6 flex-grow">Installation de colonne de douche thermostatique ou mélangeur bain.</p>
-<div className="text-3xl font-black mb-6">129â‚¬ <span className="text-sm font-normal text-white/70">TTC</span></div>
+<div className="text-3xl font-black mb-6">129 DA <span className="text-sm font-normal text-white/70">TTC</span></div>
 <ul className="space-y-3 mb-8 text-sm">
 <li className="flex items-center gap-2"><span className="material-symbols-outlined text-yellow-400 text-sm">check_circle</span> Pose murale &amp; fixation</li>
 <li className="flex items-center gap-2"><span className="material-symbols-outlined text-yellow-400 text-sm">check_circle</span> Raccords excentrés inclus</li>
@@ -240,7 +240,7 @@ const ServiceDetailsInstallationRobinetterie = () => {
                         <span className="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
 </summary>
 <div className="px-6 pb-6 text-slate-600">
-                        Toutes nos installations sont couvertes par une garantie de 2 ans sur la main d'Å“uvre. Si une fuite apparaît suite à notre intervention, nous revenons gratuitement dans les 24h pour corriger le problème.
+                        Toutes nos installations sont couvertes par une garantie de 2 ans sur la main-d'œuvre. Si une fuite apparaît suite à notre intervention, nous revenons gratuitement dans les 24h pour corriger le problème.
                     </div>
 </details>
 <details className="group bg-white border border-slate-200 rounded-xl overflow-hidden">

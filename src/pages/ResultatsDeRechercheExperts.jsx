@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 
 const ResultatsDeRechercheExperts = () => {
     return (
@@ -13,7 +13,7 @@ const ResultatsDeRechercheExperts = () => {
                                 <path d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z" fill="currentColor"></path>
                             </svg>
                         </div>
-                        <h2 className="text-slate-900 text-xl font-bold leading-tight tracking-tight">ArtisanDirect</h2>
+                        <h2 className="text-slate-900 text-xl font-bold leading-tight tracking-tight">Khadamati</h2>
                     </div>
                     <div className="flex flex-1 justify-end gap-8 items-center">
                         <nav className="hidden md:flex items-center gap-9">
@@ -120,7 +120,7 @@ const ResultatsDeRechercheExperts = () => {
                                     <div className="flex items-center justify-between mt-auto pt-4 border-t border-slate-100">
                                         <div>
                                             <span className="text-xs text-slate-400 block">À partir de</span>
-                                            <span className="text-lg font-bold text-primary">45â‚¬/h</span>
+                                            <span className="text-lg font-bold text-primary">4500 DA/h</span>
                                         </div>
                                         <button className="bg-slate-100 text-slate-900 px-4 py-2 rounded-lg text-sm font-bold hover:bg-primary hover:text-white transition-colors">
                                             Voir profil
@@ -146,7 +146,7 @@ const ResultatsDeRechercheExperts = () => {
                                     <div className="flex items-center justify-between mt-auto pt-4 border-t border-slate-100">
                                         <div>
                                             <span className="text-xs text-slate-400 block">À partir de</span>
-                                            <span className="text-lg font-bold text-primary">50â‚¬/h</span>
+                                            <span className="text-lg font-bold text-primary">5000 DA/h</span>
                                         </div>
                                         <button className="bg-slate-100 text-slate-900 px-4 py-2 rounded-lg text-sm font-bold hover:bg-primary hover:text-white transition-colors">
                                             Voir profil
@@ -172,7 +172,7 @@ const ResultatsDeRechercheExperts = () => {
                                     <div className="flex items-center justify-between mt-auto pt-4 border-t border-slate-100">
                                         <div>
                                             <span className="text-xs text-slate-400 block">À partir de</span>
-                                            <span className="text-lg font-bold text-primary">42â‚¬/h</span>
+                                            <span className="text-lg font-bold text-primary">4200 DA/h</span>
                                         </div>
                                         <button className="bg-slate-100 text-slate-900 px-4 py-2 rounded-lg text-sm font-bold hover:bg-primary hover:text-white transition-colors">
                                             Voir profil
@@ -198,7 +198,7 @@ const ResultatsDeRechercheExperts = () => {
                                     <div className="flex items-center justify-between mt-auto pt-4 border-t border-slate-100">
                                         <div>
                                             <span className="text-xs text-slate-400 block">À partir de</span>
-                                            <span className="text-lg font-bold text-primary">60â‚¬/h</span>
+                                            <span className="text-lg font-bold text-primary">6000 DA/h</span>
                                         </div>
                                         <button className="bg-slate-100 text-slate-900 px-4 py-2 rounded-lg text-sm font-bold hover:bg-primary hover:text-white transition-colors">
                                             Voir profil
@@ -224,7 +224,7 @@ const ResultatsDeRechercheExperts = () => {
                                     <div className="flex items-center justify-between mt-auto pt-4 border-t border-slate-100">
                                         <div>
                                             <span className="text-xs text-slate-400 block">À partir de</span>
-                                            <span className="text-lg font-bold text-primary">48â‚¬/h</span>
+                                            <span className="text-lg font-bold text-primary">4800 DA/h</span>
                                         </div>
                                         <button className="bg-slate-100 text-slate-900 px-4 py-2 rounded-lg text-sm font-bold hover:bg-primary hover:text-white transition-colors">
                                             Voir profil
@@ -250,7 +250,7 @@ const ResultatsDeRechercheExperts = () => {
                                     <div className="flex items-center justify-between mt-auto pt-4 border-t border-slate-100">
                                         <div>
                                             <span className="text-xs text-slate-400 block">À partir de</span>
-                                            <span className="text-lg font-bold text-primary">55â‚¬/h</span>
+                                            <span className="text-lg font-bold text-primary">5500 DA/h</span>
                                         </div>
                                         <button className="bg-slate-100 text-slate-900 px-4 py-2 rounded-lg text-sm font-bold hover:bg-primary hover:text-white transition-colors">
                                             Voir profil
@@ -285,7 +285,7 @@ const ResultatsDeRechercheExperts = () => {
                                         <path d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z" fill="currentColor"></path>
                                     </svg>
                                 </div>
-                                <span className="font-bold text-lg text-slate-900">ArtisanDirect</span>
+                                <span className="font-bold text-lg text-slate-900">Khadamati</span>
                             </div>
                             <p className="text-sm text-slate-500">La plateforme n°1 pour trouver des artisans qualifiés près de chez vous.</p>
                         </div>
@@ -315,7 +315,7 @@ const ResultatsDeRechercheExperts = () => {
                         </div>
                     </div>
                     <div className="max-w-7xl mx-auto px-6 mt-10 pt-6 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-4">
-                        <p className="text-xs text-slate-400">© 2024 ArtisanDirect. Tous droits réservés.</p>
+                        <p className="text-xs text-slate-400">© 2026 Khadamati. Tous droits réservés.</p>
                         <div className="flex gap-4">
                             <a className="text-slate-400 hover:text-primary" href="#"><span className="material-symbols-outlined text-lg">public</span></a>
                             <a className="text-slate-400 hover:text-primary" href="#"><span className="material-symbols-outlined text-lg">mail</span></a>

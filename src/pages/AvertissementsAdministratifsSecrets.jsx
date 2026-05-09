@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 const AvertissementsAdministratifsSecrets = () => {
@@ -14,7 +14,7 @@ const AvertissementsAdministratifsSecrets = () => {
 <span className="material-symbols-outlined">construction</span>
 </div>
 <div className="flex flex-col">
-<h1 className="text-white text-lg font-bold leading-tight">ArtisanDirect</h1>
+<h1 className="text-white text-lg font-bold leading-tight">Khadamati</h1>
 <p className="text-slate-400 text-xs font-normal">Tableau de bord Artisan</p>
 </div>
 </div>
@@ -47,7 +47,7 @@ const AvertissementsAdministratifsSecrets = () => {
 <div className="mt-auto pt-6 border-t border-slate-800">
 <div className="flex items-center gap-3 px-3">
 <div className="size-10 rounded-full bg-slate-700 overflow-hidden">
-<img className="w-full h-full object-cover" data-alt="Photo de profil de l'Mihnati PROfessionnel" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmsO37M5DnDENuKVh9fxasWxG53agXq4IcGvWcQ8LASSgg6ywaXxVuD1ZqqDm6oZJIuDdLaebjXeSWZw52kMA7OJLSVUvGVi0cPisLWzfqX-EFp7tVFIJ-qtSEHOBnETN3H-emMHZj7xZOj4dsH6LYcLovS9Wie8ejCySVHZUG3s3r_QNY5kp88fIlRr4vYM69HQJR_R1d6G9P0v4LRvq2cVinAClS3O_3ca8e3EIiM0ld66x7cJoai8IVsQmOby1Sfg_dG0-hbMcy"/>
+<img className="w-full h-full object-cover" data-alt="Photo de profil de l'Khadamati PROfessionnel" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmsO37M5DnDENuKVh9fxasWxG53agXq4IcGvWcQ8LASSgg6ywaXxVuD1ZqqDm6oZJIuDdLaebjXeSWZw52kMA7OJLSVUvGVi0cPisLWzfqX-EFp7tVFIJ-qtSEHOBnETN3H-emMHZj7xZOj4dsH6LYcLovS9Wie8ejCySVHZUG3s3r_QNY5kp88fIlRr4vYM69HQJR_R1d6G9P0v4LRvq2cVinAClS3O_3ca8e3EIiM0ld66x7cJoai8IVsQmOby1Sfg_dG0-hbMcy"/>
 </div>
 <div className="flex flex-col">
 <p className="text-sm font-bold">Jean Dupont</p>
@@ -91,7 +91,7 @@ const AvertissementsAdministratifsSecrets = () => {
 <div className="flex-1 text-center md:text-left">
 <h3 className="text-lg font-bold text-slate-900 mb-1">Politique de Confidentialité &amp; Neutralité</h3>
 <p className="text-slate-600 leading-relaxed">
-                        Pour maintenir un environnement professionnel neutre et serein, les plaintes sont traitées de manière strictement anonyme par l'administration d'ArtisanDirect. 
+                        Pour maintenir un environnement professionnel neutre et serein, les plaintes sont traitées de manière strictement anonyme par l'administration d'Khadamati. 
                         <strong>L'identité du client rapporteur n'est pas divulguée</strong> afin d'éviter tout conflit direct et de garantir l'objectivité de l'arbitrage.
                     </p>
 </div>
@@ -125,7 +125,7 @@ const AvertissementsAdministratifsSecrets = () => {
 <span className="bg-primary/10 text-primary text-xs font-bold px-3 py-1 rounded-full">En attente de réponse</span>
 </div>
 <p className="text-slate-600 text-sm leading-relaxed mb-6 italic">
-                                "L'administration a reçu un signalement concernant des finitions non conformes au devis initial. Après examen des photos fournies par le client anonyme, il apparaît que les standards de qualité ArtisanDirect n'ont pas été pleinement respectés sur ce chantier."
+                                "L'administration a reçu un signalement concernant des finitions non conformes au devis initial. Après examen des photos fournies par le client anonyme, il apparaît que les standards de qualité Khadamati n'ont pas été pleinement respectés sur ce chantier."
                             </p>
 <div className="flex flex-wrap gap-4 pt-4 border-t border-slate-100">
 <button className="flex items-center gap-2 text-primary font-bold text-sm">

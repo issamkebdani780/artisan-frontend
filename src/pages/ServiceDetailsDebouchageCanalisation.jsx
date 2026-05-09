@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 
 const ServiceDetailsDebouchageCanalisation = () => {
   return (
@@ -123,7 +123,7 @@ const ServiceDetailsDebouchageCanalisation = () => {
 <p className="text-slate-500 mt-2">Pour éviers, lavabos et petits bouchons.</p>
 </div>
 <div className="mb-8">
-<span className="text-4xl font-black">79â‚¬</span>
+<span className="text-4xl font-black">79 DA</span>
 <span className="text-slate-500">/intervention</span>
 </div>
 <ul className="space-y-4 mb-8 flex-grow">
@@ -133,7 +133,7 @@ const ServiceDetailsDebouchageCanalisation = () => {
                             </li>
 <li className="flex items-center gap-3 text-sm">
 <span className="material-symbols-outlined text-green-500 text-lg">check_circle</span>
-                                Main d'Å“uvre 1h
+                                Main-d'œuvre 1h
                             </li>
 <li className="flex items-center gap-3 text-sm">
 <span className="material-symbols-outlined text-green-500 text-lg">check_circle</span>
@@ -151,7 +151,7 @@ const ServiceDetailsDebouchageCanalisation = () => {
 <p className="text-slate-500 mt-2">Intervention haute pression pour WC obstrués.</p>
 </div>
 <div className="mb-8">
-<span className="text-4xl font-black">129â‚¬</span>
+<span className="text-4xl font-black">129 DA</span>
 <span className="text-slate-500">/intervention</span>
 </div>
 <ul className="space-y-4 mb-8 flex-grow">
@@ -182,7 +182,7 @@ const ServiceDetailsDebouchageCanalisation = () => {
 <p className="text-slate-500 mt-2">Pour colonnes d'immeubles ou bouchons profonds.</p>
 </div>
 <div className="mb-8">
-<span className="text-4xl font-black">249â‚¬</span>
+<span className="text-4xl font-black">249 DA</span>
 <span className="text-slate-500">/intervention</span>
 </div>
 <ul className="space-y-4 mb-8 flex-grow">

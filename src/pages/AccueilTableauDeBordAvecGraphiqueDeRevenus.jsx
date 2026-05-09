@@ -94,7 +94,7 @@ const AccueilTableauDeBordAvecGraphiqueDeRevenus = () => {
 <div className="flex items-center gap-4">
 <div className="flex items-center gap-2">
 <span className="size-3 rounded-full bg-blue-500"></span>
-<span className="text-xs font-medium text-slate-600">Revenus (â‚¬)</span>
+<span className="text-xs font-medium text-slate-600">Revenus ( DA)</span>
 </div>
 </div>
 </div>
@@ -143,7 +143,7 @@ const AccueilTableauDeBordAvecGraphiqueDeRevenus = () => {
 <span className="text-xs font-bold text-green-500 bg-green-500/10 px-2 py-1 rounded-full">+12%</span>
 </div>
 <p className="text-sm font-medium text-slate-500">Revenus ce mois</p>
-<p className="text-2xl font-black text-slate-900 mt-1">2,450 â‚¬</p>
+<p className="text-2xl font-black text-slate-900 mt-1">2,450  DA</p>
 </div>
 <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
 <div className="flex justify-between items-start mb-4">
@@ -196,7 +196,7 @@ const AccueilTableauDeBordAvecGraphiqueDeRevenus = () => {
 </div>
 <div className="text-right">
 <span className="px-3 py-1 rounded-full text-xs font-bold bg-blue-100 text-blue-600">En cours</span>
-<p className="text-sm font-bold text-slate-900 mt-1">1,200 â‚¬</p>
+<p className="text-sm font-bold text-slate-900 mt-1">1,200  DA</p>
 </div>
 </div>
 {/*  Mission 2  */}
@@ -210,7 +210,7 @@ const AccueilTableauDeBordAvecGraphiqueDeRevenus = () => {
 </div>
 <div className="text-right">
 <span className="px-3 py-1 rounded-full text-xs font-bold bg-green-100 text-green-600">Terminé</span>
-<p className="text-sm font-bold text-slate-900 mt-1">850 â‚¬</p>
+<p className="text-sm font-bold text-slate-900 mt-1">850  DA</p>
 </div>
 </div>
 {/*  Mission 3  */}
@@ -224,7 +224,7 @@ const AccueilTableauDeBordAvecGraphiqueDeRevenus = () => {
 </div>
 <div className="text-right">
 <span className="px-3 py-1 rounded-full text-xs font-bold bg-orange-100 text-orange-600">En attente</span>
-<p className="text-sm font-bold text-slate-900 mt-1">320 â‚¬</p>
+<p className="text-sm font-bold text-slate-900 mt-1">320  DA</p>
 </div>
 </div>
 </div>

@@ -28,7 +28,7 @@ const AdminLayout = ({ children, title = "Admin", subtitle }) => {
     { name: 'Gestion des artisans', path: '/dashboard/admin/artisans', icon: 'engineering' },
     { name: 'Gestion des clients', path: '/dashboard/admin/clients', icon: 'group' },
     { name: 'Gestion des projets', path: '/dashboard/admin/projects', icon: 'work' },
-    { name: 'Statistiques', path: '/dashboard/admin/stats', icon: 'bar_chart' },
+    // { name: 'Statistiques', path: '/dashboard/admin/stats', icon: 'bar_chart' },
     { name: 'Paramètres', path: '/dashboard/admin/settings', icon: 'settings' },
   ];
 

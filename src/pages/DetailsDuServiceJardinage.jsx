@@ -95,7 +95,7 @@ const DetailsDuServiceJardinage = () => {
 <div className="p-8 border-b border-slate-200">
 <h3 className="text-xl font-bold mb-2">Entretien de Pelouse</h3>
 <div className="flex items-baseline gap-1 mb-4">
-<span className="text-3xl font-black text-primary">30â‚¬</span>
+<span className="text-3xl font-black text-primary">30 DA</span>
 <span className="text-slate-500">/ heure</span>
 </div>
 <p className="text-slate-600 text-sm">Idéal pour un jardin toujours impeccable.</p>
@@ -125,7 +125,7 @@ const DetailsDuServiceJardinage = () => {
 <div className="p-8 border-b border-slate-200">
 <h3 className="text-xl font-bold mb-2">Taille et Plantation</h3>
 <div className="flex items-baseline gap-1 mb-4">
-<span className="text-3xl font-black text-primary">45â‚¬</span>
+<span className="text-3xl font-black text-primary">45 DA</span>
 <span className="text-slate-500">/ heure</span>
 </div>
 <p className="text-slate-600 text-sm">Redonnez forme et vie à vos massifs.</p>

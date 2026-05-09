@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import ArtisanLayout from '../layouts/ArtisanLayout';
 import apiService from '../services/api';
@@ -185,7 +185,7 @@ const ArtisanSettings = () => {
   const handleLogout = () => { apiService.logout(); navigate('/'); };
 
   return (
-    <ArtisanLayout title="Mihnati PRO" subtitle="Paramètres">
+    <ArtisanLayout title="Khadamati PRO" subtitle="Paramètres">
       <div className="flex-1 font-['Outfit',sans-serif] text-left max-w-6xl py-4">
         <div className="mb-10 px-4 text-left">
           <h2 className="text-3xl font-black text-slate-900 tracking-tighter uppercase mb-2">Paramètres Expert</h2>

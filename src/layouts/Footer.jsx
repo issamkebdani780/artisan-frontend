@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12">
         <div className="col-span-2">
           <div className="flex items-center mb-10">
-            <img src={logo} alt="Mihnati Logo" className="h-16 w-auto object-contain bg-white rounded-2xl p-2 shadow-sm" />
+            <img src={logo} alt="Khadamati Logo" className="h-16 w-auto object-contain bg-white rounded-2xl p-2 shadow-sm" />
           </div>
           <p className="text-slate-500 font-bold max-w-xs mb-8 leading-relaxed">
             La plateforme de confiance pour tous vos besoins en bricolage et rénovation. Connectez-vous avec les meilleurs experts locaux.
@@ -47,7 +47,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="mt-16 pt-8 border-t border-slate-100 text-center text-slate-400 text-xs font-bold uppercase tracking-widest">
-        © 2026 Mihnati. Tous droits réservés.
+        © 2026 Khadamati. Tous droits réservés.
       </div>
     </footer>
   );

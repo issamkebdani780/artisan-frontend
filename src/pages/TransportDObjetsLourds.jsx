@@ -128,17 +128,17 @@ const TransportDObjetsLourds = () => {
 <tbody className="divide-y divide-slate-200">
 <tr>
 <td className="px-6 py-4 font-medium">Piano Droit</td>
-<td className="px-6 py-4 text-primary font-bold">À partir de 150â‚¬</td>
+<td className="px-6 py-4 text-primary font-bold">À partir de 150 DA</td>
 <td className="px-6 py-4 text-sm text-slate-500">Protection housse incluse</td>
 </tr>
 <tr>
 <td className="px-6 py-4 font-medium">Piano à Queue</td>
-<td className="px-6 py-4 text-primary font-bold">À partir de 350â‚¬</td>
+<td className="px-6 py-4 text-primary font-bold">À partir de 350 DA</td>
 <td className="px-6 py-4 text-sm text-slate-500">Démontage lyre et pieds</td>
 </tr>
 <tr>
 <td className="px-6 py-4 font-medium">Coffre-fort (&lt; 200kg)</td>
-<td className="px-6 py-4 text-primary font-bold">À partir de 200â‚¬</td>
+<td className="px-6 py-4 text-primary font-bold">À partir de 200 DA</td>
 <td className="px-6 py-4 text-sm text-slate-500">Ancrage possible sur demande</td>
 </tr>
 </tbody>
@@ -147,7 +147,7 @@ const TransportDObjetsLourds = () => {
 <div className="mt-4 p-4 bg-primary/5 rounded-lg border-l-4 border-primary flex gap-4">
 <span className="material-symbols-outlined text-primary">info</span>
 <p className="text-sm text-slate-700">
-<strong>Garantie Assurance :</strong> Tous nos transports sont couverts par une assurance "Ad Valorem" jusqu'à 50 000â‚¬ par objet. Une extension est possible pour les objets de collection.
+<strong>Garantie Assurance :</strong> Tous nos transports sont couverts par une assurance "Ad Valorem" jusqu'à 50 000 DA par objet. Une extension est possible pour les objets de collection.
                             </p>
 </div>
 </section>

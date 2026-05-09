@@ -1,4 +1,4 @@
-﻿import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import ArtisanLayout from '../layouts/ArtisanLayout';
 import apiService from '../services/api';
 
@@ -91,7 +91,7 @@ const ArtisanProjects = () => {
   });
 
   return (
-    <ArtisanLayout title="Mihnati PRO" subtitle="Gestion des projets">
+    <ArtisanLayout title="Khadamati PRO" subtitle="Gestion des projets">
       <div className="p-8 flex-1 flex flex-col overflow-y-auto font-['Outfit',sans-serif] bg-slate-50/20 transition-colors">
         
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-10">

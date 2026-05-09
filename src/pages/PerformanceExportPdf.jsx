@@ -102,7 +102,7 @@ const PerformanceExportPdf = () => {
 <span className="material-symbols-outlined text-sm">trending_up</span>
 </span>
 </div>
-<p className="text-3xl font-bold tracking-tight">45 280,00 â‚¬</p>
+<p className="text-3xl font-bold tracking-tight">45 280,00  DA</p>
 <div className="flex items-center gap-2 mt-2">
 <span className="text-xs font-bold text-emerald-500">+8.5%</span>
 <span className="text-xs text-slate-400">vs mois dernier</span>
@@ -115,7 +115,7 @@ const PerformanceExportPdf = () => {
 <span className="material-symbols-outlined text-sm">payments</span>
 </span>
 </div>
-<p className="text-3xl font-bold tracking-tight">124,50 â‚¬</p>
+<p className="text-3xl font-bold tracking-tight">124,50  DA</p>
 <div className="flex items-center gap-2 mt-2">
 <span className="text-xs font-bold text-emerald-500">+2.1%</span>
 <span className="text-xs text-slate-400">vs mois dernier</span>
@@ -235,7 +235,7 @@ const PerformanceExportPdf = () => {
 </div>
 </td>
 <td className="px-6 py-4 text-sm text-slate-500">12 Oct 2023</td>
-<td className="px-6 py-4 text-sm font-bold">450,00 â‚¬</td>
+<td className="px-6 py-4 text-sm font-bold">450,00  DA</td>
 <td className="px-6 py-4">
 <span className="px-2.5 py-1 rounded-full text-[10px] font-bold bg-emerald-500/10 text-emerald-500 uppercase tracking-wider">Réussi</span>
 </td>
@@ -252,7 +252,7 @@ const PerformanceExportPdf = () => {
 </div>
 </td>
 <td className="px-6 py-4 text-sm text-slate-500">11 Oct 2023</td>
-<td className="px-6 py-4 text-sm font-bold">89,90 â‚¬</td>
+<td className="px-6 py-4 text-sm font-bold">89,90  DA</td>
 <td className="px-6 py-4">
 <span className="px-2.5 py-1 rounded-full text-[10px] font-bold bg-emerald-500/10 text-emerald-500 uppercase tracking-wider">Réussi</span>
 </td>
@@ -269,7 +269,7 @@ const PerformanceExportPdf = () => {
 </div>
 </td>
 <td className="px-6 py-4 text-sm text-slate-500">10 Oct 2023</td>
-<td className="px-6 py-4 text-sm font-bold">1 240,00 â‚¬</td>
+<td className="px-6 py-4 text-sm font-bold">1 240,00  DA</td>
 <td className="px-6 py-4">
 <span className="px-2.5 py-1 rounded-full text-[10px] font-bold bg-amber-500/10 text-amber-500 uppercase tracking-wider">En attente</span>
 </td>
@@ -286,7 +286,7 @@ const PerformanceExportPdf = () => {
 </div>
 </td>
 <td className="px-6 py-4 text-sm text-slate-500">09 Oct 2023</td>
-<td className="px-6 py-4 text-sm font-bold">15,00 â‚¬</td>
+<td className="px-6 py-4 text-sm font-bold">15,00  DA</td>
 <td className="px-6 py-4">
 <span className="px-2.5 py-1 rounded-full text-[10px] font-bold bg-red-500/10 text-red-500 uppercase tracking-wider">Échoué</span>
 </td>

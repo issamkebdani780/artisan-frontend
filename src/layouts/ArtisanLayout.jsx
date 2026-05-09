@@ -4,7 +4,7 @@ import apiService from '../services/api';
 import logo from '../assets/logo.png';
 
 
-const ArtisanLayout = ({ children, title = "Mihnati PRO", subtitle = "Premium Plan", hideHeader = false }) => {
+const ArtisanLayout = ({ children, title = "Khadamati PRO", subtitle = "Premium Plan", hideHeader = false }) => {
   const location = useLocation();
   const navigate = useNavigate();
   const path = location.pathname;
@@ -50,7 +50,7 @@ const ArtisanLayout = ({ children, title = "Mihnati PRO", subtitle = "Premium Pl
         <div className="flex flex-col gap-10 p-4 lg:p-8">
           <div className="flex items-center justify-between">
             <div className={`flex items-center gap-4 transition-all duration-300 ${isCollapsed ? 'lg:opacity-0 lg:scale-0 lg:w-0' : 'opacity-100 scale-100'}`}>
-              <img src={logo} alt="Mihnati Logo" className="h-20 lg:h-24 w-auto object-contain bg-white rounded-xl p-1" />
+              <img src={logo} alt="Khadamati Logo" className="h-20 lg:h-24 w-auto object-contain bg-white rounded-xl p-1" />
               <div className="flex flex-col">
                 <h1 className="text-lg lg:text-xl font-black tracking-tighter flex items-center gap-1 uppercase truncate overflow-hidden text-slate-900">
                   {title}

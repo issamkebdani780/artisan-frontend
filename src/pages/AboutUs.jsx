@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import CtaSection from '../components/CtaSection';
 import logo from '../assets/logo.png';
 
@@ -22,7 +22,7 @@ const AboutUs = () => {
             </span>
           </h1>
           <p className="text-lg md:text-xl text-slate-500 max-w-3xl mx-auto leading-relaxed font-medium">
-            Mihnati est née d'une idée simple : trouver un artisan de confiance ne devrait pas être un parcours du combattant. Nous construisons le futur des services à domicile en Algérie.
+            Khadamati est née d'une idée simple : trouver un artisan de confiance ne devrait pas être un parcours du combattant. Nous construisons le futur des services à domicile en Algérie.
           </p>
         </div>
       </section>
@@ -34,7 +34,7 @@ const AboutUs = () => {
             <div className="absolute -inset-4 bg-primary/10 rounded-[40px] blur-2xl group-hover:bg-primary/20 transition-all duration-500"></div>
             <img 
               src={logo} 
-              alt="Mihnati Logo" 
+              alt="Khadamati Logo" 
               className="relative rounded-[32px] shadow-2xl border-8 border-white object-contain aspect-4/3 w-full transform group-hover:scale-[1.02] transition-transform duration-500 bg-white p-8"
             />
             <div className="absolute -bottom-8 -right-8 bg-white p-8 rounded-3xl shadow-xl border border-slate-100 max-w-[240px] hidden md:block animate-bounce-slow transition-colors">
@@ -75,7 +75,7 @@ const AboutUs = () => {
       <section className="py-24 px-6 md:px-20 bg-slate-50 transition-colors">
         <div className="max-w-7xl mx-auto text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-black text-slate-900 mb-6 uppercase">L'équipe de développement</h2>
-          <p className="text-slate-500 max-w-2xl mx-auto font-bold">Les esprits créatifs derrière la plateforme Mihnati.</p>
+          <p className="text-slate-500 max-w-2xl mx-auto font-bold">Les esprits créatifs derrière la plateforme Khadamati.</p>
         </div>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto font-['Outfit',sans-serif]">

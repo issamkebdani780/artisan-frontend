@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 
 const FournirUneExplication = () => {
   return (
@@ -13,7 +13,7 @@ const FournirUneExplication = () => {
 <path d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z" fill="currentColor"></path>
 </svg>
 </div>
-<h1 className="text-xl font-bold tracking-tight text-slate-900 uppercase">ArtisanDirect</h1>
+<h1 className="text-xl font-bold tracking-tight text-slate-900 uppercase">Khadamati</h1>
 </div>
 <div className="flex gap-3">
 <button className="flex size-10 items-center justify-center rounded-xl bg-slate-100 text-slate-600 hover:bg-slate-200 transition-colors">
@@ -96,7 +96,7 @@ const FournirUneExplication = () => {
 <div className="flex items-start gap-3 p-4 bg-slate-100 rounded-lg border border-slate-200">
 <span className="material-symbols-outlined text-slate-500">lock</span>
 <p className="text-xs text-slate-600 leading-relaxed">
-                                Les informations fournies dans ce formulaire sont strictement confidentielles et traitées uniquement par le service administratif d'ArtisanDirect pour l'examen de votre dossier.
+                                Les informations fournies dans ce formulaire sont strictement confidentielles et traitées uniquement par le service administratif de Khadamati pour l'examen de votre dossier.
                             </p>
 </div>
 </div>
@@ -121,7 +121,7 @@ const FournirUneExplication = () => {
 </div>
 </main>
 <footer className="bg-white border-t border-slate-200 py-6 px-6 text-center text-xs text-slate-400 uppercase tracking-widest">
-            © 2024 ArtisanDirect - Plateforme Professionnelle de Confiance
+            © 2026 Khadamati - Plateforme Professionnelle de Confiance
         </footer>
 </div>
 

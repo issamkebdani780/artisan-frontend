@@ -1,8 +1,13 @@
-﻿import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import SearchFilters from '../components/SearchFilters';
 import ExpertCard from '../components/ExpertCard';
 import apiService from '../services/api';
+import { 
+  Search, 
+  MapPin, 
+  UserSearch 
+} from 'lucide-react';
 
 const FindExpert = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -108,7 +113,7 @@ const FindExpert = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 bg-white p-3 rounded-3xl shadow-2xl shadow-slate-200/50 border border-slate-100 transition-colors">
                 <div className="flex-2 flex items-center px-6 gap-4 border-b sm:border-b-0 sm:border-r border-slate-50">
-                  <span className="material-symbols-outlined text-slate-300">search</span>
+                  <Search className="text-slate-300 size-6" />
                   <input
                     type="text"
                     placeholder="Plomberie, Peinture, Électricité..."
@@ -119,7 +124,7 @@ const FindExpert = () => {
                   />
                 </div>
                 <div className="flex-1 flex items-center px-6 gap-4">
-                  <span className="material-symbols-outlined text-slate-300">location_on</span>
+                  <MapPin className="text-slate-300 size-6" />
                   <input
                     type="text"
                     placeholder="Votre ville"
@@ -169,7 +174,7 @@ const FindExpert = () => {
             ) : experts.length === 0 ? (
               <div className="flex flex-col items-center justify-center py-32 text-center space-y-6 bg-slate-50 rounded-[40px] border-2 border-dashed border-slate-200 transition-colors">
                 <div className="size-24 bg-white rounded-full flex items-center justify-center shadow-xl">
-                  <span className="material-symbols-outlined text-slate-200 text-5xl">person_search</span>
+                  <UserSearch className="text-slate-200 size-12" />
                 </div>
                 <div>
                   <h3 className="text-2xl font-black text-slate-900 uppercase tracking-tight">Aucun artisan trouvé</h3>

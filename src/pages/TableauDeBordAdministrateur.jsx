@@ -103,7 +103,7 @@ const TableauDeBordAdministrateur = () => {
                             </span>
 </div>
 <p className="text-slate-500 text-sm font-medium">Revenu Total</p>
-<p className="text-2xl font-bold mt-1 text-slate-900">12,840.00 â‚¬</p>
+<p className="text-2xl font-bold mt-1 text-slate-900">12,840.00  DA</p>
 </div>
 <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
 <div className="flex justify-between items-start mb-4">

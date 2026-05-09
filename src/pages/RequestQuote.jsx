@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import apiService from '../services/api';
 
@@ -434,7 +434,7 @@ const RequestQuote = () => {
                   </div>
                   <div>
                     <h4 className="font-black text-xl text-slate-900 uppercase tracking-tight">Sécurisé</h4>
-                    <p className="text-xs font-black text-slate-400 uppercase tracking-widest">Garantie Mihnati</p>
+                    <p className="text-xs font-black text-slate-400 uppercase tracking-widest">Garantie Khadamati</p>
                   </div>
                 </div>
 

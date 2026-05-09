@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 
 const DTailsDuServiceElectricite = () => {
   return (
@@ -99,7 +99,7 @@ const DTailsDuServiceElectricite = () => {
 <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
 <div className="flex justify-between items-start mb-4">
 <span className="material-symbols-outlined text-4xl text-[#f39c12]">build_circle</span>
-<span className="text-sm font-bold px-3 py-1 rounded-full text-[#f39c12] bg-[#f39c12]/10">À partir de 50â‚¬</span>
+<span className="text-sm font-bold px-3 py-1 rounded-full text-[#f39c12] bg-[#f39c12]/10">À partir de 50 DA</span>
 </div>
 <h3 className="text-lg font-bold mb-2">Diagnostic &amp; Réparation</h3>
 <p className="text-slate-600 text-sm mb-6">Recherche de panne, remplacement de fusibles ou réparation de tableau électrique.</p>
@@ -108,7 +108,7 @@ const DTailsDuServiceElectricite = () => {
 <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
 <div className="flex justify-between items-start mb-4">
 <span className="material-symbols-outlined text-4xl text-[#f39c12]">light</span>
-<span className="text-sm font-bold px-3 py-1 rounded-full text-[#f39c12] bg-[#f39c12]/10">À partir de 45â‚¬</span>
+<span className="text-sm font-bold px-3 py-1 rounded-full text-[#f39c12] bg-[#f39c12]/10">À partir de 45 DA</span>
 </div>
 <h3 className="text-lg font-bold mb-2">Installation Luminaires</h3>
 <p className="text-slate-600 text-sm mb-6">Pose de lustres, spots LED, appliques murales ou remplacement d'interrupteurs.</p>
@@ -211,7 +211,7 @@ const DTailsDuServiceElectricite = () => {
 <span className="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
 </summary>
 <div className="mt-4 text-slate-600 text-sm leading-relaxed">
-                                Les prix affichés "À partir de" incluent le diagnostic et la main-d'Å"uvre de base. Le coût des pièces spécifiques (interrupteurs, disjoncteurs, câbles) est facturé en sus après validation du devis sur place.
+                                Les prix affichés "À partir de" incluent le diagnostic et la main-d'œuvre de base. Le coût des pièces spécifiques (interrupteurs, disjoncteurs, câbles) est facturé en sus après validation du devis sur place.
                             </div>
 </details>
 <details className="group bg-slate-50 rounded-xl border border-slate-200 p-4">

@@ -124,7 +124,7 @@ const NettoyageDeVitres = () => {
 </div>
 <h3 className="text-xl font-bold mb-2">Standard Maison</h3>
 <div className="flex items-baseline gap-1 mb-6">
-<span className="text-4xl font-black text-slate-900">49â‚¬</span>
+<span className="text-4xl font-black text-slate-900">49 DA</span>
 <span className="text-slate-500 font-medium">/ intervention</span>
 </div>
 <ul className="flex flex-col gap-4 mb-8 flex-1">
@@ -151,7 +151,7 @@ const NettoyageDeVitres = () => {
 </div>
 <h3 className="text-xl font-bold mb-2">Business Pro</h3>
 <div className="flex items-baseline gap-1 mb-6 text-primary">
-<span className="text-4xl font-black">129â‚¬</span>
+<span className="text-4xl font-black">129 DA</span>
 <span className="text-slate-500 font-medium">/ mois</span>
 </div>
 <ul className="flex flex-col gap-4 mb-8 flex-1">

@@ -1,17 +1,35 @@
 import React from 'react';
+import { 
+  Hammer, 
+  Wrench, 
+  Droplets, 
+  Zap, 
+  Paintbrush, 
+  Construction, 
+  Settings, 
+  Scissors, 
+  Grid2X2, 
+  Utensils, 
+  Leaf,
+  LayoutGrid,
+  Star,
+  Check,
+  CreditCard,
+  Heart
+} from 'lucide-react';
 
 const CATEGORIES = [
-  { label: 'Menuiserie et Bois', icon: 'carpenter' },
-  { label: 'Ferronnerie et Soudure', icon: 'precision_manufacturing' },
-  { label: 'Plomberie et Réseaux', icon: 'plumbing' },
-  { label: 'Électricité et Énergie', icon: 'electrical_services' },
-  { label: 'Peinture et Plâtre', icon: 'format_paint' },
-  { label: 'Maçonnerie et Finitions', icon: 'handyman' },
-  { label: 'Mécanique et Machines', icon: 'engineering' },
-  { label: 'Couture et Cuir', icon: 'checkroom' },
-  { label: 'Verre et Miroiterie', icon: 'grid_view' },
-  { label: 'Métiers alimentaires artisanaux', icon: 'restaurant' },
-  { label: 'Jardinage et Espaces Verts', icon: 'yard' },
+  { label: 'Menuiserie et Bois', icon: Hammer },
+  { label: 'Ferronnerie et Soudure', icon: Wrench },
+  { label: 'Plomberie et Réseaux', icon: Droplets },
+  { label: 'Électricité et Énergie', icon: Zap },
+  { label: 'Peinture et Plâtre', icon: Paintbrush },
+  { label: 'Maçonnerie et Finitions', icon: Construction },
+  { label: 'Mécanique et Machines', icon: Settings },
+  { label: 'Couture et Cuir', icon: Scissors },
+  { label: 'Verre et Miroiterie', icon: Grid2X2 },
+  { label: 'Métiers alimentaires artisanaux', icon: Utensils },
+  { label: 'Jardinage et Espaces Verts', icon: Leaf },
 ];
 
 const SearchFilters = ({ filters, onChange }) => {
@@ -41,10 +59,10 @@ const SearchFilters = ({ filters, onChange }) => {
       {/* CATEGORIES */}
       <div>
         <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-300 mb-8 flex items-center gap-3 transition-colors">
-          <span className="material-symbols-outlined text-sm text-primary">grid_view</span> CATÉGORIES
+          <LayoutGrid className="size-4 text-primary" /> CATÉGORIES
         </h3>
         <div className="space-y-2">
-          {CATEGORIES.map(({ label, icon }) => {
+          {CATEGORIES.map(({ label, icon: Icon }) => {
             const checked = selectedCategories.includes(label);
             return (
               <div
@@ -53,11 +71,11 @@ const SearchFilters = ({ filters, onChange }) => {
                 onClick={() => toggleCategory(label)}
               >
                 <div className="flex items-center gap-4">
-                  <span className={`material-symbols-outlined transition-colors ${checked ? 'text-white' : 'text-slate-400 group-hover:text-primary'}`}>{icon}</span>
+                  <Icon className={`size-5 transition-colors ${checked ? 'text-white' : 'text-slate-400 group-hover:text-primary'}`} />
                   <span className={`text-[11px] font-black uppercase tracking-tight transition-colors ${checked ? 'text-white' : 'text-slate-600'}`}>{label}</span>
                 </div>
                 <div className={`size-5 rounded-lg border-2 flex items-center justify-center transition-all ${checked ? 'bg-white border-white' : 'border-slate-200'}`}>
-                  {checked && <span className="material-symbols-outlined text-primary text-[10px] font-black">check</span>}
+                  {checked && <Check className="text-primary size-3 stroke-[4px]" />}
                 </div>
               </div>
             );
@@ -68,7 +86,7 @@ const SearchFilters = ({ filters, onChange }) => {
       {/* RATINGS */}
       <div className="pt-10 border-t border-slate-50 transition-colors">
         <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-300 mb-8 flex items-center gap-3 transition-colors">
-          <span className="material-symbols-outlined text-sm text-primary">star_rate</span> ÉVALUATIONS
+          <Star className="size-4 text-primary" /> ÉVALUATIONS
         </h3>
         <div className="space-y-4 px-1">
           {[5.0, 4.0, 3.0, 2.0, 1.0].map((rating) => {
@@ -84,7 +102,7 @@ const SearchFilters = ({ filters, onChange }) => {
                 </div>
                 <span className={`text-sm font-black flex items-center gap-2 transition-colors ${selected ? 'text-primary' : 'text-slate-500 group-hover:text-primary'}`}>
                   {rating === 5 ? '5.0' : `${rating}+`}
-                  <span className="material-symbols-outlined text-yellow-400 text-lg" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
+                  <Star className="size-4 text-yellow-400 fill-yellow-400" />
                 </span>
               </div>
             );
@@ -95,7 +113,7 @@ const SearchFilters = ({ filters, onChange }) => {
       {/* PRICE RANGE */}
       <div className="pt-10 border-t border-slate-50 transition-colors">
         <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-300 mb-8 flex items-center gap-3 transition-colors">
-          <span className="material-symbols-outlined text-sm text-primary">payments</span> BUDGET MAX
+          <CreditCard className="size-4 text-primary" /> BUDGET MAX
         </h3>
         <div className="px-1">
           <input
@@ -117,7 +135,7 @@ const SearchFilters = ({ filters, onChange }) => {
       {/* FAVORITES */}
       <div className="pt-10 border-t border-slate-50 transition-colors">
         <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-300 mb-8 flex items-center gap-3 transition-colors">
-          <span className="material-symbols-outlined text-sm text-rose-500">favorite</span> FAVORIS
+          <Heart className="size-4 text-rose-500" /> FAVORIS
         </h3>
         <div className="px-1">
           <div 

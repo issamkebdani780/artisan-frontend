@@ -54,7 +54,7 @@ const DetailsDuServiceNettoyageProfond = () => {
 </div>
 <div>
 <p className="text-slate-500 text-sm font-medium">Tarif transparent</p>
-<p className="text-slate-900 text-3xl font-bold">45â‚¬ <span className="text-lg font-normal text-slate-500">/ heure</span></p>
+<p className="text-slate-900 text-3xl font-bold">45 DA <span className="text-lg font-normal text-slate-500">/ heure</span></p>
 </div>
 </div>
 <button className="bg-primary hover:bg-primary/90 text-white font-bold py-3 px-8 rounded-lg transition-all shadow-md shadow-primary/20">
@@ -175,7 +175,7 @@ const DetailsDuServiceNettoyageProfond = () => {
 <ul className="space-y-3">
 <li className="flex items-start gap-2 text-sm text-slate-700">
 <span className="material-symbols-outlined text-primary text-lg leading-none">verified_user</span>
-<span>Assurance dommages incluse jusqu'à 2Mâ‚¬</span>
+<span>Assurance dommages incluse jusqu'à 2M DA</span>
 </li>
 <li className="flex items-start gap-2 text-sm text-slate-700">
 <span className="material-symbols-outlined text-primary text-lg leading-none">eco</span>

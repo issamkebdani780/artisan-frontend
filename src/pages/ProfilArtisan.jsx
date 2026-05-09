@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import apiService from '../services/api';
 import logo from '../assets/logo.png';
@@ -302,7 +302,7 @@ const ProfilArtisan = () => {
                   </div>
                   <div className="px-8 py-4 bg-slate-50 flex items-center justify-center gap-2 border-t border-slate-100 transition-colors">
                     <span className="material-symbols-outlined text-primary text-lg">verified_user</span>
-                    <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest leading-none pt-1 transition-colors">Garantie Mihnati Incluse</p>
+                    <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest leading-none pt-1 transition-colors">Garantie Khadamati Incluse</p>
                   </div>
                 </div>
               ) : (
@@ -353,9 +353,9 @@ const ProfilArtisan = () => {
         <div className="max-w-7xl mx-auto px-6 md:px-20">
           <div className="flex flex-col md:flex-row justify-between items-center gap-10">
             <div className="flex items-center gap-4">
-              <img src={logo} alt="Mihnati" className="h-10 w-auto object-contain bg-white rounded-xl p-1" />
+              <img src={logo} alt="Khadamati" className="h-10 w-auto object-contain bg-white rounded-xl p-1" />
               <div className="h-8 w-px bg-slate-100 hidden md:block"></div>
-              <p className="text-slate-400 text-xs font-bold tracking-tight transition-colors">Le réseau des experts de confiance. © 2026 Mihnati.</p>
+              <p className="text-slate-400 text-xs font-bold tracking-tight transition-colors">Le réseau des experts de confiance. © 2026 Khadamati.</p>
             </div>
             <div className="flex gap-6">
               {['Accueil', 'Expertise', 'Aide', 'Confidentialité'].map((link) => (

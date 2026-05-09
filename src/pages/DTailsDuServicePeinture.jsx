@@ -89,7 +89,7 @@ const DTailsDuServicePeinture = () => {
 <div className="flex justify-between items-end mb-8">
 <div>
 <h2 className="text-slate-900 text-3xl font-bold leading-tight">Nos Tarifs et Prestations</h2>
-<p className="text-slate-600 mt-2">Prix estimés par mÂ² incluant la main d'Å"uvre et le matériel de base.</p>
+<p className="text-slate-600 mt-2">Prix estimés par mÂ² incluant la main d'œuvre et le matériel de base.</p>
 </div>
 <a className="text-primary font-bold hover:underline hidden md:block" href="#">Voir tout le catalogue</a>
 </div>
@@ -106,7 +106,7 @@ const DTailsDuServicePeinture = () => {
 <p className="text-slate-600 text-sm mb-4">Application de deux couches de peinture acrylique haute qualité.</p>
 <div className="flex items-baseline gap-1 border-t border-slate-100 pt-4">
 <span className="text-sm text-slate-500">à partir de</span>
-<span className="text-2xl font-black text-primary">15â‚¬</span>
+<span className="text-2xl font-black text-primary">15 DA</span>
 <span className="text-sm text-slate-500">/ mÂ²</span>
 </div>
 </div>
@@ -123,7 +123,7 @@ const DTailsDuServicePeinture = () => {
 <p className="text-slate-600 text-sm mb-4">Traitement des fissures et peinture mate anti-traces.</p>
 <div className="flex items-baseline gap-1 border-t border-slate-100 pt-4">
 <span className="text-sm text-slate-500">à partir de</span>
-<span className="text-2xl font-black text-primary">20â‚¬</span>
+<span className="text-2xl font-black text-primary">20 DA</span>
 <span className="text-sm text-slate-500">/ mÂ²</span>
 </div>
 </div>
@@ -140,7 +140,7 @@ const DTailsDuServicePeinture = () => {
 <p className="text-slate-600 text-sm mb-4">Préparation des supports et pose soignée de papier peint ou intissé.</p>
 <div className="flex items-baseline gap-1 border-t border-slate-100 pt-4">
 <span className="text-sm text-slate-500">à partir de</span>
-<span className="text-2xl font-black text-primary">25â‚¬</span>
+<span className="text-2xl font-black text-primary">25 DA</span>
 <span className="text-sm text-slate-500">/ mÂ²</span>
 </div>
 </div>

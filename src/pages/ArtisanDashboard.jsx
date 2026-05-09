@@ -1,4 +1,4 @@
-﻿import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import ArtisanLayout from '../layouts/ArtisanLayout';
 import apiService from '../services/api';
 import ChatModal from '../components/ChatModal';
@@ -110,7 +110,7 @@ const ArtisanDashboard = () => {
   const activeProjects = bookings.filter(b => b.status === 'confirmed' || b.status === 'pending' || b.status === 'en attente').length;
 
   return (
-    <ArtisanLayout title="Mihnati PRO" subtitle="Premium Plan">
+    <ArtisanLayout title="Khadamati PRO" subtitle="Premium Plan">
       <div className="p-8 flex flex-col gap-10 flex-1 overflow-y-auto font-['Outfit',sans-serif] bg-slate-50/20">
         
         {/* Verification Status Banner */}

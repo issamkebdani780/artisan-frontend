@@ -50,7 +50,7 @@ const DTailsDuServicePeinturePlafond = () => {
 <span className="material-symbols-outlined">payments</span>
 <p className="text-slate-500 text-sm font-semibold uppercase tracking-wide">Tarif Indicatif</p>
 </div>
-<p className="text-slate-900 tracking-tight text-3xl font-black leading-tight">Dès 22â‚¬ / mÂ²</p>
+<p className="text-slate-900 tracking-tight text-3xl font-black leading-tight">Dès 22 DA / mÂ²</p>
 <p className="text-emerald-500 text-sm font-medium flex items-center gap-1">
 <span className="material-symbols-outlined text-sm">trending_down</span> -5% sur surfaces &gt; 50mÂ²
                     </p>
@@ -117,17 +117,17 @@ const DTailsDuServicePeinturePlafond = () => {
 <tr>
 <td className="px-6 py-4 text-sm font-medium">Auréoles d'eau</td>
 <td className="px-6 py-4 text-sm text-slate-600">Primaire isolant à base de solvant</td>
-<td className="px-6 py-4 text-sm font-bold text-right text-primary">+4â‚¬/mÂ²</td>
+<td className="px-6 py-4 text-sm font-bold text-right text-primary">+4 DA/mÂ²</td>
 </tr>
 <tr>
 <td className="px-6 py-4 text-sm font-medium">Fissures actives</td>
 <td className="px-6 py-4 text-sm text-slate-600">Entoilage localisé et enduit fibré</td>
-<td className="px-6 py-4 text-sm font-bold text-right text-primary">+7â‚¬/mÂ²</td>
+<td className="px-6 py-4 text-sm font-bold text-right text-primary">+7 DA/mÂ²</td>
 </tr>
 <tr>
 <td className="px-6 py-4 text-sm font-medium">Traces de fumée</td>
 <td className="px-6 py-4 text-sm text-slate-600">Lessivage sodé et peinture bloquante</td>
-<td className="px-6 py-4 text-sm font-bold text-right text-primary">+5â‚¬/mÂ²</td>
+<td className="px-6 py-4 text-sm font-bold text-right text-primary">+5 DA/mÂ²</td>
 </tr>
 </tbody>
 </table>

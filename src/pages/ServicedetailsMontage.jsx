@@ -149,11 +149,11 @@ const ServicedetailsMontage = () => {
 <div className="mt-6 space-y-4">
 <div className="flex justify-between items-center p-3 rounded-lg bg-slate-50">
 <span className="text-sm font-medium">À l'unité</span>
-<span className="text-lg font-bold text-primary">Dès 15â‚¬</span>
+<span className="text-lg font-bold text-primary">Dès 15 DA</span>
 </div>
 <div className="flex justify-between items-center p-3 rounded-lg bg-slate-50">
 <span className="text-sm font-medium">Taux horaire</span>
-<span className="text-lg font-bold text-primary">25â‚¬ / h</span>
+<span className="text-lg font-bold text-primary">25 DA / h</span>
 </div>
 </div>
 <p className="mt-4 text-xs text-slate-500 text-center italic">Le prix final dépend du nombre d'unités et de la complexité.</p>

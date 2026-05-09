@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 
 const MessagesEtLitiges = () => {
   return (
@@ -11,7 +11,7 @@ const MessagesEtLitiges = () => {
 <div className="bg-primary rounded-lg p-2 text-white">
 <span className="material-symbols-outlined">construction</span>
 </div>
-<h1 className="font-bold text-lg tracking-tight">Mihnati PRO</h1>
+<h1 className="font-bold text-lg tracking-tight">Khadamati PRO</h1>
 </div>
 <nav className="flex-1 px-4 space-y-1">
 <a className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-600 hover:bg-slate-100 transition-colors" href="#">
@@ -251,7 +251,7 @@ const MessagesEtLitiges = () => {
 <h4 className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-3">Détails du projet</h4>
 <div className="bg-slate-50 p-3 rounded-xl border border-slate-100">
 <p className="text-xs font-bold">Cuisine Contemporaine</p>
-<p className="text-[10px] text-slate-500 mt-1">Budget est.: 12,000â‚¬ - 15,000â‚¬</p>
+<p className="text-[10px] text-slate-500 mt-1">Budget est.: 12,000 DA - 15,000 DA</p>
 <div className="mt-3 h-1.5 w-full bg-slate-200 rounded-full overflow-hidden">
 <div className="bg-primary h-full w-[45%]"></div>
 </div>

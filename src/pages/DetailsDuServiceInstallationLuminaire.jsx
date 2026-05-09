@@ -48,7 +48,7 @@ const DetailsDuServiceInstallationLuminaire = () => {
 {/*  CTA & Pricing Quick Stats  */}
 <div className="flex flex-wrap justify-between items-center gap-6 p-6 bg-white rounded-xl mt-6 border border-slate-100 shadow-sm">
 <div className="flex flex-col gap-1">
-<p className="text-slate-900 text-2xl font-bold">À partir de 45â‚¬ <span className="text-sm font-normal text-slate-500">/ luminaire</span></p>
+<p className="text-slate-900 text-2xl font-bold">À partir de 45 DA <span className="text-sm font-normal text-slate-500">/ luminaire</span></p>
 <div className="flex items-center gap-2">
 <span className="material-symbols-outlined text-primary text-sm">verified_user</span>
 <p className="text-slate-600 text-sm">Assurance responsabilité civile incluse</p>
@@ -254,22 +254,22 @@ const DetailsDuServiceInstallationLuminaire = () => {
 <tr>
 <td className="p-4">Applique Murale / Plafonnier standard</td>
 <td className="p-4">30 - 45 min</td>
-<td className="p-4 font-bold text-primary">45â‚¬</td>
+<td className="p-4 font-bold text-primary">45 DA</td>
 </tr>
 <tr>
 <td className="p-4">Suspension Design ou Lustre (&lt; 5kg)</td>
 <td className="p-4">45 - 60 min</td>
-<td className="p-4 font-bold text-primary">65â‚¬</td>
+<td className="p-4 font-bold text-primary">65 DA</td>
 </tr>
 <tr>
 <td className="p-4">Lustre lourd ou complexe (&gt; 5kg)</td>
 <td className="p-4">1h30 - 2h</td>
-<td className="p-4 font-bold text-primary">95â‚¬</td>
+<td className="p-4 font-bold text-primary">95 DA</td>
 </tr>
 <tr>
 <td className="p-4">Installation Spot (unité supplémentaire)</td>
 <td className="p-4">15 min</td>
-<td className="p-4 font-bold text-primary">25â‚¬</td>
+<td className="p-4 font-bold text-primary">25 DA</td>
 </tr>
 </tbody>
 </table>

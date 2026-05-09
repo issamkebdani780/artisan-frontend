@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 
 const ArtisanaiNewChat = () => {
   return (
@@ -12,7 +12,7 @@ const ArtisanaiNewChat = () => {
 <span className="material-symbols-outlined">smart_toy</span>
 </div>
 <div className="flex flex-col">
-<h1 className="text-base font-bold leading-none">ArtisanAI</h1>
+<h1 className="text-base font-bold leading-none">KhadamatiAI</h1>
 <p className="text-xs text-slate-500">Professional Assistant</p>
 </div>
 </div>
@@ -81,7 +81,7 @@ const ArtisanaiNewChat = () => {
 </div>
 <h1 className="text-3xl font-bold mb-4">How can I help you today?</h1>
 <p className="text-slate-500 max-w-md mx-auto">
-                        Ask me anything about account verification, billing, or technical support. I'm here to help you get the most out of ArtisanAI.
+                        Ask me anything about account verification, billing, or technical support. I'm here to help you get the most out of KhadamatiAI.
                     </p>
 </div>
 {/*  Suggested Prompts  */}
@@ -122,7 +122,7 @@ const ArtisanaiNewChat = () => {
 </div>
 </div>
 <p className="text-[10px] text-center mt-3 text-slate-400">
-                        ArtisanAI can make mistakes. Please verify important information.
+                        KhadamatiAI can make mistakes. Please verify important information.
                     </p>
 </div>
 </div>

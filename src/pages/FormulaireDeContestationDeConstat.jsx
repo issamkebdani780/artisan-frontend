@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 
 const FormulaireDeContestationDeConstat = () => {
   return (
@@ -10,7 +10,7 @@ const FormulaireDeContestationDeConstat = () => {
 <div className="flex justify-between h-16 items-center">
 <div className="flex items-center gap-2 text-primary">
 <span className="material-symbols-outlined text-3xl">construction</span>
-<h2 className="text-xl font-bold tracking-tight">ArtisanDirect</h2>
+<h2 className="text-xl font-bold tracking-tight">Khadamati</h2>
 </div>
 <nav className="hidden md:flex items-center gap-8">
 <a className="text-sm font-medium hover:text-primary transition-colors" href="#">Tableau de bord</a>
@@ -123,7 +123,7 @@ const FormulaireDeContestationDeConstat = () => {
 <span className="material-symbols-outlined text-amber-600 shrink-0">warning</span>
 <div className="text-sm text-amber-800">
 <p className="font-bold mb-1">Attention aux fausses déclarations</p>
-<p>Toute fausse déclaration ou falsification de document peut entraîner des sanctions plus sévères, incluant la suspension définitive de votre compte ArtisanDirect.</p>
+<p>Toute fausse déclaration ou falsification de document peut entraîner des sanctions plus sévères, incluant la suspension définitive de votre compte Khadamati.</p>
 </div>
 </div>
 {/*  Submit Section  */}
@@ -144,7 +144,7 @@ const FormulaireDeContestationDeConstat = () => {
 <div className="col-span-1 md:col-span-1">
 <div className="flex items-center gap-2 text-primary mb-4">
 <span className="material-symbols-outlined text-2xl">construction</span>
-<span className="text-lg font-bold">ArtisanDirect</span>
+<span className="text-lg font-bold">Khadamati</span>
 </div>
 <p className="text-xs text-slate-500 leading-relaxed">
                     La plateforme de référence pour les artisans qualifiés. Connectez-vous aux meilleurs projets et développez votre activité en toute confiance.
@@ -170,7 +170,7 @@ const FormulaireDeContestationDeConstat = () => {
 <h4 className="font-bold text-sm mb-4 uppercase tracking-widest text-slate-400">Assistance</h4>
 <div className="bg-primary/5 p-4 rounded-xl border border-primary/10">
 <p className="text-xs mb-2">Besoin d'aide pour votre contestation ?</p>
-<a className="text-primary font-bold text-sm flex items-center gap-2" href="mailto:support@artisandirect.com">
+<a className="text-primary font-bold text-sm flex items-center gap-2" href="mailto:support@khadamati.dz">
 <span className="material-symbols-outlined text-sm">mail</span>
         Contactez le support
                     </a>
@@ -178,7 +178,7 @@ const FormulaireDeContestationDeConstat = () => {
 </div>
 </div>
 <div className="max-w-7xl mx-auto px-4 mt-12 pt-8 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-4">
-<p className="text-xs text-slate-400">© 2023 ArtisanDirect SAS. Tous droits réservés.</p>
+<p className="text-xs text-slate-400">© 2026 Khadamati. Tous droits réservés.</p>
 <div className="flex gap-4">
 <span className="size-8 rounded-full bg-slate-100 flex items-center justify-center cursor-pointer hover:bg-primary hover:text-white transition-all">
 <span className="material-symbols-outlined text-sm">public</span>

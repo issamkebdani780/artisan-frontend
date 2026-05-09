@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 
 const TarifsDesServicesArtisan = () => {
   return (
@@ -11,7 +11,7 @@ const TarifsDesServicesArtisan = () => {
 <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary text-white">
 <span className="material-symbols-outlined text-2xl">construction</span>
 </div>
-<h2 className="text-xl font-bold tracking-tight text-slate-900">ArtisanDirect</h2>
+<h2 className="text-xl font-bold tracking-tight text-slate-900">Khadamati</h2>
 </div>
 <nav className="hidden md:flex items-center gap-8">
 <a className="text-sm font-semibold hover:text-primary transition-colors" href="#">Accueil</a>
@@ -47,7 +47,7 @@ const TarifsDesServicesArtisan = () => {
 </div>
 <div className="mb-8">
 <div className="flex items-baseline gap-1">
-<span className="text-4xl font-black">45â‚¬</span>
+<span className="text-4xl font-black">4500 DA</span>
 <span className="text-slate-500 font-medium">à partir de</span>
 </div>
 </div>
@@ -76,7 +76,7 @@ const TarifsDesServicesArtisan = () => {
 </div>
 <div className="mb-8">
 <div className="flex items-baseline gap-1">
-<span className="text-4xl font-black">50â‚¬</span>
+<span className="text-4xl font-black">5000 DA</span>
 <span className="text-slate-500 font-medium">à partir de</span>
 </div>
 </div>
@@ -105,7 +105,7 @@ const TarifsDesServicesArtisan = () => {
 </div>
 <div className="mb-8">
 <div className="flex items-baseline gap-1">
-<span className="text-4xl font-black">35â‚¬</span>
+<span className="text-4xl font-black">3500 DA</span>
 <span className="text-slate-500 font-medium">par mÂ²</span>
 </div>
 </div>
@@ -134,7 +134,7 @@ const TarifsDesServicesArtisan = () => {
 </div>
 <div className="mb-8">
 <div className="flex items-baseline gap-1">
-<span className="text-4xl font-black">25â‚¬</span>
+<span className="text-4xl font-black">2500 DA</span>
 <span className="text-slate-500 font-medium">par heure</span>
 </div>
 </div>
@@ -163,7 +163,7 @@ const TarifsDesServicesArtisan = () => {
 </div>
 <div className="mb-8">
 <div className="flex items-baseline gap-1">
-<span className="text-4xl font-black">40â‚¬</span>
+<span className="text-4xl font-black">4000 DA</span>
 <span className="text-slate-500 font-medium">à partir de</span>
 </div>
 </div>
@@ -244,7 +244,7 @@ const TarifsDesServicesArtisan = () => {
 <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary">
 <span className="material-symbols-outlined text-xl">construction</span>
 </div>
-<h2 className="text-lg font-bold">ArtisanDirect</h2>
+<h2 className="text-lg font-bold">Khadamati</h2>
 </div>
 <p className="text-sm leading-relaxed mb-6">
                         La plateforme de mise en relation de confiance entre particuliers et artisans locaux qualifiés.
@@ -291,7 +291,7 @@ const TarifsDesServicesArtisan = () => {
 </div>
 </div>
 <div className="max-w-7xl mx-auto border-t border-slate-800 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
-<p>© 2024 ArtisanDirect. Tous droits réservés.</p>
+<p>© 2024 Khadamati. Tous droits réservés.</p>
 <div className="flex gap-6">
 <a className="hover:text-primary" href="#">CGU</a>
 <a className="hover:text-primary" href="#">Confidentialité</a>

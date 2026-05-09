@@ -88,7 +88,7 @@ const ServiceDetailsReparationDeFuites = () => {
 </div>
 <div className="text-right">
 <span className="text-sm text-slate-500 block uppercase tracking-wide font-bold">À partir de</span>
-<span className="text-4xl font-black text-primary">45â‚¬</span>
+<span className="text-4xl font-black text-primary">45 DA</span>
 </div>
 </div>
 <hr className="my-6 border-primary/10"/>
@@ -181,7 +181,7 @@ const ServiceDetailsReparationDeFuites = () => {
 <div className="pt-4">
 <div className="flex justify-between text-sm mb-2">
 <span className="text-slate-500">Estimation</span>
-<span className="font-bold">À partir de 45â‚¬</span>
+<span className="font-bold">À partir de 45 DA</span>
 </div>
 <button className="w-full bg-primary text-white py-4 rounded-xl font-bold text-lg hover:bg-blue-600 transition-all shadow-lg shadow-primary/25" type="submit">
                                             Confirmer la réservation

@@ -106,7 +106,7 @@ const InstallationRobinetterie = () => {
 </div>
 <h3 className="font-bold mb-2">Standard</h3>
 <p className="text-sm text-slate-500 mb-4">Mitigeurs classiques pour évier ou lavabo. Simplicité et efficacité.</p>
-<p className="text-primary font-bold">À partir de 89â‚¬</p>
+<p className="text-primary font-bold">À partir de 89 DA</p>
 </div>
 <div className="bg-white p-6 rounded-xl border border-slate-200 hover:border-primary transition-colors">
 <div className="size-12 rounded-lg bg-slate-100 flex items-center justify-center mb-4">
@@ -114,7 +114,7 @@ const InstallationRobinetterie = () => {
 </div>
 <h3 className="font-bold mb-2">Pack Installation</h3>
 <p className="text-sm text-slate-500 mb-4">Matériel inclus + pose. La solution clé en main pour votre cuisine ou bain.</p>
-<p className="text-primary font-bold">À partir de 159â‚¬</p>
+<p className="text-primary font-bold">À partir de 159 DA</p>
 </div>
 <div className="bg-white p-6 rounded-xl border border-slate-200 hover:border-primary transition-colors">
 <div className="size-12 rounded-lg bg-slate-100 flex items-center justify-center mb-4">
@@ -135,24 +135,24 @@ const InstallationRobinetterie = () => {
 <thead>
 <tr className="bg-slate-50">
 <th className="p-4 text-sm font-bold text-slate-600">Prestation</th>
-<th className="p-4 text-sm font-bold text-slate-600">Main d'Å"uvre</th>
+<th className="p-4 text-sm font-bold text-slate-600">Main d'œuvre</th>
 <th className="p-4 text-sm font-bold text-slate-600">Durée estimée</th>
 </tr>
 </thead>
 <tbody className="divide-y divide-slate-200">
 <tr>
 <td className="p-4 text-sm">Pose mitigeur classique</td>
-<td className="p-4 text-sm font-semibold">89â‚¬ TTC</td>
+<td className="p-4 text-sm font-semibold">89 DA TTC</td>
 <td className="p-4 text-sm text-slate-500">1h00</td>
 </tr>
 <tr>
 <td className="p-4 text-sm">Pose mélangeur baignoire</td>
-<td className="p-4 text-sm font-semibold">119â‚¬ TTC</td>
+<td className="p-4 text-sm font-semibold">119 DA TTC</td>
 <td className="p-4 text-sm text-slate-500">1h30</td>
 </tr>
 <tr>
 <td className="p-4 text-sm">Remplacement colonne de douche</td>
-<td className="p-4 text-sm font-semibold">149â‚¬ TTC</td>
+<td className="p-4 text-sm font-semibold">149 DA TTC</td>
 <td className="p-4 text-sm text-slate-500">2h00</td>
 </tr>
 </tbody>

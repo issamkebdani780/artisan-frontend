@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 
 const DBouchageCanalisation = () => {
   return (
@@ -93,7 +93,7 @@ const DBouchageCanalisation = () => {
 <div className="bg-white p-5 rounded-xl border border-slate-200 flex flex-col gap-2">
 <span className="material-symbols-outlined text-primary">euro</span>
 <p className="text-slate-500 text-xs font-semibold uppercase tracking-wider">Prix Fixe</p>
-<p className="text-slate-900 text-xl font-bold">Dès 75â‚¬</p>
+<p className="text-slate-900 text-xl font-bold">Dès 75 DA</p>
 </div>
 <div className="bg-white p-5 rounded-xl border border-slate-200 flex flex-col gap-2">
 <span className="material-symbols-outlined text-primary">verified_user</span>
@@ -118,7 +118,7 @@ const DBouchageCanalisation = () => {
 <h3 className="font-bold text-lg mb-1">Débouchage Manuel</h3>
 <p className="text-sm text-slate-500">Pour éviers, lavabos et douches</p>
 <div className="mt-4 flex items-baseline gap-1">
-<span className="text-3xl font-bold">75â‚¬</span>
+<span className="text-3xl font-bold">75 DA</span>
 <span className="text-slate-400 text-sm">TTC</span>
 </div>
 </div>
@@ -134,7 +134,7 @@ const DBouchageCanalisation = () => {
 <h3 className="font-bold text-lg mb-1">Hydrocurage HP</h3>
 <p className="text-sm text-slate-400">Pour canalisations principales</p>
 <div className="mt-4 flex items-baseline gap-1">
-<span className="text-3xl font-bold">145â‚¬</span>
+<span className="text-3xl font-bold">145 DA</span>
 <span className="text-slate-400 text-sm">TTC</span>
 </div>
 </div>
@@ -149,7 +149,7 @@ const DBouchageCanalisation = () => {
 <h3 className="font-bold text-lg mb-1">Inspection Vidéo</h3>
 <p className="text-sm text-slate-500">Diagnostic précis et rapport</p>
 <div className="mt-4 flex items-baseline gap-1">
-<span className="text-3xl font-bold">95â‚¬</span>
+<span className="text-3xl font-bold">95 DA</span>
 <span className="text-slate-400 text-sm">TTC</span>
 </div>
 </div>
@@ -245,7 +245,7 @@ const DBouchageCanalisation = () => {
 <span>Vos tarifs incluent-ils le déplacement ?</span>
 <span className="material-symbols-outlined">expand_more</span>
 </h4>
-<p className="text-sm text-slate-600">Oui, tous nos prix affichés sont transparents et incluent déjà les frais de déplacement et de main-d'Å“uvre de base.</p>
+<p className="text-sm text-slate-600">Oui, tous nos prix affichés sont transparents et incluent déjà les frais de déplacement et de main-d'œuvre de base.</p>
 </div>
 <div className="p-6 bg-white rounded-xl border border-slate-200">
 <h4 className="font-bold mb-2 flex justify-between items-center cursor-pointer">

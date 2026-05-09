@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 
 const ConfirmationDeCreationDeCompte = () => {
   return (
@@ -11,7 +11,7 @@ const ConfirmationDeCreationDeCompte = () => {
 <div className="w-8 h-8 bg-primary rounded flex items-center justify-center text-white">
 <span className="material-symbols-outlined text-xl">handyman</span>
 </div>
-<h1 className="text-xl font-bold tracking-tight text-slate-900">ArtisanDirect</h1>
+<h1 className="text-xl font-bold tracking-tight text-slate-900">Khadamati</h1>
 </div>
 <div className="flex items-center gap-4">
 <button className="p-2 text-slate-500 hover:bg-slate-100 rounded-lg transition-colors">
@@ -79,7 +79,7 @@ const ConfirmationDeCreationDeCompte = () => {
 <a className="hover:text-primary transition-colors" href="#">Confidentialité</a>
 </div>
 <p className="text-sm text-slate-400">
-                    © 2024 ArtisanDirect. Tous droits réservés.
+                    © 2026 Khadamati. Tous droits réservés.
                 </p>
 </div>
 </div>

@@ -102,7 +102,7 @@ const ReparationWc = () => {
 <h3 className="text-xl font-bold">Forfait Standard</h3>
 <p className="text-slate-500 text-sm mt-1">Débouchage et petites réparations</p>
 <div className="my-6">
-<span className="text-4xl font-black">79â‚¬</span>
+<span className="text-4xl font-black">79 DA</span>
 <span className="text-slate-400">/intervention</span>
 </div>
 <ul className="flex flex-col gap-3 text-sm mb-8">
@@ -117,7 +117,7 @@ const ReparationWc = () => {
 <h3 className="text-xl font-bold">Pack Complet</h3>
 <p className="text-slate-500 text-sm mt-1">Réparation majeure &amp; remplacement</p>
 <div className="my-6">
-<span className="text-4xl font-black text-primary">149â‚¬</span>
+<span className="text-4xl font-black text-primary">149 DA</span>
 <span className="text-slate-400">/intervention</span>
 </div>
 <ul className="flex flex-col gap-3 text-sm mb-8">

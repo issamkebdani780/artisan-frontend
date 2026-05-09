@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 
 const ResultatsDeRechercheDisponibleCeMois = () => {
   return (
@@ -10,7 +10,7 @@ const ResultatsDeRechercheDisponibleCeMois = () => {
 <div className="flex items-center gap-8">
 <a className="flex items-center gap-2 text-primary" href="#">
 <span className="material-symbols-outlined text-3xl font-bold">handyman</span>
-<h2 className="text-slate-900 text-xl font-black leading-tight tracking-tight">ArtisanDirect</h2>
+<h2 className="text-slate-900 text-xl font-black leading-tight tracking-tight">Khadamati</h2>
 </a>
 <div className="hidden md:flex relative group">
 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400 group-focus-within:text-primary transition-colors">
@@ -408,7 +408,7 @@ const ResultatsDeRechercheDisponibleCeMois = () => {
 <div className="space-y-6">
 <div className="flex items-center gap-2 text-primary">
 <span className="material-symbols-outlined text-3xl font-bold">handyman</span>
-<h2 className="text-slate-900 text-xl font-black tracking-tight">ArtisanDirect</h2>
+<h2 className="text-slate-900 text-xl font-black tracking-tight">Khadamati</h2>
 </div>
 <p className="text-slate-500 text-sm leading-relaxed">
                         La plateforme de référence pour connecter les particuliers aux meilleurs artisans locaux. Professionnalisme, réactivité et confiance.
@@ -454,7 +454,7 @@ const ResultatsDeRechercheDisponibleCeMois = () => {
 </div>
 </div>
 <div className="pt-8 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-4">
-<p className="text-slate-400 text-xs">© 2024 ArtisanDirect. Tous droits réservés.</p>
+<p className="text-slate-400 text-xs">© 2026 Khadamati. Tous droits réservés.</p>
 <div className="flex items-center gap-6">
 <img className="h-4 grayscale opacity-50" data-alt="Paypal logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOZy1E-PHlRXoG7mxvr6bCWy5oZAokUBGh9797lakjUcbvGzrtWPaTZiXqJu7qTxJ07ZVmQcQU0MANYthQWzfrUuZaYUMvfeiwfIXmTUJnjBdBcrQEVB-FoFjtshth54X-JLQfWNq_vBDobiO-TPInMjQbUWYQOT56fm6wS28G8sIqPPYhivqr5oTk7odrFB_4YEke5-zwo33XsIIN9mMS0nHFsDklNkjKtRpdo57XJUPn6Lr1JHtUzZ-RAmxIF4R1hMgQ-8I4RPxk"/>
 <img className="h-4 grayscale opacity-50" data-alt="Visa logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbbkwuj-ceSml_T-11J0uTmPH0OWmkf-UcbKdoVK5gpVBwix0e8pMHIOJj52An_hpwPhzbbYJCCOWyhHBcRD_YtJrFbR9xYE_v8R1JKqDNwnubUli-1tULySiZp4nXE9bJAs_PrPTgfNj_5W0j3qYpIp3x3enq6KmegJZaOPqzhhXaxIw_mT33Cy4yHWiEMFfexwPe9FP67D11ZWPRsE4S5BVwlS8_M44Vl4yCxB24IydIni5RkR8nOIiOVYsgTQLKXXIULcYgyxMV"/>

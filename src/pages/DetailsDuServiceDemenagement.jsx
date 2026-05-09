@@ -88,7 +88,7 @@ const DetailsDuServiceDemenagement = () => {
 <h3 className="text-xl font-bold mb-2">Petit Déménagement</h3>
 <p className="text-slate-500 text-sm mb-6">Idéal pour Studio ou T1</p>
 <div className="flex items-baseline gap-1 mb-6">
-<span className="text-3xl font-bold">150â‚¬</span>
+<span className="text-3xl font-bold">150 DA</span>
 <span className="text-slate-500">à partir de</span>
 </div>
 <ul className="space-y-4 mb-8 flex-1">
@@ -112,7 +112,7 @@ const DetailsDuServiceDemenagement = () => {
 <h3 className="text-xl font-bold mb-2">Déménagement Complet</h3>
 <p className="text-slate-500 text-sm mb-6">Appartement familial ou Maison</p>
 <div className="flex items-baseline gap-1 mb-6">
-<span className="text-3xl font-bold">450â‚¬</span>
+<span className="text-3xl font-bold">450 DA</span>
 <span className="text-slate-500">à partir de</span>
 </div>
 <ul className="space-y-4 mb-8 flex-1">
@@ -139,7 +139,7 @@ const DetailsDuServiceDemenagement = () => {
 <h3 className="text-xl font-bold mb-2">Transport Objets Lourds</h3>
 <p className="text-slate-500 text-sm mb-6">Piano, Coffre-fort, Billard</p>
 <div className="flex items-baseline gap-1 mb-6">
-<span className="text-3xl font-bold">200â‚¬</span>
+<span className="text-3xl font-bold">200 DA</span>
 <span className="text-slate-500">à partir de</span>
 </div>
 <ul className="space-y-4 mb-8 flex-1">
