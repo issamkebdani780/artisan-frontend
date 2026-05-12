@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import apiService from '../services/api';
 
@@ -49,7 +49,7 @@ const AdminLogin = () => {
               <div className="size-14 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center mb-6 border border-white/30">
                 <span className="material-symbols-outlined text-3xl font-black">diamond</span>
               </div>
-              <h1 className="text-3xl font-black tracking-tighter leading-none mb-4 uppercase">Bricolo<span className="text-secondary">Pro</span></h1>
+              <h1 className="text-3xl font-black tracking-tighter leading-none mb-4 uppercase">Khadamati<span className="text-secondary">Pro</span></h1>
               <p className="text-blue-100 text-sm font-medium leading-relaxed opacity-80">Interface de gestion centralisée pour le futur de l'artisanat.</p>
             </div>
 
@@ -146,7 +146,7 @@ const AdminLogin = () => {
         
         {/* Footer info */}
         <p className="mt-8 text-center text-slate-500 text-[9px] font-black uppercase tracking-[0.3em] opacity-50">
-          © 2026 BRICOLOPRO ADMINISTRATION • V.4.0.5 • SÉCURITÉ RENFORCÉE
+          © 2026 KHADAMATIPRO ADMINISTRATION • V.4.0.5 • SÉCURITÉ RENFORCÉE
         </p>
       </div>
     </div>

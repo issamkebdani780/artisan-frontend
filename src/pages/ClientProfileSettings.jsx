@@ -261,7 +261,7 @@ const ClientProfileSettings = () => {
                       <h3 className="text-lg font-black text-slate-900 uppercase mb-1">Compte</h3>
                       <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Suppression</p>
                     </div>
-                    <button onClick={() => { if(window.confirm('ðŸš¨ Supprimer ?')) { apiService.logout(); navigate('/'); } }} className="px-8 py-4 border-2 border-slate-200 text-slate-500 rounded-xl font-black uppercase text-[10px] tracking-widest hover:bg-red-600 hover:border-red-600 hover:text-white active:scale-95 transition-all">Supprimer</button>
+                    <button onClick={() => { if(window.confirm('🚨 Supprimer ?')) { apiService.logout(); navigate('/'); } }} className="px-8 py-4 border-2 border-slate-200 text-slate-500 rounded-xl font-black uppercase text-[10px] tracking-widest hover:bg-red-600 hover:border-red-600 hover:text-white active:scale-95 transition-all">Supprimer</button>
                   </div>
                 </div>
             </div>

@@ -40,12 +40,12 @@ const ClientLayout = ({ children, title = "Khadamati Client", subtitle = "Tablea
         <div className="flex flex-col gap-10 p-4 lg:p-8">
           <div className="flex items-center justify-between">
             <div className={`flex items-center gap-4 transition-all duration-300 ${isCollapsed ? 'lg:opacity-0 lg:scale-0 lg:w-0' : 'opacity-100 scale-100'}`}>
-              <img src={logo} alt="Khadamati Logo" className="h-20 lg:h-24 w-auto object-contain bg-white rounded-xl p-1" />
-              <div className="flex flex-col">
-                <h1 className="text-lg lg:text-xl font-black tracking-tighter flex items-center gap-1 uppercase truncate overflow-hidden text-slate-900">
+              <img src={logo} alt="Khadamati Logo" className="h-12 lg:h-14 w-auto object-contain bg-white rounded-xl p-1" />
+              <div className="flex flex-col min-w-0">
+                <h1 className="text-base lg:text-lg font-black tracking-tight flex items-center gap-1 uppercase text-slate-900 leading-tight">
                   {title}
                 </h1>
-                <p className="text-primary text-[10px] font-black uppercase tracking-widest truncate overflow-hidden transition-colors">{subtitle}</p>
+                <p className="text-primary text-[10px] font-black uppercase tracking-widest truncate overflow-hidden transition-colors mt-0.5">{subtitle}</p>
               </div>
             </div>
             <button

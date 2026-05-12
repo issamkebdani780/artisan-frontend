@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import AdminLayout from '../layouts/AdminLayout';
 
 const AdminConfigurationPlateforme = () => {
@@ -39,16 +39,16 @@ const AdminConfigurationPlateforme = () => {
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <button className="flex flex-col items-center justify-center p-4 rounded-lg border-2 border-indigo-600 bg-indigo-50 transition-all">
-                  <span className="text-2xl mb-2">ðŸ‡«ðŸ‡·</span>
+                  <span className="text-2xl mb-2">🇫🇷</span>
                   <span className="text-sm font-semibold">Français</span>
                   <span className="text-[10px] text-indigo-600 uppercase font-bold mt-1">Actif</span>
                 </button>
                 <button className="flex flex-col items-center justify-center p-4 rounded-lg border-2 border-transparent bg-slate-50 hover:bg-slate-100 transition-all">
-                  <span className="text-2xl mb-2">ðŸ‡¸ðŸ‡¦</span>
-                  <span className="text-sm font-medium">Ø§Ù„Ø¹Ø±Ø¨ÙŠØ©</span>
+                  <span className="text-2xl mb-2">🇩🇿</span>
+                  <span className="text-sm font-medium">العربية</span>
                 </button>
                 <button className="flex flex-col items-center justify-center p-4 rounded-lg border-2 border-transparent bg-slate-50 hover:bg-slate-100 transition-all">
-                  <span className="text-2xl mb-2">ðŸ‡¬ðŸ‡§</span>
+                  <span className="text-2xl mb-2">🇬🇧</span>
                   <span className="text-sm font-medium">English</span>
                 </button>
               </div>

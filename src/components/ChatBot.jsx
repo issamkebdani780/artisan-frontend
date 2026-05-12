@@ -55,14 +55,14 @@ const ChatBot = () => {
 
     fetchContext();
     
-    const savedHistory = localStorage.getItem('bricolo_chat_history');
+    const savedHistory = localStorage.getItem('khadamati_chat_history');
     if (savedHistory) {
       setMessages(JSON.parse(savedHistory));
     } else {
       setMessages([
         {
           role: "assistant",
-          content: `Bonjour ${user ? user.name : ''} ! 👋 Je suis l'assistant intelligent de BricoloPro. Je connais tous nos experts et services. Je peux vous recommander un artisan spécifique ou répondre à vos questions. Comment puis-je vous aider ?`
+          content: `Bonjour ${user ? user.name : ''} ! 👋 Je suis l'assistant intelligent de KhadamatiPro. Je connais tous nos experts et services. Je peux vous recommander un artisan spécifique ou répondre à vos questions. Comment puis-je vous aider ?`
         }
       ]);
     }
@@ -70,7 +70,7 @@ const ChatBot = () => {
 
   useEffect(() => {
     if (messages.length > 0) {
-      localStorage.setItem('bricolo_chat_history', JSON.stringify(messages));
+      localStorage.setItem('khadamati_chat_history', JSON.stringify(messages));
     }
   }, [messages]);
 
@@ -84,7 +84,7 @@ const ChatBot = () => {
     setIsLoading(true);
 
     try {
-      const systemPrompt = `Tu es l'assistant de conciergerie IA de BricoloPro (Algérie).
+      const systemPrompt = `Tu es l'assistant de conciergerie IA de KhadamatiPro (Algérie).
       
       TON RÔLE :
       - Tu es un expert qui connaît parfaitement les artisans inscrits sur la plateforme.
@@ -102,7 +102,7 @@ const ChatBot = () => {
         headers: {
           "Authorization": `Bearer ${import.meta.env.VITE_OPENROUTER_API_KEY}`,
           "HTTP-Referer": window.location.origin,
-          "X-Title": "BricoloPro AI Assistant",
+          "X-Title": "KhadamatiPro AI Assistant",
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
@@ -135,7 +135,7 @@ const ChatBot = () => {
   const handleClearHistory = () => {
     if (window.confirm("Effacer l'historique ?")) {
       setMessages([]);
-      localStorage.removeItem('bricolo_chat_history');
+      localStorage.removeItem('khadamati_chat_history');
       window.location.reload();
     }
   };
@@ -161,7 +161,7 @@ const ChatBot = () => {
               </div>
               <div>
                 <h3 className="font-black text-sm uppercase tracking-tight">AI Assistant</h3>
-                <p className="text-[10px] font-bold uppercase tracking-widest opacity-70">Support BricoloPro</p>
+                <p className="text-[10px] font-bold uppercase tracking-widest opacity-70">Support KhadamatiPro</p>
               </div>
             </div>
             <div className="flex items-center gap-2">

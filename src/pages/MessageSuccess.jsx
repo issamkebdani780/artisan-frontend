@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 
 const MessageSuccess = () => {
@@ -46,7 +46,7 @@ const MessageSuccess = () => {
               </div>
               <div className="bg-slate-50 px-6 py-4 border-t border-slate-100 flex items-center gap-3">
                 <span className="material-symbols-outlined text-indigo-600 text-[20px]">verified</span>
-                <span className="text-xs font-bold text-indigo-600 uppercase tracking-wider">Demande Sécurisée par BricoloPro</span>
+                <span className="text-xs font-bold text-indigo-600 uppercase tracking-wider">Demande Sécurisée par KhadamatiPro</span>
               </div>
             </div>
           </div>

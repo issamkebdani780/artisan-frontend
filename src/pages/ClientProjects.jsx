@@ -1,4 +1,4 @@
-﻿import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import apiService from '../services/api';
 import MainLayout from '../layouts/MainLayout';
 import PaymentModal from '../components/PaymentModal';
@@ -152,9 +152,9 @@ const ClientProjects = () => {
                                   displayStatus === 'cancelled' || displayStatus === 'refusé' || displayStatus === 'annulé' ? 'bg-red-100 text-red-700' :
                                     'bg-orange-100 text-orange-700'
                             }`}>
-                            {displayStatus === 'pending' || displayStatus === 'en attente' ? 'ðŸ”' :
-                              displayStatus === 'confirmed' || displayStatus === 'accepté' ? 'âœ…' :
-                                displayStatus === 'completed' || displayStatus === 'terminé' ? 'âœ…' : 'âŒ'}
+                            {displayStatus === 'pending' || displayStatus === 'en attente' ? '⏳ ' :
+                              displayStatus === 'confirmed' || displayStatus === 'accepté' ? '✅ ' :
+                                displayStatus === 'completed' || displayStatus === 'terminé' ? '✅ ' : '❌ '}
                             {displayStatus}
                           </span>
                         </td>
