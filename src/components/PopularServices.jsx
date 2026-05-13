@@ -61,7 +61,7 @@ const PopularServices = () => {
           { id: 9, name: 'Verre et Miroiterie', icon: 'Layers', description: 'Menuisier aluminium, vitrier, miroitier...' },
           { id: 10, name: 'Métiers Alimentaires', icon: 'Utensils', description: 'Boulanger, pâtissier, traiteur, apiculture...' },
           { id: 11, name: 'Jardinage et Espaces Verts', icon: 'Sprout', description: 'Paysagiste, entretien jardin, taille haies...' },
-          { id: 12, name: 'Déménagement et Transport', icon: 'Truck', description: 'Transport, aide aux cartons, déchargement...' },
+          // { id: 12, name: 'Déménagement et Transport', icon: 'Truck', description: 'Transport, aide aux cartons, déchargement...' },
         ]);
       } finally {
         setLoading(false);
