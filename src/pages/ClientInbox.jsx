@@ -29,10 +29,27 @@ const ClientInbox = () => {
 
   const fetchDevis = async () => {
     try {
-      const data = await apiService.getUserDevis(user.id);
-      setBookings(data);
+      const [devisData, bookingData] = await Promise.all([
+        apiService.getUserDevis(user.id),
+        apiService.getUserBookings(user.id)
+      ]);
+      
+      const combined = [
+        ...devisData.map(d => ({ ...d, type: 'devis' })),
+        ...bookingData.map(b => ({
+          ...b,
+          id: b.id,
+          type: 'booking',
+          category_name: b.service_title,
+          budget: b.total_price,
+          date: b.booking_date,
+          createdAt: b.created_at || b.booking_date
+        }))
+      ].sort((a, b) => new Date(b.createdAt || b.date) - new Date(a.createdAt || a.date));
+      
+      setBookings(combined);
     } catch (err) {
-      console.error('Failed to fetch devis:', err);
+      console.error('Failed to fetch data:', err);
     } finally {
       setLoading(false);
     }
@@ -64,7 +81,7 @@ const ClientInbox = () => {
         setReviewedIds(prev => new Set([...prev, reviewModal.artisanId]));
         setReviewModal(null);
         setReviewForm({ rating: 0, comment: '' });
-        alert('â­ Merci pour votre avis !');
+        alert('⭐ Merci pour votre avis !');
       }
     } catch (err) {
       alert(`Erreur lors de l'envoi: ${err.message}`);
@@ -136,10 +153,10 @@ const ClientInbox = () => {
 
                     <div>
                       <h4 className="text-3xl font-black text-slate-900 uppercase tracking-tight group-hover:text-primary transition-colors mb-3">
-                        {devis.category_name}
+                        {devis.type === 'booking' ? `Service: ${devis.category_name}` : devis.category_name}
                       </h4>
                       <p className="text-slate-500 font-medium leading-relaxed italic border-l-3 border-primary/20 pl-6 text-sm">
-                        "{devis.description}"
+                        "{devis.description || 'Proposition directe pour un service standard'}"
                       </p>
                     </div>
 
@@ -208,7 +225,19 @@ const ClientInbox = () => {
                       </button>
                     )}
                     <button
-                       onClick={() => handleDelete(devis.id)}
+                       onClick={async () => {
+                         if (!window.confirm('Supprimer cette demande ?')) return;
+                         try {
+                           if (devis.type === 'booking') {
+                             // Backend might need a delete booking route, but for now we filter locally
+                             // or just alert if not supported
+                             alert("Cette réservation ne peut pas être supprimée directement. Veuillez contacter l'artisan.");
+                           } else {
+                             await apiService.deleteDevis(devis.id);
+                             setBookings(prev => prev.filter(d => d.id !== devis.id));
+                           }
+                         } catch (err) { alert("Erreur."); }
+                       }}
                        className="flex-1 lg:flex-none h-14 px-8 bg-white border border-red-100 text-red-500 rounded-2xl font-black text-[10px] uppercase tracking-widest hover:bg-red-50 transition-all active:scale-95 flex items-center justify-center gap-3"
                     >
                        <span className="material-symbols-outlined text-sm font-black">delete</span>

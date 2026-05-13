@@ -65,7 +65,8 @@ const ArtisanServices = () => {
     category_id: '',
     title: '',
     description: '',
-    base_price: ''
+    base_price: '',
+    max_price: ''
   });
   const user = JSON.parse(localStorage.getItem('user'));
 
@@ -111,7 +112,8 @@ const ArtisanServices = () => {
         category_id: service.category_id,
         title: service.title,
         description: service.description,
-        base_price: service.base_price
+        base_price: service.base_price,
+        max_price: service.max_price || ''
       });
     } else {
       setCurrentService(null);
@@ -119,7 +121,8 @@ const ArtisanServices = () => {
         category_id: filteredCategories[0]?.id || '',
         title: '',
         description: '',
-        base_price: ''
+        base_price: '',
+        max_price: ''
       });
     }
     setShowModal(true);
@@ -132,6 +135,7 @@ const ArtisanServices = () => {
     formData.append('title', form.title);
     formData.append('description', form.description);
     formData.append('base_price', form.base_price);
+    formData.append('max_price', form.max_price);
 
     try {
       if (currentService) {
@@ -265,8 +269,12 @@ const ArtisanServices = () => {
 
                     <div className="flex items-center justify-between md:justify-end gap-8 pt-6 md:pt-0 border-t md:border-t-0 md:border-l border-slate-100 md:pl-8 shrink-0">
                       <div className="text-left md:text-right">
-                        <p className="text-[10px] font-black text-slate-300 uppercase tracking-widest mb-1">À partir de</p>
-                        <p className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">{Number(service.base_price).toLocaleString()} <span className="text-sm text-slate-400 font-bold">DA</span></p>
+                        <p className="text-[10px] font-black text-slate-300 uppercase tracking-widest mb-1">Fourchette de prix</p>
+                        <p className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
+                          {Number(service.base_price).toLocaleString()} 
+                          {service.max_price ? ` - ${Number(service.max_price).toLocaleString()}` : ''}
+                          <span className="text-sm text-slate-400 font-bold ml-1">DA</span>
+                        </p>
                       </div>
                       <div className="flex gap-2">
                         <button 
@@ -314,32 +322,47 @@ const ArtisanServices = () => {
               </div>
 
               <form onSubmit={handleSubmit} className="p-8 sm:p-10 pt-4 space-y-8 overflow-y-auto max-h-[70vh] custom-scrollbar">
+                <div className="flex flex-col gap-3">
+                  <label className="text-[11px] font-black uppercase tracking-[0.2em] text-slate-400 ml-1">Catégorie de métier</label>
+                  <div className="relative group">
+                    <select 
+                      name="category_id" 
+                      value={form.category_id} 
+                      onChange={(e) => setForm({...form, category_id: e.target.value})}
+                      required
+                      className="w-full h-16 pl-6 pr-12 rounded-2xl bg-slate-50 border-2 border-slate-100 text-slate-900 focus:border-secondary focus:bg-white focus:shadow-xl focus:shadow-secondary/5 outline-none font-bold text-sm transition-all appearance-none cursor-pointer"
+                    >
+                      {filteredCategories.map(c => <option key={c.id} value={c.id}>{c.name}</option>)}
+                    </select>
+                    <ChevronDown className="absolute right-5 top-1/2 -translate-y-1/2 text-slate-300 pointer-events-none group-hover:text-secondary transition-colors" />
+                  </div>
+                </div>
+
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div className="flex flex-col gap-3">
-                    <label className="text-[11px] font-black uppercase tracking-[0.2em] text-slate-400 ml-1">Catégorie de métier</label>
-                    <div className="relative group">
-                      <select 
-                        name="category_id" 
-                        value={form.category_id} 
-                        onChange={(e) => setForm({...form, category_id: e.target.value})}
-                        required
-                        className="w-full h-16 pl-6 pr-12 rounded-2xl bg-slate-50 border-2 border-slate-100 text-slate-900 focus:border-secondary focus:bg-white focus:shadow-xl focus:shadow-secondary/5 outline-none font-bold text-sm transition-all appearance-none cursor-pointer"
-                      >
-                        {filteredCategories.map(c => <option key={c.id} value={c.id}>{c.name}</option>)}
-                      </select>
-                      <ChevronDown className="absolute right-5 top-1/2 -translate-y-1/2 text-slate-300 pointer-events-none group-hover:text-secondary transition-colors" />
-                    </div>
-                  </div>
-                  <div className="flex flex-col gap-3">
-                    <label className="text-[11px] font-black uppercase tracking-[0.2em] text-slate-400 ml-1">Tarif de base (DA)</label>
+                    <label className="text-[11px] font-black uppercase tracking-[0.2em] text-slate-400 ml-1">Tarif Minimum (DA)</label>
                     <div className="relative group">
                       <input 
                         name="base_price" 
                         value={form.base_price} 
                         onChange={(e) => setForm({...form, base_price: e.target.value})}
-                        placeholder="Ex: 5000"
+                        placeholder="Ex: 2000"
                         type="number" 
                         required
+                        className="w-full h-16 px-6 rounded-2xl bg-slate-50 border-2 border-slate-100 text-slate-900 focus:border-secondary focus:bg-white focus:shadow-xl focus:shadow-secondary/5 outline-none font-black text-base transition-all placeholder:text-slate-300 placeholder:font-medium"
+                      />
+                      <Wallet className="absolute right-5 top-1/2 -translate-y-1/2 text-slate-200 group-hover:text-secondary transition-colors" />
+                    </div>
+                  </div>
+                  <div className="flex flex-col gap-3">
+                    <label className="text-[11px] font-black uppercase tracking-[0.2em] text-slate-400 ml-1">Tarif Maximum (DA)</label>
+                    <div className="relative group">
+                      <input 
+                        name="max_price" 
+                        value={form.max_price} 
+                        onChange={(e) => setForm({...form, max_price: e.target.value})}
+                        placeholder="Ex: 4000"
+                        type="number" 
                         className="w-full h-16 px-6 rounded-2xl bg-slate-50 border-2 border-slate-100 text-slate-900 focus:border-secondary focus:bg-white focus:shadow-xl focus:shadow-secondary/5 outline-none font-black text-base transition-all placeholder:text-slate-300 placeholder:font-medium"
                       />
                       <Wallet className="absolute right-5 top-1/2 -translate-y-1/2 text-slate-200 group-hover:text-secondary transition-colors" />

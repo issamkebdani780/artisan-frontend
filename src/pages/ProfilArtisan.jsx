@@ -32,6 +32,11 @@ const ProfilArtisan = () => {
   const [reviews, setReviews] = useState([]);
   const [loading, setLoading] = useState(true);
   const [isChatOpen, setIsChatOpen] = useState(false);
+  const [openMenuId, setOpenMenuId] = useState(null);
+  const [showProposalModal, setShowProposalModal] = useState(false);
+  const [activeService, setActiveService] = useState(null);
+  const [proposalPrice, setProposalPrice] = useState('');
+  const [sendingProposal, setSendingProposal] = useState(false);
   const currentUser = apiService.getCurrentUser();
 
   useEffect(() => {
@@ -79,6 +84,60 @@ const ProfilArtisan = () => {
       return parseInt(artisan.experience_years) || 0;
     }
   })();
+
+  const handleSendProposal = async () => {
+    if (!currentUser) {
+      alert("Veuillez vous connecter pour proposer un prix.");
+      navigate('/login/client');
+      return;
+    }
+    if (!proposalPrice || isNaN(proposalPrice)) {
+      alert("Veuillez entrer un prix valide.");
+      return;
+    }
+
+    setSendingProposal(true);
+    try {
+      await apiService.createBooking({
+        service_id: activeService.id,
+        booking_date: new Date().toISOString().split('T')[0],
+        total_price: proposalPrice
+      });
+      // Also send a message for visual confirmation in the chat
+      await apiService.sendMessage({
+        receiver_id: artisan.id,
+        message: `Bonjour ${artisan.name}, je suis intéressé par votre service "${activeService.title}" et j'aimerais vous proposer un tarif de ${Number(proposalPrice).toLocaleString()} DA. Qu'en pensez-vous ?`
+      });
+      
+      setShowProposalModal(false);
+      setProposalPrice('');
+      setIsChatOpen(true); // Open the chat modal
+    } catch (err) {
+      console.error('Error sending proposal:', err);
+      alert("Erreur lors de l'envoi de la proposition.");
+    } finally {
+      setSendingProposal(false);
+    }
+  };
+
+  const handleRequestDetails = async (service) => {
+    if (!currentUser) {
+      navigate('/login/client');
+      return;
+    }
+    try {
+      const message = `Bonjour ${artisan.name}, j'aimerais avoir plus de détails concernant votre service "${service.title}".`;
+      await apiService.sendMessage({
+        receiver_id: artisan.id,
+        message: message
+      });
+      // Open the chat modal instead of redirecting
+      setIsChatOpen(true);
+    } catch (err) {
+      console.error('Error requesting details:', err);
+      alert("Erreur lors de l'envoi de la demande de détails.");
+    }
+  };
 
   return (
     <div className="min-h-screen bg-white font-['Public_Sans',sans-serif] text-slate-900 transition-colors">
@@ -155,7 +214,7 @@ const ProfilArtisan = () => {
               ))}
             </div>
 
-            <section className="bg-white rounded-[40px] border border-slate-100 shadow-sm overflow-hidden transition-colors">
+            <section className="bg-white rounded-[40px] border border-slate-100 shadow-sm transition-colors">
               <div className="px-8 py-6 border-b border-slate-50 flex items-center justify-between">
                 <h3 className="text-xl font-black flex items-center gap-3 uppercase">
                   <div className="size-8 rounded-xl bg-primary/10 text-primary flex items-center justify-center">
@@ -179,27 +238,95 @@ const ProfilArtisan = () => {
                     } catch (e) {}
 
                     return (
-                      <div key={service.id} className="group p-5 rounded-2xl bg-slate-50 border border-slate-100 flex flex-col md:flex-row md:items-center justify-between gap-4 hover:bg-white hover:border-primary/30 hover:shadow-lg transition-all">
-                        <div className="flex items-center gap-4 flex-1">
-                          <div className="size-12 rounded-xl bg-white flex items-center justify-center text-slate-400 group-hover:bg-primary group-hover:text-white transition-colors shadow-sm shrink-0">
-                            <span className="material-symbols-outlined">settings</span>
-                          </div>
-                          <div className="min-w-0">
-                            <p className="font-black text-slate-900 truncate uppercase transition-colors">{service.title}</p>
-                            <div className="flex items-center gap-2">
-                              <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">{service.category_name}</p>
-                              {categoryExp > 0 && (
-                                <>
-                                  <span className="size-1 bg-slate-300 rounded-full"></span>
-                                  <p className="text-[10px] text-primary font-black uppercase tracking-widest">{categoryExp} ans d'expérience</p>
-                                </>
-                              )}
+                      <div key={service.id} className={`group p-6 rounded-3xl bg-slate-50 border border-slate-100 flex flex-col gap-6 hover:bg-white hover:border-primary/30 hover:shadow-xl transition-all ${openMenuId === service.id ? 'z-[60] relative' : 'z-10'}`}>
+                        {/* Line 1: Name and Experience */}
+                        <div className="flex items-center justify-between gap-4">
+                          <div className="flex items-center gap-4 flex-1 min-w-0">
+                            <div className="size-12 rounded-2xl bg-white flex items-center justify-center text-slate-400 group-hover:bg-primary group-hover:text-white transition-all shadow-sm shrink-0">
+                              <span className="material-symbols-outlined">settings</span>
+                            </div>
+                            <div className="min-w-0 flex-1">
+                              <p className="font-black text-slate-900 truncate uppercase tracking-tight text-lg">{service.title}</p>
+                              <div className="flex items-center gap-2">
+                                <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">{service.category_name}</p>
+                                {categoryExp > 0 && (
+                                  <>
+                                    <span className="size-1 bg-slate-300 rounded-full"></span>
+                                    <p className="text-[10px] text-primary font-black uppercase tracking-widest">{categoryExp} ans d'expérience</p>
+                                  </>
+                                )}
+                              </div>
                             </div>
                           </div>
                         </div>
-                        <div className="flex items-center justify-between md:justify-end gap-8 px-4 py-2 bg-white rounded-xl md:bg-transparent shrink-0 border border-slate-100 md:border-0 transition-colors">
-                          <p className="text-slate-400 text-[10px] font-black uppercase md:hidden tracking-widest">A partir de</p>
-                          <p className="text-xl font-black text-primary">{Number(service.base_price).toLocaleString()} DA</p>
+
+                        {/* Line 2: Estimation and Buttons */}
+                        <div className="flex flex-row items-center justify-between pt-5 border-t border-slate-100/50">
+                          <div className="flex flex-col lg:flex-row lg:items-center gap-1 lg:gap-4">
+                            <p className="text-slate-400 text-[10px] font-black uppercase tracking-widest whitespace-nowrap">Estimation du tarif</p>
+                            <p className="text-xl font-black text-primary whitespace-nowrap">
+                              {Number(service.base_price).toLocaleString()} 
+                              {service.max_price ? ` - ${Number(service.max_price).toLocaleString()}` : ''} DA
+                            </p>
+                          </div>
+                          
+                          <div className="relative">
+                            <button 
+                              onClick={() => setOpenMenuId(openMenuId === service.id ? null : service.id)}
+                              className="px-6 py-3.5 bg-primary/10 text-primary text-[11px] font-black uppercase rounded-2xl hover:bg-primary hover:text-white transition-all border border-primary/20 flex items-center gap-3 shadow-sm"
+                            >
+                              <span className="material-symbols-outlined text-sm">payments</span>
+                              Proposer un prix
+                              <span className="material-symbols-outlined text-sm transition-transform duration-300" style={{ transform: openMenuId === service.id ? 'rotate(180deg)' : 'rotate(0)' }}>expand_more</span>
+                            </button>
+
+                            {/* Dropdown Action Menu */}
+                            {openMenuId === service.id && (
+                              <>
+                                <div className="fixed inset-0 z-40" onClick={() => setOpenMenuId(null)}></div>
+                                <div className="absolute right-0 mt-3 w-64 bg-white rounded-2xl shadow-2xl border border-slate-100 z-50 py-2 animate-in fade-in zoom-in-95 duration-200">
+                                  <button 
+                                    onClick={() => {
+                                      if (!currentUser) { navigate('/login/client'); return; }
+                                      setIsChatOpen(true);
+                                    }}
+                                    className="w-full flex items-center gap-3 px-4 py-3 text-left text-slate-700 hover:bg-slate-50 hover:text-primary transition-colors group"
+                                  >
+                                    <span className="material-symbols-outlined text-slate-400 group-hover:text-primary">person</span>
+                                    <span className="text-[11px] font-black uppercase tracking-wider">Contacte Artisan</span>
+                                  </button>
+                                  
+                                  <button 
+                                    onClick={() => {
+                                      setActiveService(service);
+                                      setShowProposalModal(true);
+                                      setOpenMenuId(null);
+                                    }}
+                                    className="w-full flex items-center gap-3 px-4 py-3 text-left text-slate-700 hover:bg-slate-50 hover:text-emerald-500 transition-colors group"
+                                  >
+                                    <span className="material-symbols-outlined text-slate-400 group-hover:text-emerald-500">request_quote</span>
+                                    <span className="text-[11px] font-black uppercase tracking-wider">Proposer un autre prix</span>
+                                  </button>
+
+                                  <button 
+                                    onClick={() => handleRequestDetails(service)}
+                                    className="w-full flex items-center gap-3 px-4 py-3 text-left text-slate-700 hover:bg-slate-50 hover:text-blue-500 transition-colors group"
+                                  >
+                                    <span className="material-symbols-outlined text-slate-400 group-hover:text-blue-500">info</span>
+                                    <span className="text-[11px] font-black uppercase tracking-wider">Voir plus de détails</span>
+                                  </button>
+
+                                  <button 
+                                    onClick={() => navigate(`/request-quote?artisanId=${artisan.id}&serviceId=${service.id}`)}
+                                    className="w-full flex items-center gap-3 px-4 py-3 text-left text-slate-700 hover:bg-slate-50 hover:text-indigo-600 transition-colors group"
+                                  >
+                                    <span className="material-symbols-outlined text-slate-400 group-hover:text-indigo-600">assignment</span>
+                                    <span className="text-[11px] font-black uppercase tracking-wider">Demander un Devis</span>
+                                  </button>
+                                </div>
+                              </>
+                            )}
+                          </div>
                         </div>
                       </div>
                     );
@@ -371,6 +498,62 @@ const ProfilArtisan = () => {
           onClose={() => setIsChatOpen(false)}
           otherUser={{ id: artisan.id, name: artisan.name, profile_pic: artisan.profile_pic }}
         />
+      )}
+
+      {/* Proposal Modal */}
+      {showProposalModal && activeService && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-6 bg-slate-950/50 backdrop-blur-sm animate-in fade-in duration-300">
+          <div className="bg-white w-full max-w-md rounded-[32px] shadow-2xl overflow-hidden animate-in zoom-in-95 duration-300">
+            <div className="p-8">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="size-12 rounded-2xl bg-emerald-100 text-emerald-600 flex items-center justify-center">
+                  <span className="material-symbols-outlined">payments</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-black uppercase tracking-tight">Proposition de prix</h3>
+                  <p className="text-[10px] text-slate-400 font-bold uppercase tracking-widest">{activeService.title}</p>
+                </div>
+              </div>
+              
+              <div className="space-y-4">
+                <div>
+                  <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-2 block">Votre prix proposé (DA)</label>
+                  <input 
+                    type="number" 
+                    value={proposalPrice}
+                    onChange={(e) => setProposalPrice(e.target.value)}
+                    placeholder="Ex: 2500"
+                    className="w-full h-14 px-6 rounded-2xl bg-slate-50 border-2 border-slate-100 focus:border-emerald-500 focus:bg-white outline-none transition-all font-black"
+                  />
+                </div>
+                <p className="text-xs text-slate-500 leading-relaxed italic">
+                  Votre proposition sera envoyée directement par message à l'artisan.
+                </p>
+              </div>
+
+              <div className="flex gap-3 mt-8">
+                <button 
+                  onClick={() => setShowProposalModal(false)}
+                  className="flex-1 h-14 rounded-2xl font-black text-xs uppercase tracking-widest text-slate-400 hover:bg-slate-50 transition-colors"
+                >
+                  Annuler
+                </button>
+                <button 
+                  onClick={handleSendProposal}
+                  disabled={sendingProposal}
+                  className="flex-1 h-14 rounded-2xl bg-emerald-500 text-white font-black text-xs uppercase tracking-widest hover:bg-emerald-600 transition-colors shadow-lg shadow-emerald-200 flex items-center justify-center gap-2"
+                >
+                  {sendingProposal ? (
+                    <span className="animate-spin size-4 border-2 border-white/20 border-t-white rounded-full"></span>
+                  ) : (
+                    <span className="material-symbols-outlined text-sm">send</span>
+                  )}
+                  Envoyer
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       )}
     </div>
   );
